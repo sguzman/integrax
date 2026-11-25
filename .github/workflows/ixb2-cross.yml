@@ -1,0 +1,19 @@
+name: IXB2 independent block container verification
+on:
+  push:
+    paths:
+      - 'experiments/oracle/ixb2-cross.mjs'
+      - '.github/workflows/ixb2-cross.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --version && rustc --version
+      - run: cargo test --release --locked --bin ixb1
+      - run: cargo build --release --locked --bin ixb1
+      - run: node experiments/oracle/ixb2-cross.mjs target/release/ixb1
