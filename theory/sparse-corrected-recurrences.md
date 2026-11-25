@@ -1,0 +1,9 @@
+# Sparse-corrected radix recurrences
+
+For already reconstructed digits a and a known positive distance d, a token of length m specifies
+
+a[i+j] = (a[i+j-d] + e[j]) mod 256, 0 <= j < m,
+
+where e is zero everywhere except optionally one nonzero byte. For nonoverlap (d>=m), this describes a known radix substring plus a single digit correction. Writing b[j]=a[i+j-d], the actual integer block is B + (a[i+k]-b[k])*256^(m-1-k); the signed difference incorporates modular wrap. For overlap, the recurrence is sequential: a correction propagates through subsequent occurrences of its congruence class modulo d. Induction on j establishes exact invertibility, because d>0 and every required digit is available at the moment of reconstruction. The encoder checks the same recurrence against actual input, including overlap. A nonzero modular residual uniquely represents the corrected digit.
+
+Mode 18 extends the verified mode 15 dual four-byte predictor and adaptive length model. Each copy codes an adaptive patch flag conditioned on previous digit; a nonzero flag adds 8 equiprobable bits for correction position and 8 for modular difference, with bounds and nonzero validation. The decoder needs no external data. Extra patch flag cost is charged even for exact copies. Encoder compares exact lengths and one-correction candidates stopping before a second mismatch; requires at least 8 following matching digits, length >= max(32,threshold), >= 2*longest root+8, and a heuristic advantage of >24 bytes over best exact match. This is deliberately conservative, not a calibrated bit-cost optimum. Same flags/lengths/selector and static grammar otherwise. E0066 compares complete archives against mode15 on authentic regions; synthetic controls verify modular wrap/overlap and invalid position. Related to approximate LZ matching and sparse residual coding, no novelty claim. No full result until isolated verification.
