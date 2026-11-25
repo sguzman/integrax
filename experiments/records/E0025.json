@@ -1,0 +1,61 @@
+{
+  "id": "E0025",
+  "campaign": "C07",
+  "track": "whole",
+  "status": "roundtrip-verified",
+  "revision": "c1e200c0084cf20080919cf0e597892f528718d0",
+  "run": 45702295001,
+  "job": 139515237585,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "archive_bytes": 472797366,
+  "archive_sha256": "feccde687dc711442d6e40f50b253df0b04c0ec1b3fec259e7e82b8cbea77c55",
+  "compressor_bytes": 362192,
+  "external_side_bytes": 0,
+  "contest_total_bytes": null,
+  "training": {
+    "offset": 0,
+    "bytes": 65536,
+    "sha256": "05fc5f44993ef0557959db76bf47e45badb2dd9c69d93ce08911935b5e52bf40",
+    "dictionary_sha256": "35fbbd99fb2e1b575fc2353f879875093691e90e360c87b6a9e32f53b349ac98",
+    "dictionary_bytes": 4098
+  },
+  "model": {
+    "rules": 1024,
+    "roots": 433839342,
+    "max_exp": 56,
+    "fixed_bits": 4772232762,
+    "huff_bits": 3782318669,
+    "header_bytes": 7532
+  },
+  "encode_seconds": 37.66,
+  "encode_rss_bytes": 2637824,
+  "decode_seconds": 19.74,
+  "decode_pipeline_rss_bytes": 8003584,
+  "environment": {
+    "rustc": "1.100.0",
+    "runner": "ubuntu-latest"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "bash experiments/ixg2/full.sh"
+  ],
+  "verification": {
+    "id": "V0005",
+    "byte_equal": true,
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "uid": 65534,
+    "original_readable": false,
+    "separate_network_namespace": true,
+    "external_dictionary_removed": true
+  },
+  "unit_tests": 4,
+  "limitations": [
+    "archive-only; not contest submission",
+    "same codec implementation; isolation not a general security audit",
+    "transient CI artifacts; hashes and reproduction commands retained"
+  ]
+}
