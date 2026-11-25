@@ -3,18 +3,11 @@
 2026-11-25 — C01–C09 closed; C10 active. Read AGENTS.md and [C10](research/CAMPAIGN-10.md).
 
 - F0007 IXG2 **280,380,483 B** (71.96% reduction), [E0043/V0009](experiments/records/E0043.md) isolated full reconstruction; gzip 322,591,988 B. Archive-only.
-- E0044 mode 9 wins all three regions, 16 MiB 4,913,044 B. E0045 full mode 9 [CI 45707004827](https://github.com/sguzman/integrax/actions/runs/45707004827), job 139531440365, running at checkpoint.
-- E0042/E0046: 120 independent Rust/BigInt byte-identical archives and cross-decodes passed, modes 3–10.
-- [E0047](experiments/records/E0047.md) 12/12 exact, all nine predictive-cost cases regress; greedy retained. Initial script defect corrected, successful CI 45707225774.
-- [E0048](experiments/records/E0048.md) 12/12 exact and 18/18 append rejects; strict canonical decode verified, no archive overhead, not authentication.
-- Nix lock generation/build [CI 45707565821](https://github.com/sguzman/integrax/actions/runs/45707565821) passed, 12/12 tests; exact generated flake.lock persisted. Pinned rerun [CI 45707850743](https://github.com/sguzman/integrax/actions/runs/45707850743) passed; lock unchanged, 12/12 tests and build. [Notes](notes/nix-reproducibility.md). Pages settings API unavailable; no settings changed.
+- E0045 full third-order [CI 45707004827](https://github.com/sguzman/integrax/actions/runs/45707004827), job 139531440365, running at last check.
+- E0047 all local cost-ratio parses regressed; retain greedy. E0048 strict decode 12/12 and 18/18 append rejects, not authentication.
+- [E0049](experiments/records/E0049.md) 9/9 strict, 16 MiB 4,849,686 B larger 16384-rule dictionary; [E0050](experiments/records/E0050.md) 9/9 strict, median tree 4,896,315 B. Gains modest; leading-digit tree regressed.
+- E0042/E0046/[E0051](experiments/records/E0051.md): 150 independent archive equality/cross-decodes passed across modes 3–12.
+- E0052 combined dictionary/median tree target-slice ablation authored, pending. [Design](notes/C10-combined-target-slices.md).
+- Nix pin/build verified (CI 45707850743); dashboard source contract tested, live deployment inaccessible/unverified. No settings changed.
 
-Next: collect E0045/E0049 evidence, accept only isolated verified full improvements; Pivot from local ratio parsing; assess structural model gains. Dashboard live deployment unverified. No workers.
-
-E0049 16384-rule / 512 KiB cap and matched dictionary ablation authored, nine strict authentic comparisons [CI 45707974176](https://github.com/sguzman/integrax/actions/runs/45707974176), running at checkpoint. [Design](notes/C10-larger-dictionary.md).
-
-E0050 arithmetic root tree geometry: first-byte aligned and median-count full binary trees, mode 11/12, same third-order predictor and dictionary. Nine strict authentic comparisons [CI 45708234110](https://github.com/sguzman/integrax/actions/runs/45708234110), queued/running at checkpoint; no result yet. [Theory](theory/root-decision-geometry.md). Independent oracle modes 3–10 only. E0045/E0049 running at last check.
-
-E0051 independent decision-tree reference executed: 30 new synthetic exact roundtrips, 120 earlier observations reproduced. Cross-codec strict [CI 45708448709](https://github.com/sguzman/integrax/actions/runs/45708448709), job 139536346294, running at checkpoint.
-
-Dashboard source contract check passed for seven ledger entries, track minima and unavailable-ledger path; harness added to reference CI. Public deployment remains unverified (direct URL inaccessible to retrieval tool; settings unavailable). [Notes](notes/dashboard-verification.md). No deployment changes.
+Next: retrieve E0045/E0052; accept only isolated full improvements, scale strongest combined candidate if justified. Avoid unnecessary minor tuning; consider structurally distinct next campaign. No workers.

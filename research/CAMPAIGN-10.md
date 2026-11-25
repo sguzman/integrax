@@ -15,3 +15,5 @@ M7: E0048 optional strict canonical arithmetic decoding and append rejection; be
 [E0048](../experiments/records/E0048.md) passed 12/12 comparisons and 18/18 append rejects. E0049 larger dictionary ablation (8192/16384 rules, 256/512 KiB training) authored with strict decoder, pending. No extrapolation.
 
 M8: E0050 [root decision geometry](../theory/root-decision-geometry.md) full binary root trees derived from dictionary, with first-digit alignment or median splits. Same third-order context, matched greedy parse and strict comparisons. CI pending. No novelty claim or assumed improvement.
+
+[E0049](../experiments/records/E0049.md) and [E0050](../experiments/records/E0050.md) passed 18/18 authentic strict reconstructions. Larger sample/16384 rules and median tree produce modest separate gains on largest sample; [E0051](../experiments/records/E0051.md) 30 independent strict cross-codec comparisons passed. E0052 combined ablation on two new target regions authored, pending.

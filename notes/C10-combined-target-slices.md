@@ -1,0 +1,3 @@
+# E0052 — Combined dictionary and tree validation
+
+E0049 and E0050 showed modest separate gains, not evidence of additive gains. Evaluate five combinations on previously untouched 16 MiB regions of enwik9 at 200M and 600M. Train the same offset schedule directly on enwik9; verify old sample dictionary hash and nested larger dictionary prefix, record new sample/dictionary hashes rather than assuming they match enwik8. Compare fixed baseline, larger sample/8192 and /16384 with mode 9, plus both larger dictionaries with mode 12. Strict decoding, exact comparisons, all costs included. Choose full-target candidate only after observing matched target-slice gains; no full-scale extrapolation or novelty claim.
