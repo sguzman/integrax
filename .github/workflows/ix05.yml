@@ -1,0 +1,19 @@
+name: IX05 conditional and isolated corpus verification
+on:
+  push:
+    paths:
+      - 'src/bin/ix05.rs'
+      - 'experiments/ix05/**'
+      - '.github/workflows/ix05.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && cargo --version
+      - run: sh datasets/acquire.sh enwik9
+      - run: bash experiments/ix05/full.sh
