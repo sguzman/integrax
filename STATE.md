@@ -13,4 +13,4 @@ Next: collect E0065 strict isolated full result; accept only an improvement over
 
 E0067 independent mode18 reference: 40/40 exact synthetic cases, prior 80 mode15–17 observations unchanged; [CI 45712332816](https://github.com/sguzman/integrax/actions/runs/45712332816) passed 40/40 byte-identical archives and strict cross-decodes.
 
-E0068 mode19 adaptive correction operands authored, same parse as mode18. Nine strict authentic comparisons pending. [Cost analysis](theory/sparse-correction-operand-cost.md). Mode19 independent cross-codec not yet verified.
+E0068 mode19 adaptive correction operands authored, same parse as mode18. [CI 45712593317](https://github.com/sguzman/integrax/actions/runs/45712593317), queued at checkpoint. [Cost analysis](theory/sparse-correction-operand-cost.md). Mode19 independent cross-codec not yet verified.
