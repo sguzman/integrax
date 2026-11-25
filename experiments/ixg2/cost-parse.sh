@@ -1,27 +1,33 @@
-# IXG2 global arithmetic DAG
-
-Header: magic IXG2, mode byte (0 fixed-width roots, 1 Huffman roots), u64 BE original byte length (<=1,000,000,000), u16 BE rule count n<=8192, n pairs of u16 BE symbol IDs. IDs 0..255 are fixed byte literals; rule i defines 256+i by concatenating two earlier symbols. Each expansion <=256 bytes. All rules charged, including unused training rules. Mode 1 additionally stores one canonical unsigned LEB128 root frequency for each of the 256+n symbols. Build a binary Huffman tree using a min-heap keyed by (weight, minimum leaf ID, creation ID); first popped node is left/0, second right/1. Single leaf uses zero bits; empty stream has no tree. Fixed mode root width ceil(log2(256+n)). Bits MSB-first, final unused low bits zero. No extra payload length: decode roots until exactly original byte length, validate weighted frequency total and actual counts in Huffman mode, reject nonzero padding or trailing bytes. No external dictionary at decode.
-
-Training: at most 256 KiB sample, repeated maximum-frequency nonoverlapping pair replacement among eligible expansions <=256, ties by ascending pair ID, <=8192 rules (default budget 1024). All 256 byte literals always available. Encode with global trie longest match, ties by lowest existing ID for duplicate expansions, parse continuously across read-buffer boundaries. Two passes compute frequencies and then encode. Archive-only comparison; no raw fallback in this experimental format. Memory bounded by dictionary size, trie, Huffman tree and fixed buffers. Unauthenticated; external SHA-256 and exact comparison required. Ordinary dictionary/Huffman coding with arithmetic concatenation semantics, not new mathematics.
-
-The original E0025 archive used 1024 rules and remains compatible. The implementation cap has been raised for experiments, not a new wire format; older decoders reject larger dictionaries. Rule count and IDs remain u16.
-
-## Extension: mode 2 (aligned roots)
-
-Mode 2 stores each greedy root ID as a big-endian unsigned 16-bit integer, with no frequency table. Header and dictionary are identical to mode 0; decode until the original length, validating IDs, exact output length and end of input. Older decoders reject this mode. It is intended as an intermediate reversible representation for independently charged hybrid backends. Modes 0 and 1 are unchanged.
-
-## Extension: native adaptive modes 3 and 4
-
-Modes 3 (adaptive) and 4 (context) store the same length and DAG header as mode 0, followed by an arithmetic-coded bit stream of greedy root IDs, each represented as w=ceil(log2 K) binary decisions. No frequency table. At each bit decision, use the counts for the current binary prefix node p (start 1; update p=2p+b); mode 3 has a single context, mode 4 has 257 contexts: last expanded byte 0..255 and start 256. Initialize all binary count pairs to (1,1), increment observed bit, halve both with ceiling when sum reaches 4096. Update context only after the complete root. Binary tree stride 2^w. Interval initialization [0,2^32-1]; split at lo+floor((hi-lo+1)*count0/total), then standard E1/E2/E3 arithmetic renormalization and pending underflow bits as IX04. Terminate with one additional pending bit, emit 0 if lo<2^30 else 1, then opposite pending bits; pad last byte with zero bits. Empty original has no payload. Decoder initializes 32-bit code, allows up to 32 virtual zero bits on EOF, expands until exactly L bytes; reject invalid root IDs, output overshoot, impossible arithmetic interval or excessive virtual padding. This experimental arithmetic payload is not canonicality- or integrity-checked at end; external digest and exact comparison required, as with IX04. Older decoders reject modes 3/4. No separate model or training corpus required at decode. Both modes use same dictionary and greedy parse, not external backend.
-
-## Extension: mode 5 (context backoff)
-
-Same frame, root parse, binary interval engine and local context table as mode 4. Also maintain one global binary count pair per prefix node, initialized and rescaled exactly like local counters, updated after every bit. With local counts (c0,c1), global counts (g0,g1), use integer zero weight c0*(g0+g1)+32*g0 and total (c0+c1+32)*(g0+g1). Both tables updated only after coding/decoding a bit. No additional bytes besides mode selector; fixed prior strength 32 is a format constant. Older decoders reject mode 5. Same termination limitations as modes 3/4.
-
-## Extension: modes 6–8, lexicographic ranks and second-order suffix contexts
-
-Mode 6 is mode 4 except that root IDs are replaced by their ranks in the lexicographic ordering of expanded byte strings, ties by increasing original ID. Decoder derives the identical permutation from the charged dictionary. Mode 7 uses these ranks plus a tagged two-byte suffix context; mode 8 uses original IDs plus the same suffix context. For modes 7/8 maintain last two output bytes (initial pair 256,256); advance by complete expansion, including the penultimate byte of a multi-byte root. At each prefix node p compute key = (older*257+last)*stride+p+1. Fixed 2^21 tagged slots, empty tag zero; index by xor-shift/multiply hash defined in source (32-bit wrapping multipliers 0x7feb352d and 0x846ca68b, shifts 16,15,16; mask low 21 bits). On tag miss, predict using the existing one-byte context counts. On tag hit with counts a0,a1 and one-byte counts c0,c1, use zero weight a0*(c0+c1)+8*c0, total (a0+a1+8)*(c0+c1). On miss replace slot with (key,1,1) then increment observed bit; on hit increment existing counts. Update order-one table as mode 4. Same count rescale. All model state decoder-derived; no transmitted table. Modes 0–5 unchanged. Termination limitations unchanged.
-
-## Extension: modes 9–10, deeper tagged predictors
-
-Both inherit mode 7 lexicographic ranks and order-one/two-byte predictions. Additional 2^20 direct-mapped tagged entries (u64 tag and u16 counter pair). Mode 9 key context is the three last output bytes, initial all 256, indexed as (oldest*257+older)*257+last. Mode 10 key context is previous original root ID, initial K. Key=context*stride+p+1. Hash using wrapping u64 xor-shift/multiply constants 0xbf58476d1ce4e5b9, 0x94d049bb133111eb and shifts 30,27,31; low 20 bits. On hit, first quantize the order-two zero probability to floor(4096*z/n) clamped 1..4095, then combine deep counts with eight pseudo-observations from that quantized probability: zero=a0*4096+8*zq, total=(a0+a1+8)*4096. On miss use unchanged order-two prediction. Both lower tables updated as mode 7; deep slot reset to (1,1) on miss, increment observed bit. Context advances after whole root, retaining last three bytes across root boundaries and previous original root ID. No transmitted model. Older modes unchanged, same payload integrity limitations.
+#!/bin/bash
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+cargo test --locked --release --bin ixg2
+cargo build --release --locked --bin ixg2
+bin=target/release/ixg2
+d=results-local/ixg2cost
+mkdir -p "$d"
+: > "$d/train"
+for off in 0 30000000 40000000 80000000; do
+ dd if=data/enwik8 iflag=skip_bytes,count_bytes skip="$off" count=65536 status=none >> "$d/train"
+done
+"$bin" train "$d/train" "$d/dict" 8192
+sha256sum "$d/train" "$d/dict"
+test "$(sha256sum "$d/dict" | cut -d' ' -f1)" = 5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518
+for spec in '1000000 1048576' '50000000 1048576' '10000000 16777216'; do
+ read -r offset len <<< "$spec"
+ dd if=data/enwik8 of="$d/input" iflag=skip_bytes,count_bytes skip="$offset" count="$len" status=none
+ printf 'CASE offset=%s bytes=%s\n' "$offset" "$len"
+ sha256sum "$d/input"
+ gzip -n -9 -c "$d/input" > "$d/gzip"
+ wc -c "$d/gzip"
+ for mode in lexorder3 cost0 cost2 cost8; do
+  echo "MODE $mode"
+  /usr/bin/time -f 'ENCODE seconds=%e rss_kib=%M' "$bin" "$mode" "$d/input" "$d/archive.ix" "$d/dict"
+  wc -c "$d/archive.ix"
+  sha256sum "$d/archive.ix"
+  /usr/bin/time -f 'DECODE seconds=%e rss_kib=%M' "$bin" decode "$d/archive.ix" "$d/restored"
+  cmp "$d/input" "$d/restored"
+  sha256sum "$d/restored"
+  echo "PASS $mode"
+ done
+done
