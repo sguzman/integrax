@@ -1,0 +1,63 @@
+{
+  "id": "E0040",
+  "campaign": "C10",
+  "track": "whole",
+  "status": "roundtrip-verified",
+  "revision": "2bf7709a51704448db92156e1ac605f45407d1a5",
+  "run": 45704723420,
+  "job": 139523648030,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "archive_bytes": 319996416,
+  "archive_sha256": "367a7432afa5201153906b747affc940fae5c39fdbe02f34e3e34ff816dc3d16",
+  "compressor_bytes": 413856,
+  "external_side_bytes": 0,
+  "contest_total_bytes": null,
+  "training": {
+    "offsets": [
+      0,
+      30000000,
+      40000000,
+      80000000
+    ],
+    "bytes_per_offset": 65536,
+    "bytes": 262144,
+    "sha256": "ba1d4361a56d6e6a688ee4f125465e51b47b361194fbe64349f098860a8fc6fc",
+    "dictionary_sha256": "5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518",
+    "dictionary_bytes": 32770
+  },
+  "model": {
+    "mode": 4,
+    "roots": 285249510,
+    "rules": 8192,
+    "ideal_bits": 2559709056.047,
+    "header_bytes": 32783
+  },
+  "encode_seconds": 132.07,
+  "encode_rss_bytes": 22736896,
+  "decode_seconds": 96.52,
+  "decode_pipeline_rss_bytes": 19787776,
+  "unit_tests": 8,
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "bash experiments/ixg2/full-context.sh context"
+  ],
+  "verification": {
+    "id": "V0008",
+    "byte_equal": true,
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "uid": 65534,
+    "original_readable": false,
+    "separate_network_namespace": true,
+    "external_dictionary_removed": true
+  },
+  "limitations": [
+    "archive-only; no contest eligibility",
+    "strict arithmetic termination/integrity not enforced",
+    "same implementation full reconstruction; independent small fixtures E0042",
+    "CI archive transient; digest retained"
+  ]
+}
