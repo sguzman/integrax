@@ -24,6 +24,9 @@ jobs:
             nix flake metadata --no-update-lock-file
           fi
           git add -N flake.lock
+          if git ls-files --error-unmatch flake.lock >/dev/null 2>&1 && git cat-file -e HEAD:flake.lock 2>/dev/null; then
+            git diff --exit-code HEAD -- flake.lock
+          fi
           printf 'NIX_LOCK_BEGIN\n'
           cat flake.lock
           printf 'NIX_LOCK_END\n'

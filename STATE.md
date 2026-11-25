@@ -7,6 +7,6 @@
 - E0042/E0046: 120 independent Rust/BigInt byte-identical archives and cross-decodes passed, modes 3–10.
 - [E0047](experiments/records/E0047.md) 12/12 exact, all nine predictive-cost cases regress; greedy retained. Initial script defect corrected, successful CI 45707225774.
 - E0048 optional strict canonical arithmetic decoding and append rejection [CI 45707458341](https://github.com/sguzman/integrax/actions/runs/45707458341), job 139532965420, running. [Proof](theory/canonical-root-intervals.md); no archive overhead, not authentication.
-- Nix lock generation and build [CI 45707565821](https://github.com/sguzman/integrax/actions/runs/45707565821), job 139533331756, running. No lock persisted yet. [Notes](notes/nix-reproducibility.md). Pages settings API unavailable; no settings changed.
+- Nix lock generation/build [CI 45707565821](https://github.com/sguzman/integrax/actions/runs/45707565821) passed, 12/12 tests; exact generated flake.lock persisted. Pinned rerun pending. [Notes](notes/nix-reproducibility.md). Pages settings API unavailable; no settings changed.
 
-Next: collect E0045/E0048 evidence, accept only isolated verified full improvements; retrieve successful Nix lock output and commit exact lock, then rerun pinned. Pivot from local ratio parsing; assess structural model gains. Dashboard live deployment unverified. No workers.
+Next: collect E0045/E0048 evidence, accept only isolated verified full improvements; verify pinned Nix rerun. Pivot from local ratio parsing; assess structural model gains. Dashboard live deployment unverified. No workers.
