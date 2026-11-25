@@ -1,0 +1,3 @@
+# C09 — Reversible transformations
+
+Active alongside C07 pending weighted full-corpus run. Question: can invertible number-theoretic maps reveal sparse or low-complexity descriptions without free side information? M1: IXT1 multiplication by (1-256^d)^r modulo 256^L and digitwise/XOR controls, [proof](../theory/modular-difference-transforms.md), [E0034](../experiments/records/E0034.md) exhaustive verification. M2: actual gzip backend comparison with all selectors/framing charged, 28 transforms across six authentic regions, E0035 pending. M3: evaluate cost and choose worthwhile transforms for native arithmetic or hybrid codecs; no novelty or full-target claim. Do not optimize entropy alone.

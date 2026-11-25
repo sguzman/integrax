@@ -1,0 +1,8 @@
+import {readFileSync,openSync,readSync,closeSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {gzipSync,gunzipSync} from 'node:zlib';
+import {deepStrictEqual} from 'node:assert';
+import {specs,frame,unframe,entropy,experiment} from './transforms.mjs';
+const actual=experiment(),expected=JSON.parse(readFileSync('experiments/records/E0034.json','utf8')).observations;deepStrictEqual(actual,expected);console.log('TRANSFORM REPLAY PASSED');
+const hash=x=>createHash('sha256').update(x).digest('hex');
+const fd=openSync(process.argv[2]??'data/enwik8','r');try{for(const [offset,len] of [[0,16384],[1000000,16384],[50000000,16384],[1000000,1048576],[50000000,1048576],[10000000,4194304]]){const x=Buffer.alloc(len);if(readSync(fd,x,0,len,offset)!==len)throw Error('short input');const baseline=gzipSync(x,{level:9});if(!gunzipSync(baseline).equals(x))throw Error('baseline');console.log('TRANSFORM_BASE '+JSON.stringify({offset,bytes:len,sha256:hash(x),gzip_bytes:baseline.length,gzip_sha256:hash(baseline)}));for(const spec of specs){const t=performance.now(),f=frame(x,spec),a=gzipSync(f,{level:9}),ms=performance.now()-t,d=unframe(gunzipSync(a));if(!Buffer.from(d).equals(x))throw Error('roundtrip');console.log('TRANSFORM_AUTH '+JSON.stringify({offset,bytes:len,id:spec.id,kind:spec.kind,lag:spec.lag,order:spec.order,archive_bytes:a.length,frame_bytes:f.length,entropy_bits_per_byte:entropy(f.subarray(5)),sha256:hash(x),archive_sha256:hash(a),decoded_sha256:hash(d),encode_ms:ms,byte_equal:true}));}}}finally{closeSync(fd)}console.log('PEAK_RSS '+process.resourceUsage().maxRSS*1024);

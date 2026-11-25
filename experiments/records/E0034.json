@@ -1,0 +1,3549 @@
+{
+  "id": "E0034",
+  "campaign": "C09",
+  "scope": "exhaustive two-byte and synthetic transform controls",
+  "status": "roundtrip-verified",
+  "execution": "V8 isolate",
+  "observations": {
+    "specs": [
+      {
+        "id": 0,
+        "kind": "identity",
+        "lag": 0,
+        "order": 0
+      },
+      {
+        "id": 1,
+        "kind": "integer",
+        "lag": 1,
+        "order": 1
+      },
+      {
+        "id": 2,
+        "kind": "integer",
+        "lag": 2,
+        "order": 1
+      },
+      {
+        "id": 3,
+        "kind": "integer",
+        "lag": 4,
+        "order": 1
+      },
+      {
+        "id": 4,
+        "kind": "integer",
+        "lag": 8,
+        "order": 1
+      },
+      {
+        "id": 5,
+        "kind": "integer",
+        "lag": 16,
+        "order": 1
+      },
+      {
+        "id": 6,
+        "kind": "integer",
+        "lag": 32,
+        "order": 1
+      },
+      {
+        "id": 7,
+        "kind": "digit",
+        "lag": 1,
+        "order": 1
+      },
+      {
+        "id": 8,
+        "kind": "digit",
+        "lag": 2,
+        "order": 1
+      },
+      {
+        "id": 9,
+        "kind": "digit",
+        "lag": 4,
+        "order": 1
+      },
+      {
+        "id": 10,
+        "kind": "digit",
+        "lag": 8,
+        "order": 1
+      },
+      {
+        "id": 11,
+        "kind": "digit",
+        "lag": 16,
+        "order": 1
+      },
+      {
+        "id": 12,
+        "kind": "digit",
+        "lag": 32,
+        "order": 1
+      },
+      {
+        "id": 13,
+        "kind": "xor",
+        "lag": 1,
+        "order": 1
+      },
+      {
+        "id": 14,
+        "kind": "xor",
+        "lag": 2,
+        "order": 1
+      },
+      {
+        "id": 15,
+        "kind": "xor",
+        "lag": 4,
+        "order": 1
+      },
+      {
+        "id": 16,
+        "kind": "xor",
+        "lag": 8,
+        "order": 1
+      },
+      {
+        "id": 17,
+        "kind": "xor",
+        "lag": 16,
+        "order": 1
+      },
+      {
+        "id": 18,
+        "kind": "xor",
+        "lag": 32,
+        "order": 1
+      },
+      {
+        "id": 19,
+        "kind": "integer",
+        "lag": 1,
+        "order": 2
+      },
+      {
+        "id": 20,
+        "kind": "integer",
+        "lag": 4,
+        "order": 2
+      },
+      {
+        "id": 21,
+        "kind": "integer",
+        "lag": 16,
+        "order": 2
+      },
+      {
+        "id": 22,
+        "kind": "digit",
+        "lag": 1,
+        "order": 2
+      },
+      {
+        "id": 23,
+        "kind": "digit",
+        "lag": 4,
+        "order": 2
+      },
+      {
+        "id": 24,
+        "kind": "digit",
+        "lag": 16,
+        "order": 2
+      },
+      {
+        "id": 25,
+        "kind": "xor",
+        "lag": 1,
+        "order": 2
+      },
+      {
+        "id": 26,
+        "kind": "xor",
+        "lag": 4,
+        "order": 2
+      },
+      {
+        "id": 27,
+        "kind": "xor",
+        "lag": 16,
+        "order": 2
+      }
+    ],
+    "exhaustive_roundtrips": 1835008,
+    "integer_identity_checks": 589824,
+    "synthetic": [
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 0,
+        "entropy_bits_per_byte": 5.78125,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 1,
+        "entropy_bits_per_byte": 5.769454882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 2,
+        "entropy_bits_per_byte": 5.863204882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 3,
+        "entropy_bits_per_byte": 5.84375,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 4,
+        "entropy_bits_per_byte": 5.78125,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 5,
+        "entropy_bits_per_byte": 5.663909765557392,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 6,
+        "entropy_bits_per_byte": 5.675704882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 7,
+        "entropy_bits_per_byte": 5.738204882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 8,
+        "entropy_bits_per_byte": 5.769454882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 9,
+        "entropy_bits_per_byte": 5.875,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 10,
+        "entropy_bits_per_byte": 5.75,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 11,
+        "entropy_bits_per_byte": 5.581954882778696,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 12,
+        "entropy_bits_per_byte": 5.706954882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 13,
+        "entropy_bits_per_byte": 5.800704882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 14,
+        "entropy_bits_per_byte": 5.706954882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 15,
+        "entropy_bits_per_byte": 5.71875,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 16,
+        "entropy_bits_per_byte": 5.71875,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 17,
+        "entropy_bits_per_byte": 5.84375,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 18,
+        "entropy_bits_per_byte": 5.6875,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 19,
+        "entropy_bits_per_byte": 5.71875,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 20,
+        "entropy_bits_per_byte": 5.706954882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 21,
+        "entropy_bits_per_byte": 5.738204882778696,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 22,
+        "entropy_bits_per_byte": 5.757659765557392,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 23,
+        "entropy_bits_per_byte": 5.738204882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 24,
+        "entropy_bits_per_byte": 5.8125,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 25,
+        "entropy_bits_per_byte": 5.706954882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 26,
+        "entropy_bits_per_byte": 5.71875,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "transform": 27,
+        "entropy_bits_per_byte": 5.6875,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 0,
+        "entropy_bits_per_byte": 0,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 1,
+        "entropy_bits_per_byte": 0.11611507530476972,
+        "zero_digits": 63,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 2,
+        "entropy_bits_per_byte": 0.20062232431271465,
+        "zero_digits": 62,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 3,
+        "entropy_bits_per_byte": 0.3372900666170139,
+        "zero_digits": 60,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 4,
+        "entropy_bits_per_byte": 0.5435644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 5,
+        "entropy_bits_per_byte": 0.8112781244591328,
+        "zero_digits": 48,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 6,
+        "entropy_bits_per_byte": 1,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 7,
+        "entropy_bits_per_byte": 0.11611507530476972,
+        "zero_digits": 63,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 8,
+        "entropy_bits_per_byte": 0.20062232431271465,
+        "zero_digits": 62,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 9,
+        "entropy_bits_per_byte": 0.3372900666170139,
+        "zero_digits": 60,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 10,
+        "entropy_bits_per_byte": 0.5435644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 11,
+        "entropy_bits_per_byte": 0.8112781244591328,
+        "zero_digits": 48,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 12,
+        "entropy_bits_per_byte": 1,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 13,
+        "entropy_bits_per_byte": 0.11611507530476972,
+        "zero_digits": 63,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 14,
+        "entropy_bits_per_byte": 0.20062232431271465,
+        "zero_digits": 62,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 15,
+        "entropy_bits_per_byte": 0.3372900666170139,
+        "zero_digits": 60,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 16,
+        "entropy_bits_per_byte": 0.5435644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 17,
+        "entropy_bits_per_byte": 0.8112781244591328,
+        "zero_digits": 48,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 18,
+        "entropy_bits_per_byte": 1,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 19,
+        "entropy_bits_per_byte": 0.23187232431271465,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 20,
+        "entropy_bits_per_byte": 0.7192693259782922,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 21,
+        "entropy_bits_per_byte": 1.5843225166542534,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 22,
+        "entropy_bits_per_byte": 0.23187232431271465,
+        "zero_digits": 62,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 23,
+        "entropy_bits_per_byte": 0.6685644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 24,
+        "entropy_bits_per_byte": 1.5,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 25,
+        "entropy_bits_per_byte": 0.20062232431271465,
+        "zero_digits": 62,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 26,
+        "entropy_bits_per_byte": 0.5435644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "transform": 27,
+        "entropy_bits_per_byte": 1,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 0,
+        "entropy_bits_per_byte": 6,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 1,
+        "entropy_bits_per_byte": 0.23187232431271465,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 2,
+        "entropy_bits_per_byte": 0.34726597513537405,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 3,
+        "entropy_bits_per_byte": 0.5769384388695526,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 4,
+        "entropy_bits_per_byte": 1.0316439961897457,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 5,
+        "entropy_bits_per_byte": 1.920848812049235,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 6,
+        "entropy_bits_per_byte": 3.6003111621563573,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 7,
+        "entropy_bits_per_byte": 0.11611507530476972,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 8,
+        "entropy_bits_per_byte": 0.23187232431271465,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 9,
+        "entropy_bits_per_byte": 0.4622900666170139,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 10,
+        "entropy_bits_per_byte": 0.9185644431995964,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 11,
+        "entropy_bits_per_byte": 1.811278124459133,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 12,
+        "entropy_bits_per_byte": 3.5,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 13,
+        "entropy_bits_per_byte": 1.9375,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 14,
+        "entropy_bits_per_byte": 1.9257048827786958,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 15,
+        "entropy_bits_per_byte": 1.9435993675869248,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 16,
+        "entropy_bits_per_byte": 2.054229296672175,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 17,
+        "entropy_bits_per_byte": 2.414267682792879,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 18,
+        "entropy_bits_per_byte": 3.3989842822057974,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 19,
+        "entropy_bits_per_byte": 0.23187232431271465,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 20,
+        "entropy_bits_per_byte": 0.8873144431995964,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 21,
+        "entropy_bits_per_byte": 3.46875,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 22,
+        "entropy_bits_per_byte": 0.23187232431271465,
+        "zero_digits": 62,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 23,
+        "entropy_bits_per_byte": 0.9185644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 24,
+        "entropy_bits_per_byte": 3.5,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 25,
+        "entropy_bits_per_byte": 1.9257048827786958,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 26,
+        "entropy_bits_per_byte": 2.054229296672175,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 64,
+        "transform": 27,
+        "entropy_bits_per_byte": 3.3989842822057974,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 0,
+        "entropy_bits_per_byte": 2,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 1,
+        "entropy_bits_per_byte": 1.5843225166542534,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 2,
+        "entropy_bits_per_byte": 2.1686450333085068,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 3,
+        "entropy_bits_per_byte": 0.4622900666170139,
+        "zero_digits": 60,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 4,
+        "entropy_bits_per_byte": 0.7935644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 5,
+        "entropy_bits_per_byte": 1.311278124459133,
+        "zero_digits": 48,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 6,
+        "entropy_bits_per_byte": 2,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 7,
+        "entropy_bits_per_byte": 0.8956006411133862,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 8,
+        "entropy_bits_per_byte": 1.199895033308507,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 9,
+        "entropy_bits_per_byte": 0.4622900666170139,
+        "zero_digits": 60,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 10,
+        "entropy_bits_per_byte": 0.7935644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 11,
+        "entropy_bits_per_byte": 1.311278124459133,
+        "zero_digits": 48,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 12,
+        "entropy_bits_per_byte": 2,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 13,
+        "entropy_bits_per_byte": 2.0843225166542534,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 14,
+        "entropy_bits_per_byte": 1.2006223243127148,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 15,
+        "entropy_bits_per_byte": 0.4622900666170139,
+        "zero_digits": 60,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 16,
+        "entropy_bits_per_byte": 0.7935644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 17,
+        "entropy_bits_per_byte": 1.311278124459133,
+        "zero_digits": 48,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 18,
+        "entropy_bits_per_byte": 2,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 19,
+        "entropy_bits_per_byte": 1.6686450333085068,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 20,
+        "entropy_bits_per_byte": 0.9185644431995964,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 21,
+        "entropy_bits_per_byte": 2.550704882778696,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 22,
+        "entropy_bits_per_byte": 1.5843225166542534,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 23,
+        "entropy_bits_per_byte": 0.9185644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 24,
+        "entropy_bits_per_byte": 2.5,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 25,
+        "entropy_bits_per_byte": 1.2006223243127148,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 26,
+        "entropy_bits_per_byte": 0.7935644431995964,
+        "zero_digits": 56,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "transform": 27,
+        "entropy_bits_per_byte": 2,
+        "zero_digits": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 0,
+        "entropy_bits_per_byte": 3.8244485409394198,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 1,
+        "entropy_bits_per_byte": 4.896418898701708,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 2,
+        "entropy_bits_per_byte": 4.800093945008263,
+        "zero_digits": 2,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 3,
+        "entropy_bits_per_byte": 4.944909571322962,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 4,
+        "entropy_bits_per_byte": 5.257659765557392,
+        "zero_digits": 2,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 5,
+        "entropy_bits_per_byte": 5.402114648336088,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 6,
+        "entropy_bits_per_byte": 5.120864648336088,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 7,
+        "entropy_bits_per_byte": 4.845714015923013,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 8,
+        "entropy_bits_per_byte": 4.777114648336088,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 9,
+        "entropy_bits_per_byte": 4.884623781480404,
+        "zero_digits": 5,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 10,
+        "entropy_bits_per_byte": 5.163909765557392,
+        "zero_digits": 4,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 11,
+        "entropy_bits_per_byte": 5.234069531114784,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 12,
+        "entropy_bits_per_byte": 5.046569531114784,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 13,
+        "entropy_bits_per_byte": 4.664313383509937,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 14,
+        "entropy_bits_per_byte": 4.523382914624721,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 15,
+        "entropy_bits_per_byte": 4.646418898701708,
+        "zero_digits": 5,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 16,
+        "entropy_bits_per_byte": 4.956343945008263,
+        "zero_digits": 4,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 17,
+        "entropy_bits_per_byte": 5.085479296672175,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 18,
+        "entropy_bits_per_byte": 4.972274413893479,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 19,
+        "entropy_bits_per_byte": 5.0080633835099375,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 20,
+        "entropy_bits_per_byte": 5.18180425036562,
+        "zero_digits": 2,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 21,
+        "entropy_bits_per_byte": 5.601409765557392,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 22,
+        "entropy_bits_per_byte": 5.033214015923012,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 23,
+        "entropy_bits_per_byte": 5.1761085007312415,
+        "zero_digits": 2,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 24,
+        "entropy_bits_per_byte": 5.570159765557392,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 25,
+        "entropy_bits_per_byte": 4.523382914624721,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 26,
+        "entropy_bits_per_byte": 4.956343945008263,
+        "zero_digits": 4,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "transform": 27,
+        "entropy_bits_per_byte": 4.972274413893479,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 0,
+        "entropy_bits_per_byte": 7.833310642440767,
+        "zero_digits": 2,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 1,
+        "entropy_bits_per_byte": 7.811434617918874,
+        "zero_digits": 2,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 2,
+        "entropy_bits_per_byte": 7.798699646829631,
+        "zero_digits": 2,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 3,
+        "entropy_bits_per_byte": 7.777130285896035,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 4,
+        "entropy_bits_per_byte": 7.81887623821861,
+        "zero_digits": 10,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 5,
+        "entropy_bits_per_byte": 7.815324639911289,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 6,
+        "entropy_bits_per_byte": 7.809506933187374,
+        "zero_digits": 4,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 7,
+        "entropy_bits_per_byte": 7.796724189505096,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 8,
+        "entropy_bits_per_byte": 7.808084492871725,
+        "zero_digits": 5,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 9,
+        "entropy_bits_per_byte": 7.797000697327102,
+        "zero_digits": 5,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 10,
+        "entropy_bits_per_byte": 7.798846330927876,
+        "zero_digits": 6,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 11,
+        "entropy_bits_per_byte": 7.79593353817631,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 12,
+        "entropy_bits_per_byte": 7.816950641447992,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 13,
+        "entropy_bits_per_byte": 7.794071409485148,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 14,
+        "entropy_bits_per_byte": 7.821658143034623,
+        "zero_digits": 5,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 15,
+        "entropy_bits_per_byte": 7.8107141244439955,
+        "zero_digits": 5,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 16,
+        "entropy_bits_per_byte": 7.809071040788809,
+        "zero_digits": 6,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 17,
+        "entropy_bits_per_byte": 7.825576703495629,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 18,
+        "entropy_bits_per_byte": 7.806193594010069,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 19,
+        "entropy_bits_per_byte": 7.820559925938086,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 20,
+        "entropy_bits_per_byte": 7.822468336576018,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 21,
+        "entropy_bits_per_byte": 7.824078434712491,
+        "zero_digits": 2,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 22,
+        "entropy_bits_per_byte": 7.808768177223017,
+        "zero_digits": 2,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 23,
+        "entropy_bits_per_byte": 7.83065915002936,
+        "zero_digits": 6,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 24,
+        "entropy_bits_per_byte": 7.831603502025286,
+        "zero_digits": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 25,
+        "entropy_bits_per_byte": 7.821658143034623,
+        "zero_digits": 5,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 26,
+        "entropy_bits_per_byte": 7.809071040788809,
+        "zero_digits": 6,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "transform": 27,
+        "entropy_bits_per_byte": 7.806193594010069,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 0,
+        "entropy_bits_per_byte": 0,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 1,
+        "entropy_bits_per_byte": 0.011173818721219527,
+        "zero_digits": 1023,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 2,
+        "entropy_bits_per_byte": 0.020393135236084953,
+        "zero_digits": 1022,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 3,
+        "entropy_bits_per_byte": 0.03687450625387198,
+        "zero_digits": 1020,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 4,
+        "entropy_bits_per_byte": 0.06591441234324169,
+        "zero_digits": 1016,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 5,
+        "entropy_bits_per_byte": 0.11611507530476972,
+        "zero_digits": 1008,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 6,
+        "entropy_bits_per_byte": 0.20062232431271465,
+        "zero_digits": 992,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 7,
+        "entropy_bits_per_byte": 0.011173818721219527,
+        "zero_digits": 1023,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 8,
+        "entropy_bits_per_byte": 0.020393135236084953,
+        "zero_digits": 1022,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 9,
+        "entropy_bits_per_byte": 0.03687450625387198,
+        "zero_digits": 1020,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 10,
+        "entropy_bits_per_byte": 0.06591441234324169,
+        "zero_digits": 1016,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 11,
+        "entropy_bits_per_byte": 0.11611507530476972,
+        "zero_digits": 1008,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 12,
+        "entropy_bits_per_byte": 0.20062232431271465,
+        "zero_digits": 992,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 13,
+        "entropy_bits_per_byte": 0.011173818721219527,
+        "zero_digits": 1023,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 14,
+        "entropy_bits_per_byte": 0.020393135236084953,
+        "zero_digits": 1022,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 15,
+        "entropy_bits_per_byte": 0.03687450625387198,
+        "zero_digits": 1020,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 16,
+        "entropy_bits_per_byte": 0.06591441234324169,
+        "zero_digits": 1016,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 17,
+        "entropy_bits_per_byte": 0.11611507530476972,
+        "zero_digits": 1008,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 18,
+        "entropy_bits_per_byte": 0.20062232431271465,
+        "zero_digits": 992,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 19,
+        "entropy_bits_per_byte": 0.022346260236084953,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 20,
+        "entropy_bits_per_byte": 0.07689596751691018,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 21,
+        "entropy_bits_per_byte": 0.23714248160360546,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 22,
+        "entropy_bits_per_byte": 0.022346260236084953,
+        "zero_digits": 1022,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 23,
+        "entropy_bits_per_byte": 0.07372691234324169,
+        "zero_digits": 1016,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 24,
+        "entropy_bits_per_byte": 0.23187232431271465,
+        "zero_digits": 992,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 25,
+        "entropy_bits_per_byte": 0.020393135236084953,
+        "zero_digits": 1022,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 26,
+        "entropy_bits_per_byte": 0.06591441234324169,
+        "zero_digits": 1016,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "transform": 27,
+        "entropy_bits_per_byte": 0.20062232431271465,
+        "zero_digits": 992,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 0,
+        "entropy_bits_per_byte": 8,
+        "zero_digits": 4,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 1,
+        "entropy_bits_per_byte": 0.04451776852792861,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 2,
+        "entropy_bits_per_byte": 0.07707717553356772,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 3,
+        "entropy_bits_per_byte": 0.13771301494957167,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 4,
+        "entropy_bits_per_byte": 0.248654288443869,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 5,
+        "entropy_bits_per_byte": 0.44779399677624643,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 6,
+        "entropy_bits_per_byte": 0.7965016305673933,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 7,
+        "entropy_bits_per_byte": 0,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 8,
+        "entropy_bits_per_byte": 0.011173818721219527,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 9,
+        "entropy_bits_per_byte": 0.03351732319703582,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 10,
+        "entropy_bits_per_byte": 0.07818776245793206,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 11,
+        "entropy_bits_per_byte": 0.16746205738445855,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 12,
+        "entropy_bits_per_byte": 0.34574183771906714,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 13,
+        "entropy_bits_per_byte": 1.984375,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 14,
+        "entropy_bits_per_byte": 1.9740201572908909,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 15,
+        "entropy_bits_per_byte": 1.9561704600989263,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 16,
+        "entropy_bits_per_byte": 1.925317645695908,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 17,
+        "entropy_bits_per_byte": 1.8723825949678552,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 18,
+        "entropy_bits_per_byte": 1.7831047187267253,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 19,
+        "entropy_bits_per_byte": 0.03687450625387198,
+        "zero_digits": 4,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 20,
+        "entropy_bits_per_byte": 0.24236464660174045,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 21,
+        "entropy_bits_per_byte": 0.8477844120788419,
+        "zero_digits": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 22,
+        "entropy_bits_per_byte": 0.011173818721219527,
+        "zero_digits": 1023,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 23,
+        "entropy_bits_per_byte": 0.07232838745793206,
+        "zero_digits": 1017,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 24,
+        "entropy_bits_per_byte": 0.31644496271906714,
+        "zero_digits": 993,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 25,
+        "entropy_bits_per_byte": 1.9740201572908909,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 26,
+        "entropy_bits_per_byte": 1.925317645695908,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 1024,
+        "transform": 27,
+        "entropy_bits_per_byte": 1.7831047187267253,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 0,
+        "entropy_bits_per_byte": 2,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 1,
+        "entropy_bits_per_byte": 1.509218626563468,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 2,
+        "entropy_bits_per_byte": 2.018437253126936,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 3,
+        "entropy_bits_per_byte": 0.04468700625387198,
+        "zero_digits": 1020,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 4,
+        "entropy_bits_per_byte": 0.08153941234324169,
+        "zero_digits": 1016,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 5,
+        "entropy_bits_per_byte": 0.14736507530476972,
+        "zero_digits": 1008,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 6,
+        "entropy_bits_per_byte": 0.26312232431271465,
+        "zero_digits": 992,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 7,
+        "entropy_bits_per_byte": 0.8204967510226008,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 8,
+        "entropy_bits_per_byte": 1.020390378126936,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 9,
+        "entropy_bits_per_byte": 0.04468700625387198,
+        "zero_digits": 1020,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 10,
+        "entropy_bits_per_byte": 0.08153941234324169,
+        "zero_digits": 1016,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 11,
+        "entropy_bits_per_byte": 0.14736507530476972,
+        "zero_digits": 1008,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 12,
+        "entropy_bits_per_byte": 0.26312232431271465,
+        "zero_digits": 992,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 13,
+        "entropy_bits_per_byte": 2.009218626563468,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 14,
+        "entropy_bits_per_byte": 1.0203931352360849,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 15,
+        "entropy_bits_per_byte": 0.04468700625387198,
+        "zero_digits": 1020,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 16,
+        "entropy_bits_per_byte": 0.08153941234324169,
+        "zero_digits": 1016,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 17,
+        "entropy_bits_per_byte": 0.14736507530476972,
+        "zero_digits": 1008,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 18,
+        "entropy_bits_per_byte": 0.26312232431271465,
+        "zero_digits": 992,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 19,
+        "entropy_bits_per_byte": 1.518437253126936,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 20,
+        "entropy_bits_per_byte": 0.08935191234324169,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 21,
+        "entropy_bits_per_byte": 0.29754137948638315,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 22,
+        "entropy_bits_per_byte": 1.509218626563468,
+        "zero_digits": 512,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 23,
+        "entropy_bits_per_byte": 0.08935191234324169,
+        "zero_digits": 1016,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 24,
+        "entropy_bits_per_byte": 0.29437232431271465,
+        "zero_digits": 992,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 25,
+        "entropy_bits_per_byte": 1.0203931352360849,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 26,
+        "entropy_bits_per_byte": 0.08153941234324169,
+        "zero_digits": 1016,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "transform": 27,
+        "entropy_bits_per_byte": 0.26312232431271465,
+        "zero_digits": 992,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 0,
+        "entropy_bits_per_byte": 3.8387369229403165,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 1,
+        "entropy_bits_per_byte": 4.8284239697843185,
+        "zero_digits": 21,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 2,
+        "entropy_bits_per_byte": 4.7517797970181075,
+        "zero_digits": 42,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 3,
+        "entropy_bits_per_byte": 4.88800275093444,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 4,
+        "entropy_bits_per_byte": 5.09181572011708,
+        "zero_digits": 41,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 5,
+        "entropy_bits_per_byte": 5.138790181894209,
+        "zero_digits": 21,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 6,
+        "entropy_bits_per_byte": 5.070344599785532,
+        "zero_digits": 61,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 7,
+        "entropy_bits_per_byte": 4.8145135424507925,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 8,
+        "entropy_bits_per_byte": 4.733712553125664,
+        "zero_digits": 21,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 9,
+        "entropy_bits_per_byte": 4.771152333189066,
+        "zero_digits": 63,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 10,
+        "entropy_bits_per_byte": 4.980190802826307,
+        "zero_digits": 62,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 11,
+        "entropy_bits_per_byte": 4.921200561118023,
+        "zero_digits": 63,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 12,
+        "entropy_bits_per_byte": 5.012852260645117,
+        "zero_digits": 61,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 13,
+        "entropy_bits_per_byte": 4.610407502440575,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 14,
+        "entropy_bits_per_byte": 4.473291548431183,
+        "zero_digits": 21,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 15,
+        "entropy_bits_per_byte": 4.498394997857938,
+        "zero_digits": 63,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 16,
+        "entropy_bits_per_byte": 4.717043924864276,
+        "zero_digits": 62,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 17,
+        "entropy_bits_per_byte": 4.776749345642803,
+        "zero_digits": 63,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 18,
+        "entropy_bits_per_byte": 4.859725523648682,
+        "zero_digits": 61,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 19,
+        "entropy_bits_per_byte": 4.924116108041085,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 20,
+        "entropy_bits_per_byte": 4.961719778658126,
+        "zero_digits": 21,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 21,
+        "entropy_bits_per_byte": 5.398753911512392,
+        "zero_digits": 40,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 22,
+        "entropy_bits_per_byte": 4.959105108719003,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 23,
+        "entropy_bits_per_byte": 4.941056778866561,
+        "zero_digits": 21,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 24,
+        "entropy_bits_per_byte": 5.446264983900588,
+        "zero_digits": 40,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 25,
+        "entropy_bits_per_byte": 4.473291548431183,
+        "zero_digits": 21,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 26,
+        "entropy_bits_per_byte": 4.717043924864276,
+        "zero_digits": 62,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "transform": 27,
+        "entropy_bits_per_byte": 4.859725523648682,
+        "zero_digits": 61,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 0,
+        "entropy_bits_per_byte": 7.963648425505187,
+        "zero_digits": 13,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 1,
+        "entropy_bits_per_byte": 7.9582624712577275,
+        "zero_digits": 18,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 2,
+        "entropy_bits_per_byte": 7.9528985426491134,
+        "zero_digits": 23,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 3,
+        "entropy_bits_per_byte": 7.953513422890465,
+        "zero_digits": 16,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 4,
+        "entropy_bits_per_byte": 7.960940736379322,
+        "zero_digits": 17,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 5,
+        "entropy_bits_per_byte": 7.9534994388885005,
+        "zero_digits": 10,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 6,
+        "entropy_bits_per_byte": 7.954269513176986,
+        "zero_digits": 10,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 7,
+        "entropy_bits_per_byte": 7.952345481011041,
+        "zero_digits": 12,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 8,
+        "entropy_bits_per_byte": 7.951567233356299,
+        "zero_digits": 23,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 9,
+        "entropy_bits_per_byte": 7.950326553033519,
+        "zero_digits": 12,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 10,
+        "entropy_bits_per_byte": 7.9515315316699535,
+        "zero_digits": 14,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 11,
+        "entropy_bits_per_byte": 7.954807974735831,
+        "zero_digits": 10,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 12,
+        "entropy_bits_per_byte": 7.952088741044751,
+        "zero_digits": 13,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 13,
+        "entropy_bits_per_byte": 7.953721557665635,
+        "zero_digits": 12,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 14,
+        "entropy_bits_per_byte": 7.9534124546953375,
+        "zero_digits": 23,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 15,
+        "entropy_bits_per_byte": 7.951871860046405,
+        "zero_digits": 12,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 16,
+        "entropy_bits_per_byte": 7.953928874692815,
+        "zero_digits": 14,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 17,
+        "entropy_bits_per_byte": 7.96126404679997,
+        "zero_digits": 10,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 18,
+        "entropy_bits_per_byte": 7.953624085749613,
+        "zero_digits": 13,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 19,
+        "entropy_bits_per_byte": 7.951451592268736,
+        "zero_digits": 21,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 20,
+        "entropy_bits_per_byte": 7.955746228759417,
+        "zero_digits": 17,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 21,
+        "entropy_bits_per_byte": 7.952221375511588,
+        "zero_digits": 16,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 22,
+        "entropy_bits_per_byte": 7.943562904425693,
+        "zero_digits": 23,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 23,
+        "entropy_bits_per_byte": 7.95405570444287,
+        "zero_digits": 17,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 24,
+        "entropy_bits_per_byte": 7.948132133933488,
+        "zero_digits": 14,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 25,
+        "entropy_bits_per_byte": 7.9534124546953375,
+        "zero_digits": 23,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 26,
+        "entropy_bits_per_byte": 7.953928874692815,
+        "zero_digits": 14,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "transform": 27,
+        "entropy_bits_per_byte": 7.953624085749613,
+        "zero_digits": 13,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 0,
+        "entropy_bits_per_byte": 0,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 1,
+        "entropy_bits_per_byte": 0.0032818649698048933,
+        "zero_digits": 4095,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 2,
+        "entropy_bits_per_byte": 0.006075362677284398,
+        "zero_digits": 4094,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 3,
+        "entropy_bits_per_byte": 0.011173818721219527,
+        "zero_digits": 4092,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 4,
+        "entropy_bits_per_byte": 0.020393135236084953,
+        "zero_digits": 4088,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 5,
+        "entropy_bits_per_byte": 0.03687450625387198,
+        "zero_digits": 4080,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 6,
+        "entropy_bits_per_byte": 0.06591441234324169,
+        "zero_digits": 4064,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 7,
+        "entropy_bits_per_byte": 0.0032818649698048933,
+        "zero_digits": 4095,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 8,
+        "entropy_bits_per_byte": 0.006075362677284398,
+        "zero_digits": 4094,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 9,
+        "entropy_bits_per_byte": 0.011173818721219527,
+        "zero_digits": 4092,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 10,
+        "entropy_bits_per_byte": 0.020393135236084953,
+        "zero_digits": 4088,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 11,
+        "entropy_bits_per_byte": 0.03687450625387198,
+        "zero_digits": 4080,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 12,
+        "entropy_bits_per_byte": 0.06591441234324169,
+        "zero_digits": 4064,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 13,
+        "entropy_bits_per_byte": 0.0032818649698048933,
+        "zero_digits": 4095,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 14,
+        "entropy_bits_per_byte": 0.006075362677284398,
+        "zero_digits": 4094,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 15,
+        "entropy_bits_per_byte": 0.011173818721219527,
+        "zero_digits": 4092,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 16,
+        "entropy_bits_per_byte": 0.020393135236084953,
+        "zero_digits": 4088,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 17,
+        "entropy_bits_per_byte": 0.03687450625387198,
+        "zero_digits": 4080,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 18,
+        "entropy_bits_per_byte": 0.06591441234324169,
+        "zero_digits": 4064,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 19,
+        "entropy_bits_per_byte": 0.006563643927284398,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 20,
+        "entropy_bits_per_byte": 0.023138524029502075,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 21,
+        "entropy_bits_per_byte": 0.0750444516659644,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 22,
+        "entropy_bits_per_byte": 0.006563643927284398,
+        "zero_digits": 4094,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 23,
+        "entropy_bits_per_byte": 0.022346260236084953,
+        "zero_digits": 4088,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 24,
+        "entropy_bits_per_byte": 0.07372691234324169,
+        "zero_digits": 4064,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 25,
+        "entropy_bits_per_byte": 0.006075362677284398,
+        "zero_digits": 4094,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 26,
+        "entropy_bits_per_byte": 0.020393135236084953,
+        "zero_digits": 4088,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "transform": 27,
+        "entropy_bits_per_byte": 0.06591441234324169,
+        "zero_digits": 4064,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 0,
+        "entropy_bits_per_byte": 8,
+        "zero_digits": 16,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 1,
+        "entropy_bits_per_byte": 0.03881542504322328,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 2,
+        "entropy_bits_per_byte": 0.06919351444679922,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 3,
+        "entropy_bits_per_byte": 0.12301439776570118,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 4,
+        "entropy_bits_per_byte": 0.21620991082690422,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 5,
+        "entropy_bits_per_byte": 0.3726866716826438,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 6,
+        "entropy_bits_per_byte": 0.6229680537007057,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 7,
+        "entropy_bits_per_byte": 0,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 8,
+        "entropy_bits_per_byte": 0.0032818649698048933,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 9,
+        "entropy_bits_per_byte": 0.00984533685142915,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 10,
+        "entropy_bits_per_byte": 0.022971247794113955,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 11,
+        "entropy_bits_per_byte": 0.04921893367961223,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 12,
+        "entropy_bits_per_byte": 0.1016977235712608,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 13,
+        "entropy_bits_per_byte": 1.984375,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 14,
+        "entropy_bits_per_byte": 1.9705642980516371,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 15,
+        "entropy_bits_per_byte": 1.9436711338909276,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 16,
+        "entropy_bits_per_byte": 1.891103398172619,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 17,
+        "entropy_bits_per_byte": 1.7881641321639512,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 18,
+        "entropy_bits_per_byte": 1.5864354594297667,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 19,
+        "entropy_bits_per_byte": 0.03687450625387198,
+        "zero_digits": 16,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 20,
+        "entropy_bits_per_byte": 0.22856078679973266,
+        "zero_digits": 15,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 21,
+        "entropy_bits_per_byte": 0.7329799926191942,
+        "zero_digits": 15,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 22,
+        "entropy_bits_per_byte": 0.0032818649698048933,
+        "zero_digits": 4095,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 23,
+        "entropy_bits_per_byte": 0.021506404044113955,
+        "zero_digits": 4089,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 24,
+        "entropy_bits_per_byte": 0.0943735048212608,
+        "zero_digits": 4065,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 25,
+        "entropy_bits_per_byte": 1.9705642980516371,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 26,
+        "entropy_bits_per_byte": 1.891103398172619,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "ramp",
+        "bytes": 4096,
+        "transform": 27,
+        "entropy_bits_per_byte": 1.5864354594297667,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 0,
+        "entropy_bits_per_byte": 2,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 1,
+        "entropy_bits_per_byte": 1.5027934546803048,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 2,
+        "entropy_bits_per_byte": 2.0055869093606096,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 3,
+        "entropy_bits_per_byte": 0.013126943721219527,
+        "zero_digits": 4092,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 4,
+        "entropy_bits_per_byte": 0.024299385236084953,
+        "zero_digits": 4088,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 5,
+        "entropy_bits_per_byte": 0.04468700625387198,
+        "zero_digits": 4080,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 6,
+        "entropy_bits_per_byte": 0.08153941234324169,
+        "zero_digits": 4064,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 7,
+        "entropy_bits_per_byte": 0.8140715791394376,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 8,
+        "entropy_bits_per_byte": 1.0060751906106096,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 9,
+        "entropy_bits_per_byte": 0.013126943721219527,
+        "zero_digits": 4092,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 10,
+        "entropy_bits_per_byte": 0.024299385236084953,
+        "zero_digits": 4088,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 11,
+        "entropy_bits_per_byte": 0.04468700625387198,
+        "zero_digits": 4080,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 12,
+        "entropy_bits_per_byte": 0.08153941234324169,
+        "zero_digits": 4064,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 13,
+        "entropy_bits_per_byte": 2.0027934546803046,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 14,
+        "entropy_bits_per_byte": 1.0060753626772843,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 15,
+        "entropy_bits_per_byte": 0.013126943721219527,
+        "zero_digits": 4092,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 16,
+        "entropy_bits_per_byte": 0.024299385236084953,
+        "zero_digits": 4088,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 17,
+        "entropy_bits_per_byte": 0.04468700625387198,
+        "zero_digits": 4080,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 18,
+        "entropy_bits_per_byte": 0.08153941234324169,
+        "zero_digits": 4064,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 19,
+        "entropy_bits_per_byte": 1.5055869093606096,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 20,
+        "entropy_bits_per_byte": 0.026252510236084953,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 21,
+        "entropy_bits_per_byte": 0.09014417613665882,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 22,
+        "entropy_bits_per_byte": 1.5027934546803048,
+        "zero_digits": 2048,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 23,
+        "entropy_bits_per_byte": 0.026252510236084953,
+        "zero_digits": 4088,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 24,
+        "entropy_bits_per_byte": 0.08935191234324169,
+        "zero_digits": 4064,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 25,
+        "entropy_bits_per_byte": 1.0060753626772843,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 26,
+        "entropy_bits_per_byte": 0.024299385236084953,
+        "zero_digits": 4088,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "transform": 27,
+        "entropy_bits_per_byte": 0.08153941234324169,
+        "zero_digits": 4064,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 0,
+        "entropy_bits_per_byte": 3.8394165803388165,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 1,
+        "entropy_bits_per_byte": 4.826022541996424,
+        "zero_digits": 84,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 2,
+        "entropy_bits_per_byte": 4.736403368958626,
+        "zero_digits": 166,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 3,
+        "entropy_bits_per_byte": 4.872036910322308,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 4,
+        "entropy_bits_per_byte": 5.0543220652298935,
+        "zero_digits": 166,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 5,
+        "entropy_bits_per_byte": 5.084243075306569,
+        "zero_digits": 85,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 6,
+        "entropy_bits_per_byte": 4.970968747205689,
+        "zero_digits": 249,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 7,
+        "entropy_bits_per_byte": 4.810543382771606,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 8,
+        "entropy_bits_per_byte": 4.725180048391005,
+        "zero_digits": 83,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 9,
+        "entropy_bits_per_byte": 4.754820985996142,
+        "zero_digits": 251,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 10,
+        "entropy_bits_per_byte": 4.94773776816197,
+        "zero_digits": 250,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 11,
+        "entropy_bits_per_byte": 4.864327382834994,
+        "zero_digits": 251,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 12,
+        "entropy_bits_per_byte": 4.91312096969136,
+        "zero_digits": 249,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 13,
+        "entropy_bits_per_byte": 4.605950901048764,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 14,
+        "entropy_bits_per_byte": 4.46535673531451,
+        "zero_digits": 83,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 15,
+        "entropy_bits_per_byte": 4.48172225068641,
+        "zero_digits": 251,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 16,
+        "entropy_bits_per_byte": 4.681551018598422,
+        "zero_digits": 250,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 17,
+        "entropy_bits_per_byte": 4.711823599454371,
+        "zero_digits": 251,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 18,
+        "entropy_bits_per_byte": 4.750881422605769,
+        "zero_digits": 249,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 19,
+        "entropy_bits_per_byte": 4.917737448010637,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 20,
+        "entropy_bits_per_byte": 4.930157573151626,
+        "zero_digits": 84,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 21,
+        "entropy_bits_per_byte": 5.292107662315247,
+        "zero_digits": 166,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 22,
+        "entropy_bits_per_byte": 4.9508352359701355,
+        "zero_digits": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 23,
+        "entropy_bits_per_byte": 4.913452873096627,
+        "zero_digits": 84,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 24,
+        "entropy_bits_per_byte": 5.33097158315191,
+        "zero_digits": 166,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 25,
+        "entropy_bits_per_byte": 4.46535673531451,
+        "zero_digits": 83,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 26,
+        "entropy_bits_per_byte": 4.681551018598422,
+        "zero_digits": 250,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "transform": 27,
+        "entropy_bits_per_byte": 4.750881422605769,
+        "zero_digits": 249,
+        "byte_equal": true
+      }
+    ]
+  },
+  "limitations": [
+    "entropy diagnostics, not compressed sizes",
+    "same-code roundtrip and independent BigInt multiplication identity",
+    "no timing/RSS/hash measured locally",
+    "external replay pending"
+  ]
+}

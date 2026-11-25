@@ -8,3 +8,5 @@
 - [C08 closure](research/CAMPAIGN-08-CLOSURE.md): E0031–E0033 65,536 exhaustive, 4096 independent CRT checks, 36 synthetic, 15 authentic roundtrips; zero authentic gains. External replay passed.
 
 Next: retrieve E0030 evidence; promote if verified smaller, assess C07 structural limits. C09 reversible transforms next candidate. Nix pin/dashboard deployment unverified. No workers.
+
+C09 active: [E0034](experiments/records/E0034.md) reversible modular multiplication/digit/XOR difference oracle, 1835008 exhaustive inversions, 589824 independent integer identities and 420 synthetic frame tests passed. E0035 actual gzip hybrid control CI authored; no real-data gain yet. [Campaign](research/CAMPAIGN-09.md).
