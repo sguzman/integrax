@@ -11,3 +11,5 @@
 - Nix pin/build verified (CI 45707850743); dashboard source contract tested, live deployment inaccessible/unverified. No settings changed.
 
 Next: retrieve E0045/E0052; accept only isolated full improvements, scale strongest combined candidate if justified. Avoid unnecessary minor tuning; consider structurally distinct next campaign. No workers.
+
+C11 opened: [decoder-derived arithmetic recurrences](research/CAMPAIGN-11.md), mode 13 predicted distance and charged length/flag, fixed 1 MiB ring. E0053 nine strict authentic comparisons authored, pending; no verified result. C10 still active until E0045/E0052 resolved. Independent oracle covers modes 3–12 only.

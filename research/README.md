@@ -12,5 +12,6 @@
 | [C08](CAMPAIGN-08.md) | Modular structure and CRT | [Closed](CAMPAIGN-08-CLOSURE.md) |
 | [C09](CAMPAIGN-09.md) | Reversible transformations | [Closed](CAMPAIGN-09-CLOSURE.md) |
 | [C10](CAMPAIGN-10.md) | Hybrid arithmetic and conventional coding | Active |
+| [C11](CAMPAIGN-11.md) | Decoder-derived arithmetic recurrences | Active |
 
 Candidates are not commitments or results. Instantiate when justified; pivot freely within mission. Stable IDs, explicit milestones and closure records. See [template](CAMPAIGN-TEMPLATE.md).

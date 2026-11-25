@@ -1,0 +1,3 @@
+# C11 — Decoder-derived arithmetic recurrences
+
+Active alongside finishing C10. Goal: exploit long-range repeated digit subsequences as exact arithmetic recurrence descriptions, beyond a static dictionary and short suffix contexts. M1: [theory](../theory/decoder-derived-recurrence.md), IXG2 mode 13, deterministic previous-context distance, charged copy flag and length, overlap-safe bounded ring. E0053 authentic strict comparisons against matched mode 12; CI pending. M2: assess coverage and archive savings, independently verify recurrence model, scale only meaningful gains. No novelty claim (related to LZP/LZ77); no competition claim. Keep full integer stream, no decoder oracle.
