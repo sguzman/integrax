@@ -1,0 +1,20 @@
+name: IX02 cross-codec verification
+on:
+  push:
+    paths:
+      - 'experiments/**'
+      - '.github/workflows/arithmetic.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cross-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --version && rustc --version && cargo --version
+      - run: sh experiments/rust-ix02/cross-check.sh
+      - name: Record dependency lock
+        if: always()
+        run: cat experiments/rust-ix02/Cargo.lock
