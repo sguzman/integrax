@@ -5,3 +5,7 @@ Header: magic IXG2, mode byte (0 fixed-width roots, 1 Huffman roots), u64 BE ori
 Training: at most 256 KiB sample, repeated maximum-frequency nonoverlapping pair replacement among eligible expansions <=256, ties by ascending pair ID, <=8192 rules (default budget 1024). All 256 byte literals always available. Encode with global trie longest match, ties by lowest existing ID for duplicate expansions, parse continuously across read-buffer boundaries. Two passes compute frequencies and then encode. Archive-only comparison; no raw fallback in this experimental format. Memory bounded by dictionary size, trie, Huffman tree and fixed buffers. Unauthenticated; external SHA-256 and exact comparison required. Ordinary dictionary/Huffman coding with arithmetic concatenation semantics, not new mathematics.
 
 The original E0025 archive used 1024 rules and remains compatible. The implementation cap has been raised for experiments, not a new wire format; older decoders reject larger dictionaries. Rule count and IDs remain u16.
+
+## Extension: mode 2 (aligned roots)
+
+Mode 2 stores each greedy root ID as a big-endian unsigned 16-bit integer, with no frequency table. Header and dictionary are identical to mode 0; decode until the original length, validating IDs, exact output length and end of input. Older decoders reject this mode. It is intended as an intermediate reversible representation for independently charged hybrid backends. Modes 0 and 1 are unchanged.

@@ -1,3 +1,3 @@
 # C09 — Reversible transformations
 
-Active pending independent Rust replay. M1: 28 fixed IXT1 reversible modular multiplication, digit and XOR difference maps, [theory](../theory/modular-difference-transforms.md), E0034/E0036 exact identity/inverse checks. M2: [E0035](../experiments/records/E0035.md), 168/168 authentic exact reconstructions, all 162 nonidentity candidates worse than gzip. M3: verify independent cross-codec E0036, close finite-difference family with negative evidence; no claim about every transform. Consider C10 hybrid arithmetic dictionary and context coding as the next productive direction. No novelty/full-corpus claim.
+Closed for the tested finite-difference family. [Closure](CAMPAIGN-09-CLOSURE.md); [theory](../theory/modular-difference-transforms.md); E0034–E0036. No authentic compression gain.

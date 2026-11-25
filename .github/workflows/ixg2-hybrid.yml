@@ -1,0 +1,18 @@
+name: IXG2 root stream hybrid controls
+on:
+  push:
+    paths:
+      - 'experiments/ixg2/hybrid.sh'
+      - '.github/workflows/ixg2-hybrid.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && gzip --version | head -1 && xz --version
+      - run: sh datasets/acquire.sh enwik8
+      - run: bash experiments/ixg2/hybrid.sh

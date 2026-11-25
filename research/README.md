@@ -10,7 +10,7 @@
 | [C06](CAMPAIGN-06.md) | Recurrences and sequence generators | [Closed](CAMPAIGN-06-CLOSURE.md) |
 | [C07](CAMPAIGN-07.md) | Polynomial and arithmetic circuit minimization | Active |
 | [C08](CAMPAIGN-08.md) | Modular structure and CRT | [Closed](CAMPAIGN-08-CLOSURE.md) |
-| [C09](CAMPAIGN-09.md) | Reversible transformations | Active |
-| C10 | Hybrid arithmetic and conventional coding | Candidate |
+| [C09](CAMPAIGN-09.md) | Reversible transformations | [Closed](CAMPAIGN-09-CLOSURE.md) |
+| [C10](CAMPAIGN-10.md) | Hybrid arithmetic and conventional coding | Active |
 
 Candidates are not commitments or results. Instantiate when justified; pivot freely within mission. Stable IDs, explicit milestones and closure records. See [template](CAMPAIGN-TEMPLATE.md).
