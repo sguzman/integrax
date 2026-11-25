@@ -1,0 +1,454 @@
+{
+  "id": "E0015",
+  "campaign": "C06",
+  "scope": "synthetic and exhaustive small controls",
+  "status": "roundtrip-verified",
+  "execution": "V8 isolate",
+  "observations": {
+    "rows": [
+      {
+        "kind": "random",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "degree": 32,
+        "aborted": false,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "zero",
+        "bytes": 64,
+        "archive_bytes": 7,
+        "degree": 0,
+        "aborted": false,
+        "choice": {
+          "degree": 0,
+          "coeff": []
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "archive_bytes": 10,
+        "degree": 1,
+        "aborted": false,
+        "choice": {
+          "degree": 1,
+          "coeff": [
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "archive_bytes": 55,
+        "degree": 16,
+        "aborted": false,
+        "choice": {
+          "degree": 16,
+          "coeff": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "superposed",
+        "bytes": 64,
+        "archive_bytes": 58,
+        "degree": 17,
+        "aborted": false,
+        "choice": {
+          "degree": 17,
+          "coeff": [
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating",
+        "bytes": 64,
+        "archive_bytes": 13,
+        "degree": 2,
+        "aborted": false,
+        "choice": {
+          "degree": 2,
+          "coeff": [
+            0,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "random",
+        "bytes": 256,
+        "archive_bytes": 263,
+        "degree": 128,
+        "aborted": false,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "zero",
+        "bytes": 256,
+        "archive_bytes": 8,
+        "degree": 0,
+        "aborted": false,
+        "choice": {
+          "degree": 0,
+          "coeff": []
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 256,
+        "archive_bytes": 11,
+        "degree": 1,
+        "aborted": false,
+        "choice": {
+          "degree": 1,
+          "coeff": [
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 256,
+        "archive_bytes": 56,
+        "degree": 16,
+        "aborted": false,
+        "choice": {
+          "degree": 16,
+          "coeff": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "superposed",
+        "bytes": 256,
+        "archive_bytes": 59,
+        "degree": 17,
+        "aborted": false,
+        "choice": {
+          "degree": 17,
+          "coeff": [
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating",
+        "bytes": 256,
+        "archive_bytes": 14,
+        "degree": 2,
+        "aborted": false,
+        "choice": {
+          "degree": 2,
+          "coeff": [
+            0,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "random",
+        "bytes": 1024,
+        "archive_bytes": 1031,
+        "degree": 257,
+        "aborted": true,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "zero",
+        "bytes": 1024,
+        "archive_bytes": 8,
+        "degree": 0,
+        "aborted": false,
+        "choice": {
+          "degree": 0,
+          "coeff": []
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "archive_bytes": 11,
+        "degree": 1,
+        "aborted": false,
+        "choice": {
+          "degree": 1,
+          "coeff": [
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "archive_bytes": 56,
+        "degree": 16,
+        "aborted": false,
+        "choice": {
+          "degree": 16,
+          "coeff": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "superposed",
+        "bytes": 1024,
+        "archive_bytes": 59,
+        "degree": 17,
+        "aborted": false,
+        "choice": {
+          "degree": 17,
+          "coeff": [
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating",
+        "bytes": 1024,
+        "archive_bytes": 14,
+        "degree": 2,
+        "aborted": false,
+        "choice": {
+          "degree": 2,
+          "coeff": [
+            0,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "random",
+        "bytes": 4096,
+        "archive_bytes": 4103,
+        "degree": 257,
+        "aborted": true,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "zero",
+        "bytes": 4096,
+        "archive_bytes": 8,
+        "degree": 0,
+        "aborted": false,
+        "choice": {
+          "degree": 0,
+          "coeff": []
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "archive_bytes": 11,
+        "degree": 1,
+        "aborted": false,
+        "choice": {
+          "degree": 1,
+          "coeff": [
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "archive_bytes": 56,
+        "degree": 16,
+        "aborted": false,
+        "choice": {
+          "degree": 16,
+          "coeff": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "superposed",
+        "bytes": 4096,
+        "archive_bytes": 59,
+        "degree": 17,
+        "aborted": false,
+        "choice": {
+          "degree": 17,
+          "coeff": [
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating",
+        "bytes": 4096,
+        "archive_bytes": 14,
+        "degree": 2,
+        "aborted": false,
+        "choice": {
+          "degree": 2,
+          "coeff": [
+            0,
+            1
+          ]
+        },
+        "byte_equal": true
+      }
+    ],
+    "exhaustive_minimality_and_roundtrip": 3280,
+    "malformed_rejections": 60
+  },
+  "limitations": [
+    "same-code decoder; independent Gaussian-elimination degree check",
+    "no runtime/RSS or digests in isolate",
+    "external replay and authentic slices pending"
+  ]
+}

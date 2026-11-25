@@ -1,0 +1,11 @@
+# Finite-field digit recurrences
+
+For integer N with L base-256 digits x_i, a recurrence over F_257 is x_i=sum c_j x_(i-j) mod 257 with d initial digits. All bytes embed injectively in the field; an output of 256 is invalid for this format. A sequence with recurrence polynomial C(z)=1-sum_{j=1}^d c_j z^j has a rational formal generating function X(z)=P(z)/C(z), where P is determined by the seed and degree. For a finite input this is a description of a prefix of the infinite generated sequence, not a claim about its later digits.
+
+The Berlekamp–Massey algorithm gives minimum recurrence degree for a finite observed field sequence. Minimum feasible degree cannot decrease as a prefix is extended: a recurrence satisfying all longer-sequence constraints also satisfies the shorter prefix (or the shorter prefix is trivially feasible when its length is smaller than d). Thus early cutoff above d=256 cannot miss a valid bounded recurrence.
+
+IXL1 arithmetic payload cost is v(d)+3d bytes, where v is canonical unsigned LEB128 length; raw payload is L bytes. In addition to the common header, arithmetic mode needs this payload. Therefore net gain versus framed raw requires v(d)+3d<L. Since seed digits and coefficients are both charged, finite linear complexity around L/2 cannot compress in this representation. Packing coefficients in 9 bits would lower overhead but not overcome generic L/2 complexity for a single recurrence with a raw seed. The literal minimum degree also minimizes payload size in this grammar, irrespective of the coefficients.
+
+Counting bound: at most 256^d*257^d choices of seeds and coefficients for fixed d (some generate a forbidden 256). Uniform L-byte inputs therefore have coverage <=min(1, sum_{d=0}^D (256*257)^d / 256^L). This is a loose upper bound, not a statement about Wikipedia. A recurrence over a prime field is standard sequence synthesis, not a novelty claim. Literature: J. L. Massey, Shift-register synthesis and BCH decoding, IEEE Transactions on Information Theory, 1969, 15(1), 122–127 (bibliographic pointer, full literature review pending).
+
+Independent finite linear-system consistency tests in E0015 check minimum degree on all ternary strings through length seven. These test a distinct mathematical method (Gaussian elimination), not an independently implemented decoder.
