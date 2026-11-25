@@ -1,0 +1,15 @@
+{
+  "id": "E0070",
+  "campaign": "C13",
+  "scope": "exhaustive ternary strings length 0..8, independent naive rotation reference",
+  "execution": "V8 isolate",
+  "status": "roundtrip-verified",
+  "observations": {
+    "cases": 9841,
+    "frames": 29523
+  },
+  "limitations": [
+    "Rust CI and authentic comparisons pending",
+    "synthetic only"
+  ]
+}

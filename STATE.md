@@ -1,6 +1,6 @@
 # Continuation state
 
-2026-11-25 — C01–C10 closed; C11/C12 active. Read AGENTS.md, [C11](research/CAMPAIGN-11.md), [C12](research/CAMPAIGN-12.md).
+2026-11-25 — C01–C10 closed; C11/C12/C13 active. Read AGENTS.md, [C11](research/CAMPAIGN-11.md), [C12](research/CAMPAIGN-12.md), [C13](research/CAMPAIGN-13.md).
 
 - F0009 IXG2 **243,589,465 B** (75.64% reduction), [E0055/V0011](experiments/records/E0055.md) strict isolated full reconstruction; F0008 256,538,753 B, gzip 322,591,988 B. Archive-only.
 - [E0058/V0012](experiments/records/E0058.md) 249,849,857 B strict isolated full, above F0009; [C10 closed](research/CAMPAIGN-10-CLOSURE.md).
@@ -16,3 +16,5 @@ E0067 independent mode18 reference: 40/40 exact synthetic cases, prior 80 mode15
 E0068 mode19 adaptive correction operands authored, same parse as mode18. [CI 45712593317](https://github.com/sguzman/integrax/actions/runs/45712593317), queued at checkpoint. [Cost analysis](theory/sparse-correction-operand-cost.md). Mode19 independent cross-codec not yet verified.
 
 E0069 independent mode19 reference 20/20 exact synthetic cases, all 40 mode18 cases reproduced; parse diagnostics unchanged. External cross-codec CI authored, pending.
+
+C13 opened: [radix context permutations](research/CAMPAIGN-13.md), IXB1 BWT/MTF/zero runs, E0070 9841 exhaustive ternary strings / 29523 exact reference frames. Rust and E0071 36 authentic backend comparisons authored, pending. No measured compression claim; bounded slices only.

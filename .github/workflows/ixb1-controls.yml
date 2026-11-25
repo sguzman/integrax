@@ -1,0 +1,18 @@
+name: IXB1 radix context permutation controls
+on:
+  push:
+    paths:
+      - 'experiments/ixb1/controls.sh'
+      - '.github/workflows/ixb1-controls.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && node --version && gzip --version && xz --version && bzip2 --help
+      - run: sh datasets/acquire.sh enwik8
+      - run: bash experiments/ixb1/controls.sh
