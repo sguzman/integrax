@@ -1,0 +1,17 @@
+name: Recurrence nonlinear negative controls
+on:
+  push:
+    paths:
+      - 'experiments/oracle/recurrence-sha-controls.mjs'
+      - '.github/workflows/recurrence-sha.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --version
+      - run: node experiments/oracle/recurrence-sha-controls.mjs

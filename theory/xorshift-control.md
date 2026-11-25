@@ -1,0 +1,5 @@
+# Why the xorshift control compresses
+
+A xorshift32 state update is composition of x -> x XOR (x << a) and x -> x XOR (x >> b) on 32-bit vectors over F_2, hence a linear map T. Each output bit is a linear functional of T^i s. By Cayley–Hamilton, the characteristic polynomial of the 32x32 matrix annihilates T; each projected bit sequence therefore satisfies a recurrence of degree <=32. The E0017 observations of degree 32 on all eight low output planes are consistent with this theorem. The seed and polynomial are charged by IXL2, but xorshift is not a generic random source for this experiment.
+
+Use deterministic SHA-256(domain || seed || counter) blocks as a reproducible nonlinear control. This is not a proof that SHA-256 counter streams are statistically uniform or incompressible, merely a more appropriate negative control for short linear recurrences. Retain xorshift as an explicit positive fixture. Report bitplane selections individually for authentic data; constant planes alone are not evidence of deep recurrence structure.
