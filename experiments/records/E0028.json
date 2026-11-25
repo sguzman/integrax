@@ -1,0 +1,428 @@
+{
+  "id": "E0028",
+  "campaign": "C07",
+  "status": "roundtrip-verified",
+  "scope": "three disjoint authentic enwik8 regions",
+  "revision": "1a0ddb076e9f1a6b646e3d89f452e97b80463304",
+  "run": 45702831871,
+  "job": 139517084589,
+  "corpus": {
+    "id": "enwik8",
+    "bytes": 100000000,
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+  },
+  "environment": {
+    "rustc": "1.100.0",
+    "runner": "ubuntu-latest"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik8",
+    "bash experiments/ixg2/streamopt.sh"
+  ],
+  "training": {
+    "bytes": 65536,
+    "rules": 1024,
+    "train_sha256": "05fc5f44993ef0557959db76bf47e45badb2dd9c69d93ce08911935b5e52bf40",
+    "dict_sha256": "35fbbd99fb2e1b575fc2353f879875093691e90e360c87b6a9e32f53b349ac98"
+  },
+  "identical_archive_pairs": 6,
+  "block_bytes": 1048576,
+  "unit_tests": 6,
+  "rows": [
+    {
+      "offset": 1000000,
+      "bytes": 16384,
+      "modes": {
+        "optfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 84469,
+              "roots": 7679,
+              "candidate_bytes": 14670
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 14819,
+            "chosen_bytes": 14670
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2809856,
+          "archive_bytes": 14670,
+          "archive_sha256": "4f29c204b417589784364c6c1ea92f7c3b416870bb8829b0df6c8125ab15b1cd",
+          "decoded_sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+          "byte_equal": true
+        },
+        "opthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 62725,
+              "roots": 7686,
+              "candidate_bytes": 13078
+            },
+            {
+              "round": 1,
+              "objective_bits": 62395,
+              "roots": 7690,
+              "candidate_bytes": 13068
+            },
+            {
+              "round": 2,
+              "objective_bits": 62346,
+              "roots": 7693,
+              "candidate_bytes": 13065
+            },
+            {
+              "round": 3,
+              "objective_bits": 62334,
+              "roots": 7693,
+              "candidate_bytes": 13065
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 13209,
+            "chosen_bytes": 13065
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2805760,
+          "archive_bytes": 13065,
+          "archive_sha256": "5fed7d14419fc8ac73a8c2571b21fa56e496cd7a5000b4c4f3c57c968533040f",
+          "decoded_sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+          "byte_equal": true
+        },
+        "streamoptfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 84469,
+              "roots": 7679,
+              "candidate_bytes": 14670
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 14819,
+            "chosen_bytes": 14670,
+            "block": 1048576
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2805760,
+          "archive_bytes": 14670,
+          "archive_sha256": "4f29c204b417589784364c6c1ea92f7c3b416870bb8829b0df6c8125ab15b1cd",
+          "decoded_sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+          "byte_equal": true
+        },
+        "streamopthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 62725,
+              "roots": 7686,
+              "candidate_bytes": 13078
+            },
+            {
+              "round": 1,
+              "objective_bits": 62395,
+              "roots": 7690,
+              "candidate_bytes": 13068
+            },
+            {
+              "round": 2,
+              "objective_bits": 62346,
+              "roots": 7693,
+              "candidate_bytes": 13065
+            },
+            {
+              "round": 3,
+              "objective_bits": 62334,
+              "roots": 7693,
+              "candidate_bytes": 13065
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 13209,
+            "chosen_bytes": 13065,
+            "block": 1048576
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2990080,
+          "archive_bytes": 13065,
+          "archive_sha256": "5fed7d14419fc8ac73a8c2571b21fa56e496cd7a5000b4c4f3c57c968533040f",
+          "decoded_sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+          "byte_equal": true
+        }
+      },
+      "sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+      "identical_archives": true
+    },
+    {
+      "offset": 50000000,
+      "bytes": 1048576,
+      "modes": {
+        "optfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 4963288,
+              "roots": 451208,
+              "candidate_bytes": 624522
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 634114,
+            "chosen_bytes": 624522
+          },
+          "encode_seconds": 0.06,
+          "encode_rss_bytes": 11673600,
+          "archive_bytes": 624522,
+          "archive_sha256": "9a2305df8fc736f58e407fa0bc430304be2ce3aec45b7d510e87dfb75def461b",
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "opthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 3939473,
+              "roots": 451785,
+              "candidate_bytes": 496363
+            },
+            {
+              "round": 1,
+              "objective_bits": 3920269,
+              "roots": 452245,
+              "candidate_bytes": 495642
+            },
+            {
+              "round": 2,
+              "objective_bits": 3917179,
+              "roots": 452664,
+              "candidate_bytes": 495471
+            },
+            {
+              "round": 3,
+              "objective_bits": 3916316,
+              "roots": 452790,
+              "candidate_bytes": 495428
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 505479,
+            "chosen_bytes": 495428
+          },
+          "encode_seconds": 0.17,
+          "encode_rss_bytes": 11673600,
+          "archive_bytes": 495428,
+          "archive_sha256": "7dc4fb748a11bb4c4d953e42641c17f0415a8ac8d22b5a5e81f1820f53641ae9",
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "streamoptfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 4963288,
+              "roots": 451208,
+              "candidate_bytes": 624522
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 634114,
+            "chosen_bytes": 624522,
+            "block": 1048576
+          },
+          "encode_seconds": 0.13,
+          "encode_rss_bytes": 14340096,
+          "archive_bytes": 624522,
+          "archive_sha256": "9a2305df8fc736f58e407fa0bc430304be2ce3aec45b7d510e87dfb75def461b",
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "streamopthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 3939473,
+              "roots": 451785,
+              "candidate_bytes": 496363
+            },
+            {
+              "round": 1,
+              "objective_bits": 3920269,
+              "roots": 452245,
+              "candidate_bytes": 495642
+            },
+            {
+              "round": 2,
+              "objective_bits": 3917179,
+              "roots": 452664,
+              "candidate_bytes": 495471
+            },
+            {
+              "round": 3,
+              "objective_bits": 3916316,
+              "roots": 452790,
+              "candidate_bytes": 495428
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 505479,
+            "chosen_bytes": 495428,
+            "block": 1048576
+          },
+          "encode_seconds": 0.32,
+          "encode_rss_bytes": 14299136,
+          "archive_bytes": 495428,
+          "archive_sha256": "7dc4fb748a11bb4c4d953e42641c17f0415a8ac8d22b5a5e81f1820f53641ae9",
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        }
+      },
+      "sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+      "identical_archives": true
+    },
+    {
+      "offset": 10000000,
+      "bytes": 16777216,
+      "modes": {
+        "optfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 79138477,
+              "roots": 7194407,
+              "candidate_bytes": 9896421
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 10050079,
+            "chosen_bytes": 9896421
+          },
+          "encode_seconds": 0.97,
+          "encode_rss_bytes": 149024768,
+          "archive_bytes": 9896421,
+          "archive_sha256": "54db988d4d33e1810a119bc8a70d9f4db05f4ef960d2d93f44f91c78feb8ecee",
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "opthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 63209115,
+              "roots": 7196992,
+              "candidate_bytes": 7879454
+            },
+            {
+              "round": 1,
+              "objective_bits": 62927834,
+              "roots": 7203136,
+              "candidate_bytes": 7868253
+            },
+            {
+              "round": 2,
+              "objective_bits": 62875130,
+              "roots": 7209562,
+              "candidate_bytes": 7864764
+            },
+            {
+              "round": 3,
+              "objective_bits": 62860154,
+              "roots": 7212372,
+              "candidate_bytes": 7863564
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 8019886,
+            "chosen_bytes": 7863564
+          },
+          "encode_seconds": 2.76,
+          "encode_rss_bytes": 149123072,
+          "archive_bytes": 7863564,
+          "archive_sha256": "1eafe9f3edc39e78561c0de3e4a585fb0e0b285fd9ec2241b6c845b76d07cab8",
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "streamoptfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 79138477,
+              "roots": 7194407,
+              "candidate_bytes": 9896421
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 10050079,
+            "chosen_bytes": 9896421,
+            "block": 1048576
+          },
+          "encode_seconds": 1.91,
+          "encode_rss_bytes": 14299136,
+          "archive_bytes": 9896421,
+          "archive_sha256": "54db988d4d33e1810a119bc8a70d9f4db05f4ef960d2d93f44f91c78feb8ecee",
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "streamopthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 63209115,
+              "roots": 7196992,
+              "candidate_bytes": 7879454
+            },
+            {
+              "round": 1,
+              "objective_bits": 62927834,
+              "roots": 7203136,
+              "candidate_bytes": 7868253
+            },
+            {
+              "round": 2,
+              "objective_bits": 62875130,
+              "roots": 7209562,
+              "candidate_bytes": 7864764
+            },
+            {
+              "round": 3,
+              "objective_bits": 62860154,
+              "roots": 7212372,
+              "candidate_bytes": 7863564
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 8019886,
+            "chosen_bytes": 7863564,
+            "block": 1048576
+          },
+          "encode_seconds": 5.08,
+          "encode_rss_bytes": 14397440,
+          "archive_bytes": 7863564,
+          "archive_sha256": "1eafe9f3edc39e78561c0de3e4a585fb0e0b285fd9ec2241b6c845b76d07cab8",
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        }
+      },
+      "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+      "identical_archives": true
+    }
+  ],
+  "limitations": [
+    "same Rust codec, not independent implementation",
+    "sample regions only, not full target",
+    "archive-only costs"
+  ]
+}

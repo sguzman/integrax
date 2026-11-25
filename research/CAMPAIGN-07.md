@@ -1,7 +1,7 @@
 # C07 — Arithmetic straight-line descriptions
 
-Active. Can the whole integer be expressed as a compact DAG of exact concatenations with shared subexpressions, paying for every node, reference and root?
+Active. Whole integer as a compact DAG of exact concatenations with shared subexpressions, paying for every node, reference and root.
 
-M1/M2: IXG1 bounded pair substitution and width-barrier lookahead. E0020 9841 exhaustive round trips, 47667 count checks; E0022 70 independent Rust archive decodes, 12/15 authentic net gains, best 16 KiB archive 7880 B. Still worse than gzip on selected authentic frames.
-M3: IXG2 global shared dictionary/streamed roots, [E0023](../experiments/records/E0023.md) 12/12 authentic byte/hash comparisons, largest 16 MiB 8,019,886 B. [E0024](../experiments/records/E0024.md) 20/20 authentic comparisons and weighted Huffman 7,863,564 B, 1.95% relative improvement. [E0026](../experiments/records/E0026.md) exact boundary DP oracle 36,846 path comparisons. [E0025](../experiments/records/E0025.md) isolated full reconstruction passed: 472,797,366 B, F0003 accepted.
-M4: Test dictionary capacity and training coverage, then evaluate scaling weighted parser and assess structural limits. No novelty claim; grammar/dictionary compression established prior art. No contest score without all costs.
+M1/M2: IXG1 pair substitution and width-barrier lookahead; E0020–E0022, 70 independent Rust decodes, 12/15 authentic net gains. M3: IXG2 global shared dictionary/streamed roots; E0023/E0024 weighted parser; E0026 exact boundary oracle. E0025 isolated full reconstruction F0003 472,797,366 B accepted.
+M4: [E0027](../experiments/records/E0027.md) larger dictionaries, 18/18 exact, best largest held-out archive 6,761,528 B (8192 diverse rules). [E0028](../experiments/records/E0028.md) 12/12 exact and six byte-identical archive pairs; 90.3% less encoder memory on largest weighted test. E0029/E0030 full-corpus test of 8192 diverse dictionary with greedy and global weighted modes authored, pending. No claim of full-corpus gain until isolated comparison passes.
+M5: evaluate full results, then consider structural improvements or close/pivot. No novelty claim; grammar compression established prior art.

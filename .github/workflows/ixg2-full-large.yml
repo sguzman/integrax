@@ -1,0 +1,22 @@
+name: IXG2 expanded dictionary full enwik9
+on:
+  push:
+    paths:
+      - 'experiments/ixg2/full-large.sh'
+      - '.github/workflows/ixg2-full-large.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [huff, streamopthuff]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && cargo --version
+      - run: sh datasets/acquire.sh enwik9
+      - run: bash experiments/ixg2/full-large.sh ${{ matrix.mode }}
