@@ -1,5 +1,5 @@
 //! IXB1: reversible radix context permutation, not a standalone compression claim.
-use std::{env,fs,io::{self,Read},fs::File};
+use std::{env,fs,io::{self,Read,Write},fs::File};
 const CAP:usize=16*1024*1024;
 fn bad(s:&str)->io::Error{io::Error::new(io::ErrorKind::InvalidData,s)}
 fn bwt(x:&[u8])->(usize,Vec<u8>){
@@ -32,13 +32,64 @@ fn mtf(x:&[u8],inverse:bool)->Vec<u8>{let mut list=[0u8;256];for(i,b)in list.ite
 fn put_var(mut n:usize,out:&mut Vec<u8>){while n>=128{out.push((n as u8&127)|128);n>>=7}out.push(n as u8)}
 fn run_encode(x:&[u8])->Vec<u8>{let mut out=Vec::new();let mut i=0;while i<x.len(){if x[i]!=0{out.push(x[i]);i+=1}else{let start=i;while i<x.len()&&x[i]==0{i+=1}out.push(0);put_var(i-start,&mut out)}}out}
 fn run_decode(x:&[u8],n:usize)->io::Result<Vec<u8>>{let mut y=Vec::with_capacity(n);let mut i=0;while i<x.len(){let b=x[i];i+=1;if b!=0{if y.len()==n{return Err(bad("run overflow"))}y.push(b)}else{if y.last()==Some(&0){return Err(bad("adjacent zero runs"))}let mut v=0usize;let mut shift=0;loop{let b=*x.get(i).ok_or_else(||bad("truncated run"))?;i+=1;if shift>21{return Err(bad("run cap"))}v|=((b&127)as usize)<<shift;if b<128{if v==0||(shift>0&&b==0){return Err(bad("noncanonical run"))}break}shift+=7}if v>n-y.len(){return Err(bad("run overflow"))}y.resize(y.len()+v,0)}}if y.len()!=n{return Err(bad("length"))}Ok(y)}
-fn encode(x:&[u8],mode:u8)->io::Result<Vec<u8>>{if x.len()>CAP||mode>2{return Err(bad("cap or mode"))}let(primary,mut last)=bwt(x);if mode>=1{last=mtf(&last,false)}if mode==2{last=run_encode(&last)}let mut out=b"IXB1".to_vec();out.push(mode);out.extend_from_slice(&(x.len()as u64).to_be_bytes());out.extend_from_slice(&(primary as u32).to_be_bytes());out.extend(last);Ok(out)}
-fn decode(a:&[u8])->io::Result<Vec<u8>>{if a.len()<17||&a[..4]!=b"IXB1"||a[4]>2{return Err(bad("header"))}let n=u64::from_be_bytes(a[5..13].try_into().unwrap());if n>CAP as u64{return Err(bad("cap"))}let n=n as usize;let p=u32::from_be_bytes(a[13..17].try_into().unwrap())as usize;let mut x=if a[4]==2{run_decode(&a[17..],n)?}else{if a.len()-17!=n{return Err(bad("length"))}a[17..].to_vec()};if a[4]>=1{x=mtf(&x,true)}inverse(&x,p)}
+
+const AC_TOP:u64=0xffff_ffff;
+const AC_HALF:u64=0x8000_0000;
+const AC_Q:u64=0x4000_0000;
+const AC_TQ:u64=0xc000_0000;
+
+struct Out<W:Write>{w:W,b:u8,n:u8}
+impl<W:Write> Out<W>{fn put(&mut self,c:u64,n:u8)->io::Result<()>{for j in (0..n).rev(){self.b=(self.b<<1)|((c>>j)&1)as u8;self.n+=1;if self.n==8{self.w.write_all(&[self.b])?;self.b=0;self.n=0}}Ok(())}fn finish(mut self)->io::Result<()>{if self.n>0{self.w.write_all(&[self.b<<(8-self.n)])?}self.w.flush()}}
+
+struct AEnc<W:Write>{out:Out<W>,lo:u64,hi:u64,pending:u64}
+impl<W:Write>AEnc<W>{
+ fn emit(&mut self,b:u64)->io::Result<()>{self.out.put(b,1)?;while self.pending>0{self.out.put(b^1,1)?;self.pending-=1}Ok(())}
+ fn bit(&mut self,b:usize,zero:u64,total:u64)->io::Result<()>{let mid=self.lo+(self.hi-self.lo+1)*zero/total;if b==0{self.hi=mid-1}else{self.lo=mid}loop{if self.hi<AC_HALF{self.emit(0)?}else if self.lo>=AC_HALF{self.emit(1)?;self.lo-=AC_HALF;self.hi-=AC_HALF}else if self.lo>=AC_Q&&self.hi<AC_TQ{self.pending+=1;self.lo-=AC_Q;self.hi-=AC_Q}else{break}self.lo*=2;self.hi=self.hi*2+1}Ok(())}
+ fn finish(mut self,nonempty:bool)->io::Result<()>{if nonempty{self.pending+=1;self.emit(u64::from(self.lo>=AC_Q))?}self.out.finish()}
+}
+struct ADec<R:Read>{r:R,b:u8,n:u8,pad:u8,lo:u64,hi:u64,code:u64}
+impl<R:Read>ADec<R>{
+ fn next_bit(&mut self)->io::Result<u64>{if self.n==0{let mut a=[0];if self.r.read(&mut a)?==0{if self.pad==32{return Err(bad("arithmetic padding limit"))}self.pad+=1;return Ok(0)}self.b=a[0];self.n=8}let x=self.b>>7;self.b<<=1;self.n-=1;Ok(u64::from(x))}
+ fn init(&mut self)->io::Result<()>{for _ in 0..32{self.code=self.code*2+self.next_bit()?}Ok(())}
+ fn bit(&mut self,zero:u64,total:u64)->io::Result<usize>{if self.code<self.lo||self.code>self.hi{return Err(bad("arithmetic interval"))}let mid=self.lo+(self.hi-self.lo+1)*zero/total;let b=usize::from(self.code>=mid);if b==0{self.hi=mid-1}else{self.lo=mid}
+ loop{if self.hi<AC_HALF{}else if self.lo>=AC_HALF{self.lo-=AC_HALF;self.hi-=AC_HALF;self.code-=AC_HALF}else if self.lo>=AC_Q&&self.hi<AC_TQ{self.lo-=AC_Q;self.hi-=AC_Q;self.code-=AC_Q}else{break}self.lo*=2;self.hi=self.hi*2+1;self.code=self.code*2+self.next_bit()?}Ok(b)}
+}
+
+fn increment(c:&mut [u16;2],bit:usize){c[bit]+=1;if u32::from(c[0])+u32::from(c[1])>=4096{c[0]=c[0].div_ceil(2);c[1]=c[1].div_ceil(2)}}
+
+// The model only reads already-coded ranks. Bucket 0 is previous rank zero; 8 includes 128..255.
+struct RankModel{pairs:Vec<[u16;2]>,flags:[[u16;2];9],runs:Vec<[u16;2]>,context:usize}
+impl RankModel{
+ fn new()->Self{Self{pairs:vec![[1,1];9*256],flags:[[1,1];9],runs:vec![[1,1];9*25],context:0}}
+ fn weights(c:&[u16;2])->(u64,u64){(u64::from(c[0]),u64::from(c[0])+u64::from(c[1]))}
+ fn put(enc:&mut AEnc<&mut Vec<u8>>,c:&mut [u16;2],b:usize)->io::Result<()>{let(z,n)=Self::weights(c);enc.bit(b,z,n)?;increment(c,b);Ok(())}
+ fn get(dec:&mut ADec<&[u8]>,c:&mut [u16;2])->io::Result<usize>{let(z,n)=Self::weights(c);let b=dec.bit(z,n)?;increment(c,b);Ok(b)}
+ fn advance(&mut self,b:u8){self.context=if b==0{0}else{b.ilog2()as usize+1}}
+ fn put_rank(&mut self,enc:&mut AEnc<&mut Vec<u8>>,rank:u8)->io::Result<()>{let mut p=1;for j in (0..8).rev(){let b=((rank>>j)&1)as usize;Self::put(enc,&mut self.pairs[self.context*256+p],b)?;p=2*p+b}Ok(())}
+ fn get_rank(&mut self,dec:&mut ADec<&[u8]>)->io::Result<u8>{let(mut p,mut v)=(1,0u8);for _ in 0..8{let b=Self::get(dec,&mut self.pairs[self.context*256+p])?;p=2*p+b;v=(v<<1)|b as u8}Ok(v)}
+ fn put_run(&mut self,enc:&mut AEnc<&mut Vec<u8>>,n:usize)->io::Result<()>{let k=n.ilog2()as usize;for j in 0..=k{Self::put(enc,&mut self.runs[self.context*25+j],usize::from(j==k))?}for j in (0..k).rev(){enc.bit((n>>j)&1,1,2)?}Ok(())}
+ fn get_run(&mut self,dec:&mut ADec<&[u8]>,remaining:usize)->io::Result<usize>{let mut k=0;while Self::get(dec,&mut self.runs[self.context*25+k])?==0{if k==24{return Err(bad("run exponent"))}k+=1}let mut n=1;for _ in 0..k{n=2*n+dec.bit(1,2)?}if n>remaining{return Err(bad("run length"))}Ok(n)}
+}
+fn rank_encode(x:&[u8],mode:u8)->io::Result<Vec<u8>>{
+ let mut payload=Vec::new();let mut enc=AEnc{out:Out{w:&mut payload,b:0,n:0},lo:0,hi:AC_TOP,pending:0};let mut model=RankModel::new();let mut i=0;
+ while i<x.len(){let b=x[i];if mode==4{RankModel::put(&mut enc,&mut model.flags[model.context],usize::from(b==0))?;if b==0{let start=i;while i<x.len()&&x[i]==0{i+=1}model.put_run(&mut enc,i-start)?;model.advance(0);continue}model.put_rank(&mut enc,b-1)?}else{model.put_rank(&mut enc,b)?}model.advance(b);i+=1}
+ enc.finish(!x.is_empty())?;Ok(payload)
+}
+fn rank_decode(payload:&[u8],n:usize,mode:u8)->io::Result<Vec<u8>>{
+ if n==0{return if payload.is_empty(){Ok(vec![])}else{Err(bad("empty payload"))}}
+ let mut dec=ADec{r:payload,b:0,n:0,pad:0,lo:0,hi:AC_TOP,code:0};dec.init()?;let mut model=RankModel::new();let mut x=Vec::with_capacity(n);
+ while x.len()<n{let b=if mode==4{let flag=RankModel::get(&mut dec,&mut model.flags[model.context])?;if flag==1{if x.last()==Some(&0){return Err(bad("adjacent arithmetic runs"))}let len=model.get_run(&mut dec,n-x.len())?;x.resize(x.len()+len,0);model.advance(0);continue}model.get_rank(&mut dec)?.checked_add(1).ok_or_else(||bad("rank"))?}else{model.get_rank(&mut dec)?};x.push(b);model.advance(b)}
+ if rank_encode(&x,mode)?!=payload{return Err(bad("noncanonical rank payload"))}Ok(x)
+}
+
+fn encode(x:&[u8],mode:u8)->io::Result<Vec<u8>>{if x.len()>CAP||mode>4{return Err(bad("cap or mode"))}let(primary,mut last)=bwt(x);if mode>=1{last=mtf(&last,false)}if mode==2{last=run_encode(&last)}else if mode>=3{last=rank_encode(&last,mode)?}let mut out=b"IXB1".to_vec();out.push(mode);out.extend_from_slice(&(x.len()as u64).to_be_bytes());out.extend_from_slice(&(primary as u32).to_be_bytes());out.extend(last);Ok(out)}
+fn decode(a:&[u8])->io::Result<Vec<u8>>{if a.len()<17||&a[..4]!=b"IXB1"||a[4]>4{return Err(bad("header"))}let n=u64::from_be_bytes(a[5..13].try_into().unwrap());if n>CAP as u64{return Err(bad("cap"))}let n=n as usize;let p=u32::from_be_bytes(a[13..17].try_into().unwrap())as usize;let mut x=if a[4]==2{run_decode(&a[17..],n)?}else if a[4]>=3{rank_decode(&a[17..],n,a[4])?}else{if a.len()-17!=n{return Err(bad("length"))}a[17..].to_vec()};if a[4]>=1{x=mtf(&x,true)}inverse(&x,p)}
 fn read_cap(path:&str,cap:usize)->io::Result<Vec<u8>>{let mut x=Vec::new();File::open(path)?.take(cap as u64+1).read_to_end(&mut x)?;if x.len()>cap{return Err(bad("input cap"))}Ok(x)}
-fn main()->io::Result<()>{let a:Vec<String>=env::args().collect();match a.get(1).map(String::as_str){Some("encode")if a.len()==5=>{let m=a[2].parse::<u8>().map_err(|_|bad("mode"))?;fs::write(&a[4],encode(&read_cap(&a[3],CAP)?,m)?)},Some("decode")if a.len()==4=>fs::write(&a[3],decode(&read_cap(&a[2],2*CAP+17)?)?),_=>Err(bad("usage: ixb1 encode MODE INPUT FRAME | decode FRAME OUTPUT"))}}
+fn main()->io::Result<()>{let a:Vec<String>=env::args().collect();match a.get(1).map(String::as_str){Some("encode")if a.len()==5=>{let m=a[2].parse::<u8>().map_err(|_|bad("mode"))?;fs::write(&a[4],encode(&read_cap(&a[3],CAP)?,m)?)},Some("decode")if a.len()==4=>fs::write(&a[3],decode(&read_cap(&a[2],8*CAP+17)?)?),_=>Err(bad("usage: ixb1 encode MODE INPUT FRAME | decode FRAME OUTPUT"))}}
 #[cfg(test)]mod tests{use super::*;
  fn naive(x:&[u8])->(usize,Vec<u8>){let n=x.len();if n==0{return(0,vec![])}let mut o:Vec<usize>=(0..n).collect();o.sort_by(|&a,&b|(0..n).map(|j|x[(a+j)%n]).cmp((0..n).map(|j|x[(b+j)%n])).then(a.cmp(&b)));(o.iter().position(|&i|i==0).unwrap(),o.iter().map(|&i|x[(i+n-1)%n]).collect())}
  #[test]fn exhaustive(){for n in 0..=8{for mut v in 0..3usize.pow(n){let x:Vec<u8>=(0..n).map(|_|{let b=(v%3)as u8;v/=3;b}).collect();assert_eq!(bwt(&x),naive(&x));for m in 0..3{assert_eq!(decode(&encode(&x,m).unwrap()).unwrap(),x)}}}}
  #[test]fn long(){let mut state=0x12345678u32;let r:Vec<u8>=(0..65537).map(|_|{state^=state<<13;state^=state>>17;state^=state<<5;state as u8}).collect();for x in [vec![0;65537],b"abracadabra".repeat(6000),r]{for m in 0..3{assert_eq!(decode(&encode(&x,m).unwrap()).unwrap(),x)}}}
+ #[test]fn arithmetic_ranks(){for x in [vec![],vec![0],vec![255],vec![97;65537],b"abracadabra".repeat(1000),(0..=255).cycle().take(2048).collect()]{for m in 3..=4{let mut a=encode(&x,m).unwrap();assert_eq!(decode(&a).unwrap(),x);a.push(0);assert!(decode(&a).is_err())}}for n in 0..=5{for mut v in 0..3usize.pow(n){let x:Vec<u8>=(0..n).map(|_|{let b=(v%3)as u8;v/=3;b}).collect();for m in 3..=4{assert_eq!(decode(&encode(&x,m).unwrap()).unwrap(),x)}}}}
  #[test]fn invalid(){for x in [vec![0],vec![0,0],vec![0,129,0],vec![0,2,0,2],vec![0,127]]{assert!(run_decode(&x,4).is_err())}let mut a=encode(b"abc",0).unwrap();a[16]=3;assert!(decode(&a).is_err());}
 }

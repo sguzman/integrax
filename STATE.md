@@ -9,3 +9,5 @@
 - C13 [radix context permutations](research/CAMPAIGN-13.md), IXB1 BWT/MTF/zero runs. E0070 independent naive reference passed 9841 strings/29523 frames. E0071 Rust tests/45 cross-codec and 36 authentic backend controls [CI 45712990055](https://github.com/sguzman/integrax/actions/runs/45712990055), running; no compression claim.
 
 Next: collect E0065/E0071; close C11, and assess actual context permutation gains against matched external controls. No workers.
+
+E0072 IXB1 native rank interval modes3/4 authored (bucketed rank model, adaptive zero-run exponents), six exact authentic reconstructions and append rejects pending. [Theory](theory/context-permutation-rank-coding.md). No performance claim; independent interval verification not yet established.

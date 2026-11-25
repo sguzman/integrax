@@ -3,3 +3,5 @@
 Active alongside pending C11/C12 results. Test reversible context sorting (BWT), move-to-front ranks and zero-run descriptions as an alternative to streaming recurrence grammar. M1 E0070 [reference](../experiments/records/E0070.md), 9841 ternary strings, 29523 frames. IXB1 Rust implementation and cross-codec CI authored. M2 E0071 authentic three-region backend ablation, 36 complete archive comparisons, same raw controls, no hidden primary index or length. Decide whether native context-permutation entropy coding or blockwise scaling is justified by actual results. No novelty claim; BWT/MTF are established algorithms. No full-corpus run until measured advantage.
 
 E0070/E0071 [CI 45712990055](https://github.com/sguzman/integrax/actions/runs/45712990055) running at checkpoint; Rust and authentic results pending.
+
+M3 E0072 [native rank intervals](../theory/context-permutation-rank-coding.md), modes3/4, rank buckets and adaptive zero runs, six authentic comparisons and append rejection authored. Compare against E0071 and IXG2 controls; no full scaling until evidence.

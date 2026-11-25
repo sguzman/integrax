@@ -1,0 +1,18 @@
+name: IXB1 native arithmetic rank coding
+on:
+  push:
+    paths:
+      - 'experiments/ixb1/ranks.sh'
+      - '.github/workflows/ixb1-ranks.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && cargo --version
+      - run: sh datasets/acquire.sh enwik8
+      - run: bash experiments/ixb1/ranks.sh
