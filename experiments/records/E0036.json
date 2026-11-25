@@ -1,0 +1,275 @@
+{
+  "id": "E0036",
+  "campaign": "C09",
+  "scope": "long modular identities and inverse controls",
+  "status": "executed",
+  "execution": "V8 isolate",
+  "observations": {
+    "integer_identities": 576,
+    "nontrivial_lag_identities": 488,
+    "roundtrips": 1792,
+    "fixtures": [
+      {
+        "bytes": 3,
+        "fixture": 0
+      },
+      {
+        "bytes": 3,
+        "fixture": 1
+      },
+      {
+        "bytes": 3,
+        "fixture": 2
+      },
+      {
+        "bytes": 3,
+        "fixture": 3
+      },
+      {
+        "bytes": 3,
+        "fixture": 4
+      },
+      {
+        "bytes": 3,
+        "fixture": 5
+      },
+      {
+        "bytes": 3,
+        "fixture": 6
+      },
+      {
+        "bytes": 3,
+        "fixture": 7
+      },
+      {
+        "bytes": 7,
+        "fixture": 0
+      },
+      {
+        "bytes": 7,
+        "fixture": 1
+      },
+      {
+        "bytes": 7,
+        "fixture": 2
+      },
+      {
+        "bytes": 7,
+        "fixture": 3
+      },
+      {
+        "bytes": 7,
+        "fixture": 4
+      },
+      {
+        "bytes": 7,
+        "fixture": 5
+      },
+      {
+        "bytes": 7,
+        "fixture": 6
+      },
+      {
+        "bytes": 7,
+        "fixture": 7
+      },
+      {
+        "bytes": 17,
+        "fixture": 0
+      },
+      {
+        "bytes": 17,
+        "fixture": 1
+      },
+      {
+        "bytes": 17,
+        "fixture": 2
+      },
+      {
+        "bytes": 17,
+        "fixture": 3
+      },
+      {
+        "bytes": 17,
+        "fixture": 4
+      },
+      {
+        "bytes": 17,
+        "fixture": 5
+      },
+      {
+        "bytes": 17,
+        "fixture": 6
+      },
+      {
+        "bytes": 17,
+        "fixture": 7
+      },
+      {
+        "bytes": 33,
+        "fixture": 0
+      },
+      {
+        "bytes": 33,
+        "fixture": 1
+      },
+      {
+        "bytes": 33,
+        "fixture": 2
+      },
+      {
+        "bytes": 33,
+        "fixture": 3
+      },
+      {
+        "bytes": 33,
+        "fixture": 4
+      },
+      {
+        "bytes": 33,
+        "fixture": 5
+      },
+      {
+        "bytes": 33,
+        "fixture": 6
+      },
+      {
+        "bytes": 33,
+        "fixture": 7
+      },
+      {
+        "bytes": 64,
+        "fixture": 0
+      },
+      {
+        "bytes": 64,
+        "fixture": 1
+      },
+      {
+        "bytes": 64,
+        "fixture": 2
+      },
+      {
+        "bytes": 64,
+        "fixture": 3
+      },
+      {
+        "bytes": 64,
+        "fixture": 4
+      },
+      {
+        "bytes": 64,
+        "fixture": 5
+      },
+      {
+        "bytes": 64,
+        "fixture": 6
+      },
+      {
+        "bytes": 64,
+        "fixture": 7
+      },
+      {
+        "bytes": 127,
+        "fixture": 0
+      },
+      {
+        "bytes": 127,
+        "fixture": 1
+      },
+      {
+        "bytes": 127,
+        "fixture": 2
+      },
+      {
+        "bytes": 127,
+        "fixture": 3
+      },
+      {
+        "bytes": 127,
+        "fixture": 4
+      },
+      {
+        "bytes": 127,
+        "fixture": 5
+      },
+      {
+        "bytes": 127,
+        "fixture": 6
+      },
+      {
+        "bytes": 127,
+        "fixture": 7
+      },
+      {
+        "bytes": 256,
+        "fixture": 0
+      },
+      {
+        "bytes": 256,
+        "fixture": 1
+      },
+      {
+        "bytes": 256,
+        "fixture": 2
+      },
+      {
+        "bytes": 256,
+        "fixture": 3
+      },
+      {
+        "bytes": 256,
+        "fixture": 4
+      },
+      {
+        "bytes": 256,
+        "fixture": 5
+      },
+      {
+        "bytes": 256,
+        "fixture": 6
+      },
+      {
+        "bytes": 256,
+        "fixture": 7
+      },
+      {
+        "bytes": 1024,
+        "fixture": 0
+      },
+      {
+        "bytes": 1024,
+        "fixture": 1
+      },
+      {
+        "bytes": 1024,
+        "fixture": 2
+      },
+      {
+        "bytes": 1024,
+        "fixture": 3
+      },
+      {
+        "bytes": 1024,
+        "fixture": 4
+      },
+      {
+        "bytes": 1024,
+        "fixture": 5
+      },
+      {
+        "bytes": 1024,
+        "fixture": 6
+      },
+      {
+        "bytes": 1024,
+        "fixture": 7
+      }
+    ]
+  },
+  "limitations": [
+    "Rust independent implementation authored but not yet tested",
+    "no real corpus result",
+    "no timings/RSS or hashes in isolate"
+  ]
+}

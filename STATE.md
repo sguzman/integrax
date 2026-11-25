@@ -10,3 +10,5 @@
 Next: retrieve E0030 evidence; promote if verified smaller, assess C07 structural limits. C09 reversible transforms next candidate. Nix pin/dashboard deployment unverified. No workers.
 
 C09 active: [E0034](experiments/records/E0034.md) reversible modular multiplication/digit/XOR difference oracle, 1835008 exhaustive inversions, 589824 independent integer identities and 420 synthetic frame tests passed. E0035 actual gzip hybrid control CI authored; no real-data gain yet. [Campaign](research/CAMPAIGN-09.md).
+
+E0036 longer modular controls 576 direct identities (488 nontrivial lags) and 1792 inversions executed. Independent Rust IXT1 implementation and cross-codec CI authored, pending. E0035 [CI 45703685873](https://github.com/sguzman/integrax/actions/runs/45703685873) running. E0030 weighted still running at checkpoint.

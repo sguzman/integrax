@@ -1,0 +1,20 @@
+name: IXT1 independent Rust and modular identity controls
+on:
+  push:
+    paths:
+      - 'src/bin/ixt1.rs'
+      - 'experiments/oracle/transform-independent.mjs'
+      - '.github/workflows/transform-independent.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && node --version
+      - run: cargo test --locked --release --bin ixt1
+      - run: cargo build --locked --release --bin ixt1
+      - run: node experiments/oracle/transform-independent.mjs target/release/ixt1
