@@ -9,4 +9,6 @@
 
 Next: collect E0045/E0047, accept only isolated verified full improvements; assess parse/model structural gains. Arithmetic payload integrity, Nix pin/dashboard deployment unverified. No workers.
 
-E0048 strict arithmetic decode mirror authored; no archive overhead, checks canonicality and EOF, not authentication. 12 authentic decode comparisons and 18 appended-data rejects planned, CI pending. [Proof](theory/canonical-root-intervals.md).
+E0048 strict arithmetic decode mirror authored; no archive overhead, checks canonicality and EOF, not authentication. 12 authentic decode comparisons and 18 appended-data rejects planned, [CI 45707458341](https://github.com/sguzman/integrax/actions/runs/45707458341), running at checkpoint. [Proof](theory/canonical-root-intervals.md).
+
+Nix reproducibility lock-generation/test workflow authored with pinned installer; no flake.lock or test result yet. See [notes](notes/nix-reproducibility.md). Pages settings API unavailable through connector; deployment not verified or changed.

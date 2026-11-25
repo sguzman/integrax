@@ -1,0 +1,36 @@
+name: Pinned Nix research environment
+on:
+  push:
+    paths:
+      - 'flake.nix'
+      - 'flake.lock'
+      - '.github/workflows/nix-reproducibility.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Generate or verify input lock
+        run: |
+          nix --version
+          if [ ! -f flake.lock ]; then
+            nix flake lock
+          else
+            nix flake metadata --no-update-lock-file
+          fi
+          git add -N flake.lock
+          printf 'NIX_LOCK_BEGIN\n'
+          cat flake.lock
+          printf 'NIX_LOCK_END\n'
+          sha256sum flake.lock
+      - name: Check pinned environment
+        run: |
+          nix develop --no-update-lock-file --command rustc --version
+          nix develop --no-update-lock-file --command cargo test --locked --release --bin ixg2
+          nix develop --no-update-lock-file --command cargo build --locked --release --bin ixg2
+          echo 'NIX BUILD VERIFIED'
