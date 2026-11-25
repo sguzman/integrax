@@ -14,4 +14,4 @@ Next: collect E0055/E0058/E0060, close C10 after final combined full run. C11 as
 
 E0059 exact distance boundary (W-1,W,W+1) independent reference 6/6 synthetic exact, trace confirms inclusive W and rejects stale W+1. Rust direct ring test and 6/6 cross-codecs passed, [E0059](experiments/records/E0059.md).
 
-E0060 mode15 two-candidate recurrence (charged selector, adaptive length) authored, nine strict authentic comparisons [CI 45710177577](https://github.com/sguzman/integrax/actions/runs/45710177577), job 139542249499, running at checkpoint. [Theory](theory/two-candidate-recurrences.md). Independent oracle mode15 not yet implemented.
+E0060 mode15 two-candidate recurrence (charged selector, adaptive length) authored, nine strict authentic comparisons [CI 45710177577](https://github.com/sguzman/integrax/actions/runs/45710177577), job 139542249499, running at checkpoint. [Theory](theory/two-candidate-recurrences.md). E0061 independent mode15 oracle passed 40 synthetic exact roundtrips; 74 earlier recurrence observations unchanged. Cross-codec CI authored, pending.
