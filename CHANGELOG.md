@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-25 — C05 closed, C06 opened
+C03 multiplicative and C05 rational controls showed no authentic slice savings; closed both with reproducible records. Opened finite-field recurrence campaign.
+
 ## 2026-11-25 — C04 closed, C03 opened
 Accepted F0001/F0002 after isolated enwik9 reconstruction; conditional IX05 reduces archive to 487,166,368 bytes. Closed C04 and opened multiplicative structure campaign.
 
