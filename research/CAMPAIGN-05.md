@@ -1,5 +1,7 @@
 # C05 — Rational and Diophantine descriptions
 
-Active. Question: can the normalized integer N/S, S=256^L, be represented by a short rational a/b and exact residual r=N-floor(S*a/b), including all parameters? This includes nontrivial rational digit patterns beyond a single periodic block and offers a deterministic Euclidean search.
+Active. Question: can normalized N/S, S=256^L, be represented by a short rational p/q and exact residual r=N-floor(Sp/q), including all parameters?
 
-M1: derive cost accounting and exact continued-fraction candidate search; distinguish standard approximation error guarantees from actual encoded size. M2: implement bounded reference codec, measure synthetic rational inputs, random and authentic corpus slices with complete serialization. M3: evaluate gain/scaling, consider bounded semiconvergents or nested arithmetic only with evidence; close/pivot if unproductive. No novelty claim for continued fractions or rational expansion.
+M1: [rational cost and coverage theory](../theory/rational-residual-cost.md); IXR2 bounded continued-fraction search and charged grammar. No novelty claim, not exhaustive over all rationals.
+M2: [E0013](../experiments/records/E0013.md), 24 synthetic fixtures, 1024 small inputs, 4 edges and 5950 adjacent convergent checks passed in V8 isolate. External replay and authentic E0014 pending. Reference capped at 16 KiB, denominator 1024 bits, 1024 steps; unauthenticated format. 
+M3: evaluate actual gains, assess semiconvergents/nested descriptions only with structural evidence, otherwise close/pivot to arithmetic circuits or reversible transforms. No unbounded full-target search.
