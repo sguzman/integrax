@@ -22,4 +22,4 @@ E0077 independent mode5/6 rank context reference 30/30 synthetic frames/append r
 
 E0079 mode7 three-token rank-only backoff to mode5, same flags/run lengths/parse, six matched exact comparisons and append rejects [CI 45715033536](https://github.com/sguzman/integrax/actions/runs/45715033536), running at checkpoint. [Theory](theory/rank-backoff.md). Independent new mode verification pending; no gain claimed.
 
-E0080 independent mode7 reference 15 exact frames/append rejects, 30 earlier context observations unchanged; Rust cross-codec pending.
+E0080 independent mode7 reference 15 exact frames/append rejects, 30 earlier context observations unchanged; Rust cross-codec [CI 45715148000](https://github.com/sguzman/integrax/actions/runs/45715148000), in_progress at checkpoint.
