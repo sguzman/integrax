@@ -11,3 +11,5 @@ E0073 independent BigInt rank reference 30 exact frames and append rejects, 12 z
 [E0070](../experiments/records/E0070.md) 45/45 independent byte equality and cross-decodes; [E0071](../experiments/records/E0071.md) 36/36 authentic exact, largest BWT+xz 4,378,540 B (3.35% below raw xz, 7.17% below IXG2 dual16); small raw bzip2 controls still win. E0072 native rank and E0073 independent replay pending. No full gain assumed.
 
 [E0073](../experiments/records/E0073.md) 30/30 independent byte-identical frames and cross-decodes passed in [CI 45713436133](https://github.com/sguzman/integrax/actions/runs/45713436133); 75 IXB1 cross-codecs total. Native authentic E0072 pending.
+
+[E0072](../experiments/records/E0072.md) 6/6 exact, 6/6 append rejects, mode4 wins all three regions vs external controls. E0074 [IXB2](../schemas/IXB2.md) full native blockwise candidate (16 MiB, charged headers/raw fallback), isolated exact decode authored. Separate blockwise track; no full gain yet.

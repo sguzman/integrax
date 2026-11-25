@@ -1,0 +1,114 @@
+{
+  "id": "E0072",
+  "campaign": "C13",
+  "scope": "three reused enwik8 regions, native arithmetic rank modes 3 and 4",
+  "status": "roundtrip-verified",
+  "revision": "154f4d1e48e1a0923d0cc26e8a6cc72b210a98d9",
+  "run": 45713327312,
+  "job": 139553014221,
+  "corpus": {
+    "id": "enwik8",
+    "bytes": 100000000,
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik8",
+    "bash experiments/ixb1/ranks.sh"
+  ],
+  "unit_tests": 4,
+  "rows": [
+    {
+      "offset": 1000000,
+      "bytes": 1048576,
+      "modes": {
+        "3": {
+          "encode_seconds": 0.24,
+          "encode_rss_bytes": 25305088,
+          "archive_bytes": 313223,
+          "archive_sha256": "0f86ea01e464753c04e5e4cbb11b03173c5a6cc1c31117139f72e635857bbe6e",
+          "decode_seconds": 0.19,
+          "decode_rss_bytes": 8687616,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "append_rejected": true,
+          "byte_equal": true
+        },
+        "4": {
+          "encode_seconds": 0.22,
+          "encode_rss_bytes": 25186304,
+          "archive_bytes": 306384,
+          "archive_sha256": "fdd75d46fc9a201fa2c730abe7aba9d8b1a7c16e69f9b7e14ba95deb65a33427",
+          "decode_seconds": 0.14,
+          "decode_rss_bytes": 8765440,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "append_rejected": true,
+          "byte_equal": true
+        }
+      },
+      "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d"
+    },
+    {
+      "offset": 50000000,
+      "bytes": 1048576,
+      "modes": {
+        "3": {
+          "encode_seconds": 0.24,
+          "encode_rss_bytes": 25141248,
+          "archive_bytes": 315828,
+          "archive_sha256": "71ae431ad7e0cc48d58aca02eec76f5ed70655ebda0a55ed8bdef03a0038c669",
+          "decode_seconds": 0.19,
+          "decode_rss_bytes": 8704000,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "append_rejected": true,
+          "byte_equal": true
+        },
+        "4": {
+          "encode_seconds": 0.19,
+          "encode_rss_bytes": 25292800,
+          "archive_bytes": 308982,
+          "archive_sha256": "a40a22364ae8169f22729bc111ecef86c7a86d08240d4cc8a0582ed8c8b308d6",
+          "decode_seconds": 0.13,
+          "decode_rss_bytes": 8667136,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "append_rejected": true,
+          "byte_equal": true
+        }
+      },
+      "sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b"
+    },
+    {
+      "offset": 10000000,
+      "bytes": 16777216,
+      "modes": {
+        "3": {
+          "encode_seconds": 13.16,
+          "encode_rss_bytes": 371175424,
+          "archive_bytes": 4362104,
+          "archive_sha256": "94a208882c48d76b182eeb1168dbc36535a37f8aa5f1139189910af9bb51a835",
+          "decode_seconds": 4.75,
+          "decode_rss_bytes": 107085824,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "append_rejected": true,
+          "byte_equal": true
+        },
+        "4": {
+          "encode_seconds": 12.94,
+          "encode_rss_bytes": 371286016,
+          "archive_bytes": 4273508,
+          "archive_sha256": "819ff76e619a02a34bb396808fc47ef7964bacb4411009ff97db7032e4f89cd5",
+          "decode_seconds": 3.59,
+          "decode_rss_bytes": 106967040,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "append_rejected": true,
+          "byte_equal": true
+        }
+      },
+      "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878"
+    }
+  ],
+  "limitations": [
+    "sample only",
+    "native strict rank payload replay, BWT column canonicality not enforced",
+    "same implementation authentic decoder",
+    "full target requires charged block framing"
+  ]
+}
