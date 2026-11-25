@@ -1,0 +1,21 @@
+name: IXG1 lookahead and independent Rust decode
+on:
+  push:
+    paths:
+      - 'experiments/oracle/arithmetic-dag-lookahead.mjs'
+      - 'src/bin/ixg1.rs'
+      - '.github/workflows/arithmetic-dag-lookahead.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --version && rustc --version
+      - run: cargo test --locked --bin ixg1
+      - run: cargo build --release --locked --bin ixg1
+      - run: sh datasets/acquire.sh enwik8
+      - run: node experiments/oracle/arithmetic-dag-lookahead.mjs data/enwik8 target/release/ixg1

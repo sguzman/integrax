@@ -1,0 +1,5 @@
+# C07 width-barrier search
+
+IXG1 original greedy accepts only strictly reducing immediate grammar size. A rule increases root-symbol width when k+n crosses a power of two. This may temporarily expand the archive despite future repeated substitutions. Add an optional bounded search through all maximum-frequency substitutions (up to 512 or no repeated pair), retaining the smallest exact frame among every visited prefix and the raw fallback. Greedy's visited trajectory is a prefix of this search, so the new search cannot produce a larger archive. This is a dominance theorem for the two specified heuristics, not a guarantee of global optimum. The selected snapshot remains valid because references only target earlier symbols. No new format or decoder change.
+
+The CI comparison charges all metadata and measures both heuristics, gzip and SHA-256 negative controls; separately authored Rust decoder reconstructs both archives. Results pending, not claimed at authoring. The original E0020 replay's observation fields remain unchanged.
