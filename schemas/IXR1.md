@@ -1,0 +1,3 @@
+# IXR1 exact histogram-rank oracle
+
+Magic IXR1; canonical unsigned LEB128 original byte length L and distinct-symbol count K; K ascending distinct symbol bytes, each followed by positive canonical LEB128 frequency; fixed-width unsigned big-endian lexicographic rank R of the input among strings with that histogram. Rank width = ceil(bit_length(M-1)/8), M=L!/prod n_i!. Empty and singleton classes have M=1 and zero rank bytes. Decoder validates count sum, symbol order, rank range, exact archive length and reference cap L<=4096. All bytes charged. No raw fallback. Exact rank partition at each step uses M*n_i/L; all such terms are integers. Reference only.

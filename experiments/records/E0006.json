@@ -1,0 +1,193 @@
+{
+  "id": "E0006",
+  "campaign": "C04",
+  "scope": "synthetic controls only",
+  "status": "roundtrip-verified",
+  "command": "node experiments/oracle/exact-rank.mjs",
+  "execution": "V8 isolate; standalone script authored from executed function; external Node replay pending",
+  "seed": "0x12345678",
+  "exhaustive": 3280,
+  "malformed": 14,
+  "rows": [
+    {
+      "kind": "random",
+      "bytes": 64,
+      "archive_bytes": 157,
+      "header_bytes": 120,
+      "rank_bytes": 37,
+      "alphabet": 57,
+      "byte_equal": true
+    },
+    {
+      "kind": "binary",
+      "bytes": 64,
+      "archive_bytes": 18,
+      "header_bytes": 10,
+      "rank_bytes": 8,
+      "alphabet": 2,
+      "byte_equal": true
+    },
+    {
+      "kind": "skewed",
+      "bytes": 64,
+      "archive_bytes": 20,
+      "header_bytes": 16,
+      "rank_bytes": 4,
+      "alphabet": 5,
+      "byte_equal": true
+    },
+    {
+      "kind": "repeated_text",
+      "bytes": 64,
+      "archive_bytes": 74,
+      "header_bytes": 46,
+      "rank_bytes": 28,
+      "alphabet": 20,
+      "byte_equal": true
+    },
+    {
+      "kind": "constant",
+      "bytes": 64,
+      "archive_bytes": 8,
+      "header_bytes": 8,
+      "rank_bytes": 0,
+      "alphabet": 1,
+      "byte_equal": true
+    },
+    {
+      "kind": "random",
+      "bytes": 256,
+      "archive_bytes": 513,
+      "header_bytes": 318,
+      "rank_bytes": 195,
+      "alphabet": 155,
+      "byte_equal": true
+    },
+    {
+      "kind": "binary",
+      "bytes": 256,
+      "archive_bytes": 44,
+      "header_bytes": 12,
+      "rank_bytes": 32,
+      "alphabet": 2,
+      "byte_equal": true
+    },
+    {
+      "kind": "skewed",
+      "bytes": 256,
+      "archive_bytes": 49,
+      "header_bytes": 32,
+      "rank_bytes": 17,
+      "alphabet": 12,
+      "byte_equal": true
+    },
+    {
+      "kind": "repeated_text",
+      "bytes": 256,
+      "archive_bytes": 170,
+      "header_bytes": 49,
+      "rank_bytes": 121,
+      "alphabet": 21,
+      "byte_equal": true
+    },
+    {
+      "kind": "constant",
+      "bytes": 256,
+      "archive_bytes": 10,
+      "header_bytes": 10,
+      "rank_bytes": 0,
+      "alphabet": 1,
+      "byte_equal": true
+    },
+    {
+      "kind": "random",
+      "bytes": 1024,
+      "archive_bytes": 1425,
+      "header_bytes": 498,
+      "rank_bytes": 927,
+      "alphabet": 245,
+      "byte_equal": true
+    },
+    {
+      "kind": "binary",
+      "bytes": 1024,
+      "archive_bytes": 141,
+      "header_bytes": 13,
+      "rank_bytes": 128,
+      "alphabet": 2,
+      "byte_equal": true
+    },
+    {
+      "kind": "skewed",
+      "bytes": 1024,
+      "archive_bytes": 107,
+      "header_bytes": 40,
+      "rank_bytes": 67,
+      "alphabet": 16,
+      "byte_equal": true
+    },
+    {
+      "kind": "repeated_text",
+      "bytes": 1024,
+      "archive_bytes": 553,
+      "header_bytes": 50,
+      "rank_bytes": 503,
+      "alphabet": 21,
+      "byte_equal": true
+    },
+    {
+      "kind": "constant",
+      "bytes": 1024,
+      "archive_bytes": 10,
+      "header_bytes": 10,
+      "rank_bytes": 0,
+      "alphabet": 1,
+      "byte_equal": true
+    },
+    {
+      "kind": "random",
+      "bytes": 4096,
+      "archive_bytes": 4486,
+      "header_bytes": 520,
+      "rank_bytes": 3966,
+      "alphabet": 256,
+      "byte_equal": true
+    },
+    {
+      "kind": "binary",
+      "bytes": 4096,
+      "archive_bytes": 525,
+      "header_bytes": 13,
+      "rank_bytes": 512,
+      "alphabet": 2,
+      "byte_equal": true
+    },
+    {
+      "kind": "skewed",
+      "bytes": 4096,
+      "archive_bytes": 320,
+      "header_bytes": 42,
+      "rank_bytes": 278,
+      "alphabet": 17,
+      "byte_equal": true
+    },
+    {
+      "kind": "repeated_text",
+      "bytes": 4096,
+      "archive_bytes": 2096,
+      "header_bytes": 59,
+      "rank_bytes": 2037,
+      "alphabet": 21,
+      "byte_equal": true
+    },
+    {
+      "kind": "constant",
+      "bytes": 4096,
+      "archive_bytes": 10,
+      "header_bytes": 10,
+      "rank_bytes": 0,
+      "alphabet": 1,
+      "byte_equal": true
+    }
+  ]
+}
