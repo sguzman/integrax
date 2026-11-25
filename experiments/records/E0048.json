@@ -1,0 +1,231 @@
+{
+  "id": "E0048",
+  "campaign": "C10",
+  "scope": "two held-out enwik8 regions, three encoder strategies, normal and strict decoding",
+  "status": "roundtrip-verified",
+  "revision": "8f5cbe5a4810068c2786f2e7b1191f7d7623032f",
+  "run": 45707458341,
+  "job": 139532965420,
+  "corpus": {
+    "id": "enwik8",
+    "bytes": 100000000,
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+  },
+  "training": {
+    "train_sha256": "ba1d4361a56d6e6a688ee4f125465e51b47b361194fbe64349f098860a8fc6fc",
+    "dict_sha256": "5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik8",
+    "bash experiments/ixg2/strict.sh"
+  ],
+  "unit_tests": 12,
+  "rows": [
+    {
+      "offset": 1000000,
+      "bytes": 1048576,
+      "modes": {
+        "lexorder2": {
+          "decoders": {
+            "decode": {
+              "seconds": 0.22,
+              "rss_bytes": 36483072,
+              "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+              "byte_equal": true
+            },
+            "decode-strict": {
+              "seconds": 0.27,
+              "rss_bytes": 36638720,
+              "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+              "byte_equal": true
+            }
+          },
+          "append_rejections": [
+            "00",
+            "ff",
+            "00000000"
+          ],
+          "model": {
+            "mode": 7,
+            "roots": 302812,
+            "rules": 8192,
+            "ideal_bits": 2750486.653
+          },
+          "encode_seconds": 0.25,
+          "encode_rss_bytes": 39546880,
+          "archive_bytes": 376594,
+          "archive_sha256": "4231e4b4d58872b18de24f6bcca7ec4358dcdadc9e00b97916a4e4c8712eccaa"
+        },
+        "lexorder3": {
+          "decoders": {
+            "decode": {
+              "seconds": 0.35,
+              "rss_bytes": 53383168,
+              "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+              "byte_equal": true
+            },
+            "decode-strict": {
+              "seconds": 0.43,
+              "rss_bytes": 53350400,
+              "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+              "byte_equal": true
+            }
+          },
+          "append_rejections": [
+            "00",
+            "ff",
+            "00000000"
+          ],
+          "model": {
+            "mode": 9,
+            "roots": 302812,
+            "rules": 8192,
+            "ideal_bits": 2637068.758
+          },
+          "encode_seconds": 0.39,
+          "encode_rss_bytes": 56193024,
+          "archive_bytes": 362417,
+          "archive_sha256": "79af0207ad20fb154c7d886be7964aaf169e4afc32facf3defadbf0d4ac9b384"
+        },
+        "cost2": {
+          "decoders": {
+            "decode": {
+              "seconds": 0.36,
+              "rss_bytes": 53415936,
+              "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+              "byte_equal": true
+            },
+            "decode-strict": {
+              "seconds": 0.43,
+              "rss_bytes": 53391360,
+              "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+              "byte_equal": true
+            }
+          },
+          "append_rejections": [
+            "00",
+            "ff",
+            "00000000"
+          ],
+          "model": {
+            "mode": 9,
+            "roots": 308117,
+            "rules": 8192,
+            "ideal_bits": 2643171.887
+          },
+          "encode_seconds": 0.61,
+          "encode_rss_bytes": 56262656,
+          "archive_bytes": 363180,
+          "archive_sha256": "fd2f4d0879be75470911d272165b406cd7f7d42883aa7879d6176c9d97dab7da"
+        }
+      },
+      "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d"
+    },
+    {
+      "offset": 10000000,
+      "bytes": 16777216,
+      "modes": {
+        "lexorder2": {
+          "decoders": {
+            "decode": {
+              "seconds": 3.5,
+              "rss_bytes": 36507648,
+              "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+              "byte_equal": true
+            },
+            "decode-strict": {
+              "seconds": 4.31,
+              "rss_bytes": 36536320,
+              "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+              "byte_equal": true
+            }
+          },
+          "append_rejections": [
+            "00",
+            "ff",
+            "00000000"
+          ],
+          "model": {
+            "mode": 7,
+            "roots": 4821905,
+            "rules": 8192,
+            "ideal_bits": 41600763.495
+          },
+          "encode_seconds": 3.63,
+          "encode_rss_bytes": 39395328,
+          "archive_bytes": 5232879,
+          "archive_sha256": "329934b7f8f5d907b39398f9c09ce37ca06e0aacdf7b30a9d50d992105f8d8a6"
+        },
+        "lexorder3": {
+          "decoders": {
+            "decode": {
+              "seconds": 5.55,
+              "rss_bytes": 53293056,
+              "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+              "byte_equal": true
+            },
+            "decode-strict": {
+              "seconds": 6.39,
+              "rss_bytes": 53379072,
+              "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+              "byte_equal": true
+            }
+          },
+          "append_rejections": [
+            "00",
+            "ff",
+            "00000000"
+          ],
+          "model": {
+            "mode": 9,
+            "roots": 4821905,
+            "rules": 8192,
+            "ideal_bits": 39042079.783
+          },
+          "encode_seconds": 6,
+          "encode_rss_bytes": 56139776,
+          "archive_bytes": 4913044,
+          "archive_sha256": "4eb14552dd0048b23215c49e73885d0436d103e24eab15b4d0b9ce4e7c494f0c"
+        },
+        "cost2": {
+          "decoders": {
+            "decode": {
+              "seconds": 5.61,
+              "rss_bytes": 53440512,
+              "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+              "byte_equal": true
+            },
+            "decode-strict": {
+              "seconds": 6.61,
+              "rss_bytes": 53342208,
+              "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+              "byte_equal": true
+            }
+          },
+          "append_rejections": [
+            "00",
+            "ff",
+            "00000000"
+          ],
+          "model": {
+            "mode": 9,
+            "roots": 4920271,
+            "rules": 8192,
+            "ideal_bits": 39135200.431
+          },
+          "encode_seconds": 9.85,
+          "encode_rss_bytes": 56193024,
+          "archive_bytes": 4924684,
+          "archive_sha256": "fa3ecc632c3a8a1de8d44b3b90290c0b09b1413357e6572594aee96ce95330df"
+        }
+      },
+      "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878"
+    }
+  ],
+  "limitations": [
+    "canonicality not authentication",
+    "sample regions only",
+    "not all corruptions or truncations necessarily rejected",
+    "same implementation, input assumed immutable"
+  ]
+}

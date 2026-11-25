@@ -11,3 +11,5 @@ M6: E0046 independent deep predictor reference authored; E0047 [adaptive predict
 M7: E0048 optional strict canonical arithmetic decoding and append rejection; benchmark runtime/memory overhead. No archive overhead, not a checksum. [Theory](../theory/canonical-root-intervals.md). Pending CI.
 
 [E0047](../experiments/records/E0047.md) completed: 12/12 exact, all nine cost-ratio variants larger than greedy. Retain greedy. No full-scale test of the inferior heuristic.
+
+[E0048](../experiments/records/E0048.md) passed 12/12 comparisons and 18/18 append rejects. E0049 larger dictionary ablation (8192/16384 rules, 256/512 KiB training) authored with strict decoder, pending. No extrapolation.

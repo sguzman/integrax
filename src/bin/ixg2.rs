@@ -1,9 +1,9 @@
 //! Global arithmetic DAG, bounded dictionary and streaming root parser.
 use std::{cmp::Reverse,collections::{BinaryHeap,HashMap},env,fs::File,io::{self,Read,Write,BufReader,BufWriter,Seek,SeekFrom}};
-const MAX_RULES:usize=8192;
+const MAX_RULES:usize=16384;
 const DEFAULT_RULES:usize=1024;
 const MAX_EXP:usize=256;
-const MAX_SAMPLE:usize=262144;
+const MAX_SAMPLE:usize=524288;
 const MAX_LEN:u64=1_000_000_000;
 type Rule=(u16,u16);
 fn bad(s:&str)->io::Error{io::Error::new(io::ErrorKind::InvalidData,s)}
@@ -270,6 +270,7 @@ fn main()->io::Result<()>{
  if !x.is_empty(){// A suffix changed only after the canonical payload must never be accepted.
  let mut b=a.clone();b.extend_from_slice(&[0,0,0,0]);std::fs::write(&archive,b).unwrap();assert!(decode_strict(archive.to_str().unwrap(),io::sink()).is_err());}
  }}std::fs::remove_dir_all(dir).unwrap();}
+ #[test]fn expanded_context_key_bound(){let mut m=RootModel::new(256+MAX_RULES,9);m.older=256;m.ctx=256;let p=m.stride-1;let exact=(256u64*257+256)*m.stride as u64+p as u64+1;assert!(exact<=u32::MAX as u64);assert_eq!(u64::from(m.key(p)),exact);assert_eq!(m.stride,32768);}
  #[test]fn shortest_exhaustive(){
  // a,b,c,d,e,f with ab,abc,cd,ef,cdef. Greedy abc + d + ef, optimum ab+cdef.
  let rules=[(97,98),(256,99),(99,100),(101,102),(258,259)];
