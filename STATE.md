@@ -11,4 +11,4 @@
 
 Next: collect E0045/E0049 evidence, accept only isolated verified full improvements; verify pinned Nix rerun. Pivot from local ratio parsing; assess structural model gains. Dashboard live deployment unverified. No workers.
 
-E0049 16384-rule / 512 KiB cap and matched dictionary ablation authored, nine strict authentic comparisons pending. [Design](notes/C10-larger-dictionary.md).
+E0049 16384-rule / 512 KiB cap and matched dictionary ablation authored, nine strict authentic comparisons [CI 45707974176](https://github.com/sguzman/integrax/actions/runs/45707974176), running at checkpoint. [Design](notes/C10-larger-dictionary.md).
