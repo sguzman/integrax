@@ -1,9 +1,7 @@
 # C02 — Geometric sums and sparse arithmetic corrections
 
-Active. Question: can integer periodicity and sparse deviations yield a useful compact exact description where near powers fail?
+Closed; [closure](CAMPAIGN-02-CLOSURE.md).
 
-For byte length L and block width p, a template repeated to L bytes (including a truncated final block) represents an integer built from a geometric sum of powers of 256. Signed digit corrections at arbitrary positions exactly restore nonperiodic bytes. Unlike IX02, discovery may operate on byte digits of the same whole integer; it does not independently compress blocks.
+Question: can integer periodicity and sparse deviations yield useful compact exact descriptions where near powers fail? For L and p, a geometric sum of base-256 powers describes periodic digits; signed corrections restore N. This is one whole-integer description, not independent compressed blocks.
 
-M1: derive exact formula and accounting; implement IX03 reference Rust codec using a periodic template and sparse correction list. Search p=1..256 bounded by input size; mode falls back to framed raw. Evaluate exact repeats, sparse mutations, seeded random and authentic slices, with actual sizes, hashes and independent cmp.
-M2: evaluate how candidate selection scales, derive density/coverage bounds; investigate general sparse sums beyond periodicity only if justified.
-Exit: reproduce positive/negative findings on matched data, document cost limits and select next bounded investigation. No mandatory gain. Separate full enwik9 baseline task from whole-integer claims.
+M1: [identity](../theory/geometric-sums.md), [IX03](../schemas/IX03.md), [E0003](../experiments/records/E0003.md) completed. M2: [coverage and cost bounds](../theory/IX03-cost-bound.md), measured scaling through 64 KiB and negative authentic result. No general sparse-sum impossibility or full-target result claimed.

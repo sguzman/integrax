@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-25 — C02 closed, C04 opened
+IX03 geometric templates, sparse corrections, exact cost/coverage bounds, 30 measured controls (E0003), negative authentic results and C02 closure. Opened mixed-radix/entropy-rank campaign. Full-corpus acquisition and baseline workflow launched.
+
 ## 2026-11-25 — C01 closed, C02 opened
 Authentic Wikipedia slice controls (E0002), independently verified IX02 synthetic controls, C01 closure, C02 geometric-sum framework.
 
