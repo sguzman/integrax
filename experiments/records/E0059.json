@@ -97,7 +97,128 @@
   ],
   "limitations": [
     "synthetic only",
-    "Rust cross-codec pending",
     "three boundary distances, not exhaustive"
-  ]
+  ],
+  "external_verification": {
+    "status": "cross-codec-verified",
+    "run": 45709953267,
+    "job": 139541488921,
+    "revision": "10297702d593829b0fc27a9ac7406a12c7a427e9",
+    "rows": [
+      {
+        "delta": -1,
+        "mode": 13,
+        "bytes": 1048643,
+        "archive_bytes": 4190,
+        "roots": 77,
+        "copies": 4097,
+        "copied_bytes": 1048566,
+        "terminal_events": [
+          {
+            "offset": 1048579,
+            "distance": 1048575,
+            "length": 64
+          }
+        ],
+        "byte_equal": true,
+        "input_sha256": "2c6aa50c1717ea76cba929c075ee1a6c93b5f920040516820db67b5550caf9f9",
+        "archive_sha256": "784617f677fdff07afbe28ffa1a8fab92154f8dae71e38b9d4628ca1e1d60451",
+        "decoded_sha256": "2c6aa50c1717ea76cba929c075ee1a6c93b5f920040516820db67b5550caf9f9",
+        "archive_equal": true
+      },
+      {
+        "delta": -1,
+        "mode": 14,
+        "bytes": 1048643,
+        "archive_bytes": 108,
+        "roots": 77,
+        "copies": 4097,
+        "copied_bytes": 1048566,
+        "terminal_events": [
+          {
+            "offset": 1048579,
+            "distance": 1048575,
+            "length": 64
+          }
+        ],
+        "byte_equal": true,
+        "input_sha256": "2c6aa50c1717ea76cba929c075ee1a6c93b5f920040516820db67b5550caf9f9",
+        "archive_sha256": "f298a10231690e8d9a80bb1a4fe052aadf546bcfb5398793b8d48ae0c915b541",
+        "decoded_sha256": "2c6aa50c1717ea76cba929c075ee1a6c93b5f920040516820db67b5550caf9f9",
+        "archive_equal": true
+      },
+      {
+        "delta": 0,
+        "mode": 13,
+        "bytes": 1048644,
+        "archive_bytes": 4190,
+        "roots": 77,
+        "copies": 4097,
+        "copied_bytes": 1048567,
+        "terminal_events": [
+          {
+            "offset": 1048580,
+            "distance": 1048576,
+            "length": 64
+          }
+        ],
+        "byte_equal": true,
+        "input_sha256": "9a2bbcd43941b29c4168864eb55fff55766b5731ff0ca3561186b46117c57acb",
+        "archive_sha256": "da7fa847d37100c2db08980c5a40d9276c45a6a4c13511267443698fe3d93d89",
+        "decoded_sha256": "9a2bbcd43941b29c4168864eb55fff55766b5731ff0ca3561186b46117c57acb",
+        "archive_equal": true
+      },
+      {
+        "delta": 0,
+        "mode": 14,
+        "bytes": 1048644,
+        "archive_bytes": 108,
+        "roots": 77,
+        "copies": 4097,
+        "copied_bytes": 1048567,
+        "terminal_events": [
+          {
+            "offset": 1048580,
+            "distance": 1048576,
+            "length": 64
+          }
+        ],
+        "byte_equal": true,
+        "input_sha256": "9a2bbcd43941b29c4168864eb55fff55766b5731ff0ca3561186b46117c57acb",
+        "archive_sha256": "9a865716ec2966d075f42f6934099449b2e3f7b2dd1f929088bd3947ba7bf217",
+        "decoded_sha256": "9a2bbcd43941b29c4168864eb55fff55766b5731ff0ca3561186b46117c57acb",
+        "archive_equal": true
+      },
+      {
+        "delta": 1,
+        "mode": 13,
+        "bytes": 1048645,
+        "archive_bytes": 4226,
+        "roots": 141,
+        "copies": 4096,
+        "copied_bytes": 1048504,
+        "terminal_events": [],
+        "byte_equal": true,
+        "input_sha256": "f8c880277906c07c554e0902edfcbc305c6f0f493766c6cd21f3f392088df4a3",
+        "archive_sha256": "ba725c09d3d4f460d59868785c7e2fc754968b56834834c98c468a86139c248e",
+        "decoded_sha256": "f8c880277906c07c554e0902edfcbc305c6f0f493766c6cd21f3f392088df4a3",
+        "archive_equal": true
+      },
+      {
+        "delta": 1,
+        "mode": 14,
+        "bytes": 1048645,
+        "archive_bytes": 144,
+        "roots": 141,
+        "copies": 4096,
+        "copied_bytes": 1048504,
+        "terminal_events": [],
+        "byte_equal": true,
+        "input_sha256": "f8c880277906c07c554e0902edfcbc305c6f0f493766c6cd21f3f392088df4a3",
+        "archive_sha256": "7466f6a3a601b1edec11938f57913ec21d095d51d4ec881bb0ae6b826340c02a",
+        "decoded_sha256": "f8c880277906c07c554e0902edfcbc305c6f0f493766c6cd21f3f392088df4a3",
+        "archive_equal": true
+      }
+    ]
+  }
 }
