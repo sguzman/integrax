@@ -1,0 +1,19 @@
+name: IXG2 global arithmetic DAG held-out controls
+on:
+  push:
+    paths:
+      - 'src/bin/ixg2.rs'
+      - 'experiments/ixg2/**'
+      - '.github/workflows/ixg2.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && cargo --version && gzip --version | head -1
+      - run: sh datasets/acquire.sh enwik8
+      - run: bash experiments/ixg2/heldout.sh
