@@ -13,3 +13,5 @@ Next: collect E0055/E0058/E0059, close C10 after final combined full run. C11 as
 [E0056](experiments/records/E0056.md) 38/38 independent strict cross-codec passed, mode14 adaptive length, including two ring-wrap cases. [E0057](experiments/records/E0057.md) 9/9 strict, adaptive16 wins all 3 regions, 16 MiB 4,739,779 B (0.25% below fixed16), retain for next structural trials; independent max-distance boundary not established. [Theory](theory/recurrence-length-coding.md).
 
 E0059 exact distance boundary (W-1,W,W+1) independent reference 6/6 synthetic exact, trace confirms inclusive W and rejects stale W+1. Rust cross-codec/direct ring test authored, pending.
+
+E0060 mode15 two-candidate recurrence (charged selector, adaptive length) authored, nine strict authentic comparisons pending. [Theory](theory/two-candidate-recurrences.md). Independent oracle mode15 not yet implemented.
