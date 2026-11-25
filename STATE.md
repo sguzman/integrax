@@ -13,4 +13,4 @@ Next: collect E0045/E0049 evidence, accept only isolated verified full improveme
 
 E0049 16384-rule / 512 KiB cap and matched dictionary ablation authored, nine strict authentic comparisons [CI 45707974176](https://github.com/sguzman/integrax/actions/runs/45707974176), running at checkpoint. [Design](notes/C10-larger-dictionary.md).
 
-E0050 arithmetic root tree geometry: first-byte aligned and median-count full binary trees, mode 11/12, same third-order predictor and dictionary. Nine strict authentic comparisons authored; no result yet. [Theory](theory/root-decision-geometry.md). Independent oracle modes 3–10 only. E0045/E0049 running at last check.
+E0050 arithmetic root tree geometry: first-byte aligned and median-count full binary trees, mode 11/12, same third-order predictor and dictionary. Nine strict authentic comparisons [CI 45708234110](https://github.com/sguzman/integrax/actions/runs/45708234110), queued/running at checkpoint; no result yet. [Theory](theory/root-decision-geometry.md). Independent oracle modes 3–10 only. E0045/E0049 running at last check.
