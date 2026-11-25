@@ -7,3 +7,5 @@ M4: [E0039](../experiments/records/E0039.md) 9/9, dictionary ablation shows 29.1
 M5: E0044 last-three-byte vs previous-root predictors [CI 45705431555](https://github.com/sguzman/integrax/actions/runs/45705431555), passed: [E0044](../experiments/records/E0044.md) 9/9 exact; mode 9 wins all regions, 16 MiB 4,913,044 B. E0045 full mode 9 authored. Independent oracle modes 3–8 only. No full depth extrapolation.
 
 M6: E0046 independent deep predictor reference authored; E0047 [adaptive predictive-cost parsing](../theory/adaptive-root-parsing.md) compares greedy and three local ratio penalties, no wire-format changes. Results pending. Do not scale until measured gain.
+
+M7: E0048 optional strict canonical arithmetic decoding and append rejection; benchmark runtime/memory overhead. No archive overhead, not a checksum. [Theory](../theory/canonical-root-intervals.md). Pending CI.
