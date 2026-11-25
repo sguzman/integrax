@@ -1,0 +1,118 @@
+{
+  "id": "E0079",
+  "campaign": "C13",
+  "scope": "three matched E0078 enwik9 regions, two-token and hierarchical three-token rank prediction",
+  "status": "roundtrip-verified",
+  "revision": "c3c10faa2f4af960c3a18c623798db005a028ef4",
+  "run": 45715033536,
+  "job": 139558801545,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "bash experiments/ixb1/rank-backoff.sh"
+  ],
+  "unit_tests": 8,
+  "rows": [
+    {
+      "offset": 123456789,
+      "bytes": 4194304,
+      "modes": {
+        "5": {
+          "encode_seconds": 1.88,
+          "encode_rss_bytes": 94720000,
+          "archive_bytes": 1106367,
+          "archive_sha256": "d35bc0067917825d2ac8a4e3fef9957fe443f8b947943d4f748f7a20ddd034b4",
+          "decode_seconds": 0.62,
+          "decode_rss_bytes": 28725248,
+          "decoded_sha256": "eb60abd4a19300262d6db9f0e85df00d401067cad66e60dd432c056b5aa9ca10",
+          "append_rejected": true,
+          "byte_equal": true
+        },
+        "7": {
+          "encode_seconds": 1.71,
+          "encode_rss_bytes": 94670848,
+          "archive_bytes": 1098882,
+          "archive_sha256": "d2d7996f76c5f0a9160745a4d622741bd322a6291f557ab06368a4ca2779fda5",
+          "decode_seconds": 0.8,
+          "decode_rss_bytes": 28639232,
+          "decoded_sha256": "eb60abd4a19300262d6db9f0e85df00d401067cad66e60dd432c056b5aa9ca10",
+          "append_rejected": true,
+          "byte_equal": true
+        }
+      },
+      "sha256": "eb60abd4a19300262d6db9f0e85df00d401067cad66e60dd432c056b5aa9ca10"
+    },
+    {
+      "offset": 456789123,
+      "bytes": 4194304,
+      "modes": {
+        "5": {
+          "encode_seconds": 2.16,
+          "encode_rss_bytes": 94760960,
+          "archive_bytes": 1043527,
+          "archive_sha256": "e4d93b16758c8e47e458b011a12a49b3a1d08920b4033068ce3541f958ce6f02",
+          "decode_seconds": 0.56,
+          "decode_rss_bytes": 28528640,
+          "decoded_sha256": "1c70b724551e20067bfaaa7aa868c5d512381a44afcfeeb4352ab683140b6529",
+          "append_rejected": true,
+          "byte_equal": true
+        },
+        "7": {
+          "encode_seconds": 2.14,
+          "encode_rss_bytes": 94740480,
+          "archive_bytes": 1036732,
+          "archive_sha256": "31b84b48bbf6a32cfb9bc3417edc17ccfde07ba81fab3a40905b9cd024cb5f5b",
+          "decode_seconds": 0.71,
+          "decode_rss_bytes": 28594176,
+          "decoded_sha256": "1c70b724551e20067bfaaa7aa868c5d512381a44afcfeeb4352ab683140b6529",
+          "append_rejected": true,
+          "byte_equal": true
+        }
+      },
+      "sha256": "1c70b724551e20067bfaaa7aa868c5d512381a44afcfeeb4352ab683140b6529"
+    },
+    {
+      "offset": 900000000,
+      "bytes": 4194304,
+      "modes": {
+        "5": {
+          "encode_seconds": 2.89,
+          "encode_rss_bytes": 94732288,
+          "archive_bytes": 742614,
+          "archive_sha256": "644031716266b5c11ba8eaf180a39daa4b9480f7b1d0c3f5c8572fb4baef8e47",
+          "decode_seconds": 0.44,
+          "decode_rss_bytes": 28364800,
+          "decoded_sha256": "1aeba3ede87454cba95df8d98e5f777b6cee446ccc28e7d2d448b591f0a20328",
+          "append_rejected": true,
+          "byte_equal": true
+        },
+        "7": {
+          "encode_seconds": 3.39,
+          "encode_rss_bytes": 94650368,
+          "archive_bytes": 737850,
+          "archive_sha256": "ac15af9c26bab19816a154a27283d205eadbd4bc840d4e6341ad3c3a44ec3993",
+          "decode_seconds": 0.62,
+          "decode_rss_bytes": 28418048,
+          "decoded_sha256": "1aeba3ede87454cba95df8d98e5f777b6cee446ccc28e7d2d448b591f0a20328",
+          "append_rejected": true,
+          "byte_equal": true
+        }
+      },
+      "sha256": "1aeba3ede87454cba95df8d98e5f777b6cee446ccc28e7d2d448b591f0a20328"
+    }
+  ],
+  "aggregate": {
+    "mode4_bytes": 2910762,
+    "mode5_bytes": 2892508,
+    "mode7_bytes": 2873464
+  },
+  "limitations": [
+    "reused validation regions",
+    "same implementation authentic reconstruction",
+    "no full target claim"
+  ]
+}
