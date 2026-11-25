@@ -1,0 +1,9 @@
+# C03 — Multiplicative description costs
+
+For N=DQ+r, a small quotient is not sufficient: charge D, Q, r and framing. With unconstrained raw positive factors and r=0, binary bit lengths b(D)+b(Q) are either b(N) or b(N)+1 (from 2^(b(D)-1)<=D<2^b(D)), so ordinary factorization into two raw binary literals cannot yield bit savings before overhead. Large smooth or succinct factors are different: D=p^e can be represented by a fixed-table index and encoded exponent.
+
+IXM1 tests N=Q p^e+r for p in a fixed 11-prime table, r in [-8,8], with raw positive Q. For a fixed pair (p,r) and Z=N-r>0, eligible e<=v_p(Z) with e>=1. In a constant exponent-varint-width band, quotient width is nonincreasing in e. Hence the maximal eligible e in each band suffices to minimize IXM1 frame length for this pair. Cap 8L+4 exceeds possible valuation for nonzero Z<=256^L+8 for L>=1; L=0 handled by raw fallback. Search considers all relevant band boundaries under the 16KiB cap. This proves exact length minimization within this bounded mode grammar, not global arithmetic minimization.
+
+For uniform N among [0,256^L), a fixed p,e,r has at most floor((256^L-1)/p^e)+1 solutions to N ≡ r mod p^e. Union bound over 17 residuals and 11 primes gives P(any exponent e or higher) <= sum_p 17*(p^-e+256^-L), clipped at 1. No probabilistic claim for actual Wikipedia. For substantial savings, p^e must have sufficient magnitude to offset prime ID, residual byte, exponent and framing. Small valuations are ubiquitous and often unprofitable.
+
+This is an elementary result and a deliberately bounded experiment, not a new theorem. Follow-up candidates: recursively represent Q, use structured products of multiple low-cost factors, or reversible transformations that change valuations. Any extra selector, factor or residual must be encoded.

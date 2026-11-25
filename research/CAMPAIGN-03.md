@@ -1,9 +1,7 @@
 # C03 — Multiplicative structure and factorization
 
-Active. Question: can a low-description divisor D and quotient Q, optionally with exact signed residual r, compress N=DQ+r once all parameters are charged? Test smooth multipliers, structured near-divisibility and product representations, then explore rational/geometric recurrence connections only where evidence warrants.
+Active. Question: can a low-description divisor D and quotient Q, optionally with exact signed residual r, compress N=DQ+r once all parameters are charged?
 
-M1: prove cost/coverage bounds and derive an explicit, bounded product-plus-residual grammar. Identify cases where merely factoring a generic integer does not save description bits.
-M2: implement exact reference and compare synthetic factorizable inputs, seeded random controls and authentic corpus slices. Count serialized parameters, selectors, residuals, padding and fallback. Independently verify.
-M3: assess scaling and select next number-theoretic candidate; no full factoring of a billion-byte integer as an unbounded computation. If only engineered controls benefit, close with negative evidence. Maintain F0002 as separate whole-stream reference.
-
-Do not confuse numeric factor size with information reduction, or an arithmetic model with free side data. No mandatory positive gain.
+M1: [cost and coverage theory](../theory/multiplicative-description-cost.md), IXM1 bounded grammar N=Q p^e+r, raw Q and fixed small primes. Proof of cost minimization within exponent bands; elementary probability bound, no novelty claim.
+M2: [E0009](../experiments/records/E0009.md), synthetic 20/20, small integers 512/512 plus 3 edge cases; authentic and external replay pending. CI measures 15 authentic enwik8 slices with hashes. Format unauthenticated; truncated quotient may decode to a different value. No full-corpus claim.
+M3: assess actual gains and scaling; investigate multiplicative combinations only if evidence warrants; otherwise close and pivot to C05 rational/Diophantine approximations or C07 arithmetic circuits. No unbounded billion-byte factorization. F0002 remains separate whole-stream entropy reference.
