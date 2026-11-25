@@ -9,3 +9,5 @@
 - E0043 full lexorder2 isolated workflow authored, pending.
 
 Next: collect E0040/E0043 full evidence, promote only qualified improvements; investigate context depth or adaptive parsing based on measured value. Arithmetic termination integrity, Nix pin/dashboard deployment unverified. No workers.
+
+E0044 deeper-context ablation (last 3 bytes vs previous original root ID, matched mode 7) authored in Rust; [theory](theory/deep-root-context.md). Nine authentic reconstructions planned, not yet verified. Independent oracle currently covers modes 3–8 only.
