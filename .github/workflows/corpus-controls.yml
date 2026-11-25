@@ -1,0 +1,19 @@
+name: Authentic corpus controls
+on:
+  push:
+    paths:
+      - '.github/workflows/corpus-controls.yml'
+      - 'datasets/acquire.sh'
+      - 'experiments/oracle/prefixes.mjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --version
+      - run: sh datasets/acquire.sh enwik8
+      - run: node experiments/oracle/prefixes.mjs data/enwik8
