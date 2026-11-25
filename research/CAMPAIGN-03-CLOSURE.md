@@ -1,0 +1,5 @@
+# C03 closure — Multiplicative descriptions
+
+Closed 2026-11-25. IXM1 and IXM2 use bounded prime-power multipliers and a raw quotient, with signed residuals in [-8,8]. The exact DP maximizes the smooth divisor at each exponent byte cost; 1024 brute-force checks matched. Both passed 20 synthetic fixtures, 512 small integer round trips and 3 edge cases, with same-code CI replay. For constructed 4096-byte smooth products IXM2 achieved 1040 bytes (74.61% reduction); for constructed single-power multipliers IXM1 achieved 2059 bytes. Synthetic examples do not represent Wikipedia.
+
+On each of 15 matched authentic enwik8 slices both methods selected framed raw; exact reconstruction and digests passed. [E0010](../experiments/records/E0010.md), [E0012](../experiments/records/E0012.md). Negative evidence for this fixed prime table and residual range; no impossibility result for other factor grammars. No unbounded factorization experiment. The bounded grammar is exhausted on these controls, and enlarging it without a structural reason risks multiplying search cost. Pivot to C05 (rational approximants, continued fractions and exact residuals). No frontier change.
