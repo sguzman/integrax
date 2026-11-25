@@ -9,3 +9,7 @@ Both begin with canonical BWT and MTF. Mode 3 codes each eight-bit rank using a 
 ## Native rank context modes 5 and 6
 
 Identical to mode 4 except all adaptive rank, flag and run-exponent count arrays use the following context indices. Mode 5 uses 81 contexts indexed by 9*previous_token_bucket+current_token_bucket; both buckets start zero, and every decoded nonzero rank or entire maximal zero run advances the pair once (a run has bucket zero). Mode 6 uses 256 contexts indexed by the exact last nonzero rank or zero after a run; initial context zero. Counts, rank/length representations, permutation, and canonical replay otherwise unchanged. Older standalone IXB1 decoders reject modes 5/6; IXB2 continues to require inner mode 4. No model transmitted.
+
+## Mode 7: rank-only three-token backoff
+
+Identical to mode5 except nonzero rank bits use an additional three-token magnitude history, context 81*oldest+9*middle+newest (all start zero). Advance once per token, including a zero run. At prefix node p, coarse pair (z,n total) from mode5 and fine pair (a,t total) give q=clamp(floor(4096*z/n),1,4095), zero weight a*4096+16*q, total (t+16)*4096. Update both pairs after each rank bit with existing rescale. Flags and run exponent weights stay mode5. No transmitted model; older decoders reject mode7. IXB2 unchanged.

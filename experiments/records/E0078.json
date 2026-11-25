@@ -1,0 +1,239 @@
+{
+  "id": "E0078",
+  "campaign": "C13",
+  "scope": "three fresh 4 MiB enwik9 regions; empirical diagnostic and complete native frames",
+  "status": "roundtrip-verified",
+  "revision": "ebe4511b64d9a3e6f1e966f4d8ce9e6e2d6fb1c4",
+  "run": 45714738239,
+  "job": 139557782210,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "bash experiments/ixb1/diagnose.sh"
+  ],
+  "unit_tests": 7,
+  "rows": [
+    {
+      "offset": 123456789,
+      "bytes": 4194304,
+      "diagnostics": {
+        "4": {
+          "mode": 4,
+          "bytes": 4194304,
+          "zeros": 2525343,
+          "runs": 469037,
+          "nonzero": 1668961,
+          "flag_bits": 1337382.231182,
+          "rank_bits": 6369979.6976,
+          "exponent_bits": 900420.31492,
+          "suffix_bits": 455519,
+          "length_bits": 1328864.155913,
+          "oracle_bits": 9063301.243701,
+          "archive_bytes": 1113550
+        },
+        "5": {
+          "mode": 5,
+          "bytes": 4194304,
+          "zeros": 2525343,
+          "runs": 469037,
+          "nonzero": 1668961,
+          "flag_bits": 1331269.913683,
+          "rank_bits": 6210243.933345,
+          "exponent_bits": 896984.306335,
+          "suffix_bits": 455519,
+          "length_bits": 1320072.897305,
+          "oracle_bits": 8894017.153363,
+          "archive_bytes": 1106367
+        },
+        "6": {
+          "mode": 6,
+          "bytes": 4194304,
+          "zeros": 2525343,
+          "runs": 469037,
+          "nonzero": 1668961,
+          "flag_bits": 1334933.21342,
+          "rank_bits": 6355531.029803,
+          "exponent_bits": 899030.836196,
+          "suffix_bits": 455519,
+          "length_bits": 1323968.962616,
+          "oracle_bits": 9045014.079419,
+          "archive_bytes": 1117933
+        }
+      },
+      "modes": {
+        "4": {
+          "archive_bytes": 1113550,
+          "archive_sha256": "9156f62411bf1bd5ea8d76f78a3b34c9e7bd58635ca8f6b2888ce4677cf560f3",
+          "decoded_sha256": "eb60abd4a19300262d6db9f0e85df00d401067cad66e60dd432c056b5aa9ca10",
+          "byte_equal": true
+        },
+        "5": {
+          "archive_bytes": 1106367,
+          "archive_sha256": "d35bc0067917825d2ac8a4e3fef9957fe443f8b947943d4f748f7a20ddd034b4",
+          "decoded_sha256": "eb60abd4a19300262d6db9f0e85df00d401067cad66e60dd432c056b5aa9ca10",
+          "byte_equal": true
+        },
+        "6": {
+          "archive_bytes": 1117933,
+          "archive_sha256": "46fa1c2d46368cfb03448268f3f97c27efe338ed024b7a8a9f567128b3359602",
+          "decoded_sha256": "eb60abd4a19300262d6db9f0e85df00d401067cad66e60dd432c056b5aa9ca10",
+          "byte_equal": true
+        }
+      },
+      "sha256": "eb60abd4a19300262d6db9f0e85df00d401067cad66e60dd432c056b5aa9ca10",
+      "diagnostic_seconds": 1.72,
+      "diagnostic_rss_bytes": 94744576
+    },
+    {
+      "offset": 456789123,
+      "bytes": 4194304,
+      "diagnostics": {
+        "4": {
+          "mode": 4,
+          "bytes": 4194304,
+          "zeros": 2636604,
+          "runs": 442204,
+          "nonzero": 1557700,
+          "flag_bits": 1258752.755544,
+          "rank_bits": 5996947.733073,
+          "exponent_bits": 849786.354591,
+          "suffix_bits": 428287,
+          "length_bits": 1251227.383255,
+          "oracle_bits": 8533773.843209,
+          "archive_bytes": 1049941
+        },
+        "5": {
+          "mode": 5,
+          "bytes": 4194304,
+          "zeros": 2636604,
+          "runs": 442204,
+          "nonzero": 1557700,
+          "flag_bits": 1253287.991718,
+          "rank_bits": 5855238.812876,
+          "exponent_bits": 846626.264621,
+          "suffix_bits": 428287,
+          "length_bits": 1242595.587937,
+          "oracle_bits": 8383440.069215,
+          "archive_bytes": 1043527
+        },
+        "6": {
+          "mode": 6,
+          "bytes": 4194304,
+          "zeros": 2636604,
+          "runs": 442204,
+          "nonzero": 1557700,
+          "flag_bits": 1256541.027067,
+          "rank_bits": 5983866.334889,
+          "exponent_bits": 848517.8878,
+          "suffix_bits": 428287,
+          "length_bits": 1246369.641213,
+          "oracle_bits": 8517212.249757,
+          "archive_bytes": 1054148
+        }
+      },
+      "modes": {
+        "4": {
+          "archive_bytes": 1049941,
+          "archive_sha256": "4defc45de7981612e28aa859cb6bba9785c90a59c2b9c3945b9ddf242c5093d3",
+          "decoded_sha256": "1c70b724551e20067bfaaa7aa868c5d512381a44afcfeeb4352ab683140b6529",
+          "byte_equal": true
+        },
+        "5": {
+          "archive_bytes": 1043527,
+          "archive_sha256": "e4d93b16758c8e47e458b011a12a49b3a1d08920b4033068ce3541f958ce6f02",
+          "decoded_sha256": "1c70b724551e20067bfaaa7aa868c5d512381a44afcfeeb4352ab683140b6529",
+          "byte_equal": true
+        },
+        "6": {
+          "archive_bytes": 1054148,
+          "archive_sha256": "5929f45d2c2663093c93662a6155bf25b716e0bd5c56237faf88de70a5bc4060",
+          "decoded_sha256": "1c70b724551e20067bfaaa7aa868c5d512381a44afcfeeb4352ab683140b6529",
+          "byte_equal": true
+        }
+      },
+      "sha256": "1c70b724551e20067bfaaa7aa868c5d512381a44afcfeeb4352ab683140b6529",
+      "diagnostic_seconds": 1.87,
+      "diagnostic_rss_bytes": 94699520
+    },
+    {
+      "offset": 900000000,
+      "bytes": 4194304,
+      "diagnostics": {
+        "4": {
+          "mode": 4,
+          "bytes": 4194304,
+          "zeros": 3104117,
+          "runs": 312480,
+          "nonzero": 1090187,
+          "flag_bits": 887419.132707,
+          "rank_bits": 4249979.941524,
+          "exponent_bits": 609619.64764,
+          "suffix_bits": 310832,
+          "length_bits": 896878.226196,
+          "oracle_bits": 6057850.721871,
+          "archive_bytes": 747271
+        },
+        "5": {
+          "mode": 5,
+          "bytes": 4194304,
+          "zeros": 3104117,
+          "runs": 312480,
+          "nonzero": 1090187,
+          "flag_bits": 883623.157968,
+          "rank_bits": 4148134.576124,
+          "exponent_bits": 607407.529596,
+          "suffix_bits": 310832,
+          "length_bits": 889283.171071,
+          "oracle_bits": 5949997.263689,
+          "archive_bytes": 742614
+        },
+        "6": {
+          "mode": 6,
+          "bytes": 4194304,
+          "zeros": 3104117,
+          "runs": 312480,
+          "nonzero": 1090187,
+          "flag_bits": 885871.705562,
+          "rank_bits": 4237038.746546,
+          "exponent_bits": 608408.316632,
+          "suffix_bits": 310832,
+          "length_bits": 892388.21387,
+          "oracle_bits": 6042150.768739,
+          "archive_bytes": 750374
+        }
+      },
+      "modes": {
+        "4": {
+          "archive_bytes": 747271,
+          "archive_sha256": "87c510cc26084625bc759c1a4528a3dc988ecf450cf1834dfa37b77ac440fe82",
+          "decoded_sha256": "1aeba3ede87454cba95df8d98e5f777b6cee446ccc28e7d2d448b591f0a20328",
+          "byte_equal": true
+        },
+        "5": {
+          "archive_bytes": 742614,
+          "archive_sha256": "644031716266b5c11ba8eaf180a39daa4b9480f7b1d0c3f5c8572fb4baef8e47",
+          "decoded_sha256": "1aeba3ede87454cba95df8d98e5f777b6cee446ccc28e7d2d448b591f0a20328",
+          "byte_equal": true
+        },
+        "6": {
+          "archive_bytes": 750374,
+          "archive_sha256": "970a1c1e4622e355f785392ed862c072191d79dcfb76d774eca9b986171f0751",
+          "decoded_sha256": "1aeba3ede87454cba95df8d98e5f777b6cee446ccc28e7d2d448b591f0a20328",
+          "byte_equal": true
+        }
+      },
+      "sha256": "1aeba3ede87454cba95df8d98e5f777b6cee446ccc28e7d2d448b591f0a20328",
+      "diagnostic_seconds": 2.3,
+      "diagnostic_rss_bytes": 94707712
+    }
+  ],
+  "limitations": [
+    "sample only",
+    "empirical oracle is not achievable archive or universal lower bound",
+    "same implementation authentic reconstruction"
+  ]
+}
