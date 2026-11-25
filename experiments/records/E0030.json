@@ -1,0 +1,88 @@
+{
+  "id": "E0030",
+  "campaign": "C07",
+  "track": "whole",
+  "status": "roundtrip-verified",
+  "revision": "79f5da140a04ca4f62207c30acebb3151ff52b8a",
+  "run": 45703123838,
+  "job": 139518094677,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "archive_bytes": 383314419,
+  "archive_sha256": "e93c5d4ca36d7c3353e7536204e3cf4ef8a69b3dba70a134dba4244ddaa3d27c",
+  "compressor_bytes": 380848,
+  "external_side_bytes": 0,
+  "contest_total_bytes": null,
+  "training": {
+    "offsets": [
+      0,
+      30000000,
+      40000000,
+      80000000
+    ],
+    "bytes_per_offset": 65536,
+    "bytes": 262144,
+    "sha256": "ba1d4361a56d6e6a688ee4f125465e51b47b361194fbe64349f098860a8fc6fc",
+    "dictionary_sha256": "5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518",
+    "dictionary_bytes": 32770
+  },
+  "model": {
+    "rules": 8192,
+    "roots": 281407888,
+    "block_bytes": 1048576,
+    "greedy_archive_bytes": 394507869,
+    "rounds": [
+      {
+        "round": 0,
+        "objective_bits": 3088941412,
+        "roots": 280486946,
+        "candidate_bytes": 384425685
+      },
+      {
+        "round": 1,
+        "objective_bits": 3071020526,
+        "roots": 281029193,
+        "candidate_bytes": 383604328
+      },
+      {
+        "round": 2,
+        "objective_bits": 3067340781,
+        "roots": 281268917,
+        "candidate_bytes": 383389674
+      },
+      {
+        "round": 3,
+        "objective_bits": 3066312943,
+        "roots": 281407888,
+        "candidate_bytes": 383314419
+      }
+    ]
+  },
+  "encode_seconds": 533.85,
+  "encode_rss_bytes": 20828160,
+  "decode_seconds": 20.35,
+  "decode_pipeline_rss_bytes": 7856128,
+  "unit_tests": 6,
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "bash experiments/ixg2/full-large.sh streamopthuff"
+  ],
+  "verification": {
+    "id": "V0007",
+    "byte_equal": true,
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "uid": 65534,
+    "original_readable": false,
+    "separate_network_namespace": true,
+    "external_dictionary_removed": true
+  },
+  "limitations": [
+    "archive-only; no contest score",
+    "joint Huffman/parse optimization heuristic; exact per fixed weights",
+    "same implementation; isolation not general security audit",
+    "transient CI archive; hashes retained"
+  ]
+}
