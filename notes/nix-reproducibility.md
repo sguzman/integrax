@@ -5,3 +5,5 @@ Existing flake.nix follows nixpkgs nixos-26.05. No flake.lock was present at thi
 ## Observed successful generation
 
 CI 45707565821, job 139533331756, revision 2c8bf126f25624d7e73fc0ac63fbc05b426d4e06, completed successfully. Nix 2.35.6, rustc 1.95.0, 12/12 IXG2 tests, release build. Generated lock SHA-256 ce6b204c4e6bfa1defbfa52fca0239c8353138b9fcb9968787b6bc1660c8fce1, nixpkgs rev 0dc498bfe49baeb18b0f9891e800b53bb2603193. Exact logged lock persisted; second CI will verify unchanged tracked lock. This verifies development environment, not cross-compiler equality of full archives.
+
+Pinned rerun CI 45707850743, job 139534304816, passed with unchanged tracked lock SHA-256 ce6b204c4e6bfa1defbfa52fca0239c8353138b9fcb9968787b6bc1660c8fce1, 12/12 tests and release build. Nix environment pin verified; later source revisions require their own build checks.
