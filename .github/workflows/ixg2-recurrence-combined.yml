@@ -1,0 +1,18 @@
+name: IXG2 combined recurrence and dictionary target slices
+on:
+  push:
+    paths:
+      - 'experiments/ixg2/recurrence-combined.sh'
+      - '.github/workflows/ixg2-recurrence-combined.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && cargo --version
+      - run: sh datasets/acquire.sh enwik9
+      - run: bash experiments/ixg2/recurrence-combined.sh

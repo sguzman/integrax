@@ -8,7 +8,7 @@
 - E0042/E0046/E0051/[E0054](experiments/records/E0054.md): 270 independent Rust/BigInt archive equality and cross-decodes verified including E0056; two long periodic fixtures crossed ring capacity. E0059 exact maximum-distance boundary passed.
 - Nix pin/build verified; dashboard source contract verified, live deployment inaccessible/unverified. No settings changed.
 
-Next: collect E0055/E0058/E0062, close C10 after final combined full run. C11 assess longer context specificity; scale only measured gains. No workers.
+Next: collect E0055/E0058/E0063/E0064, close C10 after final combined full run. C11 assess combined recurrence/dictionary effects; scale only measured gains. No workers.
 
 [E0056](experiments/records/E0056.md) 38/38 independent strict cross-codec passed, mode14 adaptive length, including two ring-wrap cases. [E0057](experiments/records/E0057.md) 9/9 strict, adaptive16 wins all 3 regions, 16 MiB 4,739,779 B (0.25% below fixed16), retain for next structural trials; maximum-distance boundary now verified in E0059. [Theory](theory/recurrence-length-coding.md).
 
@@ -16,6 +16,8 @@ E0059 exact distance boundary (W-1,W,W+1) independent reference 6/6 synthetic ex
 
 [E0060](experiments/records/E0060.md) 9/9 strict, dual16 wins all 3 regions, 16 MiB 4,716,953 B (0.48% below length16), 11990 older selections. [Theory](theory/two-candidate-recurrences.md). E0061 independent mode15 oracle passed 40 synthetic exact roundtrips; 74 earlier recurrence observations unchanged. [Cross-codec CI 45710509602](https://github.com/sguzman/integrax/actions/runs/45710509602) passed 40/40.
 
-E0062 modes16/17 longer six/eight-digit recurrence contexts vs mode15 four-digit, same two-endpoint capacity/window, nine strict authentic comparisons authored. [Theory](theory/recurrence-context-specificity.md). [CI 45710675744](https://github.com/sguzman/integrax/actions/runs/45710675744), in_progress at checkpoint; no measured gain. Independent oracle covers through mode15 (E0061 passed).
+[E0062](experiments/records/E0062.md) 9/9 strict, all longer-context alternatives regress; retain four-byte mode15. Independent oracle covers through mode15 (E0061 passed).
 
 E0063 longer-context independent reference: 40/40 exact synthetic cases; all 40 mode15 observations unchanged. External Rust cross-codec CI authored, pending.
+
+E0064 matched combined recurrence/dictionary trial on two reused enwik9 regions authored, pending. [Design](notes/C11-combined-target-slices.md). No measured gain yet.

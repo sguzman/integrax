@@ -17,3 +17,5 @@ M4: E0060 [two-candidate recurrences](../theory/two-candidate-recurrences.md) mo
 M5: E0062 [recurrence context specificity](../theory/recurrence-context-specificity.md), six/eight digit suffix classes vs four, matched two candidates and adaptive lengths. Code and CI authored; no measured gain yet.
 
 E0063 independent six/eight-digit key reference 40/40 synthetic exact, mode15 regression control reproduced; external CI pending.
+
+[E0062](../experiments/records/E0062.md) 9/9 strict; all six longer-context alternatives regressed, retain four-byte mode15. E0064 combined static dictionary and dual recurrence trial on two matched target regions authored; no assumed additive gains.
