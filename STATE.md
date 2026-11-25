@@ -15,3 +15,5 @@ Next: collect E0074; independently verify IXB2 framing, accept full blockwise re
 E0075 IXB2 independent reference 30 synthetic exact, 3448 truncation and 224 malformed rejects; variable block sizes and mixed raw/compressed tails. Rust cross-codec [CI 45714196811](https://github.com/sguzman/integrax/actions/runs/45714196811) passed 30/30 byte-identical archives, both-direction cross-decodes, 254 malformed rejects, 5 Rust tests. IXB1/2 total 105 independent codec comparisons, IXG2 370.
 
 E0076 IXB1 rank-token context ablation (mode5 two magnitude buckets, mode6 exact previous rank, mode4 matched), nine exact authentic comparisons/append rejects authored, pending. [Theory](theory/rank-token-context.md). IXB2 remains mode4; independent new mode verification pending.
+
+E0077 independent mode5/6 rank context reference 30/30 synthetic frames/append rejects, earlier 30 mode3/4 frames and 12 run bounds reproduced; external CI authored, pending.

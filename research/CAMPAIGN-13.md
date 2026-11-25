@@ -19,3 +19,5 @@ E0075 independent IXB2 framing reference 30 exact synthetic archives and 3672 ma
 [E0075](../experiments/records/E0075.md) external replay passed 30/30 independent comparisons and 254 malformed rejects; corrected fixture passed. IXB2 full run pending.
 
 M4 E0076 [rank-token context specificity](../theory/rank-token-context.md), fixed transform and maximal zero-run parse; two-token magnitude history vs exact previous rank. Nine authentic comparisons and append rejection authored; no gain presumed. IXB2 full mode4 trial unchanged.
+
+E0077 independent rank-token context reference 30 synthetic exact frames and append rejects; mode3/4 reference regression checks unchanged. Rust replay pending.
