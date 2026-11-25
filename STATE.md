@@ -10,3 +10,5 @@
 Next: collect E0065 strict isolated full result; accept only an improvement over F0009. C12 opened alongside final C11 test; collect E0066 and assess sparse corrections. No workers.
 
 E0066 mode18 sparse-corrected recurrence authored, one charged correction position/value and adaptive flag, nine strict authentic comparisons pending. [Theory](theory/sparse-corrected-recurrences.md). Independent oracle covers through mode17 only.
+
+E0067 independent mode18 reference: 40/40 exact synthetic cases, prior 80 mode15–17 observations unchanged; Rust cross-codec CI authored, pending.

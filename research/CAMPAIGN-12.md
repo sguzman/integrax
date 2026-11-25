@@ -1,3 +1,5 @@
 # C12 — Sparse-corrected arithmetic recurrences
 
 Active alongside final C11 measurement. Goal: test whether approximate repetition expressed as a radix recurrence plus sparse modular residual can outperform exact recurrence and static DAG tokens. M1: [derivation](../theory/sparse-corrected-recurrences.md), IXG2 mode18, single sparse correction with overlap-safe recurrence, all positions/values/flags charged. E0066 matched three-region strict authentic ablation plus Rust controls authored; CI pending. M2: independently verify only useful variants, compare actual coverage, residual cost and full sizes; if ineffective, close without scaling. No novelty claim; distinguish exact algebraic identity from compression performance. No user action or expenditure.
+
+E0067 independent BigInt interval reference 40/40 exact synthetic cases; prior 80 mode15–17 observations unchanged. External Rust verification pending.
