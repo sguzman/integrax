@@ -132,8 +132,47 @@ fn encode_streamopt(input:&str,rules:&[Rule],mode:u8,mut w:impl Write,block:usiz
  if best!=check{return Err(bad("input changed during encode"))}out.finish()?;
  eprintln!("STREAM_OPT_RESULT mode={mode} greedy_bytes={gsize} chosen_bytes={bestsize} block={block}");Ok(())
 }
+// Native adaptive binary arithmetic coding of fixed-width root IDs.
+const AC_TOP:u64=0xffff_ffff;
+const AC_HALF:u64=0x8000_0000;
+const AC_Q:u64=0x4000_0000;
+const AC_TQ:u64=0xc000_0000;
+struct RootModel{rows:Vec<[u16;2]>,stride:usize,contextual:bool,ctx:usize}
+impl RootModel{
+ fn new(k:usize,contextual:bool)->Self{let stride=1usize<<width(k);Self{rows:vec![[1,1];stride*if contextual{257}else{1}],stride,contextual,ctx:if contextual{256}else{0}}}
+ fn counts(&self,p:usize)->(u64,u64){let c=self.rows[self.ctx*self.stride+p];(u64::from(c[0]),u64::from(c[0])+u64::from(c[1]))}
+ fn update(&mut self,p:usize,bit:usize){let c=&mut self.rows[self.ctx*self.stride+p];c[bit]+=1;if u32::from(c[0])+u32::from(c[1])>=4096{c[0]=c[0].div_ceil(2);c[1]=c[1].div_ceil(2)}}
+ fn next(&mut self,last:u8){if self.contextual{self.ctx=last as usize}}
+}
+struct AEnc<W:Write>{out:Out<W>,lo:u64,hi:u64,pending:u64}
+impl<W:Write>AEnc<W>{
+ fn emit(&mut self,b:u64)->io::Result<()>{self.out.put(b,1)?;while self.pending>0{self.out.put(b^1,1)?;self.pending-=1}Ok(())}
+ fn bit(&mut self,b:usize,zero:u64,total:u64)->io::Result<()>{let mid=self.lo+(self.hi-self.lo+1)*zero/total;if b==0{self.hi=mid-1}else{self.lo=mid}loop{if self.hi<AC_HALF{self.emit(0)?}else if self.lo>=AC_HALF{self.emit(1)?;self.lo-=AC_HALF;self.hi-=AC_HALF}else if self.lo>=AC_Q&&self.hi<AC_TQ{self.pending+=1;self.lo-=AC_Q;self.hi-=AC_Q}else{break}self.lo*=2;self.hi=self.hi*2+1}Ok(())}
+ fn finish(mut self,nonempty:bool)->io::Result<()>{if nonempty{self.pending+=1;self.emit(u64::from(self.lo>=AC_Q))?}self.out.finish()}
+}
+struct ADec<R:Read>{r:R,b:u8,n:u8,pad:u8,lo:u64,hi:u64,code:u64}
+impl<R:Read>ADec<R>{
+ fn next_bit(&mut self)->io::Result<u64>{if self.n==0{let mut a=[0];if self.r.read(&mut a)?==0{if self.pad==32{return Err(bad("arithmetic padding limit"))}self.pad+=1;return Ok(0)}self.b=a[0];self.n=8}let x=self.b>>7;self.b<<=1;self.n-=1;Ok(u64::from(x))}
+ fn init(&mut self)->io::Result<()>{for _ in 0..32{self.code=self.code*2+self.next_bit()?}Ok(())}
+ fn bit(&mut self,zero:u64,total:u64)->io::Result<usize>{if self.code<self.lo||self.code>self.hi{return Err(bad("arithmetic interval"))}let mid=self.lo+(self.hi-self.lo+1)*zero/total;let b=usize::from(self.code>=mid);if b==0{self.hi=mid-1}else{self.lo=mid}
+ loop{if self.hi<AC_HALF{}else if self.lo>=AC_HALF{self.lo-=AC_HALF;self.hi-=AC_HALF;self.code-=AC_HALF}else if self.lo>=AC_Q&&self.hi<AC_TQ{self.lo-=AC_Q;self.hi-=AC_Q;self.code-=AC_Q}else{break}self.lo*=2;self.hi=self.hi*2+1;self.code=self.code*2+self.next_bit()?}Ok(b)}
+}
+fn encode_adaptive(input:&str,rules:&[Rule],mode:u8,mut w:impl Write)->io::Result<()>{
+ let exp=expand(rules)?;let t=Trie::new(&exp);let file=File::open(input)?;let l=file.metadata()?.len();if l>MAX_LEN{return Err(bad("input cap"))}
+ w.write_all(b"IXG2")?;w.write_all(&[mode])?;w.write_all(&l.to_be_bytes())?;write_rules(&mut w,rules)?;
+ let bits=width(exp.len());let mut model=RootModel::new(exp.len(),mode==4);let mut enc=AEnc{out:Out{w,b:0,n:0},lo:0,hi:AC_TOP,pending:0};let mut roots=0u64;let mut info=0f64;
+ let actual=parse(BufReader::new(file),&t,|id|{let mut p=1usize;for j in (0..bits).rev(){let b=((id>>j)&1)as usize;let(z,n)=model.counts(p);let count=if b==0{z}else{n-z};info-=(count as f64/n as f64).log2();enc.bit(b,z,n)?;model.update(p,b);p=p*2+b}model.next(*exp[id as usize].last().unwrap());roots+=1;Ok(())})?;
+ if actual!=l{return Err(bad("input changed"))}enc.finish(l!=0)?;eprintln!("ADAPT mode={mode} bytes={l} roots={roots} rules={} ideal_bits={info:.3}",rules.len());Ok(())
+}
+fn decode_adaptive<R:Read,W:Write>(mut r:R,mut w:W,l:u64,exp:&[Vec<u8>],mode:u8)->io::Result<()>{
+ if l==0{let mut b=[0];if r.read(&mut b)?!=0{return Err(bad("empty payload"))}return w.flush()}
+ let mut dec=ADec{r,b:0,n:0,pad:0,lo:0,hi:AC_TOP,code:0};dec.init()?;let bits=width(exp.len());let mut model=RootModel::new(exp.len(),mode==4);let mut written=0u64;
+ while written<l{let mut p=1usize;let mut id=0usize;for _ in 0..bits{let(z,n)=model.counts(p);let b=dec.bit(z,n)?;model.update(p,b);p=p*2+b;id=id*2+b}
+ if id>=exp.len(){return Err(bad("root id"))}written+=exp[id].len()as u64;if written>l{return Err(bad("output length"))}w.write_all(&exp[id])?;model.next(*exp[id].last().unwrap())}
+ w.flush()
+}
 fn decode(mut r:impl Read,mut w:impl Write)->io::Result<()>{
- let mut m=[0;5];r.read_exact(&mut m)?;if &m[..4]!=b"IXG2"||m[4]>2{return Err(bad("header"))}let l=u64in(&mut r)?;if l>MAX_LEN{return Err(bad("length cap"))}let rules=read_rules(&mut r)?;let exp=expand(&rules)?;let mut freq=vec![0u64;exp.len()];
+ let mut m=[0;5];r.read_exact(&mut m)?;if &m[..4]!=b"IXG2"||m[4]>4{return Err(bad("header"))}let l=u64in(&mut r)?;if l>MAX_LEN{return Err(bad("length cap"))}let rules=read_rules(&mut r)?;let exp=expand(&rules)?;if m[4]>=3{return decode_adaptive(r,w,l,&exp,m[4])}let mut freq=vec![0u64;exp.len()];
  let h=if m[4]==1{let mut sum=0u64;for(i,n)in freq.iter_mut().enumerate(){*n=getvar(&mut r)?;sum=sum.checked_add(n.checked_mul(exp[i].len()as u64).ok_or_else(||bad("length overflow"))?).ok_or_else(||bad("length overflow"))?;if sum>l{return Err(bad("frequency length"))}}if sum!=l{return Err(bad("frequency length"))}Some(huff(&freq)?)}else{None};
  let mut bits=In{r,b:0,n:0};let mut written=0u64;while written<l{let id=if let Some(ref h)=h{let mut n=h.root.ok_or_else(||bad("empty huffman tree"))?;loop{match h.nodes[n]{HNode::Leaf(id)=>break id as usize,HNode::Branch(a,b)=>n=if bits.bit()?==0{a}else{b}}}}else{bits.get(if m[4]==2{16}else{width(exp.len())})?};
  if id>=exp.len(){return Err(bad("root id"))}if h.is_some(){if freq[id]==0{return Err(bad("frequency exceeded"))}freq[id]-=1}written+=exp[id].len()as u64;if written>l{return Err(bad("output length"))}w.write_all(&exp[id])?}
@@ -142,13 +181,16 @@ fn decode(mut r:impl Read,mut w:impl Write)->io::Result<()>{
 fn main()->io::Result<()>{
  let a:Vec<String>=env::args().collect();match a.get(1).map(String::as_str){
  Some("train")if a.len()==4||a.len()==5=>{let budget=if a.len()==5{a[4].parse::<usize>().map_err(|_|bad("invalid rule budget"))?}else{DEFAULT_RULES};if budget>MAX_RULES{return Err(bad("rule budget cap"))}let mut sample=Vec::new();File::open(&a[2])?.take(MAX_SAMPLE as u64+1).read_to_end(&mut sample)?;if sample.len()>MAX_SAMPLE{return Err(bad("training sample cap"))}let rules=train_budget(&sample,budget);let mut w=BufWriter::new(File::create(&a[3])?);write_rules(&mut w,&rules)?;w.flush()?;eprintln!("TRAIN bytes={} rules={}",sample.len(),rules.len());Ok(())},
- Some("roots"|"fixed"|"huff"|"optfixed"|"opthuff"|"streamoptfixed"|"streamopthuff")if a.len()==5=>{let mut d=BufReader::new(File::open(&a[4])?);let rules=read_rules(&mut d)?;let mut tail=[0];if d.read(&mut tail)?!=0{return Err(bad("trailing dictionary bytes"))}let w=BufWriter::new(File::create(&a[3])?);let mode=if a[1]=="roots"{2}else{u8::from(a[1].ends_with("huff"))};if a[1].starts_with("streamopt"){encode_streamopt(&a[2],&rules,mode,w,STREAM_BLOCK)}else if a[1].starts_with("opt"){encode_opt(&a[2],&rules,mode,w)}else{encode(&a[2],&rules,mode,w)}},
+ Some("adaptive"|"context"|"roots"|"fixed"|"huff"|"optfixed"|"opthuff"|"streamoptfixed"|"streamopthuff")if a.len()==5=>{let mut d=BufReader::new(File::open(&a[4])?);let rules=read_rules(&mut d)?;let mut tail=[0];if d.read(&mut tail)?!=0{return Err(bad("trailing dictionary bytes"))}let w=BufWriter::new(File::create(&a[3])?);let mode=match a[1].as_str(){"roots"=>2,"adaptive"=>3,"context"=>4,_=>u8::from(a[1].ends_with("huff"))};if mode>=3{encode_adaptive(&a[2],&rules,mode,w)}else if a[1].starts_with("streamopt"){encode_streamopt(&a[2],&rules,mode,w,STREAM_BLOCK)}else if a[1].starts_with("opt"){encode_opt(&a[2],&rules,mode,w)}else{encode(&a[2],&rules,mode,w)}},
  Some("decode")if a.len()==4=>{let w:Box<dyn Write>=if a[3]=="-"{Box::new(io::stdout().lock())}else{Box::new(File::create(&a[3])?)};decode(BufReader::new(File::open(&a[2])?),BufWriter::new(w))},
- _=>Err(bad("usage: ixg2 train SAMPLE DICT [RULE_BUDGET] | roots|fixed|huff|optfixed|opthuff|streamoptfixed|streamopthuff INPUT ARCHIVE DICT | decode ARCHIVE OUTPUT"))}
+ _=>Err(bad("usage: ixg2 train SAMPLE DICT [RULE_BUDGET] | adaptive|context|roots|fixed|huff|optfixed|opthuff|streamoptfixed|streamopthuff INPUT ARCHIVE DICT | decode ARCHIVE OUTPUT"))}
 }
 #[cfg(test)]mod tests{use super::*;use std::io::Cursor;
  #[test]fn training_parse(){let x=b"abcabcabcabc".repeat(10000);let rules=train(&x[..65536]);let ex=expand(&rules).unwrap();let t=Trie::new(&ex);let mut y=Vec::new();assert_eq!(parse(Cursor::new(&x),&t,|id|{y.extend_from_slice(&ex[id as usize]);Ok(())}).unwrap(),x.len()as u64);assert_eq!(x,y);}
  #[test]fn roundtrip_modes(){let dir=env::temp_dir().join(format!("ixg2-{}",std::process::id()));std::fs::create_dir_all(&dir).unwrap();let path=dir.join("input");let rules=train(b"abcabcabcabcabcabc");for x in [vec![],vec![7;10000],b"abcabc\0xyz".repeat(10000),(0..=255).collect()]{std::fs::write(&path,&x).unwrap();for m in 0..=2{let mut a=Vec::new();encode(path.to_str().unwrap(),&rules,m,&mut a).unwrap();if m==2{assert_eq!(decode(&a[..],&mut Vec::new()).unwrap(),());let mut y=Vec::new();decode(&a[..],&mut y).unwrap();assert_eq!(x,y);let mut b=a.clone();b.push(0);assert!(decode(&b[..],io::sink()).is_err());assert!(decode(&a[..a.len()-1],io::sink()).is_err());continue}let mut opt=Vec::new();encode_opt(path.to_str().unwrap(),&rules,m,&mut opt).unwrap();assert!(opt.len()<=a.len());let mut streamed=Vec::new();encode_streamopt(path.to_str().unwrap(),&rules,m,&mut streamed,4096).unwrap();assert_eq!(opt,streamed);let mut y=Vec::new();decode(&opt[..],&mut y).unwrap();assert_eq!(x,y);y.clear();decode(&a[..],&mut y).unwrap();assert_eq!(x,y);let mut b=a.clone();b.push(0);assert!(decode(&b[..],io::sink()).is_err());assert!(decode(&a[..a.len()-1],io::sink()).is_err());}}std::fs::remove_dir_all(dir).unwrap();}
+ #[test]fn adaptive_roundtrips(){let dir=env::temp_dir().join(format!("ixg2-adaptive-{}",std::process::id()));std::fs::create_dir_all(&dir).unwrap();let path=dir.join("input");let rules=train(b"abcabcxyz abcabcxyz ".repeat(100).as_slice());let mut state=0x91a2b3c4u32;let random:Vec<u8>=(0..100000).map(|_|{state^=state<<13;state^=state>>17;state^=state<<5;state as u8}).collect();
+ for x in [vec![],vec![0],vec![255;100000],(0..=255).collect(),random,b"abcabcxyz ".repeat(10000)]{std::fs::write(&path,&x).unwrap();for m in [3,4]{let mut a=Vec::new();encode_adaptive(path.to_str().unwrap(),&rules,m,&mut a).unwrap();let mut y=Vec::new();decode(&a[..],&mut y).unwrap();assert_eq!(x,y);let mut b=a.clone();b[4]=5;assert!(decode(&b[..],io::sink()).is_err());}}
+ std::fs::remove_dir_all(dir).unwrap();}
  #[test]fn shortest_exhaustive(){
  // a,b,c,d,e,f with ab,abc,cd,ef,cdef. Greedy abc + d + ef, optimum ab+cdef.
  let rules=[(97,98),(256,99),(99,100),(101,102),(258,259)];
