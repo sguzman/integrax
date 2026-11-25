@@ -1,0 +1,42 @@
+{
+  "id": "E0004",
+  "campaign": "C04",
+  "scope": "full enwik9 conventional external baseline",
+  "revision": "074296c16b95eb2fd0f316e26d656910f7fa7442",
+  "run": 45682118817,
+  "job": 139445081280,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "md5_and_sha1_verified": true,
+    "enwik8_prefix_verified": true
+  },
+  "track": "external",
+  "method": "gzip 1.14 -n -9",
+  "archive_bytes": 322591988,
+  "archive_sha256": "8cb115e501a890512aca066674fcde866450dfac104472f99d75bbd1b3bd5ee8",
+  "compressor_bytes": null,
+  "external_side_bytes": 0,
+  "contest_total_bytes": null,
+  "status": "roundtrip-verified",
+  "verification": {
+    "byte_equal": true,
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "method": "gzip -dc piped to cmp; bash pipefail"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "gzip -n -9 -c data/enwik9 > results-local/enwik9.gz",
+    "gzip -dc results-local/enwik9.gz | cmp data/enwik9 -"
+  ],
+  "encode_seconds": 50.86,
+  "encode_peak_rss_bytes": 2179072,
+  "decode_compare_seconds": 3.71,
+  "decode_compare_peak_rss_bytes": 3674112,
+  "limitations": [
+    "external baseline, not Integrax record",
+    "executable size not measured; not contest-comparable",
+    "corpus and archive not committed; reacquire and reproduce by recorded hashes"
+  ]
+}

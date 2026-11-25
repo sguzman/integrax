@@ -3,12 +3,20 @@
   "target": {
     "id": "enwik9",
     "bytes": 1000000000,
-    "sha256": null
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
   },
   "reference": {
     "contest_total_bytes": 100424672,
     "source": "https://prize.hutter1.net/",
     "checked": "2026-11-25"
   },
-  "entries": []
+  "entries": [],
+  "external_baselines": [
+    {
+      "method": "gzip 1.14 -n -9",
+      "archive_bytes": 322591988,
+      "experiment": "E0004",
+      "verification": "roundtrip-verified"
+    }
+  ]
 }
