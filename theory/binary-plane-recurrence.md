@@ -1,0 +1,7 @@
+# Binary digit planes and recurrence cost
+
+Decomposing each base-256 digit into eight binary digits is a bijective transform. Separate linear recurrences over F_2 can exploit structure invisible over F_257. For plane length L and degree d, charged plane payload cost is 1+v(d)+2ceil(d/8) bytes (tag, degree, coefficients, seed) versus raw plane 1+ceil(L/8). Complete frame cost includes all eight plane tags, common header and padding. Minimum degree does not necessarily minimize all possible recurrence grammars, but minimizes this monotone per-plane cost. The encoder selects each independently then compares total frame with raw fallback.
+
+Generic binary sequences have minimum recurrence complexity near L/2, so the two charged d-bit parameters together generally consume the original L bits before overhead. Constant or low-complexity high planes can still save bits, e.g. a seven-bit ASCII alphabet has top plane zero. This is a conventional alphabet-support gain, not evidence of a novel recurrence law. The authentic test must distinguish constant-plane gains from nontrivial recurrence gains.
+
+For an exact fixed degree d there are at most 2^(2d) seed/coefficient pairs; for uniform binary strings, probability of any degree <=D is <= min(1, sum_(d=0)^D 2^(2d-L)). No assumption of independence among actual corpus planes. E0017 tests all binary strings of length <=10 against direct coefficient enumeration and confirms exact decoding of larger controls. The finite cap is a deliberate search limitation; no full-corpus claim.

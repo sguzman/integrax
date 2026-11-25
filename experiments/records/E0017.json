@@ -1,0 +1,1386 @@
+{
+  "id": "E0017",
+  "campaign": "C06",
+  "scope": "synthetic controls",
+  "status": "roundtrip-verified",
+  "execution": "V8 isolate",
+  "observations": {
+    "rows": [
+      {
+        "kind": "random",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 7,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          }
+        ],
+        "selected": false,
+        "byte_equal": true
+      },
+      {
+        "kind": "ascii",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": false,
+        "byte_equal": true
+      },
+      {
+        "kind": "nibble",
+        "bytes": 64,
+        "archive_bytes": 50,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 4,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating_high",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 0
+          },
+          {
+            "plane": 7,
+            "degree": 2,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": false,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "archive_bytes": 62,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 8,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "archive_bytes": 26,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 1,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 1,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "random",
+        "bytes": 256,
+        "archive_bytes": 87,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "ascii",
+        "bytes": 256,
+        "archive_bytes": 79,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "nibble",
+        "bytes": 256,
+        "archive_bytes": 55,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating_high",
+        "bytes": 256,
+        "archive_bytes": 81,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 2,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 256,
+        "archive_bytes": 65,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 256,
+        "archive_bytes": 27,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 1,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 1,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "random",
+        "bytes": 1024,
+        "archive_bytes": 87,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "ascii",
+        "bytes": 1024,
+        "archive_bytes": 79,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "nibble",
+        "bytes": 1024,
+        "archive_bytes": 55,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating_high",
+        "bytes": 1024,
+        "archive_bytes": 81,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 2,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "archive_bytes": 63,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "archive_bytes": 27,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 1,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 1,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "random",
+        "bytes": 4096,
+        "archive_bytes": 87,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "ascii",
+        "bytes": 4096,
+        "archive_bytes": 79,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "nibble",
+        "bytes": 4096,
+        "archive_bytes": 55,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating_high",
+        "bytes": 4096,
+        "archive_bytes": 81,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 32,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 2,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "archive_bytes": 61,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 16,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 17,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "archive_bytes": 27,
+        "planes": [
+          {
+            "plane": 0,
+            "degree": 1,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 1,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 2,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 3,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 4,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 5,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 6,
+            "degree": 1,
+            "aborted": false,
+            "mode": 1
+          },
+          {
+            "plane": 7,
+            "degree": 0,
+            "aborted": false,
+            "mode": 1
+          }
+        ],
+        "selected": true,
+        "byte_equal": true
+      }
+    ],
+    "exhaustive_minimality_checks": 2047,
+    "malformed_rejections": 28
+  },
+  "limitations": [
+    "no local digests/timing/RSS",
+    "same-code replay and authentic slices pending",
+    "no full corpus result"
+  ]
+}

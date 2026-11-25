@@ -1,0 +1,3 @@
+# IXL2 binary digit-plane recurrence
+
+Magic IXL2, canonical unsigned LEB128 L (<=16384), mode. Raw mode 0: exactly L bytes. Mode 1: eight planes in low-to-high bit order, each with one tag. Tag 0: exactly ceil(L/8) packed raw bits. Tag 1: canonical unsigned LEB128 degree d<=min(256,L), ceil(d/8) packed binary recurrence coefficients and ceil(d/8) packed seed bits. MSB-first bit packing, unused low bits zero. Generate subsequent bits by XOR of coefficient-selected previous d bits; degree zero gives all zeros. Assemble original bytes from planes; reject trailing bytes. Raw fallback if complete plane frame not strictly shorter than raw frame. No omitted metadata or side data. Bounded reference; not authenticated or contest-eligible.

@@ -1,0 +1,18 @@
+name: IXL2 binary-plane recurrence controls
+on:
+  push:
+    paths:
+      - 'experiments/oracle/bitplane-recurrence*.mjs'
+      - '.github/workflows/bitplane-recurrence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --version
+      - run: sh datasets/acquire.sh enwik8
+      - run: node experiments/oracle/bitplane-recurrence-controls.mjs data/enwik8
