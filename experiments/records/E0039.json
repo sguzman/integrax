@@ -1,0 +1,203 @@
+{
+  "id": "E0039",
+  "campaign": "C10",
+  "scope": "three matched authentic enwik8 regions, hierarchical prior and dictionary ablation",
+  "status": "roundtrip-verified",
+  "revision": "bb89c95924e00c68f9a50e7c805b5d8477049d71",
+  "run": 45704628771,
+  "job": 139523312334,
+  "corpus": {
+    "id": "enwik8",
+    "bytes": 100000000,
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+  },
+  "training": {
+    "train_sha256": "ba1d4361a56d6e6a688ee4f125465e51b47b361194fbe64349f098860a8fc6fc",
+    "dict_sha256": "5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518",
+    "empty.dict_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik8",
+    "bash experiments/ixg2/backoff.sh"
+  ],
+  "unit_tests": 8,
+  "rows": [
+    {
+      "offset": 1000000,
+      "bytes": 1048576,
+      "modes": {
+        "backoff dict": {
+          "model": {
+            "mode": 5,
+            "roots": 302812,
+            "rules": 8192,
+            "ideal_bits": 3061815.263
+          },
+          "encode_seconds": 0.18,
+          "encode_rss_bytes": 22704128,
+          "archive_bytes": 415510,
+          "archive_sha256": "e301b7941d31ae64b08d3eb1ed55d1a5896ea1909438eab19a17122f10fb6048",
+          "decode_seconds": 0.14,
+          "decode_rss_bytes": 19886080,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "context empty.dict": {
+          "model": {
+            "mode": 4,
+            "roots": 1048576,
+            "rules": 0,
+            "ideal_bits": 4060244.017
+          },
+          "encode_seconds": 0.22,
+          "encode_rss_bytes": 2932736,
+          "archive_bytes": 507546,
+          "archive_sha256": "b004e9026b4d9d1e3fdd0fc7a467be0cf7201c490c754b127c1a1aa7095486a2",
+          "decode_seconds": 0.18,
+          "decode_rss_bytes": 2658304,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "backoff empty.dict": {
+          "model": {
+            "mode": 5,
+            "roots": 1048576,
+            "rules": 0,
+            "ideal_bits": 4101143.129
+          },
+          "encode_seconds": 0.25,
+          "encode_rss_bytes": 2826240,
+          "archive_bytes": 512659,
+          "archive_sha256": "733af6e506207ee05cf255890cc15c8ed15f875ee1358b9feed5e2f6a0976da4",
+          "decode_seconds": 0.2,
+          "decode_rss_bytes": 2691072,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        }
+      },
+      "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+      "matched_context_bytes": 399431,
+      "matched_context_archive_sha256": "efcb0e4e76033b886d26ef0d7c1c1e0f7dd5b200b8c3662b8f25e29a029586e2"
+    },
+    {
+      "offset": 50000000,
+      "bytes": 1048576,
+      "modes": {
+        "backoff dict": {
+          "model": {
+            "mode": 5,
+            "roots": 304759,
+            "rules": 8192,
+            "ideal_bits": 3054557.71
+          },
+          "encode_seconds": 0.18,
+          "encode_rss_bytes": 22740992,
+          "archive_bytes": 414603,
+          "archive_sha256": "bef239c73f51545af360acd762ab0ff8678133810771ba9e8e549a9a8d723a99",
+          "decode_seconds": 0.15,
+          "decode_rss_bytes": 19922944,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "context empty.dict": {
+          "model": {
+            "mode": 4,
+            "roots": 1048576,
+            "rules": 0,
+            "ideal_bits": 4038892.387
+          },
+          "encode_seconds": 0.22,
+          "encode_rss_bytes": 2932736,
+          "archive_bytes": 504877,
+          "archive_sha256": "0caee09dc3fe244459361f5cd293dfcdc813d7cea8021b1101eb3a52222711c0",
+          "decode_seconds": 0.18,
+          "decode_rss_bytes": 2486272,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "backoff empty.dict": {
+          "model": {
+            "mode": 5,
+            "roots": 1048576,
+            "rules": 0,
+            "ideal_bits": 4079256.234
+          },
+          "encode_seconds": 0.25,
+          "encode_rss_bytes": 2891776,
+          "archive_bytes": 509923,
+          "archive_sha256": "ea09f3b27f9eac7fd977777fcf7303624b0aad4cd084a055a61cb5167b881a89",
+          "decode_seconds": 0.2,
+          "decode_rss_bytes": 2654208,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        }
+      },
+      "sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+      "matched_context_bytes": 398726,
+      "matched_context_archive_sha256": "223e116deaad015adef705effddb438e25ebaab506b3540e15e0a94d85888122"
+    },
+    {
+      "offset": 10000000,
+      "bytes": 16777216,
+      "modes": {
+        "backoff dict": {
+          "model": {
+            "mode": 5,
+            "roots": 4821905,
+            "rules": 8192,
+            "ideal_bits": 46729782.269
+          },
+          "encode_seconds": 2.77,
+          "encode_rss_bytes": 22839296,
+          "archive_bytes": 5874006,
+          "archive_sha256": "b6875d28a02d22cf44d78295f6b560daa1b1f3dd3786cf6468ca767c42ef13bc",
+          "decode_seconds": 2.23,
+          "decode_rss_bytes": 19845120,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "context empty.dict": {
+          "model": {
+            "mode": 4,
+            "roots": 16777216,
+            "rules": 0,
+            "ideal_bits": 64858498.321
+          },
+          "encode_seconds": 3.54,
+          "encode_rss_bytes": 2875392,
+          "archive_bytes": 8107328,
+          "archive_sha256": "c0fbaaa8027f167ec57f0b58ae13306ae8db2f760ad5c29201cdb7278247b352",
+          "decode_seconds": 2.86,
+          "decode_rss_bytes": 2519040,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "backoff empty.dict": {
+          "model": {
+            "mode": 5,
+            "roots": 16777216,
+            "rules": 0,
+            "ideal_bits": 64971027.992
+          },
+          "encode_seconds": 3.99,
+          "encode_rss_bytes": 2826240,
+          "archive_bytes": 8121394,
+          "archive_sha256": "0a8a1f7a7e08ca33cebb0b753efb8ff1f0e189ada2311814779410edf547e577",
+          "decode_seconds": 3.27,
+          "decode_rss_bytes": 2592768,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        }
+      },
+      "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+      "matched_context_bytes": 5746766,
+      "matched_context_archive_sha256": "3c77c8d8439e6518abd4d8566ec6b65747b536a5b7624aa6db94efdbb0da6684"
+    }
+  ],
+  "limitations": [
+    "same codec implementation",
+    "sample regions only",
+    "baseline context from E0038 matched hashes, separate run",
+    "fixed prior strength tested, not all backoff methods"
+  ]
+}

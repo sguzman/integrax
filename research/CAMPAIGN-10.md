@@ -1,3 +1,5 @@
 # C10 — Hybrid arithmetic and context coding
 
 Active. M1: E0037 24/24 exact comparisons, only one marginal hybrid gain, no scaling. M2: [E0038](../experiments/records/E0038.md) adaptive binary intervals and context determined by last expanded byte; 9/9 exact, 7 Rust tests, 16 MiB held-out context 5,746,766 B vs gzip 6,130,610 B. Same root sequence, complete dictionary charged. E0039 hierarchical backoff and zero-rule ablation pending. M3: E0040 native contextual full enwik9 isolated workflow authored; accept only verified archive, separately from hybrid. Compare against F0004, E0030 and gzip. No novelty claim; adaptive coding established prior art. No claim of contest eligibility.
+
+M4: [E0039](../experiments/records/E0039.md) 9/9, dictionary ablation shows 29.12% reduction on largest held-out region; fixed backoff regresses. E0041 ordered root ranks and two-byte suffix contexts, factorial ablation, [theory](../theory/ordered-root-context.md); code and CI authored, pending. Retain mode 4 as baseline until verified stronger candidate.
