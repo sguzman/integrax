@@ -1,0 +1,945 @@
+{
+  "id": "E0018",
+  "campaign": "C06",
+  "scope": "15 authentic enwik8 slices",
+  "revision": "4fb07043b3848105148d33bd0133804f4cf50f7b",
+  "run": 45700884853,
+  "job": 139510343967,
+  "status": "roundtrip-verified",
+  "environment": {
+    "node": "v24.22.3",
+    "runner": "ubuntu-latest"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik8",
+    "node experiments/oracle/bitplane-recurrence-controls.mjs data/enwik8"
+  ],
+  "peak_rss_bytes": 73601024,
+  "rows": [
+    {
+      "offset": 0,
+      "bytes": 64,
+      "archive_bytes": 66,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 1,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 6,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true,
+      "sha256": "9558a57e29128aec7fbe80db7ec2603cfbd34ce5df333554aef817eb2c840531",
+      "archive_sha256": "a02047fb06834e7a1f0ecd06016f1c1c2cb02820009dcdb7caa4ef9f1c5cc803",
+      "decoded_sha256": "9558a57e29128aec7fbe80db7ec2603cfbd34ce5df333554aef817eb2c840531",
+      "encode_ms": 0.2822879999999941,
+      "byte_equal": true
+    },
+    {
+      "offset": 0,
+      "bytes": 256,
+      "archive_bytes": 240,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 129,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true,
+      "sha256": "c01d16caf761b685b54ccab240e835d1e5186037b5677237df3a6f6fb0927130",
+      "archive_sha256": "2de5f50033d352d96c45750bcab997841c9039059958a7f435e51054b813af93",
+      "decoded_sha256": "c01d16caf761b685b54ccab240e835d1e5186037b5677237df3a6f6fb0927130",
+      "encode_ms": 1.8578679999999963,
+      "byte_equal": true
+    },
+    {
+      "offset": 0,
+      "bytes": 1024,
+      "archive_bytes": 912,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true,
+      "sha256": "ef3e698d40b8b36d6d1776feccc25bab3d01de872a4fd8e56f5b929631568496",
+      "archive_sha256": "4b0335cb41979b6e0706ea4f6266bf3db5c2ffe5efd2e0ab83872fee3f958314",
+      "decoded_sha256": "ef3e698d40b8b36d6d1776feccc25bab3d01de872a4fd8e56f5b929631568496",
+      "encode_ms": 5.843241999999975,
+      "byte_equal": true
+    },
+    {
+      "offset": 0,
+      "bytes": 4096,
+      "archive_bytes": 3600,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true,
+      "sha256": "652ed0541c8b9e2d8194c2a1cd20a3ea516efaa542082535c0ef57267e1ca49e",
+      "archive_sha256": "61950e8f0eced3d1a6b54ac0c0caa09b30222337634ea9e5003033df44adbc72",
+      "decoded_sha256": "652ed0541c8b9e2d8194c2a1cd20a3ea516efaa542082535c0ef57267e1ca49e",
+      "encode_ms": 6.696053000000006,
+      "byte_equal": true
+    },
+    {
+      "offset": 0,
+      "bytes": 16384,
+      "archive_bytes": 16392,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 9612,
+          "aborted": true,
+          "mode": 0
+        }
+      ],
+      "selected": false,
+      "sha256": "f72f174851ed11ae77711d9c7d2df9e3c34666e09adadb61a1081ff54df0196f",
+      "archive_sha256": "d4ef8967ade9bb0bb8139a11a85eddf096a84b32d87e60959aa3f3fbd9a6c6ad",
+      "decoded_sha256": "f72f174851ed11ae77711d9c7d2df9e3c34666e09adadb61a1081ff54df0196f",
+      "encode_ms": 8.209010000000035,
+      "byte_equal": true
+    },
+    {
+      "offset": 1000000,
+      "bytes": 64,
+      "archive_bytes": 70,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 34,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": false,
+      "sha256": "e5bd348305f100d9d688ffa8c6a708d3f93219cebfd989bf42c1125251d5135e",
+      "archive_sha256": "fa4a2c6c87d336a85ee8b7cc3ac42a40bd131edba08a4fbfb8252bd78e238632",
+      "decoded_sha256": "e5bd348305f100d9d688ffa8c6a708d3f93219cebfd989bf42c1125251d5135e",
+      "encode_ms": 0.249479000000008,
+      "byte_equal": true
+    },
+    {
+      "offset": 1000000,
+      "bytes": 256,
+      "archive_bytes": 240,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 131,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true,
+      "sha256": "4f2d1959dc4e39de841946797fc212edd98feb5059c1f647990762d554eb7e33",
+      "archive_sha256": "e6bb4894df420316b85d37e11659d5500696f26bf97b2b136889591b4cd491a9",
+      "decoded_sha256": "4f2d1959dc4e39de841946797fc212edd98feb5059c1f647990762d554eb7e33",
+      "encode_ms": 2.3993389999999977,
+      "byte_equal": true
+    },
+    {
+      "offset": 1000000,
+      "bytes": 1024,
+      "archive_bytes": 912,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 263,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true,
+      "sha256": "95db03890649c5509fa9cbbb81d806e0fd2e231921cb12b172c09664ee05bbf5",
+      "archive_sha256": "84c4f2fcb33c2b60b0a00ad168adf69f03671d712a5e07b0c4ed5299b438560f",
+      "decoded_sha256": "95db03890649c5509fa9cbbb81d806e0fd2e231921cb12b172c09664ee05bbf5",
+      "encode_ms": 4.784605999999997,
+      "byte_equal": true
+    },
+    {
+      "offset": 1000000,
+      "bytes": 4096,
+      "archive_bytes": 3600,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 263,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true,
+      "sha256": "0806378f9b62e32527fea589573347dac2a8cfa33371296e9cca0b264d1304db",
+      "archive_sha256": "474a0f01d313330313d6913fc9a1fefd71ab988aa68d18c38ab684d34f2dc850",
+      "decoded_sha256": "0806378f9b62e32527fea589573347dac2a8cfa33371296e9cca0b264d1304db",
+      "encode_ms": 5.729934000000014,
+      "byte_equal": true
+    },
+    {
+      "offset": 1000000,
+      "bytes": 16384,
+      "archive_bytes": 16392,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 263,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 8585,
+          "aborted": true,
+          "mode": 0
+        }
+      ],
+      "selected": false,
+      "sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+      "archive_sha256": "4e0930aeccd4d51c269ce767efd7500221e6d2beb729038bbce54f9cd47cefc8",
+      "decoded_sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+      "encode_ms": 6.438822000000016,
+      "byte_equal": true
+    },
+    {
+      "offset": 50000000,
+      "bytes": 64,
+      "archive_bytes": 70,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 31,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": false,
+      "sha256": "a79dc73d38ad16bc1811802ba41560d90e005ee0656edf4b8ce6fb824b9eed0e",
+      "archive_sha256": "5c8b24440f2b52b77dc1bdeddd771e5e7b7d80e77b699a6395da2a3b7184cf6c",
+      "decoded_sha256": "a79dc73d38ad16bc1811802ba41560d90e005ee0656edf4b8ce6fb824b9eed0e",
+      "encode_ms": 0.1819290000000251,
+      "byte_equal": true
+    },
+    {
+      "offset": 50000000,
+      "bytes": 256,
+      "archive_bytes": 240,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 129,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 130,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true,
+      "sha256": "2bbdbaa22f74352c047e7bff6a58950219355e9c4804926f87f385ff96e4cd7e",
+      "archive_sha256": "b08ffe343af736f2c2b8f21965de75ab0370620897f5cef12e05b02051b51e85",
+      "decoded_sha256": "2bbdbaa22f74352c047e7bff6a58950219355e9c4804926f87f385ff96e4cd7e",
+      "encode_ms": 1.3254199999999514,
+      "byte_equal": true
+    },
+    {
+      "offset": 50000000,
+      "bytes": 1024,
+      "archive_bytes": 912,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true,
+      "sha256": "c29187a46dd5ca735221e83311ddf2a23e79488ef0458f2d1b4a1678870e5306",
+      "archive_sha256": "e20fce4d80bef890b4000f2d14a4cf5b4806717003e26d6d168932bf49dcd2ee",
+      "decoded_sha256": "c29187a46dd5ca735221e83311ddf2a23e79488ef0458f2d1b4a1678870e5306",
+      "encode_ms": 4.356783000000007,
+      "byte_equal": true
+    },
+    {
+      "offset": 50000000,
+      "bytes": 4096,
+      "archive_bytes": 3600,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true,
+      "sha256": "d26ff3e847208b8c30f55636cf6021e91cb5e24282695d6e3a9fc99e1ab607ba",
+      "archive_sha256": "d0ba5227ae10a0c9006e85a5db07571a944b3998abf3ae1b5d89a9ca0525b35a",
+      "decoded_sha256": "d26ff3e847208b8c30f55636cf6021e91cb5e24282695d6e3a9fc99e1ab607ba",
+      "encode_ms": 5.635064,
+      "byte_equal": true
+    },
+    {
+      "offset": 50000000,
+      "bytes": 16384,
+      "archive_bytes": 16392,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 5936,
+          "aborted": true,
+          "mode": 0
+        }
+      ],
+      "selected": false,
+      "sha256": "8bb695c85c1c68877c84d8022d1874776d20528ae4c29faac0afc13fb29410fa",
+      "archive_sha256": "aeb1a664084926ea76562db9257bc07fe7be1afc93ba616932c211df96eb571b",
+      "decoded_sha256": "8bb695c85c1c68877c84d8022d1874776d20528ae4c29faac0afc13fb29410fa",
+      "encode_ms": 7.9431469999999536,
+      "byte_equal": true
+    }
+  ],
+  "limitations": [
+    "same-code exact roundtrip, not independent implementation",
+    "not full target"
+  ],
+  "corpus": {
+    "id": "enwik8",
+    "bytes": 100000000,
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+  },
+  "synthetic_replay": "E0017"
+}

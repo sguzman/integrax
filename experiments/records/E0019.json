@@ -1,0 +1,1208 @@
+{
+  "id": "E0019",
+  "campaign": "C06",
+  "scope": "30 SHA256 counter-stream codec controls",
+  "revision": "d73c0434b8f769663adf0b6ea2aaa99eb75d3394",
+  "run": 45700958446,
+  "job": 139510605300,
+  "status": "roundtrip-verified",
+  "environment": {
+    "node": "v24.22.3",
+    "runner": "ubuntu-latest"
+  },
+  "commands": [
+    "node experiments/oracle/recurrence-sha-controls.mjs"
+  ],
+  "peak_rss_bytes": 65785856,
+  "rows": [
+    {
+      "codec": "IXL1",
+      "kind": "sha256-counter",
+      "bytes": 64,
+      "archive_bytes": 70,
+      "sha256": "8d3d33d25d68fab6289584ceef6d9f9c56b6acb83b7b8a2a422d5ac4594a6047",
+      "archive_sha256": "e333e856723ec5d6c941a09a792873cace321ffb2a12240b5e11f8e89929bc67",
+      "decoded_sha256": "8d3d33d25d68fab6289584ceef6d9f9c56b6acb83b7b8a2a422d5ac4594a6047",
+      "encode_ms": 2.6538850000000025,
+      "byte_equal": true,
+      "degree": 32,
+      "aborted": false,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-counter",
+      "bytes": 64,
+      "archive_bytes": 70,
+      "sha256": "8d3d33d25d68fab6289584ceef6d9f9c56b6acb83b7b8a2a422d5ac4594a6047",
+      "archive_sha256": "0accd376dba0d91f2b54ac58c4e35f36e34dd4abbb9d771f46ca271d43efffe5",
+      "decoded_sha256": "8d3d33d25d68fab6289584ceef6d9f9c56b6acb83b7b8a2a422d5ac4594a6047",
+      "encode_ms": 0.9317549999999812,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 31,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 31,
+          "aborted": false,
+          "mode": 0
+        }
+      ],
+      "selected": false
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-ascii",
+      "bytes": 64,
+      "archive_bytes": 70,
+      "sha256": "8c0b6314f16a00964ef300a684d9dc05e670c557a277e22c6db5ff9b4abb37cb",
+      "archive_sha256": "6a9bc1a81c97941a78c7c66e485ad38d31f012ec39835c03eef3e3ffcf7dce9e",
+      "decoded_sha256": "8c0b6314f16a00964ef300a684d9dc05e670c557a277e22c6db5ff9b4abb37cb",
+      "encode_ms": 0.7938299999999856,
+      "byte_equal": true,
+      "degree": 32,
+      "aborted": false,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-ascii",
+      "bytes": 64,
+      "archive_bytes": 70,
+      "sha256": "8c0b6314f16a00964ef300a684d9dc05e670c557a277e22c6db5ff9b4abb37cb",
+      "archive_sha256": "643a2020362e8b966476962939d40de996d6319c827ce14e34be18c17c67e865",
+      "decoded_sha256": "8c0b6314f16a00964ef300a684d9dc05e670c557a277e22c6db5ff9b4abb37cb",
+      "encode_ms": 0.2560709999999915,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 31,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": false
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-nibble",
+      "bytes": 64,
+      "archive_bytes": 70,
+      "sha256": "1bc50f551d746afdcd3fddf9390a356b37302b975caaeb527217b7a694ef4304",
+      "archive_sha256": "2993a47d2f28875c2dfba65cb6107380e48e9d130e58273f93650a687c1fc6ae",
+      "decoded_sha256": "1bc50f551d746afdcd3fddf9390a356b37302b975caaeb527217b7a694ef4304",
+      "encode_ms": 0.2979930000000195,
+      "byte_equal": true,
+      "degree": 32,
+      "aborted": false,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-nibble",
+      "bytes": 64,
+      "archive_bytes": 50,
+      "sha256": "1bc50f551d746afdcd3fddf9390a356b37302b975caaeb527217b7a694ef4304",
+      "archive_sha256": "1209718bf909fcc8a6816701830765953387cdb73c6a9d5495a3a802bbf7c353",
+      "decoded_sha256": "1bc50f551d746afdcd3fddf9390a356b37302b975caaeb527217b7a694ef4304",
+      "encode_ms": 0.5069230000000005,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 31,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 33,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 32,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 5,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 6,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-counter",
+      "bytes": 256,
+      "archive_bytes": 263,
+      "sha256": "e053374cd478eab3baa1e83f2d20ca97712312972ffc59a45662aeb097792101",
+      "archive_sha256": "84eb7083225136aba061a3632dc212f7f2fb13d649d5b9d1e3bf19e06ad7129c",
+      "decoded_sha256": "e053374cd478eab3baa1e83f2d20ca97712312972ffc59a45662aeb097792101",
+      "encode_ms": 1.5827830000000063,
+      "byte_equal": true,
+      "degree": 128,
+      "aborted": false,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-counter",
+      "bytes": 256,
+      "archive_bytes": 263,
+      "sha256": "e053374cd478eab3baa1e83f2d20ca97712312972ffc59a45662aeb097792101",
+      "archive_sha256": "f61d81b89416a225e76cef926be35052d65b8023c2b63381a27efc7caf82bc8a",
+      "decoded_sha256": "e053374cd478eab3baa1e83f2d20ca97712312972ffc59a45662aeb097792101",
+      "encode_ms": 1.5358129999999903,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 129,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 126,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 129,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 129,
+          "aborted": false,
+          "mode": 0
+        }
+      ],
+      "selected": false
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-ascii",
+      "bytes": 256,
+      "archive_bytes": 263,
+      "sha256": "f65b676730090ced53e2432b349f164142ea82dabcd9f818b2756d3ad86d4842",
+      "archive_sha256": "0e40620ba54593fb6ee30c22603174d8e51120aa02b5f7bc20d55c53affd1820",
+      "decoded_sha256": "f65b676730090ced53e2432b349f164142ea82dabcd9f818b2756d3ad86d4842",
+      "encode_ms": 1.050771999999995,
+      "byte_equal": true,
+      "degree": 128,
+      "aborted": false,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-ascii",
+      "bytes": 256,
+      "archive_bytes": 240,
+      "sha256": "f65b676730090ced53e2432b349f164142ea82dabcd9f818b2756d3ad86d4842",
+      "archive_sha256": "209a5280c38732a92a9810117d8f3a0c3f99b923140da5a7af8cfaf70415bae0",
+      "decoded_sha256": "f65b676730090ced53e2432b349f164142ea82dabcd9f818b2756d3ad86d4842",
+      "encode_ms": 1.4552930000000117,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 129,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 126,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 129,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 128,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-nibble",
+      "bytes": 256,
+      "archive_bytes": 263,
+      "sha256": "ab74da596b32fb107e12b08475f0966d913724bdbd83a184b5ad3e4a7f2c7f62",
+      "archive_sha256": "d0369dc082aacf723b03099dd4eda70b42b6b0def42b1e4625c443920117a88e",
+      "decoded_sha256": "ab74da596b32fb107e12b08475f0966d913724bdbd83a184b5ad3e4a7f2c7f62",
+      "encode_ms": 1.0180129999999963,
+      "byte_equal": true,
+      "degree": 128,
+      "aborted": false,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-nibble",
+      "bytes": 256,
+      "archive_bytes": 147,
+      "sha256": "ab74da596b32fb107e12b08475f0966d913724bdbd83a184b5ad3e4a7f2c7f62",
+      "archive_sha256": "1f47d5c5faedb37a61ea8bdfab4220cbaf23815a412458bd0c93359c30de3219",
+      "decoded_sha256": "ab74da596b32fb107e12b08475f0966d913724bdbd83a184b5ad3e4a7f2c7f62",
+      "encode_ms": 0.9836219999999969,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 129,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 127,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 126,
+          "aborted": false,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 5,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 6,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-counter",
+      "bytes": 1024,
+      "archive_bytes": 1031,
+      "sha256": "a25d9eb835ad8f267e4bf40c62ddeb2fba163ec976d50929efc1a62125b2891a",
+      "archive_sha256": "22b75491cf75541040f52bf9c7b31c06edaf87f97673ce58026c1a737310c5ee",
+      "decoded_sha256": "a25d9eb835ad8f267e4bf40c62ddeb2fba163ec976d50929efc1a62125b2891a",
+      "encode_ms": 4.70299,
+      "byte_equal": true,
+      "degree": 257,
+      "aborted": true,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-counter",
+      "bytes": 1024,
+      "archive_bytes": 1031,
+      "sha256": "a25d9eb835ad8f267e4bf40c62ddeb2fba163ec976d50929efc1a62125b2891a",
+      "archive_sha256": "9fabda6446dcf1bfb24726495316f98374a3cba04d53ff5f30bd317bc75b6ffb",
+      "decoded_sha256": "a25d9eb835ad8f267e4bf40c62ddeb2fba163ec976d50929efc1a62125b2891a",
+      "encode_ms": 20.218250000000012,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        }
+      ],
+      "selected": false
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-ascii",
+      "bytes": 1024,
+      "archive_bytes": 1031,
+      "sha256": "796e9ede84fd0d046350827e7b91a8a09b72a2e0a2a68ebf59bc324b27d3d282",
+      "archive_sha256": "f91f3eb54d6867e3eb57852963af395ee73449bda8b66b977fcb0426c9287fd4",
+      "decoded_sha256": "796e9ede84fd0d046350827e7b91a8a09b72a2e0a2a68ebf59bc324b27d3d282",
+      "encode_ms": 7.661847999999992,
+      "byte_equal": true,
+      "degree": 257,
+      "aborted": true,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-ascii",
+      "bytes": 1024,
+      "archive_bytes": 912,
+      "sha256": "796e9ede84fd0d046350827e7b91a8a09b72a2e0a2a68ebf59bc324b27d3d282",
+      "archive_sha256": "d2b28e928bae3de256bea30a7c21ff019049154f79d55660ededf1257abd8437",
+      "decoded_sha256": "796e9ede84fd0d046350827e7b91a8a09b72a2e0a2a68ebf59bc324b27d3d282",
+      "encode_ms": 7.486016000000006,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-nibble",
+      "bytes": 1024,
+      "archive_bytes": 1031,
+      "sha256": "dc9abe8c508b9dbf3292d4778a33823bcbb48c16a434050b3422c80c8aec920a",
+      "archive_sha256": "43d8b14b749e449e3e3ba6717b521563de4b603864835992489c9e36cfada507",
+      "decoded_sha256": "dc9abe8c508b9dbf3292d4778a33823bcbb48c16a434050b3422c80c8aec920a",
+      "encode_ms": 6.787168000000008,
+      "byte_equal": true,
+      "degree": 257,
+      "aborted": true,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-nibble",
+      "bytes": 1024,
+      "archive_bytes": 531,
+      "sha256": "dc9abe8c508b9dbf3292d4778a33823bcbb48c16a434050b3422c80c8aec920a",
+      "archive_sha256": "dafbbd81da69bafca7f94b18c80fa254984b2441f5536a4a1db76229c02a97f8",
+      "decoded_sha256": "dc9abe8c508b9dbf3292d4778a33823bcbb48c16a434050b3422c80c8aec920a",
+      "encode_ms": 3.049272000000002,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 5,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 6,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-counter",
+      "bytes": 4096,
+      "archive_bytes": 4103,
+      "sha256": "e81a49c0a3f1a04ad5dec61b9d7877658643bf42062ab16fba5a6b777b6ce976",
+      "archive_sha256": "2e464f152acc813e508ee0d3b14cc539efbdc8d341624e8068ffb584a181bb91",
+      "decoded_sha256": "e81a49c0a3f1a04ad5dec61b9d7877658643bf42062ab16fba5a6b777b6ce976",
+      "encode_ms": 3.5969559999999774,
+      "byte_equal": true,
+      "degree": 257,
+      "aborted": true,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-counter",
+      "bytes": 4096,
+      "archive_bytes": 4103,
+      "sha256": "e81a49c0a3f1a04ad5dec61b9d7877658643bf42062ab16fba5a6b777b6ce976",
+      "archive_sha256": "a8715aa5ea09105ef6ddf0f5c1bd3f8e43e859cbd78e84957a20a5665e553b79",
+      "decoded_sha256": "e81a49c0a3f1a04ad5dec61b9d7877658643bf42062ab16fba5a6b777b6ce976",
+      "encode_ms": 5.033250999999979,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        }
+      ],
+      "selected": false
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-ascii",
+      "bytes": 4096,
+      "archive_bytes": 4103,
+      "sha256": "4d26ee7eeb8c3b494138c6a84c9794f6f0c06e3589f1e2f4cb41fce6c1194227",
+      "archive_sha256": "6b727c95d8b60caee962354e78b21b2f042a945f96f35b12fb93f2d684dd65a3",
+      "decoded_sha256": "4d26ee7eeb8c3b494138c6a84c9794f6f0c06e3589f1e2f4cb41fce6c1194227",
+      "encode_ms": 3.883913000000007,
+      "byte_equal": true,
+      "degree": 257,
+      "aborted": true,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-ascii",
+      "bytes": 4096,
+      "archive_bytes": 3600,
+      "sha256": "4d26ee7eeb8c3b494138c6a84c9794f6f0c06e3589f1e2f4cb41fce6c1194227",
+      "archive_sha256": "5757427e29a3302f94e59f11aeec1a39556c17701dc8b44ce706ffc3272777c3",
+      "decoded_sha256": "4d26ee7eeb8c3b494138c6a84c9794f6f0c06e3589f1e2f4cb41fce6c1194227",
+      "encode_ms": 5.497160000000008,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-nibble",
+      "bytes": 4096,
+      "archive_bytes": 4103,
+      "sha256": "6b65e592464b8d585d99394214d535e1c6e6ca9ea66640f7f4daf21db0328304",
+      "archive_sha256": "21f32e51e68f1225507907deb6fb022f00dc5c3d0b01e56ce8d3b4dd5ce62867",
+      "decoded_sha256": "6b65e592464b8d585d99394214d535e1c6e6ca9ea66640f7f4daf21db0328304",
+      "encode_ms": 3.5638270000000034,
+      "byte_equal": true,
+      "degree": 257,
+      "aborted": true,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-nibble",
+      "bytes": 4096,
+      "archive_bytes": 2067,
+      "sha256": "6b65e592464b8d585d99394214d535e1c6e6ca9ea66640f7f4daf21db0328304",
+      "archive_sha256": "043a60ac0da781439736b43ee1fbbad7734e66d78d18389c1d1774519d92827a",
+      "decoded_sha256": "6b65e592464b8d585d99394214d535e1c6e6ca9ea66640f7f4daf21db0328304",
+      "encode_ms": 4.4176160000000095,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 5,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 6,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-counter",
+      "bytes": 16384,
+      "archive_bytes": 16392,
+      "sha256": "130ae18e3a534afdbbe4e365cefc6b7c84aa58fb4b84de83cc7467a79def7918",
+      "archive_sha256": "e63b39157474418f7d4d4aeafde8968d241c7e44a6f1a0f4463154a2186033e8",
+      "decoded_sha256": "130ae18e3a534afdbbe4e365cefc6b7c84aa58fb4b84de83cc7467a79def7918",
+      "encode_ms": 4.295934999999986,
+      "byte_equal": true,
+      "degree": 257,
+      "aborted": true,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-counter",
+      "bytes": 16384,
+      "archive_bytes": 16392,
+      "sha256": "130ae18e3a534afdbbe4e365cefc6b7c84aa58fb4b84de83cc7467a79def7918",
+      "archive_sha256": "af9f9bb1cee0359281f96092a34175d088acb8fef23284b351556a0426ff88ab",
+      "decoded_sha256": "130ae18e3a534afdbbe4e365cefc6b7c84aa58fb4b84de83cc7467a79def7918",
+      "encode_ms": 7.363324000000006,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        }
+      ],
+      "selected": false
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-ascii",
+      "bytes": 16384,
+      "archive_bytes": 16392,
+      "sha256": "d9d8234acea3fa2a1166c5f7f6b3b1937f4386cb13981fb512a5437985f068ac",
+      "archive_sha256": "57a48eb464f9532260b71f5d93f2b81ff41325a4acc3cbce87918067d69f7601",
+      "decoded_sha256": "d9d8234acea3fa2a1166c5f7f6b3b1937f4386cb13981fb512a5437985f068ac",
+      "encode_ms": 3.924742999999978,
+      "byte_equal": true,
+      "degree": 257,
+      "aborted": true,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-ascii",
+      "bytes": 16384,
+      "archive_bytes": 14353,
+      "sha256": "d9d8234acea3fa2a1166c5f7f6b3b1937f4386cb13981fb512a5437985f068ac",
+      "archive_sha256": "d4508d32790ac25413095cc6ba1f984cdb52c421b636bb6ee4e23f7943a05c38",
+      "decoded_sha256": "d9d8234acea3fa2a1166c5f7f6b3b1937f4386cb13981fb512a5437985f068ac",
+      "encode_ms": 12.196878000000027,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 262,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 5,
+          "degree": 258,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 6,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true
+    },
+    {
+      "codec": "IXL1",
+      "kind": "sha256-nibble",
+      "bytes": 16384,
+      "archive_bytes": 16392,
+      "sha256": "c96156e198d9e686512e568e9b14e2c92f52ac54722461141f881273e0c84672",
+      "archive_sha256": "59973fae4f36b00ce33c3b162906bd61e2bfa086dd3db1ed42a1457537997ea7",
+      "decoded_sha256": "c96156e198d9e686512e568e9b14e2c92f52ac54722461141f881273e0c84672",
+      "encode_ms": 4.179360999999972,
+      "byte_equal": true,
+      "degree": 257,
+      "aborted": true,
+      "planes": null,
+      "selected": false
+    },
+    {
+      "codec": "IXL2",
+      "kind": "sha256-nibble",
+      "bytes": 16384,
+      "archive_bytes": 8212,
+      "sha256": "c96156e198d9e686512e568e9b14e2c92f52ac54722461141f881273e0c84672",
+      "archive_sha256": "8400c6d64cb096b5d8abccd45c9a67eafff31a59c9b86759f010dd0f2f1e4b2a",
+      "decoded_sha256": "c96156e198d9e686512e568e9b14e2c92f52ac54722461141f881273e0c84672",
+      "encode_ms": 7.6294790000000035,
+      "byte_equal": true,
+      "degree": null,
+      "aborted": null,
+      "planes": [
+        {
+          "plane": 0,
+          "degree": 259,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 1,
+          "degree": 260,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 2,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 3,
+          "degree": 257,
+          "aborted": true,
+          "mode": 0
+        },
+        {
+          "plane": 4,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 5,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 6,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        },
+        {
+          "plane": 7,
+          "degree": 0,
+          "aborted": false,
+          "mode": 1
+        }
+      ],
+      "selected": true
+    }
+  ],
+  "limitations": [
+    "same-code exact roundtrip, not independent implementation",
+    "not full target"
+  ]
+}

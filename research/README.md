@@ -7,8 +7,8 @@
 | [C03](CAMPAIGN-03.md) | Multiplicative structure and factorization | [Closed](CAMPAIGN-03-CLOSURE.md) |
 | [C04](CAMPAIGN-04.md) | Mixed-radix digit ranks and enumerative descriptions | [Closed](CAMPAIGN-04-CLOSURE.md) |
 | [C05](CAMPAIGN-05.md) | Rational and Diophantine approximations | [Closed](CAMPAIGN-05-CLOSURE.md) |
-| [C06](CAMPAIGN-06.md) | Recurrences and sequence generators | Active |
-| C07 | Polynomial and arithmetic circuit minimization | Candidate |
+| [C06](CAMPAIGN-06.md) | Recurrences and sequence generators | [Closed](CAMPAIGN-06-CLOSURE.md) |
+| [C07](CAMPAIGN-07.md) | Polynomial and arithmetic circuit minimization | Active |
 | C08 | Modular structure and CRT | Candidate |
 | C09 | Reversible transformations | Candidate |
 | C10 | Hybrid arithmetic and conventional coding | Candidate |
