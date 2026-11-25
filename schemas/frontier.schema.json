@@ -113,6 +113,33 @@
           }
         }
       }
+    },
+    "external_baselines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "method",
+          "archive_bytes",
+          "experiment",
+          "verification"
+        ],
+        "properties": {
+          "method": {
+            "type": "string"
+          },
+          "archive_bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "experiment": {
+            "type": "string"
+          },
+          "verification": {
+            "const": "roundtrip-verified"
+          }
+        }
+      }
     }
   }
 }
