@@ -1,0 +1,321 @@
+{
+  "id": "E0020",
+  "campaign": "C07",
+  "scope": "synthetic controls and exhaustive ternary strings",
+  "status": "roundtrip-verified",
+  "execution": "V8 isolate",
+  "observations": {
+    "rows": [
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "rules": 0,
+        "roots": 64,
+        "selected": false,
+        "candidate_bytes": 114,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "archive_bytes": 10,
+        "rules": 0,
+        "roots": 64,
+        "selected": true,
+        "candidate_bytes": 10,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "rules": 0,
+        "roots": 64,
+        "selected": false,
+        "candidate_bytes": 79,
+        "byte_equal": true
+      },
+      {
+        "kind": "repeated_text",
+        "bytes": 64,
+        "archive_bytes": 67,
+        "rules": 1,
+        "roots": 60,
+        "selected": true,
+        "candidate_bytes": 67,
+        "byte_equal": true
+      },
+      {
+        "kind": "dictionary",
+        "bytes": 64,
+        "archive_bytes": 55,
+        "rules": 1,
+        "roots": 60,
+        "selected": true,
+        "candidate_bytes": 55,
+        "byte_equal": true
+      },
+      {
+        "kind": "fibonacci",
+        "bytes": 64,
+        "archive_bytes": 19,
+        "rules": 0,
+        "roots": 64,
+        "selected": true,
+        "candidate_bytes": 19,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 256,
+        "archive_bytes": 263,
+        "rules": 0,
+        "roots": 256,
+        "selected": false,
+        "candidate_bytes": 436,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 256,
+        "archive_bytes": 12,
+        "rules": 0,
+        "roots": 256,
+        "selected": true,
+        "candidate_bytes": 12,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 256,
+        "archive_bytes": 193,
+        "rules": 2,
+        "roots": 238,
+        "selected": true,
+        "candidate_bytes": 193,
+        "byte_equal": true
+      },
+      {
+        "kind": "repeated_text",
+        "bytes": 256,
+        "archive_bytes": 154,
+        "rules": 13,
+        "roots": 172,
+        "selected": true,
+        "candidate_bytes": 154,
+        "byte_equal": true
+      },
+      {
+        "kind": "dictionary",
+        "bytes": 256,
+        "archive_bytes": 141,
+        "rules": 14,
+        "roots": 151,
+        "selected": true,
+        "candidate_bytes": 141,
+        "byte_equal": true
+      },
+      {
+        "kind": "fibonacci",
+        "bytes": 256,
+        "archive_bytes": 45,
+        "rules": 0,
+        "roots": 256,
+        "selected": true,
+        "candidate_bytes": 45,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "archive_bytes": 1031,
+        "rules": 0,
+        "roots": 1024,
+        "selected": false,
+        "candidate_bytes": 1288,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "archive_bytes": 12,
+        "rules": 0,
+        "roots": 1024,
+        "selected": true,
+        "candidate_bytes": 12,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1024,
+        "archive_bytes": 643,
+        "rules": 2,
+        "roots": 958,
+        "selected": true,
+        "candidate_bytes": 643,
+        "byte_equal": true
+      },
+      {
+        "kind": "repeated_text",
+        "bytes": 1024,
+        "archive_bytes": 477,
+        "rules": 13,
+        "roots": 689,
+        "selected": true,
+        "candidate_bytes": 477,
+        "byte_equal": true
+      },
+      {
+        "kind": "dictionary",
+        "bytes": 1024,
+        "archive_bytes": 369,
+        "rules": 14,
+        "roots": 515,
+        "selected": true,
+        "candidate_bytes": 369,
+        "byte_equal": true
+      },
+      {
+        "kind": "fibonacci",
+        "bytes": 1024,
+        "archive_bytes": 141,
+        "rules": 0,
+        "roots": 1024,
+        "selected": true,
+        "candidate_bytes": 141,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "archive_bytes": 4103,
+        "rules": 0,
+        "roots": 4096,
+        "selected": false,
+        "candidate_bytes": 4364,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "archive_bytes": 12,
+        "rules": 0,
+        "roots": 4096,
+        "selected": true,
+        "candidate_bytes": 12,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "archive_bytes": 2438,
+        "rules": 2,
+        "roots": 3830,
+        "selected": true,
+        "candidate_bytes": 2438,
+        "byte_equal": true
+      },
+      {
+        "kind": "repeated_text",
+        "bytes": 4096,
+        "archive_bytes": 1781,
+        "rules": 13,
+        "roots": 2775,
+        "selected": true,
+        "candidate_bytes": 1781,
+        "byte_equal": true
+      },
+      {
+        "kind": "dictionary",
+        "bytes": 4096,
+        "archive_bytes": 1426,
+        "rules": 14,
+        "roots": 2207,
+        "selected": true,
+        "candidate_bytes": 1426,
+        "byte_equal": true
+      },
+      {
+        "kind": "fibonacci",
+        "bytes": 4096,
+        "archive_bytes": 525,
+        "rules": 0,
+        "roots": 4096,
+        "selected": true,
+        "candidate_bytes": 525,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 16384,
+        "archive_bytes": 16392,
+        "rules": 0,
+        "roots": 16384,
+        "selected": false,
+        "candidate_bytes": 16654,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 16384,
+        "archive_bytes": 14,
+        "rules": 0,
+        "roots": 16384,
+        "selected": true,
+        "candidate_bytes": 14,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 16384,
+        "archive_bytes": 9624,
+        "rules": 2,
+        "roots": 15326,
+        "selected": true,
+        "candidate_bytes": 9624,
+        "byte_equal": true
+      },
+      {
+        "kind": "repeated_text",
+        "bytes": 16384,
+        "archive_bytes": 7001,
+        "rules": 13,
+        "roots": 11125,
+        "selected": true,
+        "candidate_bytes": 7001,
+        "byte_equal": true
+      },
+      {
+        "kind": "dictionary",
+        "bytes": 16384,
+        "archive_bytes": 5777,
+        "rules": 14,
+        "roots": 9166,
+        "selected": true,
+        "candidate_bytes": 5777,
+        "byte_equal": true
+      },
+      {
+        "kind": "fibonacci",
+        "bytes": 16384,
+        "archive_bytes": 2063,
+        "rules": 0,
+        "roots": 16384,
+        "selected": true,
+        "candidate_bytes": 2063,
+        "byte_equal": true
+      }
+    ],
+    "exhaustive_roundtrips": 9841,
+    "pair_count_checks": 47667,
+    "truncation_rejections": 369,
+    "truncation_tests": 369,
+    "trailing_rejected": true
+  },
+  "limitations": [
+    "same implementation; external replay pending",
+    "no timing/RSS/hash measurements in isolate",
+    "bounded grammar, not whole enwik9"
+  ]
+}

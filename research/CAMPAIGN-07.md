@@ -1,5 +1,6 @@
 # C07 — Arithmetic straight-line descriptions
 
-Active. Can the whole integer be expressed as a compact DAG with exact concatenation C(A,B)=A*256^len(B)+B and shared subexpressions, paying for every node, reference and root? A byte grammar is a restricted arithmetic circuit with known length labels. Grammar compression is established prior art (Re-Pair, straight-line programs); no novelty claim.
+Active. Can the whole integer be expressed as a compact DAG of exact concatenations with shared subexpressions, paying for every node, reference and root?
 
-M1: implement a bounded pair-substitution grammar with exact accounting, topological references and raw fallback; prove expansion and cost conditions. M2: compare synthetic and authentic slices, report measured archive sizes, runtime and independent decode; inspect node reuse. M3: explore charged bit packing, repeated-power nodes or scalable construction if justified. Track whole-stream vs blockwise separately; no contest score without complete overhead.
+M1: IXG1 bounded pair substitution, exact bit width and framing, [theory](../theory/arithmetic-dag.md), [E0020](../experiments/records/E0020.md) 9841 exhaustive round trips, 47667 count checks, 30 synthetic fixtures. Greedy one-step optimum only, width barriers possible.
+M2: CI authentic E0021 and same-code replay pending, compare gzip and record hashes, rule reuse and scaling. M3: consider width-barrier search or scalable grammar if authentic evidence supports; then independent Rust decoder or full target. No novelty claim; grammar compression established prior art.

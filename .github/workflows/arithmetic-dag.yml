@@ -1,0 +1,18 @@
+name: IXG1 arithmetic DAG controls
+on:
+  push:
+    paths:
+      - 'experiments/oracle/arithmetic-dag*.mjs'
+      - '.github/workflows/arithmetic-dag.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --version
+      - run: sh datasets/acquire.sh enwik8
+      - run: node experiments/oracle/arithmetic-dag-controls.mjs data/enwik8
