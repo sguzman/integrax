@@ -8,8 +8,8 @@
 - E0042/E0046/E0051/[E0054](experiments/records/E0054.md): 224 independent Rust/BigInt archive equality and cross-decodes verified including E0056; two long periodic fixtures crossed ring capacity. Independent maximum-distance boundary still pending.
 - Nix pin/build verified; dashboard source contract verified, live deployment inaccessible/unverified. No settings changed.
 
-Next: collect E0055/E0056/E0057/E0058, close C10 after final combined full run. C11 assess predictor and charged length model, independent long ring wrap control. No workers.
+Next: collect E0055/E0058/E0059, close C10 after final combined full run. C11 assess predictor and charged length model, independent long ring wrap control. No workers.
 
-[E0056](experiments/records/E0056.md) 38/38 independent strict cross-codec passed, mode14 adaptive length, including two ring-wrap cases. [E0057 CI 45709612402](https://github.com/sguzman/integrax/actions/runs/45709612402) in progress at last check; independent max-distance boundary not established. [Theory](theory/recurrence-length-coding.md).
+[E0056](experiments/records/E0056.md) 38/38 independent strict cross-codec passed, mode14 adaptive length, including two ring-wrap cases. [E0057](experiments/records/E0057.md) 9/9 strict, adaptive16 wins all 3 regions, 16 MiB 4,739,779 B (0.25% below fixed16), retain for next structural trials; independent max-distance boundary not established. [Theory](theory/recurrence-length-coding.md).
 
 E0059 exact distance boundary (W-1,W,W+1) independent reference 6/6 synthetic exact, trace confirms inclusive W and rejects stale W+1. Rust cross-codec/direct ring test authored, pending.

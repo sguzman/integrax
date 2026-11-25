@@ -7,3 +7,5 @@ Active alongside finishing C10. Goal: exploit long-range repeated digit subseque
 M3: [adaptive length coding](../theory/recurrence-length-coding.md), mode14; [E0056](../experiments/records/E0056.md) 38/38 independent archive equality and strict cross-decodes, including ring-wrap controls; E0057 authentic matched length model benchmark authored. No result claimed.
 
 E0059 targeted maximum-distance verification: independent traces at W-1,W,W+1 for modes 13/14, six exact synthetic roundtrips; Rust replay pending.
+
+[E0057](../experiments/records/E0057.md) 9/9 strict, adaptive16 improves all three regions, 16 MiB 4739779 B (0.25% below fixed16); same parse. Retain adaptive length for structural predictor trials rather than scale the small isolated gain.
