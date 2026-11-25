@@ -27,7 +27,7 @@
     "sha256": "05fc5f44993ef0557959db76bf47e45badb2dd9c69d93ce08911935b5e52bf40",
     "rules": 1024,
     "dictionary_sha256": "35fbbd99fb2e1b575fc2353f879875093691e90e360c87b6a9e32f53b349ac98",
-    "dictionary_bytes": null
+    "dictionary_bytes": 4098
   },
   "binary_bytes": 352376,
   "unit_tests": 3,

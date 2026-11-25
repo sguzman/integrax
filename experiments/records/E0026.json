@@ -1,0 +1,28 @@
+{
+  "id": "E0026",
+  "campaign": "C07",
+  "scope": "exhaustive binary input, fixed weighted dictionary",
+  "status": "executed",
+  "execution": "V8 isolate",
+  "command": "node experiments/oracle/boundary-dp.mjs",
+  "observations": {
+    "dictionary_count": 3,
+    "exhaustive_inputs": 6141,
+    "block_sizes": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      16
+    ],
+    "exact_path_comparisons": 36846,
+    "cross_boundary_root_occurrences": 43721
+  },
+  "limitations": [
+    "in-memory block oracle, not streaming file implementation",
+    "no authentic or full target data",
+    "no timing or RSS measured",
+    "external replay pending"
+  ]
+}
