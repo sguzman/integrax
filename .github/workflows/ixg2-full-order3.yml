@@ -1,0 +1,18 @@
+name: IXG2 lexicographic third-order full enwik9
+on:
+  push:
+    paths:
+      - 'experiments/ixg2/full-order3.sh'
+      - '.github/workflows/ixg2-full-order3.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && cargo --version
+      - run: sh datasets/acquire.sh enwik9
+      - run: bash experiments/ixg2/full-order3.sh lexorder3

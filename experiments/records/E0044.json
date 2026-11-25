@@ -1,0 +1,198 @@
+{
+  "id": "E0044",
+  "campaign": "C10",
+  "scope": "three held-out enwik8 regions, matched deeper models",
+  "status": "roundtrip-verified",
+  "revision": "2699d1e94bc28183909ad342f836fae10fb6d8e7",
+  "run": 45705431555,
+  "job": 139526053928,
+  "corpus": {
+    "id": "enwik8",
+    "bytes": 100000000,
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+  },
+  "training": {
+    "train_sha256": "ba1d4361a56d6e6a688ee4f125465e51b47b361194fbe64349f098860a8fc6fc",
+    "dict_sha256": "5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik8",
+    "bash experiments/ixg2/deep.sh"
+  ],
+  "unit_tests": 10,
+  "rows": [
+    {
+      "offset": 1000000,
+      "bytes": 1048576,
+      "modes": {
+        "lexorder2": {
+          "model": {
+            "mode": 7,
+            "roots": 302812,
+            "rules": 8192,
+            "ideal_bits": 2750486.653
+          },
+          "encode_seconds": 0.23,
+          "encode_rss_bytes": 39657472,
+          "archive_bytes": 376594,
+          "archive_sha256": "4231e4b4d58872b18de24f6bcca7ec4358dcdadc9e00b97916a4e4c8712eccaa",
+          "decode_seconds": 0.23,
+          "decode_rss_bytes": 36569088,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "lexorder3": {
+          "model": {
+            "mode": 9,
+            "roots": 302812,
+            "rules": 8192,
+            "ideal_bits": 2637068.758
+          },
+          "encode_seconds": 0.33,
+          "encode_rss_bytes": 56340480,
+          "archive_bytes": 362417,
+          "archive_sha256": "79af0207ad20fb154c7d886be7964aaf169e4afc32facf3defadbf0d4ac9b384",
+          "decode_seconds": 0.33,
+          "decode_rss_bytes": 53317632,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "lexprevroot": {
+          "model": {
+            "mode": 10,
+            "roots": 302812,
+            "rules": 8192,
+            "ideal_bits": 2637869.115
+          },
+          "encode_seconds": 0.33,
+          "encode_rss_bytes": 56434688,
+          "archive_bytes": 362517,
+          "archive_sha256": "447f0413b90bc7fd13e121f35ec9119e648917a9a2b055175892f4e6af1b8666",
+          "decode_seconds": 0.32,
+          "decode_rss_bytes": 53432320,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        }
+      },
+      "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+      "gzip_bytes": 385562
+    },
+    {
+      "offset": 50000000,
+      "bytes": 1048576,
+      "modes": {
+        "lexorder2": {
+          "model": {
+            "mode": 7,
+            "roots": 304759,
+            "rules": 8192,
+            "ideal_bits": 2753710.667
+          },
+          "encode_seconds": 0.23,
+          "encode_rss_bytes": 39686144,
+          "archive_bytes": 376997,
+          "archive_sha256": "103967e9f060f8730399c04a6d0dc01b3fd5289f85661068a9592e8d4aa256c8",
+          "decode_seconds": 0.23,
+          "decode_rss_bytes": 36515840,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "lexorder3": {
+          "model": {
+            "mode": 9,
+            "roots": 304759,
+            "rules": 8192,
+            "ideal_bits": 2646232.336
+          },
+          "encode_seconds": 0.34,
+          "encode_rss_bytes": 56279040,
+          "archive_bytes": 363563,
+          "archive_sha256": "6cd4051b433d0b3d8ad8f177edb1f23b35f30b3c30633052a5e484c8ef733e8b",
+          "decode_seconds": 0.32,
+          "decode_rss_bytes": 53211136,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "lexprevroot": {
+          "model": {
+            "mode": 10,
+            "roots": 304759,
+            "rules": 8192,
+            "ideal_bits": 2646420.781
+          },
+          "encode_seconds": 0.33,
+          "encode_rss_bytes": 56410112,
+          "archive_bytes": 363586,
+          "archive_sha256": "c1c45978dda870cb891462792d702aca4032915cd795d8fdd66768ad4f8add1c",
+          "decode_seconds": 0.33,
+          "decode_rss_bytes": 53235712,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        }
+      },
+      "sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+      "gzip_bytes": 389210
+    },
+    {
+      "offset": 10000000,
+      "bytes": 16777216,
+      "modes": {
+        "lexorder2": {
+          "model": {
+            "mode": 7,
+            "roots": 4821905,
+            "rules": 8192,
+            "ideal_bits": 41600763.495
+          },
+          "encode_seconds": 3.47,
+          "encode_rss_bytes": 39649280,
+          "archive_bytes": 5232879,
+          "archive_sha256": "329934b7f8f5d907b39398f9c09ce37ca06e0aacdf7b30a9d50d992105f8d8a6",
+          "decode_seconds": 3.62,
+          "decode_rss_bytes": 36564992,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "lexorder3": {
+          "model": {
+            "mode": 9,
+            "roots": 4821905,
+            "rules": 8192,
+            "ideal_bits": 39042079.783
+          },
+          "encode_seconds": 5.14,
+          "encode_rss_bytes": 56410112,
+          "archive_bytes": 4913044,
+          "archive_sha256": "4eb14552dd0048b23215c49e73885d0436d103e24eab15b4d0b9ce4e7c494f0c",
+          "decode_seconds": 5.09,
+          "decode_rss_bytes": 53329920,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "lexprevroot": {
+          "model": {
+            "mode": 10,
+            "roots": 4821905,
+            "rules": 8192,
+            "ideal_bits": 39059071.31
+          },
+          "encode_seconds": 5,
+          "encode_rss_bytes": 56426496,
+          "archive_bytes": 4915167,
+          "archive_sha256": "263659e65bb6a19b8da85a0d45928f1b696c4d5b22e7e670e22a0a3c484bf99d",
+          "decode_seconds": 4.96,
+          "decode_rss_bytes": 53350400,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        }
+      },
+      "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+      "gzip_bytes": 6130610
+    }
+  ],
+  "limitations": [
+    "sample regions only",
+    "same implementation encoder/decoder; independent oracle not yet extended to modes 9/10",
+    "fixed table and prior strength"
+  ]
+}
