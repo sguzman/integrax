@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integrax — Compression frontier</title>
+<style>body{font:16px system-ui,sans-serif;background:#10151c;color:#e7eef5;max-width:850px;margin:60px auto;padding:0 20px}h1{font-size:3rem;margin-bottom:0}a{color:#82daca}section{border-top:1px solid #40505c;padding:18px 0}p{color:#b6c5d2}table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:10px 0;border-bottom:1px solid #364450}</style>
+<h1>Integrax</h1><p>Number-theoretic approaches to lossless compression</p>
+<section><h2 id="target">Loading ledger…</h2><p id="reference"></p><p id="status" role="status"></p><table><thead><tr><th>Track</th><th>Best verified bytes</th></tr></thead><tbody id="best"></tbody></table></section>
+<section><h2>History</h2><p>Verified full-target improvements only. Archive and contest metrics are distinct.</p><table><thead><tr><th>Date</th><th>Track</th><th>Bytes</th><th>Evidence</th></tr></thead><tbody id="history"></tbody></table></section>
+<p><a href="https://github.com/sguzman/integrax">Repository</a> · <a href="https://github.com/sguzman/integrax/blob/main/research/README.md">Campaigns</a> · <a href="frontier.json">Ledger</a></p>
+<script>
+const fmt=n=>n.toLocaleString('en-US');
+const add=(id,values)=>{const row=document.createElement('tr');for(const v of values){const cell=document.createElement('td');cell.textContent=v;row.append(cell)}document.getElementById(id).append(row)};
+fetch('frontier.json').then(r=>{if(!r.ok)throw Error('ledger unavailable');return r.json()}).then(d=>{
+document.getElementById('target').textContent=fmt(d.target.bytes)+' bytes · '+d.target.id;
+document.getElementById('reference').textContent='Official reference total: '+fmt(d.reference.contest_total_bytes)+' bytes (checked '+d.reference.checked+')';
+const entries=d.entries.filter(e=>!e.invalidated);
+document.getElementById('status').textContent=entries.length?entries.length+' verified frontier entries':'No verified Integrax compression results yet.';
+for(const [track,label] of [['whole','Whole integer'],['blockwise','Blockwise'],['hybrid','Hybrid'],['contest','Contest total']]){
+const metric=track==='contest'?'contest_total_bytes':'archive_bytes';
+const xs=entries.filter(e=>e.track===track&&e.metric===metric).map(e=>e.bytes);
+add('best',[label,xs.length?fmt(Math.min(...xs)):'Not established']);
+}
+for(const e of entries)add('history',[e.date,e.track,fmt(e.bytes),e.experiment+' / '+e.verification]);
+}).catch(e=>{document.getElementById('target').textContent='Ledger unavailable';document.getElementById('status').textContent=e.message});
+</script></html>

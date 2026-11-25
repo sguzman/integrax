@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "version",
+    "target",
+    "reference",
+    "entries"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "target": {
+      "type": "object",
+      "required": [
+        "id",
+        "bytes",
+        "sha256"
+      ],
+      "properties": {
+        "id": {
+          "const": "enwik9"
+        },
+        "bytes": {
+          "const": 1000000000
+        },
+        "sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "required": [
+        "contest_total_bytes",
+        "source",
+        "checked"
+      ],
+      "properties": {
+        "contest_total_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source": {
+          "type": "string"
+        },
+        "checked": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "experiment",
+          "verification",
+          "track",
+          "metric",
+          "bytes",
+          "date",
+          "artifact_sha256",
+          "revision"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "experiment": {
+            "type": "string"
+          },
+          "verification": {
+            "type": "string"
+          },
+          "track": {
+            "enum": [
+              "whole",
+              "blockwise",
+              "hybrid",
+              "contest"
+            ]
+          },
+          "metric": {
+            "enum": [
+              "archive_bytes",
+              "contest_total_bytes"
+            ]
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "date": {
+            "type": "string"
+          },
+          "artifact_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "invalidated": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

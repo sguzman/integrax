@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "target": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": null
+  },
+  "reference": {
+    "contest_total_bytes": 100424672,
+    "source": "https://prize.hutter1.net/",
+    "checked": "2026-11-25"
+  },
+  "entries": []
+}

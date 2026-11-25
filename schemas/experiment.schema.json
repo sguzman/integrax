@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "campaign",
+    "corpus",
+    "track",
+    "revision",
+    "commands",
+    "status",
+    "archive_bytes",
+    "verification"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^E[0-9]{4,}$"
+    },
+    "campaign": {
+      "type": "string"
+    },
+    "corpus": {
+      "type": "object",
+      "required": [
+        "id",
+        "bytes",
+        "sha256"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "track": {
+      "enum": [
+        "whole",
+        "blockwise",
+        "hybrid",
+        "external"
+      ]
+    },
+    "revision": {
+      "type": "string"
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "enum": [
+        "planned",
+        "executed",
+        "roundtrip-verified",
+        "independently-reproduced",
+        "contest-eligible",
+        "failed",
+        "blocked"
+      ]
+    },
+    "archive_bytes": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "compressor_bytes": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "external_side_bytes": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "contest_total_bytes": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "byte_equal",
+        "decoded_sha256"
+      ],
+      "properties": {
+        "byte_equal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "decoded_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "environment": {
+      "type": "object"
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "wall_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "peak_rss_bytes": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
