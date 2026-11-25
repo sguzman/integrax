@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 cd "$(dirname "$0")/../.."
+# Includes raw fallback assertion on a three-byte final block.
 cargo test --locked --release --bin ixb1
 cargo build --locked --release --bin ixb1
 bin=target/release/ixb1
