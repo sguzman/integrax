@@ -15,3 +15,5 @@ M4: E0060 [two-candidate recurrences](../theory/two-candidate-recurrences.md) mo
 [E0060](../experiments/records/E0060.md) 9/9 strict, dual16 wins all 3 regions, 16 MiB 4716953 B (0.48% below length16), 11990 older selections. E0061 independent reference 40 synthetic cases, [CI 45710509602](https://github.com/sguzman/integrax/actions/runs/45710509602) passed 40/40 independent byte-identical archives and strict cross-decodes. Retain dual model for structural trials.
 
 M5: E0062 [recurrence context specificity](../theory/recurrence-context-specificity.md), six/eight digit suffix classes vs four, matched two candidates and adaptive lengths. Code and CI authored; no measured gain yet.
+
+E0063 independent six/eight-digit key reference 40/40 synthetic exact, mode15 regression control reproduced; external CI pending.
