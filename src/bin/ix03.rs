@@ -35,7 +35,7 @@ fn candidate(input:&[u8],p:usize,budget:usize)->Option<Vec<u8>>{
         if v!=t[i%p]{
             var(i-next,&mut edits);edits.push(v);
             count+=1;next=i+1;
-            if 3+p+edits.len()>=budget{return None}
+            if 2+p+edits.len()>=budget{return None}
         }
     }
     let mut b=Vec::new();
