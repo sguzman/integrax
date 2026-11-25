@@ -1,0 +1,210 @@
+{
+  "id": "E0038",
+  "campaign": "C10",
+  "track": "whole",
+  "scope": "three held-out enwik8 regions; same greedy root sequence, three probability models",
+  "status": "roundtrip-verified",
+  "revision": "230f8b82a50b02b7704cf6ea6d6860fc11707f51",
+  "run": 45704407640,
+  "job": 139522523486,
+  "corpus": {
+    "id": "enwik8",
+    "bytes": 100000000,
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+  },
+  "training": {
+    "train_sha256": "ba1d4361a56d6e6a688ee4f125465e51b47b361194fbe64349f098860a8fc6fc",
+    "dict_sha256": "5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik8",
+    "bash experiments/ixg2/adaptive.sh"
+  ],
+  "environment": {
+    "rustc": "1.100.0",
+    "runner": "ubuntu-latest"
+  },
+  "unit_tests": 7,
+  "rows": [
+    {
+      "offset": 1000000,
+      "bytes": 1048576,
+      "modes": {
+        "huff": {
+          "model": {
+            "mode": 1,
+            "roots": 302812,
+            "rules": 8192,
+            "max_exp": 239,
+            "fixed_bits": 4239368,
+            "huff_bits": 3338403
+          },
+          "encode_seconds": 0.06,
+          "encode_rss_bytes": 6373376,
+          "archive_bytes": 459017,
+          "archive_sha256": "611a8169bfcd90b77d30c05123f5aaaaaa028b229f8e5b6eeb534b24eae7a67f",
+          "decode_seconds": 0.02,
+          "decode_rss_bytes": 3588096,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "adaptive": {
+          "model": {
+            "mode": 3,
+            "roots": 302812,
+            "rules": 8192,
+            "ideal_bits": 3352702.754
+          },
+          "encode_seconds": 0.13,
+          "encode_rss_bytes": 5799936,
+          "archive_bytes": 451871,
+          "archive_sha256": "cf4594e6c4fab5f9f85f7dd15215bfd852bbeb1a8964fe0d089c5c5d2f3830e4",
+          "decode_seconds": 0.1,
+          "decode_rss_bytes": 2973696,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "context": {
+          "model": {
+            "mode": 4,
+            "roots": 302812,
+            "rules": 8192,
+            "ideal_bits": 2933182.893
+          },
+          "encode_seconds": 0.16,
+          "encode_rss_bytes": 22593536,
+          "archive_bytes": 399431,
+          "archive_sha256": "efcb0e4e76033b886d26ef0d7c1c1e0f7dd5b200b8c3662b8f25e29a029586e2",
+          "decode_seconds": 0.12,
+          "decode_rss_bytes": 19689472,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        }
+      },
+      "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+      "gzip_bytes": 385562
+    },
+    {
+      "offset": 50000000,
+      "bytes": 1048576,
+      "modes": {
+        "huff": {
+          "model": {
+            "mode": 1,
+            "roots": 304759,
+            "rules": 8192,
+            "max_exp": 239,
+            "fixed_bits": 4266626,
+            "huff_bits": 3343326
+          },
+          "encode_seconds": 0.06,
+          "encode_rss_bytes": 6307840,
+          "archive_bytes": 459623,
+          "archive_sha256": "83532381a2b5a3b508f0960bc79d77e6c51e8f51870fc03c600f64c07ca0749f",
+          "decode_seconds": 0.02,
+          "decode_rss_bytes": 3678208,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "adaptive": {
+          "model": {
+            "mode": 3,
+            "roots": 304759,
+            "rules": 8192,
+            "ideal_bits": 3356349.764
+          },
+          "encode_seconds": 0.13,
+          "encode_rss_bytes": 5951488,
+          "archive_bytes": 452327,
+          "archive_sha256": "b8bedd6c60a942fc2fe627bc99002ddc80baf4de98b6994ea7ea6b58dd2fb484",
+          "decode_seconds": 0.1,
+          "decode_rss_bytes": 3133440,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "context": {
+          "model": {
+            "mode": 4,
+            "roots": 304759,
+            "rules": 8192,
+            "ideal_bits": 2927538.406
+          },
+          "encode_seconds": 0.16,
+          "encode_rss_bytes": 22630400,
+          "archive_bytes": 398726,
+          "archive_sha256": "223e116deaad015adef705effddb438e25ebaab506b3540e15e0a94d85888122",
+          "decode_seconds": 0.12,
+          "decode_rss_bytes": 19607552,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        }
+      },
+      "sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+      "gzip_bytes": 389210
+    },
+    {
+      "offset": 10000000,
+      "bytes": 16777216,
+      "modes": {
+        "huff": {
+          "model": {
+            "mode": 1,
+            "roots": 4821905,
+            "rules": 8192,
+            "max_exp": 239,
+            "fixed_bits": 67506670,
+            "huff_bits": 53726163
+          },
+          "encode_seconds": 0.94,
+          "encode_rss_bytes": 6328320,
+          "archive_bytes": 6761528,
+          "archive_sha256": "6b6192c9e642e108d991857a70d9ec2fca142214d4f73b153185c46e128f646f",
+          "decode_seconds": 0.39,
+          "decode_rss_bytes": 3784704,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "adaptive": {
+          "model": {
+            "mode": 3,
+            "roots": 4821905,
+            "rules": 8192,
+            "ideal_bits": 53486129.951
+          },
+          "encode_seconds": 2.07,
+          "encode_rss_bytes": 5832704,
+          "archive_bytes": 6718550,
+          "archive_sha256": "03bb7c37ba1ad45f0990549fec64aa1461a0e4c927c3d64c5912e6d9f17dba25",
+          "decode_seconds": 1.56,
+          "decode_rss_bytes": 2998272,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "context": {
+          "model": {
+            "mode": 4,
+            "roots": 4821905,
+            "rules": 8192,
+            "ideal_bits": 45711859.532
+          },
+          "encode_seconds": 2.33,
+          "encode_rss_bytes": 22753280,
+          "archive_bytes": 5746766,
+          "archive_sha256": "3c77c8d8439e6518abd4d8566ec6b65747b536a5b7624aa6db94efdbb0da6684",
+          "decode_seconds": 1.9,
+          "decode_rss_bytes": 19775488,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        }
+      },
+      "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+      "gzip_bytes": 6130610
+    }
+  ],
+  "limitations": [
+    "sample regions only, not full target",
+    "same implementation encoder/decoder",
+    "arithmetic payload not strictly canonical or integrity checked",
+    "gzip comparison from same run, not a competition score"
+  ]
+}
