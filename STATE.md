@@ -1,31 +1,10 @@
 # Continuation state
 
-2026-11-25 — C01–C12 closed; C13 active. Read AGENTS.md and [C13](research/CAMPAIGN-13.md).
+2026-11-25 — C01–C13 closed; next campaign to select. Read AGENTS.md, research/README.md, benchmarks/FRONTIER.md.
 
-- F0010 IXG2 **236,272,025 B** (76.37% reduction), [E0065/V0013](experiments/records/E0065.md) strict isolated full reconstruction; F0009 243,589,465 B, gzip 322,591,988 B. Archive-only.
-- [C11 closed](research/CAMPAIGN-11-CLOSURE.md); E0065 passed, final expanded dictionary and dual recurrence accepted.
-- [C12 closed](research/CAMPAIGN-12-CLOSURE.md): E0066 patch mixed; [E0068](experiments/records/E0068.md) adaptive correction wins all 3 regions, largest 4,712,831 B vs exact 4,716,953 B (0.087% gain). All strict, no full scale. Preserve mode19.
-- 370 independent IXG2 Rust/BigInt archive equality/cross-decodes verified, modes 3–19. E0069 passed 20/20, E0067 40/40. Nix pin/build verified; dashboard source verified, live deployment inaccessible/unverified.
-- C13 [radix context permutations](research/CAMPAIGN-13.md), IXB1 BWT/MTF/zero runs. E0070 independent naive reference passed 9841 strings/29523 frames. [E0070](experiments/records/E0070.md) 45/45 independent cross-codecs passed; [E0071](experiments/records/E0071.md) 36/36 exact, BWT+xz 4,378,540 B on 16 MiB (3.35% below raw xz, 7.17% below IXG2 dual16); external wrapped, sample only.
+- F0012 IXB2 blockwise **217,045,597 B** (78.30% reduction), [E0082/V0015](experiments/records/E0082.md), [CI 45718923956](https://github.com/sguzman/integrax/actions/runs/45718923956/job/139571999756). Full strict isolated byte equality and SHA-256, same archive digest as failed first attempt. F0011 220,113,320 B; mode7 wins every paired block in attempt 1. F0010 IXG2 whole-stream **236,272,025 B** (76.37%), [E0065/V0013](experiments/records/E0065.md). All archive-only; no contest-comparable total.
+- [C13 closed](research/CAMPAIGN-13-CLOSURE.md); 180 independent IXB1/2 cross-codec comparisons and 370 IXG2 (550 total). Preserve both block modes. C12 sparse patch sample gain only. Prior campaigns and evidence retained in registry.
+- Owner authorized competition-restricted development license; [LICENSE](LICENSE), earlier MIT grants retained. Hutter Prize requires OSI-approved submission code. No submission/relicense or visibility change without owner approval. Do not claim old public code is protected retroactively.
+- Nix build verified previously; live dashboard deployment unverified.
 
-Next: collect corrected E0082 mode7 full-corpus rerun; accept only on strict isolated exact evidence, compare to F0011 and close C13 with evidence. No workers.
-
-[E0072](experiments/records/E0072.md) 6/6 exact and 6/6 append rejects; mode4 4,273,508 B on 16 MiB, wins all 3 regions vs E0071. E0074 IXB2 full native 16 MiB blockwise with raw fallback, strict isolated byte comparison authored. Initial CI 45713806361 contains a test fixture assumption identified by independent oracle (ascending 128 bytes actually encodes to 127 B); corrected fixture checks guaranteed three-byte raw tail. Corrected E0074 [CI 45713883869](https://github.com/sguzman/integrax/actions/runs/45713883869), completed successfully (see F0011 below). [Theory](theory/context-permutation-rank-coding.md). No performance claim; E0073 independent native rank reference 30 exact frames, 30 append rejects, 12 run bounds, all 29523 earlier frames reproduced; [CI 45713436133](https://github.com/sguzman/integrax/actions/runs/45713436133) passed 30/30 independent byte-identical frames and both-direction cross-decodes. IXB1 total 75 independent cross-codecs, separate from IXG2 370.
-
-E0075 IXB2 independent reference 30 synthetic exact, 3448 truncation and 224 malformed rejects; variable block sizes and mixed raw/compressed tails. Rust cross-codec [CI 45714196811](https://github.com/sguzman/integrax/actions/runs/45714196811) passed 30/30 byte-identical archives, both-direction cross-decodes, 254 malformed rejects, 5 Rust tests. IXB1/2 total 150 independent codec comparisons, IXG2 370.
-
-[E0076](experiments/records/E0076.md) 9/9 exact and append rejects; mode5 wins all three regions (16 MiB 4,244,143 B, 0.687% below mode4), mode6 regresses all. [Theory](theory/rank-token-context.md). IXB2 remains mode4; independent new modes verified in E0077.
-
-E0077 independent mode5/6 rank context reference 30/30 synthetic frames/append rejects, earlier 30 mode3/4 frames and 12 run bounds reproduced; [CI 45714477638](https://github.com/sguzman/integrax/actions/runs/45714477638) passed 30/30 independent byte-identical frames and both-direction cross-decodes.
-
-[E0078](experiments/records/E0078.md) 9/9 exact fresh enwik9 comparisons, mode5 wins all three (6/6 across E0076/E0078); rank symbols account for ~70% of mode5 empirical comparator. [Theory](theory/rank-cost-decomposition.md). No wire change.
-
-[E0079](experiments/records/E0079.md) 6/6 exact and append rejects; mode7 wins all three, aggregate 2,873,464 B vs mode5 2,892,508 B (0.658% gain), vs mode4 2,910,762 B (1.281% gain). [Theory](theory/rank-backoff.md). Independent mode7 verification passed E0080; no full gain claimed.
-
-E0080 independent mode7 reference 15 exact frames/append rejects, 30 earlier context observations unchanged; Rust cross-codec [CI 45715148000](https://github.com/sguzman/integrax/actions/runs/45715148000) passed 15/15 independent byte-identical frames and both-direction cross-decodes.
-
-E0081 IXB2 tag2 mode7 extension verified: independent reference 30 exact, 3456 truncation and 236 malformed rejects; prior E0075 reproduced. [CI 45715504252](https://github.com/sguzman/integrax/actions/runs/45715504252/job/139560398820) passed 30/30 byte-identical archives, both-direction cross-decodes, 266 malformed rejects, 9 Rust tests. Total IXB1/2 independent comparisons 180; IXG2 370 (550 total). E0074 baseline passed; E0082 full mode7 candidate authored.
-
-F0011 IXB2 blockwise **220,113,320 B** (77.99% reduction), [E0074/V0014](experiments/records/E0074.md), [CI 45713883869](https://github.com/sguzman/integrax/actions/runs/45713883869/job/139554905468). 60 compressed blocks, isolated full equality and matching hashes, 699.48 s encode / 195.38 s decode. Whole-stream F0010 unchanged. E0082 mode7, identical 16 MiB block geometry, raw fallback and isolated protocol, authored; collect push-triggered workflow result. No full gain assumed.
-
-E0082 attempt 1 encoded 217,045,597 B, improved 60/60 block payloads, isolation and decoder exit passed; final cmp failed on wrong filename. NOT frontier accepted. [Failed verification run 45716420611](https://github.com/sguzman/integrax/actions/runs/45716420611/job/139563520836). Single output variable fix authored, push-triggered rerun pending. [Evidence](experiments/records/E0082.md).
+Next: choose scientifically justified C14 within mission; prioritize whole-integer arithmetic descriptions, compare against separate blockwise control. No workers or pending full benchmarks. No external submission. Avoid disclosing new competition-critical innovations outside the existing owner-authorized repository; owner has not authorized visibility change.

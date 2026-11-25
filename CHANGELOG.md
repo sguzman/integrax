@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-25 — F0012 accepted, C13 closed
+Hierarchical IXB2 217,045,597 B, verified full isolated reconstruction; corrected verification script reproduced identical archive digest.
+
 ## 2026-11-25 — Development license changed
 Owner-authorized source-available competition restriction; earlier MIT grants and third-party terms preserved. Separate eligible licensing required before Hutter Prize submission.
 

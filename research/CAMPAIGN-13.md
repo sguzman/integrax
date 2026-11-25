@@ -41,3 +41,8 @@ E0081 mode7 block integration: tag2 with matching inner mode, independent refere
 [E0074/V0014](../experiments/records/E0074.md) [CI 45713883869](https://github.com/sguzman/integrax/actions/runs/45713883869/job/139554905468) passed full isolated exact reconstruction: 220,113,320 B (77.99% reduction), F0011 accepted on separate blockwise track. E0082 selects mode7 (verified E0079/E0081) with unchanged 16 MiB block geometry and strict isolated protocol as final C13 candidate. No full gain assumed; close campaign after result.
 
 E0082 attempt 1: 217,045,597 B, 60/60 block payload wins; isolated decode completed but final comparison failed on script filename mismatch. [Failed verification run 45716420611](https://github.com/sguzman/integrax/actions/runs/45716420611/job/139563520836). No acceptance. Corrected single-output-variable script; rerun pending, no codec change.
+
+
+Attempt 2 / V0015: [CI 45718923956](https://github.com/sguzman/integrax/actions/runs/45718923956/job/139571999756) passed. Archive **217,045,597 B**, identical SHA-256 to attempt 1 (66f69179fde4cb5755e983c1ce187f7c767bb3ef5457d644172f5b507f7ef757); 78.30% reduction, saves 3,067,723 B vs F0011 and 19,226,428 B vs F0010. Nine tests passed; isolated decoder UID 65534, separate network namespace, original unreadable, full byte comparison and both corpus hashes matched 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc. Encode 1124.74 s / 362756 KiB, decode 272.77 s / 105508 KiB pipeline RSS, binary 373288 B. F0012 accepted, blockwise archive only; no contest eligibility. [Structured record](E0082.json).
+
+[Closed](CAMPAIGN-13-CLOSURE.md).

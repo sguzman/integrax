@@ -1,0 +1,5 @@
+# C13 closure — Radix context permutations and rank descriptions
+
+Closed 2026-11-25. Accepted F0011 (220,113,320 B, E0074/V0014) and F0012 (217,045,597 B, E0082/V0015). Final [CI 45718923956](https://github.com/sguzman/integrax/actions/runs/45718923956/job/139571999756) passed exact isolated enwik9 reconstruction. F0012 improves the earlier whole-stream F0010 by 8.14% and F0011 by 1.394%; whole-stream track remains unchanged. E0082 attempt 1 failed due to a script output filename mismatch, corrected rerun reproduced the identical archive digest and passed comparison.
+
+E0070–E0081 established independent BWT/MTF/rank and block-container correctness, authentic sample controls, two-token and hierarchical rank gains; exact previous-rank specialization regressed. 180 independent IXB1/2 cross-codec comparisons, plus 370 prior IXG2. No claim of novelty for BWT/MTF, contest eligibility or full transform canonicality. Preserve mode4 and mode7 formats. Final selected candidate tested; campaign complete, not mission termination.
