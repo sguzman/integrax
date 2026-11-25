@@ -1,0 +1,18 @@
+name: IXG2 independent adaptive length and ring wrap controls
+on:
+  push:
+    paths:
+      - 'experiments/oracle/root-intervals-length-cross.mjs'
+      - '.github/workflows/ixg2-length-cross.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --version && rustc --version
+      - run: cargo build --release --locked --bin ixg2
+      - run: node experiments/oracle/root-intervals-length-cross.mjs target/release/ixg2

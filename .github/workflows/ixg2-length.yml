@@ -1,0 +1,18 @@
+name: IXG2 adaptive recurrence lengths
+on:
+  push:
+    paths:
+      - 'experiments/ixg2/length.sh'
+      - '.github/workflows/ixg2-length.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && cargo --version
+      - run: sh datasets/acquire.sh enwik8
+      - run: bash experiments/ixg2/length.sh

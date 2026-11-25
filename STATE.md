@@ -9,3 +9,5 @@
 - Nix pin/build verified; dashboard source contract verified, live deployment inaccessible/unverified. No settings changed.
 
 Next: collect E0052/E0055, choose combined model only on actual evidence, close C10 after resolving combined ablation. C11 assess predictor and charged length model, independent long ring wrap control. No workers.
+
+E0056 adaptive length reference 36 synthetic + 2 ring-wrap periodic exact cases; 36 earlier mode13 observations unchanged. E0057 authentic mode14 vs mode13 length comparison authored. Both CI pending; independent max-distance boundary not established. [Theory](theory/recurrence-length-coding.md).
