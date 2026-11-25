@@ -25,3 +25,5 @@ E0077 independent rank-token context reference 30 synthetic exact frames and app
 [E0077](../experiments/records/E0077.md) independent rank-context replay passed 30/30 byte equality and both-direction cross-decodes; E0076 authentic comparison pending.
 
 M5 E0078 [rank cost decomposition](../theory/rank-cost-decomposition.md), three fresh 4 MiB target regions, actual complete frames vs in-sample entropy diagnostics, nine exact comparisons authored; no gain presumed. Diagnostic only, no wire format changes.
+
+[E0076](../experiments/records/E0076.md) 9/9 exact and append rejects; two-token bucket mode5 wins all, largest 4,244,143 B (0.687% below mode4), exact rank mode6 regresses. E0078 [CI 45714738239](https://github.com/sguzman/integrax/actions/runs/45714738239) running on fresh target regions; no additional full run selected yet.
