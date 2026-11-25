@@ -19,3 +19,5 @@ M8: E0050 [root decision geometry](../theory/root-decision-geometry.md) full bin
 [E0049](../experiments/records/E0049.md) and [E0050](../experiments/records/E0050.md) passed 18/18 authentic strict reconstructions. Larger sample/16384 rules and median tree produce modest separate gains on largest sample; [E0051](../experiments/records/E0051.md) 30 independent strict cross-codec comparisons passed. E0052 combined ablation on two new target regions authored, pending.
 
 [E0045](../experiments/records/E0045.md) full mode 9 passed isolated verification, F0008 accepted 256,538,753 B (74.35% reduction). E0052 still pending; C11 opened for dynamic recurrence tokens.
+
+[E0052](../experiments/records/E0052.md) 10/10 strict, larger 16384-rule median tree wins both new target regions (1.59%, 1.45% vs baseline). E0058 strict isolated full selected configuration authored, pending. Close C10 after this final full run; C11 continues with recurrences.
