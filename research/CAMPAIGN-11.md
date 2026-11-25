@@ -16,6 +16,8 @@ M4: E0060 [two-candidate recurrences](../theory/two-candidate-recurrences.md) mo
 
 M5: E0062 [recurrence context specificity](../theory/recurrence-context-specificity.md), six/eight digit suffix classes vs four, matched two candidates and adaptive lengths. Code and CI authored; no measured gain yet.
 
-E0063 independent six/eight-digit key reference 40/40 synthetic exact, mode15 regression control reproduced; external CI pending.
+E0063 independent six/eight-digit key reference 40/40 synthetic exact, mode15 regression control reproduced; [External CI 45710909068](https://github.com/sguzman/integrax/actions/runs/45710909068) passed 40/40 byte-identical archives and strict cross-decodes.
 
 [E0062](../experiments/records/E0062.md) 9/9 strict; all six longer-context alternatives regressed, retain four-byte mode15. E0064 combined static dictionary and dual recurrence trial on two matched target regions authored; no assumed additive gains.
+
+E0064 [CI 45711004123](https://github.com/sguzman/integrax/actions/runs/45711004123) queued at checkpoint; reused E0052 target validation regions. No gain yet.
