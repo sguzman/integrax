@@ -1,0 +1,18 @@
+name: IXB1 rank token context ablation
+on:
+  push:
+    paths:
+      - 'experiments/ixb1/rank-context.sh'
+      - '.github/workflows/ixb1-rank-context.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && cargo --version
+      - run: sh datasets/acquire.sh enwik8
+      - run: bash experiments/ixb1/rank-context.sh

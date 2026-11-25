@@ -17,3 +17,5 @@ E0073 independent BigInt rank reference 30 exact frames and append rejects, 12 z
 E0075 independent IXB2 framing reference 30 exact synthetic archives and 3672 malformed/truncated rejects. External Rust cross-codec pending. E0074 initial run failed the known raw-fallback fixture assumption; corrected run separate.
 
 [E0075](../experiments/records/E0075.md) external replay passed 30/30 independent comparisons and 254 malformed rejects; corrected fixture passed. IXB2 full run pending.
+
+M4 E0076 [rank-token context specificity](../theory/rank-token-context.md), fixed transform and maximal zero-run parse; two-token magnitude history vs exact previous rank. Nine authentic comparisons and append rejection authored; no gain presumed. IXB2 full mode4 trial unchanged.
