@@ -20,4 +20,6 @@ E0077 independent mode5/6 rank context reference 30/30 synthetic frames/append r
 
 [E0078](experiments/records/E0078.md) 9/9 exact fresh enwik9 comparisons, mode5 wins all three (6/6 across E0076/E0078); rank symbols account for ~70% of mode5 empirical comparator. [Theory](theory/rank-cost-decomposition.md). No wire change.
 
-E0079 mode7 three-token rank-only backoff to mode5, same flags/run lengths/parse, six matched exact comparisons and append rejects authored. [Theory](theory/rank-backoff.md). Independent new mode verification pending; no gain claimed.
+E0079 mode7 three-token rank-only backoff to mode5, same flags/run lengths/parse, six matched exact comparisons and append rejects [CI 45715033536](https://github.com/sguzman/integrax/actions/runs/45715033536), running at checkpoint. [Theory](theory/rank-backoff.md). Independent new mode verification pending; no gain claimed.
+
+E0080 independent mode7 reference 15 exact frames/append rejects, 30 earlier context observations unchanged; Rust cross-codec pending.
