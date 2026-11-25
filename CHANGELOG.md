@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-25 — Development license changed
+Owner-authorized source-available competition restriction; earlier MIT grants and third-party terms preserved. Separate eligible licensing required before Hutter Prize submission.
+
 ## 2026-11-25 — F0011 blockwise frontier
 Accepted E0074/V0014 (220,113,320 B), isolated full reconstruction. Selected final C13 hierarchical blockwise candidate E0082.
 

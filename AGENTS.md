@@ -6,6 +6,6 @@ Read STATE.md, research/README.md, benchmarks/FRONTIER.md and the active campaig
 
 Integrity: count all operands, residuals, signs, opcodes, boundaries, models, transforms and executable/side information. Exact bytes, no decoder oracle, network, or original corpus. Report archive size separately from contest total. Distinguish proofs, conjectures, empirical evidence and contest eligibility. Check prior art before novelty claims; preserve negative results. Record input hashes, commands, seeds, environment, revision, outputs, runtime and memory. Never claim execution or verification without evidence.
 
-Prefer Rust and Nix; no npm. Preserve existing license. Disclose AI assistance and review status in papers. README stays concise and stable, never a running log. Use CHANGELOG.md and separate campaign notes, keeping STATE.md compact.
+Prefer Rust and Nix; no npm. Preserve the owner-authorized competition-restricted license and prior MIT notices. Do not publish or relicense a contest submission without explicit owner authorization. The Hutter Prize requires OSI-approved submission code; development license is not eligible. Disclose AI assistance and review status in papers. README stays concise and stable, never a running log. Use CHANGELOG.md and separate campaign notes, keeping STATE.md compact.
 
 Lead owns main and acceptance. Workers, if assigned, use isolated branches and explicit scopes in COORDINATION.md. Check branch head before writes; no force pushes. Report actual changes, remaining work and human action.

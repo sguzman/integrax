@@ -3,6 +3,7 @@ name = "ix02"
 version = "0.1.0"
 edition = "2021"
 publish = false
+license-file = "../../LICENSE"
 [dependencies]
 num-bigint = "=0.4.6"
 num-traits = "=0.2.19"
