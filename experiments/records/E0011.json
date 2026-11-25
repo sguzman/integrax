@@ -1,0 +1,331 @@
+{
+  "id": "E0011",
+  "campaign": "C03",
+  "scope": "synthetic controls",
+  "status": "roundtrip-verified",
+  "execution": "V8 isolate",
+  "observations": {
+    "rows": [
+      {
+        "kind": "random",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "smooth_product",
+        "bytes": 64,
+        "archive_bytes": 28,
+        "choice": {
+          "residual": 0,
+          "factors": [
+            [
+              2,
+              124
+            ],
+            [
+              3,
+              77
+            ],
+            [
+              5,
+              51
+            ]
+          ],
+          "quotient_bytes": 16
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "near_smooth",
+        "bytes": 64,
+        "archive_bytes": 28,
+        "choice": {
+          "residual": 5,
+          "factors": [
+            [
+              2,
+              124
+            ],
+            [
+              3,
+              77
+            ],
+            [
+              5,
+              51
+            ]
+          ],
+          "quotient_bytes": 16
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "single_prime",
+        "bytes": 64,
+        "archive_bytes": 43,
+        "choice": {
+          "residual": 0,
+          "factors": [
+            [
+              3,
+              157
+            ]
+          ],
+          "quotient_bytes": 32
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "random",
+        "bytes": 256,
+        "archive_bytes": 263,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "smooth_product",
+        "bytes": 256,
+        "archive_bytes": 80,
+        "choice": {
+          "residual": 0,
+          "factors": [
+            [
+              2,
+              508
+            ],
+            [
+              3,
+              319
+            ],
+            [
+              5,
+              216
+            ]
+          ],
+          "quotient_bytes": 64
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "near_smooth",
+        "bytes": 256,
+        "archive_bytes": 80,
+        "choice": {
+          "residual": 5,
+          "factors": [
+            [
+              2,
+              508
+            ],
+            [
+              3,
+              319
+            ],
+            [
+              5,
+              216
+            ]
+          ],
+          "quotient_bytes": 64
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "single_prime",
+        "bytes": 256,
+        "archive_bytes": 140,
+        "choice": {
+          "residual": 0,
+          "factors": [
+            [
+              3,
+              645
+            ]
+          ],
+          "quotient_bytes": 128
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 256,
+        "archive_bytes": 263,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "random",
+        "bytes": 1024,
+        "archive_bytes": 1031,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "smooth_product",
+        "bytes": 1024,
+        "archive_bytes": 272,
+        "choice": {
+          "residual": 0,
+          "factors": [
+            [
+              2,
+              2044
+            ],
+            [
+              3,
+              1288
+            ],
+            [
+              5,
+              878
+            ]
+          ],
+          "quotient_bytes": 256
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "near_smooth",
+        "bytes": 1024,
+        "archive_bytes": 272,
+        "choice": {
+          "residual": 5,
+          "factors": [
+            [
+              2,
+              2044
+            ],
+            [
+              3,
+              1288
+            ],
+            [
+              5,
+              878
+            ]
+          ],
+          "quotient_bytes": 256
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "single_prime",
+        "bytes": 1024,
+        "archive_bytes": 524,
+        "choice": {
+          "residual": 0,
+          "factors": [
+            [
+              3,
+              2582
+            ]
+          ],
+          "quotient_bytes": 512
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1024,
+        "archive_bytes": 1031,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "random",
+        "bytes": 4096,
+        "archive_bytes": 4103,
+        "choice": null,
+        "byte_equal": true
+      },
+      {
+        "kind": "smooth_product",
+        "bytes": 4096,
+        "archive_bytes": 1040,
+        "choice": {
+          "residual": 0,
+          "factors": [
+            [
+              2,
+              8188
+            ],
+            [
+              3,
+              5166
+            ],
+            [
+              5,
+              3525
+            ]
+          ],
+          "quotient_bytes": 1024
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "near_smooth",
+        "bytes": 4096,
+        "archive_bytes": 1040,
+        "choice": {
+          "residual": 5,
+          "factors": [
+            [
+              2,
+              8188
+            ],
+            [
+              3,
+              5166
+            ],
+            [
+              5,
+              3525
+            ]
+          ],
+          "quotient_bytes": 1024
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "single_prime",
+        "bytes": 4096,
+        "archive_bytes": 2060,
+        "choice": {
+          "residual": 0,
+          "factors": [
+            [
+              3,
+              10333
+            ]
+          ],
+          "quotient_bytes": 2048
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "archive_bytes": 4103,
+        "choice": null,
+        "byte_equal": true
+      }
+    ],
+    "brute_force_dp_checks": 1024,
+    "small_roundtrips": 512,
+    "edge_cases": 3
+  },
+  "limitations": [
+    "same-code roundtrip; external replay pending",
+    "hash/time/RSS not measured locally",
+    "no full corpus result"
+  ]
+}

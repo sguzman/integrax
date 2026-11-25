@@ -1,0 +1,5 @@
+# IXM2 smooth-divisor representation
+
+Magic IXM2, canonical original length L (unsigned LEB128, <=16384), mode. Raw mode 0: exactly L bytes. Mode 1: one residual byte r+8 (0..16), big-endian u16 mask of nonzero exponents for primes [2,3,5,7,11,13,17,19,23,29,31], then positive canonical LEB128 exponents in ascending prime index order, then minimal positive raw quotient Q. Decode N=Q*product(p_i^e_i)+r, check range and output exactly L bytes. Explicitly charge all framing and parameters. Unauthenticated, truncated Q may be valid but wrong. Decoder guards divisor size and exponent bounds. Search cap 16384 bytes; no scalable full-corpus claim.
+
+At fixed residual r, compute valuations of Z=N-r>0. For each prime retain the maximal eligible exponent in each LEB128-width band plus zero. Dynamic programming over cumulative exponent byte cost chooses maximum divisor at each cost; ties preserve first candidate. Compare exact frame lengths over all states and residuals; retain strictly smaller than framed raw. See theory/smooth-divisor-dp.md.
