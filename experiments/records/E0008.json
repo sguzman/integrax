@@ -1,0 +1,19 @@
+{
+  "id": "E0008",
+  "campaign": "C04",
+  "scope": "exhaustive synthetic transition classes",
+  "status": "executed",
+  "execution": "V8 isolate",
+  "command": "node experiments/oracle/transition-class.mjs",
+  "strings": 29524,
+  "classes": 5917,
+  "nontrivial_classes": 5031,
+  "max_class": "36",
+  "max_observed_row_to_trail_ratio": {
+    "numerator": "16",
+    "denominator": "1"
+  },
+  "alphabet": 3,
+  "max_length": 9,
+  "empty_case": "one empty string"
+}

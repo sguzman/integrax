@@ -1,0 +1,11 @@
+// Exact directed matrix-tree/BEST enumeration control, no dependencies.
+function run(){
+  const K=3,S=3,V=4;
+  const fac=[1n];for(let i=1;i<=10;i++)fac.push(fac[i-1]*BigInt(i));
+  function det(a){a=a.map(r=>r.slice());const n=a.length;if(!n)return 1n;let prev=1n,sign=1n;for(let k=0;k<n-1;k++){if(a[k][k]===0n){const p=a.findIndex((r,i)=>i>k&&r[k]!==0n);if(p<0)return 0n;[a[k],a[p]]=[a[p],a[k]];sign=-sign;}let pivot=a[k][k];for(let i=k+1;i<n;i++){for(let j=k+1;j<n;j++){const x=a[i][j]*pivot-a[i][k]*a[k][j];if(x%prev!==0n)throw Error("nonexact determinant");a[i][j]=x/prev;}a[i][k]=0n;}prev=pivot;}return sign*a[n-1][n-1];}
+  function count(m,t){let d=m.map(r=>r.reduce((a,b)=>a+b,0));let ind=m.map((_,j)=>m.reduce((a,r)=>a+r[j],0));let active=d.map((n,i)=>i).filter(i=>d[i]+ind[i]>0);let u=1n,den=1n,num=1n,product=1n;for(const i of active){u*=fac[d[i]];num*=fac[d[i]-(i===t?0:1)];if(i!==t)product*=BigInt(d[i]);for(const n of m[i])den*=fac[n];}let rows=active.filter(i=>i!==t);let tree=det(rows.map(i=>rows.map(j=>BigInt(i===j?d[i]-m[i][i]:-m[i][j]))));if(tree<=0n||num*tree%den||u%den)throw Error("invalid class formula");return {count:num*tree/den,rows:u/den,tree,product};}
+  let strings=1,classes=1,nontrivial=0,maxRatio={num:1n,den:1n},maxClass=1n;
+  for(let len=1;len<=9;len++){const groups=new Map();for(let n=0;n<3**len;n++){let x=n;const m=Array.from({length:V},()=>Array(V).fill(0));let prev=S;for(let i=0;i<len;i++){const a=x%K;x=Math.floor(x/K);m[prev][a]++;prev=a;}const key=m.flat().join(",");const g=groups.get(key);if(g){if(g.t!==prev)throw Error("terminal not determined");g.n++;}else groups.set(key,{m,t:prev,n:1});strings++;}for(const g of groups.values()){let v=count(g.m,g.t);if(v.count!==BigInt(g.n))throw Error("formula mismatch");if(v.rows*v.tree!==v.count*v.product||v.tree>v.product)throw Error("ratio mismatch");if(v.count>maxClass)maxClass=v.count;if(v.rows>v.count)nontrivial++;if(v.rows*maxRatio.den>v.count*maxRatio.num)maxRatio={num:v.rows,den:v.count};classes++;}}
+  return {strings,classes,nontrivial_classes:nontrivial,max_class:maxClass.toString(),max_observed_row_to_trail_ratio:{numerator:maxRatio.num.toString(),denominator:maxRatio.den.toString()},alphabet:3,max_length:9,empty_case:"one empty string"};
+}
+console.log(JSON.stringify(run(),null,2));
