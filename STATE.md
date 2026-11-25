@@ -11,6 +11,6 @@
 
 Next: retrieve E0052/E0053/E0054; accept only isolated full improvements, scale strongest combined candidate if justified. Avoid unnecessary minor tuning; consider structurally distinct next campaign. No workers.
 
-C11 opened: [decoder-derived arithmetic recurrences](research/CAMPAIGN-11.md), mode 13 predicted distance and charged length/flag, fixed 1 MiB ring. E0053 nine strict authentic comparisons [CI 45708895525](https://github.com/sguzman/integrax/actions/runs/45708895525), in_progress at checkpoint; no verified result. C10 still active until E0052 resolved. Independent oracle covers modes 3–12 only.
+C11 opened: [decoder-derived arithmetic recurrences](research/CAMPAIGN-11.md), mode 13 predicted distance and charged length/flag, fixed 1 MiB ring. [E0053](experiments/records/E0053.md) 9/9 exact strict; history16 4,751,641 B on 16 MiB (2.95% below median), 6.13% recurrence coverage. E0055 full history16 strict isolated workflow authored, pending. C10 still active until E0052 resolved. Independent oracle covers modes 3–12 only.
 
-E0054 independent BigInt recurrence reference: 36 synthetic exact roundtrips, all 150 prior observations unchanged. Rust cross-codec CI authored, pending. Reference stores full prefix on bounded synthetic inputs; no independent ring wrap test yet.
+E0054 independent BigInt recurrence reference: 36 synthetic exact roundtrips, all 150 prior observations unchanged. Rust cross-codec [CI 45709112022](https://github.com/sguzman/integrax/actions/runs/45709112022) running. Reference stores full prefix on bounded synthetic inputs; no independent ring wrap test yet.
