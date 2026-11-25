@@ -1,0 +1,438 @@
+{
+  "id": "E0054",
+  "campaign": "C11",
+  "execution": "V8 isolate",
+  "status": "roundtrip-verified",
+  "observations": {
+    "rules": [
+      [
+        97,
+        98
+      ],
+      [
+        97,
+        97
+      ],
+      [
+        256,
+        97
+      ],
+      [
+        98,
+        100
+      ],
+      [
+        258,
+        99
+      ],
+      [
+        97,
+        98
+      ]
+    ],
+    "rows": [
+      {
+        "kind": "constant",
+        "bytes": 0,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 39,
+        "roots": 0,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 0,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 39,
+        "roots": 0,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 0,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 39,
+        "roots": 0,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 0,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 39,
+        "roots": 0,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 0,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 39,
+        "roots": 0,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 0,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 39,
+        "roots": 0,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 41,
+        "roots": 1,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 41,
+        "roots": 1,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 41,
+        "roots": 1,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 41,
+        "roots": 1,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 41,
+        "roots": 1,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 41,
+        "roots": 1,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 7,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 43,
+        "roots": 4,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 7,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 43,
+        "roots": 4,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 7,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 43,
+        "roots": 3,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 7,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 43,
+        "roots": 3,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 7,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 47,
+        "roots": 7,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 7,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 47,
+        "roots": 7,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 43,
+        "roots": 3,
+        "copies": 1,
+        "copied_bytes": 58,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 43,
+        "roots": 3,
+        "copies": 1,
+        "copied_bytes": 58,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 45,
+        "roots": 4,
+        "copies": 1,
+        "copied_bytes": 53,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 45,
+        "roots": 4,
+        "copies": 1,
+        "copied_bytes": 53,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 104,
+        "roots": 64,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 104,
+        "roots": 64,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 59,
+        "roots": 3,
+        "copies": 16,
+        "copied_bytes": 4090,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 59,
+        "roots": 3,
+        "copies": 16,
+        "copied_bytes": 4090,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 61,
+        "roots": 4,
+        "copies": 16,
+        "copied_bytes": 4085,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 61,
+        "roots": 4,
+        "copies": 16,
+        "copied_bytes": 4085,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 4326,
+        "roots": 4096,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 4326,
+        "roots": 4096,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 65537,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 299,
+        "roots": 3,
+        "copies": 256,
+        "copied_bytes": 65531,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 65537,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 299,
+        "roots": 3,
+        "copies": 256,
+        "copied_bytes": 65531,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 65537,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 303,
+        "roots": 4,
+        "copies": 256,
+        "copied_bytes": 65526,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 65537,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 303,
+        "roots": 4,
+        "copies": 256,
+        "copied_bytes": 65526,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 65537,
+        "mode": 13,
+        "minimum": 16,
+        "archive_bytes": 68769,
+        "roots": 65535,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 65537,
+        "mode": 13,
+        "minimum": 32,
+        "archive_bytes": 68769,
+        "roots": 65535,
+        "copies": 0,
+        "copied_bytes": 0,
+        "byte_equal": true
+      }
+    ]
+  },
+  "limitations": [
+    "synthetic only",
+    "reference stores full prefix rather than ring",
+    "Rust cross-codec verification pending",
+    "no timing/RSS/digests in isolate"
+  ]
+}
