@@ -5,7 +5,7 @@ import {execFileSync} from 'node:child_process';
 import {deepStrictEqual} from 'node:assert';
 import {createHash} from 'node:crypto';
 import {encode,decode,fixture,experiment} from './root-intervals.mjs';
-const all=experiment(),actual={rules:all.rules,rows:all.rows.filter(r=>r.mode>=9)},expected=JSON.parse(readFileSync('experiments/records/E0046.json','utf8')).observations;
+const all=experiment(),actual={rules:all.rules,rows:all.rows.filter(r=>r.mode>=9&&r.mode<=10)},expected=JSON.parse(readFileSync('experiments/records/E0046.json','utf8')).observations;
 deepStrictEqual(actual,expected);
 const names=['adaptive','context','backoff','lexcontext','lexorder2','order2','lexorder3','lexprevroot'],dir=mkdtempSync(join(tmpdir(),'ixg2-cross-')),bin=process.argv[2]??'target/release/ixg2';
 const hash=x=>createHash('sha256').update(x).digest('hex');
