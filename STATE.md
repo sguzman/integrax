@@ -8,3 +8,5 @@
 - E0038 native IXG2 adaptive binary intervals with optional previous-final-byte context, same DAG and parse; complete self-contained frame, no transmitted model. Rust code, schema, theory and [CI 45704407640](https://github.com/sguzman/integrax/actions/runs/45704407640) running at checkpoint. Not yet verified; arithmetic payload termination not strict canonical/integrity validation.
 
 Next: collect E0030 and E0038 evidence, repair if needed, scale only meaningful gains, close C07 when evaluated. Nix pin/dashboard deployment unverified. No workers.
+
+E0039 native hierarchical backoff mode 5 and zero-rule ablation authored; [theory](theory/root-backoff.md). Nine held-out archive tests planned. Code/CI not yet verified; E0030/E0038 still running at last check.
