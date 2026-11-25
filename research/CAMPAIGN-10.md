@@ -13,3 +13,5 @@ M7: E0048 optional strict canonical arithmetic decoding and append rejection; be
 [E0047](../experiments/records/E0047.md) completed: 12/12 exact, all nine cost-ratio variants larger than greedy. Retain greedy. No full-scale test of the inferior heuristic.
 
 [E0048](../experiments/records/E0048.md) passed 12/12 comparisons and 18/18 append rejects. E0049 larger dictionary ablation (8192/16384 rules, 256/512 KiB training) authored with strict decoder, pending. No extrapolation.
+
+M8: E0050 [root decision geometry](../theory/root-decision-geometry.md) full binary root trees derived from dictionary, with first-digit alignment or median splits. Same third-order context, matched greedy parse and strict comparisons. CI pending. No novelty claim or assumed improvement.

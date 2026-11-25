@@ -33,3 +33,7 @@ Optional CLI `decode-strict ARCHIVE OUTPUT` for modes 3–10 regenerates the can
 ## Larger dictionary cap
 
 The experimental cap is now 16384 rules, 512 KiB training. Existing archives and mode semantics unchanged; old decoders reject larger dictionaries. At K<=16640, stride<=32768, order-two key maximum 257^2*32768=2164293632 fits u32, with nonzero tag. Deep keys remain u64. All grammar rules charged. Larger alphabet may worsen contextual coding; measured ablation required.
+
+## Extension: modes 11–12, full binary root trees
+
+Both modes retain mode 9's third-order suffix model, except the binary decision tree is no longer the fixed-width rank tree. Sort all K roots lexicographically by expansion, ties by original ID. Recursively construct a full binary tree on ordered subranges: mode 11 splits the first eight levels by successive bits of the first expanded byte (MSB first; every byte has a literal, hence both branches exist), then splits each remaining non-singleton subrange at floor(count/2). Mode 12 uses the median-count split at every level. A singleton is a leaf with the original root ID. Number internal nodes 1..K-1 in preorder (left before right); use these numbers as binary probability node indices instead of heap indices. The model's stride is still 2^ceil(log2 K). Encode/decode a path until its leaf; no invalid ranks, no model/tree bytes transmitted. Both use the last-three-byte deep key, not previous root. Greedy parse unchanged. Canonical strict verification supported. Older decoders reject modes 11/12.

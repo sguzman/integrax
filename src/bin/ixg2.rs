@@ -150,12 +150,30 @@ fn root_order(exp:&[Vec<u8>],mode:u8)->(Vec<u16>,Vec<u16>){
  if mode==6||mode==7||mode>=9{by_rank.sort_unstable_by(|&a,&b|exp[a as usize].cmp(&exp[b as usize]).then(a.cmp(&b)))}
  let mut rank=vec![0u16;exp.len()];for(i,&id)in by_rank.iter().enumerate(){rank[id as usize]=i as u16}(rank,by_rank)
 }
+// Full binary decision tree with one leaf for each root, numbered by preorder.
+struct RootTree{branches:Vec<[usize;2]>,paths:Vec<Vec<(usize,usize)>>,root:usize,k:usize}
+impl RootTree{
+ fn new(exp:&[Vec<u8>],group:bool)->Self{
+  let k=exp.len();let(_,ids)=root_order(exp,9);
+  let mut t=Self{branches:vec![[0,0]],paths:vec![Vec::new();k],root:0,k};
+  let root=t.build(&ids,exp,group,0,&mut Vec::new());t.root=root;debug_assert_eq!(t.branches.len(),k);t
+ }
+ fn build(&mut self,ids:&[u16],exp:&[Vec<u8>],group:bool,depth:usize,path:&mut Vec<(usize,usize)>)->usize{
+  if ids.len()==1{let id=ids[0]as usize;self.paths[id]=path.clone();return self.k+id}
+  let p=self.branches.len();self.branches.push([0,0]);
+  let cut=if group&&depth<8{let mask=1u8<<(7-depth);ids.partition_point(|&id|exp[id as usize][0]&mask==0)}else{ids.len()/2};
+  assert!(cut>0&&cut<ids.len());
+  path.push((p,0));let left=self.build(&ids[..cut],exp,group,depth+1,path);path.pop();
+  path.push((p,1));let right=self.build(&ids[cut..],exp,group,depth+1,path);path.pop();
+  self.branches[p]=[left,right];p
+ }
+}
 fn slot_index(mut key:u32,mask:usize)->usize{key^=key>>16;key=key.wrapping_mul(0x7feb352d);key^=key>>15;key=key.wrapping_mul(0x846ca68b);key^=key>>16;(key as usize)&mask}
 fn increment(c:&mut [u16;2],bit:usize){c[bit]+=1;if u32::from(c[0])+u32::from(c[1])>=4096{c[0]=c[0].div_ceil(2);c[1]=c[1].div_ceil(2)}}
 impl RootModel{
  fn new(k:usize,mode:u8)->Self{let stride=1usize<<width(k);Self{rows:vec![[1,1];stride*if mode>=4{257}else{1}],global:if mode==5{vec![[1,1];stride]}else{Vec::new()},order2:if mode>=7{vec![Tagged::default();ORDER2_SLOTS]}else{Vec::new()},deep:if mode>=9{vec![DeepTagged::default();1<<20]}else{Vec::new()},stride,mode,ctx:if mode>=4{256}else{0},older:256,oldest:256,previous_root:k}}
  fn key(&self,p:usize)->u32{((self.older*257+self.ctx)*self.stride+p)as u32+1}
- fn deep_key(&self,p:usize)->u64{let context=if self.mode==9{(self.oldest*257+self.older)*257+self.ctx}else{self.previous_root};(context as u64)*(self.stride as u64)+p as u64+1}
+ fn deep_key(&self,p:usize)->u64{let context=if self.mode==9||self.mode>=11{(self.oldest*257+self.older)*257+self.ctx}else{self.previous_root};(context as u64)*(self.stride as u64)+p as u64+1}
  fn deep_index(&self,key:u64)->usize{let mut z=key;z=(z^(z>>30)).wrapping_mul(0xbf58476d1ce4e5b9);z=(z^(z>>27)).wrapping_mul(0x94d049bb133111eb);z^=z>>31;(z as usize)&(self.deep.len()-1)}
  fn counts(&self,p:usize)->(u64,u64){let c=self.rows[self.ctx*self.stride+p];let z=u64::from(c[0]);let n=z+u64::from(c[1]);
  if self.mode>=7{let key=self.key(p);let e=self.order2[slot_index(key,self.order2.len()-1)];let (mut z,mut n)=if e.tag==key{let a=u64::from(e.counts[0]);let b=a+u64::from(e.counts[1]);(a*n+8*z,(b+8)*n)}else{(z,n)};
@@ -202,8 +220,11 @@ fn choose_cost(t:&Trie,x:&[u8],rank:&[u16],bits:u8,model:&RootModel,penalty:f64)
 fn encode_adaptive_parse(input:&str,rules:&[Rule],mode:u8,mut w:impl Write,penalty:Option<f64>)->io::Result<()>{
  let exp=expand(rules)?;let t=Trie::new(&exp);let file=File::open(input)?;let l=file.metadata()?.len();if l>MAX_LEN{return Err(bad("input cap"))}
  w.write_all(b"IXG2")?;w.write_all(&[mode])?;w.write_all(&l.to_be_bytes())?;write_rules(&mut w,rules)?;
- let bits=width(exp.len());let(rank,_)=root_order(&exp,mode);let mut model=RootModel::new(exp.len(),mode);let mut enc=AEnc{out:Out{w,b:0,n:0},lo:0,hi:AC_TOP,pending:0};let mut roots=0u64;let mut info=0f64;
- let actual=parse_choose(BufReader::new(file),&t,|x|{let(id,len)=if let Some(p)=penalty{choose_cost(&t,x,&rank,bits,&model,p)}else{t.longest(x)};let mut p=1usize;for j in (0..bits).rev(){let b=((rank[id as usize]>>j)&1)as usize;let(z,n)=model.counts(p);let count=if b==0{z}else{n-z};info-=(count as f64/n as f64).log2();enc.bit(b,z,n)?;model.update(p,b);p=p*2+b}model.advance_root(&exp[id as usize],id as usize);roots+=1;Ok(len)})?;
+ let bits=width(exp.len());let(rank,_)=root_order(&exp,mode);let tree=if mode>=11{Some(RootTree::new(&exp,mode==11))}else{None};let mut model=RootModel::new(exp.len(),mode);let mut enc=AEnc{out:Out{w,b:0,n:0},lo:0,hi:AC_TOP,pending:0};let mut roots=0u64;let mut info=0f64;
+ let actual=parse_choose(BufReader::new(file),&t,|x|{let(id,len)=if let Some(p)=penalty{choose_cost(&t,x,&rank,bits,&model,p)}else{t.longest(x)};{
+ let mut emit=|p:usize,b:usize|->io::Result<()>{let(z,n)=model.counts(p);let count=if b==0{z}else{n-z};info-=(count as f64/n as f64).log2();enc.bit(b,z,n)?;model.update(p,b);Ok(())};
+ if let Some(t)=&tree{for &(p,b) in &t.paths[id as usize]{emit(p,b)?}}else{let mut p=1usize;for j in (0..bits).rev(){let b=((rank[id as usize]>>j)&1)as usize;emit(p,b)?;p=p*2+b}}
+ }model.advance_root(&exp[id as usize],id as usize);roots+=1;Ok(len)})?;
  if actual!=l{return Err(bad("input changed"))}enc.finish(l!=0)?;eprintln!("ADAPT mode={mode} bytes={l} roots={roots} rules={} ideal_bits={info:.3}",rules.len());Ok(())
 }
 fn decode_adaptive<R:Read,W:Write>(r:R,w:W,l:u64,exp:&[Vec<u8>],mode:u8)->io::Result<()>{
@@ -212,9 +233,11 @@ fn decode_adaptive<R:Read,W:Write>(r:R,w:W,l:u64,exp:&[Vec<u8>],mode:u8)->io::Re
 fn decode_adaptive_mirror<R:Read,W:Write,C:Write>(mut r:R,mut w:W,l:u64,exp:&[Vec<u8>],mode:u8,check:Option<C>)->io::Result<()>{
  let mut mirror=check.map(|w|AEnc{out:Out{w,b:0,n:0},lo:0,hi:AC_TOP,pending:0});
  if l==0{let mut b=[0];if r.read(&mut b)?!=0{return Err(bad("empty payload"))}if let Some(m)=mirror{m.finish(false)?}return w.flush()}
- let mut dec=ADec{r,b:0,n:0,pad:0,lo:0,hi:AC_TOP,code:0};dec.init()?;let bits=width(exp.len());let(_,by_rank)=root_order(exp,mode);let mut model=RootModel::new(exp.len(),mode);let mut written=0u64;
- while written<l{let mut p=1usize;let mut id=0usize;for _ in 0..bits{let(z,n)=model.counts(p);let b=dec.bit(z,n)?;if let Some(m)=&mut mirror{m.bit(b,z,n)?}model.update(p,b);p=p*2+b;id=id*2+b}
- if id>=exp.len(){return Err(bad("root id"))}let id=by_rank[id]as usize;written+=exp[id].len()as u64;if written>l{return Err(bad("output length"))}w.write_all(&exp[id])?;model.advance_root(&exp[id],id)}
+ let mut dec=ADec{r,b:0,n:0,pad:0,lo:0,hi:AC_TOP,code:0};dec.init()?;let bits=width(exp.len());let(_,by_rank)=root_order(exp,mode);let tree=if mode>=11{Some(RootTree::new(exp,mode==11))}else{None};let mut model=RootModel::new(exp.len(),mode);let mut written=0u64;
+ while written<l{let id={
+ let mut take=|p:usize|->io::Result<usize>{let(z,n)=model.counts(p);let b=dec.bit(z,n)?;if let Some(m)=&mut mirror{m.bit(b,z,n)?}model.update(p,b);Ok(b)};
+ if let Some(t)=&tree{let mut p=t.root;while p<t.k{p=t.branches[p][take(p)?]}p-t.k}else{let mut p=1usize;let mut id=0usize;for _ in 0..bits{let b=take(p)?;p=p*2+b;id=id*2+b}if id>=exp.len(){return Err(bad("root id"))}by_rank[id]as usize}
+ };written+=exp[id].len()as u64;if written>l{return Err(bad("output length"))}w.write_all(&exp[id])?;model.advance_root(&exp[id],id)}
  if let Some(m)=mirror{m.finish(true)?}w.flush()
 }
 // Compare canonical arithmetic bytes using a separate, independently positioned reader.
@@ -224,14 +247,14 @@ impl<R:Read> Write for Compare<R>{
  fn flush(&mut self)->io::Result<()>{let mut b=[0];if self.r.read(&mut b)?!=0{return Err(bad("trailing arithmetic payload"))}Ok(())}
 }
 fn decode_strict(path:&str,w:impl Write)->io::Result<()>{
- let mut r=BufReader::new(File::open(path)?);let mut m=[0;5];r.read_exact(&mut m)?;if &m[..4]!=b"IXG2"||m[4]>10{return Err(bad("header"))}
+ let mut r=BufReader::new(File::open(path)?);let mut m=[0;5];r.read_exact(&mut m)?;if &m[..4]!=b"IXG2"||m[4]>12{return Err(bad("header"))}
  if m[4]<3{r.seek(SeekFrom::Start(0))?;return decode(r,w)}
  let l=u64in(&mut r)?;if l>MAX_LEN{return Err(bad("length cap"))}let rules=read_rules(&mut r)?;let exp=expand(&rules)?;
  let offset=r.stream_position()?;let mut check=BufReader::new(File::open(path)?);check.seek(SeekFrom::Start(offset))?;
  decode_adaptive_mirror(r,w,l,&exp,m[4],Some(Compare{r:check}))
 }
 fn decode(mut r:impl Read,mut w:impl Write)->io::Result<()>{
- let mut m=[0;5];r.read_exact(&mut m)?;if &m[..4]!=b"IXG2"||m[4]>10{return Err(bad("header"))}let l=u64in(&mut r)?;if l>MAX_LEN{return Err(bad("length cap"))}let rules=read_rules(&mut r)?;let exp=expand(&rules)?;if m[4]>=3{return decode_adaptive(r,w,l,&exp,m[4])}let mut freq=vec![0u64;exp.len()];
+ let mut m=[0;5];r.read_exact(&mut m)?;if &m[..4]!=b"IXG2"||m[4]>12{return Err(bad("header"))}let l=u64in(&mut r)?;if l>MAX_LEN{return Err(bad("length cap"))}let rules=read_rules(&mut r)?;let exp=expand(&rules)?;if m[4]>=3{return decode_adaptive(r,w,l,&exp,m[4])}let mut freq=vec![0u64;exp.len()];
  let h=if m[4]==1{let mut sum=0u64;for(i,n)in freq.iter_mut().enumerate(){*n=getvar(&mut r)?;sum=sum.checked_add(n.checked_mul(exp[i].len()as u64).ok_or_else(||bad("length overflow"))?).ok_or_else(||bad("length overflow"))?;if sum>l{return Err(bad("frequency length"))}}if sum!=l{return Err(bad("frequency length"))}Some(huff(&freq)?)}else{None};
  let mut bits=In{r,b:0,n:0};let mut written=0u64;while written<l{let id=if let Some(ref h)=h{let mut n=h.root.ok_or_else(||bad("empty huffman tree"))?;loop{match h.nodes[n]{HNode::Leaf(id)=>break id as usize,HNode::Branch(a,b)=>n=if bits.bit()?==0{a}else{b}}}}else{bits.get(if m[4]==2{16}else{width(exp.len())})?};
  if id>=exp.len(){return Err(bad("root id"))}if h.is_some(){if freq[id]==0{return Err(bad("frequency exceeded"))}freq[id]-=1}written+=exp[id].len()as u64;if written>l{return Err(bad("output length"))}w.write_all(&exp[id])?}
@@ -240,15 +263,15 @@ fn decode(mut r:impl Read,mut w:impl Write)->io::Result<()>{
 fn main()->io::Result<()>{
  let a:Vec<String>=env::args().collect();match a.get(1).map(String::as_str){
  Some("train")if a.len()==4||a.len()==5=>{let budget=if a.len()==5{a[4].parse::<usize>().map_err(|_|bad("invalid rule budget"))?}else{DEFAULT_RULES};if budget>MAX_RULES{return Err(bad("rule budget cap"))}let mut sample=Vec::new();File::open(&a[2])?.take(MAX_SAMPLE as u64+1).read_to_end(&mut sample)?;if sample.len()>MAX_SAMPLE{return Err(bad("training sample cap"))}let rules=train_budget(&sample,budget);let mut w=BufWriter::new(File::create(&a[3])?);write_rules(&mut w,&rules)?;w.flush()?;eprintln!("TRAIN bytes={} rules={}",sample.len(),rules.len());Ok(())},
- Some("cost0"|"cost2"|"cost8"|"adaptive"|"context"|"backoff"|"lexcontext"|"lexorder2"|"order2"|"lexorder3"|"lexprevroot"|"roots"|"fixed"|"huff"|"optfixed"|"opthuff"|"streamoptfixed"|"streamopthuff")if a.len()==5=>{let mut d=BufReader::new(File::open(&a[4])?);let rules=read_rules(&mut d)?;let mut tail=[0];if d.read(&mut tail)?!=0{return Err(bad("trailing dictionary bytes"))}let w=BufWriter::new(File::create(&a[3])?);let mode=match a[1].as_str(){"roots"=>2,"adaptive"=>3,"context"=>4,"backoff"=>5,"lexcontext"=>6,"lexorder2"=>7,"order2"=>8,"lexorder3"=>9,"lexprevroot"=>10,"cost0"|"cost2"|"cost8"=>9,_=>u8::from(a[1].ends_with("huff"))};if a[1].starts_with("cost"){let p=match a[1].as_str(){"cost0"=>0.,"cost2"=>2.,_=>8.};encode_adaptive_parse(&a[2],&rules,mode,w,Some(p))}else if mode>=3{encode_adaptive(&a[2],&rules,mode,w)}else if a[1].starts_with("streamopt"){encode_streamopt(&a[2],&rules,mode,w,STREAM_BLOCK)}else if a[1].starts_with("opt"){encode_opt(&a[2],&rules,mode,w)}else{encode(&a[2],&rules,mode,w)}},
+ Some("cost0"|"cost2"|"cost8"|"adaptive"|"context"|"backoff"|"lexcontext"|"lexorder2"|"order2"|"lexorder3"|"lexprevroot"|"grouptree"|"mediantree"|"roots"|"fixed"|"huff"|"optfixed"|"opthuff"|"streamoptfixed"|"streamopthuff")if a.len()==5=>{let mut d=BufReader::new(File::open(&a[4])?);let rules=read_rules(&mut d)?;let mut tail=[0];if d.read(&mut tail)?!=0{return Err(bad("trailing dictionary bytes"))}let w=BufWriter::new(File::create(&a[3])?);let mode=match a[1].as_str(){"roots"=>2,"adaptive"=>3,"context"=>4,"backoff"=>5,"lexcontext"=>6,"lexorder2"=>7,"order2"=>8,"lexorder3"=>9,"lexprevroot"=>10,"grouptree"=>11,"mediantree"=>12,"cost0"|"cost2"|"cost8"=>9,_=>u8::from(a[1].ends_with("huff"))};if a[1].starts_with("cost"){let p=match a[1].as_str(){"cost0"=>0.,"cost2"=>2.,_=>8.};encode_adaptive_parse(&a[2],&rules,mode,w,Some(p))}else if mode>=3{encode_adaptive(&a[2],&rules,mode,w)}else if a[1].starts_with("streamopt"){encode_streamopt(&a[2],&rules,mode,w,STREAM_BLOCK)}else if a[1].starts_with("opt"){encode_opt(&a[2],&rules,mode,w)}else{encode(&a[2],&rules,mode,w)}},
  Some("decode"|"decode-strict")if a.len()==4=>{let w:Box<dyn Write>=if a[3]=="-"{Box::new(io::stdout().lock())}else{Box::new(File::create(&a[3])?)};if a[1]=="decode-strict"{decode_strict(&a[2],BufWriter::new(w))}else{decode(BufReader::new(File::open(&a[2])?),BufWriter::new(w))}},
- _=>Err(bad("usage: ixg2 train SAMPLE DICT [RULE_BUDGET] | cost0|cost2|cost8|adaptive|context|backoff|lexcontext|lexorder2|order2|lexorder3|lexprevroot|roots|fixed|huff|optfixed|opthuff|streamoptfixed|streamopthuff INPUT ARCHIVE DICT | decode|decode-strict ARCHIVE OUTPUT"))}
+ _=>Err(bad("usage: ixg2 train SAMPLE DICT [RULE_BUDGET] | cost0|cost2|cost8|adaptive|context|backoff|lexcontext|lexorder2|order2|lexorder3|lexprevroot|grouptree|mediantree|roots|fixed|huff|optfixed|opthuff|streamoptfixed|streamopthuff INPUT ARCHIVE DICT | decode|decode-strict ARCHIVE OUTPUT"))}
 }
 #[cfg(test)]mod tests{use super::*;use std::io::Cursor;
  #[test]fn training_parse(){let x=b"abcabcabcabc".repeat(10000);let rules=train(&x[..65536]);let ex=expand(&rules).unwrap();let t=Trie::new(&ex);let mut y=Vec::new();assert_eq!(parse(Cursor::new(&x),&t,|id|{y.extend_from_slice(&ex[id as usize]);Ok(())}).unwrap(),x.len()as u64);assert_eq!(x,y);}
  #[test]fn roundtrip_modes(){let dir=env::temp_dir().join(format!("ixg2-{}",std::process::id()));std::fs::create_dir_all(&dir).unwrap();let path=dir.join("input");let rules=train(b"abcabcabcabcabcabc");for x in [vec![],vec![7;10000],b"abcabc\0xyz".repeat(10000),(0..=255).collect()]{std::fs::write(&path,&x).unwrap();for m in 0..=2{let mut a=Vec::new();encode(path.to_str().unwrap(),&rules,m,&mut a).unwrap();if m==2{assert_eq!(decode(&a[..],&mut Vec::new()).unwrap(),());let mut y=Vec::new();decode(&a[..],&mut y).unwrap();assert_eq!(x,y);let mut b=a.clone();b.push(0);assert!(decode(&b[..],io::sink()).is_err());assert!(decode(&a[..a.len()-1],io::sink()).is_err());continue}let mut opt=Vec::new();encode_opt(path.to_str().unwrap(),&rules,m,&mut opt).unwrap();assert!(opt.len()<=a.len());let mut streamed=Vec::new();encode_streamopt(path.to_str().unwrap(),&rules,m,&mut streamed,4096).unwrap();assert_eq!(opt,streamed);let mut y=Vec::new();decode(&opt[..],&mut y).unwrap();assert_eq!(x,y);y.clear();decode(&a[..],&mut y).unwrap();assert_eq!(x,y);let mut b=a.clone();b.push(0);assert!(decode(&b[..],io::sink()).is_err());assert!(decode(&a[..a.len()-1],io::sink()).is_err());}}std::fs::remove_dir_all(dir).unwrap();}
  #[test]fn adaptive_roundtrips(){let dir=env::temp_dir().join(format!("ixg2-adaptive-{}",std::process::id()));std::fs::create_dir_all(&dir).unwrap();let path=dir.join("input");let rules=train(b"abcabcxyz abcabcxyz ".repeat(100).as_slice());let mut state=0x91a2b3c4u32;let random:Vec<u8>=(0..100000).map(|_|{state^=state<<13;state^=state>>17;state^=state<<5;state as u8}).collect();
- for x in [vec![],vec![0],vec![255;100000],(0..=255).collect(),random,b"abcabcxyz ".repeat(10000)]{std::fs::write(&path,&x).unwrap();for m in [3,4,5,6,7,8,9,10]{let mut a=Vec::new();encode_adaptive(path.to_str().unwrap(),&rules,m,&mut a).unwrap();let mut y=Vec::new();decode(&a[..],&mut y).unwrap();assert_eq!(x,y);let mut b=a.clone();b[4]=11;assert!(decode(&b[..],io::sink()).is_err());}}
+ for x in [vec![],vec![0],vec![255;100000],(0..=255).collect(),random,b"abcabcxyz ".repeat(10000)]{std::fs::write(&path,&x).unwrap();for m in [3,4,5,6,7,8,9,10,11,12]{let mut a=Vec::new();encode_adaptive(path.to_str().unwrap(),&rules,m,&mut a).unwrap();let mut y=Vec::new();decode(&a[..],&mut y).unwrap();assert_eq!(x,y);let mut b=a.clone();b[4]=13;assert!(decode(&b[..],io::sink()).is_err());}}
  std::fs::remove_dir_all(dir).unwrap();}
  #[test]fn backoff_bounds(){
  let mut m=RootModel::new(8448,5);
@@ -265,12 +288,13 @@ fn main()->io::Result<()>{
  #[test]fn deep_context(){for mode in [9,10]{let mut m=RootModel::new(8448,mode);m.advance_root(b"abcd",100);assert_eq!((m.oldest,m.older,m.ctx,m.previous_root),(98,99,100,100));m.advance_root(b"e",101);assert_eq!((m.oldest,m.older,m.ctx,m.previous_root),(99,100,101,101));for i in 0..20000{let p=1+i%127;let(z,n)=m.counts(p);assert!(z>0&&z<n&&n<=4104*4096);m.update(p,usize::from(i%9!=0));if i%3==0{m.advance_root(b"ef",(i%8448)as usize)}}}}
  #[test]fn cost_parse_roundtrip(){let dir=env::temp_dir().join(format!("ixg2-cost-{}",std::process::id()));std::fs::create_dir_all(&dir).unwrap();let path=dir.join("input");let rules=[(97,98),(256,97),(97,97),(99,100),(258,257)];let x=b"abaabcdaaaaababa".repeat(5000);std::fs::write(&path,&x).unwrap();for p in [0.,2.,8.]{let mut a=Vec::new();encode_adaptive_parse(path.to_str().unwrap(),&rules,9,&mut a,Some(p)).unwrap();assert_eq!(a[4],9);let mut y=Vec::new();decode(&a[..],&mut y).unwrap();assert_eq!(x,y)}std::fs::remove_dir_all(dir).unwrap();}
  #[test]fn strict_arithmetic(){let dir=env::temp_dir().join(format!("ixg2-strict-{}",std::process::id()));std::fs::create_dir_all(&dir).unwrap();let input=dir.join("input");let archive=dir.join("archive");let rules=[(97,98),(256,97),(97,97),(99,100),(258,257)];
- for x in [vec![],vec![0],b"abaabcdaaaaababa".repeat(1024)]{std::fs::write(&input,&x).unwrap();for m in 3..=10{let mut a=Vec::new();encode_adaptive(input.to_str().unwrap(),&rules,m,&mut a).unwrap();std::fs::write(&archive,&a).unwrap();let mut y=Vec::new();decode_strict(archive.to_str().unwrap(),&mut y).unwrap();assert_eq!(x,y);
+ for x in [vec![],vec![0],b"abaabcdaaaaababa".repeat(1024)]{std::fs::write(&input,&x).unwrap();for m in 3..=12{let mut a=Vec::new();encode_adaptive(input.to_str().unwrap(),&rules,m,&mut a).unwrap();std::fs::write(&archive,&a).unwrap();let mut y=Vec::new();decode_strict(archive.to_str().unwrap(),&mut y).unwrap();assert_eq!(x,y);
  for extra in [0,255]{let mut b=a.clone();b.push(extra);std::fs::write(&archive,b).unwrap();assert!(decode_strict(archive.to_str().unwrap(),io::sink()).is_err())}
  if !x.is_empty(){// A suffix changed only after the canonical payload must never be accepted.
  let mut b=a.clone();b.extend_from_slice(&[0,0,0,0]);std::fs::write(&archive,b).unwrap();assert!(decode_strict(archive.to_str().unwrap(),io::sink()).is_err());}
  }}std::fs::remove_dir_all(dir).unwrap();}
  #[test]fn expanded_context_key_bound(){let mut m=RootModel::new(256+MAX_RULES,9);m.older=256;m.ctx=256;let p=m.stride-1;let exact=(256u64*257+256)*m.stride as u64+p as u64+1;assert!(exact<=u32::MAX as u64);assert_eq!(u64::from(m.key(p)),exact);assert_eq!(m.stride,32768);}
+ #[test]fn root_tree_geometry(){let exp=expand(&[(97,98),(97,97),(256,99),(97,98)]).unwrap();for group in [false,true]{let t=RootTree::new(&exp,group);assert_eq!(t.branches.len(),exp.len());for(id,path)in t.paths.iter().enumerate(){let mut p=t.root;for &(q,b)in path{assert_eq!(p,q);assert!(q>0&&q<t.k);p=t.branches[q][b]}assert_eq!(p,t.k+id);if group{let first=path[..8].iter().fold(0,|a,&(_,b)|2*a+b);assert_eq!(first,exp[id][0]as usize)}}}}
  #[test]fn shortest_exhaustive(){
  // a,b,c,d,e,f with ab,abc,cd,ef,cdef. Greedy abc + d + ef, optimum ab+cdef.
  let rules=[(97,98),(256,99),(99,100),(101,102),(258,259)];
