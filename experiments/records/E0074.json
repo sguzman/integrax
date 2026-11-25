@@ -1,0 +1,57 @@
+{
+  "id": "E0074",
+  "campaign": "C13",
+  "track": "blockwise",
+  "status": "roundtrip-verified",
+  "revision": "9f0c2c66b53cb88270ccfa44f0c2aa23fe18c264",
+  "run": 45713883869,
+  "job": 139554905468,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "archive_bytes": 220113320,
+  "archive_sha256": "ec268c70bd2c9d29432e335a11a8d82cc636b24b01a7d2a9c8a92144eb1c7671",
+  "compressor_bytes": 337640,
+  "external_side_bytes": 0,
+  "contest_total_bytes": null,
+  "model": {
+    "mode": 4,
+    "block_bytes": 16777216,
+    "blocks": 60,
+    "raw_blocks": 0,
+    "compressed_blocks": 60,
+    "outer_header_bytes": 316,
+    "inner_header_bytes": 1020,
+    "payload_bytes": 220113004
+  },
+  "encode_seconds": 699.48,
+  "encode_rss_bytes": 371261440,
+  "decode_seconds": 195.38,
+  "decode_pipeline_rss_bytes": 107008000,
+  "unit_tests": 5,
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "bash experiments/ixb1/full-blocks.sh"
+  ],
+  "verification": {
+    "id": "V0014",
+    "byte_equal": true,
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "uid": 65534,
+    "original_readable": false,
+    "separate_network_namespace": true,
+    "canonical_rank_payload": true,
+    "canonical_bwt": false
+  },
+  "limitations": [
+    "archive-only; no contest eligibility",
+    "transient archive; digest retained",
+    "decoder does not recheck BWT canonicality or raw-versus-compressed choice"
+  ],
+  "environment": {
+    "rustc": "1.100.0 (0ef1bc386 2026-11-09)",
+    "cargo": "1.100.0 (3acc79c0c 2026-11-05)"
+  }
+}

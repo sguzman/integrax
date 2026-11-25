@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-25 — F0011 blockwise frontier
+Accepted E0074/V0014 (220,113,320 B), isolated full reconstruction. Selected final C13 hierarchical blockwise candidate E0082.
+
 ## 2026-11-25 — C05 closed, C06 opened
 C03 multiplicative and C05 rational controls showed no authentic slice savings; closed both with reproducible records. Opened finite-field recurrence campaign.
 

@@ -37,3 +37,5 @@ E0080 independent hierarchical rank reference 15 exact synthetic frames/append r
 [E0080](../experiments/records/E0080.md) 15/15 independent byte equality and both-direction cross-decodes, reference observations reproduced. Full mode4 pending.
 
 E0081 mode7 block integration: tag2 with matching inner mode, independent reference exact and malformed controls, Rust replay passed [CI 45715504252](https://github.com/sguzman/integrax/actions/runs/45715504252/job/139560398820): 30/30 byte-identical archives and both-direction cross-decodes, 266 malformed rejects, 9 Rust tests. Existing tag1 wire format unchanged. Full mode7 selection awaits E0074 baseline.
+
+[E0074/V0014](../experiments/records/E0074.md) [CI 45713883869](https://github.com/sguzman/integrax/actions/runs/45713883869/job/139554905468) passed full isolated exact reconstruction: 220,113,320 B (77.99% reduction), F0011 accepted on separate blockwise track. E0082 selects mode7 (verified E0079/E0081) with unchanged 16 MiB block geometry and strict isolated protocol as final C13 candidate. No full gain assumed; close campaign after result.
