@@ -18,6 +18,7 @@ wc -c "$dir/archive.ix"; sha256sum "$dir/archive.ix"
 chmod 644 "$dir/archive.ix"
 host_net="$(readlink /proc/self/ns/net)"
 mkdir -p results-local/ixb1
+output=results-local/ixb1/full-hier.out
 /usr/bin/time -f 'ISOLATED_DECODE seconds=%e rss_kib=%M' sudo -n unshare --net -- runuser -u nobody -- sh -eu -c '
  test "$(id -u)" -ne 0
  test ! -r "$1"
@@ -25,7 +26,7 @@ mkdir -p results-local/ixb1
  cd "$3"
  echo "ISOLATION CHECK PASSED uid=$(id -u)" >&2
  exec ./codec decode-blocks archive.ix -
-' sh "$input" "$host_net" "$dir" > results-local/ixb1/full-hier.out
-cmp "$input" results-local/ixb1/full.out
-sha256sum "$input" results-local/ixb1/full.out
+' sh "$input" "$host_net" "$dir" > "$output"
+cmp "$input" "$output"
+sha256sum "$input" "$output"
 echo "IXB2 HIER FULL ISOLATED BYTE COMPARISON PASSED"
