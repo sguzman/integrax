@@ -1,3 +1,3 @@
 # C08 — Modular structure and CRT
 
-Active alongside C07 full-corpus verification. Question: do structured exact residue descriptions expose compact numerical structure beyond prior factor/periodic grammars? M1: fixed three-modulus CRT with all fields charged, [theory](../theory/crt-residue-cost.md), [E0031](../experiments/records/E0031.md) exhaustive two-byte and synthetic controls. M2: authenticate E0032 slice measurements and replay; compare to raw, assess whether residue structure is real or merely redistributes information. M3: extend only if supported, otherwise close and investigate reversible transforms. No arbitrary free moduli, full corpus claim or novelty claim.
+Closed. [Closure](CAMPAIGN-08-CLOSURE.md), [theory](../theory/crt-residue-cost.md), E0031–E0033. No authentic gain or full-corpus score.

@@ -9,7 +9,7 @@
 | [C05](CAMPAIGN-05.md) | Rational and Diophantine approximations | [Closed](CAMPAIGN-05-CLOSURE.md) |
 | [C06](CAMPAIGN-06.md) | Recurrences and sequence generators | [Closed](CAMPAIGN-06-CLOSURE.md) |
 | [C07](CAMPAIGN-07.md) | Polynomial and arithmetic circuit minimization | Active |
-| [C08](CAMPAIGN-08.md) | Modular structure and CRT | Active |
+| [C08](CAMPAIGN-08.md) | Modular structure and CRT | [Closed](CAMPAIGN-08-CLOSURE.md) |
 | C09 | Reversible transformations | Candidate |
 | C10 | Hybrid arithmetic and conventional coding | Candidate |
 

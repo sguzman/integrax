@@ -1,0 +1,63 @@
+{
+  "id": "E0029",
+  "campaign": "C07",
+  "track": "whole",
+  "status": "roundtrip-verified",
+  "revision": "79f5da140a04ca4f62207c30acebb3151ff52b8a",
+  "run": 45703123838,
+  "job": 139518095288,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "archive_bytes": 394507869,
+  "archive_sha256": "f6408b66d8706a46d82d6029da0ebf75879daf0cedc6ba26d37c644afe14d2d2",
+  "compressor_bytes": 380848,
+  "external_side_bytes": 0,
+  "contest_total_bytes": null,
+  "training": {
+    "offsets": [
+      0,
+      30000000,
+      40000000,
+      80000000
+    ],
+    "bytes_per_offset": 65536,
+    "bytes": 262144,
+    "sha256": "ba1d4361a56d6e6a688ee4f125465e51b47b361194fbe64349f098860a8fc6fc",
+    "dictionary_sha256": "5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518",
+    "dictionary_bytes": 32770
+  },
+  "model": {
+    "rules": 8192,
+    "roots": 285249510,
+    "max_exp": 239,
+    "fixed_bits": 3993493140,
+    "huff_bits": 3155650851,
+    "header_bytes": 51512
+  },
+  "encode_seconds": 41.21,
+  "encode_rss_bytes": 6275072,
+  "decode_seconds": 17.27,
+  "decode_pipeline_rss_bytes": 7954432,
+  "unit_tests": 6,
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "bash experiments/ixg2/full-large.sh huff"
+  ],
+  "verification": {
+    "id": "V0006",
+    "byte_equal": true,
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "uid": 65534,
+    "original_readable": false,
+    "separate_network_namespace": true,
+    "external_dictionary_removed": true
+  },
+  "limitations": [
+    "archive-only; no contest eligibility",
+    "same implementation; not general security audit",
+    "CI archive transient; digest and reproducible recipe retained"
+  ]
+}

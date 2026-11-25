@@ -1,14 +1,10 @@
 # Continuation state
 
-2026-11-25 — C01–C06 closed; C07 active. Read AGENTS.md and [C07](research/CAMPAIGN-07.md).
+2026-11-25 — C01–C06 and C08 closed; C07 active. Read AGENTS.md and [C07](research/CAMPAIGN-07.md).
 
-- F0003 IXG2 472,797,366 B, isolated full reconstruction; gzip 322,591,988 B. Archive-only.
-- E0027 [dictionary sweep](experiments/records/E0027.md): 18/18 passed; 8192 diverse rules 6,761,528 B on 16 MiB vs 8,019,886 B baseline. 4096 contiguous wins 1 MiB controls.
-- E0028 [file-backed weighted parser](experiments/records/E0028.md): 12/12 exact reconstructions, six matching archive pairs; 16 MiB peak encoder memory 145628 -> 14060 KiB.
-- E0029/E0030 full enwik9 greedy and weighted 8192 diverse dictionary matrix [CI 45703123838](https://github.com/sguzman/integrax/actions/runs/45703123838), queued at checkpoint, revision 79f5da140a04ca4f62207c30acebb3151ff52b8a. Exact sample/dictionary hashes checked against E0027, all costs charged, isolated decode with separate dictionary removed.
+- F0004 IXG2 **394,507,869 B** (60.55% reduction), isolated full reconstruction, [E0029/V0006](experiments/records/E0029.md). F0003 472,797,366 B; gzip 322,591,988 B. Archive-only.
+- E0027/E0028 verified 30 authentic roundtrips; file-backed weighted parser 90.3% less memory on 16 MiB, byte-identical archives.
+- E0030 full enwik9 weighted 8192-rule [CI 45703123838](https://github.com/sguzman/integrax/actions/runs/45703123838), job 139518094677, running at checkpoint. No result claimed.
+- [C08 closure](research/CAMPAIGN-08-CLOSURE.md): E0031–E0033 65,536 exhaustive, 4096 independent CRT checks, 36 synthetic, 15 authentic roundtrips; zero authentic gains. External replay passed.
 
-Next: retrieve full-large workflow status/logs, persist measured E0029/E0030 and promote only verified improvements. Evaluate marginal gains then pursue structural improvement or close C07/pivot. Nix pin/dashboard deployment unverified. No workers.
-
-C08 opened in parallel with C07 full-run measurement: [E0031](experiments/records/E0031.md) fixed CRT grammar, 65536 exhaustive two-byte checks and 24 synthetic roundtrips executed in V8 isolate. [Theory](theory/crt-residue-cost.md). E0032 authentic replay workflow authored, pending. Next retrieve C07 and CRT evidence; no new full-target result.
-
-E0033 independent generic CRT reconstruction 4096 checks, 12 full-width synthetic controls and 37 malformed rejects; executed in V8, external replay pending. C07 matrix jobs 139518095288 (huff), 139518094677 (streamopthuff) in progress; C08 authentic [CI 45703312599](https://github.com/sguzman/integrax/actions/runs/45703312599) queued at checkpoint.
+Next: retrieve E0030 evidence; promote if verified smaller, assess C07 structural limits. C09 reversible transforms next candidate. Nix pin/dashboard deployment unverified. No workers.
