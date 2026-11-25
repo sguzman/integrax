@@ -10,4 +10,4 @@ Next: collect E0039/E0040, promote only isolated verified full improvements, com
 
 E0041 modes 6–8 lexicographic root rank and tagged last-two-byte context ablation implemented; 12 held-out cases, [theory](theory/ordered-root-context.md), [CI 45705043869](https://github.com/sguzman/integrax/actions/runs/45705043869) running at checkpoint. No verified result yet. E0040 still running at last check.
 
-E0042 independent BigInt root interval oracle: 90 synthetic exact roundtrips in V8; independent Rust archive equality/cross-decoding CI authored, pending.
+E0042 independent BigInt root interval oracle: 90 synthetic exact roundtrips in V8; independent Rust archive equality/cross-decoding [CI 45705156947](https://github.com/sguzman/integrax/actions/runs/45705156947), queued at checkpoint. E0041 job 139524735397; E0040 job 139523648030. Next retrieve all three workflows and persist actual evidence, select only supported full-corpus extension.
