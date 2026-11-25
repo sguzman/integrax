@@ -1,0 +1,3 @@
+# Dashboard source verification
+
+2026-11-25: executed the actual dashboard script against the committed frontier ledger in a minimal DOM harness. 7 verified entries, all four track minima, 1 external baseline, history values and fetch-failure state matched. This is a source-level contract check, not browser layout or deployed Pages verification. Current whole-stream minimum 280380483 B. [Harness](../experiments/oracle/dashboard-check.mjs) added to reference CI; no Pages settings changed. Both the Pages settings API and direct public URL retrieval were unavailable from the agent's tools. Deployment status remains unknown, not proven absent.

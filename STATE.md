@@ -15,4 +15,6 @@ E0049 16384-rule / 512 KiB cap and matched dictionary ablation authored, nine st
 
 E0050 arithmetic root tree geometry: first-byte aligned and median-count full binary trees, mode 11/12, same third-order predictor and dictionary. Nine strict authentic comparisons [CI 45708234110](https://github.com/sguzman/integrax/actions/runs/45708234110), queued/running at checkpoint; no result yet. [Theory](theory/root-decision-geometry.md). Independent oracle modes 3–10 only. E0045/E0049 running at last check.
 
-E0051 independent decision-tree reference executed: 30 new synthetic exact roundtrips, 120 earlier observations reproduced. Cross-codec strict CI authored, pending.
+E0051 independent decision-tree reference executed: 30 new synthetic exact roundtrips, 120 earlier observations reproduced. Cross-codec strict [CI 45708448709](https://github.com/sguzman/integrax/actions/runs/45708448709), job 139536346294, running at checkpoint.
+
+Dashboard source contract check passed for seven ledger entries, track minima and unavailable-ledger path; harness added to reference CI. Public deployment remains unverified (direct URL inaccessible to retrieval tool; settings unavailable). [Notes](notes/dashboard-verification.md). No deployment changes.
