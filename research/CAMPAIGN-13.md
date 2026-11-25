@@ -15,3 +15,5 @@ E0073 independent BigInt rank reference 30 exact frames and append rejects, 12 z
 [E0072](../experiments/records/E0072.md) 6/6 exact, 6/6 append rejects, mode4 wins all three regions vs external controls. E0074 [IXB2](../schemas/IXB2.md) full native blockwise candidate (16 MiB, charged headers/raw fallback), isolated exact decode authored. Separate blockwise track; no full gain yet.
 
 E0075 independent IXB2 framing reference 30 exact synthetic archives and 3672 malformed/truncated rejects. External Rust cross-codec pending. E0074 initial run failed the known raw-fallback fixture assumption; corrected run separate.
+
+[E0075](../experiments/records/E0075.md) external replay passed 30/30 independent comparisons and 254 malformed rejects; corrected fixture passed. IXB2 full run pending.
