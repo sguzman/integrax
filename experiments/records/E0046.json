@@ -1,0 +1,282 @@
+{
+  "id": "E0046",
+  "campaign": "C10",
+  "scope": "independent BigInt interval reference, modes 9/10 synthetic controls",
+  "status": "roundtrip-verified",
+  "execution": "V8 isolate",
+  "observations": {
+    "rules": [
+      [
+        97,
+        98
+      ],
+      [
+        97,
+        97
+      ],
+      [
+        256,
+        97
+      ],
+      [
+        98,
+        100
+      ],
+      [
+        258,
+        99
+      ],
+      [
+        97,
+        98
+      ]
+    ],
+    "rows": [
+      {
+        "kind": "constant",
+        "bytes": 0,
+        "mode": 9,
+        "archive_bytes": 39,
+        "roots": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 0,
+        "mode": 10,
+        "archive_bytes": 39,
+        "roots": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 0,
+        "mode": 9,
+        "archive_bytes": 39,
+        "roots": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 0,
+        "mode": 10,
+        "archive_bytes": 39,
+        "roots": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 0,
+        "mode": 9,
+        "archive_bytes": 39,
+        "roots": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 0,
+        "mode": 10,
+        "archive_bytes": 39,
+        "roots": 0,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1,
+        "mode": 9,
+        "archive_bytes": 41,
+        "roots": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 1,
+        "mode": 10,
+        "archive_bytes": 41,
+        "roots": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1,
+        "mode": 9,
+        "archive_bytes": 41,
+        "roots": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 1,
+        "mode": 10,
+        "archive_bytes": 41,
+        "roots": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1,
+        "mode": 9,
+        "archive_bytes": 41,
+        "roots": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1,
+        "mode": 10,
+        "archive_bytes": 41,
+        "roots": 1,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 7,
+        "mode": 9,
+        "archive_bytes": 43,
+        "roots": 4,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 7,
+        "mode": 10,
+        "archive_bytes": 43,
+        "roots": 4,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 7,
+        "mode": 9,
+        "archive_bytes": 43,
+        "roots": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 7,
+        "mode": 10,
+        "archive_bytes": 43,
+        "roots": 3,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 7,
+        "mode": 9,
+        "archive_bytes": 48,
+        "roots": 7,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 7,
+        "mode": 10,
+        "archive_bytes": 48,
+        "roots": 7,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "mode": 9,
+        "archive_bytes": 47,
+        "roots": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 64,
+        "mode": 10,
+        "archive_bytes": 46,
+        "roots": 32,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "mode": 9,
+        "archive_bytes": 53,
+        "roots": 28,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 64,
+        "mode": 10,
+        "archive_bytes": 53,
+        "roots": 28,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "mode": 9,
+        "archive_bytes": 111,
+        "roots": 64,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "mode": 10,
+        "archive_bytes": 111,
+        "roots": 64,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "mode": 9,
+        "archive_bytes": 53,
+        "roots": 2048,
+        "byte_equal": true
+      },
+      {
+        "kind": "constant",
+        "bytes": 4096,
+        "mode": 10,
+        "archive_bytes": 53,
+        "roots": 2048,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "mode": 9,
+        "archive_bytes": 73,
+        "roots": 1756,
+        "byte_equal": true
+      },
+      {
+        "kind": "periodic",
+        "bytes": 4096,
+        "mode": 10,
+        "archive_bytes": 73,
+        "roots": 1756,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "mode": 9,
+        "archive_bytes": 4468,
+        "roots": 4096,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "mode": 10,
+        "archive_bytes": 4468,
+        "roots": 4096,
+        "byte_equal": true
+      }
+    ]
+  },
+  "limitations": [
+    "synthetic only",
+    "Rust cross-codec replay pending",
+    "no local hashes, runtime or RSS"
+  ]
+}

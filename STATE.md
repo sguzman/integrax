@@ -7,3 +7,5 @@
 - E0042 independent oracle modes 3–8 verified; modes 9/10 extension pending.
 
 Next: independent deep predictor cross-codec tests, collect E0045, pursue structural improvements rather than indiscriminate depth. Arithmetic payload integrity, Nix pin/dashboard deployment unverified. No workers.
+
+E0046 extended independent BigInt oracle to modes 9/10: 30 new synthetic roundtrips, all 90 prior observations reproduced. External cross-codec CI authored, pending.
