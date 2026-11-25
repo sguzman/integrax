@@ -7,3 +7,5 @@ E0067 independent BigInt interval reference 40/40 exact synthetic cases; prior 8
 [E0066](../experiments/records/E0066.md) 9/9 strict; patch16 mixed, largest +1248 B despite greater coverage. E0068 final matched-parse adaptive position/residual coding ablation (mode19), [cost analysis](../theory/sparse-correction-operand-cost.md), authored and pending. No full scaling until meaningful measured gain.
 
 E0069 independent reference: 20 exact synthetic mode19 cases, matched mode18 parse, 40 mode18 regressions passed. External Rust replay pending.
+
+[E0068](../experiments/records/E0068.md) 9/9 strict, adaptive operands win all regions but net gain only 0.0874% on largest. [E0069](../experiments/records/E0069.md) 20/20 independent byte equality and strict cross-decodes. C12 closed without scaling. [Closure](CAMPAIGN-12-CLOSURE.md).

@@ -13,7 +13,7 @@
 | [C09](CAMPAIGN-09.md) | Reversible transformations | [Closed](CAMPAIGN-09-CLOSURE.md) |
 | [C10](CAMPAIGN-10.md) | Hybrid arithmetic and conventional coding | [Closed](CAMPAIGN-10-CLOSURE.md) |
 | [C11](CAMPAIGN-11.md) | Decoder-derived arithmetic recurrences | Active |
-| [C12](CAMPAIGN-12.md) | Sparse-corrected arithmetic recurrences | Active |
+| [C12](CAMPAIGN-12.md) | Sparse-corrected arithmetic recurrences | [Closed](CAMPAIGN-12-CLOSURE.md) |
 | [C13](CAMPAIGN-13.md) | Radix context permutations and rank descriptions | Active |
 
 Candidates are not commitments or results. Instantiate when justified; pivot freely within mission. Stable IDs, explicit milestones and closure records. See [template](CAMPAIGN-TEMPLATE.md).

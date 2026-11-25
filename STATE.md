@@ -1,20 +1,11 @@
 # Continuation state
 
-2026-11-25 — C01–C10 closed; C11/C12/C13 active. Read AGENTS.md, [C11](research/CAMPAIGN-11.md), [C12](research/CAMPAIGN-12.md), [C13](research/CAMPAIGN-13.md).
+2026-11-25 — C01–C10 and C12 closed; C11/C13 active. Read AGENTS.md, [C11](research/CAMPAIGN-11.md), [C13](research/CAMPAIGN-13.md).
 
 - F0009 IXG2 **243,589,465 B** (75.64% reduction), [E0055/V0011](experiments/records/E0055.md) strict isolated full reconstruction; F0008 256,538,753 B, gzip 322,591,988 B. Archive-only.
-- [E0058/V0012](experiments/records/E0058.md) 249,849,857 B strict isolated full, above F0009; [C10 closed](research/CAMPAIGN-10-CLOSURE.md).
-- E0053 history16 improves all regions, 16 MiB 4,751,641 B. E0057 adaptive lengths 4,739,779 B; E0060 dual16 4,716,953 B. E0062 longer six/eight-byte contexts regress all regions; retain four-byte dual16. All authentic strict comparisons passed. [E0064](experiments/records/E0064.md) 10/10 strict, larger training plus dual recurrence wins both reused target regions. 16384-rule dual chosen for full E0065 based on smaller payload in both regions and one-time dictionary cost. E0065 [CI 45711961257](https://github.com/sguzman/integrax/actions/runs/45711961257), in_progress at checkpoint.
-- 350 independent Rust/BigInt archive equality/cross-decodes verified, modes 3–18, including E0059 exact distance boundary and [E0063](experiments/records/E0063.md) 40/40 longer-context cases. Nix pin/build verified; dashboard source contract verified, live deployment inaccessible/unverified. No settings changed.
+- E0065 expanded 16384-rule dual16 full [CI 45711961257](https://github.com/sguzman/integrax/actions/runs/45711961257), job 139548362535, running at checkpoint. Close C11 after final result; accept only a verified improvement over F0009.
+- [C12 closed](research/CAMPAIGN-12-CLOSURE.md): E0066 patch mixed; [E0068](experiments/records/E0068.md) adaptive correction wins all 3 regions, largest 4,712,831 B vs exact 4,716,953 B (0.087% gain). All strict, no full scale. Preserve mode19.
+- 370 independent IXG2 Rust/BigInt archive equality/cross-decodes verified, modes 3–19. E0069 passed 20/20, E0067 40/40. Nix pin/build verified; dashboard source verified, live deployment inaccessible/unverified.
+- C13 [radix context permutations](research/CAMPAIGN-13.md), IXB1 BWT/MTF/zero runs. E0070 independent naive reference passed 9841 strings/29523 frames. E0071 Rust tests/45 cross-codec and 36 authentic backend controls [CI 45712990055](https://github.com/sguzman/integrax/actions/runs/45712990055), running; no compression claim.
 
-Next: collect E0065 strict isolated full result; accept only an improvement over F0009. C12 opened alongside final C11 test; collect E0068 matched-parse adaptive operand ablation; close C12 without scaling if gain remains negligible. No workers.
-
-[E0066](experiments/records/E0066.md) 9/9 strict, patch16 mixed, largest 1248 B larger than dual16 despite 130985 extra recurrence bytes. [Theory](theory/sparse-corrected-recurrences.md). Mode18 independently verified.
-
-E0067 independent mode18 reference: 40/40 exact synthetic cases, prior 80 mode15–17 observations unchanged; [CI 45712332816](https://github.com/sguzman/integrax/actions/runs/45712332816) passed 40/40 byte-identical archives and strict cross-decodes.
-
-E0068 mode19 adaptive correction operands authored, same parse as mode18. [CI 45712593317](https://github.com/sguzman/integrax/actions/runs/45712593317), queued at checkpoint. [Cost analysis](theory/sparse-correction-operand-cost.md). Mode19 independent cross-codec not yet verified.
-
-E0069 independent mode19 reference 20/20 exact synthetic cases, all 40 mode18 cases reproduced; parse diagnostics unchanged. External cross-codec CI authored, pending.
-
-C13 opened: [radix context permutations](research/CAMPAIGN-13.md), IXB1 BWT/MTF/zero runs, E0070 9841 exhaustive ternary strings / 29523 exact reference frames. Rust and E0071 36 authentic backend comparisons authored, pending. No measured compression claim; bounded slices only.
+Next: collect E0065/E0071; close C11, and assess actual context permutation gains against matched external controls. No workers.

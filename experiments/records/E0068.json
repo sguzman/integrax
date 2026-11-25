@@ -1,0 +1,238 @@
+{
+  "id": "E0068",
+  "campaign": "C12",
+  "scope": "three held-out enwik8 regions, fixed and adaptive patch operands",
+  "status": "roundtrip-verified",
+  "revision": "faa91201043e5eff6fc06572b0c5e52f8f72bc1f",
+  "run": 45712593317,
+  "job": 139550518667,
+  "corpus": {
+    "id": "enwik8",
+    "bytes": 100000000,
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+  },
+  "training": {
+    "train_sha256": "ba1d4361a56d6e6a688ee4f125465e51b47b361194fbe64349f098860a8fc6fc",
+    "dict_sha256": "5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik8",
+    "bash experiments/ixg2/adaptpatch.sh"
+  ],
+  "unit_tests": 21,
+  "rows": [
+    {
+      "offset": 1000000,
+      "bytes": 1048576,
+      "modes": {
+        "dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 280766,
+            "copies": 2652,
+            "copied_bytes": 75250,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 742
+          },
+          "encode_seconds": 0.56,
+          "encode_rss_bytes": 84611072,
+          "archive_bytes": 350003,
+          "archive_sha256": "38a0cabc65b790885c94b9593060d1562b3f2d01a2a174636a57f63ceb7a97ec",
+          "decode_seconds": 0.65,
+          "decode_rss_bytes": 81858560,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "patch16": {
+          "model": {
+            "mode": 18,
+            "roots": 280094,
+            "copies": 2758,
+            "copied_bytes": 81132,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 771,
+            "patched": 215,
+            "patched_bytes": 9471
+          },
+          "encode_seconds": 0.6,
+          "encode_rss_bytes": 84631552,
+          "archive_bytes": 350121,
+          "archive_sha256": "5eb3f60777814869bc8e793520f3f90e5010108470ecbfd2fa123fef6519ff2e",
+          "decode_seconds": 0.64,
+          "decode_rss_bytes": 81793024,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "adaptpatch16": {
+          "model": {
+            "mode": 19,
+            "roots": 280094,
+            "copies": 2758,
+            "copied_bytes": 81132,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 771,
+            "patched": 215,
+            "patched_bytes": 9471
+          },
+          "encode_seconds": 0.63,
+          "encode_rss_bytes": 84635648,
+          "archive_bytes": 349882,
+          "archive_sha256": "6578da3eaf95d59330a4107bcae2f28b8be13cf105f39743ac60c70268404e13",
+          "decode_seconds": 0.64,
+          "decode_rss_bytes": 81924096,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        }
+      },
+      "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+      "gzip_bytes": 385562
+    },
+    {
+      "offset": 50000000,
+      "bytes": 1048576,
+      "modes": {
+        "dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 280543,
+            "copies": 2625,
+            "copied_bytes": 75942,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 656
+          },
+          "encode_seconds": 0.61,
+          "encode_rss_bytes": 84639744,
+          "archive_bytes": 351948,
+          "archive_sha256": "ad915887a3156712cb74c1b756989877b7062f2d30dc03d15346da9be0f00092",
+          "decode_seconds": 0.64,
+          "decode_rss_bytes": 81907712,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "patch16": {
+          "model": {
+            "mode": 18,
+            "roots": 278848,
+            "copies": 2672,
+            "copied_bytes": 84082,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 769,
+            "patched": 355,
+            "patched_bytes": 17412
+          },
+          "encode_seconds": 0.57,
+          "encode_rss_bytes": 84582400,
+          "archive_bytes": 351869,
+          "archive_sha256": "d9bf9dff4788a77ecb8fd64bb3245bde99b88f6fa568aa81ec12bf845613de26",
+          "decode_seconds": 0.63,
+          "decode_rss_bytes": 81907712,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "adaptpatch16": {
+          "model": {
+            "mode": 19,
+            "roots": 278848,
+            "copies": 2672,
+            "copied_bytes": 84082,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 769,
+            "patched": 355,
+            "patched_bytes": 17412
+          },
+          "encode_seconds": 0.56,
+          "encode_rss_bytes": 84541440,
+          "archive_bytes": 351456,
+          "archive_sha256": "7ae20af7d0f7bbc8e1b5888a8de4ad6fa2753b055ddbfa1c68910a63d7957645",
+          "decode_seconds": 0.64,
+          "decode_rss_bytes": 81874944,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        }
+      },
+      "sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+      "gzip_bytes": 389210
+    },
+    {
+      "offset": 10000000,
+      "bytes": 16777216,
+      "modes": {
+        "dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 4458209,
+            "copies": 39070,
+            "copied_bytes": 1190645,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 11990
+          },
+          "encode_seconds": 8.6,
+          "encode_rss_bytes": 84574208,
+          "archive_bytes": 4716953,
+          "archive_sha256": "1802c8ce3637a67ff1cba5feaba587579a5fd6ffbbedac4c0e2e7c597b70d00e",
+          "decode_seconds": 8.98,
+          "decode_rss_bytes": 81612800,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "patch16": {
+          "model": {
+            "mode": 18,
+            "roots": 4441454,
+            "copies": 41137,
+            "copied_bytes": 1321630,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 12797,
+            "patched": 4728,
+            "patched_bytes": 259140
+          },
+          "encode_seconds": 8.32,
+          "encode_rss_bytes": 84574208,
+          "archive_bytes": 4718201,
+          "archive_sha256": "93ba214e2635ec7a4451ba7fcdfeb9208b8b85bff842ed9600f7381bd1fdd39d",
+          "decode_seconds": 9.45,
+          "decode_rss_bytes": 81883136,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "adaptpatch16": {
+          "model": {
+            "mode": 19,
+            "roots": 4441454,
+            "copies": 41137,
+            "copied_bytes": 1321630,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 12797,
+            "patched": 4728,
+            "patched_bytes": 259140
+          },
+          "encode_seconds": 8.5,
+          "encode_rss_bytes": 84512768,
+          "archive_bytes": 4712831,
+          "archive_sha256": "3ccd7a6be22fed934aa61123e31ea296f51a1893c1ff10192c1963e8f6fd7094",
+          "decode_seconds": 10.09,
+          "decode_rss_bytes": 81924096,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        }
+      },
+      "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+      "gzip_bytes": 6130610
+    }
+  ],
+  "limitations": [
+    "sample regions only",
+    "same implementation authentic decoder",
+    "same token counts, deterministic parse unchanged by construction",
+    "marginal net improvement; not scaled"
+  ]
+}
