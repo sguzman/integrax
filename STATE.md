@@ -8,3 +8,5 @@
 Next: test larger and diversified global training dictionaries against matched held-out regions; prioritize structural gains. Bounded-memory weighted parser implementation conditional on opportunity; Nix pin/dashboard deployment unverified. No workers.
 
 E0027 dictionary-capacity workflow authored: six global dictionaries at 1024/4096/8192 rule caps, contiguous vs diverse 64/256 KiB training, matched authentic regions. CI pending; no results claimed. All held-out regions are disjoint from training offsets.
+
+E0028 file-backed weighted parser implemented in Rust (1 MiB computational partitions, global path, same IXG2 format); independent boundary tests and byte-identical in-memory archive comparison CI authored. Results pending. E0027 dictionary CI [45702720748](https://github.com/sguzman/integrax/actions/runs/45702720748) running at checkpoint.

@@ -1,5 +1,5 @@
 //! Global arithmetic DAG, bounded dictionary and streaming root parser.
-use std::{cmp::Reverse,collections::{BinaryHeap,HashMap},env,fs::File,io::{self,Read,Write,BufReader,BufWriter}};
+use std::{cmp::Reverse,collections::{BinaryHeap,HashMap},env,fs::File,io::{self,Read,Write,BufReader,BufWriter,Seek,SeekFrom}};
 const MAX_RULES:usize=8192;
 const DEFAULT_RULES:usize=1024;
 const MAX_EXP:usize=256;
@@ -91,6 +91,47 @@ fn encode_opt(input:&str,rules:&[Rule],mode:u8,mut w:impl Write)->io::Result<()>
  let mut out=Out{w,b:0,n:0};for id in best{if mode==0{out.put(u64::from(id),width(k))?}else{let(c,n)=h.codes[id as usize];out.put(c,n)?}}out.finish()?;
  eprintln!("OPT_RESULT mode={mode} greedy_bytes={gsize} chosen_bytes={bestsize}");Ok(())
 }
+// File-backed global weighted shortest path. Blocks are computational only.
+const STREAM_BLOCK:usize=1024*1024;
+const INF:u64=u64::MAX/4;
+fn block_dp(f:&mut (impl Read+Seek),l:u64,a:u64,b:u64,t:&Trie,weights:&[u8],tail:&[u64],choose:bool)->io::Result<(Vec<u64>,Vec<u16>)>{
+ let n=(b-a)as usize;let d=t.max;
+ let mut x=vec![0; (l.min(b+d as u64-1)-a) as usize];f.seek(SeekFrom::Start(a))?;f.read_exact(&mut x)?;
+ let mut costs=vec![INF;n+d];costs[n..].copy_from_slice(tail);let mut choices=if choose{vec![0u16;n]}else{Vec::new()};
+ for i in (0..n).rev(){let mut best=(INF,0u16);t.matches(&x[i..],|id,len|{let v=(costs[i+len]+u64::from(weights[id as usize]),id);if v<best{best=v}});if best.0==INF{return Err(bad("no path"))}costs[i]=best.0;if choose{choices[i]=best.1}}
+ Ok((costs,choices))
+}
+struct Boundary{len:u64,block:usize,right:Vec<Vec<u64>>,objective:u64}
+fn boundaries(f:&mut (impl Read+Seek),l:u64,t:&Trie,weights:&[u8],block:usize)->io::Result<Boundary>{
+ if block==0{return Err(bad("block size"))}let n=l.div_ceil(block as u64)as usize;let mut right=vec![vec![];n];let mut tail=vec![INF;t.max];tail[0]=0;
+ for k in (0..n).rev(){let a=k as u64*block as u64;let b=l.min(a+block as u64);let(c,_)=block_dp(f,l,a,b,t,weights,&tail,false)?;right[k]=tail;tail=c[..t.max].to_vec()}
+ Ok(Boundary{len:l,block,right,objective:tail[0]})
+}
+fn boundary_emit(f:&mut (impl Read+Seek),state:&Boundary,t:&Trie,exp:&[Vec<u8>],weights:&[u8],mut emit:impl FnMut(u16)->io::Result<()>)->io::Result<()>{
+ let(mut p,mut objective)=(0u64,0u64);
+ for(k,tail)in state.right.iter().enumerate(){let a=k as u64*state.block as u64;let b=state.len.min(a+state.block as u64);if p>=b{continue}let(_,choices)=block_dp(f,state.len,a,b,t,weights,tail,true)?;
+ while p<b{let id=choices[(p-a)as usize];emit(id)?;p+=exp[id as usize].len()as u64;objective+=u64::from(weights[id as usize]);}}
+ if p!=state.len||objective!=state.objective{return Err(bad("boundary path mismatch"))}Ok(())
+}
+fn freq_cost(f:&[u64],n:usize,mode:u8)->io::Result<u64>{
+ let mut size=15+4*n as u64;if mode==0{size+=(f.iter().sum::<u64>()*u64::from(width(f.len()))).div_ceil(8)}else{let h=huff(f)?;size+=f.iter().map(|&v|varlen(v)).sum::<u64>();size+=f.iter().zip(&h.codes).map(|(&v,&(_,l))|v*u64::from(l)).sum::<u64>().div_ceil(8)}Ok(size)
+}
+fn encode_streamopt(input:&str,rules:&[Rule],mode:u8,mut w:impl Write,block:usize)->io::Result<()>{
+ let exp=expand(rules)?;let t=Trie::new(&exp);let k=exp.len();let mut f=BufReader::new(File::open(input)?);let l=f.seek(SeekFrom::End(0))?;if l>MAX_LEN{return Err(bad("input cap"))}f.seek(SeekFrom::Start(0))?;
+ let mut best=vec![0u64;k];if parse(&mut f,&t,|id|{best[id as usize]+=1;Ok(())})?!=l{return Err(bad("input changed"))}
+ let gsize=freq_cost(&best,rules.len(),mode)?;let mut bestsize=gsize;let mut bestpath:Option<(Boundary,Vec<u8>)>=None;let mut current=best.clone();
+ for round in 0..if mode==0{1}else{4}{
+ let weights=if mode==0{vec![width(k);k]}else{let sm:Vec<_>=current.iter().map(|&n|n+1).collect();huff(&sm)?.codes.iter().map(|&(_,l)|l).collect()};
+ let state=boundaries(&mut f,l,&t,&weights,block)?;let mut counts=vec![0u64;k];boundary_emit(&mut f,&state,&t,&exp,&weights,|id|{counts[id as usize]+=1;Ok(())})?;let size=freq_cost(&counts,rules.len(),mode)?;
+ eprintln!("STREAM_OPT round={round} objective_bits={} roots={} candidate_bytes={size}",state.objective,counts.iter().sum::<u64>());
+ current=counts.clone();if size<bestsize{bestsize=size;best=counts;bestpath=Some((state,weights))}
+ }
+ let h=huff(&best)?;w.write_all(b"IXG2")?;w.write_all(&[mode])?;w.write_all(&l.to_be_bytes())?;write_rules(&mut w,rules)?;if mode==1{for &n in &best{putvar(&mut w,n)?}}
+ let mut out=Out{w,b:0,n:0};let mut check=vec![0u64;k];let mut emit=|id:u16|{check[id as usize]+=1;if mode==0{out.put(u64::from(id),width(k))}else{let(c,n)=h.codes[id as usize];out.put(c,n)}};
+ if let Some((state,weights))=bestpath{boundary_emit(&mut f,&state,&t,&exp,&weights,&mut emit)?}else{f.seek(SeekFrom::Start(0))?;if parse(&mut f,&t,&mut emit)?!=l{return Err(bad("input changed"))}}
+ if best!=check{return Err(bad("input changed during encode"))}out.finish()?;
+ eprintln!("STREAM_OPT_RESULT mode={mode} greedy_bytes={gsize} chosen_bytes={bestsize} block={block}");Ok(())
+}
 fn decode(mut r:impl Read,mut w:impl Write)->io::Result<()>{
  let mut m=[0;5];r.read_exact(&mut m)?;if &m[..4]!=b"IXG2"||m[4]>1{return Err(bad("header"))}let l=u64in(&mut r)?;if l>MAX_LEN{return Err(bad("length cap"))}let rules=read_rules(&mut r)?;let exp=expand(&rules)?;let mut freq=vec![0u64;exp.len()];
  let h=if m[4]==1{let mut sum=0u64;for(i,n)in freq.iter_mut().enumerate(){*n=getvar(&mut r)?;sum=sum.checked_add(n.checked_mul(exp[i].len()as u64).ok_or_else(||bad("length overflow"))?).ok_or_else(||bad("length overflow"))?;if sum>l{return Err(bad("frequency length"))}}if sum!=l{return Err(bad("frequency length"))}Some(huff(&freq)?)}else{None};
@@ -101,13 +142,13 @@ fn decode(mut r:impl Read,mut w:impl Write)->io::Result<()>{
 fn main()->io::Result<()>{
  let a:Vec<String>=env::args().collect();match a.get(1).map(String::as_str){
  Some("train")if a.len()==4||a.len()==5=>{let budget=if a.len()==5{a[4].parse::<usize>().map_err(|_|bad("invalid rule budget"))?}else{DEFAULT_RULES};if budget>MAX_RULES{return Err(bad("rule budget cap"))}let mut sample=Vec::new();File::open(&a[2])?.take(MAX_SAMPLE as u64+1).read_to_end(&mut sample)?;if sample.len()>MAX_SAMPLE{return Err(bad("training sample cap"))}let rules=train_budget(&sample,budget);let mut w=BufWriter::new(File::create(&a[3])?);write_rules(&mut w,&rules)?;w.flush()?;eprintln!("TRAIN bytes={} rules={}",sample.len(),rules.len());Ok(())},
- Some("fixed"|"huff"|"optfixed"|"opthuff")if a.len()==5=>{let mut d=BufReader::new(File::open(&a[4])?);let rules=read_rules(&mut d)?;let mut tail=[0];if d.read(&mut tail)?!=0{return Err(bad("trailing dictionary bytes"))}let w=BufWriter::new(File::create(&a[3])?);let mode=u8::from(a[1].ends_with("huff"));if a[1].starts_with("opt"){encode_opt(&a[2],&rules,mode,w)}else{encode(&a[2],&rules,mode,w)}},
+ Some("fixed"|"huff"|"optfixed"|"opthuff"|"streamoptfixed"|"streamopthuff")if a.len()==5=>{let mut d=BufReader::new(File::open(&a[4])?);let rules=read_rules(&mut d)?;let mut tail=[0];if d.read(&mut tail)?!=0{return Err(bad("trailing dictionary bytes"))}let w=BufWriter::new(File::create(&a[3])?);let mode=u8::from(a[1].ends_with("huff"));if a[1].starts_with("streamopt"){encode_streamopt(&a[2],&rules,mode,w,STREAM_BLOCK)}else if a[1].starts_with("opt"){encode_opt(&a[2],&rules,mode,w)}else{encode(&a[2],&rules,mode,w)}},
  Some("decode")if a.len()==4=>{let w:Box<dyn Write>=if a[3]=="-"{Box::new(io::stdout().lock())}else{Box::new(File::create(&a[3])?)};decode(BufReader::new(File::open(&a[2])?),BufWriter::new(w))},
- _=>Err(bad("usage: ixg2 train SAMPLE DICT [RULE_BUDGET] | fixed|huff|optfixed|opthuff INPUT ARCHIVE DICT | decode ARCHIVE OUTPUT"))}
+ _=>Err(bad("usage: ixg2 train SAMPLE DICT [RULE_BUDGET] | fixed|huff|optfixed|opthuff|streamoptfixed|streamopthuff INPUT ARCHIVE DICT | decode ARCHIVE OUTPUT"))}
 }
 #[cfg(test)]mod tests{use super::*;use std::io::Cursor;
  #[test]fn training_parse(){let x=b"abcabcabcabc".repeat(10000);let rules=train(&x[..65536]);let ex=expand(&rules).unwrap();let t=Trie::new(&ex);let mut y=Vec::new();assert_eq!(parse(Cursor::new(&x),&t,|id|{y.extend_from_slice(&ex[id as usize]);Ok(())}).unwrap(),x.len()as u64);assert_eq!(x,y);}
- #[test]fn roundtrip_modes(){let dir=env::temp_dir().join(format!("ixg2-{}",std::process::id()));std::fs::create_dir_all(&dir).unwrap();let path=dir.join("input");let rules=train(b"abcabcabcabcabcabc");for x in [vec![],vec![7;10000],b"abcabc\0xyz".repeat(10000),(0..=255).collect()]{std::fs::write(&path,&x).unwrap();for m in 0..=1{let mut a=Vec::new();encode(path.to_str().unwrap(),&rules,m,&mut a).unwrap();let mut opt=Vec::new();encode_opt(path.to_str().unwrap(),&rules,m,&mut opt).unwrap();assert!(opt.len()<=a.len());let mut y=Vec::new();decode(&opt[..],&mut y).unwrap();assert_eq!(x,y);y.clear();decode(&a[..],&mut y).unwrap();assert_eq!(x,y);let mut b=a.clone();b.push(0);assert!(decode(&b[..],io::sink()).is_err());assert!(decode(&a[..a.len()-1],io::sink()).is_err());}}std::fs::remove_dir_all(dir).unwrap();}
+ #[test]fn roundtrip_modes(){let dir=env::temp_dir().join(format!("ixg2-{}",std::process::id()));std::fs::create_dir_all(&dir).unwrap();let path=dir.join("input");let rules=train(b"abcabcabcabcabcabc");for x in [vec![],vec![7;10000],b"abcabc\0xyz".repeat(10000),(0..=255).collect()]{std::fs::write(&path,&x).unwrap();for m in 0..=1{let mut a=Vec::new();encode(path.to_str().unwrap(),&rules,m,&mut a).unwrap();let mut opt=Vec::new();encode_opt(path.to_str().unwrap(),&rules,m,&mut opt).unwrap();assert!(opt.len()<=a.len());let mut streamed=Vec::new();encode_streamopt(path.to_str().unwrap(),&rules,m,&mut streamed,4096).unwrap();assert_eq!(opt,streamed);let mut y=Vec::new();decode(&opt[..],&mut y).unwrap();assert_eq!(x,y);y.clear();decode(&a[..],&mut y).unwrap();assert_eq!(x,y);let mut b=a.clone();b.push(0);assert!(decode(&b[..],io::sink()).is_err());assert!(decode(&a[..a.len()-1],io::sink()).is_err());}}std::fs::remove_dir_all(dir).unwrap();}
  #[test]fn shortest_exhaustive(){
  // a,b,c,d,e,f with ab,abc,cd,ef,cdef. Greedy abc + d + ef, optimum ab+cdef.
  let rules=[(97,98),(256,99),(99,100),(101,102),(258,259)];
@@ -116,6 +157,7 @@ fn main()->io::Result<()>{
  let rules=[(97,98),(98,97),(256,97),(257,98),(97,97)];let ex=expand(&rules).unwrap();let t=Trie::new(&ex);let w:Vec<_>=(0..ex.len()).map(|i|(i%7+1)as u8).collect();
  for len in 0..=9{for mask in 0..1usize<<len{let x:Vec<_>=(0..len).map(|i|97+((mask>>i)&1)as u8).collect();let(r,c)=shortest(&x,&t,&ex,&w);assert_eq!(c,brute(&x,&ex,&w));assert_eq!(r.iter().flat_map(|&id|ex[id as usize].iter().copied()).collect::<Vec<_>>(),x)}}
  }
+ #[test]fn boundary_exact(){let ex=expand(&[(97,98),(256,97),(98,97),(258,98),(257,259)]).unwrap();let t=Trie::new(&ex);let w:Vec<_>=(0..ex.len()).map(|i|(i%7+1)as u8).collect();for len in 0..=9{for mask in 0..1usize<<len{let x:Vec<_>=(0..len).map(|i|97+((mask>>i)&1)as u8).collect();let (roots,c)=shortest(&x,&t,&ex,&w);for block in [1,2,3,7,16]{let mut f=Cursor::new(&x);let state=boundaries(&mut f,x.len()as u64,&t,&w,block).unwrap();let mut r=Vec::new();boundary_emit(&mut f,&state,&t,&ex,&w,|id|{r.push(id);Ok(())}).unwrap();assert_eq!(state.objective,u64::from(c));assert_eq!(r,roots)}}}}
  #[test]fn budget_prefix(){let x=b"abcd abc ab ac xy ".repeat(200);let a=train_budget(&x,4);let b=train_budget(&x,20);assert_eq!(a,b[..a.len()]);assert!(a.len()<=4&&b.len()<=20);assert!(train_budget(&x,0).is_empty());}
  #[test]fn invalid_rules(){assert!(expand(&[(256,0)]).is_err());let mut r=vec![(0,0)];for i in 0..8{r.push((256+i,256+i))}assert!(expand(&r).is_err());}
 }
