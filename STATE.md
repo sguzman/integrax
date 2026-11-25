@@ -6,3 +6,5 @@
 - E0023/E0024 global dictionary held-out: 12 and 20 exact comparisons, weighted Huffman improves 16MiB 8,019,886 -> 7,863,564 B. E0026 boundary DP oracle 36,846 exact paths.
 
 Next: test larger and diversified global training dictionaries against matched held-out regions; prioritize structural gains. Bounded-memory weighted parser implementation conditional on opportunity; Nix pin/dashboard deployment unverified. No workers.
+
+E0027 dictionary-capacity workflow authored: six global dictionaries at 1024/4096/8192 rule caps, contiguous vs diverse 64/256 KiB training, matched authentic regions. CI pending; no results claimed. All held-out regions are disjoint from training offsets.

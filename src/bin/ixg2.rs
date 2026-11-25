@@ -1,8 +1,9 @@
 //! Global arithmetic DAG, bounded dictionary and streaming root parser.
 use std::{cmp::Reverse,collections::{BinaryHeap,HashMap},env,fs::File,io::{self,Read,Write,BufReader,BufWriter}};
-const MAX_RULES:usize=1024;
+const MAX_RULES:usize=8192;
+const DEFAULT_RULES:usize=1024;
 const MAX_EXP:usize=256;
-const MAX_SAMPLE:usize=65536;
+const MAX_SAMPLE:usize=262144;
 const MAX_LEN:u64=1_000_000_000;
 type Rule=(u16,u16);
 fn bad(s:&str)->io::Error{io::Error::new(io::ErrorKind::InvalidData,s)}
@@ -13,9 +14,9 @@ fn getvar(r:&mut impl Read)->io::Result<u64>{let mut n=0;for i in 0..5{let mut b
 fn write_rules(w:&mut impl Write,rules:&[Rule])->io::Result<()>{w.write_all(&(rules.len()as u16).to_be_bytes())?;for &(a,b) in rules{w.write_all(&a.to_be_bytes())?;w.write_all(&b.to_be_bytes())?}Ok(())}
 fn read_rules(r:&mut impl Read)->io::Result<Vec<Rule>>{let n=usize::from(u16in(r)?);if n>MAX_RULES{return Err(bad("rule cap"))}let mut out=Vec::with_capacity(n);for _ in 0..n{out.push((u16in(r)?,u16in(r)?))}Ok(out)}
 fn expand(rules:&[Rule])->io::Result<Vec<Vec<u8>>>{let mut nodes:Vec<Vec<u8>>=(0..=255).map(|x|vec![x]).collect();for &(a,b) in rules{let a=usize::from(a);let b=usize::from(b);if a>=nodes.len()||b>=nodes.len(){return Err(bad("forward reference"))}if nodes[a].len()+nodes[b].len()>MAX_EXP{return Err(bad("expansion cap"))}let mut x=nodes[a].clone();x.extend_from_slice(&nodes[b]);nodes.push(x)}Ok(nodes)}
-fn train(sample:&[u8])->Vec<Rule>{
+fn train_budget(sample:&[u8],budget:usize)->Vec<Rule>{
  let mut s:Vec<u16>=sample.iter().map(|&x|u16::from(x)).collect();let mut lengths=vec![1usize;256];let mut rules=Vec::new();
- while rules.len()<MAX_RULES&&s.len()>1{
+ while rules.len()<budget&&s.len()>1{
    let mut counts=HashMap::<Rule,usize>::new();let mut run=1usize;
    for w in s.windows(2){let(a,b)=(w[0],w[1]);if a==b{run+=1;if run%2!=0{continue}}else{run=1}
       if lengths[a as usize]+lengths[b as usize]<=MAX_EXP{*counts.entry((a,b)).or_default()+=1}}
@@ -25,6 +26,7 @@ fn train(sample:&[u8])->Vec<Rule>{
    debug_assert_eq!(out.len(),s.len()-count);lengths.push(lengths[a as usize]+lengths[b as usize]);rules.push((a,b));s=out;
  }rules
 }
+#[cfg(test)]fn train(sample:&[u8])->Vec<Rule>{train_budget(sample,DEFAULT_RULES)}
 #[derive(Default)]struct Node{edges:Vec<(u8,usize)>,id:Option<u16>}
 struct Trie{first:[usize;256],nodes:Vec<Node>,max:usize}
 impl Trie{
@@ -98,10 +100,10 @@ fn decode(mut r:impl Read,mut w:impl Write)->io::Result<()>{
 }
 fn main()->io::Result<()>{
  let a:Vec<String>=env::args().collect();match a.get(1).map(String::as_str){
- Some("train")if a.len()==4=>{let mut sample=Vec::new();File::open(&a[2])?.take(MAX_SAMPLE as u64+1).read_to_end(&mut sample)?;if sample.len()>MAX_SAMPLE{return Err(bad("training sample cap"))}let rules=train(&sample);let mut w=BufWriter::new(File::create(&a[3])?);write_rules(&mut w,&rules)?;w.flush()?;eprintln!("TRAIN bytes={} rules={}",sample.len(),rules.len());Ok(())},
+ Some("train")if a.len()==4||a.len()==5=>{let budget=if a.len()==5{a[4].parse::<usize>().map_err(|_|bad("invalid rule budget"))?}else{DEFAULT_RULES};if budget>MAX_RULES{return Err(bad("rule budget cap"))}let mut sample=Vec::new();File::open(&a[2])?.take(MAX_SAMPLE as u64+1).read_to_end(&mut sample)?;if sample.len()>MAX_SAMPLE{return Err(bad("training sample cap"))}let rules=train_budget(&sample,budget);let mut w=BufWriter::new(File::create(&a[3])?);write_rules(&mut w,&rules)?;w.flush()?;eprintln!("TRAIN bytes={} rules={}",sample.len(),rules.len());Ok(())},
  Some("fixed"|"huff"|"optfixed"|"opthuff")if a.len()==5=>{let mut d=BufReader::new(File::open(&a[4])?);let rules=read_rules(&mut d)?;let mut tail=[0];if d.read(&mut tail)?!=0{return Err(bad("trailing dictionary bytes"))}let w=BufWriter::new(File::create(&a[3])?);let mode=u8::from(a[1].ends_with("huff"));if a[1].starts_with("opt"){encode_opt(&a[2],&rules,mode,w)}else{encode(&a[2],&rules,mode,w)}},
  Some("decode")if a.len()==4=>{let w:Box<dyn Write>=if a[3]=="-"{Box::new(io::stdout().lock())}else{Box::new(File::create(&a[3])?)};decode(BufReader::new(File::open(&a[2])?),BufWriter::new(w))},
- _=>Err(bad("usage: ixg2 train SAMPLE DICT | fixed|huff|optfixed|opthuff INPUT ARCHIVE DICT | decode ARCHIVE OUTPUT"))}
+ _=>Err(bad("usage: ixg2 train SAMPLE DICT [RULE_BUDGET] | fixed|huff|optfixed|opthuff INPUT ARCHIVE DICT | decode ARCHIVE OUTPUT"))}
 }
 #[cfg(test)]mod tests{use super::*;use std::io::Cursor;
  #[test]fn training_parse(){let x=b"abcabcabcabc".repeat(10000);let rules=train(&x[..65536]);let ex=expand(&rules).unwrap();let t=Trie::new(&ex);let mut y=Vec::new();assert_eq!(parse(Cursor::new(&x),&t,|id|{y.extend_from_slice(&ex[id as usize]);Ok(())}).unwrap(),x.len()as u64);assert_eq!(x,y);}
@@ -114,5 +116,6 @@ fn main()->io::Result<()>{
  let rules=[(97,98),(98,97),(256,97),(257,98),(97,97)];let ex=expand(&rules).unwrap();let t=Trie::new(&ex);let w:Vec<_>=(0..ex.len()).map(|i|(i%7+1)as u8).collect();
  for len in 0..=9{for mask in 0..1usize<<len{let x:Vec<_>=(0..len).map(|i|97+((mask>>i)&1)as u8).collect();let(r,c)=shortest(&x,&t,&ex,&w);assert_eq!(c,brute(&x,&ex,&w));assert_eq!(r.iter().flat_map(|&id|ex[id as usize].iter().copied()).collect::<Vec<_>>(),x)}}
  }
+ #[test]fn budget_prefix(){let x=b"abcd abc ab ac xy ".repeat(200);let a=train_budget(&x,4);let b=train_budget(&x,20);assert_eq!(a,b[..a.len()]);assert!(a.len()<=4&&b.len()<=20);assert!(train_budget(&x,0).is_empty());}
  #[test]fn invalid_rules(){assert!(expand(&[(256,0)]).is_err());let mut r=vec![(0,0)];for i in 0..8{r.push((256+i,256+i))}assert!(expand(&r).is_err());}
 }

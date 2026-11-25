@@ -1,0 +1,5 @@
+# Dictionary capacity and training coverage
+
+E0025 proves a whole-stream concatenation DAG with 1024 rules can reduce enwik9 to 472,797,366 bytes, with 433,839,342 root references and only 7,532 bytes of metadata. The average root expands to about 2.305 bytes. The larger opportunity is reducing root count or predictable root information, not shrinking an already tiny dictionary header.
+
+E0027 compares six dictionaries: original 64 KiB prefix/1024 rules; contiguous 256 KiB prefix/1024 and /4096; diverse 256 KiB sample/1024, /4096, /8192. Diverse sample concatenates four disjoint 64 KiB regions (offsets 0, 30M, 40M, 80M); three artificial sample junctions are allowed, but all rules are charged in the archive and decoder cannot see the sample. Held-out regions at 1M, 50M and 10M (last length 16 MiB) are disjoint from every training sample. Training is deterministic; budget prefixes on identical samples are nested. Larger dictionaries increase literal/root alphabet width and model overhead, so improvement is not guaranteed. Huffman root archives charge all rules and root frequencies, not just used rules. Benchmark before scaling to full enwik9. No novelty claim.
