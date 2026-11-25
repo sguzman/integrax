@@ -23,3 +23,5 @@ E0063 independent six/eight-digit key reference 40/40 synthetic exact, mode15 re
 E0064 [CI 45711004123](https://github.com/sguzman/integrax/actions/runs/45711004123) queued at checkpoint; reused E0052 target validation regions. No gain yet.
 
 [E0055/V0011](../experiments/records/E0055.md) strict isolated full enwik9 passed; F0009 accepted 243,589,465 B (75.64% reduction). 144546785 bytes recurrence-generated. E0064 pending.
+
+[E0064](../experiments/records/E0064.md) 10/10 strict, expanded training and dual recurrence improve both reused target regions. Larger dictionary wins payload in both, archive in one; select 16384-rule dual16 for E0065 because full dictionary charged once. Strict isolated full workflow authored; no full result claimed. Close C11 after final full measurement; preserve all negative ablations.

@@ -1,0 +1,262 @@
+{
+  "id": "E0064",
+  "campaign": "C11",
+  "scope": "two reused enwik9 validation regions, five dictionary/recurrence configurations",
+  "status": "roundtrip-verified",
+  "revision": "f32c88cee598d98562c6c8f888cebdf8dcda30da",
+  "run": 45711004123,
+  "job": 139545082913,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "training": {
+    "train-small_sha256": "ba1d4361a56d6e6a688ee4f125465e51b47b361194fbe64349f098860a8fc6fc",
+    "train-large_sha256": "65dd770568be321494dcc88019e75ee92fc67fbcf75adc1abd8a35a9504a1895"
+  },
+  "dictionaries": {
+    "small-8192": {
+      "sample_bytes": 262144,
+      "rules": 8192,
+      "seconds": 17.57,
+      "rss_bytes": 5042176,
+      "bytes": 32770,
+      "sha256": "5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518"
+    },
+    "large-8192": {
+      "sample_bytes": 524288,
+      "rules": 8192,
+      "seconds": 39.25,
+      "rss_bytes": 7958528,
+      "bytes": 32770,
+      "sha256": "f1f25aeb17b4f761c1bd39089eaf03601802a09c4f835cc9315c987666af9cb2"
+    },
+    "large-16384": {
+      "sample_bytes": 524288,
+      "rules": 16384,
+      "seconds": 68.98,
+      "rss_bytes": 7958528,
+      "bytes": 65538,
+      "sha256": "3651e9523e3ddc5db5e2d112832aca59794b9bc12dc433467cd14dc205c3cf9d"
+    }
+  },
+  "nested_rule_prefix_verified": true,
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "bash experiments/ixg2/recurrence-combined.sh"
+  ],
+  "unit_tests": 20,
+  "rows": [
+    {
+      "offset": 200000000,
+      "bytes": 16777216,
+      "modes": {
+        "small-8192 history16": {
+          "model": {
+            "mode": 13,
+            "roots": 4417846,
+            "copies": 36936,
+            "copied_bytes": 1141888,
+            "rules": 8192,
+            "minimum": 16
+          },
+          "encode_seconds": 7.26,
+          "encode_rss_bytes": 76124160,
+          "archive_bytes": 4668015,
+          "archive_sha256": "8955a31080b564de20b9d452842d90258d7a663b1b70fa93d08469df6e541383",
+          "decode_seconds": 8.39,
+          "decode_rss_bytes": 73482240,
+          "decoded_sha256": "593b05e9623013c7676211f476a9a415feb4e89daa762c43a250b41eb31b6bc3",
+          "byte_equal": true
+        },
+        "small-8192 dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 4367020,
+            "copies": 43084,
+            "copied_bytes": 1320792,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 13135
+          },
+          "encode_seconds": 7.51,
+          "encode_rss_bytes": 84615168,
+          "archive_bytes": 4631422,
+          "archive_sha256": "4325fb1b6288e9037e29ee98b0f4e23e1e26a6ac1af92f19d04ccc5d674b923b",
+          "decode_seconds": 8.68,
+          "decode_rss_bytes": 81731584,
+          "decoded_sha256": "593b05e9623013c7676211f476a9a415feb4e89daa762c43a250b41eb31b6bc3",
+          "byte_equal": true
+        },
+        "large-8192 dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 4177877,
+            "copies": 41422,
+            "copied_bytes": 1282448,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 12671
+          },
+          "encode_seconds": 7.38,
+          "encode_rss_bytes": 84086784,
+          "archive_bytes": 4590433,
+          "archive_sha256": "95d3ac3f1dd7db9d5d5f8a6f4a4d373c8fb5c5e3b93573988a12545449b31e7c",
+          "decode_seconds": 7.96,
+          "decode_rss_bytes": 81793024,
+          "decoded_sha256": "593b05e9623013c7676211f476a9a415feb4e89daa762c43a250b41eb31b6bc3",
+          "byte_equal": true
+        },
+        "large-16384 dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 3780736,
+            "copies": 39055,
+            "copied_bytes": 1212532,
+            "rules": 16384,
+            "minimum": 16,
+            "alternate_copies": 12003
+          },
+          "encode_seconds": 7.43,
+          "encode_rss_bytes": 107032576,
+          "archive_bytes": 4588172,
+          "archive_sha256": "7b41b3d483273efc327c63f13144184e16cffda064169a6bfb5323ee0c292150",
+          "decode_seconds": 8.17,
+          "decode_rss_bytes": 101695488,
+          "decoded_sha256": "593b05e9623013c7676211f476a9a415feb4e89daa762c43a250b41eb31b6bc3",
+          "byte_equal": true
+        },
+        "large-16384 mediantree": {
+          "model": {
+            "mode": 12,
+            "roots": 4096093,
+            "rules": 16384,
+            "ideal_bits": 37540265.455
+          },
+          "encode_seconds": 7.95,
+          "encode_rss_bytes": 81002496,
+          "archive_bytes": 4758085,
+          "archive_sha256": "308048545c610fbe6ac36f3378ad8029409dbeb4d6f142bc6a25b02561727d66",
+          "decode_seconds": 7.36,
+          "decode_rss_bytes": 75354112,
+          "decoded_sha256": "593b05e9623013c7676211f476a9a415feb4e89daa762c43a250b41eb31b6bc3",
+          "byte_equal": true
+        }
+      },
+      "sha256": "593b05e9623013c7676211f476a9a415feb4e89daa762c43a250b41eb31b6bc3"
+    },
+    {
+      "offset": 600000000,
+      "bytes": 16777216,
+      "modes": {
+        "small-8192 history16": {
+          "model": {
+            "mode": 13,
+            "roots": 4284721,
+            "copies": 47988,
+            "copied_bytes": 1716943,
+            "rules": 8192,
+            "minimum": 16
+          },
+          "encode_seconds": 6.88,
+          "encode_rss_bytes": 76275712,
+          "archive_bytes": 4517180,
+          "archive_sha256": "07a8e4083f8423a4db51ab541cbd646db0cfd5f415e089bcf58e145b6654bef3",
+          "decode_seconds": 7.94,
+          "decode_rss_bytes": 73506816,
+          "decoded_sha256": "74481b17049090611b91fdcd3f5fdcf677140dab346b504fb227f0ec0ecf88ff",
+          "byte_equal": true
+        },
+        "small-8192 dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 4214278,
+            "copies": 54602,
+            "copied_bytes": 1962273,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 18058
+          },
+          "encode_seconds": 6.96,
+          "encode_rss_bytes": 84676608,
+          "archive_bytes": 4471028,
+          "archive_sha256": "2873ba1fc276943bf5ee47fd0d76ac05fe7bebf96c9fe1fd89b1c961b3dd79f8",
+          "decode_seconds": 8.02,
+          "decode_rss_bytes": 81862656,
+          "decoded_sha256": "74481b17049090611b91fdcd3f5fdcf677140dab346b504fb227f0ec0ecf88ff",
+          "byte_equal": true
+        },
+        "large-8192 dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 4053273,
+            "copies": 53106,
+            "copied_bytes": 1919300,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 17715
+          },
+          "encode_seconds": 6.94,
+          "encode_rss_bytes": 84082688,
+          "archive_bytes": 4434918,
+          "archive_sha256": "664e4aa7eaa55b8ff327d76131a892ee5e836a325f606e621ba9c038299c5734",
+          "decode_seconds": 7.84,
+          "decode_rss_bytes": 81932288,
+          "decoded_sha256": "74481b17049090611b91fdcd3f5fdcf677140dab346b504fb227f0ec0ecf88ff",
+          "byte_equal": true
+        },
+        "large-16384 dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 3674615,
+            "copies": 50809,
+            "copied_bytes": 1854849,
+            "rules": 16384,
+            "minimum": 16,
+            "alternate_copies": 16802
+          },
+          "encode_seconds": 7.42,
+          "encode_rss_bytes": 107008000,
+          "archive_bytes": 4440728,
+          "archive_sha256": "1ddf2d0c473ca84a9a9014c441ec7853a0ff52953e01776116484db74c17d6d5",
+          "decode_seconds": 7.91,
+          "decode_rss_bytes": 101560320,
+          "decoded_sha256": "74481b17049090611b91fdcd3f5fdcf677140dab346b504fb227f0ec0ecf88ff",
+          "byte_equal": true
+        },
+        "large-16384 mediantree": {
+          "model": {
+            "mode": 12,
+            "roots": 4158658,
+            "rules": 16384,
+            "ideal_bits": 36825472.685
+          },
+          "encode_seconds": 7.53,
+          "encode_rss_bytes": 81014784,
+          "archive_bytes": 4668736,
+          "archive_sha256": "21fa873a37da7f6fa76f8d22faccb7fd034c7990b82837513d50c98c05a52e28",
+          "decode_seconds": 7.01,
+          "decode_rss_bytes": 75456512,
+          "decoded_sha256": "74481b17049090611b91fdcd3f5fdcf677140dab346b504fb227f0ec0ecf88ff",
+          "byte_equal": true
+        }
+      },
+      "sha256": "74481b17049090611b91fdcd3f5fdcf677140dab346b504fb227f0ec0ecf88ff"
+    }
+  ],
+  "selection": {
+    "candidate": "large-16384 dual16",
+    "reason": "both regions have smaller coded payload than large-8192 dual16; dictionary charged once on uninterrupted full stream",
+    "payload_savings_vs_large8192": [
+      35029,
+      26958
+    ],
+    "full_gain_unverified": true
+  },
+  "limitations": [
+    "reused validation regions, not fresh holdout",
+    "same implementation authentic decoder",
+    "sample payload savings do not establish full gain"
+  ]
+}
