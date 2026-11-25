@@ -8,7 +8,7 @@
 - 370 independent IXG2 Rust/BigInt archive equality/cross-decodes verified, modes 3–19. E0069 passed 20/20, E0067 40/40. Nix pin/build verified; dashboard source verified, live deployment inaccessible/unverified.
 - C13 [radix context permutations](research/CAMPAIGN-13.md), IXB1 BWT/MTF/zero runs. E0070 independent naive reference passed 9841 strings/29523 frames. [E0070](experiments/records/E0070.md) 45/45 independent cross-codecs passed; [E0071](experiments/records/E0071.md) 36/36 exact, BWT+xz 4,378,540 B on 16 MiB (3.35% below raw xz, 7.17% below IXG2 dual16); external wrapped, sample only.
 
-Next: collect E0074; independently verify IXB2 framing, accept full blockwise result only on isolated exact evidence. No workers.
+Next: collect E0074/E0076/E0078; accept full blockwise result only on isolated exact evidence, use fresh diagnostics to select further improvement. No workers.
 
 [E0072](experiments/records/E0072.md) 6/6 exact and 6/6 append rejects; mode4 4,273,508 B on 16 MiB, wins all 3 regions vs E0071. E0074 IXB2 full native 16 MiB blockwise with raw fallback, strict isolated byte comparison authored. Initial CI 45713806361 contains a test fixture assumption identified by independent oracle (ascending 128 bytes actually encodes to 127 B); corrected fixture checks guaranteed three-byte raw tail. Corrected E0074 [CI 45713883869](https://github.com/sguzman/integrax/actions/runs/45713883869), running at checkpoint. [Theory](theory/context-permutation-rank-coding.md). No performance claim; E0073 independent native rank reference 30 exact frames, 30 append rejects, 12 run bounds, all 29523 earlier frames reproduced; [CI 45713436133](https://github.com/sguzman/integrax/actions/runs/45713436133) passed 30/30 independent byte-identical frames and both-direction cross-decodes. IXB1 total 75 independent cross-codecs, separate from IXG2 370.
 
@@ -17,3 +17,5 @@ E0075 IXB2 independent reference 30 synthetic exact, 3448 truncation and 224 mal
 E0076 IXB1 rank-token context ablation (mode5 two magnitude buckets, mode6 exact previous rank, mode4 matched), [CI 45714430072](https://github.com/sguzman/integrax/actions/runs/45714430072), in_progress at checkpoint. [Theory](theory/rank-token-context.md). IXB2 remains mode4; independent new modes verified in E0077.
 
 E0077 independent mode5/6 rank context reference 30/30 synthetic frames/append rejects, earlier 30 mode3/4 frames and 12 run bounds reproduced; [CI 45714477638](https://github.com/sguzman/integrax/actions/runs/45714477638) passed 30/30 independent byte-identical frames and both-direction cross-decodes.
+
+E0078 rank cost decomposition on three fresh 4 MiB enwik9 regions authored, empirical oracle by field (not realizable size), nine complete exact comparisons; CI pending. [Theory](theory/rank-cost-decomposition.md). No wire change.
