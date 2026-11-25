@@ -2,8 +2,8 @@
 
 | ID | Research direction | Status |
 |---|---|---|
-| [C01](CAMPAIGN-01.md) | Measurement and near-power primitives | Active |
-| C02 | Sparse signed sums of powers and recursive residuals | Candidate |
+| [C01](CAMPAIGN-01.md) | Measurement and near-power primitives | [Closed](CAMPAIGN-01-CLOSURE.md) |
+| [C02](CAMPAIGN-02.md) | Geometric sums and sparse arithmetic corrections | Active |
 | C03 | Multiplicative structure and factorization | Candidate |
 | C04 | Mixed radix and numeral systems | Candidate |
 | C05 | Rational and Diophantine approximations | Candidate |

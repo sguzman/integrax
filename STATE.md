@@ -1,16 +1,10 @@
 # Continuation state
 
-2026-11-25 — C01 active. Bootstrap verified; first control measurements completed and independently reproduced.
-
-Read AGENTS.md and [C01](research/CAMPAIGN-01.md).
+2026-11-25 — C01 closed; C02 active. Read AGENTS.md and [C02](research/CAMPAIGN-02.md).
 
 ## Completed
-- E0001: 20/20 synthetic IX02 round trips, 64–16,384 bytes; exact/near fourth-power archives 4,114/4,117 bytes at 16 KiB; random and repeated text 16,397 bytes. [Evidence](experiments/records/E0001.md). Source blob matches locally tested file.
-- V0001: 20/20 identical independently encoded Rust archives and independent decoded byte comparisons passed. [CI evidence](experiments/records/E0001-verification.md). Dependency lock captured.
-- [IX02 density bound](theory/IX02-density.md): uniform-input upper bound for net savings, elementary derivation.
-- Published enwik8/enwik9 reference digests recorded; bounded acquisition script and authentic slice workflow authored, results pending.
+- C01: [closure](research/CAMPAIGN-01-CLOSURE.md). E0001/V0001: 20 synthetic round trips independently reproduced. E0002: 12 authentic enwik8 slices exact round trips; IX02 raw fallback in every case; gzip wins all. Published MD5/SHA-1 verified; SHA-256 2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8. Locked Rust cross-check CI passed.
+- C02 instantiated: [geometric sum identity and modal correction lemma](theory/geometric-sums.md).
 
 ## Next
-Check authentic corpus controls workflow, preserve actual SHA-256 and measurements or failure. Check locked Rust CI. M1 full enwik9 acquisition and Nix lock remain pending; no direct container network or Nix. M3 evaluate evidence and scaling, close C01 with limitations; next candidate geometric sums (periodic integers) and sparse expressions. No need to repeat E0001.
-
-Full-corpus frontier empty. Official record 100,424,672 bytes confirmed 2026-11-25; award target <99,420,425 bytes. Dashboard deployment unverified. No workers assigned.
+C02 M1: implement IX03 periodic template plus sparse corrections in Rust; measure actual archives on repeated, mutated, random and authentic Wikipedia slices, and verify exact bytes. M2 analyze bounds and scaling. Shared infrastructure: full enwik9 acquisition/hash and conventional full-target baseline; Nix lock pending; dashboard deployment unverified. No full-target Integrax record. No worker assigned.
