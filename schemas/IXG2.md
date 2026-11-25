@@ -61,3 +61,7 @@ Identical to mode 15 except after each copy length, encode a patch flag using ad
 ## Extension: mode 19, adaptive sparse correction operands
 
 Identical to mode 18, including encoder parsing and patch flags. Each eight-bit correction position and residual is instead encoded by a separate binary prefix count tree, initialized (1,1) per node (1..255), with existing update/rescale. Start p=1 per field and advance p=2p+b. Update only for actually coded patch operands. Both trees unconditional, no extra metadata. All bounds and canonical replay unchanged. Older decoders reject mode 19.
+
+## Extension: mode 20, root-conditioned mixture
+
+Same mode15 parse and recurrence wire decisions, with the root probability extension specified in [theory](../theory/root-conditioned-arithmetic.md). No patch flag. Older decoders reject mode20. Prior modes unchanged.

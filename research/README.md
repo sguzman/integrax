@@ -15,5 +15,6 @@
 | [C11](CAMPAIGN-11.md) | Decoder-derived arithmetic recurrences | [Closed](CAMPAIGN-11-CLOSURE.md) |
 | [C12](CAMPAIGN-12.md) | Sparse-corrected arithmetic recurrences | [Closed](CAMPAIGN-12-CLOSURE.md) |
 | [C13](CAMPAIGN-13.md) | Radix context permutations and rank descriptions | [Closed](CAMPAIGN-13-CLOSURE.md) |
+| [C14](CAMPAIGN-14.md) | Root-conditioned arithmetic descriptions | Active |
 
 Candidates are not commitments or results. Instantiate when justified; pivot freely within mission. Stable IDs, explicit milestones and closure records. See [template](CAMPAIGN-TEMPLATE.md).
