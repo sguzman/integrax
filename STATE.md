@@ -10,4 +10,4 @@
 
 Next: collect E0065/E0071; close C11, and assess actual context permutation gains against matched external controls. No workers.
 
-E0072 IXB1 native rank interval modes3/4 authored (bucketed rank model, adaptive zero-run exponents), six exact authentic reconstructions and append rejects pending. [Theory](theory/context-permutation-rank-coding.md). No performance claim; independent interval verification not yet established.
+E0072 IXB1 native rank interval modes3/4 authored (bucketed rank model, adaptive zero-run exponents), six exact authentic reconstructions and append rejects [CI 45713327312](https://github.com/sguzman/integrax/actions/runs/45713327312), running at checkpoint. [Theory](theory/context-permutation-rank-coding.md). No performance claim; E0073 independent native rank reference 30 exact frames, 30 append rejects, 12 run bounds, all 29523 earlier frames reproduced; Rust cross-codec authored, pending.

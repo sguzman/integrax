@@ -1,0 +1,257 @@
+{
+  "id": "E0073",
+  "campaign": "C13",
+  "execution": "V8 isolate",
+  "status": "roundtrip-verified",
+  "observations": {
+    "rows": [
+      {
+        "bytes": 0,
+        "kind": "constant",
+        "mode": 3,
+        "archive_bytes": 17,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 0,
+        "kind": "constant",
+        "mode": 4,
+        "archive_bytes": 17,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 0,
+        "kind": "periodic",
+        "mode": 3,
+        "archive_bytes": 17,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 0,
+        "kind": "periodic",
+        "mode": 4,
+        "archive_bytes": 17,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 0,
+        "kind": "xorshift",
+        "mode": 3,
+        "archive_bytes": 17,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 0,
+        "kind": "xorshift",
+        "mode": 4,
+        "archive_bytes": 17,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 1,
+        "kind": "constant",
+        "mode": 3,
+        "archive_bytes": 19,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 1,
+        "kind": "constant",
+        "mode": 4,
+        "archive_bytes": 19,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 1,
+        "kind": "periodic",
+        "mode": 3,
+        "archive_bytes": 19,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 1,
+        "kind": "periodic",
+        "mode": 4,
+        "archive_bytes": 19,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 1,
+        "kind": "xorshift",
+        "mode": 3,
+        "archive_bytes": 19,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 1,
+        "kind": "xorshift",
+        "mode": 4,
+        "archive_bytes": 19,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 7,
+        "kind": "constant",
+        "mode": 3,
+        "archive_bytes": 22,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 7,
+        "kind": "constant",
+        "mode": 4,
+        "archive_bytes": 20,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 7,
+        "kind": "periodic",
+        "mode": 3,
+        "archive_bytes": 23,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 7,
+        "kind": "periodic",
+        "mode": 4,
+        "archive_bytes": 23,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 7,
+        "kind": "xorshift",
+        "mode": 3,
+        "archive_bytes": 25,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 7,
+        "kind": "xorshift",
+        "mode": 4,
+        "archive_bytes": 25,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 64,
+        "kind": "constant",
+        "mode": 3,
+        "archive_bytes": 26,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 64,
+        "kind": "constant",
+        "mode": 4,
+        "archive_bytes": 20,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 64,
+        "kind": "periodic",
+        "mode": 3,
+        "archive_bytes": 30,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 64,
+        "kind": "periodic",
+        "mode": 4,
+        "archive_bytes": 25,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 64,
+        "kind": "xorshift",
+        "mode": 3,
+        "archive_bytes": 84,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 64,
+        "kind": "xorshift",
+        "mode": 4,
+        "archive_bytes": 86,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 512,
+        "kind": "constant",
+        "mode": 3,
+        "archive_bytes": 29,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 512,
+        "kind": "constant",
+        "mode": 4,
+        "archive_bytes": 21,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 512,
+        "kind": "periodic",
+        "mode": 3,
+        "archive_bytes": 35,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 512,
+        "kind": "periodic",
+        "mode": 4,
+        "archive_bytes": 27,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 512,
+        "kind": "xorshift",
+        "mode": 3,
+        "archive_bytes": 553,
+        "byte_equal": true,
+        "append_rejected": true
+      },
+      {
+        "bytes": 512,
+        "kind": "xorshift",
+        "mode": 4,
+        "archive_bytes": 557,
+        "byte_equal": true,
+        "append_rejected": true
+      }
+    ],
+    "run_bounds": 12
+  },
+  "previous_frames_reproduced": 29523,
+  "limitations": [
+    "synthetic only",
+    "Rust cross-codec pending",
+    "native rank run bounds tested directly in JS, not Rust"
+  ]
+}
