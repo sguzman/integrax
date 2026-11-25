@@ -1,17 +1,15 @@
 # Continuation state
 
-2026-11-25 — Bootstrap complete. Research mission ongoing.
+2026-11-25 — C01 active. Bootstrap verified; first control measurements completed.
 
-Active: [C01 — Measurement and near-power primitives](research/CAMPAIGN-01.md).
+Read AGENTS.md and [C01](research/CAMPAIGN-01.md).
 
-Next: M1 — pin Nix inputs and obtain official corpus, verify identity, and establish matched control/baseline measurements. If corpus unavailable, proceed with labeled synthetic controls and small inputs. M2 — implement scalable arbitrary-precision search and compare real serialized sizes. M3 — characterize scaling and choose next campaign.
+## Completed
+- E0001: arbitrary-precision IX02 oracle (Node standard library, no npm); 20/20 synthetic round trips, 64–16,384 bytes. Largest exact/near fourth-power archives 4,114/4,117 bytes; random and repeated text 16,397 bytes. [Evidence](experiments/records/E0001.md).
+- [IX02 density bound](theory/IX02-density.md): uniform-input upper bound for net savings under the fixed serialization. Elementary derivation, not novelty.
+- Bootstrap Rust CI passed (run 45680262853).
 
-## Verified bootstrap
-- Main bootstrap commit 5b406ab7708721e06a36163684fb375184c252c2; all 31 new files and existing license read back in remote tree. Both JSON schemas parsed successfully.
-- [CI run 45680262853](https://github.com/sguzman/integrax/actions/runs/45680262853): cargo test --locked and cargo build --release --locked passed.
-- IX01 arithmetic mode is limited to 16 input bytes; it selects shorter payloads relative to framed raw mode, not necessarily net compression relative to original input. It is not a full-target compressor.
+## Next
+M1 corpus and Nix lock still pending: container has no Rust/Nix or direct network. Seek official corpus via a reproducible, bounded CI/manual acquisition route without committing corpus; if inaccessible, use labeled controls and continue. M2 port IX02 to Rust arbitrary precision; cross-check deterministic archive hashes against E0001 and measure independent decoder. M3 evaluate authentic corpus prefixes if available, scale and close C01 with evidence. Next candidate: geometric sums (periodic integers) and sparse expressions; not yet active.
 
-## Open items
-No verified full enwik9 result. Dataset and digest not yet verified. Nix shell authored but lock/build not yet verified. Static dashboard files committed; live Pages deployment not configured/verified. No workers assigned. Official reference threshold 100,424,672 bytes as of 2026-11-25.
-
-Read AGENTS.md before continuing; do not restart bootstrap without a concrete defect.
+Full-corpus frontier remains empty. Official reference 100,424,672 bytes confirmed from https://prize.hutter1.net/ on 2026-11-25; award target <99,420,425 bytes. Dashboard deployment unverified. No workers assigned. 
