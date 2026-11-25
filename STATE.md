@@ -10,3 +10,5 @@
 Next: collect E0083 mode20 matched sample trial; no full-corpus run until consistent gain and independent verification. No workers or pending full benchmarks. No external submission. Avoid disclosing new competition-critical innovations outside the existing owner-authorized repository; owner has not authorized visibility change.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
+
+Attempt 1 [CI 45724016441](https://github.com/sguzman/integrax/actions/runs/45724016441/job/139589149431) stopped in unit tests: 20 passed, one failed because the invalid-mode fixture wrote newly supported mode20 into an empty frame. No authentic compression measurements. Corrected fixture to permanently unsupported byte 255; added mode20 probability bounds, suffix-model equivalence, and recurrence-copy root-state checks. Rerun pending.

@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 cd "$(dirname "$0")/../.."
+# Run corrected invalid-header fixture and rootmix probability tests before measurement.
 cargo test --locked --release --bin ixg2
 cargo build --locked --release --bin ixg2
 bin=target/release/ixg2
