@@ -8,10 +8,10 @@
 - E0042/E0046/E0051/[E0054](experiments/records/E0054.md): 230 independent Rust/BigInt archive equality and cross-decodes verified including E0056; two long periodic fixtures crossed ring capacity. E0059 exact maximum-distance boundary passed.
 - Nix pin/build verified; dashboard source contract verified, live deployment inaccessible/unverified. No settings changed.
 
-Next: collect E0055/E0058/E0060, close C10 after final combined full run. C11 assess dual predictor and independently verify mode15 if justified. No workers.
+Next: collect E0055/E0058/E0061, close C10 after final combined full run. C11 assess context specificity and independently verify mode15. No workers.
 
 [E0056](experiments/records/E0056.md) 38/38 independent strict cross-codec passed, mode14 adaptive length, including two ring-wrap cases. [E0057](experiments/records/E0057.md) 9/9 strict, adaptive16 wins all 3 regions, 16 MiB 4,739,779 B (0.25% below fixed16), retain for next structural trials; maximum-distance boundary now verified in E0059. [Theory](theory/recurrence-length-coding.md).
 
 E0059 exact distance boundary (W-1,W,W+1) independent reference 6/6 synthetic exact, trace confirms inclusive W and rejects stale W+1. Rust direct ring test and 6/6 cross-codecs passed, [E0059](experiments/records/E0059.md).
 
-E0060 mode15 two-candidate recurrence (charged selector, adaptive length) authored, nine strict authentic comparisons [CI 45710177577](https://github.com/sguzman/integrax/actions/runs/45710177577), job 139542249499, running at checkpoint. [Theory](theory/two-candidate-recurrences.md). E0061 independent mode15 oracle passed 40 synthetic exact roundtrips; 74 earlier recurrence observations unchanged. Cross-codec CI authored, pending.
+[E0060](experiments/records/E0060.md) 9/9 strict, dual16 wins all 3 regions, 16 MiB 4,716,953 B (0.48% below length16), 11990 older selections. [Theory](theory/two-candidate-recurrences.md). E0061 independent mode15 oracle passed 40 synthetic exact roundtrips; 74 earlier recurrence observations unchanged. [Cross-codec CI 45710509602](https://github.com/sguzman/integrax/actions/runs/45710509602), pending.

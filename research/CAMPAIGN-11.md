@@ -11,3 +11,5 @@ E0059 targeted maximum-distance verification: independent traces at W-1,W,W+1 fo
 [E0057](../experiments/records/E0057.md) 9/9 strict, adaptive16 improves all three regions, 16 MiB 4739779 B (0.25% below fixed16); same parse. Retain adaptive length for structural predictor trials rather than scale the small isolated gain.
 
 M4: E0060 [two-candidate recurrences](../theory/two-candidate-recurrences.md) mode15, charged selection between last two endpoints, same adaptive length. Rust and CI authored, pending; compare coverage, alternate choices and complete archive costs.
+
+[E0060](../experiments/records/E0060.md) 9/9 strict, dual16 wins all 3 regions, 16 MiB 4716953 B (0.48% below length16), 11990 older selections. E0061 independent reference 40 synthetic cases, [CI 45710509602](https://github.com/sguzman/integrax/actions/runs/45710509602) pending. Retain dual model for structural trials.
