@@ -8,3 +8,5 @@
 - E0029/E0030 full enwik9 greedy and weighted 8192 diverse dictionary matrix [CI 45703123838](https://github.com/sguzman/integrax/actions/runs/45703123838), queued at checkpoint, revision 79f5da140a04ca4f62207c30acebb3151ff52b8a. Exact sample/dictionary hashes checked against E0027, all costs charged, isolated decode with separate dictionary removed.
 
 Next: retrieve full-large workflow status/logs, persist measured E0029/E0030 and promote only verified improvements. Evaluate marginal gains then pursue structural improvement or close C07/pivot. Nix pin/dashboard deployment unverified. No workers.
+
+C08 opened in parallel with C07 full-run measurement: [E0031](experiments/records/E0031.md) fixed CRT grammar, 65536 exhaustive two-byte checks and 24 synthetic roundtrips executed in V8 isolate. [Theory](theory/crt-residue-cost.md). E0032 authentic replay workflow authored, pending. Next retrieve C07 and CRT evidence; no new full-target result.

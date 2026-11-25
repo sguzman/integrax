@@ -1,0 +1,341 @@
+{
+  "id": "E0031",
+  "campaign": "C08",
+  "scope": "synthetic and exhaustive small controls",
+  "status": "roundtrip-verified",
+  "execution": "V8 isolate",
+  "observations": {
+    "exhaustive": 65536,
+    "rows": [
+      {
+        "kind": "xorshift",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "choice": null,
+        "candidate_bytes": 77,
+        "byte_equal": true
+      },
+      {
+        "kind": "equal_residues",
+        "bytes": 64,
+        "archive_bytes": 17,
+        "choice": {
+          "tags": [
+            0,
+            2,
+            2
+          ],
+          "residue_bytes": [
+            3,
+            3,
+            3
+          ]
+        },
+        "candidate_bytes": 17,
+        "byte_equal": true
+      },
+      {
+        "kind": "two_small",
+        "bytes": 64,
+        "archive_bytes": 35,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            1,
+            1,
+            21
+          ]
+        },
+        "candidate_bytes": 35,
+        "byte_equal": true
+      },
+      {
+        "kind": "near_modulus",
+        "bytes": 64,
+        "archive_bytes": 53,
+        "choice": {
+          "tags": [
+            1,
+            0,
+            1
+          ],
+          "residue_bytes": [
+            22,
+            20,
+            22
+          ]
+        },
+        "candidate_bytes": 53,
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "choice": null,
+        "candidate_bytes": 76,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 64,
+        "archive_bytes": 70,
+        "choice": null,
+        "candidate_bytes": 77,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 256,
+        "archive_bytes": 263,
+        "choice": null,
+        "candidate_bytes": 270,
+        "byte_equal": true
+      },
+      {
+        "kind": "equal_residues",
+        "bytes": 256,
+        "archive_bytes": 18,
+        "choice": {
+          "tags": [
+            0,
+            2,
+            2
+          ],
+          "residue_bytes": [
+            3,
+            3,
+            3
+          ]
+        },
+        "candidate_bytes": 18,
+        "byte_equal": true
+      },
+      {
+        "kind": "two_small",
+        "bytes": 256,
+        "archive_bytes": 99,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            1,
+            1,
+            84
+          ]
+        },
+        "candidate_bytes": 99,
+        "byte_equal": true
+      },
+      {
+        "kind": "near_modulus",
+        "bytes": 256,
+        "archive_bytes": 182,
+        "choice": {
+          "tags": [
+            1,
+            0,
+            1
+          ],
+          "residue_bytes": [
+            86,
+            84,
+            86
+          ]
+        },
+        "candidate_bytes": 182,
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating",
+        "bytes": 256,
+        "archive_bytes": 263,
+        "choice": null,
+        "candidate_bytes": 269,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 256,
+        "archive_bytes": 263,
+        "choice": null,
+        "candidate_bytes": 269,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 1024,
+        "archive_bytes": 1031,
+        "choice": null,
+        "candidate_bytes": 1041,
+        "byte_equal": true
+      },
+      {
+        "kind": "equal_residues",
+        "bytes": 1024,
+        "archive_bytes": 18,
+        "choice": {
+          "tags": [
+            0,
+            2,
+            2
+          ],
+          "residue_bytes": [
+            3,
+            3,
+            3
+          ]
+        },
+        "candidate_bytes": 18,
+        "byte_equal": true
+      },
+      {
+        "kind": "two_small",
+        "bytes": 1024,
+        "archive_bytes": 356,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            1,
+            1,
+            340
+          ]
+        },
+        "candidate_bytes": 356,
+        "byte_equal": true
+      },
+      {
+        "kind": "near_modulus",
+        "bytes": 1024,
+        "archive_bytes": 696,
+        "choice": {
+          "tags": [
+            1,
+            0,
+            1
+          ],
+          "residue_bytes": [
+            342,
+            340,
+            342
+          ]
+        },
+        "candidate_bytes": 696,
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating",
+        "bytes": 1024,
+        "archive_bytes": 1031,
+        "choice": null,
+        "candidate_bytes": 1040,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 1024,
+        "archive_bytes": 1031,
+        "choice": null,
+        "candidate_bytes": 1041,
+        "byte_equal": true
+      },
+      {
+        "kind": "xorshift",
+        "bytes": 4096,
+        "archive_bytes": 4103,
+        "choice": null,
+        "candidate_bytes": 4114,
+        "byte_equal": true
+      },
+      {
+        "kind": "equal_residues",
+        "bytes": 4096,
+        "archive_bytes": 18,
+        "choice": {
+          "tags": [
+            0,
+            2,
+            2
+          ],
+          "residue_bytes": [
+            3,
+            3,
+            3
+          ]
+        },
+        "candidate_bytes": 18,
+        "byte_equal": true
+      },
+      {
+        "kind": "two_small",
+        "bytes": 4096,
+        "archive_bytes": 1380,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            1,
+            1,
+            1364
+          ]
+        },
+        "candidate_bytes": 1380,
+        "byte_equal": true
+      },
+      {
+        "kind": "near_modulus",
+        "bytes": 4096,
+        "archive_bytes": 2744,
+        "choice": {
+          "tags": [
+            1,
+            0,
+            1
+          ],
+          "residue_bytes": [
+            1366,
+            1364,
+            1366
+          ]
+        },
+        "candidate_bytes": 2744,
+        "byte_equal": true
+      },
+      {
+        "kind": "alternating",
+        "bytes": 4096,
+        "archive_bytes": 4103,
+        "choice": null,
+        "candidate_bytes": 4112,
+        "byte_equal": true
+      },
+      {
+        "kind": "text",
+        "bytes": 4096,
+        "archive_bytes": 4103,
+        "choice": null,
+        "candidate_bytes": 4112,
+        "byte_equal": true
+      }
+    ]
+  },
+  "limitations": [
+    "same implementation",
+    "no hashes, timing or memory in isolate",
+    "authentic controls pending"
+  ]
+}
