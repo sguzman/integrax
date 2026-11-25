@@ -9,3 +9,5 @@
 Next: independent deep predictor cross-codec tests, collect E0045, pursue structural improvements rather than indiscriminate depth. Arithmetic payload integrity, Nix pin/dashboard deployment unverified. No workers.
 
 E0046 extended independent BigInt oracle to modes 9/10: 30 new synthetic roundtrips, all 90 prior observations reproduced. External cross-codec CI authored, pending.
+
+E0047 predictive-cost parsing experiment authored: mode 9 greedy vs lambda 0/2/8 bits per root, same on-disk mode and decoder. 12 held-out comparisons pending. [Theory](theory/adaptive-root-parsing.md). E0045 full [CI 45707004827](https://github.com/sguzman/integrax/actions/runs/45707004827) running; E0046 cross-codec [CI 45707079222](https://github.com/sguzman/integrax/actions/runs/45707079222) queued at last check.
