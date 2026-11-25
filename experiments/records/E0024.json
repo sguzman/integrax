@@ -1,0 +1,573 @@
+{
+  "id": "E0024",
+  "campaign": "C07",
+  "scope": "five held-out enwik8 regions; four modes each",
+  "status": "roundtrip-verified",
+  "revision": "0f18084ae0ebcb5694c6427e37ba486266727b9d",
+  "run": 45702174176,
+  "job": 139514827128,
+  "corpus": {
+    "id": "enwik8",
+    "bytes": 100000000,
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+  },
+  "training": {
+    "offset": 0,
+    "bytes": 65536,
+    "sha256": "05fc5f44993ef0557959db76bf47e45badb2dd9c69d93ce08911935b5e52bf40",
+    "dictionary_sha256": "35fbbd99fb2e1b575fc2353f879875093691e90e360c87b6a9e32f53b349ac98"
+  },
+  "environment": {
+    "rustc": "1.100.0",
+    "cargo": "1.100.0",
+    "runner": "ubuntu-latest"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik8",
+    "bash experiments/ixg2/optimal.sh"
+  ],
+  "unit_tests": 4,
+  "rows": [
+    {
+      "offset": 1000000,
+      "bytes": 16384,
+      "modes": {
+        "fixed": {
+          "model": {
+            "mode": 0,
+            "roots": 7787,
+            "rules": 1024,
+            "max_exp": 56,
+            "fixed_bits": 85657,
+            "huff_bits": 62495
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2658304,
+          "archive_bytes": 14819,
+          "archive_sha256": "183fb6794b09715d49c830b796f51202cb277913e7eac79113b894e141d1cd05",
+          "decode_seconds": 0,
+          "decode_rss_bytes": 2330624,
+          "decoded_sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+          "byte_equal": true
+        },
+        "huff": {
+          "model": {
+            "mode": 1,
+            "roots": 7787,
+            "rules": 1024,
+            "max_exp": 56,
+            "fixed_bits": 85657,
+            "huff_bits": 62495
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2695168,
+          "archive_bytes": 13209,
+          "archive_sha256": "ab67cb5b3ec0c61890c91fa9d7b26e309beaf04f82af8fdba35657668c77043d",
+          "decode_seconds": 0,
+          "decode_rss_bytes": 2367488,
+          "decoded_sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+          "byte_equal": true
+        },
+        "optfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 84469,
+              "roots": 7679,
+              "candidate_bytes": 14670
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 14819,
+            "chosen_bytes": 14670
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2670592,
+          "archive_bytes": 14670,
+          "archive_sha256": "4f29c204b417589784364c6c1ea92f7c3b416870bb8829b0df6c8125ab15b1cd",
+          "decode_seconds": 0,
+          "decode_rss_bytes": 2265088,
+          "decoded_sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+          "byte_equal": true
+        },
+        "opthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 62725,
+              "roots": 7686,
+              "candidate_bytes": 13078
+            },
+            {
+              "round": 1,
+              "objective_bits": 62395,
+              "roots": 7690,
+              "candidate_bytes": 13068
+            },
+            {
+              "round": 2,
+              "objective_bits": 62346,
+              "roots": 7693,
+              "candidate_bytes": 13065
+            },
+            {
+              "round": 3,
+              "objective_bits": 62334,
+              "roots": 7693,
+              "candidate_bytes": 13065
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 13209,
+            "chosen_bytes": 13065
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2854912,
+          "archive_bytes": 13065,
+          "archive_sha256": "5fed7d14419fc8ac73a8c2571b21fa56e496cd7a5000b4c4f3c57c968533040f",
+          "decode_seconds": 0,
+          "decode_rss_bytes": 2478080,
+          "decoded_sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6",
+          "byte_equal": true
+        }
+      },
+      "sha256": "7661bf1ce37240eea826176740c9a66a23406b8b8c176e908dc627456f1492f6"
+    },
+    {
+      "offset": 50000000,
+      "bytes": 16384,
+      "modes": {
+        "fixed": {
+          "model": {
+            "mode": 0,
+            "roots": 6860,
+            "rules": 1024,
+            "max_exp": 56,
+            "fixed_bits": 75460,
+            "huff_bits": 58317
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2662400,
+          "archive_bytes": 13544,
+          "archive_sha256": "51e5ec50c508cebe0af1d77170eb07fa1c208a93e5b3b3632c738809e45bbfe1",
+          "decode_seconds": 0,
+          "decode_rss_bytes": 2306048,
+          "decoded_sha256": "8bb695c85c1c68877c84d8022d1874776d20528ae4c29faac0afc13fb29410fa",
+          "byte_equal": true
+        },
+        "huff": {
+          "model": {
+            "mode": 1,
+            "roots": 6860,
+            "rules": 1024,
+            "max_exp": 56,
+            "fixed_bits": 75460,
+            "huff_bits": 58317
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2641920,
+          "archive_bytes": 12682,
+          "archive_sha256": "8637994872a7f0326cda643b907f269d8d998f867cf14b2b91e8f434d7706046",
+          "decode_seconds": 0,
+          "decode_rss_bytes": 2428928,
+          "decoded_sha256": "8bb695c85c1c68877c84d8022d1874776d20528ae4c29faac0afc13fb29410fa",
+          "byte_equal": true
+        },
+        "optfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 74272,
+              "roots": 6752,
+              "candidate_bytes": 13395
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 13544,
+            "chosen_bytes": 13395
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2895872,
+          "archive_bytes": 13395,
+          "archive_sha256": "339b2d9d6f83f5b39aef0c873709f36728ab239bfb6ca87debce209689f90551",
+          "decode_seconds": 0,
+          "decode_rss_bytes": 2297856,
+          "decoded_sha256": "8bb695c85c1c68877c84d8022d1874776d20528ae4c29faac0afc13fb29410fa",
+          "byte_equal": true
+        },
+        "opthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 58303,
+              "roots": 6754,
+              "candidate_bytes": 12539
+            },
+            {
+              "round": 1,
+              "objective_bits": 57908,
+              "roots": 6754,
+              "candidate_bytes": 12527
+            },
+            {
+              "round": 2,
+              "objective_bits": 57861,
+              "roots": 6756,
+              "candidate_bytes": 12527
+            },
+            {
+              "round": 3,
+              "objective_bits": 57857,
+              "roots": 6756,
+              "candidate_bytes": 12526
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 12682,
+            "chosen_bytes": 12526
+          },
+          "encode_seconds": 0,
+          "encode_rss_bytes": 2854912,
+          "archive_bytes": 12526,
+          "archive_sha256": "475a608b39d633c9355b41641c8230d252f6046d08973b7fb1a080a67fb992e7",
+          "decode_seconds": 0,
+          "decode_rss_bytes": 2486272,
+          "decoded_sha256": "8bb695c85c1c68877c84d8022d1874776d20528ae4c29faac0afc13fb29410fa",
+          "byte_equal": true
+        }
+      },
+      "sha256": "8bb695c85c1c68877c84d8022d1874776d20528ae4c29faac0afc13fb29410fa"
+    },
+    {
+      "offset": 1000000,
+      "bytes": 1048576,
+      "modes": {
+        "fixed": {
+          "model": {
+            "mode": 0,
+            "roots": 457516,
+            "rules": 1024,
+            "max_exp": 56,
+            "fixed_bits": 5032676,
+            "huff_bits": 4012495
+          },
+          "encode_seconds": 0.04,
+          "encode_rss_bytes": 2695168,
+          "archive_bytes": 633196,
+          "archive_sha256": "0ada377c231810498b3f1d751037cb27da6d1306fd8b2453035d37331e13033e",
+          "decode_seconds": 0.01,
+          "decode_rss_bytes": 2273280,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "huff": {
+          "model": {
+            "mode": 1,
+            "roots": 457516,
+            "rules": 1024,
+            "max_exp": 56,
+            "fixed_bits": 5032676,
+            "huff_bits": 4012495
+          },
+          "encode_seconds": 0.05,
+          "encode_rss_bytes": 2686976,
+          "archive_bytes": 507525,
+          "archive_sha256": "46f5b65799eee3d6c13a636a84aad0c46cac395392b0a239d2588f6bc6955b1e",
+          "decode_seconds": 0.02,
+          "decode_rss_bytes": 2519040,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "optfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 4961880,
+              "roots": 451080,
+              "candidate_bytes": 624346
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 633196,
+            "chosen_bytes": 624346
+          },
+          "encode_seconds": 0.06,
+          "encode_rss_bytes": 11792384,
+          "archive_bytes": 624346,
+          "archive_sha256": "f616321db110f1073b98b1e6987e225ef0ee4e8f21f18517909098d131132290",
+          "decode_seconds": 0.01,
+          "decode_rss_bytes": 2314240,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "opthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 3958048,
+              "roots": 451228,
+              "candidate_bytes": 498798
+            },
+            {
+              "round": 1,
+              "objective_bits": 3939976,
+              "roots": 451689,
+              "candidate_bytes": 498091
+            },
+            {
+              "round": 2,
+              "objective_bits": 3936856,
+              "roots": 451960,
+              "candidate_bytes": 497966
+            },
+            {
+              "round": 3,
+              "objective_bits": 3936207,
+              "roots": 452041,
+              "candidate_bytes": 497930
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 507525,
+            "chosen_bytes": 497930
+          },
+          "encode_seconds": 0.18,
+          "encode_rss_bytes": 11706368,
+          "archive_bytes": 497930,
+          "archive_sha256": "f0bc5493845eadff4a6f404ad222029aecfbb62adfc1f2289a4a4b0cca0eb8ba",
+          "decode_seconds": 0.02,
+          "decode_rss_bytes": 2564096,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        }
+      },
+      "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d"
+    },
+    {
+      "offset": 50000000,
+      "bytes": 1048576,
+      "modes": {
+        "fixed": {
+          "model": {
+            "mode": 0,
+            "roots": 458184,
+            "rules": 1024,
+            "max_exp": 56,
+            "fixed_bits": 5040024,
+            "huff_bits": 3996113
+          },
+          "encode_seconds": 0.04,
+          "encode_rss_bytes": 2658304,
+          "archive_bytes": 634114,
+          "archive_sha256": "540ab27a5c6c3e39d5242119302c45562fdf6648339979d23096db5d0b82301e",
+          "decode_seconds": 0.01,
+          "decode_rss_bytes": 2273280,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "huff": {
+          "model": {
+            "mode": 1,
+            "roots": 458184,
+            "rules": 1024,
+            "max_exp": 56,
+            "fixed_bits": 5040024,
+            "huff_bits": 3996113
+          },
+          "encode_seconds": 0.05,
+          "encode_rss_bytes": 2707456,
+          "archive_bytes": 505479,
+          "archive_sha256": "d0b749a590e77b8a2dd7907a3f760e3f37ef8493627387d483eb517dc48ada72",
+          "decode_seconds": 0.02,
+          "decode_rss_bytes": 2523136,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "optfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 4963288,
+              "roots": 451208,
+              "candidate_bytes": 624522
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 634114,
+            "chosen_bytes": 624522
+          },
+          "encode_seconds": 0.06,
+          "encode_rss_bytes": 11706368,
+          "archive_bytes": 624522,
+          "archive_sha256": "9a2305df8fc736f58e407fa0bc430304be2ce3aec45b7d510e87dfb75def461b",
+          "decode_seconds": 0.01,
+          "decode_rss_bytes": 2166784,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "opthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 3939473,
+              "roots": 451785,
+              "candidate_bytes": 496363
+            },
+            {
+              "round": 1,
+              "objective_bits": 3920269,
+              "roots": 452245,
+              "candidate_bytes": 495642
+            },
+            {
+              "round": 2,
+              "objective_bits": 3917179,
+              "roots": 452664,
+              "candidate_bytes": 495471
+            },
+            {
+              "round": 3,
+              "objective_bits": 3916316,
+              "roots": 452790,
+              "candidate_bytes": 495428
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 505479,
+            "chosen_bytes": 495428
+          },
+          "encode_seconds": 0.18,
+          "encode_rss_bytes": 11726848,
+          "archive_bytes": 495428,
+          "archive_sha256": "7dc4fb748a11bb4c4d953e42641c17f0415a8ac8d22b5a5e81f1820f53641ae9",
+          "decode_seconds": 0.02,
+          "decode_rss_bytes": 2506752,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        }
+      },
+      "sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b"
+    },
+    {
+      "offset": 10000000,
+      "bytes": 16777216,
+      "modes": {
+        "fixed": {
+          "model": {
+            "mode": 0,
+            "roots": 7306158,
+            "rules": 1024,
+            "max_exp": 56,
+            "fixed_bits": 80367738,
+            "huff_bits": 64106847
+          },
+          "encode_seconds": 0.79,
+          "encode_rss_bytes": 2674688,
+          "archive_bytes": 10050079,
+          "archive_sha256": "e277071ee6388d005438764bbcf0ecbaeda3ade58c36a3b438a8980d77fdc79b",
+          "decode_seconds": 0.19,
+          "decode_rss_bytes": 2256896,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "huff": {
+          "model": {
+            "mode": 1,
+            "roots": 7306158,
+            "rules": 1024,
+            "max_exp": 56,
+            "fixed_bits": 80367738,
+            "huff_bits": 64106847
+          },
+          "encode_seconds": 0.77,
+          "encode_rss_bytes": 2789376,
+          "archive_bytes": 8019886,
+          "archive_sha256": "42633145fe22864b2ba0c0d8c8cabda7b1b241cb8881b3cde4cb4d373497136c",
+          "decode_seconds": 0.39,
+          "decode_rss_bytes": 2555904,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "optfixed": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 79138477,
+              "roots": 7194407,
+              "candidate_bytes": 9896421
+            }
+          ],
+          "opt_result": {
+            "mode": 0,
+            "greedy_bytes": 10050079,
+            "chosen_bytes": 9896421
+          },
+          "encode_seconds": 1.1,
+          "encode_rss_bytes": 148877312,
+          "archive_bytes": 9896421,
+          "archive_sha256": "54db988d4d33e1810a119bc8a70d9f4db05f4ef960d2d93f44f91c78feb8ecee",
+          "decode_seconds": 0.19,
+          "decode_rss_bytes": 2260992,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "opthuff": {
+          "iterations": [
+            {
+              "round": 0,
+              "objective_bits": 63209115,
+              "roots": 7196992,
+              "candidate_bytes": 7879454
+            },
+            {
+              "round": 1,
+              "objective_bits": 62927834,
+              "roots": 7203136,
+              "candidate_bytes": 7868253
+            },
+            {
+              "round": 2,
+              "objective_bits": 62875130,
+              "roots": 7209562,
+              "candidate_bytes": 7864764
+            },
+            {
+              "round": 3,
+              "objective_bits": 62860154,
+              "roots": 7212372,
+              "candidate_bytes": 7863564
+            }
+          ],
+          "opt_result": {
+            "mode": 1,
+            "greedy_bytes": 8019886,
+            "chosen_bytes": 7863564
+          },
+          "encode_seconds": 2.99,
+          "encode_rss_bytes": 149037056,
+          "archive_bytes": 7863564,
+          "archive_sha256": "1eafe9f3edc39e78561c0de3e4a585fb0e0b285fd9ec2241b6c845b76d07cab8",
+          "decode_seconds": 0.4,
+          "decode_rss_bytes": 2535424,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        }
+      },
+      "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878"
+    }
+  ],
+  "limitations": [
+    "same implementation encoder/decoder",
+    "bounded 16 MiB in-memory weighted parser",
+    "Huffman optimization heuristic, not global joint optimum",
+    "no full corpus weighted measurement"
+  ]
+}
