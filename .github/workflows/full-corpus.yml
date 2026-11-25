@@ -1,0 +1,30 @@
+name: Full corpus conventional baseline
+on:
+  push:
+    paths:
+      - '.github/workflows/full-corpus.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: sh datasets/acquire.sh enwik9
+      - name: Check enwik8 prefix identity
+        run: |
+          set -o pipefail
+          head -c 100000000 data/enwik9 | sha256sum
+          test "$(head -c 100000000 data/enwik9 | sha256sum | cut -d' ' -f1)" = 2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8
+      - name: gzip full corpus
+        run: |
+          set -o pipefail
+          mkdir -p results-local
+          gzip --version | head -n 1
+          /usr/bin/time -v gzip -n -9 -c data/enwik9 > results-local/enwik9.gz
+          wc -c results-local/enwik9.gz
+          sha256sum results-local/enwik9.gz
+          /usr/bin/time -v bash -o pipefail -c 'gzip -dc results-local/enwik9.gz | cmp data/enwik9 -'
+          echo full_corpus_roundtrip_verified

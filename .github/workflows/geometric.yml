@@ -1,0 +1,20 @@
+name: IX03 geometric controls
+on:
+  push:
+    paths:
+      - 'src/bin/ix03.rs'
+      - 'experiments/ix03-controls.mjs'
+      - '.github/workflows/geometric.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustc --version && node --version
+      - run: cargo test --locked --bin ix03 && cargo build --release --locked --bin ix03
+      - run: sh datasets/acquire.sh enwik8
+      - run: node experiments/ix03-controls.mjs target/release/ix03 data/enwik8
