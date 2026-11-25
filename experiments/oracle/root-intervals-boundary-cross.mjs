@@ -1,0 +1,12 @@
+import {readFileSync,writeFileSync,mkdtempSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {execFileSync} from 'node:child_process';
+import {deepStrictEqual} from 'node:assert';
+import {createHash} from 'node:crypto';
+import {encode,decode} from './root-intervals.mjs';
+function boundary(api){const W=1<<20,marker=Uint8Array.of(250,251,252,253),payload=Uint8Array.from({length:64},(_,i)=>i+10),rules=[],rows=[];for(const delta of [-1,0,1])for(const mode of [13,14]){const d=W+delta,x=new Uint8Array(d+68);x.set(marker);x.set(payload,4);x.set(marker,d);x.set(payload,d+4);let events=[];const r=api.encode(x,rules,mode,16,e=>{if(e.offset>=d)events.push(e)});if(!api.decode(r.archive).every((v,i)=>v===x[i])||api.decode(r.archive).length!==x.length)throw Error("inverse");const hit=events.find(e=>e.offset===d+4&&e.distance===d&&e.length===64);if(!!hit!==(delta<=0))throw Error("boundary trace "+delta+" "+JSON.stringify(events));rows.push({delta,mode,bytes:x.length,archive_bytes:r.archive.length,roots:r.roots,copies:r.copies,copied_bytes:r.copied_bytes,terminal_events:events,byte_equal:true})}return rows}
+const rows=boundary({encode,decode}),expected=JSON.parse(readFileSync('experiments/records/E0059.json','utf8')).observations;
+deepStrictEqual(rows,expected);
+const dir=mkdtempSync(join(tmpdir(),'ixg2-boundary-')),bin=process.argv[2]??'target/release/ixg2',hash=x=>createHash('sha256').update(x).digest('hex');
+try{const dict=join(dir,'dict'),input=join(dir,'input'),archive=join(dir,'archive'),ref=join(dir,'ref'),out=join(dir,'out');writeFileSync(dict,Buffer.alloc(2));for(const r of rows){const d=(1<<20)+r.delta,x=Buffer.alloc(r.bytes),marker=Buffer.from([250,251,252,253]),payload=Buffer.from(Array.from({length:64},(_,i)=>i+10));marker.copy(x);payload.copy(x,4);marker.copy(x,d);payload.copy(x,d+4);const js=Buffer.from(encode(x,[],r.mode,16).archive);writeFileSync(input,x);writeFileSync(ref,js);execFileSync(bin,[r.mode===13?'history16':'length16',input,archive,dict],{stdio:'pipe'});deepStrictEqual(readFileSync(archive),js);execFileSync(bin,['decode-strict',ref,out]);deepStrictEqual(readFileSync(out),x);console.log('BOUNDARY_CROSS '+JSON.stringify({...r,input_sha256:hash(x),archive_sha256:hash(js),decoded_sha256:hash(readFileSync(out)),archive_equal:true}))}}finally{rmSync(dir,{recursive:true,force:true})}console.log('BOUNDARY CROSS PASSED '+rows.length);
