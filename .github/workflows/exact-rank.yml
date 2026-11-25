@@ -1,0 +1,17 @@
+name: IXR1 exact rank replay
+on:
+  push:
+    paths:
+      - 'experiments/oracle/exact-rank.mjs'
+      - 'experiments/oracle/replay-exact-rank.mjs'
+      - '.github/workflows/exact-rank.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --version && node experiments/oracle/replay-exact-rank.mjs

@@ -140,6 +140,46 @@
           }
         }
       }
+    },
+    "provisional_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "experiment",
+          "track",
+          "metric",
+          "bytes",
+          "archive_sha256",
+          "status"
+        ],
+        "properties": {
+          "experiment": {
+            "type": "string"
+          },
+          "track": {
+            "enum": [
+              "whole",
+              "blockwise",
+              "hybrid"
+            ]
+          },
+          "metric": {
+            "const": "archive_bytes"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "archive_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }
