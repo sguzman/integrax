@@ -35,3 +35,5 @@ Second-order context [E0043/V0009](../experiments/records/E0043.md) passed isola
 Third-order context [E0045/V0010](../experiments/records/E0045.md) passed isolated full reconstruction in [CI 45707004827](https://github.com/sguzman/integrax/actions/runs/45707004827). Saves 23,841,730 B vs F0007 and 66,053,235 B vs gzip. Archive-only.
 
 Recurrence hybrid [E0055/V0011](../experiments/records/E0055.md) passed strict isolated full reconstruction in [CI 45709267554](https://github.com/sguzman/integrax/actions/runs/45709267554). Saves 12,949,288 B vs F0008 and 79,002,523 B vs gzip. Archive-only.
+
+Verified nonfrontier static control [E0058/V0012](../experiments/records/E0058.md): 249,849,857 B, 75.02% reduction. Completed after F0009 and is 6,260,392 B larger, so not a frontier entry. [CI](https://github.com/sguzman/integrax/actions/runs/45709706242).
