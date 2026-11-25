@@ -4,7 +4,7 @@ Target: enwik9, 1,000,000,000 bytes. Official competition reference: 100,424,672
 
 | Track | Best accepted result |
 |---|---:|
-| Whole-stream arithmetic archive (IXG2) | **280,380,483 B** |
+| Whole-stream arithmetic archive (IXG2) | **256,538,753 B** |
 | Blockwise | Not established |
 | Hybrid | Not established |
 | Contest-comparable total | Not established |
@@ -18,6 +18,7 @@ Target: enwik9, 1,000,000,000 bytes. Official competition reference: 100,424,672
 | F0005 | IXG2, weighted 8192 rules | 383,314,419 | 61.67% |
 | F0006 | IXG2, contextual roots | 319,996,416 | 68.00% |
 | F0007 | IXG2, lexicographic second-order roots | 280,380,483 | 71.96% |
+| F0008 | IXG2, lexicographic third-order roots | 256,538,753 | 74.35% |
 | External | gzip -n -9 | 322,591,988 | 67.74% |
 
 IX04 and IX05 passed isolated full-byte comparison and SHA-256 in [run 45685540601](https://github.com/sguzman/integrax/actions/runs/45685540601). [E0005](../experiments/records/E0005.md), [E0007](../experiments/records/E0007.md), [external E0004](../experiments/records/E0004.md). Corpus SHA-256 `159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc`. Whole-stream interval coding is not literal algebraic compression or exact multinomial rank; track indicates the uninterrupted digit stream. Canonical [ledger](../docs/frontier.json). Prefix measurements never enter full-target frontier; preserve history.
@@ -29,3 +30,5 @@ Expanded dictionary [E0029/V0006](../experiments/records/E0029.md) passed isolat
 Native context [E0040/V0008](../experiments/records/E0040.md) passed isolated full reconstruction in [CI 45704723420](https://github.com/sguzman/integrax/actions/runs/45704723420). First accepted native archive below recorded gzip baseline by 2,595,572 B (0.80% relative). This is not a contest-comparable score.
 
 Second-order context [E0043/V0009](../experiments/records/E0043.md) passed isolated full reconstruction in [CI 45705343900](https://github.com/sguzman/integrax/actions/runs/45705343900). Saves 39,615,933 B vs F0006 and 42,211,505 B vs recorded gzip. Archive-only.
+
+Third-order context [E0045/V0010](../experiments/records/E0045.md) passed isolated full reconstruction in [CI 45707004827](https://github.com/sguzman/integrax/actions/runs/45707004827). Saves 23,841,730 B vs F0007 and 66,053,235 B vs gzip. Archive-only.

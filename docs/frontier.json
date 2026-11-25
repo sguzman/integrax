@@ -87,6 +87,17 @@
       "date": "2026-11-25",
       "artifact_sha256": "3044dc61db87c09eafec6a3ffd17323f059b4ab040c6f261969600d0b9736bbc",
       "revision": "e3a3860787872cb94512728d52ce8a3aa8840b74"
+    },
+    {
+      "id": "F0008",
+      "experiment": "E0045",
+      "verification": "V0010",
+      "track": "whole",
+      "metric": "archive_bytes",
+      "bytes": 256538753,
+      "date": "2026-11-25",
+      "artifact_sha256": "b9198521a5cb16a8ec1550bee85ab1372a818f939ed96286c216bf1ed975042a",
+      "revision": "55434b8d0eec677f657daa5936269012eee21da1"
     }
   ],
   "external_baselines": [
