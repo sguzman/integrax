@@ -9,3 +9,5 @@ M5: E0044 last-three-byte vs previous-root predictors [CI 45705431555](https://g
 M6: E0046 independent deep predictor reference authored; E0047 [adaptive predictive-cost parsing](../theory/adaptive-root-parsing.md) compares greedy and three local ratio penalties, no wire-format changes. Results pending. Do not scale until measured gain.
 
 M7: E0048 optional strict canonical arithmetic decoding and append rejection; benchmark runtime/memory overhead. No archive overhead, not a checksum. [Theory](../theory/canonical-root-intervals.md). Pending CI.
+
+[E0047](../experiments/records/E0047.md) completed: 12/12 exact, all nine cost-ratio variants larger than greedy. Retain greedy. No full-scale test of the inferior heuristic.
