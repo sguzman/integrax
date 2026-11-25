@@ -1,0 +1,17 @@
+name: IXC1 independent CRT formula controls
+on:
+  push:
+    paths:
+      - 'experiments/oracle/crt-independent.mjs'
+      - '.github/workflows/crt-independent.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: node experiments/oracle/crt-independent.mjs > /tmp/actual.json
+      - run: node --input-type=module -e "import {readFileSync} from 'node:fs'; import {deepStrictEqual} from 'node:assert'; deepStrictEqual(JSON.parse(readFileSync('/tmp/actual.json')),JSON.parse(readFileSync('experiments/records/E0033.json')).observations); console.log('E0033 replay passed')"

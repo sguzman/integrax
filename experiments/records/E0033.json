@@ -1,0 +1,258 @@
+{
+  "id": "E0033",
+  "campaign": "C08",
+  "status": "roundtrip-verified",
+  "scope": "independent CRT reconstruction and full-width synthetic inputs",
+  "execution": "V8 isolate",
+  "observations": {
+    "generic_crt_checks": 4096,
+    "rows": [
+      {
+        "kind": "single_modulus",
+        "bytes": 64,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 64,
+        "archive_bytes": 36,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            4
+          ],
+          "residue_bytes": [
+            1,
+            22,
+            22
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "two_moduli",
+        "bytes": 64,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 64,
+        "archive_bytes": 36,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            1,
+            1,
+            22
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "two_odd_moduli",
+        "bytes": 64,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 64,
+        "archive_bytes": 36,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            22,
+            1,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "single_modulus",
+        "bytes": 256,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 256,
+        "archive_bytes": 101,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            4
+          ],
+          "residue_bytes": [
+            1,
+            86,
+            86
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "two_moduli",
+        "bytes": 256,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 256,
+        "archive_bytes": 101,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            1,
+            1,
+            86
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "two_odd_moduli",
+        "bytes": 256,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 256,
+        "archive_bytes": 101,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            86,
+            1,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "single_modulus",
+        "bytes": 1024,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 1024,
+        "archive_bytes": 358,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            4
+          ],
+          "residue_bytes": [
+            1,
+            342,
+            342
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "two_moduli",
+        "bytes": 1024,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 1024,
+        "archive_bytes": 358,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            1,
+            1,
+            342
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "two_odd_moduli",
+        "bytes": 1024,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 1024,
+        "archive_bytes": 358,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            342,
+            1,
+            1
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "single_modulus",
+        "bytes": 4096,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 4096,
+        "archive_bytes": 1382,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            4
+          ],
+          "residue_bytes": [
+            1,
+            1366,
+            1366
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "two_moduli",
+        "bytes": 4096,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 4096,
+        "archive_bytes": 1382,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            1,
+            1,
+            1366
+          ]
+        },
+        "byte_equal": true
+      },
+      {
+        "kind": "two_odd_moduli",
+        "bytes": 4096,
+        "leading_byte": 191,
+        "raw_magnitude_bytes": 4096,
+        "archive_bytes": 1382,
+        "choice": {
+          "tags": [
+            0,
+            0,
+            0
+          ],
+          "residue_bytes": [
+            1366,
+            1,
+            1
+          ]
+        },
+        "byte_equal": true
+      }
+    ],
+    "malformed_rejections": 37
+  },
+  "limitations": [
+    "generic CRT check independent of specialized formula, same archive codec",
+    "no authentic data, hashes, runtime or RSS measured",
+    "external replay pending"
+  ]
+}

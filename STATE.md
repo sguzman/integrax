@@ -10,3 +10,5 @@
 Next: retrieve full-large workflow status/logs, persist measured E0029/E0030 and promote only verified improvements. Evaluate marginal gains then pursue structural improvement or close C07/pivot. Nix pin/dashboard deployment unverified. No workers.
 
 C08 opened in parallel with C07 full-run measurement: [E0031](experiments/records/E0031.md) fixed CRT grammar, 65536 exhaustive two-byte checks and 24 synthetic roundtrips executed in V8 isolate. [Theory](theory/crt-residue-cost.md). E0032 authentic replay workflow authored, pending. Next retrieve C07 and CRT evidence; no new full-target result.
+
+E0033 independent generic CRT reconstruction 4096 checks, 12 full-width synthetic controls and 37 malformed rejects; executed in V8, external replay pending. C07 matrix jobs 139518095288 (huff), 139518094677 (streamopthuff) in progress; C08 authentic [CI 45703312599](https://github.com/sguzman/integrax/actions/runs/45703312599) queued at checkpoint.
