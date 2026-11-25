@@ -12,7 +12,7 @@ Next: collect E0074/E0080; accept full blockwise result only on isolated exact e
 
 [E0072](experiments/records/E0072.md) 6/6 exact and 6/6 append rejects; mode4 4,273,508 B on 16 MiB, wins all 3 regions vs E0071. E0074 IXB2 full native 16 MiB blockwise with raw fallback, strict isolated byte comparison authored. Initial CI 45713806361 contains a test fixture assumption identified by independent oracle (ascending 128 bytes actually encodes to 127 B); corrected fixture checks guaranteed three-byte raw tail. Corrected E0074 [CI 45713883869](https://github.com/sguzman/integrax/actions/runs/45713883869), running at checkpoint. [Theory](theory/context-permutation-rank-coding.md). No performance claim; E0073 independent native rank reference 30 exact frames, 30 append rejects, 12 run bounds, all 29523 earlier frames reproduced; [CI 45713436133](https://github.com/sguzman/integrax/actions/runs/45713436133) passed 30/30 independent byte-identical frames and both-direction cross-decodes. IXB1 total 75 independent cross-codecs, separate from IXG2 370.
 
-E0075 IXB2 independent reference 30 synthetic exact, 3448 truncation and 224 malformed rejects; variable block sizes and mixed raw/compressed tails. Rust cross-codec [CI 45714196811](https://github.com/sguzman/integrax/actions/runs/45714196811) passed 30/30 byte-identical archives, both-direction cross-decodes, 254 malformed rejects, 5 Rust tests. IXB1/2 total 135 independent codec comparisons, IXG2 370.
+E0075 IXB2 independent reference 30 synthetic exact, 3448 truncation and 224 malformed rejects; variable block sizes and mixed raw/compressed tails. Rust cross-codec [CI 45714196811](https://github.com/sguzman/integrax/actions/runs/45714196811) passed 30/30 byte-identical archives, both-direction cross-decodes, 254 malformed rejects, 5 Rust tests. IXB1/2 total 150 independent codec comparisons, IXG2 370.
 
 [E0076](experiments/records/E0076.md) 9/9 exact and append rejects; mode5 wins all three regions (16 MiB 4,244,143 B, 0.687% below mode4), mode6 regresses all. [Theory](theory/rank-token-context.md). IXB2 remains mode4; independent new modes verified in E0077.
 
@@ -20,6 +20,6 @@ E0077 independent mode5/6 rank context reference 30/30 synthetic frames/append r
 
 [E0078](experiments/records/E0078.md) 9/9 exact fresh enwik9 comparisons, mode5 wins all three (6/6 across E0076/E0078); rank symbols account for ~70% of mode5 empirical comparator. [Theory](theory/rank-cost-decomposition.md). No wire change.
 
-[E0079](experiments/records/E0079.md) 6/6 exact and append rejects; mode7 wins all three, aggregate 2,873,464 B vs mode5 2,892,508 B (0.658% gain), vs mode4 2,910,762 B (1.281% gain). [Theory](theory/rank-backoff.md). Independent new mode verification pending; no gain claimed.
+[E0079](experiments/records/E0079.md) 6/6 exact and append rejects; mode7 wins all three, aggregate 2,873,464 B vs mode5 2,892,508 B (0.658% gain), vs mode4 2,910,762 B (1.281% gain). [Theory](theory/rank-backoff.md). Independent mode7 verification passed E0080; no full gain claimed.
 
-E0080 independent mode7 reference 15 exact frames/append rejects, 30 earlier context observations unchanged; Rust cross-codec [CI 45715148000](https://github.com/sguzman/integrax/actions/runs/45715148000), in_progress at checkpoint.
+E0080 independent mode7 reference 15 exact frames/append rejects, 30 earlier context observations unchanged; Rust cross-codec [CI 45715148000](https://github.com/sguzman/integrax/actions/runs/45715148000) passed 15/15 independent byte-identical frames and both-direction cross-decodes.
