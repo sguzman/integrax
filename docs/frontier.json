@@ -18,5 +18,15 @@
       "experiment": "E0004",
       "verification": "roundtrip-verified"
     }
+  ],
+  "provisional_results": [
+    {
+      "experiment": "E0005",
+      "track": "whole",
+      "metric": "archive_bytes",
+      "bytes": 644708597,
+      "archive_sha256": "61c2e1c3d1bc96a3691a9af918922ed0b5828b63501be4fb7373a32be2225537",
+      "status": "roundtrip-verified; isolated replay pending"
+    }
   ]
 }

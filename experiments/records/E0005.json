@@ -1,0 +1,44 @@
+{
+  "id": "E0005",
+  "campaign": "C04",
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "track": "whole",
+  "revision": "80c5a5c6a106729be608c035fefe52f8c30ecfe9",
+  "run": 45684549210,
+  "job": 139453564870,
+  "method": "IX04 static zero-order arithmetic intervals",
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "bash experiments/ix04/controls.sh"
+  ],
+  "status": "roundtrip-verified",
+  "archive_bytes": 644708597,
+  "archive_sha256": "61c2e1c3d1bc96a3691a9af918922ed0b5828b63501be4fb7373a32be2225537",
+  "compressor_bytes": 321608,
+  "external_side_bytes": 0,
+  "contest_total_bytes": null,
+  "verification": {
+    "byte_equal": true,
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "method": "full-file cmp and SHA-256, same CI job; OS isolation pending"
+  },
+  "environment": {
+    "rustc": "1.100.0",
+    "cargo": "1.100.0",
+    "runner": "ubuntu-latest"
+  },
+  "encode_seconds": 41.63,
+  "encode_peak_rss_bytes": 2174976,
+  "decode_seconds": 48.92,
+  "decode_peak_rss_bytes": 2064384,
+  "limitations": [
+    "archive-only result; standalone binary is not a contest submission",
+    "decoder source reads archive only; OS-level network and original-corpus isolation not yet enforced",
+    "transient CI artifacts; exact hashes and commands retained",
+    "finite-precision arithmetic coding, not an exact multinomial rank"
+  ]
+}
