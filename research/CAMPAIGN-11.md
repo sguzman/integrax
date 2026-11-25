@@ -4,4 +4,4 @@ Active alongside finishing C10. Goal: exploit long-range repeated digit subseque
 
 [E0053](../experiments/records/E0053.md) 9/9 strict passed; history16 wins all three regions (16 MiB 4,751,641 B, 2.95% below matched median). E0054 independent oracle passed 36 local cases, [CI 45709112022](https://github.com/sguzman/integrax/actions/runs/45709112022) passed 36/36 independent byte equality and strict cross-decodes. E0055 strict isolated full history16 [CI 45709267554](https://github.com/sguzman/integrax/actions/runs/45709267554), queued at checkpoint. Next consider predictor context and charged length model only after actual evidence.
 
-M3: [adaptive length coding](../theory/recurrence-length-coding.md), mode14; E0056 synthetic independent reference 38 exact cases, CI pending; E0057 authentic matched length model benchmark authored. No result claimed.
+M3: [adaptive length coding](../theory/recurrence-length-coding.md), mode14; [E0056](../experiments/records/E0056.md) 38/38 independent archive equality and strict cross-decodes, including ring-wrap controls; E0057 authentic matched length model benchmark authored. No result claimed.
