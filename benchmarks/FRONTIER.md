@@ -4,7 +4,7 @@ Target: enwik9, 1,000,000,000 bytes. Official competition reference: 100,424,672
 
 | Track | Best accepted result |
 |---|---:|
-| Whole-stream arithmetic archive (IXG2) | **243,589,465 B** |
+| Whole-stream arithmetic archive (IXG2) | **236,272,025 B** |
 | Blockwise | Not established |
 | Hybrid | Not established |
 | Contest-comparable total | Not established |
@@ -20,6 +20,7 @@ Target: enwik9, 1,000,000,000 bytes. Official competition reference: 100,424,672
 | F0007 | IXG2, lexicographic second-order roots | 280,380,483 | 71.96% |
 | F0008 | IXG2, lexicographic third-order roots | 256,538,753 | 74.35% |
 | F0009 | IXG2, median roots + decoder-derived recurrences | 243,589,465 | 75.64% |
+| F0010 | IXG2, expanded dictionary + dual recurrences | 236,272,025 | 76.37% |
 | External | gzip -n -9 | 322,591,988 | 67.74% |
 
 IX04 and IX05 passed isolated full-byte comparison and SHA-256 in [run 45685540601](https://github.com/sguzman/integrax/actions/runs/45685540601). [E0005](../experiments/records/E0005.md), [E0007](../experiments/records/E0007.md), [external E0004](../experiments/records/E0004.md). Corpus SHA-256 `159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc`. Whole-stream interval coding is not literal algebraic compression or exact multinomial rank; track indicates the uninterrupted digit stream. Canonical [ledger](../docs/frontier.json). Prefix measurements never enter full-target frontier; preserve history.
@@ -37,3 +38,5 @@ Third-order context [E0045/V0010](../experiments/records/E0045.md) passed isolat
 Recurrence hybrid [E0055/V0011](../experiments/records/E0055.md) passed strict isolated full reconstruction in [CI 45709267554](https://github.com/sguzman/integrax/actions/runs/45709267554). Saves 12,949,288 B vs F0008 and 79,002,523 B vs gzip. Archive-only.
 
 Verified nonfrontier static control [E0058/V0012](../experiments/records/E0058.md): 249,849,857 B, 75.02% reduction. Completed after F0009 and is 6,260,392 B larger, so not a frontier entry. [CI](https://github.com/sguzman/integrax/actions/runs/45709706242).
+
+Combined recurrence [E0065/V0013](../experiments/records/E0065.md) passed strict isolated full reconstruction in [CI 45711961257](https://github.com/sguzman/integrax/actions/runs/45711961257). Saves 7,317,440 B vs F0009 and 86,319,963 B vs gzip. Archive-only.

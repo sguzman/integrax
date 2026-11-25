@@ -1,0 +1,73 @@
+{
+  "id": "E0065",
+  "campaign": "C11",
+  "track": "whole",
+  "status": "roundtrip-verified",
+  "revision": "05cd70520a47600ee5c9c6873c5ed7e47762e96f",
+  "run": 45711961257,
+  "job": 139548362535,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "archive_bytes": 236272025,
+  "archive_sha256": "4bd7497a8674910a33b4e26d35b58930e688b6a31b15301540dc73625db3c93e",
+  "compressor_bytes": 471168,
+  "external_side_bytes": 0,
+  "contest_total_bytes": null,
+  "training": {
+    "offsets": [
+      0,
+      30000000,
+      40000000,
+      80000000,
+      33000000,
+      60000000,
+      70000000,
+      90000000
+    ],
+    "bytes_per_offset": 65536,
+    "bytes": 524288,
+    "sha256": "65dd770568be321494dcc88019e75ee92fc67fbcf75adc1abd8a35a9504a1895",
+    "dictionary_sha256": "3651e9523e3ddc5db5e2d112832aca59794b9bc12dc433467cd14dc205c3cf9d",
+    "dictionary_bytes": 65538
+  },
+  "model": {
+    "mode": 15,
+    "roots": 207113104,
+    "copies": 3967436,
+    "copied_bytes": 157842920,
+    "rules": 16384,
+    "minimum": 16,
+    "alternate_copies": 1465048,
+    "header_bytes": 65551
+  },
+  "encode_seconds": 363.68,
+  "encode_rss_bytes": 107032576,
+  "decode_seconds": 383.32,
+  "decode_pipeline_rss_bytes": 101666816,
+  "unit_tests": 20,
+  "commands": [
+    "sh datasets/acquire.sh enwik9",
+    "bash experiments/ixg2/full-recurrence-combined.sh dual16"
+  ],
+  "verification": {
+    "id": "V0013",
+    "byte_equal": true,
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "uid": 65534,
+    "original_readable": false,
+    "separate_network_namespace": true,
+    "external_dictionary_removed": true,
+    "canonical_payload": true
+  },
+  "limitations": [
+    "archive-only; no contest eligibility",
+    "strict canonicality not authentication",
+    "transient archive; digest retained"
+  ],
+  "environment": {
+    "rustc": "1.100.0 (0ef1bc386 2026-11-09)"
+  }
+}

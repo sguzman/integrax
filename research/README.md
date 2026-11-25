@@ -12,7 +12,7 @@
 | [C08](CAMPAIGN-08.md) | Modular structure and CRT | [Closed](CAMPAIGN-08-CLOSURE.md) |
 | [C09](CAMPAIGN-09.md) | Reversible transformations | [Closed](CAMPAIGN-09-CLOSURE.md) |
 | [C10](CAMPAIGN-10.md) | Hybrid arithmetic and conventional coding | [Closed](CAMPAIGN-10-CLOSURE.md) |
-| [C11](CAMPAIGN-11.md) | Decoder-derived arithmetic recurrences | Active |
+| [C11](CAMPAIGN-11.md) | Decoder-derived arithmetic recurrences | [Closed](CAMPAIGN-11-CLOSURE.md) |
 | [C12](CAMPAIGN-12.md) | Sparse-corrected arithmetic recurrences | [Closed](CAMPAIGN-12-CLOSURE.md) |
 | [C13](CAMPAIGN-13.md) | Radix context permutations and rank descriptions | Active |
 
