@@ -8,4 +8,6 @@
 
 Next: collect E0039/E0040, promote only isolated verified full improvements, compare dictionary ablation and choose stronger model or structural pivot. Arithmetic termination integrity, Nix pin/dashboard deployment unverified. No workers.
 
-E0041 modes 6–8 lexicographic root rank and tagged last-two-byte context ablation implemented; 12 held-out cases, [theory](theory/ordered-root-context.md), CI pending. No verified result yet. E0040 still running at last check.
+E0041 modes 6–8 lexicographic root rank and tagged last-two-byte context ablation implemented; 12 held-out cases, [theory](theory/ordered-root-context.md), [CI 45705043869](https://github.com/sguzman/integrax/actions/runs/45705043869) running at checkpoint. No verified result yet. E0040 still running at last check.
+
+E0042 independent BigInt root interval oracle: 90 synthetic exact roundtrips in V8; independent Rust archive equality/cross-decoding CI authored, pending.
