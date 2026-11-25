@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-25 — C04 closed, C03 opened
+Accepted F0001/F0002 after isolated enwik9 reconstruction; conditional IX05 reduces archive to 487,166,368 bytes. Closed C04 and opened multiplicative structure campaign.
+
 ## 2026-11-25 — C02 closed, C04 opened
 IX03 geometric templates, sparse corrections, exact cost/coverage bounds, 30 measured controls (E0003), negative authentic results and C02 closure. Opened mixed-radix/entropy-rank campaign. Full-corpus acquisition and baseline workflow launched.
 

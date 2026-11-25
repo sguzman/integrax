@@ -10,7 +10,30 @@
     "source": "https://prize.hutter1.net/",
     "checked": "2026-11-25"
   },
-  "entries": [],
+  "entries": [
+    {
+      "id": "F0001",
+      "experiment": "E0005",
+      "verification": "V0003",
+      "track": "whole",
+      "metric": "archive_bytes",
+      "bytes": 644708597,
+      "date": "2026-11-25",
+      "artifact_sha256": "61c2e1c3d1bc96a3691a9af918922ed0b5828b63501be4fb7373a32be2225537",
+      "revision": "80c5a5c6a106729be608c035fefe52f8c30ecfe9"
+    },
+    {
+      "id": "F0002",
+      "experiment": "E0007",
+      "verification": "V0004",
+      "track": "whole",
+      "metric": "archive_bytes",
+      "bytes": 487166368,
+      "date": "2026-11-25",
+      "artifact_sha256": "0c4f8bec45423f53116e63196652fb50b2e291d12c2f4bc28a7d1bf5b47b1c93",
+      "revision": "97cd407df34666e7c44ecb76e541903c179d096a"
+    }
+  ],
   "external_baselines": [
     {
       "method": "gzip 1.14 -n -9",
@@ -19,14 +42,5 @@
       "verification": "roundtrip-verified"
     }
   ],
-  "provisional_results": [
-    {
-      "experiment": "E0005",
-      "track": "whole",
-      "metric": "archive_bytes",
-      "bytes": 644708597,
-      "archive_sha256": "61c2e1c3d1bc96a3691a9af918922ed0b5828b63501be4fb7373a32be2225537",
-      "status": "roundtrip-verified; isolated replay pending"
-    }
-  ]
+  "provisional_results": []
 }

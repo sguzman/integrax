@@ -37,8 +37,23 @@
   "decode_peak_rss_bytes": 2064384,
   "limitations": [
     "archive-only result; standalone binary is not a contest submission",
-    "decoder source reads archive only; OS-level network and original-corpus isolation not yet enforced",
     "transient CI artifacts; exact hashes and commands retained",
-    "finite-precision arithmetic coding, not an exact multinomial rank"
-  ]
+    "finite-precision arithmetic coding, not an exact multinomial rank",
+    "isolated replay performed with unprivileged UID and separate network namespace; not a general sandbox security audit"
+  ],
+  "isolated_replay": {
+    "run": 45685540601,
+    "job": 139457047569,
+    "revision": "97cd407df34666e7c44ecb76e541903c179d096a",
+    "byte_equal": true,
+    "archive_sha256": "61c2e1c3d1bc96a3691a9af918922ed0b5828b63501be4fb7373a32be2225537",
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "uid": 65534,
+    "original_readable": false,
+    "network_namespace_separate": true,
+    "encode_seconds": 40,
+    "encode_peak_rss_bytes": 2080768,
+    "decode_seconds": 46,
+    "decode_pipeline_peak_rss_bytes": 7999488
+  }
 }
