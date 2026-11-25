@@ -15,3 +15,5 @@ Next: collect E0055/E0058/E0061, close C10 after final combined full run. C11 as
 E0059 exact distance boundary (W-1,W,W+1) independent reference 6/6 synthetic exact, trace confirms inclusive W and rejects stale W+1. Rust direct ring test and 6/6 cross-codecs passed, [E0059](experiments/records/E0059.md).
 
 [E0060](experiments/records/E0060.md) 9/9 strict, dual16 wins all 3 regions, 16 MiB 4,716,953 B (0.48% below length16), 11990 older selections. [Theory](theory/two-candidate-recurrences.md). E0061 independent mode15 oracle passed 40 synthetic exact roundtrips; 74 earlier recurrence observations unchanged. [Cross-codec CI 45710509602](https://github.com/sguzman/integrax/actions/runs/45710509602), pending.
+
+E0062 modes16/17 longer six/eight-digit recurrence contexts vs mode15 four-digit, same two-endpoint capacity/window, nine strict authentic comparisons authored. [Theory](theory/recurrence-context-specificity.md). CI pending; no measured gain. Independent oracle covers through mode15 (external E0061 pending).
