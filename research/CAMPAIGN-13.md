@@ -35,3 +35,5 @@ E0080 independent hierarchical rank reference 15 exact synthetic frames/append r
 [E0079](../experiments/records/E0079.md) 6/6 exact and append rejects; mode7 wins all three reused regions, aggregate 0.658% below mode5 and 1.281% below mode4. Retain for final combined candidate consideration after E0074/E0080; no full result claimed.
 
 [E0080](../experiments/records/E0080.md) 15/15 independent byte equality and both-direction cross-decodes, reference observations reproduced. Full mode4 pending.
+
+E0081 mode7 block integration: tag2 with matching inner mode, independent reference exact and malformed controls, Rust replay pending. Existing tag1 wire format unchanged. Full mode7 selection awaits E0074 baseline.

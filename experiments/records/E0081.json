@@ -1,0 +1,365 @@
+{
+  "id": "E0081",
+  "campaign": "C13",
+  "execution": "V8 isolate",
+  "status": "roundtrip-verified",
+  "observations": {
+    "rows": [
+      {
+        "bytes": 0,
+        "kind": "constant",
+        "block": 17,
+        "archive_bytes": 16,
+        "tags": [],
+        "byte_equal": true
+      },
+      {
+        "bytes": 0,
+        "kind": "constant",
+        "block": 64,
+        "archive_bytes": 16,
+        "tags": [],
+        "byte_equal": true
+      },
+      {
+        "bytes": 0,
+        "kind": "constant",
+        "block": 128,
+        "archive_bytes": 16,
+        "tags": [],
+        "byte_equal": true
+      },
+      {
+        "bytes": 0,
+        "kind": "constant",
+        "block": 256,
+        "archive_bytes": 16,
+        "tags": [],
+        "byte_equal": true
+      },
+      {
+        "bytes": 0,
+        "kind": "constant",
+        "block": 16777216,
+        "archive_bytes": 16,
+        "tags": [],
+        "byte_equal": true
+      },
+      {
+        "bytes": 1,
+        "kind": "constant",
+        "block": 17,
+        "archive_bytes": 22,
+        "tags": [
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 1,
+        "kind": "constant",
+        "block": 64,
+        "archive_bytes": 22,
+        "tags": [
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 1,
+        "kind": "constant",
+        "block": 128,
+        "archive_bytes": 22,
+        "tags": [
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 1,
+        "kind": "constant",
+        "block": 256,
+        "archive_bytes": 22,
+        "tags": [
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 1,
+        "kind": "constant",
+        "block": 16777216,
+        "archive_bytes": 22,
+        "tags": [
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 64,
+        "kind": "constant",
+        "block": 17,
+        "archive_bytes": 100,
+        "tags": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 64,
+        "kind": "constant",
+        "block": 64,
+        "archive_bytes": 41,
+        "tags": [
+          2
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 64,
+        "kind": "constant",
+        "block": 128,
+        "archive_bytes": 41,
+        "tags": [
+          2
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 64,
+        "kind": "constant",
+        "block": 256,
+        "archive_bytes": 41,
+        "tags": [
+          2
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 64,
+        "kind": "constant",
+        "block": 16777216,
+        "archive_bytes": 41,
+        "tags": [
+          2
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 129,
+        "kind": "periodic",
+        "block": 17,
+        "archive_bytes": 185,
+        "tags": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 129,
+        "kind": "periodic",
+        "block": 64,
+        "archive_bytes": 84,
+        "tags": [
+          2,
+          2,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 129,
+        "kind": "periodic",
+        "block": 128,
+        "archive_bytes": 56,
+        "tags": [
+          2,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 129,
+        "kind": "periodic",
+        "block": 256,
+        "archive_bytes": 47,
+        "tags": [
+          2
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 129,
+        "kind": "periodic",
+        "block": 16777216,
+        "archive_bytes": 47,
+        "tags": [
+          2
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 259,
+        "kind": "mixed",
+        "block": 17,
+        "archive_bytes": 355,
+        "tags": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 259,
+        "kind": "mixed",
+        "block": 64,
+        "archive_bytes": 212,
+        "tags": [
+          2,
+          2,
+          0,
+          0,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 259,
+        "kind": "mixed",
+        "block": 128,
+        "archive_bytes": 183,
+        "tags": [
+          2,
+          0,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 259,
+        "kind": "mixed",
+        "block": 256,
+        "archive_bytes": 163,
+        "tags": [
+          2,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 259,
+        "kind": "mixed",
+        "block": 16777216,
+        "archive_bytes": 160,
+        "tags": [
+          2
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 259,
+        "kind": "xorshift",
+        "block": 17,
+        "archive_bytes": 355,
+        "tags": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 259,
+        "kind": "xorshift",
+        "block": 64,
+        "archive_bytes": 300,
+        "tags": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 259,
+        "kind": "xorshift",
+        "block": 128,
+        "archive_bytes": 290,
+        "tags": [
+          0,
+          0,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 259,
+        "kind": "xorshift",
+        "block": 256,
+        "archive_bytes": 285,
+        "tags": [
+          0,
+          0
+        ],
+        "byte_equal": true
+      },
+      {
+        "bytes": 259,
+        "kind": "xorshift",
+        "block": 16777216,
+        "archive_bytes": 280,
+        "tags": [
+          0
+        ],
+        "byte_equal": true
+      }
+    ],
+    "truncations": 3456,
+    "malformed": 236
+  },
+  "previous_reference_reproduced": true,
+  "limitations": [
+    "synthetic only",
+    "Rust cross-codec pending",
+    "no full target measurement"
+  ]
+}

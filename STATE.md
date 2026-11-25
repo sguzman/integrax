@@ -23,3 +23,5 @@ E0077 independent mode5/6 rank context reference 30/30 synthetic frames/append r
 [E0079](experiments/records/E0079.md) 6/6 exact and append rejects; mode7 wins all three, aggregate 2,873,464 B vs mode5 2,892,508 B (0.658% gain), vs mode4 2,910,762 B (1.281% gain). [Theory](theory/rank-backoff.md). Independent mode7 verification passed E0080; no full gain claimed.
 
 E0080 independent mode7 reference 15 exact frames/append rejects, 30 earlier context observations unchanged; Rust cross-codec [CI 45715148000](https://github.com/sguzman/integrax/actions/runs/45715148000) passed 15/15 independent byte-identical frames and both-direction cross-decodes.
+
+E0081 IXB2 tag2 mode7 extension authored; default mode4 byte format unchanged. Independent reference 30 exact, 3456 truncation and 236 malformed rejects, prior E0075 reproduced. External CI pending. Final full candidate not yet launched; E0074 baseline still running.
