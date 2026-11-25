@@ -1,0 +1,238 @@
+{
+  "id": "E0066",
+  "campaign": "C12",
+  "scope": "three held-out enwik8 regions, exact and one-correction recurrence",
+  "status": "roundtrip-verified",
+  "revision": "9bed60c986a646390486ac60c952bcb8bacd3a96",
+  "run": 45712181728,
+  "job": 139549119510,
+  "corpus": {
+    "id": "enwik8",
+    "bytes": 100000000,
+    "sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8"
+  },
+  "training": {
+    "train_sha256": "ba1d4361a56d6e6a688ee4f125465e51b47b361194fbe64349f098860a8fc6fc",
+    "dict_sha256": "5eaab64fde0847e5b645aca4740a5596adcdd2ae7eb4dcf8d934e83f5eab3518"
+  },
+  "commands": [
+    "sh datasets/acquire.sh enwik8",
+    "bash experiments/ixg2/patch.sh"
+  ],
+  "unit_tests": 21,
+  "rows": [
+    {
+      "offset": 1000000,
+      "bytes": 1048576,
+      "modes": {
+        "dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 280766,
+            "copies": 2652,
+            "copied_bytes": 75250,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 742
+          },
+          "encode_seconds": 0.54,
+          "encode_rss_bytes": 84676608,
+          "archive_bytes": 350003,
+          "archive_sha256": "38a0cabc65b790885c94b9593060d1562b3f2d01a2a174636a57f63ceb7a97ec",
+          "decode_seconds": 0.55,
+          "decode_rss_bytes": 81874944,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "patch16": {
+          "model": {
+            "mode": 18,
+            "roots": 280094,
+            "copies": 2758,
+            "copied_bytes": 81132,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 771,
+            "patched": 215,
+            "patched_bytes": 9471
+          },
+          "encode_seconds": 0.53,
+          "encode_rss_bytes": 84574208,
+          "archive_bytes": 350121,
+          "archive_sha256": "5eb3f60777814869bc8e793520f3f90e5010108470ecbfd2fa123fef6519ff2e",
+          "decode_seconds": 0.52,
+          "decode_rss_bytes": 81850368,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        },
+        "patch32": {
+          "model": {
+            "mode": 18,
+            "roots": 292790,
+            "copies": 757,
+            "copied_bytes": 40363,
+            "rules": 8192,
+            "minimum": 32,
+            "alternate_copies": 243,
+            "patched": 225,
+            "patched_bytes": 9993
+          },
+          "encode_seconds": 0.53,
+          "encode_rss_bytes": 84467712,
+          "archive_bytes": 355714,
+          "archive_sha256": "3703b32a36e562a292cbc6a1af1bdbacf70802c5aabbd363f64e49845f18c298",
+          "decode_seconds": 0.53,
+          "decode_rss_bytes": 81895424,
+          "decoded_sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+          "byte_equal": true
+        }
+      },
+      "sha256": "00def8f9bf60bb09bc56f05f71017cecc1d7d19e8a5e9b57992c40ea4a6f735d",
+      "gzip_bytes": 385562
+    },
+    {
+      "offset": 50000000,
+      "bytes": 1048576,
+      "modes": {
+        "dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 280543,
+            "copies": 2625,
+            "copied_bytes": 75942,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 656
+          },
+          "encode_seconds": 0.54,
+          "encode_rss_bytes": 84512768,
+          "archive_bytes": 351948,
+          "archive_sha256": "ad915887a3156712cb74c1b756989877b7062f2d30dc03d15346da9be0f00092",
+          "decode_seconds": 0.52,
+          "decode_rss_bytes": 81752064,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "patch16": {
+          "model": {
+            "mode": 18,
+            "roots": 278848,
+            "copies": 2672,
+            "copied_bytes": 84082,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 769,
+            "patched": 355,
+            "patched_bytes": 17412
+          },
+          "encode_seconds": 0.52,
+          "encode_rss_bytes": 84660224,
+          "archive_bytes": 351869,
+          "archive_sha256": "d9bf9dff4788a77ecb8fd64bb3245bde99b88f6fa568aa81ec12bf845613de26",
+          "decode_seconds": 0.51,
+          "decode_rss_bytes": 81731584,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        },
+        "patch32": {
+          "model": {
+            "mode": 18,
+            "roots": 290974,
+            "copies": 856,
+            "copied_bytes": 47033,
+            "rules": 8192,
+            "minimum": 32,
+            "alternate_copies": 336,
+            "patched": 373,
+            "patched_bytes": 18560
+          },
+          "encode_seconds": 0.52,
+          "encode_rss_bytes": 84602880,
+          "archive_bytes": 356812,
+          "archive_sha256": "814f83d1df75de9b11afac56993370e75e1a82310c0e944564e738ff6e8a31a2",
+          "decode_seconds": 0.55,
+          "decode_rss_bytes": 81784832,
+          "decoded_sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+          "byte_equal": true
+        }
+      },
+      "sha256": "0e9afcb5adac1a6e9a0782839c8f328c32fbbabb277dc9ab20cc4847603ce99b",
+      "gzip_bytes": 389210
+    },
+    {
+      "offset": 10000000,
+      "bytes": 16777216,
+      "modes": {
+        "dual16": {
+          "model": {
+            "mode": 15,
+            "roots": 4458209,
+            "copies": 39070,
+            "copied_bytes": 1190645,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 11990
+          },
+          "encode_seconds": 7.85,
+          "encode_rss_bytes": 84598784,
+          "archive_bytes": 4716953,
+          "archive_sha256": "1802c8ce3637a67ff1cba5feaba587579a5fd6ffbbedac4c0e2e7c597b70d00e",
+          "decode_seconds": 8.58,
+          "decode_rss_bytes": 81870848,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "patch16": {
+          "model": {
+            "mode": 18,
+            "roots": 4441454,
+            "copies": 41137,
+            "copied_bytes": 1321630,
+            "rules": 8192,
+            "minimum": 16,
+            "alternate_copies": 12797,
+            "patched": 4728,
+            "patched_bytes": 259140
+          },
+          "encode_seconds": 7.87,
+          "encode_rss_bytes": 84619264,
+          "archive_bytes": 4718201,
+          "archive_sha256": "93ba214e2635ec7a4451ba7fcdfeb9208b8b85bff842ed9600f7381bd1fdd39d",
+          "decode_seconds": 7.77,
+          "decode_rss_bytes": 81879040,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        },
+        "patch32": {
+          "model": {
+            "mode": 18,
+            "roots": 4625375,
+            "copies": 13064,
+            "copied_bytes": 743684,
+            "rules": 8192,
+            "minimum": 32,
+            "alternate_copies": 4450,
+            "patched": 4761,
+            "patched_bytes": 261326
+          },
+          "encode_seconds": 7.94,
+          "encode_rss_bytes": 84590592,
+          "archive_bytes": 4804684,
+          "archive_sha256": "3679e4d99b35f09d81f4e2af93424ff87aaa08e59877a01d1a3825eef7e23eb1",
+          "decode_seconds": 8.86,
+          "decode_rss_bytes": 81891328,
+          "decoded_sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+          "byte_equal": true
+        }
+      },
+      "sha256": "8212fd32c86e8c1a2be7a9f666b6b2d32f635882ee525cd9d8151c9d31c4e878",
+      "gzip_bytes": 6130610
+    }
+  ],
+  "limitations": [
+    "sample regions only",
+    "same implementation authentic decoder",
+    "greedy patch heuristic; not optimal",
+    "extra coverage does not prove savings"
+  ]
+}

@@ -57,3 +57,7 @@ Identical to mode 15 except recurrence context keys use the last six (mode 16) o
 ## Extension: mode 18, one sparse recurrence correction
 
 Identical to mode 15 except after each copy length, encode a patch flag using adaptive pairs indexed by last output byte (initial 1,1, same rescale). If 1, encode two unsigned eight-bit values, position j and modular residual e, equiprobable MSB first. Reject j>=length or e=0. Copy sequentially at selected distance, adding e modulo 256 to the referenced digit exactly at j before appending it to history; future overlapping references see the corrected digit. Flag 0 gives ordinary exact copy. The encoder selects a candidate with at most one mismatch, requiring at least eight subsequent matching digits, minimum length max(32,threshold), >=2*longest root+8, and length minus 24 strictly greater than best exact length (ties preserve earlier candidate). Encoder-only heuristic; no format overhead other than mode and charged patch decisions. Strict replay includes all bits. Older decoders reject mode 18.
+
+## Extension: mode 19, adaptive sparse correction operands
+
+Identical to mode 18, including encoder parsing and patch flags. Each eight-bit correction position and residual is instead encoded by a separate binary prefix count tree, initialized (1,1) per node (1..255), with existing update/rescale. Start p=1 per field and advance p=2p+b. Update only for actually coded patch operands. Both trees unconditional, no extra metadata. All bounds and canonical replay unchanged. Older decoders reject mode 19.
