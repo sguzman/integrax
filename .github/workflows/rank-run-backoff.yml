@@ -1,0 +1,25 @@
+name: E0093 hierarchical run and flag coding
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/ixb1/run-backoff.sh'
+      - '.github/workflows/rank-run-backoff.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: sh datasets/acquire.sh enwik9
+      - name: Matched mode7 and mode8 archive tests
+        run: |
+          set -euo pipefail
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
+          bash experiments/ixb1/run-backoff.sh
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
+          echo E0093_COMPLETE
