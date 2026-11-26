@@ -7,7 +7,7 @@
 - Owner made repo private (verified via API) and restored MIT. No publication, submission or visibility change without explicit approval. Local wrkflw/Nix manifest and existing GitHub App Checks reporter authored; owner runs locally.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: owner runs E0084 using local CI manifest, collect exact commit Check Run evidence, then decide full candidate only after independent verification. No workers or pending full benchmarks.
+Next: prepare local full-corpus candidate with strict decoder isolation and corpus cache; no full-scale acceptance before exact byte comparison and evidence. E0084 local CI passed.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -18,3 +18,5 @@ E0083 corrected CI passed; mode20 wins all three regions, 6 strict roundtrips an
 First local Check #139596572386 published failure in evidence phase (wrkflw exit zero, no validated records). Authentication and Checks upload worked. Actual cause not confirmed without raw diagnostics; enable explicit dispatch and verbose step output, publish redacted failure diagnostics to private Check Runs, retain full local logs. E0084 still unverified.
 
 Second local attempt [Check 139597753829](https://github.com/sguzman/integrax/runs/139597753829) reports successful build and verification steps but wrkflw 0.8.0 emulation hides child stdout even in verbose mode; zero evidence records reached the parser. Implemented fresh per-revision host transfer directory using the original GITHUB_WORKSPACE path confirmed in the diagnostic log. Workflow writes actual step logs, evidence, and a completion revision marker; publisher requires all expected evidence and matching revision, persists step logs locally, and publishes redacted failure diagnostics. No E0084 acceptance yet; host transfer integration requires owner rerun.
+
+E0084 [local Check 139599681105](https://github.com/sguzman/integrax/runs/139599681105) succeeded at revision `6688ad92501ec97b83a23ec00d698681067f34b4`: 20/20 independent BigInt/Rust archive equality, both-direction exact cross-decodes and append rejection, matching decoded hashes; prior mode15 observations regression check passed as required by the script. Local wrkflw execution, file-based evidence transfer and GitHub Checks reporting verified end-to-end (12 s reported runner duration). [Structured evidence](experiments/records/E0084.json). Total independent comparisons: 570. Full-corpus candidate remains unmeasured; adapt isolation and corpus caching for local execution before full trial.
