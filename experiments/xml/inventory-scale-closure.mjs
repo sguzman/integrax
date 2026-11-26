@@ -67,7 +67,7 @@ for(const o of prior){
  for(const t of matched){let e=0;while(q%t.n===0n){q/=t.n;e++}if(e)fs.push({p:h(t.n),e,quality:t.quality,source:'inventory-gcd',witness:t.id})}
  assert.equal(fs.reduce((n,f)=>n*H(f.p)**BigInt(f.e),q),o.q);
  const w=o.row.width,band=w<=8?'1-8':w<=32?'9-32':w<=128?'33-128':w<=512?'129-512':w<=2048?'513-2048':'2049+';
- measure(stats.by_kind,uniqueByKind,o.row.kind,o,q);measure(stats.by_width,uniqueByWidth,band,o,q);measure(stats.by_cohort,uniqueByCohort,recentIds.has(o.row.id)?'E0112':'historical',o,q);
+ measure(stats.by_kind,uniqueByKind,o.row.kind,o,q);measure(stats.by_width,uniqueByWidth,band,o,q);measure(stats.by_cohort,uniqueByCohort,recentIds.has(o.row.id)?manifest.batches.at(-1).id:'historical',o,q);
  if(q<o.q){stats.improved++;stats.bits_removed+=bits(o.q)-bits(q);unique.add(o.n);if(o.row.children.length)stats.parent_improved++;if(q===1n)stats.completed++;
  console.log(JSON.stringify({event:'COFACTOR_REFINEMENT',id:o.row.id,kind:o.row.kind,parent:o.row.children.length>0,old_cofactor:h(o.q),after_inventory:h(q),factors:fs,remaining:h(q),unresolved_parts:q===1n?[]:[h(q)],shared_divisor:null,old_bits:bits(o.q),remaining_bits:bits(q),rho_steps:0}));}
 }

@@ -1,4 +1,4 @@
-name: E0115 new-prime inventory closure
+name: E0117 enlarged inventory scale closure
 on:
   push:
     branches: [main]
@@ -19,4 +19,4 @@ jobs:
         run: |
           set -euo pipefail
           /usr/bin/time -v timeout --kill-after=10s 900s node --max-old-space-size=3072 experiments/xml/inventory-scale-closure.mjs data/enwik9
-          echo E0115_COMPLETE
+          echo E0117_COMPLETE
