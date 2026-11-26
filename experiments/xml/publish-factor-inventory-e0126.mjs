@@ -81,7 +81,7 @@ for(const [offset,pageRows] of [...pages].sort((a,b)=>a[0]-b[0])){
 assert.equal(totals.nodes,summary.nodes);
 assert.equal(totals.parents,pageEvents.reduce((n,x)=>n+x.stats.parents,0));
 assert.deepEqual(pageRecords.map(({offset,width,root_id})=>({offset,width,root_id})),summary.pages);
-for(const p of pageRecords){const e=pageEvents.find(x=>x.offset===p.offset);assert(e);assert.equal(p.nodes,e.stats.nodes);assert.equal(p.parents,e.stats.parents)}
+for(const p of pageRecords){const e=pageEvents.find(x=>x.offset===p.offset);assert(e);assert.equal(e.width,p.width);assert.equal(e.sha256,p.sha256);assert.equal(p.nodes,e.stats.nodes);assert.equal(p.parents,e.stats.parents)}
 assert.equal(prior.size,summary.distinct_factors);assert.equal(newIndex.size,prior.size-preexisting.size);
 const indexDir='inventory/index/E0126';mkdirSync(indexDir,{recursive:true});
 const sorted=[...newIndex.values()].sort((a,b)=>{const x=fromHex(a.p),y=fromHex(b.p);return x<y?-1:x>y?1:0});
