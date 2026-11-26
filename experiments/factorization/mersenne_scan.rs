@@ -56,7 +56,7 @@ fn main()->io::Result<()>{
  let args:Vec<_>=std::env::args().collect();
  assert_eq!(args.len(),4,"usage: mersenne_scan FILE EXPONENT WITNESS");
  let k:usize=args[2].parse().unwrap();
- assert!([720720,12252240].contains(&k),"unapproved bound");
+ assert!([720720,12252240,232792560].contains(&k),"unapproved bound");
  let m=Z::mersenne(k);
  let start=Instant::now();
  let (bytes,r)=fold(File::open(&args[1])?,k,&m)?;

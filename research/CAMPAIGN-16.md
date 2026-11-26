@@ -9,3 +9,5 @@ M1: investigate resource scaling of exact modular multiplication, GCD and modula
 M1 E0088 authored: [bounded synthetic GMP feasibility protocol](../experiments/records/E0088.md). Hosted execution pending. No full-target factorization attempt or compression claim.
 
 M1 E0088 passed all four synthetic cases. Important caveat: stage 1 fixed exponent is smaller than largest modulus bit width; see [results](../experiments/records/E0088.md). M2 E0089 exploits exact GCD with a much smaller odd auxiliary modulus via streaming radix folding and independently verified Bezout certificates, full corpus, two fixed exponent bounds. [Protocol](../experiments/records/E0089.md). Pending hosted CI.
+
+E0089 independently verified both exact GCDs equal to 1. No new factors. [Evidence](../experiments/records/E0089.json). E0090 selected as a single scale experiment with 19-fold larger exponent, no rerun of old bounds. Resource caps and independent verification required. [Protocol](../experiments/records/E0090.md).

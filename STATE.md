@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: inspect C16 E0089 full-integer bounded Mersenne GCD CI; E0088 synthetic feasibility passed. No repeated trial division. Preserve known N=32Q; Q has no prime divisor <=997. No new factor claim. No owner corpus acquisition required.
+Next: inspect C16 E0090 expanded fixed-base order search. E0089 verified both GCDs=1. No repeated trial division. Preserve known N=32Q; Q has no prime divisor <=997. No new factor claim. No owner corpus acquisition required.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -40,3 +40,5 @@ E0085 and E0087 passed; F0013 accepted, C14/C15 closed. [E0085 evidence](experim
 C16 M1 E0088 authored: standalone Rust/GMP modular multiplication, GCD, exponentiation and Pollard p-1 on bounded planted-factor synthetic moduli up to 67,108,864 bits. Prior art recorded, hosted execution pending. Next collect timing, censored bounds and memory before deciding full-target feasibility.
 
 E0088 passed [CI 45756109910](https://github.com/sguzman/integrax/actions/runs/45756109910/job/139694984064); all four widths, results in experiments/records/E0088.json. E0089 authored to scan authentic N via gcd(N,2^k-1), k=720720 and 12252240, independent BigInt residue and Bezout verification. Results pending. No new known factor yet.
+
+E0089 passed [CI 45756490083](https://github.com/sguzman/integrax/actions/runs/45756490083/job/139696203381): both GCDs=1, independent residue/Bezout verification passed. E0090 single new exponent 232792560 authored; 19-fold scale experiment, verification pending. Known N=32Q unchanged. No frontier or license change.

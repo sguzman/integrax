@@ -14,7 +14,7 @@ for(const k of [8n,16n,24n,64n]){
  }
 }
 const [path,exp,witness]=process.argv.slice(2);
-assert(['720720','12252240'].includes(exp));
+assert(['720720','12252240','232792560'].includes(exp));
 const k=BigInt(exp),m=(1n<<k)-1n;
 const proof=readFileSync(witness,'utf8');
 const parts=proof.trim().split('\n');

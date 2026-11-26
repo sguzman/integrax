@@ -1,0 +1,62 @@
+{
+  "id": "E0089",
+  "campaign": "C16",
+  "status": "independently-reproduced",
+  "revision": "8be485fb5b562fcab91eb6734367f3e48628c033",
+  "run": 45756490083,
+  "job": 139696203381,
+  "tests_passed": 3,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "rows": [
+    {
+      "exponent": 720720,
+      "bytes": 1000000000,
+      "gcd_hex": "1",
+      "gcd_bits": 1,
+      "scan_seconds": 1.103681,
+      "gcdext_seconds": 0.048178,
+      "peak_rss_kib": 7664,
+      "independent_verification": {
+        "event": "MERSENNE_GCD_VERIFIED",
+        "exponent": 720720,
+        "bytes": 1000000000,
+        "gcd_hex": "1",
+        "gcd_bits": 1,
+        "residue_sha256": "34d58e41337f41f14c85041b9941fd22de854105ef0202a63f81a29d9db29663",
+        "witness_sha256": "4f3ae82755fda6e706957f7af47e7812bd057ea7e0fe281ed3c15ca836fe907a",
+        "seconds": 5.087728481,
+        "peak_rss_kib": 135120
+      }
+    },
+    {
+      "exponent": 12252240,
+      "bytes": 1000000000,
+      "gcd_hex": "1",
+      "gcd_bits": 1,
+      "scan_seconds": 1.292151,
+      "gcdext_seconds": 1.897132,
+      "peak_rss_kib": 34324,
+      "independent_verification": {
+        "event": "MERSENNE_GCD_VERIFIED",
+        "exponent": 12252240,
+        "bytes": 1000000000,
+        "gcd_hex": "1",
+        "gcd_bits": 1,
+        "residue_sha256": "d11ee58ddb74fde2ba6fadfb02b05f2632146c502e7b5fb984964024346dd300",
+        "witness_sha256": "8c4d1b0c67a9e56f1cbfe1e03a5bcb6bb458e1c70fdfc227c34ec022292c5e95",
+        "seconds": 6.951608043999999,
+        "peak_rss_kib": 244068
+      }
+    }
+  ],
+  "known_factorization_unchanged": "N=2^5 Q",
+  "limitations": [
+    "bounded fixed-base order search only",
+    "no new factor or compression gain",
+    "certificate contents transient; hashes and CI evidence retained"
+  ]
+}

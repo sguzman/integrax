@@ -1,4 +1,4 @@
-name: E0089 full-integer bounded Mersenne GCD
+name: E0090 expanded Mersenne order search
 on:
   push:
     branches: [main]
@@ -31,9 +31,9 @@ jobs:
           expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
           test "$(wc -c < data/enwik9)" = 1000000000
           test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
-          for exp in 720720 12252240; do
-            /usr/bin/time -v timeout --kill-after=10s 180s /tmp/mersenne-scan data/enwik9 "$exp" "/tmp/witness-$exp"
-            /usr/bin/time -v timeout --kill-after=10s 240s node --max-old-space-size=2048 experiments/oracle/mersenne-gcd-cross.mjs data/enwik9 "$exp" "/tmp/witness-$exp"
+          for exp in 232792560; do
+            /usr/bin/time -v timeout --kill-after=10s 420s /tmp/mersenne-scan data/enwik9 "$exp" "/tmp/witness-$exp"
+            /usr/bin/time -v timeout --kill-after=10s 600s node --max-old-space-size=4096 experiments/oracle/mersenne-gcd-cross.mjs data/enwik9 "$exp" "/tmp/witness-$exp"
           done
           test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
-          echo E0089_COMPLETE
+          echo E0090_COMPLETE
