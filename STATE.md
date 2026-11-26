@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: inspect E0101 lexical prefix/residual ablation. E0100 context rank gains but loses gzip; C19 deferred. No frontier change.
+Next: inspect E0102 alphabet-rank and two-sided affix residual archives. E0101 19.14% gain vs lexical context; behind gzip. C19 deferred. No frontier change.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -64,3 +64,5 @@ E0098 passed recursive byte synthesis, arithmetic saves 3147 B vs hybrid but los
 E0099 passed 15 authentic article archives; all 2176 factor products retained and rechecked. E0100 word/phrase rank-stream arithmetic coding authored, hosted CI pending. No license or frontier change.
 
 E0100 passed nine authentic archives; E0101 exact-repeat and prefix-residual escape modes authored, historical baseline digest required. Hosted CI pending. No license/frontier change.
+
+E0101 passed nine authentic archives; prefix saves 120037 B vs context. E0102 alphabet ranks and suffix reuse authored; hosted CI pending. No license/frontier change.
