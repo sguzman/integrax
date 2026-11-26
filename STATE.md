@@ -13,7 +13,7 @@ Updated 2026-11-26 UTC. **Read [AGENTS.md](AGENTS.md) and this file first; no ch
 - [Frontier](benchmarks/FRONTIER.md): F0012 blockwise 217,045,597 B; F0013 whole-stream 232,493,451 B; archive-only, contest total unestablished. No compression claim from overlapping object factors.
 
 ## Resume here
-- E0121 accepted; 2 overlays and 2 new primes published atomically. Next E0122: repeat frozen inventory closure using unchanged E0117/E0120 script to propagate the new primes into their witness objects and all remaining residuals, verify index union and replay. No E0122 run launched yet. Expected 46547 objects, 13633 factors, 7518 partial before closure. Use verified hosted cache.
+- E0121 accepted; 2 overlays and 2 new primes published atomically. Next E0122: repeat frozen inventory closure using unchanged E0117/E0120 script to propagate the new primes into their witness objects and all remaining residuals, verify index union and replay. E0122 workflow committed at [4ae3e6f](https://github.com/sguzman/integrax/commit/4ae3e6f73e27806205f959e449b507bd28bbe761). [Hosted run 45867979440](https://github.com/sguzman/integrax/actions/runs/45867979440) queued at checkpoint. Check existing run before any further launch. Expected 46547 objects, 13633 factors, 7518 partial before closure. Use verified hosted cache.
 - Verify reference CI and exact products; no duplicate launches. Then consider larger held-out pages under existing C20 protocol.
 
 ## On-demand context
