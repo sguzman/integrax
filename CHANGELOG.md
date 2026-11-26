@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-26 — E0127 factor propagation closure
+Hosted closure propagated E0126 factors across 80,082 objects: 42 parent refinements / 30 distinct values, all witnessed in the new pages, removing 639 overlapping residual bits. Historical objects gained 526 bits of reduction, E0126 objects 113; no article gain, one 19-bit page/root value. Persisted 42 exact rows and provenance after independent product and witness checks. No archive compression claim.
+
 ## 2026-11-26 — E0125 inventory saturation control
 Hosted replay and rescreen of all 62,823 indexed objects using 16,081 factors found zero further refinements or residual bits removed after E0124 overlays; one cofactor had completed. Persisted the stratified summary. No compression result claimed.
 
