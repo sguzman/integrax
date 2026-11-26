@@ -84,3 +84,5 @@ E0107 passed, 3446 new nodes (9095 total), 5144 distinct factors (+998), 207 pre
 E0108 authored: frozen historical inventory controls on identical fresh 4097–6144-byte page objects, then ordinary adaptive cumulative factorization. Hosted CI pending.
 
 E0108 passed: 5871 new nodes (14966 total), 6504 factors (+1360), 335 unseen parent full-inventory hits. Frozen 3286/4145/4146/5144-factor screens on identical objects: 915278/912006/912006/908682 residual bits; 274 objects improved including 57 parents, no article improvements and one page improvement. 42.26 s. Next E0109: strict descendant residual GCD after screening latest inventory, compare exact composite splits beyond known primes. No compression claim.
+
+E0109 authored: authenticated overlay replay, full inventory screen and strict-descendant cofactor GCD, retaining exact proper splits beyond known prime reuse. Hosted CI pending.

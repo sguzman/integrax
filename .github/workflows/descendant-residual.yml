@@ -1,0 +1,22 @@
+name: E0109 strict descendant residual GCD
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/xml/descendant-residual.mjs'
+      - '.github/workflows/descendant-residual.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: sh datasets/acquire.sh enwik9
+      - name: Screen latest inventory and test strict descendant residuals
+        run: |
+          set -euo pipefail
+          /usr/bin/time -v timeout --kill-after=10s 900s node --max-old-space-size=3072 experiments/xml/descendant-residual.mjs data/enwik9
+          echo E0109_COMPLETE
