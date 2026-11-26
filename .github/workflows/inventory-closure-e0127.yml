@@ -1,0 +1,70 @@
+name: E0127 propagate E0126 factors to historical residuals
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'inventory/manifest.json'
+      - 'inventory/batches/E0126/**'
+      - 'inventory/index/E0126/**'
+      - 'experiments/xml/inventory-scale-closure.mjs'
+      - '.github/workflows/inventory-closure-e0127.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: c20-factor-inventory
+  cancel-in-progress: false
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Restore verified corpus cache
+        uses: actions/cache@v4
+        with:
+          path: data/enwik9
+          key: enwik9-sha256-159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+      - name: Acquire and verify authentic corpus
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          if [ ! -f data/enwik9 ]; then
+            for host in mattmahoney.net www.mattmahoney.net; do
+              zip="data/enwik9.${host}.zip.tmp"
+              raw="data/enwik9.${host}.raw.tmp"
+              if curl --proto '=https' --proto-redir '=https' --location --fail --http1.1 --connect-timeout 30 --max-time 180 --output "$zip" "https://$host/dc/enwik9.zip" &&
+                 [ "$(wc -c < "$zip")" -eq 322592222 ] &&
+                 unzip -tq "$zip" &&
+                 unzip -p "$zip" enwik9 > "$raw" &&
+                 [ "$(wc -c < "$raw")" -eq 1000000000 ] &&
+                 printf '%s  %s\n' "$expected" "$raw" | sha256sum -c -; then
+                mv "$raw" data/enwik9
+                rm -f "$zip"
+                break
+              fi
+            done
+          fi
+          test -f data/enwik9
+          printf '%s  %s\n' "$expected" data/enwik9 | sha256sum -c -
+          sh datasets/acquire.sh enwik9
+      - name: Record Nix and Node versions
+        run: |
+          nix --version | tee data/E0127.nix-version
+          nix develop --no-update-lock-file --command node --version | tee data/E0127.node-version
+      - name: Replay accumulated inventory and close residuals
+        run: |
+          set -euo pipefail
+          /usr/bin/time -v -o data/E0127.time timeout --kill-after=10s 900s nix develop --no-update-lock-file --command node --max-old-space-size=3072 experiments/xml/inventory-scale-closure.mjs data/enwik9 > data/E0127.jsonl
+          echo E0127_COMPLETE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: E0127-closure-jsonl
+          path: |
+            data/E0127.jsonl
+            data/E0127.time
+            data/E0127.nix-version
+            data/E0127.node-version
+          retention-days: 90
