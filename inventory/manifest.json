@@ -459,11 +459,306 @@
         }
       ],
       "snapshots": "inventory/batches/E0105/snapshots.json"
+    },
+    {
+      "id": "E0107",
+      "record": "experiments/records/E0107.json",
+      "shards": [
+        {
+          "path": "inventory/batches/E0107/100434650-000.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-001.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-002.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-003.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-004.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-005.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-006.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-007.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-008.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-009.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-010.json",
+          "offset": 100434650,
+          "rows": 100,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/100434650-011.json",
+          "offset": 100434650,
+          "rows": 20,
+          "width": 3281,
+          "sha256": "15e41e6df693602ca3edd63b5e5088eb038493828563db139b9c9f55bfb682f3",
+          "root_id": "enwik9:100434650:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-000.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-001.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-002.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-003.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-004.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-005.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-006.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-007.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-008.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-009.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-010.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/400015975-011.json",
+          "offset": 400015975,
+          "rows": 100,
+          "width": 3532,
+          "sha256": "9fa38d0839c6908e8bf5233c1c15a026b7fc919ce52014f60f7119287e5e849b",
+          "root_id": "enwik9:400015975:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-000.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-001.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-002.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-003.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-004.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-005.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-006.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-007.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-008.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-009.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-010.json",
+          "offset": 800021080,
+          "rows": 100,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        },
+        {
+          "path": "inventory/batches/E0107/800021080-011.json",
+          "offset": 800021080,
+          "rows": 26,
+          "width": 3218,
+          "sha256": "97c4708efb54fe2c1d31f066b04e3e5d6b51d13fb2500d1c2967e80e435ebbb4",
+          "root_id": "enwik9:800021080:0"
+        }
+      ],
+      "snapshots": "inventory/batches/E0107/snapshots.json"
     }
   ],
   "index": {
-    "batch": "E0106",
-    "distinct_factors": 4146,
+    "batch": "E0107",
+    "distinct_factors": 5144,
     "format": "base-plus-deltas",
     "shards": [
       {
@@ -561,10 +856,50 @@
       {
         "path": "inventory/index/E0106/000.json",
         "count": 39
+      },
+      {
+        "path": "inventory/index/E0107/000.json",
+        "count": 1
+      },
+      {
+        "path": "inventory/index/E0107/001.json",
+        "count": 1
+      },
+      {
+        "path": "inventory/index/E0107/002.json",
+        "count": 1
+      },
+      {
+        "path": "inventory/index/E0107/003.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0107/004.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0107/005.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0107/006.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0107/007.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0107/008.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0107/009.json",
+        "count": 43
       }
     ]
   },
-  "indexed_nodes": 5649,
+  "indexed_nodes": 9095,
   "refinements": [
     {
       "id": "E0106",

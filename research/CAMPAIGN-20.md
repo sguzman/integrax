@@ -40,3 +40,5 @@ E0104 verified resume, 2179 new nodes (2973 total), 3286 factors (+512), full-in
 E0105 verified 2676 new nodes (5649 total), 4145 factors (+859); 157 previously unseen parent integers benefit from full inventory, 162 parent hits with distinct-value witness. [Record](../experiments/records/E0105.json). E0106 revisits earlier unresolved cofactors using all current factors and proper cross-residual GCDs, retaining exact supplemental discoveries. No compression claim.
 
 E0106 passed: 36 improved objects (35 parents), 2 completed, 648 residual bits removed across overlapping nodes, one new prime (2969), 6.07 s; all 36 exact supplemental products persisted, index now 4146. Next E0107: expand to fresh 3073–4096-byte pages, loading and checking E0106 overlay and unioned occurrence index. No compression frontier change.
+
+E0107 passed, 3446 new nodes (9095 total), 5144 distinct factors (+998), 207 previously unseen parent values with full-inventory hits. 15.42 s. Scale-normalized evidence shows strong word/phrase reductions but nearly unchanged article/page cofactors. Next E0108 controlled fixed-object inventory growth comparison; no compression claim.

@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: inspect E0107 larger-page inventory hosted CI and persist verified new shards. E0106 36 improved objects, 35 parents, two completed; 5649 objects, 4146 factors; supplemental exact refinements persisted. Factorization primary; no frontier change.
+Next: E0108 fixed-object controlled inventory-growth comparison. E0107 passed, 9095 indexed objects and 5144 distinct factors. E0106 36 improved objects, 35 parents, two completed; 5649 objects, 4146 factors; supplemental exact refinements persisted. Factorization primary; no frontier change.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -78,3 +78,5 @@ E0105 passed and persisted. E0106 revisits unresolved cofactors using current in
 E0106 passed: 36 improved objects (35 parents), 2 completed, 648 residual bits removed across overlapping nodes, one new prime (2969), 6.07 s; all 36 exact supplemental products persisted, index now 4146. Next E0107: expand to fresh 3073–4096-byte pages, loading and checking E0106 overlay and unioned occurrence index. No compression frontier change.
 
 E0107 authored and queued by push; full historical inventory and E0106 overlays must pass validation before new factor searches. No frontier change.
+
+E0107 passed, 3446 new nodes (9095 total), 5144 distinct factors (+998), 207 previously unseen parent values with full-inventory hits. 15.42 s. Scale-normalized evidence shows strong word/phrase reductions but nearly unchanged article/page cofactors. Next E0108 controlled fixed-object inventory growth comparison; no compression claim.
