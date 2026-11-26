@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: E0115 newly discovered prime propagation.
+Next: E0116 fresh larger-page inventory expansion.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -112,3 +112,5 @@ E0114: replay E0113 overlays and repeat E0111 strictly smaller global residual G
 E0114 passed: 3,758 partial objects, 2,874 distinct residuals, 3 global-only proper GCD matches (2 distinct integer values; sentence/paragraph alias), 2 new primes (0x38d5, 0x2ba3), 40 overlapping residual bits removed, zero descendant matches across 22,897 checks. 94.48 s. Exact products, GCD witnesses and prime values independently rechecked. Persisted 3 overlays and 2 index entries; 8,378 factors. No article/page improvement or compression claim. Next E0115: propagate new primes across all indexed objects before further expansion.
 
 E0115: frozen-inventory closure after E0114, now 8,378 factors and 23,080 objects. Propagate the two new primes into any remaining cofactors, retain scale and distinct-value metrics, require exact overlay replay and product verification. Reuse E0113 implementation unchanged. No additional residual GCD search; hosted CI pending.
+
+E0115 passed: 2 historical objects (sentence and username, 2 distinct integers) improved solely from E0114 primes; 28 overlapping residual bits removed, 3,758 partial objects, no completions, 11.11 s. Both exact products independently checked and overlays persisted. 8,378 known factors unchanged. No article/page improvement or compression claim. Next E0116: expand inventory with fresh larger pages; compare frozen historical inventories against identical unseen objects.

@@ -1,0 +1,55 @@
+{
+  "batch": "E0115",
+  "rows": [
+    {
+      "event": "COFACTOR_REFINEMENT",
+      "id": "enwik9:800119276:130",
+      "kind": "sentence",
+      "parent": true,
+      "old_cofactor": "401e39c604a53e43a5aea9d27f6326bc96305b0ca971afa73bffc1641188d985a34164f71f558852440eaac28db",
+      "after_inventory": "120d1e9b05f88097ed7862104aff1328711688df94dc8fd5d6163512b938e13b3690da7565d99d84f0a7b2ef",
+      "factors": [
+        {
+          "p": "38d5",
+          "e": 1,
+          "quality": "prime64",
+          "source": "inventory-gcd",
+          "witness": "enwik9:400050717:1215"
+        }
+      ],
+      "remaining": "120d1e9b05f88097ed7862104aff1328711688df94dc8fd5d6163512b938e13b3690da7565d99d84f0a7b2ef",
+      "unresolved_parts": [
+        "120d1e9b05f88097ed7862104aff1328711688df94dc8fd5d6163512b938e13b3690da7565d99d84f0a7b2ef"
+      ],
+      "shared_divisor": null,
+      "old_bits": 363,
+      "remaining_bits": 349,
+      "rho_steps": 0
+    },
+    {
+      "event": "COFACTOR_REFINEMENT",
+      "id": "enwik9:800035609:30",
+      "kind": "username",
+      "parent": true,
+      "old_cofactor": "556b3ef2d1ffe1e5d70cae9ef43e8087994f63bd671f31b1eb16998077ff847611dc932b103ffd5db0539",
+      "after_inventory": "1f51ecc6f0da1f2cbe39964ec5201b53cbc5c06d0bfbf23add8b0664f5639418512a4ef0b130b19973",
+      "factors": [
+        {
+          "p": "2ba3",
+          "e": 1,
+          "quality": "prime64",
+          "source": "inventory-gcd",
+          "witness": "enwik9:800166111:1046"
+        }
+      ],
+      "remaining": "1f51ecc6f0da1f2cbe39964ec5201b53cbc5c06d0bfbf23add8b0664f5639418512a4ef0b130b19973",
+      "unresolved_parts": [
+        "1f51ecc6f0da1f2cbe39964ec5201b53cbc5c06d0bfbf23add8b0664f5639418512a4ef0b130b19973"
+      ],
+      "shared_divisor": null,
+      "old_bits": 339,
+      "remaining_bits": 325,
+      "rho_steps": 0
+    }
+  ]
+}
