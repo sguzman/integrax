@@ -36,3 +36,5 @@ C15/E0086: bounded exact divisibility survey of the full enwik9 integer, all pri
 E0086 passed [CI 45754251881](https://github.com/sguzman/integrax/actions/runs/45754251881/job/139689015680), N=2^5 Q with Q odd and no odd prime <=97 dividing N; four tests passed, corpus SHA-256 verified, 2.02 s and 2212 KiB RSS. Evidence experiments/records/E0086.json. E0087 authored to independently reproduce group/valuation evidence and extend trial division to 997. E0085 still in progress at last check. No compression frontier change.
 
 E0085 and E0087 passed; F0013 accepted, C14/C15 closed. [E0085 evidence](experiments/records/E0085.json), [E0087 factor ledger](experiments/records/E0087.json). C16 selected; implementation and prior-art review pending. No contest submission or license change.
+
+C16 M1 E0088 authored: standalone Rust/GMP modular multiplication, GCD, exponentiation and Pollard p-1 on bounded planted-factor synthetic moduli up to 67,108,864 bits. Prior art recorded, hosted execution pending. Next collect timing, censored bounds and memory before deciding full-target feasibility.

@@ -1,0 +1,41 @@
+name: E0088 GMP arithmetic feasibility
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/factorization/gmp_feasibility.rs'
+      - '.github/workflows/gmp-feasibility.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build standalone Rust GMP probe
+        run: |
+          set -euo pipefail
+          rustc --version
+          pkg-config --modversion gmp
+          rustc --edition=2021 --test experiments/factorization/gmp_feasibility.rs -o /tmp/gmp-tests
+          /tmp/gmp-tests
+          rustc --edition=2021 -C opt-level=3 experiments/factorization/gmp_feasibility.rs -o /tmp/gmp-feasibility
+      - name: Measure bounded synthetic workloads
+        run: |
+          set -euo pipefail
+          ulimit -v 6291456
+          for bits in 65536 1048576 16777216 67108864; do
+            echo "CASE bits=$bits"
+            set +e
+            /usr/bin/time -v timeout --kill-after=10s 150s /tmp/gmp-feasibility "$bits"
+            rc=$?
+            set -e
+            if test "$rc" -eq 124 || test "$rc" -eq 137; then
+              echo "CENSORED bits=$bits exit=$rc"
+              break
+            fi
+            test "$rc" -eq 0
+          done
+          echo FEASIBILITY_COMPLETE
