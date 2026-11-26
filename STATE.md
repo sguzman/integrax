@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: inspect E0100 lexical rank arithmetic archives. E0099 2176 factor cases recorded, no factor wins, 3460 radix nodes. C19 deferred. No frontier change.
+Next: inspect E0101 lexical prefix/residual ablation. E0100 context rank gains but loses gzip; C19 deferred. No frontier change.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -62,3 +62,5 @@ E0097 passed, 45 cohorts, 5030 objects; no authentic factor selection, whole-val
 E0098 passed recursive byte synthesis, arithmetic saves 3147 B vs hybrid but loses gzip. Owner requested decomposition inside article bodies. E0099 implements paragraph/sentence/phrase/word/fragment levels with bounded actual factoring, exact product and radix alternatives, arithmetic-only controls. Hosted CI pending. No license/frontier change.
 
 E0099 passed 15 authentic article archives; all 2176 factor products retained and rechecked. E0100 word/phrase rank-stream arithmetic coding authored, hosted CI pending. No license or frontier change.
+
+E0100 passed nine authentic archives; E0101 exact-repeat and prefix-residual escape modes authored, historical baseline digest required. Hosted CI pending. No license/frontier change.

@@ -1,0 +1,299 @@
+{
+  "id": "E0100",
+  "campaign": "C20",
+  "status": "roundtrip-verified",
+  "revision": "9d12340e7e8356788bdee66bb0a2a83beabf6b49",
+  "run": 45762190091,
+  "job": 139714534070,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "rows": [
+    {
+      "event": "WORD_RANK_REGION",
+      "offset": 100000000,
+      "start": 100028432,
+      "end": 100351434,
+      "input_sha256": "ba15eea4c4d5865463ece5f501623dc36b327ecd1ae798fcc9563398b64ebb07",
+      "raw": 323002,
+      "gzip": 122498,
+      "segments": 27,
+      "article_bytes": 317694,
+      "fixed": {
+        "archive_bytes": 333021,
+        "archive_sha256": "d015315e1db31f681d643acd8267398fe22545ac10892464318d3ddcf1a93448",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 1678,
+            "escapes": 200,
+            "rank_bytes": 1678,
+            "escape_bytes": 1193
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 112069,
+            "escapes": 17255,
+            "rank_bytes": 168104,
+            "escape_bytes": 132575
+          }
+        ],
+        "verified": true
+      },
+      "adaptive": {
+        "archive_bytes": 241896,
+        "archive_sha256": "50e8ee0b649a60722aa22cb71d4f8d90c29fb7a656555d8db92611ca9c30d4fd",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 1678,
+            "escapes": 200,
+            "rank_bytes": 1039,
+            "escape_bytes": 1193
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 112069,
+            "escapes": 17255,
+            "rank_bytes": 77618,
+            "escape_bytes": 132575
+          }
+        ],
+        "verified": true
+      },
+      "context": {
+        "archive_bytes": 231362,
+        "archive_sha256": "537a55602346148e6056ace3dd89daa68143dc7b49ee1c7394d6c4f82d9d3145",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 1678,
+            "escapes": 200,
+            "rank_bytes": 921,
+            "escape_bytes": 1193
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 112069,
+            "escapes": 17255,
+            "rank_bytes": 67202,
+            "escape_bytes": 132575
+          }
+        ],
+        "verified": true
+      },
+      "seconds": 0.651554431
+    },
+    {
+      "event": "WORD_RANK_REGION",
+      "offset": 400000000,
+      "start": 400007843,
+      "end": 400279977,
+      "input_sha256": "54ec643801cd864a778c1e437ef4ab44dd1d4f43ef5f6507bc76476b1d208a3c",
+      "raw": 272134,
+      "gzip": 92460,
+      "segments": 173,
+      "article_bytes": 240733,
+      "fixed": {
+        "archive_bytes": 279555,
+        "archive_sha256": "5ccc96e9c37b6d86060d5388eb9acacde3d0659ae39bc2c5ab00612b8a60c191",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 9738,
+            "escapes": 868,
+            "rank_bytes": 9738,
+            "escape_bytes": 5533
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 88567,
+            "escapes": 14317,
+            "rank_bytes": 132851,
+            "escape_bytes": 101549
+          }
+        ],
+        "verified": true
+      },
+      "adaptive": {
+        "archive_bytes": 206063,
+        "archive_sha256": "6525987b1686cfea46bc28eb6bf4c9b948f4a0d9eef51cb9171894e6bcb91751",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 9738,
+            "escapes": 868,
+            "rank_bytes": 5770,
+            "escape_bytes": 5533
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 88567,
+            "escapes": 14317,
+            "rank_bytes": 63327,
+            "escape_bytes": 101549
+          }
+        ],
+        "verified": true
+      },
+      "context": {
+        "archive_bytes": 197692,
+        "archive_sha256": "97b034814695bc69e04b8028bb61a75100d1d5d1fbfbdd43d1f83283bb5a2697",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 9738,
+            "escapes": 868,
+            "rank_bytes": 4497,
+            "escape_bytes": 5533
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 88567,
+            "escapes": 14317,
+            "rank_bytes": 56229,
+            "escape_bytes": 101549
+          }
+        ],
+        "verified": true
+      },
+      "seconds": 0.5291009970000002
+    },
+    {
+      "event": "WORD_RANK_REGION",
+      "offset": 800000000,
+      "start": 800004795,
+      "end": 800269397,
+      "input_sha256": "68e6ae7b830e7eb1f8ba4e4fbe5c3c9aa8afc9d79d8834ce626be51558d3c3f3",
+      "raw": 264602,
+      "gzip": 86385,
+      "segments": 191,
+      "article_bytes": 229684,
+      "fixed": {
+        "archive_bytes": 280704,
+        "archive_sha256": "1ddad954a92cc5798a763edb81165e68fb0a888929a741c9320ed16d0585deba",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 10771,
+            "escapes": 953,
+            "rank_bytes": 10771,
+            "escape_bytes": 6253
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 87404,
+            "escapes": 15116,
+            "rank_bytes": 131106,
+            "escape_bytes": 102658
+          }
+        ],
+        "verified": true
+      },
+      "adaptive": {
+        "archive_bytes": 206237,
+        "archive_sha256": "41a553a979582e71eec0e2abee8614303dd316011101ba9e8252390059832018",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 10771,
+            "escapes": 953,
+            "rank_bytes": 6416,
+            "escape_bytes": 6253
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 87404,
+            "escapes": 15116,
+            "rank_bytes": 60994,
+            "escape_bytes": 102658
+          }
+        ],
+        "verified": true
+      },
+      "context": {
+        "archive_bytes": 198100,
+        "archive_sha256": "535036fd819269e6d036ccb47f5e9b4b0e89edb45ce969469e1e442ff236f487",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 10771,
+            "escapes": 953,
+            "rank_bytes": 4962,
+            "escape_bytes": 6253
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 87404,
+            "escapes": 15116,
+            "rank_bytes": 54311,
+            "escape_bytes": 102658
+          }
+        ],
+        "verified": true
+      },
+      "seconds": 0.5253963510000004
+    }
+  ],
+  "summary": {
+    "event": "WORD_RANK_SUMMARY",
+    "training_start": 1406,
+    "training_end": 303671,
+    "dictionary_entries": [
+      183,
+      3948
+    ],
+    "raw": 859738,
+    "gzip": 301343,
+    "fixed": 893280,
+    "adaptive": 654196,
+    "context": 627154
+  },
+  "context_escape_bytes": 349761,
+  "wall_seconds": 3.11,
+  "peak_rss_kib": 1306232,
+  "limitations": [
+    "same-code sample roundtrips",
+    "reused regions",
+    "classical arithmetic coding; no factorization claim",
+    "not competitive with gzip"
+  ]
+}
