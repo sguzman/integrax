@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: E0110 global strictly smaller residual GCD control. E0109 verified and overlays persisted.
+Next: E0111 all-object factor closure and residual GCD. E0110 verified and overlays persisted; 6507 factors.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -90,3 +90,7 @@ E0109 authored: authenticated overlay replay, full inventory screen and strict-d
 E0109 passed: 14,966 indexed objects, 2,487 partial, 1,866 distinct post-screen residuals; 20 parent improvements solely from the existing 6,504-factor inventory, 248 residual bits removed (overlapping objects), no completions or new primes. 2,113 parents screened and 14,849 strict descendant checks yielded zero proper shared divisors. 10.90 s. All 20 exact overlays persisted. No compression claim.
 
 E0110: global strictly smaller residual GCD control after replaying E0109 overlays, compare descendant and unrelated smaller-value matches using the same residual snapshot. Preserve proper splits and factor provenance; hosted CI pending.
+
+E0110 passed: 2,113 parents, 14,849 descendant checks with zero local hits, 4 global-only parent hits (3 distinct new prime values; one sentence/paragraph alias pair), 54 residual bits removed across overlapping nodes, 48.91 s. Exact products and GCD witnesses rechecked, all 4 overlays and 3 prime values persisted; index now 6507. No compression claim.
+
+E0111: replay E0110 overlays and measure closure of its three new primes across all previously unresolved objects, then extend strictly smaller global residual search to non-parent nodes as well as parents. Record inventory-only gains separately and retain exact splits. Hosted CI pending.

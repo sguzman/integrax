@@ -1,0 +1,43 @@
+{
+  "batch": "E0110",
+  "factors": [
+    {
+      "p": "59b3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:400015975:344",
+          "e": 1,
+          "source": "E0110"
+        },
+        {
+          "id": "enwik9:400015975:343",
+          "e": 1,
+          "source": "E0110"
+        }
+      ]
+    },
+    {
+      "p": "a7b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800035609:260",
+          "e": 1,
+          "source": "E0110"
+        }
+      ]
+    },
+    {
+      "p": "100f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800035609:1240",
+          "e": 1,
+          "source": "E0110"
+        }
+      ]
+    }
+  ]
+}

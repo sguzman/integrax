@@ -1,0 +1,22 @@
+name: E0111 all-object factor closure and residual GCD
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/xml/all-object-residual.mjs'
+      - '.github/workflows/all-object-residual.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: sh datasets/acquire.sh enwik9
+      - name: Measure new-prime closure and all-object residual reuse
+        run: |
+          set -euo pipefail
+          /usr/bin/time -v timeout --kill-after=10s 900s node --max-old-space-size=3072 experiments/xml/all-object-residual.mjs data/enwik9
+          echo E0111_COMPLETE
