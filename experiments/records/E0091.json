@@ -1,0 +1,41 @@
+{
+  "id": "E0091",
+  "campaign": "C17",
+  "status": "independently-reproduced",
+  "revision": "4d32a6f5d3fcb1fe7e4a3d1395add226379e5d8e",
+  "run": 45757232223,
+  "job": 139698599947,
+  "tests_passed": 3,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "exponent": 720720,
+  "modulus_bits": 1000709,
+  "gcd_hex": "20",
+  "gcd_decimal": 32,
+  "known_factor_removed": 32,
+  "new_odd_divisor": 1,
+  "modulus_seconds": 0.00224,
+  "scan_seconds": 24.295776,
+  "gcdext_seconds": 0.08575,
+  "peak_rss_kib": 29688,
+  "independent_verification": {
+    "event": "LUCAS_GCD_VERIFIED",
+    "exponent": 720720,
+    "bytes": 1000000000,
+    "modulus_bits": 1000709,
+    "gcd_hex": "20",
+    "gcd_bits": 6,
+    "residue_sha256": "b42ff6aee286feaf9786dbecef23e6976f85b82a6cc9d3397773b5627f771e35",
+    "witness_sha256": "6a97bddebede8b68ecae1e5fd104905b9b16d5e3d8137e4cd859ba7e6a66abcf",
+    "seconds": 98.56019274699999,
+    "peak_rss_kib": 201736
+  },
+  "limitations": [
+    "one Lucas parameter and exponent",
+    "no additional factor or compression gain",
+    "certificate hashes retained; witness transient"
+  ]
+}

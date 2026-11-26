@@ -1,13 +1,13 @@
 # Continuation state
 
-2026-11-26 UTC — C01–C16 closed; [C17](research/CAMPAIGN-17.md) active. Read AGENTS.md, research/README.md, benchmarks/FRONTIER.md.
+2026-11-26 UTC — C01–C17 closed; [C18](research/CAMPAIGN-18.md) active. Read AGENTS.md, research/README.md, benchmarks/FRONTIER.md.
 
 - F0012 IXB2 blockwise **217,045,597 B** (78.30% reduction), [E0082/V0015](experiments/records/E0082.md), [CI 45718923956](https://github.com/sguzman/integrax/actions/runs/45718923956/job/139571999756). Full strict isolated byte equality and SHA-256, same archive digest as failed first attempt. F0011 220,113,320 B; mode7 wins every paired block in attempt 1. F0013 IXG2 whole-stream **232,493,451 B** (76.75%), [E0085/V0016](experiments/records/E0085.md). All archive-only; no contest-comparable total.
 - [C13 closed](research/CAMPAIGN-13-CLOSURE.md); 180 independent IXB1/2 cross-codec comparisons and 370 IXG2 (550 total). Preserve both block modes. C12 sparse patch sample gain only. Prior campaigns and evidence retained in registry.
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: inspect C17 E0091 Lucas auxiliary GCD. C16 closed after all GCDs=1. No repeated trial division. Preserve known N=32Q; Q has no prime divisor <=997. No new factor claim. No owner corpus acquisition required.
+Next: inspect E0092 affine radix controls; E0091 GCD=32, C17 closed. Known N=32Q unchanged; Q has no prime divisor <=997. No new factor or frontier claim.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -44,3 +44,5 @@ E0088 passed [CI 45756109910](https://github.com/sguzman/integrax/actions/runs/4
 E0089 passed [CI 45756490083](https://github.com/sguzman/integrax/actions/runs/45756490083/job/139696203381): both GCDs=1, independent residue/Bezout verification passed. E0090 single new exponent 232792560 authored; 19-fold scale experiment, verification pending. Known N=32Q unchanged. No frontier or license change.
 
 E0090 verified exact GCD=1; C16 closed. E0091 Lucas p+1 auxiliary search authored, distinct family, pending CI. Known N=32Q unchanged. No frontier or license change.
+
+E0091 passed, GCD=32 only. [Evidence](experiments/records/E0091.json). C18 E0092 affine radix basis/coordinate codec and matched axis-only controls authored, hosted CI pending. No production codec or license change.

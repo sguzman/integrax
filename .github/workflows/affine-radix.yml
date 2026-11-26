@@ -1,0 +1,35 @@
+name: E0092 affine radix subspace controls
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/algebra/affine_probe.rs'
+      - '.github/workflows/affine-radix.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and test
+        run: |
+          set -euo pipefail
+          rustc --version
+          rustc --edition=2021 --test experiments/algebra/affine_probe.rs -o /tmp/affine-tests
+          /tmp/affine-tests
+          rustc --edition=2021 -C opt-level=3 experiments/algebra/affine_probe.rs -o /tmp/affine-probe
+      - run: sh datasets/acquire.sh enwik9
+      - name: Matched authentic radix matrix controls
+        run: |
+          set -euo pipefail
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
+          for offset in 0 400000000 800000000; do
+            dd if=data/enwik9 iflag=skip_bytes,count_bytes skip="$offset" count=1048576 status=none | gzip -n -9 | wc -c | xargs printf "GZIP offset=$offset bytes=%s\n"
+          done
+          /usr/bin/time -v timeout --kill-after=10s 420s /tmp/affine-probe data/enwik9
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
+          echo E0092_COMPLETE

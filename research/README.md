@@ -18,6 +18,7 @@
 | [C14](CAMPAIGN-14.md) | Root-conditioned arithmetic descriptions | [Closed](CAMPAIGN-14-CLOSURE.md) |
 | [C15](CAMPAIGN-15.md) | Whole-integer multiplicative reconnaissance | [Closed](CAMPAIGN-15-CLOSURE.md) |
 | [C16](CAMPAIGN-16.md) | Nontrivial multiplicative methods: feasibility | [Closed](CAMPAIGN-16-CLOSURE.md) |
-| [C17](CAMPAIGN-17.md) | Lucas sequence multiplicative reconnaissance | Active (pure number-theory track) |
+| [C17](CAMPAIGN-17.md) | Lucas sequence multiplicative reconnaissance | [Closed](CAMPAIGN-17-CLOSURE.md) |
+| [C18](CAMPAIGN-18.md) | Affine radix subspace descriptions | Active |
 
 Candidates are not commitments or results. Instantiate when justified; pivot freely within mission. Stable IDs, explicit milestones and closure records. See [template](CAMPAIGN-TEMPLATE.md).
