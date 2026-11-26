@@ -1,0 +1,34 @@
+{
+  "id": "E0083",
+  "campaign": "C14",
+  "status": "roundtrip-verified",
+  "revision": "cebc1b6355671190d5c5bff2afa3cbe9f55c0f60",
+  "run": 45724210484,
+  "job": 139589809687,
+  "dictionary_sha256": "3651e9523e3ddc5db5e2d112832aca59794b9bc12dc433467cd14dc205c3cf9d",
+  "unit_tests": 22,
+  "rows": [
+    {
+      "offset": 200000000,
+      "input_bytes": 16777216,
+      "dual16": 4588172,
+      "rootmix16": 4510859
+    },
+    {
+      "offset": 600000000,
+      "input_bytes": 16777216,
+      "dual16": 4440728,
+      "rootmix16": 4371573
+    },
+    {
+      "offset": 812345678,
+      "input_bytes": 4194304,
+      "dual16": 1147012,
+      "rootmix16": 1132484
+    }
+  ],
+  "strict_roundtrips": 6,
+  "append_rejects": 6,
+  "parse_equal": true,
+  "full_corpus": false
+}

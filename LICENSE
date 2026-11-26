@@ -1,50 +1,21 @@
-Integrax Competition-Restricted License, version 1.0
-SPDX-License-Identifier: LicenseRef-Integrax-Competition-Restricted-1.0
+MIT License
 
 Copyright (c) 2026 Salvador Guzman
 
-1. Grant. Subject to the conditions below, permission is granted without
-charge to use, copy, modify, merge, publish, distribute, and sell copies of
-the software and associated documentation made available under this license
-(the Software), for any purpose other than the Restricted Competition Use.
-Recipients may exercise these permissions under this same license.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-2. Restricted Competition Use. Without the copyright holder's separate
-prior written permission, a recipient may not use, reproduce, modify,
-incorporate, or distribute the Software or copyright-protected portions or
-derivative works of it for the purpose of preparing, developing, testing,
-optimizing, supplying, or submitting an entry by or on behalf of another
-entrant in the Human Knowledge Compression Contest (Hutter Prize), including
-a renamed or successor edition of that contest. This includes indirect
-participation through another person or organization. Ordinary research,
-education, publication of research results, and benchmarking not directed
-toward such a competing entry are permitted. This restriction is a condition
-of the permissions granted by this license, not a claim of ownership over
-mathematical ideas, independently developed implementations, or other
-material outside the copyright holder's rights.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-3. Notices and redistribution. Include this license and the applicable
-copyright notices in all copies or substantial portions of the Software.
-Clearly identify modifications. Do not grant downstream permissions to
-covered material that conflict with this license.
-
-4. Prior grants and third-party material. This license does not revoke or
-limit rights already granted under earlier licenses, including the MIT
-license applicable to prior releases and copies. The prior MIT text is
-preserved in LICENSE-MIT-HISTORICAL. Third-party material remains governed
-by its applicable licenses. No restriction is imposed on rights a recipient
-otherwise holds independently of this license.
-
-5. Reserved rights. The copyright holder retains all rights not granted
-here and may separately license material the copyright holder has authority
-to license, including a future contest submission under an eligible license.
-No trademark rights or patent license are granted by this text. This is a
-source-available license, not an OSI-approved open-source license.
-
-6. Warranty and liability. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
-WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

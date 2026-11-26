@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-25 — Private development and local CI
+Owner made repository private, restored MIT, and authorized local wrkflw/Nix CI using existing GitHub App. E0083 passed; E0084 independent replay selected for first local job.
+
 ## 2026-11-25 — F0012 accepted, C13 closed
 Hierarchical IXB2 217,045,597 B, verified full isolated reconstruction; corrected verification script reproduced identical archive digest.
 

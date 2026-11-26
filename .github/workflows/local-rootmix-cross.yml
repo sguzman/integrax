@@ -1,0 +1,17 @@
+name: Local E0084 independent root mixture verification
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test codec
+        run: |
+          cargo test --release --locked --bin ixg2
+          cargo build --release --locked --bin ixg2
+      - name: Independent BigInt verification
+        run: node experiments/oracle/root-intervals-rootmix-cross.mjs target/release/ixg2

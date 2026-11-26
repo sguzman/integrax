@@ -2,7 +2,7 @@
 name = "integrax"
 version = "0.1.0"
 edition = "2021"
-license-file = "LICENSE"
+license = "MIT"
 
 [profile.release]
 lto = true
