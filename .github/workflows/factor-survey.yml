@@ -1,0 +1,26 @@
+name: E0086 whole-integer factor survey
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/bin/factor_survey.rs'
+      - '.github/workflows/factor-survey.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo test --locked --bin factor_survey
+      - run: cargo build --release --locked --bin factor_survey
+      - run: sh datasets/acquire.sh enwik9
+      - name: Verify corpus and survey exact divisibility
+        run: |
+          set -euo pipefail
+          test "$(wc -c < data/enwik9)" = 1000000000
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          /usr/bin/time -v target/release/factor_survey data/enwik9
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
