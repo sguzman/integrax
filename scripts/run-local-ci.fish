@@ -119,14 +119,13 @@ echo "Running $workflow locally for $repo @ $sha"
 echo "GitHub Check Run: $check_name (#$check_id)"
 echo "Full local log: $log"
 
-# Capture diagnostics exclusively in the local Git directory.
-# Do not echo arbitrary step output or any log excerpts to GitHub or terminal.
+# Retain complete local diagnostics; publish redacted failure output only to the private repository.
 set -l phase validation
 wrkflw validate "$workflow" > "$log" 2>&1
 set -l ci_exit $status
 if test $ci_exit -eq 0
     set phase execution
-    wrkflw run --runtime emulation "$workflow" >> "$log" 2>&1
+    env -u GH_TOKEN -u GITHUB_TOKEN wrkflw --verbose run --runtime emulation --event workflow_dispatch --no-strict-filter "$workflow" >> "$log" 2>&1
     set ci_exit $status
 end
 
@@ -137,20 +136,29 @@ end
 set -l finished (date -u +%Y-%m-%dT%H:%M:%SZ)
 set -l duration (math (date +%s) - $start_seconds)
 
-# Structured result only; full diagnostics stay local.
+# Structured success results; redacted failure diagnostics.
 set -l public_output
 if test $ci_exit -eq 0
-    set -l evidence (jq -cRs --argjson expected "$expected" --argjson mode "$mode" -f scripts/local-ci-evidence.jq "$log" 2>/dev/null)
+    set -l evidence (jq -cRs --argjson expected "$expected" --argjson mode "$mode" -f scripts/local-ci-evidence.jq "$log" 2>"$log.evidence-error")
     if test $status -ne 0 -o -z "$evidence"
         set ci_exit 1
         set conclusion failure
         set phase evidence
+        printf "\nEvidence parser diagnostic:\n" >> "$log"
+        cat "$log.evidence-error" >> "$log"
     else
         set public_output (jq -nc --arg job "$job" --argjson rows "$evidence" --argjson duration "$duration" '{title:"Local research verification passed",summary:("Passed "+$job+" in "+($duration|tostring)+" seconds."),text:({job:$job,duration_seconds:$duration,rows:$rows}|tojson)}')
     end
 end
 if test $ci_exit -ne 0
-    set public_output (jq -nc --arg phase "$phase" --argjson code "$ci_exit" --argjson duration "$duration" '{title:"Local research verification failed",summary:("Failed phase: "+$phase+"; exit "+($code|tostring)+"; "+($duration|tostring)+" seconds. Full diagnostics retained locally.")}')
+    # Recheck visibility just before uploading diagnostics.
+    set -l private (gh repo view "$repo" --json isPrivate --jq .isPrivate 2>/dev/null)
+    if test "$private" = true
+        node scripts/redact-ci-log.mjs "$log" > "$log.redacted"; or printf 'Redaction failed; diagnostic output withheld.' > "$log.redacted"
+    else
+        printf 'Repository privacy could not be confirmed; diagnostics withheld.' > "$log.redacted"
+    end
+    set public_output (jq -nc --arg phase "$phase" --argjson code "$ci_exit" --argjson duration "$duration" --rawfile diagnostics "$log.redacted" '{title:"Local research verification failed",summary:("Failed phase: "+$phase+"; exit "+($code|tostring)+"; "+($duration|tostring)+" seconds. Redacted diagnostics below."),text:$diagnostics}')
 end
 if test -z "$public_output"
     fail 'Could not construct safe Check Run report.'
