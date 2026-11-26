@@ -1,0 +1,363 @@
+{
+  "id": "E0102",
+  "campaign": "C20",
+  "status": "roundtrip-verified",
+  "revision": "ea1e3a8baaffa83da9663e81adaf7f55330b0a33",
+  "run": 45762694124,
+  "job": 139716146049,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "rows": [
+    {
+      "event": "AFFIX_RANK_REGION",
+      "offset": 100000000,
+      "start": 100028432,
+      "end": 100351434,
+      "input_sha256": "ba15eea4c4d5865463ece5f501623dc36b327ecd1ae798fcc9563398b64ebb07",
+      "raw": 323002,
+      "gzip": 122498,
+      "prefix": {
+        "archive_bytes": 181829,
+        "archive_sha256": "ec1fc91f2744b3e7cd8a5fbca2b37fb53c74d124921b40734c70d0f56b5c9a41",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 1678,
+            "escapes": 200,
+            "rank_bytes": 921,
+            "escape_bytes": 1093,
+            "references": 51,
+            "prefix_references": 29,
+            "suffix_references": 0,
+            "alphabet_rank_references": 0
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 112069,
+            "escapes": 17255,
+            "rank_bytes": 67202,
+            "escape_bytes": 83142,
+            "references": 14413,
+            "prefix_references": 5699,
+            "suffix_references": 0,
+            "alphabet_rank_references": 0
+          }
+        ],
+        "verified": true
+      },
+      "ranked": {
+        "archive_bytes": 181046,
+        "archive_sha256": "d3825c1c8d8695efb16a39d28b7bbe143c3e6c0abe21cfe94de7b5f06f183bb3",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 1678,
+            "escapes": 200,
+            "rank_bytes": 921,
+            "escape_bytes": 1041,
+            "references": 45,
+            "prefix_references": 23,
+            "suffix_references": 0,
+            "alphabet_rank_references": 35
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 112069,
+            "escapes": 17255,
+            "rank_bytes": 67202,
+            "escape_bytes": 82411,
+            "references": 13941,
+            "prefix_references": 5227,
+            "suffix_references": 0,
+            "alphabet_rank_references": 891
+          }
+        ],
+        "verified": true
+      },
+      "affix": {
+        "archive_bytes": 177824,
+        "archive_sha256": "c3c1d60761eb5073f39512fb118a903ee34acd1baa2cd8c244d71a0a5bc61ae8",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 1678,
+            "escapes": 200,
+            "rank_bytes": 921,
+            "escape_bytes": 1031,
+            "references": 46,
+            "prefix_references": 24,
+            "suffix_references": 4,
+            "alphabet_rank_references": 32
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 112069,
+            "escapes": 17255,
+            "rank_bytes": 67202,
+            "escape_bytes": 79199,
+            "references": 14336,
+            "prefix_references": 5622,
+            "suffix_references": 1875,
+            "alphabet_rank_references": 352
+          }
+        ],
+        "verified": true
+      },
+      "seconds": 2.536854217
+    },
+    {
+      "event": "AFFIX_RANK_REGION",
+      "offset": 400000000,
+      "start": 400007843,
+      "end": 400279977,
+      "input_sha256": "54ec643801cd864a778c1e437ef4ab44dd1d4f43ef5f6507bc76476b1d208a3c",
+      "raw": 272134,
+      "gzip": 92460,
+      "prefix": {
+        "archive_bytes": 161996,
+        "archive_sha256": "d514ba53f1959aef58e7f4796739753b51c9d4b1c63f4f07fc836b1f43915978",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 9738,
+            "escapes": 868,
+            "rank_bytes": 4497,
+            "escape_bytes": 4620,
+            "references": 348,
+            "prefix_references": 207,
+            "suffix_references": 0,
+            "alphabet_rank_references": 0
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 88567,
+            "escapes": 14317,
+            "rank_bytes": 56229,
+            "escape_bytes": 66766,
+            "references": 10863,
+            "prefix_references": 4194,
+            "suffix_references": 0,
+            "alphabet_rank_references": 0
+          }
+        ],
+        "verified": true
+      },
+      "ranked": {
+        "archive_bytes": 161330,
+        "archive_sha256": "2a120bfb56238ebc8d028aec131029f52e83d38457cfc11b754168eb6d4a55ad",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 9738,
+            "escapes": 868,
+            "rank_bytes": 4497,
+            "escape_bytes": 4462,
+            "references": 320,
+            "prefix_references": 179,
+            "suffix_references": 0,
+            "alphabet_rank_references": 127
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 88567,
+            "escapes": 14317,
+            "rank_bytes": 56229,
+            "escape_bytes": 66258,
+            "references": 10551,
+            "prefix_references": 3882,
+            "suffix_references": 0,
+            "alphabet_rank_references": 620
+          }
+        ],
+        "verified": true
+      },
+      "affix": {
+        "archive_bytes": 159207,
+        "archive_sha256": "14f18dca283ea6d242e0157471decb26d6d4991151c642996ff96c82d57734ef",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 9738,
+            "escapes": 868,
+            "rank_bytes": 4497,
+            "escape_bytes": 4426,
+            "references": 324,
+            "prefix_references": 183,
+            "suffix_references": 24,
+            "alphabet_rank_references": 125
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 88567,
+            "escapes": 14317,
+            "rank_bytes": 56229,
+            "escape_bytes": 64171,
+            "references": 10816,
+            "prefix_references": 4147,
+            "suffix_references": 1277,
+            "alphabet_rank_references": 297
+          }
+        ],
+        "verified": true
+      },
+      "seconds": 1.9413326889999998
+    },
+    {
+      "event": "AFFIX_RANK_REGION",
+      "offset": 800000000,
+      "start": 800004795,
+      "end": 800269397,
+      "input_sha256": "68e6ae7b830e7eb1f8ba4e4fbe5c3c9aa8afc9d79d8834ce626be51558d3c3f3",
+      "raw": 264602,
+      "gzip": 86385,
+      "prefix": {
+        "archive_bytes": 163292,
+        "archive_sha256": "ece854411bea3761e43d711d6e1ad3ac251cbfaf816501a349f7adccd83466e8",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 10771,
+            "escapes": 953,
+            "rank_bytes": 4962,
+            "escape_bytes": 5038,
+            "references": 394,
+            "prefix_references": 198,
+            "suffix_references": 0,
+            "alphabet_rank_references": 0
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 87404,
+            "escapes": 15116,
+            "rank_bytes": 54311,
+            "escape_bytes": 69065,
+            "references": 10339,
+            "prefix_references": 4153,
+            "suffix_references": 0,
+            "alphabet_rank_references": 0
+          }
+        ],
+        "verified": true
+      },
+      "ranked": {
+        "archive_bytes": 162677,
+        "archive_sha256": "336d159ce02601648f7fca1180d5208a1f35964176c85d4960bef386b32da5e4",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 10771,
+            "escapes": 953,
+            "rank_bytes": 4962,
+            "escape_bytes": 4854,
+            "references": 373,
+            "prefix_references": 177,
+            "suffix_references": 0,
+            "alphabet_rank_references": 141
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 87404,
+            "escapes": 15116,
+            "rank_bytes": 54311,
+            "escape_bytes": 68634,
+            "references": 10066,
+            "prefix_references": 3880,
+            "suffix_references": 0,
+            "alphabet_rank_references": 555
+          }
+        ],
+        "verified": true
+      },
+      "affix": {
+        "archive_bytes": 160703,
+        "archive_sha256": "f01db748a3658859e4deb0cbc36116a2528da7803efd498bd5600acd38268759",
+        "streams": [
+          {
+            "kind": 0,
+            "dict_entries": 183,
+            "dict_bytes": 893,
+            "tokens": 10771,
+            "escapes": 953,
+            "rank_bytes": 4962,
+            "escape_bytes": 4816,
+            "references": 373,
+            "prefix_references": 177,
+            "suffix_references": 20,
+            "alphabet_rank_references": 138
+          },
+          {
+            "kind": 1,
+            "dict_entries": 3948,
+            "dict_bytes": 28469,
+            "tokens": 87404,
+            "escapes": 15116,
+            "rank_bytes": 54311,
+            "escape_bytes": 66698,
+            "references": 10300,
+            "prefix_references": 4114,
+            "suffix_references": 1138,
+            "alphabet_rank_references": 226
+          }
+        ],
+        "verified": true
+      },
+      "seconds": 1.97951376
+    }
+  ],
+  "summary": {
+    "event": "AFFIX_RANK_SUMMARY",
+    "training_start": 1406,
+    "training_end": 303671,
+    "raw": 859738,
+    "gzip": 301343,
+    "prefix": 507117,
+    "ranked": 505053,
+    "affix": 497734,
+    "prefix_escape": 229724,
+    "ranked_escape": 227660,
+    "affix_escape": 220341
+  },
+  "wall_seconds": 8.06,
+  "peak_rss_kib": 1355704,
+  "limitations": [
+    "same-code sample roundtrip",
+    "reused regions",
+    "not prime factorization",
+    "not competitive with gzip; owner clarified factor inventory priority"
+  ]
+}

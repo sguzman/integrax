@@ -28,3 +28,7 @@ M4 E0099 article subdivisions passed 15 exact archives. 2176 factor cases, 2147 
 E0100 passed nine exact lexical rank archives, context 627154 B vs adaptive 654196 B, gzip 301343 B. Escapes alone 349761 B. [Evidence](../experiments/records/E0100.json). E0101 holds ranks fixed and compares exact-repeat versus prefix/residual integer decomposition of unfamiliar tokens; hosted CI pending. No frontier claim.
 
 E0101 passed nine exact archives, prefix 507117 B vs context 627154 B and exact reuse 524771 B; 120037 B gain, still behind gzip 301343 B. [Evidence](../experiments/records/E0101.json). E0102 tests exact alphabet ranks and two-sided prefix/middle/suffix decomposition, matched baseline. Hosted CI pending; no frontier claim.
+
+## Owner clarification — cumulative factor inventory
+
+E0102 passed, affix 497734 B vs prefix 507117 B. [Evidence](../experiments/records/E0102.json). This branch is secondary. Primary objective is a persistent object/factor inventory, propagating known factors into parent factor searches, independent of atomic encoding costs. [Inventory design](../inventory/README.md). E0103 seeds prior exact products, indexes three complete pages at every nested level, checks actual inherited/global divisibility against exact synthesized parent values, stores residual cofactors and tests a cold control. Hosted CI pending; no full inventory or compression claim. Next persist verified shards, build factor-to-object index and resumable batches, scale XML coverage. Do not pivot away from factorization solely because atomic descriptions grow.
