@@ -462,8 +462,8 @@
     }
   ],
   "index": {
-    "batch": "E0105",
-    "distinct_factors": 4145,
+    "batch": "E0106",
+    "distinct_factors": 4146,
     "format": "base-plus-deltas",
     "shards": [
       {
@@ -557,8 +557,20 @@
       {
         "path": "inventory/index/E0105/006.json",
         "count": 143
+      },
+      {
+        "path": "inventory/index/E0106/000.json",
+        "count": 39
       }
     ]
   },
-  "indexed_nodes": 5649
+  "indexed_nodes": 5649,
+  "refinements": [
+    {
+      "id": "E0106",
+      "path": "inventory/refinements/E0106.json",
+      "rows": 36,
+      "record": "experiments/records/E0106.json"
+    }
+  ]
 }

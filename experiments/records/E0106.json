@@ -1,0 +1,29 @@
+{
+  "experiment": "E0106",
+  "revision": "b858addf799f2de5e7d5e962a0009d382676ef1c",
+  "run_id": 45764070979,
+  "job_id": 139720638777,
+  "ci": "https://github.com/sguzman/integrax/actions/runs/45764070979/job/139720638777",
+  "corpus_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+  "summary": {
+    "event": "COFACTOR_SUMMARY",
+    "loaded": 5649,
+    "partial": 921,
+    "known_factors": 4145,
+    "unique_residuals": 726,
+    "inventory_hits": 34,
+    "proper_gcd_hits": 2,
+    "improved": 36,
+    "completed": 2,
+    "parent_improved": 35,
+    "bits_removed": 648,
+    "gcd_calls": 14656,
+    "rho_steps": 0,
+    "new_prime_values": 1
+  },
+  "wall_seconds": 6.07,
+  "max_rss_kib": 1056892,
+  "refinement_path": "inventory/refinements/E0106.json",
+  "index_delta": "inventory/index/E0106/000.json",
+  "product_recheck": "all emitted rows and proper GCD witnesses rechecked from CI log"
+}
