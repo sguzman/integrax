@@ -52,3 +52,7 @@ E0110: global strictly smaller residual GCD control after replaying E0109 overla
 E0110 passed: 2,113 parents, 14,849 descendant checks with zero local hits, 4 global-only parent hits (3 distinct new prime values; one sentence/paragraph alias pair), 54 residual bits removed across overlapping nodes, 48.91 s. Exact products and GCD witnesses rechecked, all 4 overlays and 3 prime values persisted; index now 6507. No compression claim.
 
 E0111: replay E0110 overlays and measure closure of its three new primes across all previously unresolved objects, then extend strictly smaller global residual search to non-parent nodes as well as parents. Record inventory-only gains separately and retain exact splits. Hosted CI pending.
+
+E0111 passed: 2,487 unresolved objects screened, 4 additional parent records benefited from the three E0110 primes (3 distinct values), 54 residual bits removed across overlapping nodes. No further proper GCD hits or new primes. 34.31 s. All four exact overlays persisted; 6,507 factors retained. No compression claim.
+
+E0112: expand cumulative inventory to three fresh 6,145–8,192-byte XML pages, replay every historical overlay in order, compare frozen inventories on identical objects, then adaptively learn new factors. Hosted CI pending.

@@ -1,0 +1,105 @@
+{
+  "batch": "E0111",
+  "rows": [
+    {
+      "event": "COFACTOR_REFINEMENT",
+      "id": "enwik9:100028432:947",
+      "kind": "sentence",
+      "parent": true,
+      "old_cofactor": "922bd71d2a10b240b0b0c1cd850bd57d00bd6848b9e23be3670bef08b71d6efbc81",
+      "after_inventory": "1a12b91b04feb557009a4005faa27dc6188c01ca3196e9a0a9ffa75aaf900efb",
+      "factors": [
+        {
+          "p": "59b3",
+          "e": 1,
+          "quality": "prime64",
+          "source": "inventory-gcd",
+          "witness": "enwik9:400015975:344"
+        }
+      ],
+      "remaining": "1a12b91b04feb557009a4005faa27dc6188c01ca3196e9a0a9ffa75aaf900efb",
+      "unresolved_parts": [
+        "1a12b91b04feb557009a4005faa27dc6188c01ca3196e9a0a9ffa75aaf900efb"
+      ],
+      "shared_divisor": null,
+      "old_bits": 268,
+      "remaining_bits": 253,
+      "rho_steps": 0
+    },
+    {
+      "event": "COFACTOR_REFINEMENT",
+      "id": "enwik9:100028432:946",
+      "kind": "paragraph",
+      "parent": true,
+      "old_cofactor": "922bd71d2a10b240b0b0c1cd850bd57d00bd6848b9e23be3670bef08b71d6efbc81",
+      "after_inventory": "1a12b91b04feb557009a4005faa27dc6188c01ca3196e9a0a9ffa75aaf900efb",
+      "factors": [
+        {
+          "p": "59b3",
+          "e": 1,
+          "quality": "prime64",
+          "source": "inventory-gcd",
+          "witness": "enwik9:400015975:344"
+        }
+      ],
+      "remaining": "1a12b91b04feb557009a4005faa27dc6188c01ca3196e9a0a9ffa75aaf900efb",
+      "unresolved_parts": [
+        "1a12b91b04feb557009a4005faa27dc6188c01ca3196e9a0a9ffa75aaf900efb"
+      ],
+      "shared_divisor": null,
+      "old_bits": 268,
+      "remaining_bits": 253,
+      "rho_steps": 0
+    },
+    {
+      "event": "COFACTOR_REFINEMENT",
+      "id": "enwik9:400013828:282",
+      "kind": "sentence",
+      "parent": true,
+      "old_cofactor": "11bcb22b8109053830797245f2a89bf902b173fab32171d82d86d9067f52b829e0107c48797389053681db8ccd1b238d1b166458eb",
+      "after_inventory": "11ac20ccc1140275e1f59c03af345ae3cd2124e8198980ef4d2e7d70e57b944ed627b70cdd63fb49a17a78bb9d37bf49c5ecd65",
+      "factors": [
+        {
+          "p": "100f",
+          "e": 1,
+          "quality": "prime64",
+          "source": "inventory-gcd",
+          "witness": "enwik9:800035609:1240"
+        }
+      ],
+      "remaining": "11ac20ccc1140275e1f59c03af345ae3cd2124e8198980ef4d2e7d70e57b944ed627b70cdd63fb49a17a78bb9d37bf49c5ecd65",
+      "unresolved_parts": [
+        "11ac20ccc1140275e1f59c03af345ae3cd2124e8198980ef4d2e7d70e57b944ed627b70cdd63fb49a17a78bb9d37bf49c5ecd65"
+      ],
+      "shared_divisor": null,
+      "old_bits": 421,
+      "remaining_bits": 409,
+      "rho_steps": 0
+    },
+    {
+      "event": "COFACTOR_REFINEMENT",
+      "id": "enwik9:100434650:792",
+      "kind": "sentence",
+      "parent": true,
+      "old_cofactor": "20902dada837b93a3630b7321029ba37b732aeae902dadb9b1bab6383a3ab932aeae96101393a4b7323ab9ba393c9030b7321023b2b734bab99393961034b7103434b9903437b737bab91039ba30b732399034b7102dada1b2b73a32b730b93c9029b8bab0b93296102134b936b4b733b430b6be21b2b73a32b730b93c9029b8bab0b932aeae96102dada134b936b4b733b430b6aeae971",
+      "after_inventory": "31b66bb5d0d0ba992dcdc24746c2cddb7fae9a4746c8d61330581b0d3a755212c9fc817ab9cbbd89cb1bba80c54c8641055b06fcc5a60d22c9d3457faad26ef83375095a18f31107b27b2ecfc7cdf321d58a92506fb7c19bbc0304c977153cc25ccd4a7ce73f2e37a0c84e33473548eb6a4c162011dbe16eb2c19a3f2505afff96303d5e43427205ce7715f947cae1b36743bfd33e03",
+      "factors": [
+        {
+          "p": "a7b",
+          "e": 1,
+          "quality": "prime64",
+          "source": "inventory-gcd",
+          "witness": "enwik9:800035609:260"
+        }
+      ],
+      "remaining": "31b66bb5d0d0ba992dcdc24746c2cddb7fae9a4746c8d61330581b0d3a755212c9fc817ab9cbbd89cb1bba80c54c8641055b06fcc5a60d22c9d3457faad26ef83375095a18f31107b27b2ecfc7cdf321d58a92506fb7c19bbc0304c977153cc25ccd4a7ce73f2e37a0c84e33473548eb6a4c162011dbe16eb2c19a3f2505afff96303d5e43427205ce7715f947cae1b36743bfd33e03",
+      "unresolved_parts": [
+        "31b66bb5d0d0ba992dcdc24746c2cddb7fae9a4746c8d61330581b0d3a755212c9fc817ab9cbbd89cb1bba80c54c8641055b06fcc5a60d22c9d3457faad26ef83375095a18f31107b27b2ecfc7cdf321d58a92506fb7c19bbc0304c977153cc25ccd4a7ce73f2e37a0c84e33473548eb6a4c162011dbe16eb2c19a3f2505afff96303d5e43427205ce7715f947cae1b36743bfd33e03"
+      ],
+      "shared_divisor": null,
+      "old_bits": 1210,
+      "remaining_bits": 1198,
+      "rho_steps": 0
+    }
+  ]
+}
