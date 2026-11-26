@@ -1,0 +1,39 @@
+name: E0089 full-integer bounded Mersenne GCD
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/factorization/mersenne_scan.rs'
+      - 'experiments/oracle/mersenne-gcd-cross.mjs'
+      - '.github/workflows/mersenne-gcd.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and test
+        run: |
+          set -euo pipefail
+          rustc --version
+          pkg-config --modversion gmp
+          node --version
+          rustc --edition=2021 --test experiments/factorization/mersenne_scan.rs -o /tmp/mersenne-tests
+          /tmp/mersenne-tests
+          rustc --edition=2021 -C opt-level=3 experiments/factorization/mersenne_scan.rs -o /tmp/mersenne-scan
+      - run: sh datasets/acquire.sh enwik9
+      - name: Verify authentic corpus and independent GCD certificates
+        run: |
+          set -euo pipefail
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          test "$(wc -c < data/enwik9)" = 1000000000
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
+          for exp in 720720 12252240; do
+            /usr/bin/time -v timeout --kill-after=10s 180s /tmp/mersenne-scan data/enwik9 "$exp" "/tmp/witness-$exp"
+            /usr/bin/time -v timeout --kill-after=10s 240s node --max-old-space-size=2048 experiments/oracle/mersenne-gcd-cross.mjs data/enwik9 "$exp" "/tmp/witness-$exp"
+          done
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
+          echo E0089_COMPLETE

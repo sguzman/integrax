@@ -1,0 +1,72 @@
+{
+  "id": "E0088",
+  "campaign": "C16",
+  "status": "executed",
+  "revision": "0926eda54afda71ade5bdfd6ff7976397c59cf87",
+  "run": 45756109910,
+  "job": 139694984064,
+  "tests_passed": 4,
+  "gmp": "6.3.0",
+  "rustc": "1.100.0",
+  "seed": "0x496e746567726178",
+  "rows": [
+    {
+      "requested_bits": 65536,
+      "actual_bits": 65536,
+      "planted_prime": 65521,
+      "factor_bits": 39,
+      "factor_decimal": "285101854905",
+      "exponent": 720720,
+      "modmul_seconds": 0.000296135,
+      "gcd_seconds": 0.001234396,
+      "pow65537_seconds": 0.003710934,
+      "stage1_seconds": 0.002259084,
+      "peak_rss_kib": 7820
+    },
+    {
+      "requested_bits": 1048576,
+      "actual_bits": 1048576,
+      "planted_prime": 65521,
+      "factor_bits": 22,
+      "factor_decimal": "3341571",
+      "exponent": 720720,
+      "modmul_seconds": 0.010344701,
+      "gcd_seconds": 0.057889284,
+      "pow65537_seconds": 0.113470484,
+      "stage1_seconds": 0.036769177,
+      "peak_rss_kib": 7848
+    },
+    {
+      "requested_bits": 16777216,
+      "actual_bits": 16777216,
+      "planted_prime": 65521,
+      "factor_bits": 16,
+      "factor_decimal": "65521",
+      "exponent": 720720,
+      "modmul_seconds": 0.233882765,
+      "gcd_seconds": 1.96305745,
+      "pow65537_seconds": 2.964125322,
+      "stage1_seconds": 0.094023036,
+      "peak_rss_kib": 54136
+    },
+    {
+      "requested_bits": 67108864,
+      "actual_bits": 67108864,
+      "planted_prime": 65521,
+      "factor_bits": 21,
+      "factor_decimal": "1375941",
+      "exponent": 720720,
+      "modmul_seconds": 1.18134489,
+      "gcd_seconds": 10.967683279,
+      "pow65537_seconds": 15.888912328,
+      "stage1_seconds": 0.28140118,
+      "peak_rss_kib": 205724
+    }
+  ],
+  "limitations": [
+    "synthetic planted factor only",
+    "single observations, not statistical timing estimates",
+    "for moduli wider than 720721 bits, 2^720720 does not wrap, so stage1 timings are not full-width modular exponentiation",
+    "no enwik9 factor or compression result"
+  ]
+}
