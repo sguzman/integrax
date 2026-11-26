@@ -4,7 +4,7 @@ Target: enwik9, 1,000,000,000 bytes. Official competition reference: 100,424,672
 
 | Track | Best accepted result |
 |---|---:|
-| Whole-stream arithmetic archive (IXG2) | **236,272,025 B** |
+| Whole-stream arithmetic archive (IXG2) | **232,493,451 B** |
 | Blockwise | **217,045,597 B** |
 | Hybrid | Not established |
 | Contest-comparable total | Not established |
@@ -23,6 +23,7 @@ Target: enwik9, 1,000,000,000 bytes. Official competition reference: 100,424,672
 | F0010 | IXG2, expanded dictionary + dual recurrences | 236,272,025 | 76.37% |
 | F0011 | IXB2, 16 MiB blocks + mode4 rank intervals | 220,113,320 | 77.99% |
 | F0012 | IXB2, 16 MiB blocks + mode7 hierarchical ranks | 217,045,597 | 78.30% |
+| F0013 | IXG2, root-conditioned context mixture | 232,493,451 | 76.75% |
 | External | gzip -n -9 | 322,591,988 | 67.74% |
 
 IX04 and IX05 passed isolated full-byte comparison and SHA-256 in [run 45685540601](https://github.com/sguzman/integrax/actions/runs/45685540601). [E0005](../experiments/records/E0005.md), [E0007](../experiments/records/E0007.md), [external E0004](../experiments/records/E0004.md). Corpus SHA-256 `159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc`. Whole-stream interval coding is not literal algebraic compression or exact multinomial rank; track indicates the uninterrupted digit stream. Canonical [ledger](../docs/frontier.json). Prefix measurements never enter full-target frontier; preserve history.
@@ -46,3 +47,5 @@ Combined recurrence [E0065/V0013](../experiments/records/E0065.md) passed strict
 Native blockwise [E0074/V0014](../experiments/records/E0074.md) passed isolated full reconstruction in [CI 45713883869](https://github.com/sguzman/integrax/actions/runs/45713883869/job/139554905468). F0011 saves 16,158,705 B relative to whole-stream F0010 and 102,478,668 B relative to gzip. Separate blockwise track; archive only.
 
 Hierarchical blockwise [E0082/V0015](../experiments/records/E0082.md) [CI 45718923956](https://github.com/sguzman/integrax/actions/runs/45718923956/job/139571999756) passed isolated full reconstruction; F0012 accepted, archive-only.
+
+Root-conditioned mode20 [E0085/V0016](../experiments/records/E0085.md) [CI 45753624343](https://github.com/sguzman/integrax/actions/runs/45753624343/job/139686985192) passed full isolated exact reconstruction. F0013 accepted, 3,778,574 B below F0010; F0012 remains overall archive best. Archive only.

@@ -1,0 +1,137 @@
+{
+  "id": "E0087",
+  "campaign": "C15",
+  "status": "independently-reproduced",
+  "revision": "b9ce76dbddac5d7a4487ca0258d96eea50dab53a",
+  "run": 45755034308,
+  "job": 139691558910,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "primes_tested": 168,
+  "max_prime": 997,
+  "groups": [
+    {
+      "modulus": "614889782588491410",
+      "residue": "528017007621775558"
+    },
+    {
+      "modulus": "38655288426304091",
+      "residue": "37966219630138036"
+    },
+    {
+      "modulus": "22125549654501673",
+      "residue": "17997885529659910"
+    },
+    {
+      "modulus": "316773187163046517",
+      "residue": "122488099624852288"
+    },
+    {
+      "modulus": "9879251463499721",
+      "residue": "210046860798453"
+    },
+    {
+      "modulus": "39049078408188253",
+      "residue": "5770562794794465"
+    },
+    {
+      "modulus": "108538288030848139",
+      "residue": "28460687744120160"
+    },
+    {
+      "modulus": "309619196508457007",
+      "residue": "212665174270183498"
+    },
+    {
+      "modulus": "796229312542859009",
+      "residue": "628742103790792774"
+    },
+    {
+      "modulus": "4064625951224869",
+      "residue": "1114485821658882"
+    },
+    {
+      "modulus": "6860596063872959",
+      "residue": "4169508538890949"
+    },
+    {
+      "modulus": "10626236358872441",
+      "residue": "4266843957731024"
+    },
+    {
+      "modulus": "17092564102090369",
+      "residue": "9187032767530123"
+    },
+    {
+      "modulus": "30150641449095443",
+      "residue": "26480545786502899"
+    },
+    {
+      "modulus": "43889293834596251",
+      "residue": "27895675981395723"
+    },
+    {
+      "modulus": "60888412234461547",
+      "residue": "7123043770189647"
+    },
+    {
+      "modulus": "83850965748659689",
+      "residue": "41231981168340886"
+    },
+    {
+      "modulus": "122610116602749401",
+      "residue": "65735878025835099"
+    },
+    {
+      "modulus": "174123625045688707",
+      "residue": "138434050152163372"
+    },
+    {
+      "modulus": "244629182107482857",
+      "residue": "123800426058282250"
+    },
+    {
+      "modulus": "331523275336187063",
+      "residue": "88919280497216328"
+    },
+    {
+      "modulus": "433432014951605099",
+      "residue": "208650964527306830"
+    },
+    {
+      "modulus": "586300278030425213",
+      "residue": "216171560405146110"
+    },
+    {
+      "modulus": "779063344180506659",
+      "residue": "456647634405716053"
+    },
+    {
+      "modulus": "971230541",
+      "residue": "71361840"
+    }
+  ],
+  "factors": [
+    {
+      "prime": 2,
+      "exponent": 5,
+      "exact": true,
+      "modulus": "1152921504606846976",
+      "residue": "389111003460432672"
+    }
+  ],
+  "independent_replay": {
+    "method": "Node BigInt primorial reduction",
+    "all_group_residues_matched": true,
+    "e0086_reproduced": true
+  },
+  "tests_passed": 5,
+  "rust_elapsed_seconds": 9.15,
+  "rust_peak_rss_kib": 2252,
+  "oracle_elapsed_seconds": 19.95,
+  "oracle_peak_rss_kib": 156164,
+  "scope": "partial factorization; cofactor primality unknown"
+}

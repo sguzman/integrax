@@ -1,0 +1,3 @@
+# C15 closure — Whole-integer multiplicative reconnaissance
+
+E0086 and independent E0087 establish N=2^5 Q, with Q coprime to every prime <=997. Preserve all known factors, exact multiplicities, grouped residues and bounds in E0086/E0087 JSON. Five bits of raw magnitude reduction cannot justify a compressor; no frontier entry. No claim that Q is prime or that larger factors are absent. Owner prefers substantial number-theoretic work to repeated elementary trial division; close this survey and assess feasibility of genuinely nontrivial methods in C16. [Evidence](../experiments/records/E0087.md).

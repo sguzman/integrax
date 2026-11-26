@@ -13,3 +13,5 @@ Prior art: elementary modular Horner evaluation, divisibility, valuations; see [
 E0086 [CI 45754251881](https://github.com/sguzman/integrax/actions/runs/45754251881/job/139689015680) succeeded: four tests, full SHA-256 checks, all 25 primes through 97; only 2 divides N, exact valuation 5. N=32Q, Q odd and coprime to every odd prime <=97. [Structured evidence](../experiments/records/E0086.json). Survey 2.02 s, 2212 KiB peak RSS. Not a compression gain: raw Q saves five bits before signaling and byte alignment.
 
 E0087: extend to 168 primes through 997 and independently replay using a sieve and Node BigInt reduction modulo their entire primorial, then prime-power product for valuations. Verify all Rust group residues, discovered primes and exact/censored valuations; reproduce the three E0086 group residues. CI required before acceptance. No assertion about the residual cofactor's primality.
+
+E0087 passed independent full-corpus replay, no additional factors through 997. [Evidence](../experiments/records/E0087.md). See [closure](CAMPAIGN-15-CLOSURE.md).

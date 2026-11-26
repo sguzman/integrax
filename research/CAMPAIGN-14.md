@@ -11,3 +11,5 @@ E0084 [local Check 139599681105](https://github.com/sguzman/integrax/runs/139599
 E0085 local full enwik9 mode20 candidate authored after E0083 (all three sample gains) and E0084 (20/20 independent equality). Fixed dictionary, uninterrupted stream. Bubblewrap nonroot user/network/PID/IPC/UTS namespaces, read-only Nix store and codec+archive only, no host corpus mount, preflight hidden sentinel and distinct network namespace before download, repeat checks on actual corpus and during decode. Exact cmp/hash required; archive retained in ignored local cache with digest verification. Full evidence schema positive and false-isolation rejection fixture tested; draft script syntax checked. Actual host sandbox, Nix dependency and full execution not yet verified. No new frontier claimed.
 
 Owner authorized migration back to hosted CI. E0085 will use the same candidate and isolation/evidence checks on a hosted runner; no new result is claimed. See [hosted CI](../docs/HOSTED-CI.md).
+
+E0085 hosted CI passed, F0013 accepted at 232,493,451 B. See [closure](CAMPAIGN-14-CLOSURE.md).

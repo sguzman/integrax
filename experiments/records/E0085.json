@@ -1,0 +1,54 @@
+{
+  "id": "E0085",
+  "campaign": "C14",
+  "track": "whole",
+  "status": "roundtrip-verified",
+  "revision": "6581986a51a4afe6447c3d1df7870d08ef58c34f",
+  "run": 45753624343,
+  "job": 139686985192,
+  "verification": {
+    "id": "V0016",
+    "byte_equal": true,
+    "isolated": true,
+    "uid": 1001,
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "archive_bytes": 232493451,
+  "archive_sha256": "05d4b32330aa7bf5d21c81f2b607f0660019a9b37c823d142a54a1e7115845e8",
+  "compressor_bytes": 516832,
+  "contest_total_bytes": null,
+  "external_side_bytes": 0,
+  "unit_tests": 22,
+  "raw_evidence": {
+    "archive_bytes": 232493451,
+    "archive_sha256": "05d4b32330aa7bf5d21c81f2b607f0660019a9b37c823d142a54a1e7115845e8",
+    "byte_equal": true,
+    "codec_bytes": 516832,
+    "decode_rss_kib": 4224,
+    "decode_seconds": 508.77,
+    "decoded_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "dictionary_bytes": 65538,
+    "dictionary_sha256": "3651e9523e3ddc5db5e2d112832aca59794b9bc12dc433467cd14dc205c3cf9d",
+    "encode_rss_kib": 121216,
+    "encode_seconds": 509.19,
+    "input_bytes": 1000000000,
+    "input_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+    "isolated": true,
+    "mode": 20,
+    "sandbox_uid": 1001,
+    "training_sha256": "65dd770568be321494dcc88019e75ee92fc67fbcf75adc1abd8a35a9504a1895"
+  },
+  "commands": [
+    "nix develop --no-update-lock-file --command bash experiments/ixg2/full-rootmix-local.sh \"$GITHUB_WORKSPACE\" \"$transfer\""
+  ],
+  "limitations": [
+    "archive-only, not contest eligible",
+    "transient archive; digest retained",
+    "reported decode RSS is pipeline measurement"
+  ]
+}

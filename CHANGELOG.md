@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-26 UTC — F0013 accepted; C14/C15 closed
+Hosted E0085 full isolated reconstruction: 232,493,451 B. Independent E0087 confirmed N=32Q with no prime <=997 dividing Q. C16 nontrivial factorization feasibility selected.
+
 ## 2026-11-25 — Return to public development and hosted CI
 Owner authorized restoring the prior competition-restricted license and public GitHub Actions; prior MIT rights preserved. Prepared hosted E0085 workflow; repository settings and execution pending verification. Local tooling/cache retained as optional fallback.
 
