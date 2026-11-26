@@ -1,0 +1,20 @@
+name: Local E0085 whole-stream full enwik9
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Full isolated compression measurement
+        shell: bash
+        run: |
+          set -euo pipefail
+          transfer="$GITHUB_WORKSPACE/results-local/local-ci-$GITHUB_SHA"
+          test -d "$transfer"
+          exec >> "$transfer/steps.log" 2>&1
+          bash experiments/ixg2/full-rootmix-local.sh "$GITHUB_WORKSPACE" "$transfer"
+          printf '%s\n' "$GITHUB_SHA" > "$transfer/completed"

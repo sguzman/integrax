@@ -1,6 +1,7 @@
 {
-  "id": "E0084",
-  "workflow": ".github/workflows/local-rootmix-cross.yml",
-  "expected_count": 20,
-  "mode": 20
+  "id": "E0085",
+  "workflow": ".github/workflows/local-rootmix-full.yml",
+  "expected_count": 1,
+  "mode": 20,
+  "schema": "full"
 }

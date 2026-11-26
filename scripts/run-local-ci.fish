@@ -55,6 +55,16 @@ set -l job (jq -er '.id | select(test("^E[0-9]{4}$"))' "$manifest"); or fail 'In
 set -l workflow (jq -er '.workflow | select(test("^[.]github/workflows/local-[a-z0-9-]+[.]yml$"))' "$manifest"); or fail 'Invalid local workflow path.'
 set -l expected (jq -er '.expected_count | select(type=="number" and floor==. and .>=1 and .<=100)' "$manifest"); or fail 'Invalid expected result count.'
 set -l mode (jq -er '.mode | select(type=="number" and floor==. and .>=0 and .<=255)' "$manifest"); or fail 'Invalid result mode.'
+set -l schema (jq -er '.schema // "cross"' "$manifest"); or fail 'Invalid evidence schema.'
+set -l evidence_filter
+switch "$schema"
+    case cross
+        set evidence_filter scripts/local-ci-evidence.jq
+    case full
+        set evidence_filter scripts/local-ci-full-evidence.jq
+    case '*'
+        fail 'Unknown evidence schema.'
+end
 set -l check_name "Integrax $job (local wrkflw/Nix)"
 test -f "$workflow"; or fail 'Workflow missing.'
 
@@ -165,7 +175,7 @@ set -l duration (math (date +%s) - $start_seconds)
 # Structured success results; redacted failure diagnostics.
 set -l public_output
 if test $ci_exit -eq 0
-    set -l evidence (jq -cRs --argjson expected "$expected" --argjson mode "$mode" -f scripts/local-ci-evidence.jq "$log.evidence" 2>"$log.evidence-error")
+    set -l evidence (jq -cRs --argjson expected "$expected" --argjson mode "$mode" -f "$evidence_filter" "$log.evidence" 2>"$log.evidence-error")
     if test $status -ne 0 -o -z "$evidence"
         set ci_exit 1
         set conclusion failure
