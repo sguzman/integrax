@@ -1,0 +1,243 @@
+{
+  "experiment": "E0117",
+  "revision": "1da33cb2a8fa8cbf09d784080aded8ef48b7b869",
+  "run_id": 45855741738,
+  "job_id": 140033504151,
+  "wall_seconds": 23.28,
+  "peak_rss_kib": 1290708,
+  "summary": {
+    "event": "COFACTOR_SUMMARY",
+    "loaded": 33676,
+    "partial": 5243,
+    "known_factors": 10788,
+    "improved": 32,
+    "completed": 1,
+    "parent_improved": 32,
+    "bits_removed": 599,
+    "by_kind": {
+      "lexical": {
+        "objects": 157,
+        "improved": 0,
+        "before_bits": 24554,
+        "after_bits": 24554,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "title": {
+        "objects": 19,
+        "improved": 0,
+        "before_bits": 4255,
+        "after_bits": 4255,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "id": {
+        "objects": 37,
+        "improved": 0,
+        "before_bits": 3778,
+        "after_bits": 3778,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "timestamp": {
+        "objects": 21,
+        "improved": 0,
+        "before_bits": 6864,
+        "after_bits": 6864,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "username": {
+        "objects": 14,
+        "improved": 0,
+        "before_bits": 3170,
+        "after_bits": 3170,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "contributor": {
+        "objects": 21,
+        "improved": 2,
+        "before_bits": 14441,
+        "after_bits": 14412,
+        "bits_removed": 29,
+        "unique_improved_values": 2
+      },
+      "comment": {
+        "objects": 18,
+        "improved": 1,
+        "before_bits": 12103,
+        "after_bits": 12084,
+        "bits_removed": 19,
+        "unique_improved_values": 1
+      },
+      "phrase": {
+        "objects": 2698,
+        "improved": 2,
+        "before_bits": 362705,
+        "after_bits": 362515,
+        "bits_removed": 190,
+        "unique_improved_values": 2
+      },
+      "sentence": {
+        "objects": 875,
+        "improved": 15,
+        "before_bits": 621678,
+        "after_bits": 621477,
+        "bits_removed": 201,
+        "unique_improved_values": 15
+      },
+      "paragraph": {
+        "objects": 659,
+        "improved": 10,
+        "before_bits": 626764,
+        "after_bits": 626629,
+        "bits_removed": 135,
+        "unique_improved_values": 10
+      },
+      "article": {
+        "objects": 21,
+        "improved": 0,
+        "before_bits": 655218,
+        "after_bits": 655218,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "text": {
+        "objects": 21,
+        "improved": 0,
+        "before_bits": 660806,
+        "after_bits": 660806,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "revision": {
+        "objects": 21,
+        "improved": 2,
+        "before_bits": 709466,
+        "after_bits": 709441,
+        "bits_removed": 25,
+        "unique_improved_values": 2
+      },
+      "page": {
+        "objects": 21,
+        "improved": 0,
+        "before_bits": 722148,
+        "after_bits": 722148,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "page-root": {
+        "objects": 21,
+        "improved": 0,
+        "before_bits": 722148,
+        "after_bits": 722148,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "word": {
+        "objects": 611,
+        "improved": 0,
+        "before_bits": 41862,
+        "after_bits": 41862,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "ip": {
+        "objects": 6,
+        "improved": 0,
+        "before_bits": 881,
+        "after_bits": 881,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "fragment": {
+        "objects": 2,
+        "improved": 0,
+        "before_bits": 463,
+        "after_bits": 463,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      }
+    },
+    "by_width": {
+      "9-32": {
+        "objects": 3715,
+        "improved": 1,
+        "before_bits": 476030,
+        "after_bits": 475853,
+        "bits_removed": 177,
+        "unique_improved_values": 1
+      },
+      "33-128": {
+        "objects": 823,
+        "improved": 24,
+        "before_bits": 441346,
+        "after_bits": 441014,
+        "bits_removed": 332,
+        "unique_improved_values": 15
+      },
+      "129-512": {
+        "objects": 362,
+        "improved": 5,
+        "before_bits": 633640,
+        "after_bits": 633575,
+        "bits_removed": 65,
+        "unique_improved_values": 5
+      },
+      "513-2048": {
+        "objects": 58,
+        "improved": 0,
+        "before_bits": 495831,
+        "after_bits": 495831,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "1-8": {
+        "objects": 212,
+        "improved": 0,
+        "before_bits": 11806,
+        "after_bits": 11806,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "2049+": {
+        "objects": 73,
+        "improved": 2,
+        "before_bits": 3134651,
+        "after_bits": 3134626,
+        "bits_removed": 25,
+        "unique_improved_values": 2
+      }
+    },
+    "by_cohort": {
+      "historical": {
+        "objects": 3758,
+        "improved": 29,
+        "before_bits": 3551743,
+        "after_bits": 3551348,
+        "bits_removed": 395,
+        "unique_improved_values": 20
+      },
+      "E0116": {
+        "objects": 1485,
+        "improved": 3,
+        "before_bits": 1641561,
+        "after_bits": 1641357,
+        "bits_removed": 204,
+        "unique_improved_values": 3
+      }
+    },
+    "unique_improved_values": 23
+  },
+  "product_recheck": {
+    "rows": 32,
+    "exact_products": true,
+    "residual_products": true,
+    "bit_counts": true,
+    "cohort_counts": true,
+    "kind_counts": true
+  },
+  "refinement_path": "inventory/refinements/E0117.json",
+  "corpus_cache_saved": true
+}
