@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: inspect E0093 mode8 rank/zero-run hierarchy ablation. E0092 negative for meaningful affine compression. Known N=32Q unchanged; no frontier claim.
+Next: inspect E0094 independent mode8 cross-check. E0093 sample wins 3/3, 5600 B saved. Known N=32Q unchanged; no frontier claim.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -48,3 +48,5 @@ E0090 verified exact GCD=1; C16 closed. E0091 Lucas p+1 auxiliary search authore
 E0091 passed, GCD=32 only. [Evidence](experiments/records/E0091.json). C18 E0092 affine radix basis/coordinate codec and matched axis-only controls authored, hosted CI pending. No production codec or license change.
 
 E0092 passed, five small affine gains over masks, max 327 B/1 MiB. C18 closed; C19/E0093 mode8 authored, hosted CI pending. Old mode7 and IXB2 tags retained. No license change.
+
+E0093 verified all six sample roundtrips and rejection checks; mode7 historical hashes reproduced. E0094 independent cross-codec authored; hosted CI pending. No license or full-target frontier change.

@@ -1,0 +1,19 @@
+name: E0094 independent hierarchical run coding
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/oracle/bwt-run-backoff-cross.mjs'
+      - '.github/workflows/run-backoff-cross.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo test --locked --release --bin ixb1
+      - run: cargo build --locked --release --bin ixb1
+      - run: node experiments/oracle/bwt-run-backoff-cross.mjs target/release/ixb1
