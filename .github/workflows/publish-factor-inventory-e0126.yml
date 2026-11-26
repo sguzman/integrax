@@ -71,5 +71,5 @@ jobs:
             git push origin HEAD:main
           fi
           git fetch origin main
-          git show origin/main:experiments/records/E0126.json | jq -e '.status == "verified" and .summary.nodes > 0 and .pages | length == 3'
+          git show origin/main:experiments/records/E0126.json | jq -e '.status == "verified" and .summary.nodes > 0 and (.pages | length) == 3'
           git show origin/main:inventory/manifest.json | jq -e '.indexed_nodes > 62823 and .batches[-1].id == "E0126"'
