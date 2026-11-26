@@ -1,0 +1,24 @@
+name: E0107 cumulative inventory distinct-value scale
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/xml/factor-inventory-scale.mjs'
+      - '.github/workflows/factor-inventory-scale.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: sh datasets/acquire.sh enwik9
+      - name: Resume and distinguish new-value factor reuse
+        run: |
+          set -euo pipefail
+          node --version
+          /usr/bin/time -v timeout --kill-after=10s 900s node --max-old-space-size=3072 experiments/xml/factor-inventory-scale.mjs data/enwik9
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          echo E0107_COMPLETE

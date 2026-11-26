@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: implement E0107 larger-page inventory with verified refinement overlay. E0106 36 improved objects, 35 parents, two completed; 5649 objects, 4146 factors; supplemental exact refinements persisted. Factorization primary; no frontier change.
+Next: inspect E0107 larger-page inventory hosted CI and persist verified new shards. E0106 36 improved objects, 35 parents, two completed; 5649 objects, 4146 factors; supplemental exact refinements persisted. Factorization primary; no frontier change.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -76,3 +76,5 @@ E0104 passed and persisted. E0105 larger-page distinct-value factor provenance a
 E0105 passed and persisted. E0106 revisits unresolved cofactors using current inventory and distinct-residual GCDs; hosted CI pending.
 
 E0106 passed: 36 improved objects (35 parents), 2 completed, 648 residual bits removed across overlapping nodes, one new prime (2969), 6.07 s; all 36 exact supplemental products persisted, index now 4146. Next E0107: expand to fresh 3073–4096-byte pages, loading and checking E0106 overlay and unioned occurrence index. No compression frontier change.
+
+E0107 authored and queued by push; full historical inventory and E0106 overlays must pass validation before new factor searches. No frontier change.
