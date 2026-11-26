@@ -80,3 +80,5 @@ E0106 passed: 36 improved objects (35 parents), 2 completed, 648 residual bits r
 E0107 authored and queued by push; full historical inventory and E0106 overlays must pass validation before new factor searches. No frontier change.
 
 E0107 passed, 3446 new nodes (9095 total), 5144 distinct factors (+998), 207 previously unseen parent values with full-inventory hits. 15.42 s. Scale-normalized evidence shows strong word/phrase reductions but nearly unchanged article/page cofactors. Next E0108 controlled fixed-object inventory growth comparison; no compression claim.
+
+E0108 authored: frozen historical inventory controls on identical fresh 4097–6144-byte page objects, then ordinary adaptive cumulative factorization. Hosted CI pending.
