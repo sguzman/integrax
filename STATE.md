@@ -4,10 +4,10 @@
 
 - F0012 IXB2 blockwise **217,045,597 B** (78.30% reduction), [E0082/V0015](experiments/records/E0082.md), [CI 45718923956](https://github.com/sguzman/integrax/actions/runs/45718923956/job/139571999756). Full strict isolated byte equality and SHA-256, same archive digest as failed first attempt. F0011 220,113,320 B; mode7 wins every paired block in attempt 1. F0010 IXG2 whole-stream **236,272,025 B** (76.37%), [E0065/V0013](experiments/records/E0065.md). All archive-only; no contest-comparable total.
 - [C13 closed](research/CAMPAIGN-13-CLOSURE.md); 180 independent IXB1/2 cross-codec comparisons and 370 IXG2 (550 total). Preserve both block modes. C12 sparse patch sample gain only. Prior campaigns and evidence retained in registry.
-- Owner authorized returning to public development, competition-restricted licensing and hosted Actions. License and hosted E0085 workflow prepared; visibility and Actions settings require owner action and verification. Earlier MIT grants remain valid. No contest submission authorized.
+- Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: once public visibility and Actions are enabled, dispatch hosted E0085 full-rootmix workflow; validate evidence, compare F0010 whole-stream and F0012 blockwise. No owner corpus acquisition required. Fail closed if isolation unavailable. No new frontier before exact evidence.
+Next: inspect [E0085 hosted run 45753624343](https://github.com/sguzman/integrax/actions/runs/45753624343), queued at revision `6581986a51a4afe6447c3d1df7870d08ef58c34f`; validate evidence, compare F0010 whole-stream and F0012 blockwise. No owner corpus acquisition required. Fail closed if isolation unavailable. No new frontier before exact evidence.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -29,4 +29,4 @@ E0085 attempt [139601748562](https://github.com/sguzman/integrax/runs/1396017485
 
 E0085 second attempt (local Check 139610201792, owner terminal log): live logs worked; HTTP/1.1 range resumption verified across four interruptions, progressing from 199081984 to 261127689 bytes before the final partial transfer. Five-attempt budget exhausted; partial preserved by script. GitHub authentication failed during finalization, so remote check may remain stale. No compression result. Local acquisition now uses unlimited attempts (manual Ctrl-C still preserves partial); hosted default remains five. Standalone acquisition recommended before CI to avoid tying a slow download to check-run authentication. Unlimited mode not yet host-tested.
 
-Owner ended mandatory local CI after repeated corpus download failures. Existing scripts and partial local cache are preserved. Hosted E0085 workflow authored, not executed or verified; priority notice to committee is separate from formal submission.
+Owner ended mandatory local CI after repeated corpus download failures. Existing scripts and partial local cache are preserved. Hosted E0085 workflow now queued; result unverified. Priority notice to committee is separate from formal submission.
