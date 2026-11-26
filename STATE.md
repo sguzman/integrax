@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: E0112 larger-page inventory expansion. E0111 verified and overlays persisted; 6507 factors.
+Next: E0113 re-screen the expanded inventory across historical unresolved objects and test whether reuse improves article/page-scale cofactors; compare by level and unique value.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -98,3 +98,7 @@ E0111: replay E0110 overlays and measure closure of its three new primes across 
 E0111 passed: 2,487 unresolved objects screened, 4 additional parent records benefited from the three E0110 primes (3 distinct values), 54 residual bits removed across overlapping nodes. No further proper GCD hits or new primes. 34.31 s. All four exact overlays persisted; 6,507 factors retained. No compression claim.
 
 E0112: expand cumulative inventory to three fresh 6,145–8,192-byte XML pages, replay every historical overlay in order, compare frozen inventories on identical objects, then adaptively learn new factors. Hosted CI pending.
+
+E0112 passed: 8114 new nodes (23080 total), 8376 distinct factors (+1869), 569 previously unseen parent records with full-inventory hits. Frozen 3286/4145/4146/5144/6504/6507-factor inventories on identical targets left 1400891/1396421/1396387/1392093/1388992/1388981 residual bits. 66.84 s. Exact parent synthesis independently checked from CI factor products. No compression claim.
+
+Next: E0113 re-screen the expanded inventory across historical unresolved objects and test whether reuse improves article/page-scale cofactors; compare by level and unique value.
