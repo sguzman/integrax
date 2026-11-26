@@ -2210,6 +2210,12 @@
       "path": "inventory/refinements/E0111.json",
       "rows": 4,
       "record": "experiments/records/E0111.json"
+    },
+    {
+      "id": "E0113",
+      "path": "inventory/refinements/E0113.json",
+      "rows": 26,
+      "record": "experiments/records/E0113.json"
     }
   ]
 }

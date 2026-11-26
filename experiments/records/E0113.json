@@ -1,0 +1,234 @@
+{
+  "experiment": "E0113",
+  "revision": "7e97a489667b69d00b34921ce0cd4b930a850890",
+  "run_id": 45846894012,
+  "job_id": 140002797337,
+  "wall_seconds": 12.17,
+  "summary": {
+    "event": "COFACTOR_SUMMARY",
+    "loaded": 23080,
+    "partial": 3759,
+    "known_factors": 8376,
+    "improved": 26,
+    "completed": 1,
+    "parent_improved": 25,
+    "bits_removed": 406,
+    "by_kind": {
+      "lexical": {
+        "objects": 132,
+        "improved": 0,
+        "before_bits": 19646,
+        "after_bits": 19646,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "title": {
+        "objects": 16,
+        "improved": 0,
+        "before_bits": 3347,
+        "after_bits": 3347,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "id": {
+        "objects": 31,
+        "improved": 0,
+        "before_bits": 3201,
+        "after_bits": 3201,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "timestamp": {
+        "objects": 18,
+        "improved": 1,
+        "before_bits": 5924,
+        "after_bits": 5914,
+        "bits_removed": 10,
+        "unique_improved_values": 1
+      },
+      "username": {
+        "objects": 11,
+        "improved": 1,
+        "before_bits": 2594,
+        "after_bits": 2582,
+        "bits_removed": 12,
+        "unique_improved_values": 1
+      },
+      "contributor": {
+        "objects": 18,
+        "improved": 3,
+        "before_bits": 12285,
+        "after_bits": 12243,
+        "bits_removed": 42,
+        "unique_improved_values": 2
+      },
+      "comment": {
+        "objects": 15,
+        "improved": 0,
+        "before_bits": 9278,
+        "after_bits": 9278,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "phrase": {
+        "objects": 1806,
+        "improved": 1,
+        "before_bits": 245165,
+        "after_bits": 245149,
+        "bits_removed": 16,
+        "unique_improved_values": 1
+      },
+      "sentence": {
+        "objects": 658,
+        "improved": 10,
+        "before_bits": 416832,
+        "after_bits": 416689,
+        "bits_removed": 143,
+        "unique_improved_values": 10
+      },
+      "paragraph": {
+        "objects": 527,
+        "improved": 7,
+        "before_bits": 420379,
+        "after_bits": 420283,
+        "bits_removed": 96,
+        "unique_improved_values": 7
+      },
+      "article": {
+        "objects": 18,
+        "improved": 0,
+        "before_bits": 444411,
+        "after_bits": 444411,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "text": {
+        "objects": 18,
+        "improved": 2,
+        "before_bits": 449260,
+        "after_bits": 449234,
+        "bits_removed": 26,
+        "unique_improved_values": 2
+      },
+      "revision": {
+        "objects": 18,
+        "improved": 0,
+        "before_bits": 489449,
+        "after_bits": 489449,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "page": {
+        "objects": 18,
+        "improved": 0,
+        "before_bits": 500061,
+        "after_bits": 500061,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "page-root": {
+        "objects": 18,
+        "improved": 0,
+        "before_bits": 500061,
+        "after_bits": 500061,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "word": {
+        "objects": 429,
+        "improved": 1,
+        "before_bits": 28981,
+        "after_bits": 28920,
+        "bits_removed": 61,
+        "unique_improved_values": 1
+      },
+      "ip": {
+        "objects": 6,
+        "improved": 0,
+        "before_bits": 881,
+        "after_bits": 881,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "fragment": {
+        "objects": 2,
+        "improved": 0,
+        "before_bits": 463,
+        "after_bits": 463,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      }
+    },
+    "by_width": {
+      "9-32": {
+        "objects": 2607,
+        "improved": 1,
+        "before_bits": 336646,
+        "after_bits": 336585,
+        "bits_removed": 61,
+        "unique_improved_values": 1
+      },
+      "33-128": {
+        "objects": 665,
+        "improved": 19,
+        "before_bits": 344369,
+        "after_bits": 344104,
+        "bits_removed": 265,
+        "unique_improved_values": 14
+      },
+      "129-512": {
+        "objects": 234,
+        "improved": 5,
+        "before_bits": 410684,
+        "after_bits": 410617,
+        "bits_removed": 67,
+        "unique_improved_values": 5
+      },
+      "513-2048": {
+        "objects": 42,
+        "improved": 0,
+        "before_bits": 403863,
+        "after_bits": 403863,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "1-8": {
+        "objects": 153,
+        "improved": 0,
+        "before_bits": 8562,
+        "after_bits": 8562,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "2049+": {
+        "objects": 58,
+        "improved": 1,
+        "before_bits": 2048094,
+        "after_bits": 2048081,
+        "bits_removed": 13,
+        "unique_improved_values": 1
+      }
+    },
+    "by_cohort": {
+      "historical": {
+        "objects": 2487,
+        "improved": 20,
+        "before_bits": 2268942,
+        "after_bits": 2268672,
+        "bits_removed": 270,
+        "unique_improved_values": 17
+      },
+      "E0112": {
+        "objects": 1272,
+        "improved": 6,
+        "before_bits": 1283276,
+        "after_bits": 1283140,
+        "bits_removed": 136,
+        "unique_improved_values": 5
+      }
+    },
+    "unique_improved_values": 21
+  },
+  "product_recheck": "All 26 exact products, residual partitions and emitted prime values independently checked.",
+  "refinement_path": "inventory/refinements/E0113.json"
+}

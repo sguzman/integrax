@@ -62,3 +62,5 @@ E0112 passed: 8114 new nodes (23080 total), 8376 distinct factors (+1869), 569 p
 Next: E0113 re-screen the expanded inventory across historical unresolved objects and test whether reuse improves article/page-scale cofactors; compare by level and unique value.
 
 E0113: frozen inventory re-screen of all 23,080 indexed objects, stratified by object kind, width, unique integer and historical versus E0112 cohort. Exact overlay replay and product checks; no new residual GCD search. Hosted CI pending.
+
+E0113 passed: 23,080 indexed objects, 3,759 partial, 8,376 known factors; 26 improved records (21 distinct integers), 25 parents, one completed word, 406 residual bits removed. Historical cohort 20 improvements, E0112 cohort 6; zero article/page/revision improvements. 12.17 s. All 26 exact products and emitted prime values independently rechecked and overlays persisted. No compression claim. Next: compare strict smaller global residual GCD on the enlarged post-overlay inventory (E0114).
