@@ -60,3 +60,5 @@ E0112: expand cumulative inventory to three fresh 6,145–8,192-byte XML pages, 
 E0112 passed: 8114 new nodes (23080 total), 8376 distinct factors (+1869), 569 previously unseen parent records with full-inventory hits. Frozen 3286/4145/4146/5144/6504/6507-factor inventories on identical targets left 1400891/1396421/1396387/1392093/1388992/1388981 residual bits. 66.84 s. Exact parent synthesis independently checked from CI factor products. No compression claim.
 
 Next: E0113 re-screen the expanded inventory across historical unresolved objects and test whether reuse improves article/page-scale cofactors; compare by level and unique value.
+
+E0113: frozen inventory re-screen of all 23,080 indexed objects, stratified by object kind, width, unique integer and historical versus E0112 cohort. Exact overlay replay and product checks; no new residual GCD search. Hosted CI pending.
