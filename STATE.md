@@ -13,7 +13,7 @@ Updated 2026-11-26 UTC. **Read [AGENTS.md](AGENTS.md) and this file first; no ch
 
 ## Resume here
 - E0119 CI passed: [run 45856991033](https://github.com/sguzman/integrax/actions/runs/45856991033), job 140037861392. 12,871 new objects, 13,631 total distinct factors; results not yet accepted into the manifest. The initial atomic bulk write exceeded connector operation/payload limits; use smaller page-level staging commits.
-- Staged and independently verified page 101301255: 4342 rows, 1176 parent products, 44 shards. [Stage record](inventory/batches/E0119/stage-101301255.json). Remaining offsets: 400074022 and 800041834. Use CI log as source; stage each page in bounded batches and record exact checks. Keep the manifest unchanged until all pages, snapshots and index delta have been written and verified. Then atomically publish E0119 record, manifest and compact state. Do not rerun CI or begin E0120 before acceptance.
+- Staged and independently verified pages 101301255 and 400074022: 8327 rows, 2140 parent products, 84 shards. [First stage](inventory/batches/E0119/stage-101301255.json), [second stage](inventory/batches/E0119/stage-400074022.json). Remaining offset: 800041834. Use CI log as source; stage each page in bounded batches and record exact checks. Keep the manifest unchanged until all pages, snapshots and index delta have been written and verified. Then atomically publish E0119 record, manifest and compact state. Do not rerun CI or begin E0120 before acceptance.
 
 ## On-demand context
 - [Campaign registry](research/README.md), [C20](research/CAMPAIGN-20.md), [experiment records](experiments/records/), [hosted CI](docs/HOSTED-CI.md).
