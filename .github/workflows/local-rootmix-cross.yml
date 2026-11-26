@@ -9,9 +9,17 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Build and test codec
+      - name: Build, test and independently verify codec
+        shell: bash
         run: |
+          set -euo pipefail
+          # wrkflw emulation runs in a temporary checkout but sets GITHUB_WORKSPACE
+          # to the original host checkout. The runner creates a fresh transfer
+          # directory there before execution, so no stale evidence is accepted.
+          transfer="$GITHUB_WORKSPACE/results-local/local-ci-$GITHUB_SHA"
+          test -d "$transfer"
+          exec >> "$transfer/steps.log" 2>&1
           cargo test --release --locked --bin ixg2
           cargo build --release --locked --bin ixg2
-      - name: Independent BigInt verification
-        run: node experiments/oracle/root-intervals-rootmix-cross.mjs target/release/ixg2
+          node experiments/oracle/root-intervals-rootmix-cross.mjs target/release/ixg2 > "$transfer/evidence.log"
+          printf '%s\n' "$GITHUB_SHA" > "$transfer/completed"

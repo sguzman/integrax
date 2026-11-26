@@ -101,6 +101,13 @@ set -l start_seconds (date +%s)
 set -l log "$log_dir/$sha-$stamp.log"
 set -l create_payload "$log_dir/$sha-$stamp.create.json"
 set -l update_payload "$log_dir/$sha-$stamp.update.json"
+set -l transfer "$root/results-local/local-ci-$sha"
+mkdir -p "$root/results-local"; or fail "Could not create evidence parent."
+mkdir -m 700 "$transfer"; or fail "Another run or stale transfer exists: $transfer (inspect before removing)."
+function cleanup_transfer --on-event fish_exit --inherit-variable transfer
+    rm -f -- "$transfer/steps.log" "$transfer/evidence.log" "$transfer/completed"
+    rmdir -- "$transfer" 2>/dev/null
+end
 
 jq -n --arg name "$check_name" --arg sha "$sha" --arg started "$started" \
     '{name:$name,head_sha:$sha,status:"in_progress",started_at:$started}' > "$create_payload"
@@ -129,6 +136,25 @@ if test $ci_exit -eq 0
     set ci_exit $status
 end
 
+if test -f "$transfer/steps.log"
+    printf "\nCaptured workflow step output:\n" >> "$log"
+    cat "$transfer/steps.log" >> "$log"
+end
+if test -f "$transfer/evidence.log"
+    cp "$transfer/evidence.log" "$log.evidence"
+end
+if test $ci_exit -eq 0
+    if not test -f "$transfer/completed" -a -f "$log.evidence"
+        set ci_exit 1
+        set phase evidence
+        printf "\nWorkflow did not produce its explicit completion and evidence files.\n" >> "$log"
+    else if test (string trim -- (cat "$transfer/completed")) != "$sha"
+        set ci_exit 1
+        set phase evidence
+        printf "\nWorkflow completion revision mismatch.\n" >> "$log"
+    end
+end
+
 set -l conclusion failure
 if test $ci_exit -eq 0
     set conclusion success
@@ -139,7 +165,7 @@ set -l duration (math (date +%s) - $start_seconds)
 # Structured success results; redacted failure diagnostics.
 set -l public_output
 if test $ci_exit -eq 0
-    set -l evidence (jq -cRs --argjson expected "$expected" --argjson mode "$mode" -f scripts/local-ci-evidence.jq "$log" 2>"$log.evidence-error")
+    set -l evidence (jq -cRs --argjson expected "$expected" --argjson mode "$mode" -f scripts/local-ci-evidence.jq "$log.evidence" 2>"$log.evidence-error")
     if test $status -ne 0 -o -z "$evidence"
         set ci_exit 1
         set conclusion failure
