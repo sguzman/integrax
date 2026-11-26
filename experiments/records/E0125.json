@@ -1,0 +1,236 @@
+{
+  "experiment": "E0125",
+  "revision": "74b0575d8c4bfac505e7c37b17ff725565d55a28",
+  "run_id": 45894906322,
+  "job_id": 140166309217,
+  "wall_seconds": 63.66,
+  "peak_rss_kib": 1392288,
+  "corpus_cache_restored": true,
+  "summary": {
+    "event": "COFACTOR_SUMMARY",
+    "loaded": 62823,
+    "partial": 9825,
+    "known_factors": 16081,
+    "improved": 0,
+    "completed": 0,
+    "parent_improved": 0,
+    "bits_removed": 0,
+    "by_kind": {
+      "lexical": {
+        "objects": 199,
+        "improved": 0,
+        "before_bits": 29583,
+        "after_bits": 29583,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "title": {
+        "objects": 25,
+        "improved": 0,
+        "before_bits": 5360,
+        "after_bits": 5360,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "id": {
+        "objects": 48,
+        "improved": 0,
+        "before_bits": 5024,
+        "after_bits": 5024,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "timestamp": {
+        "objects": 27,
+        "improved": 0,
+        "before_bits": 8814,
+        "after_bits": 8814,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "username": {
+        "objects": 19,
+        "improved": 0,
+        "before_bits": 4166,
+        "after_bits": 4166,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "contributor": {
+        "objects": 27,
+        "improved": 0,
+        "before_bits": 18923,
+        "after_bits": 18923,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "comment": {
+        "objects": 24,
+        "improved": 0,
+        "before_bits": 14216,
+        "after_bits": 14216,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "phrase": {
+        "objects": 5156,
+        "improved": 0,
+        "before_bits": 692949,
+        "after_bits": 692949,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "sentence": {
+        "objects": 1761,
+        "improved": 0,
+        "before_bits": 1157816,
+        "after_bits": 1157816,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "paragraph": {
+        "objects": 1393,
+        "improved": 0,
+        "before_bits": 1171492,
+        "after_bits": 1171492,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "article": {
+        "objects": 27,
+        "improved": 0,
+        "before_bits": 1230029,
+        "after_bits": 1230029,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "text": {
+        "objects": 27,
+        "improved": 0,
+        "before_bits": 1237233,
+        "after_bits": 1237233,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "revision": {
+        "objects": 27,
+        "improved": 0,
+        "before_bits": 1298858,
+        "after_bits": 1298858,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "page": {
+        "objects": 27,
+        "improved": 0,
+        "before_bits": 1315059,
+        "after_bits": 1315059,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "page-root": {
+        "objects": 27,
+        "improved": 0,
+        "before_bits": 1315059,
+        "after_bits": 1315059,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "word": {
+        "objects": 1001,
+        "improved": 0,
+        "before_bits": 69404,
+        "after_bits": 69404,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "ip": {
+        "objects": 6,
+        "improved": 0,
+        "before_bits": 881,
+        "after_bits": 881,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "fragment": {
+        "objects": 4,
+        "improved": 0,
+        "before_bits": 840,
+        "after_bits": 840,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      }
+    },
+    "by_width": {
+      "9-32": {
+        "objects": 6901,
+        "improved": 0,
+        "before_bits": 881509,
+        "after_bits": 881509,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "33-128": {
+        "objects": 1864,
+        "improved": 0,
+        "before_bits": 983292,
+        "after_bits": 983292,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "129-512": {
+        "objects": 559,
+        "improved": 0,
+        "before_bits": 974464,
+        "after_bits": 974464,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "513-2048": {
+        "objects": 87,
+        "improved": 0,
+        "before_bits": 658195,
+        "after_bits": 658195,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "1-8": {
+        "objects": 311,
+        "improved": 0,
+        "before_bits": 17143,
+        "after_bits": 17143,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "2049+": {
+        "objects": 103,
+        "improved": 0,
+        "before_bits": 6061103,
+        "after_bits": 6061103,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      }
+    },
+    "by_cohort": {
+      "historical": {
+        "objects": 7518,
+        "improved": 0,
+        "before_bits": 7180123,
+        "after_bits": 7180123,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "E0123": {
+        "objects": 2307,
+        "improved": 0,
+        "before_bits": 2395583,
+        "after_bits": 2395583,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      }
+    },
+    "unique_improved_values": 0
+  },
+  "refinements": 0,
+  "product_recheck": "The hosted closure workflow validated the published E0123 inventory, verified the enwik9 SHA-256, replayed every persisted refinement and reconstructed every parent from ordered children. It screened the remaining cofactors against all 16,081 indexed factors; no new refinement event was emitted."
+}

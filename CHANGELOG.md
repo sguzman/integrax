@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-26 — E0125 inventory saturation control
+Hosted replay and rescreen of all 62,823 indexed objects using 16,081 factors found zero further refinements or residual bits removed after E0124 overlays; one cofactor had completed. Persisted the stratified summary. No compression result claimed.
+
 ## 2026-11-26 — E0124 cumulative inventory closure
 Hosted closure screened 9,826 partial objects, improving 29 parent rows (21 distinct values) and removing 515 residual bits across overlapping nodes; one cofactor completed. Persisted all 29 exact refinements and summary. Article residuals were unchanged; no compression result claimed.
 
