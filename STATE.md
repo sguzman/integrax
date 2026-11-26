@@ -12,7 +12,7 @@ Updated 2026-11-26 UTC. **Read [AGENTS.md](AGENTS.md) and this file first; no ch
 - [Frontier](benchmarks/FRONTIER.md): F0012 blockwise 217,045,597 B; F0013 whole-stream 232,493,451 B; archive-only, contest total unestablished. No compression claim from overlapping object factors.
 
 ## Resume here
-- E0119 accepted and inventory updated. Next E0120: run frozen inventory closure using unchanged E0117 script over 46547 objects and 13631 factors; compare recent E0119 and historical cohorts by kind, width and unique value, exact overlay replay and products required. Use verified hosted cache. No E0120 implementation or run yet.
+- E0119 accepted and inventory updated. Next E0120: run frozen inventory closure using unchanged E0117 script over 46547 objects and 13631 factors; compare recent E0119 and historical cohorts by kind, width and unique value, exact overlay replay and products required. Use verified hosted cache. E0120 launched at [a0b8277](https://github.com/sguzman/integrax/commit/a0b8277ceb48c15048a48cebba9f9dbaa66fd31d); [hosted run 45865478280](https://github.com/sguzman/integrax/actions/runs/45865478280) queued at checkpoint. Script unchanged from E0117. Check this run before any new launch.
 - On success independently check and persist emitted products, counts and overlays. Do not duplicate running work.
 
 ## On-demand context
