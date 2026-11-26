@@ -8,12 +8,12 @@ Updated 2026-11-26 UTC. **Read [AGENTS.md](AGENTS.md) and this file first; no ch
 
 ## Accepted baseline
 - E0119 verified: 46547 indexed objects, 13631 distinct factors, 12871 new objects and 2843 new factors. 3252 parent products independently reconstructed; [evidence](experiments/records/E0119.json), [CI](https://github.com/sguzman/integrax/actions/runs/45856991033). Probable-prime labels retained.
-- E0117: 32 exact refinements, 599 overlapping residual bits removed. E0118: no proper shared divisors across 5,242 residuals. [E0118 evidence](experiments/records/E0118.json). Corpus cache verified.
+- E0120 verified: 40 exact refinements (29 distinct values), 39 parents, 3 completed, 691 overlapping residual bits removed; 28 historical / 12 E0119. One article improved, zero pages. [Evidence](experiments/records/E0120.json), [CI](https://github.com/sguzman/integrax/actions/runs/45865478280). E0118 had no proper shared divisors across 5242 residuals.
 - [Frontier](benchmarks/FRONTIER.md): F0012 blockwise 217,045,597 B; F0013 whole-stream 232,493,451 B; archive-only, contest total unestablished. No compression claim from overlapping object factors.
 
 ## Resume here
-- E0119 accepted and inventory updated. Next E0120: run frozen inventory closure using unchanged E0117 script over 46547 objects and 13631 factors; compare recent E0119 and historical cohorts by kind, width and unique value, exact overlay replay and products required. Use verified hosted cache. E0120 launched at [a0b8277](https://github.com/sguzman/integrax/commit/a0b8277ceb48c15048a48cebba9f9dbaa66fd31d); [hosted run 45865478280](https://github.com/sguzman/integrax/actions/runs/45865478280) queued at checkpoint. Script unchanged from E0117. Check this run before any new launch.
-- On success independently check and persist emitted products, counts and overlays. Do not duplicate running work.
+- E0120 accepted and all 40 overlays published. Next E0121: replay post-E0120 inventory and repeat strict smaller global residual GCD using the unchanged E0118 algorithm. Compare with E0118; exact products and witnesses required. No E0121 run launched yet. Expected partial count 7518. Use verified hosted cache.
+- Check reference CI and verify overlay replay; do not duplicate running work.
 
 ## On-demand context
 - [Campaign registry](research/README.md), [C20](research/CAMPAIGN-20.md), [experiment records](experiments/records/), [hosted CI](docs/HOSTED-CI.md).

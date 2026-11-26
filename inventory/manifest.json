@@ -4267,6 +4267,12 @@
       "path": "inventory/refinements/E0117.json",
       "rows": 32,
       "record": "experiments/records/E0117.json"
+    },
+    {
+      "id": "E0120",
+      "path": "inventory/refinements/E0120.json",
+      "rows": 40,
+      "record": "experiments/records/E0120.json"
     }
   ]
 }
