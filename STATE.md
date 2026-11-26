@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: E0114 enlarged-inventory strict smaller global residual GCD.
+Next: E0115 newly discovered prime propagation.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -108,3 +108,5 @@ E0113: frozen inventory re-screen of all 23,080 indexed objects, stratified by o
 E0113 passed: 23,080 indexed objects, 3,759 partial, 8,376 known factors; 26 improved records (21 distinct integers), 25 parents, one completed word, 406 residual bits removed. Historical cohort 20 improvements, E0112 cohort 6; zero article/page/revision improvements. 12.17 s. All 26 exact products and emitted prime values independently rechecked and overlays persisted. No compression claim. Next: compare strict smaller global residual GCD on the enlarged post-overlay inventory (E0114).
 
 E0114: replay E0113 overlays and repeat E0111 strictly smaller global residual GCD control on the enlarged 23,080-object inventory (8,376 known factors). Separate known-factor closure from proper new GCD splits, retain atomic/parent and descendant/global-only distinctions; exact products and witnesses required. Compare against E0111 on 14,966 objects, with no compression claim. Hosted CI pending.
+
+E0114 passed: 3,758 partial objects, 2,874 distinct residuals, 3 global-only proper GCD matches (2 distinct integer values; sentence/paragraph alias), 2 new primes (0x38d5, 0x2ba3), 40 overlapping residual bits removed, zero descendant matches across 22,897 checks. 94.48 s. Exact products, GCD witnesses and prime values independently rechecked. Persisted 3 overlays and 2 index entries; 8,378 factors. No article/page improvement or compression claim. Next E0115: propagate new primes across all indexed objects before further expansion.
