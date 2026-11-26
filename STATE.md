@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: inspect E0097 shared divisor/whole-value dictionary ablation. E0096 independent census and 201 larger objects verified, zero local factor payload wins. C19 deferred. No frontier change.
+Next: inspect E0098 recursive XML arithmetic archives. E0097 shared factor dictionary no authentic gain; value dictionary wins. C19 deferred. No frontier change.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -56,3 +56,5 @@ E0094 passed 30 independent cross-codec comparisons; mode8 retained. Owner appro
 E0095 passed full byte comparison and census; [record](experiments/records/E0095.json). E0096 independent XML census and bounded larger factors authored; hosted verification pending. No archive or license change.
 
 E0096 passed; 87 probable-prime complete products, 114 unresolved cofactors, exact reconstruction. [Evidence](experiments/records/E0096.json). E0097 actual dictionary collection formats authored with held-out occurrences and nonfactor controls; hosted CI pending. No archive frontier or license change.
+
+E0097 passed, 45 cohorts, 5030 objects; no authentic factor selection, whole-value dictionary 19.40% smaller than framed raw. E0098 IXT2 recursive synthesis prototype authored; hosted CI pending. No license or frontier change.

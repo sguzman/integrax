@@ -1,0 +1,1774 @@
+{
+  "id": "E0097",
+  "campaign": "C20",
+  "status": "roundtrip-verified",
+  "revision": "c24ec0c5641cbc22a0eae1659edbf7eb97339a63",
+  "run": 45761091899,
+  "job": 139711006305,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "fixtures": {
+    "event": "XML_DICT_FIXTURES",
+    "factor": {
+      "count": 128,
+      "raw_bytes": 3072,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 59,
+      "plain": 3336,
+      "value": 3336,
+      "factor": 910,
+      "joint": 910,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        0,
+        0,
+        0,
+        128
+      ],
+      "joint_counts": [
+        0,
+        0,
+        0,
+        128
+      ]
+    },
+    "value": {
+      "count": 128,
+      "raw_bytes": 2048,
+      "train_count": 128,
+      "value_dict": 1,
+      "factor_dict": 5,
+      "plain": 2312,
+      "value": 409,
+      "factor": 2323,
+      "joint": 420,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        0,
+        128,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        0,
+        128,
+        0,
+        0
+      ]
+    }
+  },
+  "groups": [
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/id|element|2",
+      "count": 128,
+      "raw_bytes": 1876,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 75,
+      "plain": 2140,
+      "value": 2140,
+      "factor": 2314,
+      "joint": 2314,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/id|leaf-body|1",
+      "count": 128,
+      "raw_bytes": 720,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 79,
+      "plain": 984,
+      "value": 984,
+      "factor": 1172,
+      "joint": 1172,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/restrictions|element|4",
+      "count": 128,
+      "raw_bytes": 5172,
+      "train_count": 128,
+      "value_dict": 4,
+      "factor_dict": 4,
+      "plain": 5436,
+      "value": 687,
+      "factor": 5446,
+      "joint": 697,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        3,
+        125,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        3,
+        125,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/restrictions|leaf-body|1",
+      "count": 17,
+      "raw_bytes": 85,
+      "train_count": 17,
+      "value_dict": 1,
+      "factor_dict": 2,
+      "plain": 126,
+      "value": 64,
+      "factor": 130,
+      "joint": 68,
+      "plain_counts": [
+        17,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        0,
+        17,
+        0,
+        0
+      ],
+      "factor_counts": [
+        17,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        0,
+        17,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/restrictions|leaf-body|2",
+      "count": 128,
+      "raw_bytes": 1406,
+      "train_count": 128,
+      "value_dict": 2,
+      "factor_dict": 8,
+      "plain": 1670,
+      "value": 415,
+      "factor": 1688,
+      "joint": 433,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        0,
+        128,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        0,
+        128,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/restrictions|leaf-body|3",
+      "count": 25,
+      "raw_bytes": 522,
+      "train_count": 25,
+      "value_dict": 2,
+      "factor_dict": 6,
+      "plain": 579,
+      "value": 143,
+      "factor": 591,
+      "joint": 155,
+      "plain_counts": [
+        25,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        1,
+        24,
+        0,
+        0
+      ],
+      "factor_counts": [
+        25,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        1,
+        24,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/restrictions|leaf-body|4",
+      "count": 14,
+      "raw_bytes": 518,
+      "train_count": 14,
+      "value_dict": 1,
+      "factor_dict": 8,
+      "plain": 553,
+      "value": 87,
+      "factor": 572,
+      "joint": 106,
+      "plain_counts": [
+        14,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        0,
+        14,
+        0,
+        0
+      ],
+      "factor_counts": [
+        14,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        0,
+        14,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/comment|element|3",
+      "count": 128,
+      "raw_bytes": 3354,
+      "train_count": 128,
+      "value_dict": 14,
+      "factor_dict": 85,
+      "plain": 3618,
+      "value": 3010,
+      "factor": 3830,
+      "joint": 3222,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        86,
+        42,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        86,
+        42,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/comment|element|4",
+      "count": 128,
+      "raw_bytes": 5700,
+      "train_count": 128,
+      "value_dict": 7,
+      "factor_dict": 88,
+      "plain": 5964,
+      "value": 5613,
+      "factor": 6171,
+      "joint": 5820,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        112,
+        16,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        112,
+        16,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/comment|leaf-body|1",
+      "count": 128,
+      "raw_bytes": 598,
+      "train_count": 128,
+      "value_dict": 22,
+      "factor_dict": 72,
+      "plain": 862,
+      "value": 750,
+      "factor": 1029,
+      "joint": 917,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        68,
+        60,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        68,
+        60,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/comment|leaf-body|2",
+      "count": 128,
+      "raw_bytes": 1639,
+      "train_count": 128,
+      "value_dict": 13,
+      "factor_dict": 83,
+      "plain": 1903,
+      "value": 1713,
+      "factor": 2098,
+      "joint": 1926,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        99,
+        29,
+        0,
+        0
+      ],
+      "factor_counts": [
+        118,
+        0,
+        0,
+        10
+      ],
+      "joint_counts": [
+        99,
+        29,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/comment|leaf-body|3",
+      "count": 128,
+      "raw_bytes": 2920,
+      "train_count": 128,
+      "value_dict": 9,
+      "factor_dict": 66,
+      "plain": 3184,
+      "value": 2834,
+      "factor": 3335,
+      "joint": 2985,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        100,
+        28,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        100,
+        28,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/comment|leaf-body|4",
+      "count": 128,
+      "raw_bytes": 5985,
+      "train_count": 128,
+      "value_dict": 7,
+      "factor_dict": 78,
+      "plain": 6249,
+      "value": 5676,
+      "factor": 6435,
+      "joint": 5863,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        111,
+        17,
+        0,
+        0
+      ],
+      "factor_counts": [
+        127,
+        0,
+        0,
+        1
+      ],
+      "joint_counts": [
+        111,
+        17,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/id|element|2",
+      "count": 128,
+      "raw_bytes": 1800,
+      "train_count": 128,
+      "value_dict": 11,
+      "factor_dict": 66,
+      "plain": 2064,
+      "value": 2081,
+      "factor": 2217,
+      "joint": 2234,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        116,
+        12,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        116,
+        12,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/id|leaf-body|1",
+      "count": 128,
+      "raw_bytes": 654,
+      "train_count": 128,
+      "value_dict": 5,
+      "factor_dict": 90,
+      "plain": 918,
+      "value": 925,
+      "factor": 1138,
+      "joint": 1145,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        121,
+        7,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        121,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/ip|element|3",
+      "count": 128,
+      "raw_bytes": 2857,
+      "train_count": 128,
+      "value_dict": 1,
+      "factor_dict": 73,
+      "plain": 3121,
+      "value": 3023,
+      "factor": 3293,
+      "joint": 3195,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        123,
+        5,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        123,
+        5,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/ip|element|4",
+      "count": 128,
+      "raw_bytes": 6272,
+      "train_count": 128,
+      "value_dict": 1,
+      "factor_dict": 3,
+      "plain": 6536,
+      "value": 442,
+      "factor": 6542,
+      "joint": 448,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        0,
+        128,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        0,
+        128,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/ip|leaf-body|2",
+      "count": 128,
+      "raw_bytes": 1654,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 65,
+      "plain": 1918,
+      "value": 1918,
+      "factor": 2066,
+      "joint": 2066,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/ip|leaf-body|3",
+      "count": 128,
+      "raw_bytes": 2176,
+      "train_count": 128,
+      "value_dict": 1,
+      "factor_dict": 6,
+      "plain": 2440,
+      "value": 410,
+      "factor": 2452,
+      "joint": 422,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        0,
+        128,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        0,
+        128,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/ip|leaf-body|4",
+      "count": 128,
+      "raw_bytes": 5120,
+      "train_count": 128,
+      "value_dict": 1,
+      "factor_dict": 2,
+      "plain": 5384,
+      "value": 433,
+      "factor": 5388,
+      "joint": 437,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        0,
+        128,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        0,
+        128,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/username|element|3",
+      "count": 128,
+      "raw_bytes": 3620,
+      "train_count": 128,
+      "value_dict": 12,
+      "factor_dict": 78,
+      "plain": 3884,
+      "value": 3722,
+      "factor": 4067,
+      "joint": 3905,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        109,
+        19,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        109,
+        19,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/username|element|4",
+      "count": 128,
+      "raw_bytes": 4538,
+      "train_count": 128,
+      "value_dict": 15,
+      "factor_dict": 74,
+      "plain": 4802,
+      "value": 4081,
+      "factor": 4976,
+      "joint": 4257,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        91,
+        37,
+        0,
+        0
+      ],
+      "factor_counts": [
+        126,
+        0,
+        0,
+        2
+      ],
+      "joint_counts": [
+        91,
+        37,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/username|leaf-body|1",
+      "count": 128,
+      "raw_bytes": 809,
+      "train_count": 128,
+      "value_dict": 16,
+      "factor_dict": 78,
+      "plain": 1073,
+      "value": 1097,
+      "factor": 1260,
+      "joint": 1284,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        110,
+        18,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        110,
+        18,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/username|leaf-body|2",
+      "count": 128,
+      "raw_bytes": 1425,
+      "train_count": 128,
+      "value_dict": 8,
+      "factor_dict": 70,
+      "plain": 1689,
+      "value": 1643,
+      "factor": 1854,
+      "joint": 1808,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        115,
+        13,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        115,
+        13,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/username|leaf-body|3",
+      "count": 128,
+      "raw_bytes": 2542,
+      "train_count": 128,
+      "value_dict": 19,
+      "factor_dict": 57,
+      "plain": 2806,
+      "value": 1637,
+      "factor": 2944,
+      "joint": 1784,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        49,
+        79,
+        0,
+        0
+      ],
+      "factor_counts": [
+        119,
+        0,
+        0,
+        9
+      ],
+      "joint_counts": [
+        49,
+        79,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor/username|leaf-body|4",
+      "count": 11,
+      "raw_bytes": 441,
+      "train_count": 12,
+      "value_dict": 2,
+      "factor_dict": 7,
+      "plain": 470,
+      "value": 371,
+      "factor": 484,
+      "joint": 385,
+      "plain_counts": [
+        11,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        6,
+        5,
+        0,
+        0
+      ],
+      "factor_counts": [
+        11,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        6,
+        5,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/contributor|element|4",
+      "count": 128,
+      "raw_bytes": 8141,
+      "train_count": 128,
+      "value_dict": 2,
+      "factor_dict": 71,
+      "plain": 8405,
+      "value": 8472,
+      "factor": 8565,
+      "joint": 8632,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        127,
+        1,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        127,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/id|element|3",
+      "count": 128,
+      "raw_bytes": 2176,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 79,
+      "plain": 2440,
+      "value": 2440,
+      "factor": 2625,
+      "joint": 2625,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/id|leaf-body|1",
+      "count": 128,
+      "raw_bytes": 1024,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 87,
+      "plain": 1288,
+      "value": 1288,
+      "factor": 1499,
+      "joint": 1499,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/minor|element|2",
+      "count": 128,
+      "raw_bytes": 1152,
+      "train_count": 128,
+      "value_dict": 1,
+      "factor_dict": 7,
+      "plain": 1416,
+      "value": 402,
+      "factor": 1431,
+      "joint": 417,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        0,
+        128,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        0,
+        128,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/text|element|4",
+      "count": 128,
+      "raw_bytes": 7530,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 79,
+      "plain": 7794,
+      "value": 7794,
+      "factor": 7978,
+      "joint": 7978,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/text|leaf-body|1",
+      "count": 68,
+      "raw_bytes": 512,
+      "train_count": 69,
+      "value_dict": 5,
+      "factor_dict": 8,
+      "plain": 655,
+      "value": 259,
+      "factor": 673,
+      "joint": 277,
+      "plain_counts": [
+        68,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        1,
+        67,
+        0,
+        0
+      ],
+      "factor_counts": [
+        68,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        1,
+        67,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/text|leaf-body|2",
+      "count": 128,
+      "raw_bytes": 1861,
+      "train_count": 128,
+      "value_dict": 17,
+      "factor_dict": 65,
+      "plain": 2125,
+      "value": 1926,
+      "factor": 2283,
+      "joint": 2084,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        90,
+        38,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        90,
+        38,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/text|leaf-body|3",
+      "count": 128,
+      "raw_bytes": 3268,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 68,
+      "plain": 3532,
+      "value": 3532,
+      "factor": 3689,
+      "joint": 3689,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/text|leaf-body|4",
+      "count": 128,
+      "raw_bytes": 5389,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 74,
+      "plain": 5653,
+      "value": 5653,
+      "factor": 5831,
+      "joint": 5831,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/timestamp|element|4",
+      "count": 128,
+      "raw_bytes": 5504,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 84,
+      "plain": 5768,
+      "value": 5768,
+      "factor": 5964,
+      "joint": 5964,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/revision/timestamp|leaf-body|3",
+      "count": 128,
+      "raw_bytes": 2560,
+      "train_count": 128,
+      "value_dict": 1,
+      "factor_dict": 78,
+      "plain": 2824,
+      "value": 2845,
+      "factor": 3010,
+      "joint": 3031,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/title|element|2",
+      "count": 22,
+      "raw_bytes": 352,
+      "train_count": 23,
+      "value_dict": 0,
+      "factor_dict": 22,
+      "plain": 403,
+      "value": 403,
+      "factor": 454,
+      "joint": 454,
+      "plain_counts": [
+        22,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        22,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        22,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        22,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/title|element|3",
+      "count": 128,
+      "raw_bytes": 3387,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 79,
+      "plain": 3651,
+      "value": 3651,
+      "factor": 3841,
+      "joint": 3841,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/title|element|4",
+      "count": 128,
+      "raw_bytes": 5348,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 78,
+      "plain": 5612,
+      "value": 5612,
+      "factor": 5790,
+      "joint": 5790,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/title|leaf-body|1",
+      "count": 128,
+      "raw_bytes": 744,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 74,
+      "plain": 1008,
+      "value": 1008,
+      "factor": 1183,
+      "joint": 1183,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/title|leaf-body|2",
+      "count": 128,
+      "raw_bytes": 1622,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 81,
+      "plain": 1886,
+      "value": 1886,
+      "factor": 2075,
+      "joint": 2075,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/title|leaf-body|3",
+      "count": 128,
+      "raw_bytes": 2808,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 70,
+      "plain": 3072,
+      "value": 3072,
+      "factor": 3233,
+      "joint": 3233,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/page/title|leaf-body|4",
+      "count": 128,
+      "raw_bytes": 5422,
+      "train_count": 128,
+      "value_dict": 0,
+      "factor_dict": 71,
+      "plain": 5686,
+      "value": 5686,
+      "factor": 5852,
+      "joint": 5852,
+      "plain_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        128,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        128,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "event": "XML_DICT_GROUP",
+      "key": "/mediawiki/siteinfo/namespaces/namespace|element|4",
+      "count": 9,
+      "raw_bytes": 345,
+      "train_count": 10,
+      "value_dict": 0,
+      "factor_dict": 11,
+      "plain": 370,
+      "value": 370,
+      "factor": 393,
+      "joint": 393,
+      "plain_counts": [
+        9,
+        0,
+        0,
+        0
+      ],
+      "value_counts": [
+        9,
+        0,
+        0,
+        0
+      ],
+      "factor_counts": [
+        9,
+        0,
+        0,
+        0
+      ],
+      "joint_counts": [
+        9,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "summary": {
+    "event": "XML_DICT_SUMMARY",
+    "count": 5030,
+    "raw_bytes": 123548,
+    "plain": 133961,
+    "value": 107966,
+    "factor": 139861,
+    "joint": 113896,
+    "joint_best_without_factor": 107830,
+    "joint_best": 107830,
+    "arithmetic_records": 0,
+    "seconds": 10.714751545999999
+  },
+  "wall_seconds": 12.08,
+  "peak_rss_kib": 1085852,
+  "limitations": [
+    "overlapping object cohorts; not corpus partition",
+    "same-code roundtrips",
+    "no arithmetic gain on authentic collections",
+    "not a full archive result"
+  ]
+}
