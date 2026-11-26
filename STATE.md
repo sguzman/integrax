@@ -14,7 +14,7 @@ Updated 2026-11-26 UTC. **Read [AGENTS.md](AGENTS.md) and this file first; no ch
 - [Frontier](benchmarks/FRONTIER.md): F0012 blockwise 217,045,597 B; F0013 whole-stream 232,493,451 B; archive-only, contest total unestablished. No compression claim from overlapping object factors.
 
 ## Resume here
-- E0122 accepted; 2 exact refinements published. Next E0123: extend held-out inventory to three fresh larger pages above E0119 size band (12,289–14,336 bytes if supported), with frozen stages including E0121 (13,633 factors); preserve exact products, parent synthesis and provenance. Inspect existing larger-page script and bounds before changing; do not duplicate prior pages. No E0123 launch yet. Verified hosted cache.
+- E0122 accepted; 2 exact refinements published. Next E0123: extend held-out inventory to three fresh larger pages above E0119 size band (12,289–14,336 bytes if supported), with frozen stages including E0121 (13,633 factors); preserve exact products, parent synthesis and provenance. Inspect existing larger-page script and bounds before changing; do not duplicate prior pages. E0123 launch committed with this checkpoint: three fresh 12,289–14,336-byte pages and eleven frozen stages through E0121. Locate matching run in [Actions](https://github.com/sguzman/integrax/actions/workflows/factor-inventory-larger-pages.yml) by launch revision. Do not duplicate launch. Verified hosted cache.
 - Verify post-E0122 replay and reference CI; no duplicate launches. No compression claim.
 
 ## On-demand context

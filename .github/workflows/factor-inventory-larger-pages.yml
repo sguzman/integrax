@@ -1,4 +1,4 @@
-name: E0119 larger held-out page inventory expansion
+name: E0123 larger held-out page inventory expansion
 on:
   push:
     branches: [main]
@@ -47,8 +47,8 @@ jobs:
           test -f data/enwik9
           printf '%s  %s\n' "$expected" data/enwik9 | sha256sum -c -
           sh datasets/acquire.sh enwik9
-      - name: Measure larger held-out pages with nine frozen inventories
+      - name: Measure larger held-out pages with eleven frozen inventories
         run: |
           set -euo pipefail
           /usr/bin/time -v timeout --kill-after=10s 900s node --max-old-space-size=3072 experiments/xml/factor-inventory-larger-pages.mjs data/enwik9
-          echo E0119_COMPLETE
+          echo E0123_COMPLETE

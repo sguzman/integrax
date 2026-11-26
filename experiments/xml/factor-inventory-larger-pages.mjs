@@ -215,7 +215,7 @@ function analyze(n,childRows,id){
    f.prior_distinct_witness=other?.id??null;
    f.prior_witness=w[0]?.id??null;
   }
-  learn(f.p,id,'E0119',n);if(!baseSet.has(f.p)&&!snapshotSet.has(f.p))delta.add(f.p)
+  learn(f.p,id,'E0123',n);if(!baseSet.has(f.p)&&!snapshotSet.has(f.p))delta.add(f.p)
  }
  seenValues.add(n);
  return {value_seen:valueSeen,factors,q,attempted,base_bits:baseBits,child_bits:childBits,reuse_bits:reuseBits,full_bits:fullBits,snapshot:snapshotId,delta_count:deltaCount,cold_bits:BIT(control),rho_steps:4096-budget.left,child_candidates:candidates.length,global_candidates:globals.length}
@@ -282,7 +282,7 @@ inv.clear();cache.clear();delta.clear();seenValues.clear();witnesses.clear();
 const full=readFileSync(process.argv[2]);assert.equal(full.length,1000000000);assert.equal(sha(full),'159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc');
 seed();
 const manifest=JSON.parse(readFileSync('inventory/manifest.json','utf8'));
-assert.equal(manifest.corpus_sha256,sha(full));assert.equal(manifest.indexed_nodes,33676);
+assert.equal(manifest.corpus_sha256,sha(full));assert.equal(manifest.indexed_nodes,46547);assert.equal(manifest.index.distinct_factors,13633);
 const overlays=new Map();for(const r of manifest.refinements??[]){const data=JSON.parse(readFileSync(r.path,'utf8'));assert.equal(data.rows.length,r.rows);for(const x of data.rows){const list=overlays.get(x.id)??[];list.push({...x,origin:r.id});overlays.set(x.id,list)}}
 const consumed=new Set(),oldOffsets=new Set(manifest.batches.flatMap(b=>b.shards.map(s=>s.offset)));
 let imported=0;
@@ -301,7 +301,7 @@ const indexed=new Set();for(const s of manifest.index.shards){const data=JSON.pa
 assert.equal(indexed.size,inv.size);
 console.log(JSON.stringify({event:'FACTOR_RESUME',imported,distinct_factors:inv.size}));
 const frozen=new Set();
-for(const [stage,count] of [['E0104',3286],['E0105',4145],['E0106',4146],['E0107',5144],['E0108',6504],['E0110',6507],['E0112',8376],['E0114',8378],['E0116',10788]]){
+for(const [stage,count] of [['E0104',3286],['E0105',4145],['E0106',4146],['E0107',5144],['E0108',6504],['E0110',6507],['E0112',8376],['E0114',8378],['E0116',10788],['E0119',13631],['E0121',13633]]){
  for(const s of manifest.index.shards.filter(s=>s.path.startsWith('inventory/index/'+stage+'/'))){
   const data=JSON.parse(readFileSync(s.path,'utf8'));for(const f of data.factors)frozen.add(fromHex(f.p));
  }
@@ -316,9 +316,9 @@ for(const start of [100000000,400000000,800000000]){
  for(let i=0;i<2048&&at>=0;i++){
   const end=full.indexOf('</page>',at)+7;assert(end>at);
   const w=end-at;
-  if(w>=10241&&w<=12288&&!oldOffsets.has(at)){chosen={at,end};break}
+  if(w>=12289&&w<=14336&&!oldOffsets.has(at)){chosen={at,end};break}
   at=full.indexOf('<page>',end);
  }
  assert(chosen,'bounded page selection');rebuildSnapshot();const result=inventoryPage(full.subarray(chosen.at,chosen.end),chosen.at);pages.push(result);console.log(JSON.stringify({event:'FACTOR_PAGE',...result}));
 }
-console.log(JSON.stringify({event:'FACTOR_INVENTORY_SUMMARY',pages:pages.map(p=>({offset:p.offset,width:p.width,root_id:p.root_id})),distinct_factors:inv.size,nodes:pages.reduce((n,p)=>n+p.stats.nodes,0),seeded_sources:['E0095','E0096','E0099','E0103','E0104','E0105','E0106','E0107','E0108','E0109','E0110','E0111','E0112','E0113','E0114','E0115','E0116','E0117']}));
+console.log(JSON.stringify({event:'FACTOR_INVENTORY_SUMMARY',pages:pages.map(p=>({offset:p.offset,width:p.width,root_id:p.root_id})),distinct_factors:inv.size,nodes:pages.reduce((n,p)=>n+p.stats.nodes,0),seeded_sources:['E0095','E0096','E0099','E0103','E0104','E0105','E0106','E0107','E0108','E0109','E0110','E0111','E0112','E0113','E0114','E0115','E0116','E0117','E0119','E0120','E0121','E0122']}));
