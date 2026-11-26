@@ -138,12 +138,21 @@ echo "Full local log: $log"
 
 # Retain complete local diagnostics; publish redacted failure output only to the private repository.
 set -l phase validation
-wrkflw validate "$workflow" > "$log" 2>&1
-set -l ci_exit $status
+wrkflw validate "$workflow" 2>&1 | tee "$log"
+set -l ci_exit $pipestatus[1]
 if test $ci_exit -eq 0
     set phase execution
+    # Child stdout is hidden by wrkflw; stream the real step log instead.
+    touch "$transfer/steps.log"; or fail "Could not initialize live step log."
+    echo "Streaming workflow output (full diagnostics remain in the local log)."
+    tail -n +1 -f --sleep-interval=0.2 --pid=$fish_pid "$transfer/steps.log" &
+    set -l follower $last_pid
     env -u GH_TOKEN -u GITHUB_TOKEN wrkflw --verbose run --runtime emulation --event workflow_dispatch --no-strict-filter "$workflow" >> "$log" 2>&1
     set ci_exit $status
+    # Give tail a final poll, then reap it before removing the transfer directory.
+    sleep 0.3
+    kill "$follower" 2>/dev/null
+    wait "$follower" 2>/dev/null
 end
 
 if test -f "$transfer/steps.log"
