@@ -1,0 +1,616 @@
+{
+  "id": "E0099",
+  "campaign": "C20",
+  "status": "roundtrip-verified",
+  "revision": "528e0b5974048fe429bdce8c70bec92a582f0f0d",
+  "run": 45761866645,
+  "job": 139713511071,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "rows": [
+    {
+      "event": "ARTICLE_REGION",
+      "offset": 100000000,
+      "start": 100028432,
+      "end": 100351434,
+      "input_sha256": "ba15eea4c4d5865463ece5f501623dc36b327ecd1ae798fcc9563398b64ebb07",
+      "raw": 323002,
+      "gzip": 122498,
+      "structural": {
+        "archive_bytes": 321877,
+        "archive_sha256": "813f7a2f50c5ec38ff233f82cbe29493fb3e0a2166a3fdb1f0f46ae0b3f0d076",
+        "counts": [
+          102,
+          469,
+          138,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "arithmetic": {
+        "archive_bytes": 321429,
+        "archive_sha256": "ca716e25973f1315fc3f190e3f4f74fb15a3c47af250c29eab5fe416934f5df2",
+        "counts": [
+          1884,
+          642,
+          627,
+          0,
+          40,
+          0,
+          0,
+          1908
+        ],
+        "verified": true
+      },
+      "hybrid": {
+        "archive_bytes": 130280,
+        "archive_sha256": "fd10df91dd062bcdea4dd9bddcc47d4804c88482ba6117883675b13c9e2aae0b",
+        "counts": [
+          36,
+          198,
+          56,
+          13,
+          0,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "hybrid_arithmetic": {
+        "archive_bytes": 130204,
+        "archive_sha256": "c843fa22925cf2f86ab2109475ba06e298527c790d92407d66fc4eccd483fee3",
+        "counts": [
+          32,
+          365,
+          107,
+          13,
+          28,
+          0,
+          0,
+          9
+        ],
+        "verified": true
+      },
+      "shallow_hybrid": {
+        "archive_bytes": 130280,
+        "archive_sha256": "fd10df91dd062bcdea4dd9bddcc47d4804c88482ba6117883675b13c9e2aae0b",
+        "counts": [
+          36,
+          198,
+          56,
+          13,
+          0,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "counts": {
+        "article": 13,
+        "paragraph": 1604,
+        "sentence": 2865,
+        "phrase": 17912,
+        "word": 100241,
+        "fragment": 48
+      },
+      "cohorts": [
+        {
+          "cohort": "article|17-32",
+          "distinct": 1,
+          "evaluated": 1
+        },
+        {
+          "cohort": "fragment|17-32",
+          "distinct": 23,
+          "evaluated": 23
+        },
+        {
+          "cohort": "fragment|2-8",
+          "distinct": 9,
+          "evaluated": 9
+        },
+        {
+          "cohort": "fragment|9-16",
+          "distinct": 4,
+          "evaluated": 4
+        },
+        {
+          "cohort": "paragraph|17-32",
+          "distinct": 349,
+          "evaluated": 64
+        },
+        {
+          "cohort": "paragraph|2-8",
+          "distinct": 11,
+          "evaluated": 11
+        },
+        {
+          "cohort": "paragraph|9-16",
+          "distinct": 104,
+          "evaluated": 64
+        },
+        {
+          "cohort": "phrase|17-32",
+          "distinct": 9987,
+          "evaluated": 64
+        },
+        {
+          "cohort": "phrase|2-8",
+          "distinct": 397,
+          "evaluated": 64
+        },
+        {
+          "cohort": "phrase|9-16",
+          "distinct": 6207,
+          "evaluated": 64
+        },
+        {
+          "cohort": "sentence|17-32",
+          "distinct": 474,
+          "evaluated": 64
+        },
+        {
+          "cohort": "sentence|2-8",
+          "distinct": 33,
+          "evaluated": 33
+        },
+        {
+          "cohort": "sentence|9-16",
+          "distinct": 139,
+          "evaluated": 64
+        },
+        {
+          "cohort": "word|17-32",
+          "distinct": 45,
+          "evaluated": 45
+        },
+        {
+          "cohort": "word|2-8",
+          "distinct": 7759,
+          "evaluated": 64
+        },
+        {
+          "cohort": "word|9-16",
+          "distinct": 2400,
+          "evaluated": 64
+        }
+      ],
+      "stats": {
+        "tested": 702,
+        "complete": 416,
+        "unresolved": 286,
+        "nontrivial": 697,
+        "local_factor_wins": 0,
+        "local_factor_saved": 0
+      },
+      "unique_factor_values": 569,
+      "seconds": 10.133337818
+    },
+    {
+      "event": "ARTICLE_REGION",
+      "offset": 400000000,
+      "start": 400007843,
+      "end": 400279977,
+      "input_sha256": "54ec643801cd864a778c1e437ef4ab44dd1d4f43ef5f6507bc76476b1d208a3c",
+      "raw": 272134,
+      "gzip": 92460,
+      "structural": {
+        "archive_bytes": 258409,
+        "archive_sha256": "603d0ca0f6778b52b7cd4f883b9a5eeda7196e2e0585e32c873febb57bd22091",
+        "counts": [
+          657,
+          3045,
+          900,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "arithmetic": {
+        "archive_bytes": 257637,
+        "archive_sha256": "c9f1932b2456b68150cd9be61324e837b260b650500389d91dae826fbd29f6de",
+        "counts": [
+          460,
+          3083,
+          954,
+          0,
+          239,
+          0,
+          0,
+          191
+        ],
+        "verified": true
+      },
+      "hybrid": {
+        "archive_bytes": 117446,
+        "archive_sha256": "0739bef43e7d1f473f000ba491b77aefebdcea6cff8f5ffd3d0d140c0cba3942",
+        "counts": [
+          347,
+          1842,
+          532,
+          70,
+          0,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "hybrid_arithmetic": {
+        "archive_bytes": 117006,
+        "archive_sha256": "d0c2243f770953ee2dfff6c9f2dfb650c85e8e53c8c8d5b71404bae6608f574b",
+        "counts": [
+          216,
+          2320,
+          680,
+          66,
+          181,
+          0,
+          0,
+          50
+        ],
+        "verified": true
+      },
+      "shallow_hybrid": {
+        "archive_bytes": 117446,
+        "archive_sha256": "0739bef43e7d1f473f000ba491b77aefebdcea6cff8f5ffd3d0d140c0cba3942",
+        "counts": [
+          347,
+          1842,
+          532,
+          70,
+          0,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "counts": {
+        "article": 86,
+        "paragraph": 2846,
+        "sentence": 3525,
+        "phrase": 14190,
+        "word": 74930,
+        "fragment": 22
+      },
+      "cohorts": [
+        {
+          "cohort": "article|17-32",
+          "distinct": 17,
+          "evaluated": 17
+        },
+        {
+          "cohort": "fragment|17-32",
+          "distinct": 12,
+          "evaluated": 12
+        },
+        {
+          "cohort": "fragment|2-8",
+          "distinct": 6,
+          "evaluated": 6
+        },
+        {
+          "cohort": "fragment|9-16",
+          "distinct": 3,
+          "evaluated": 3
+        },
+        {
+          "cohort": "paragraph|17-32",
+          "distinct": 627,
+          "evaluated": 64
+        },
+        {
+          "cohort": "paragraph|2-8",
+          "distinct": 32,
+          "evaluated": 32
+        },
+        {
+          "cohort": "paragraph|9-16",
+          "distinct": 304,
+          "evaluated": 64
+        },
+        {
+          "cohort": "phrase|17-32",
+          "distinct": 6740,
+          "evaluated": 64
+        },
+        {
+          "cohort": "phrase|2-8",
+          "distinct": 406,
+          "evaluated": 64
+        },
+        {
+          "cohort": "phrase|9-16",
+          "distinct": 4227,
+          "evaluated": 64
+        },
+        {
+          "cohort": "sentence|17-32",
+          "distinct": 630,
+          "evaluated": 64
+        },
+        {
+          "cohort": "sentence|2-8",
+          "distinct": 41,
+          "evaluated": 41
+        },
+        {
+          "cohort": "sentence|9-16",
+          "distinct": 384,
+          "evaluated": 64
+        },
+        {
+          "cohort": "word|17-32",
+          "distinct": 47,
+          "evaluated": 47
+        },
+        {
+          "cohort": "word|2-8",
+          "distinct": 6813,
+          "evaluated": 64
+        },
+        {
+          "cohort": "word|9-16",
+          "distinct": 1692,
+          "evaluated": 64
+        }
+      ],
+      "stats": {
+        "tested": 734,
+        "complete": 438,
+        "unresolved": 296,
+        "nontrivial": 722,
+        "local_factor_wins": 0,
+        "local_factor_saved": 0
+      },
+      "unique_factor_values": 554,
+      "seconds": 9.117427531999999
+    },
+    {
+      "event": "ARTICLE_REGION",
+      "offset": 800000000,
+      "start": 800004795,
+      "end": 800269397,
+      "input_sha256": "68e6ae7b830e7eb1f8ba4e4fbe5c3c9aa8afc9d79d8834ce626be51558d3c3f3",
+      "raw": 264602,
+      "gzip": 86385,
+      "structural": {
+        "archive_bytes": 249313,
+        "archive_sha256": "c60aa0b3e3d507fb723dea7a37d085ec83242e076d25372daee3f3a815b0f310",
+        "counts": [
+          723,
+          3362,
+          996,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "arithmetic": {
+        "archive_bytes": 248097,
+        "archive_sha256": "c6969735e2c459b42ccfc224f4c44f2b415972d47cd308b2c06fe49297320080",
+        "counts": [
+          947,
+          3428,
+          1212,
+          0,
+          271,
+          0,
+          0,
+          811
+        ],
+        "verified": true
+      },
+      "hybrid": {
+        "archive_bytes": 109522,
+        "archive_sha256": "56837b77634a98267901078ee4920154fb4b3e5e2ef569287aadf212900081cc",
+        "counts": [
+          450,
+          2262,
+          660,
+          59,
+          0,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "hybrid_arithmetic": {
+        "archive_bytes": 108872,
+        "archive_sha256": "103258e2192448a892c37f7b01adfe0510d21a56641af6671a5dad8905ce5679",
+        "counts": [
+          282,
+          2864,
+          845,
+          56,
+          230,
+          0,
+          0,
+          59
+        ],
+        "verified": true
+      },
+      "shallow_hybrid": {
+        "archive_bytes": 109522,
+        "archive_sha256": "56837b77634a98267901078ee4920154fb4b3e5e2ef569287aadf212900081cc",
+        "counts": [
+          450,
+          2262,
+          660,
+          59,
+          0,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "counts": {
+        "article": 95,
+        "paragraph": 3124,
+        "sentence": 3974,
+        "phrase": 14213,
+        "word": 73299,
+        "fragment": 26
+      },
+      "cohorts": [
+        {
+          "cohort": "article|17-32",
+          "distinct": 32,
+          "evaluated": 32
+        },
+        {
+          "cohort": "fragment|17-32",
+          "distinct": 16,
+          "evaluated": 16
+        },
+        {
+          "cohort": "fragment|2-8",
+          "distinct": 5,
+          "evaluated": 5
+        },
+        {
+          "cohort": "fragment|9-16",
+          "distinct": 1,
+          "evaluated": 1
+        },
+        {
+          "cohort": "paragraph|17-32",
+          "distinct": 586,
+          "evaluated": 64
+        },
+        {
+          "cohort": "paragraph|2-8",
+          "distinct": 25,
+          "evaluated": 25
+        },
+        {
+          "cohort": "paragraph|9-16",
+          "distinct": 228,
+          "evaluated": 64
+        },
+        {
+          "cohort": "phrase|17-32",
+          "distinct": 6375,
+          "evaluated": 64
+        },
+        {
+          "cohort": "phrase|2-8",
+          "distinct": 708,
+          "evaluated": 64
+        },
+        {
+          "cohort": "phrase|9-16",
+          "distinct": 3874,
+          "evaluated": 64
+        },
+        {
+          "cohort": "sentence|17-32",
+          "distinct": 650,
+          "evaluated": 64
+        },
+        {
+          "cohort": "sentence|2-8",
+          "distinct": 77,
+          "evaluated": 64
+        },
+        {
+          "cohort": "sentence|9-16",
+          "distinct": 218,
+          "evaluated": 64
+        },
+        {
+          "cohort": "word|17-32",
+          "distinct": 21,
+          "evaluated": 21
+        },
+        {
+          "cohort": "word|2-8",
+          "distinct": 7104,
+          "evaluated": 64
+        },
+        {
+          "cohort": "word|9-16",
+          "distinct": 1577,
+          "evaluated": 64
+        }
+      ],
+      "stats": {
+        "tested": 740,
+        "complete": 452,
+        "unresolved": 288,
+        "nontrivial": 728,
+        "local_factor_wins": 0,
+        "local_factor_saved": 0
+      },
+      "unique_factor_values": 593,
+      "seconds": 9.076555175999998
+    }
+  ],
+  "summary": {
+    "event": "ARTICLE_SUMMARY",
+    "training_start": 1406,
+    "training_end": 303671,
+    "dictionary_entries": 128,
+    "raw": 859738,
+    "gzip": 301343,
+    "structural": 829599,
+    "arithmetic": 827163,
+    "hybrid": 357248,
+    "hybrid_arithmetic": 356082,
+    "shallow_hybrid": 357248,
+    "tested": 2176,
+    "complete": 1306,
+    "unresolved": 870,
+    "nontrivial": 2147,
+    "local_factor_wins": 0,
+    "local_factor_saved": 0,
+    "factor_nodes": 0,
+    "radix_nodes": 3460,
+    "hybrid_factor_nodes": 0,
+    "hybrid_radix_nodes": 557
+  },
+  "factor_shards": [
+    {
+      "region": 100000000,
+      "path": "E0099-factors-100000000.json",
+      "rows": 702
+    },
+    {
+      "region": 400000000,
+      "path": "E0099-factors-400000000.json",
+      "rows": 734
+    },
+    {
+      "region": 800000000,
+      "path": "E0099-factors-800000000.json",
+      "rows": 740
+    }
+  ],
+  "wall_seconds": 29.56,
+  "peak_rss_kib": 1287064,
+  "limitations": [
+    "sampled distinct values per cohort, possible repeats across cohorts",
+    "large probable primes not certified",
+    "same-code archive roundtrip",
+    "no selected explicit factor expression",
+    "not full corpus"
+  ]
+}
