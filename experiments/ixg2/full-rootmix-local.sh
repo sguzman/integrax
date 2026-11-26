@@ -30,7 +30,7 @@ mkdir -p "$cache"
 if test -f "$host/data/enwik9"; then
  input=$(realpath "$host/data/enwik9")
 else
- INTEGRAX_DATA_DIR="$cache" sh datasets/acquire.sh enwik9
+ INTEGRAX_DATA_DIR="$cache" INTEGRAX_DOWNLOAD_ATTEMPTS=0 sh datasets/acquire.sh enwik9
  input=$(realpath "$cache/enwik9")
 fi
 case "$input" in /nix/store/*) echo 'Corpus must be outside the mounted Nix store' >&2; exit 1;; esac

@@ -29,6 +29,8 @@ fi
 trap 'rm -f -- "$raw"' EXIT
 trap 'exit 130' INT
 trap 'exit 143' HUP TERM
+attempt_limit="${INTEGRAX_DOWNLOAD_ATTEMPTS:-5}"
+case "$attempt_limit" in ""|*[!0-9]*) echo "Invalid download attempt limit" >&2; exit 2;; esac
 attempt=1
 while :; do
   # A transfer can finish writing all bytes even if the HTTP response ends
@@ -39,7 +41,7 @@ while :; do
   fi
   offset=0
   if [ -f "$zip" ]; then offset=$(wc -c < "$zip"); fi
-  printf 'Download attempt %s/5: %s; resuming at byte %s\n' "$attempt" "$name" "$offset"
+  printf 'Download attempt %s (limit %s; 0 means unlimited): %s; resuming at byte %s\n' "$attempt" "$attempt_limit" "$name" "$offset"
   # HTTP/1.1 avoids the observed invalid HTTP/2 frame. A fresh curl process
   # derives its Range from the actual current file size on every retry.
   # No wall-clock transfer timeout: slow progress is not a failure.
@@ -58,12 +60,12 @@ while :; do
       exit "$rc"
     fi
   fi
-  if [ "$attempt" -ge 5 ]; then
+  if [ "$attempt_limit" -ne 0 ] && [ "$attempt" -ge "$attempt_limit" ]; then
     echo 'Retry budget exhausted. Rerun the same command to resume; partial retained.' >&2
     exit 1
   fi
   attempt=$((attempt + 1))
-  sleep 5
+  sleep 15
 done
 unzip -p "$zip" "$name" > "$raw"
 verify "$raw"
