@@ -1,0 +1,243 @@
+{
+  "experiment": "E0122",
+  "revision": "4ae3e6f73e27806205f959e449b507bd28bbe761",
+  "run_id": 45867979440,
+  "job_id": 140075669730,
+  "wall_seconds": 33.46,
+  "peak_rss_kib": 1319908,
+  "summary": {
+    "event": "COFACTOR_SUMMARY",
+    "loaded": 46547,
+    "partial": 7518,
+    "known_factors": 13633,
+    "improved": 2,
+    "completed": 0,
+    "parent_improved": 2,
+    "bits_removed": 32,
+    "by_kind": {
+      "lexical": {
+        "objects": 179,
+        "improved": 0,
+        "before_bits": 27460,
+        "after_bits": 27460,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "title": {
+        "objects": 22,
+        "improved": 0,
+        "before_bits": 4782,
+        "after_bits": 4782,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "id": {
+        "objects": 43,
+        "improved": 0,
+        "before_bits": 4464,
+        "after_bits": 4464,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "timestamp": {
+        "objects": 24,
+        "improved": 0,
+        "before_bits": 7863,
+        "after_bits": 7863,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "username": {
+        "objects": 17,
+        "improved": 0,
+        "before_bits": 3739,
+        "after_bits": 3739,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "contributor": {
+        "objects": 24,
+        "improved": 0,
+        "before_bits": 16662,
+        "after_bits": 16662,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "comment": {
+        "objects": 21,
+        "improved": 0,
+        "before_bits": 13338,
+        "after_bits": 13338,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "phrase": {
+        "objects": 3731,
+        "improved": 0,
+        "before_bits": 512930,
+        "after_bits": 512930,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "sentence": {
+        "objects": 1414,
+        "improved": 2,
+        "before_bits": 855754,
+        "after_bits": 855722,
+        "bits_removed": 32,
+        "unique_improved_values": 2
+      },
+      "paragraph": {
+        "objects": 1132,
+        "improved": 0,
+        "before_bits": 867547,
+        "after_bits": 867547,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "article": {
+        "objects": 24,
+        "improved": 0,
+        "before_bits": 917912,
+        "after_bits": 917912,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "text": {
+        "objects": 24,
+        "improved": 0,
+        "before_bits": 924314,
+        "after_bits": 924314,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "revision": {
+        "objects": 24,
+        "improved": 0,
+        "before_bits": 979581,
+        "after_bits": 979581,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "page": {
+        "objects": 24,
+        "improved": 0,
+        "before_bits": 994011,
+        "after_bits": 994011,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "page-root": {
+        "objects": 24,
+        "improved": 0,
+        "before_bits": 994011,
+        "after_bits": 994011,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "word": {
+        "objects": 781,
+        "improved": 0,
+        "before_bits": 54424,
+        "after_bits": 54424,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "ip": {
+        "objects": 6,
+        "improved": 0,
+        "before_bits": 881,
+        "after_bits": 881,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "fragment": {
+        "objects": 4,
+        "improved": 0,
+        "before_bits": 840,
+        "after_bits": 840,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      }
+    },
+    "by_width": {
+      "9-32": {
+        "objects": 5205,
+        "improved": 0,
+        "before_bits": 675574,
+        "after_bits": 675574,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "33-128": {
+        "objects": 1480,
+        "improved": 2,
+        "before_bits": 756754,
+        "after_bits": 756722,
+        "bits_removed": 32,
+        "unique_improved_values": 2
+      },
+      "129-512": {
+        "objects": 421,
+        "improved": 0,
+        "before_bits": 730656,
+        "after_bits": 730656,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "513-2048": {
+        "objects": 64,
+        "improved": 0,
+        "before_bits": 528468,
+        "after_bits": 528468,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "1-8": {
+        "objects": 260,
+        "improved": 0,
+        "before_bits": 14367,
+        "after_bits": 14367,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "2049+": {
+        "objects": 88,
+        "improved": 0,
+        "before_bits": 4474694,
+        "after_bits": 4474694,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      }
+    },
+    "by_cohort": {
+      "historical": {
+        "objects": 5242,
+        "improved": 1,
+        "before_bits": 5192284,
+        "after_bits": 5192266,
+        "bits_removed": 18,
+        "unique_improved_values": 1
+      },
+      "E0119": {
+        "objects": 2276,
+        "improved": 1,
+        "before_bits": 1988229,
+        "after_bits": 1988215,
+        "bits_removed": 14,
+        "unique_improved_values": 1
+      }
+    },
+    "unique_improved_values": 2
+  },
+  "product_recheck": {
+    "exact_products": true,
+    "residual_partitions": true,
+    "bit_counts": true,
+    "prior_witness_replay": true,
+    "unique_ids": true,
+    "source_inventory_replay": "passed in hosted CI; E0122 post-publication replay pending"
+  },
+  "refinement_path": "inventory/refinements/E0122.json",
+  "corpus_cache_restored": true
+}

@@ -94,3 +94,6 @@ E0120 passed: 46,547 indexed objects, 7,521 partial, 13,631 factors; 40 exact re
 
 
 E0121 passed: 7,518 partial objects, 5,789 distinct residuals, 168,166 GCD calls, 46,298 descendant checks, two proper global-only GCD hits, two new primes, no descendant hits. One text and one sentence improved, 32 overlapping residual bits removed; 349.07 s, peak RSS 1,335,984 KiB. Independently verified exact products, residual partitions, proper GCD witnesses and primality by trial division. Published overlays and index delta (13,633 factors total). E0120 replay passed; E0121 overlay/index replay pending. No compression claim. Next E0122 frozen inventory closure to propagate new primes.
+
+
+E0122 passed: 46,547 objects, 13,633 known factors, 7,518 partial; two exact parent refinements, both E0121 witness sentences, 32 overlapping residual bits removed. Both products, residual partitions, bit counts and E0121 witness linkage independently checked. E0121 index union and overlay replay passed; E0122 replay pending. 33.46 s, 1,319,908 KiB peak RSS. No compression claim. Next E0123: expand to fresh larger held-out pages with frozen inventory controls including E0121.

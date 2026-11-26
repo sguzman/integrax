@@ -1,0 +1,55 @@
+{
+  "batch": "E0122",
+  "rows": [
+    {
+      "event": "COFACTOR_REFINEMENT",
+      "id": "enwik9:400050717:1966",
+      "kind": "sentence",
+      "parent": true,
+      "old_cofactor": "a070071806d4df6177ed6169c828b34417e92f248958fc11788f852acbce4c80f007205d36d2aaf454cc7a8936d2b34369aab7310fae6d86b0a84e67955c69",
+      "after_inventory": "35b774f2ab870aeddb1cb8a2d85053fb0e60540b468a7ab6ace2cbad65223332e948564e0f4429c7623447551e40cc686d6201a0317cce0f63a1d6414b",
+      "factors": [
+        {
+          "p": "2fc9b",
+          "e": 1,
+          "quality": "prime64",
+          "source": "inventory-gcd",
+          "witness": "enwik9:800041834:483"
+        }
+      ],
+      "remaining": "35b774f2ab870aeddb1cb8a2d85053fb0e60540b468a7ab6ace2cbad65223332e948564e0f4429c7623447551e40cc686d6201a0317cce0f63a1d6414b",
+      "unresolved_parts": [
+        "35b774f2ab870aeddb1cb8a2d85053fb0e60540b468a7ab6ace2cbad65223332e948564e0f4429c7623447551e40cc686d6201a0317cce0f63a1d6414b"
+      ],
+      "shared_divisor": null,
+      "old_bits": 504,
+      "remaining_bits": 486,
+      "rho_steps": 0
+    },
+    {
+      "event": "COFACTOR_REFINEMENT",
+      "id": "enwik9:101301255:2877",
+      "kind": "sentence",
+      "parent": true,
+      "old_cofactor": "664bba6d3807c480e0e84657ce24dcd322ce526ae674eb618f5f11526ae41925531ba79fb3a2bfe411fb7922bcd",
+      "after_inventory": "13985d76dd839ceb594847cd7cfb0d9a49729f7a15a9484d042754555e92268de24e4dacc8d290d161cc030b",
+      "factors": [
+        {
+          "p": "5387",
+          "e": 1,
+          "quality": "prime64",
+          "source": "inventory-gcd",
+          "witness": "enwik9:400015975:47"
+        }
+      ],
+      "remaining": "13985d76dd839ceb594847cd7cfb0d9a49729f7a15a9484d042754555e92268de24e4dacc8d290d161cc030b",
+      "unresolved_parts": [
+        "13985d76dd839ceb594847cd7cfb0d9a49729f7a15a9484d042754555e92268de24e4dacc8d290d161cc030b"
+      ],
+      "shared_divisor": null,
+      "old_bits": 363,
+      "remaining_bits": 349,
+      "rho_steps": 0
+    }
+  ]
+}
