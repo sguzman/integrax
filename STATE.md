@@ -12,7 +12,7 @@ Updated 2026-11-26 UTC. **Read [AGENTS.md](AGENTS.md) and this file first; no ch
 - [Frontier](benchmarks/FRONTIER.md): F0012 blockwise 217,045,597 B; F0013 whole-stream 232,493,451 B; archive-only, contest total unestablished. No compression claim from overlapping object factors.
 
 ## Resume here
-- E0120 accepted and all 40 overlays published. Next E0121: replay post-E0120 inventory and repeat strict smaller global residual GCD using the unchanged E0118 algorithm. Compare with E0118; exact products and witnesses required. No E0121 run launched yet. Expected partial count 7518. Use verified hosted cache.
+- E0120 accepted and all 40 overlays published. Next E0121: replay post-E0120 inventory and repeat strict smaller global residual GCD using the unchanged E0118 algorithm. Compare with E0118; exact products and witnesses required. E0121 workflow committed at [d45cdfb](https://github.com/sguzman/integrax/commit/d45cdfb662368ca522144d03c1286d63802eaa6f). [Hosted run 45865938543](https://github.com/sguzman/integrax/actions/runs/45865938543) queued at checkpoint. Check existing run before any further launch. Expected partial count 7518. Use verified hosted cache.
 - Check reference CI and verify overlay replay; do not duplicate running work.
 
 ## On-demand context
