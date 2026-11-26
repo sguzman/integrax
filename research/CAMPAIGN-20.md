@@ -91,3 +91,6 @@ Next E0120: frozen inventory closure on enlarged historical and E0119 cohorts.
 
 
 E0120 passed: 46,547 indexed objects, 7,521 partial, 13,631 factors; 40 exact refinements (29 distinct values), 39 parents, 3 completed, 691 overlapping residual bits removed. Historical 28 improvements, E0119 12. One article (16 bits), zero pages. 32.84 s, 1,340,200 KiB peak RSS. Exact cofactor products, residuals, bit counts, kind and cohort totals independently rechecked. Hosted inventory replay passed; post-publication overlay replay pending. No compression claim. Next E0121: repeat strict smaller global residual GCD on post-E0120 inventory.
+
+
+E0121 passed: 7,518 partial objects, 5,789 distinct residuals, 168,166 GCD calls, 46,298 descendant checks, two proper global-only GCD hits, two new primes, no descendant hits. One text and one sentence improved, 32 overlapping residual bits removed; 349.07 s, peak RSS 1,335,984 KiB. Independently verified exact products, residual partitions, proper GCD witnesses and primality by trial division. Published overlays and index delta (13,633 factors total). E0120 replay passed; E0121 overlay/index replay pending. No compression claim. Next E0122 frozen inventory closure to propagate new primes.

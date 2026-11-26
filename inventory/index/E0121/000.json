@@ -1,0 +1,27 @@
+{
+  "batch": "E0121",
+  "factors": [
+    {
+      "p": "5387",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:400015975:47",
+          "e": 1,
+          "source": "E0121"
+        }
+      ]
+    },
+    {
+      "p": "2fc9b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800041834:483",
+          "e": 1,
+          "source": "E0121"
+        }
+      ]
+    }
+  ]
+}
