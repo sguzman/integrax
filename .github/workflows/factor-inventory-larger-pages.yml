@@ -1,4 +1,4 @@
-name: E0112 cumulative inventory larger pages
+name: E0116 cumulative inventory larger pages
 on:
   push:
     branches: [main]
@@ -21,4 +21,4 @@ jobs:
           node --version
           /usr/bin/time -v timeout --kill-after=10s 900s node --max-old-space-size=3072 experiments/xml/factor-inventory-larger-pages.mjs data/enwik9
           test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
-          echo E0112_COMPLETE
+          echo E0116_COMPLETE
