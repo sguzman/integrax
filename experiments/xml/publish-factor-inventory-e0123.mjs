@@ -64,7 +64,6 @@ for(const [pageNo,ex] of expected.entries()){
  assert(page.rows.every(r=>r.snapshot===snapshotId));
  snapshotRows.push({event:'FACTOR_SNAPSHOT',id:snapshotId,values});
  const stats=Object.fromEntries(metricNames.map(k=>[k,0]));
- const levelStats=new Map();
  for(const row of page.rows){
   rowsSeen++;
   const parent=row.children.length>0, sources=row.factors.flatMap(f=>f.sources);
@@ -82,9 +81,9 @@ for(const [pageNo,ex] of expected.entries()){
   if(parent){if(child)add('parent_child_hits');if(global)add('parent_global_hits');
    add(row.reuse_bits<row.cold_bits?'parent_better_than_cold':row.reuse_bits>row.cold_bits?'parent_worse_than_cold':'parent_equal_cold');}
   add('child_bits_removed',row.base_bits-row.child_bits);add('global_bits_removed',row.child_bits-row.reuse_bits);
-  const l=levelStats.get(row.kind)??{nodes:0,parents:0,baseline_bits:0,cofactor_bits:0,full_bits_removed:0,frozen:Object.fromEntries(Object.keys(frozen).map(s=>[s,0]))};
+  const l=levels.get(row.kind)??{nodes:0,parents:0,baseline_bits:0,cofactor_bits:0,full_bits_removed:0,frozen:Object.fromEntries(Object.keys(frozen).map(s=>[s,0]))};
   l.nodes++;l.parents+=Number(parent);l.baseline_bits+=row.base_bits;l.cofactor_bits+=row.cofactor_bits;l.full_bits_removed+=row.reuse_bits-row.full_bits;
-  for(const x of row.fixed_inventory)l.frozen[x.stage]+=x.bits;levelStats.set(row.kind,l);
+  for(const x of row.fixed_inventory)l.frozen[x.stage]+=x.bits;levels.set(row.kind,l);
   for(const f of row.factors){
    const p=fromHex(f.p),quality=f.quality;assert(quality==='prime64'||quality==='probable-prime');
    const known=prior.get(p);if(known)assert.equal(known,quality);else prior.set(p,quality);
@@ -114,7 +113,6 @@ const record={id,campaign:'C20',status:'verified',revision:'1db5c0a975079263ebe5
   seeded_sources:['E0095','E0096','E0099','E0103','E0104','E0105','E0106','E0107','E0108','E0109','E0110','E0111','E0112','E0113','E0114','E0115','E0116','E0117','E0119','E0120','E0121','E0122']},
  wall_seconds:371.36,peak_rss_kib:1328748,product_recheck:'Hosted E0123 replay verified all 16,276 exact factor/cofactor products, 3,089 parent products, object bit widths, eleven frozen inventory controls, index union, and corpus SHA-256. Independent page checks: 5,178 rows / 899 parents; 4,927 / 928; 6,171 / 1,262. All 164 persisted object shards re-read and their snapshot IDs and counts checked during publication.',
  limitations:'Overlapping object records; inventory is research side information, not a compressed representation. Probable-prime labels retained.'};
-for(const [kind,l]of levelStats)levels.set(kind,l);
 record.levels=Object.fromEntries([...levels].sort(([a],[b])=>a.localeCompare(b)));
 manifest.batches.push({id,record:recordPath,shards:batchShards,snapshots:snapshotPath});
 manifest.indexed_nodes+=rowsSeen;manifest.index.batch=id;manifest.index.distinct_factors=prior.size;manifest.index.shards.push(...indexFiles);
