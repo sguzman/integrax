@@ -52,7 +52,7 @@ if test -z "$root"
 end
 cd "$root"; or exit 1
 set -l job (jq -er '.id | select(test("^E[0-9]{4}$"))' "$manifest"); or fail 'Invalid job ID.'
-set -l workflow (jq -er '.workflow | select(test("^\\.github/workflows/local-[a-z0-9-]+\\.yml$"))' "$manifest"); or fail 'Invalid local workflow path.'
+set -l workflow (jq -er '.workflow | select(test("^[.]github/workflows/local-[a-z0-9-]+[.]yml$"))' "$manifest"); or fail 'Invalid local workflow path.'
 set -l expected (jq -er '.expected_count | select(type=="number" and floor==. and .>=1 and .<=100)' "$manifest"); or fail 'Invalid expected result count.'
 set -l mode (jq -er '.mode | select(type=="number" and floor==. and .>=0 and .<=255)' "$manifest"); or fail 'Invalid result mode.'
 set -l check_name "Integrax $job (local wrkflw/Nix)"
