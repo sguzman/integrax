@@ -1,0 +1,24 @@
+name: E0096 independent XML census and larger factor probe
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/xml/xml-census-cross.mjs'
+      - '.github/workflows/xml-census-cross.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: sh datasets/acquire.sh enwik9
+      - name: Independent full-corpus census and bounded factors
+        run: |
+          set -euo pipefail
+          node --version
+          /usr/bin/time -v timeout --kill-after=10s 600s node --max-old-space-size=3072 experiments/xml/xml-census-cross.mjs data/enwik9 experiments/records/E0095.json
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          echo E0096_COMPLETE

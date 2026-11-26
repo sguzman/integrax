@@ -14,3 +14,5 @@ For a byte span s of length l, I(s) is its big-endian integer with length retain
 - M6: full corpus only if measured evidence justifies; strict isolated decode and exact cmp, archive and contest accounting separate.
 
 Prior art: Liefke and Suciu, XMill: an Efficient Compressor for XML Data (SIGMOD 2000), https://www.en.pms.ifi.lmu.de/publications/projektarbeiten/Felix.Weigel/xmlindex/material/liefke00xmill.pdf (tag-driven content grouping and specialized codecs). XML-aware compression and arithmetic concatenation are established; no claim of novelty for their combination without deeper literature review.
+
+M1 E0095 passed complete lexical replay, 2,686,411 elements, 243,425 pages, 907,627,913 bytes in complete article bodies. 142/144 fully factored, zero payload wins. [Evidence](../experiments/records/E0095.json). M2 E0096 independent census and 9–32-byte partial/complete factor probe authored; CI pending. Keep unresolved cofactors and distinguish probable primes from proved primes.

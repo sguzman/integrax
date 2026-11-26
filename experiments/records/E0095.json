@@ -1,0 +1,3152 @@
+{
+  "id": "E0095",
+  "campaign": "C20",
+  "status": "byte-replay-verified",
+  "revision": "77f42094e09672fb77fcbe7b039d27b169523d26",
+  "run": 45759935317,
+  "job": 139707302849,
+  "unit_tests": 4,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "profile": {
+    "bytes": 1000000000,
+    "tokens": 10548002,
+    "markup_bytes": 47797368,
+    "text_bytes": 952202632,
+    "opaque_bytes": 0,
+    "partial_markup_bytes": 0,
+    "max_depth": 5,
+    "roots": 1,
+    "complete_elements": 2686411,
+    "open_tail": [
+      "/mediawiki",
+      "/mediawiki/page",
+      "/mediawiki/page/revision",
+      "/mediawiki/page/revision/text"
+    ],
+    "scan_seconds": 2.458511
+  },
+  "spans": [
+    {
+      "path": "/mediawiki/page",
+      "kind": "element",
+      "count": 243425,
+      "bytes": 999258576,
+      "max": 900860,
+      "buckets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        95743,
+        85500,
+        62182
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "element",
+      "count": 243426,
+      "bytes": 3564925,
+      "max": 15,
+      "buckets": [
+        0,
+        0,
+        243426,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "count": 243426,
+      "bytes": 1374091,
+      "max": 6,
+      "buckets": [
+        0,
+        243426,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 243426,
+      "samples": 16
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "element",
+      "count": 1013,
+      "bytes": 41507,
+      "max": 66,
+      "buckets": [
+        0,
+        0,
+        0,
+        0,
+        985,
+        28,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "count": 1013,
+      "bytes": 12130,
+      "max": 37,
+      "buckets": [
+        0,
+        34,
+        901,
+        50,
+        28,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 34,
+      "samples": 16
+    },
+    {
+      "path": "/mediawiki/page/revision",
+      "kind": "element",
+      "count": 243425,
+      "bytes": 980094970,
+      "max": 900717,
+      "buckets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1756,
+        96096,
+        84565,
+        61008
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "element",
+      "count": 190326,
+      "bytes": 11380789,
+      "max": 449,
+      "buckets": [
+        0,
+        0,
+        0,
+        40434,
+        97643,
+        52037,
+        212,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "count": 190326,
+      "bytes": 7764595,
+      "max": 430,
+      "buckets": [
+        0,
+        25733,
+        25215,
+        62060,
+        43588,
+        33684,
+        46,
+        0,
+        0
+      ],
+      "eligible": 25733,
+      "samples": 16
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor",
+      "kind": "element",
+      "count": 243426,
+      "bytes": 22146227,
+      "max": 146,
+      "buckets": [
+        0,
+        0,
+        0,
+        0,
+        10827,
+        232599,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "element",
+      "count": 205398,
+      "bytes": 2896721,
+      "max": 16,
+      "buckets": [
+        0,
+        0,
+        205398,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "count": 205398,
+      "bytes": 1048139,
+      "max": 7,
+      "buckets": [
+        0,
+        205398,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 205398,
+      "samples": 16
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "count": 38028,
+      "bytes": 857276,
+      "max": 49,
+      "buckets": [
+        0,
+        0,
+        4,
+        37581,
+        443,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "count": 38028,
+      "bytes": 515024,
+      "max": 40,
+      "buckets": [
+        0,
+        7,
+        35679,
+        1899,
+        443,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 7,
+      "samples": 7
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "element",
+      "count": 205398,
+      "bytes": 6076330,
+      "max": 79,
+      "buckets": [
+        0,
+        0,
+        0,
+        168884,
+        36513,
+        1,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "count": 205398,
+      "bytes": 1762972,
+      "max": 58,
+      "buckets": [
+        0,
+        117212,
+        84207,
+        3956,
+        23,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 117212,
+      "samples": 16
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "element",
+      "count": 243426,
+      "bytes": 4138242,
+      "max": 17,
+      "buckets": [
+        0,
+        0,
+        0,
+        243426,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "count": 243426,
+      "bytes": 1947408,
+      "max": 8,
+      "buckets": [
+        0,
+        243426,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 243426,
+      "samples": 16
+    },
+    {
+      "path": "/mediawiki/page/revision/minor",
+      "kind": "element",
+      "count": 98817,
+      "bytes": 889353,
+      "max": 9,
+      "buckets": [
+        0,
+        0,
+        98817,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/minor",
+      "kind": "leaf-body",
+      "count": 98817,
+      "bytes": 0,
+      "max": 0,
+      "buckets": [
+        98817,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "element",
+      "count": 243425,
+      "bytes": 915904328,
+      "max": 900447,
+      "buckets": [
+        0,
+        0,
+        0,
+        7,
+        38019,
+        45285,
+        22966,
+        79858,
+        57290
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "count": 243425,
+      "bytes": 907627913,
+      "max": 900413,
+      "buckets": [
+        7,
+        137,
+        324,
+        43655,
+        29550,
+        10807,
+        22576,
+        79548,
+        56821
+      ],
+      "eligible": 137,
+      "samples": 16
+    },
+    {
+      "path": "/mediawiki/page/revision/timestamp",
+      "kind": "element",
+      "count": 243426,
+      "bytes": 10467318,
+      "max": 43,
+      "buckets": [
+        0,
+        0,
+        0,
+        0,
+        243426,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/timestamp",
+      "kind": "leaf-body",
+      "count": 243426,
+      "bytes": 4868520,
+      "max": 20,
+      "buckets": [
+        0,
+        0,
+        0,
+        243426,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "count": 243426,
+      "bytes": 8005989,
+      "max": 203,
+      "buckets": [
+        0,
+        0,
+        45,
+        136835,
+        102486,
+        4060,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "count": 243426,
+      "bytes": 4354599,
+      "max": 188,
+      "buckets": [
+        0,
+        38325,
+        87237,
+        98804,
+        18738,
+        322,
+        0,
+        0,
+        0
+      ],
+      "eligible": 38325,
+      "samples": 16
+    },
+    {
+      "path": "/mediawiki/siteinfo",
+      "kind": "element",
+      "count": 1,
+      "bytes": 1152,
+      "max": 1152,
+      "buckets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/base",
+      "kind": "element",
+      "count": 1,
+      "bytes": 51,
+      "max": 51,
+      "buckets": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/base",
+      "kind": "leaf-body",
+      "count": 1,
+      "bytes": 38,
+      "max": 38,
+      "buckets": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/case",
+      "kind": "element",
+      "count": 1,
+      "bytes": 25,
+      "max": 25,
+      "buckets": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/case",
+      "kind": "leaf-body",
+      "count": 1,
+      "bytes": 12,
+      "max": 12,
+      "buckets": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/generator",
+      "kind": "element",
+      "count": 1,
+      "bytes": 41,
+      "max": 41,
+      "buckets": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/generator",
+      "kind": "leaf-body",
+      "count": 1,
+      "bytes": 18,
+      "max": 18,
+      "buckets": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces",
+      "kind": "element",
+      "count": 1,
+      "bytes": 954,
+      "max": 954,
+      "buckets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "element",
+      "count": 20,
+      "bytes": 784,
+      "max": 45,
+      "buckets": [
+        0,
+        0,
+        0,
+        1,
+        19,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "count": 20,
+      "bytes": 162,
+      "max": 14,
+      "buckets": [
+        1,
+        9,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 9,
+      "samples": 9
+    },
+    {
+      "path": "/mediawiki/siteinfo/sitename",
+      "kind": "element",
+      "count": 1,
+      "bytes": 30,
+      "max": 30,
+      "buckets": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/sitename",
+      "kind": "leaf-body",
+      "count": 1,
+      "bytes": 9,
+      "max": 9,
+      "buckets": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eligible": 0,
+      "samples": 0
+    }
+  ],
+  "factor_summary": {
+    "tested": 144,
+    "complete": 142,
+    "trivial": 0,
+    "censored": 2,
+    "wins": 0,
+    "local_savings_bytes": 0,
+    "seconds": 0.015611
+  },
+  "factors": [
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 906871591,
+      "width": 6,
+      "n": "55212680622900",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "3",
+        "5",
+        "5",
+        "19",
+        "41",
+        "3271",
+        "72227"
+      ],
+      "payload_bytes": 18,
+      "steps": 27
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 118314766,
+      "width": 5,
+      "n": "211396343859",
+      "status": "complete",
+      "factors": [
+        "3",
+        "3",
+        "3",
+        "19",
+        "14891",
+        "27673"
+      ],
+      "payload_bytes": 12,
+      "steps": 101
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 355572489,
+      "width": 5,
+      "n": "232821043766",
+      "status": "complete",
+      "factors": [
+        "2",
+        "29",
+        "457",
+        "1777",
+        "4943"
+      ],
+      "payload_bytes": 14,
+      "steps": 46
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 394064990,
+      "width": 5,
+      "n": "237166212919",
+      "status": "complete",
+      "factors": [
+        "79",
+        "683",
+        "937",
+        "4691"
+      ],
+      "payload_bytes": 12,
+      "steps": 48
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 954950381,
+      "width": 6,
+      "n": "56282110309938",
+      "status": "complete",
+      "factors": [
+        "2",
+        "3",
+        "19",
+        "107",
+        "4614044131"
+      ],
+      "payload_bytes": 15,
+      "steps": 6
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 794350482,
+      "width": 6,
+      "n": "55191138285113",
+      "status": "complete",
+      "factors": [
+        "131",
+        "1657",
+        "4993",
+        "50923"
+      ],
+      "payload_bytes": 14,
+      "steps": 146
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 954122917,
+      "width": 6,
+      "n": "56282094055476",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "3",
+        "3",
+        "17",
+        "19",
+        "19",
+        "254748493"
+      ],
+      "payload_bytes": 14,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 624095147,
+      "width": 6,
+      "n": "54104545572406",
+      "status": "complete",
+      "factors": [
+        "2",
+        "7",
+        "3864610398029"
+      ],
+      "payload_bytes": 12,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 421356553,
+      "width": 5,
+      "n": "241477956917",
+      "status": "complete",
+      "factors": [
+        "17",
+        "14204585701"
+      ],
+      "payload_bytes": 9,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 607571877,
+      "width": 6,
+      "n": "54100334360627",
+      "status": "complete",
+      "factors": [
+        "463",
+        "47339",
+        "2468311"
+      ],
+      "payload_bytes": 13,
+      "steps": 181
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 844628605,
+      "width": 6,
+      "n": "55199778551858",
+      "status": "complete",
+      "factors": [
+        "2",
+        "223",
+        "64513",
+        "1918471"
+      ],
+      "payload_bytes": 14,
+      "steps": 442
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 943680985,
+      "width": 6,
+      "n": "55221320758064",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "19",
+        "29",
+        "41",
+        "152774669"
+      ],
+      "payload_bytes": 14,
+      "steps": 7
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 309792340,
+      "width": 5,
+      "n": "228508841271",
+      "status": "complete",
+      "factors": [
+        "3",
+        "2777",
+        "27428741"
+      ],
+      "payload_bytes": 11,
+      "steps": 18
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 922948782,
+      "width": 6,
+      "n": "55217009211440",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "5",
+        "53",
+        "109",
+        "257",
+        "397",
+        "1171"
+      ],
+      "payload_bytes": 18,
+      "steps": 71
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 704245335,
+      "width": 6,
+      "n": "54117413433398",
+      "status": "complete",
+      "factors": [
+        "2",
+        "7",
+        "14387",
+        "268682111"
+      ],
+      "payload_bytes": 14,
+      "steps": 85
+    },
+    {
+      "path": "/mediawiki/page/id",
+      "kind": "leaf-body",
+      "offset": 59850828,
+      "width": 4,
+      "n": "959788857",
+      "status": "complete",
+      "factors": [
+        "3",
+        "19",
+        "3301",
+        "5101"
+      ],
+      "payload_bytes": 11,
+      "steps": 22
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 53327457,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 915902220,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 220284186,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 758196140,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 837791180,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 453313279,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 453497397,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 586723650,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 807053821,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 625287327,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 726724865,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 670569802,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 805251623,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 671789824,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 800269981,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 922340517,
+      "width": 5,
+      "n": "495958847344",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "17401",
+        "1781359"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 866067293,
+      "width": 5,
+      "n": "491327351154",
+      "status": "complete",
+      "factors": [
+        "2",
+        "3",
+        "3",
+        "3",
+        "631",
+        "14419421"
+      ],
+      "payload_bytes": 13,
+      "steps": 26
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 690982357,
+      "width": 3,
+      "n": "6513012",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "3",
+        "3",
+        "11",
+        "16447"
+      ],
+      "payload_bytes": 11,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 981895748,
+      "width": 7,
+      "n": "32497669832336740",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "5",
+        "319061",
+        "5092704817"
+      ],
+      "payload_bytes": 15,
+      "steps": 678
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 211236417,
+      "width": 6,
+      "n": "90595731534452",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "23",
+        "984736212331"
+      ],
+      "payload_bytes": 12,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 964569383,
+      "width": 8,
+      "n": "7161132861371675257",
+      "status": "complete",
+      "factors": [
+        "223",
+        "6113",
+        "58699",
+        "89493557"
+      ],
+      "payload_bytes": 16,
+      "steps": 257
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 129608270,
+      "width": 2,
+      "n": "29302",
+      "status": "complete",
+      "factors": [
+        "2",
+        "7",
+        "7",
+        "13",
+        "23"
+      ],
+      "payload_bytes": 9,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 569025199,
+      "width": 4,
+      "n": "728327279",
+      "status": "complete",
+      "factors": [
+        "107",
+        "6806797"
+      ],
+      "payload_bytes": 8,
+      "steps": 6
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 4470792,
+      "width": 2,
+      "n": "29302",
+      "status": "complete",
+      "factors": [
+        "2",
+        "7",
+        "7",
+        "13",
+        "23"
+      ],
+      "payload_bytes": 9,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 228228730,
+      "width": 5,
+      "n": "185226913082",
+      "status": "complete",
+      "factors": [
+        "2",
+        "37",
+        "2503066393"
+      ],
+      "payload_bytes": 11,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 778626933,
+      "width": 3,
+      "n": "6513012",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "3",
+        "3",
+        "11",
+        "16447"
+      ],
+      "payload_bytes": 11,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 484912135,
+      "width": 4,
+      "n": "728327279",
+      "status": "complete",
+      "factors": [
+        "107",
+        "6806797"
+      ],
+      "payload_bytes": 8,
+      "steps": 6
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 969840983,
+      "width": 2,
+      "n": "29302",
+      "status": "complete",
+      "factors": [
+        "2",
+        "7",
+        "7",
+        "13",
+        "23"
+      ],
+      "payload_bytes": 9,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 489952508,
+      "width": 8,
+      "n": "8243105097025151860",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "5",
+        "13",
+        "17",
+        "47",
+        "1698967",
+        "23355317"
+      ],
+      "payload_bytes": 20,
+      "steps": 2051
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 458099726,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 86490138,
+      "width": 1,
+      "n": "42",
+      "status": "complete",
+      "factors": [
+        "2",
+        "3",
+        "7"
+      ],
+      "payload_bytes": 7,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 465396297,
+      "width": 3,
+      "n": "2844265",
+      "status": "complete",
+      "factors": [
+        "5",
+        "568853"
+      ],
+      "payload_bytes": 7,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 763529817,
+      "width": 6,
+      "n": "58502574780976",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "11887",
+        "307597453"
+      ],
+      "payload_bytes": 12,
+      "steps": 146
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 157346750,
+      "width": 6,
+      "n": "59602103449650",
+      "status": "complete",
+      "factors": [
+        "2",
+        "3",
+        "3",
+        "3",
+        "3",
+        "5",
+        "5",
+        "14716568753"
+      ],
+      "payload_bytes": 13,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 407569024,
+      "width": 2,
+      "n": "14640",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "3",
+        "5",
+        "61"
+      ],
+      "payload_bytes": 9,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 445763242,
+      "width": 4,
+      "n": "942880049",
+      "status": "complete",
+      "factors": [
+        "43",
+        "21927443"
+      ],
+      "payload_bytes": 8,
+      "steps": 5
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 860286842,
+      "width": 5,
+      "n": "241377423416",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "30172177927"
+      ],
+      "payload_bytes": 9,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 894703267,
+      "width": 5,
+      "n": "215674794546",
+      "status": "complete",
+      "factors": [
+        "2",
+        "3",
+        "191",
+        "349",
+        "449",
+        "1201"
+      ],
+      "payload_bytes": 17,
+      "steps": 62
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 641308456,
+      "width": 6,
+      "n": "59589336051763",
+      "status": "complete",
+      "factors": [
+        "7",
+        "103",
+        "6421",
+        "12871543"
+      ],
+      "payload_bytes": 13,
+      "steps": 79
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 722694260,
+      "width": 5,
+      "n": "232804332851",
+      "status": "complete",
+      "factors": [
+        "232804332851"
+      ],
+      "payload_bytes": 8,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 483830899,
+      "width": 6,
+      "n": "56295012383026",
+      "status": "complete",
+      "factors": [
+        "2",
+        "109",
+        "25943",
+        "9953899"
+      ],
+      "payload_bytes": 14,
+      "steps": 107
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 706810392,
+      "width": 6,
+      "n": "54100267185209",
+      "status": "complete",
+      "factors": [
+        "7",
+        "127363",
+        "60681749"
+      ],
+      "payload_bytes": 12,
+      "steps": 222
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 942925459,
+      "width": 5,
+      "n": "211262451763",
+      "status": "complete",
+      "factors": [
+        "11",
+        "19205677433"
+      ],
+      "payload_bytes": 9,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 872473346,
+      "width": 4,
+      "n": "909456441",
+      "status": "complete",
+      "factors": [
+        "3",
+        "283",
+        "1031",
+        "1039"
+      ],
+      "payload_bytes": 12,
+      "steps": 30
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 366065302,
+      "width": 6,
+      "n": "54104511755057",
+      "status": "complete",
+      "factors": [
+        "139",
+        "1823",
+        "213516781"
+      ],
+      "payload_bytes": 12,
+      "steps": 87
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 381671194,
+      "width": 6,
+      "n": "58489791067698",
+      "status": "complete",
+      "factors": [
+        "2",
+        "3",
+        "29",
+        "73",
+        "89",
+        "51738991"
+      ],
+      "payload_bytes": 16,
+      "steps": 20
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 798908481,
+      "width": 5,
+      "n": "241360712501",
+      "status": "complete",
+      "factors": [
+        "569",
+        "424184029"
+      ],
+      "payload_bytes": 10,
+      "steps": 29
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "leaf-body",
+      "offset": 78575645,
+      "width": 6,
+      "n": "59610760556594",
+      "status": "complete",
+      "factors": [
+        "2",
+        "13",
+        "13",
+        "1373",
+        "5347",
+        "24023"
+      ],
+      "payload_bytes": 15,
+      "steps": 170
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 644887911,
+      "width": 8,
+      "n": "3760003457628581425",
+      "status": "complete",
+      "factors": [
+        "5",
+        "5",
+        "150400138305143257"
+      ],
+      "payload_bytes": 13,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 766419189,
+      "width": 8,
+      "n": "3904114200530988593",
+      "status": "complete",
+      "factors": [
+        "173",
+        "6883",
+        "3278677045927"
+      ],
+      "payload_bytes": 14,
+      "steps": 91
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 812619385,
+      "width": 6,
+      "n": "76306123876714",
+      "status": "complete",
+      "factors": [
+        "2",
+        "4177",
+        "9134082341"
+      ],
+      "payload_bytes": 12,
+      "steps": 39
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 815436532,
+      "width": 6,
+      "n": "76306123876714",
+      "status": "complete",
+      "factors": [
+        "2",
+        "4177",
+        "9134082341"
+      ],
+      "payload_bytes": 12,
+      "steps": 39
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 816086362,
+      "width": 7,
+      "n": "18416173044228466",
+      "status": "complete",
+      "factors": [
+        "2",
+        "13",
+        "708314347854941"
+      ],
+      "payload_bytes": 14,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 822106743,
+      "width": 6,
+      "n": "76306123876714",
+      "status": "complete",
+      "factors": [
+        "2",
+        "4177",
+        "9134082341"
+      ],
+      "payload_bytes": 12,
+      "steps": 39
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 836956013,
+      "width": 8,
+      "n": "3546635508202483251",
+      "status": "complete",
+      "factors": [
+        "3",
+        "3",
+        "394070612022498139"
+      ],
+      "payload_bytes": 13,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 795801488,
+      "width": 5,
+      "n": "362646828143",
+      "status": "complete",
+      "factors": [
+        "241",
+        "569",
+        "659",
+        "4013"
+      ],
+      "payload_bytes": 13,
+      "steps": 64
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 271782841,
+      "width": 7,
+      "n": "19829028172228971",
+      "status": "complete",
+      "factors": [
+        "3",
+        "61",
+        "49627",
+        "2183395031"
+      ],
+      "payload_bytes": 15,
+      "steps": 31
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 580254942,
+      "width": 6,
+      "n": "90578400472948",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "41",
+        "36473",
+        "15142909"
+      ],
+      "payload_bytes": 14,
+      "steps": 197
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 653619288,
+      "width": 8,
+      "n": "4932406294900337764",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "7",
+        "2477",
+        "15661",
+        "23159",
+        "196081"
+      ],
+      "payload_bytes": 19,
+      "steps": 608
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 925818352,
+      "width": 5,
+      "n": "328119906162",
+      "status": "complete",
+      "factors": [
+        "2",
+        "3",
+        "31",
+        "1764085517"
+      ],
+      "payload_bytes": 13,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 432993586,
+      "width": 5,
+      "n": "302517222009",
+      "status": "complete",
+      "factors": [
+        "3",
+        "100839074003"
+      ],
+      "payload_bytes": 10,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 943830555,
+      "width": 5,
+      "n": "280991525231",
+      "status": "complete",
+      "factors": [
+        "29",
+        "499",
+        "19417561"
+      ],
+      "payload_bytes": 11,
+      "steps": 41
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 1243807,
+      "width": 8,
+      "n": "5436523584437444974",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2718261792218722487"
+      ],
+      "payload_bytes": 13,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 722806192,
+      "width": 8,
+      "n": "5433995815711373675",
+      "status": "complete",
+      "factors": [
+        "5",
+        "5",
+        "19",
+        "17449",
+        "655624459337"
+      ],
+      "payload_bytes": 16,
+      "steps": 110
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 315135156,
+      "width": 6,
+      "n": "81782325011832",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "3",
+        "17",
+        "23",
+        "8715081523"
+      ],
+      "payload_bytes": 15,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 566287691,
+      "width": 6,
+      "n": "90578400472948",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "41",
+        "36473",
+        "15142909"
+      ],
+      "payload_bytes": 14,
+      "steps": 197
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 389661933,
+      "width": 8,
+      "n": "5360816754373782895",
+      "status": "complete",
+      "factors": [
+        "5",
+        "2963",
+        "277747",
+        "1302806539"
+      ],
+      "payload_bytes": 16,
+      "steps": 871
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 519070028,
+      "width": 6,
+      "n": "77431302156148",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "157",
+        "18131",
+        "6800411"
+      ],
+      "payload_bytes": 15,
+      "steps": 60
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 537015384,
+      "width": 5,
+      "n": "349861671532",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "31",
+        "31",
+        "97",
+        "919",
+        "1021"
+      ],
+      "payload_bytes": 13,
+      "steps": 17
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 855789858,
+      "width": 3,
+      "n": "4422000",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "3",
+        "5",
+        "5",
+        "5",
+        "11",
+        "67"
+      ],
+      "payload_bytes": 11,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 153041554,
+      "width": 7,
+      "n": "18696599930826612",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "3",
+        "3",
+        "4943",
+        "41543",
+        "2529133"
+      ],
+      "payload_bytes": 17,
+      "steps": 279
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 906871628,
+      "width": 8,
+      "n": "3689917288107552816",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "3",
+        "61",
+        "61",
+        "191",
+        "1013",
+        "106775819"
+      ],
+      "payload_bytes": 18,
+      "steps": 52
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 118314802,
+      "width": 8,
+      "n": "3688505493702521651",
+      "status": "complete",
+      "factors": [
+        "827",
+        "74231",
+        "60084107423"
+      ],
+      "payload_bytes": 15,
+      "steps": 297
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 355572525,
+      "width": 8,
+      "n": "3760563104886437684",
+      "status": "censored",
+      "steps": 32768
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 394065026,
+      "width": 8,
+      "n": "3690473636578605110",
+      "status": "complete",
+      "factors": [
+        "2",
+        "5",
+        "13",
+        "17",
+        "19",
+        "1601",
+        "57943",
+        "947423"
+      ],
+      "payload_bytes": 22,
+      "steps": 303
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 954950418,
+      "width": 8,
+      "n": "3617573790863668531",
+      "status": "complete",
+      "factors": [
+        "7",
+        "67",
+        "37309",
+        "206743063411"
+      ],
+      "payload_bytes": 16,
+      "steps": 73
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 794350519,
+      "width": 8,
+      "n": "3546075839637894449",
+      "status": "complete",
+      "factors": [
+        "467",
+        "7593310149117547"
+      ],
+      "payload_bytes": 13,
+      "steps": 19
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 954122954,
+      "width": 8,
+      "n": "3546075869752735537",
+      "status": "complete",
+      "factors": [
+        "4649",
+        "762760995859913"
+      ],
+      "payload_bytes": 13,
+      "steps": 41
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 624095184,
+      "width": 8,
+      "n": "3546074757322519088",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "23",
+        "29",
+        "1066511",
+        "311556439"
+      ],
+      "payload_bytes": 17,
+      "steps": 3015
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 421356589,
+      "width": 8,
+      "n": "3761121648237098290",
+      "status": "complete",
+      "factors": [
+        "2",
+        "5",
+        "4434673",
+        "84811701973"
+      ],
+      "payload_bytes": 17,
+      "steps": 1238
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 607571914,
+      "width": 8,
+      "n": "3761121643841337136",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2778439",
+        "84605097589"
+      ],
+      "payload_bytes": 15,
+      "steps": 1574
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 844628642,
+      "width": 8,
+      "n": "3689070633988403762",
+      "status": "complete",
+      "factors": [
+        "2",
+        "7",
+        "11923",
+        "22100565737221"
+      ],
+      "payload_bytes": 16,
+      "steps": 36
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 943681022,
+      "width": 8,
+      "n": "3690760587755796021",
+      "status": "complete",
+      "factors": [
+        "3",
+        "461",
+        "2668662753257987"
+      ],
+      "payload_bytes": 15,
+      "steps": 24
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 309792376,
+      "width": 8,
+      "n": "3690197633390031926",
+      "status": "complete",
+      "factors": [
+        "2",
+        "167",
+        "11048495908353389"
+      ],
+      "payload_bytes": 15,
+      "steps": 5
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 922948819,
+      "width": 8,
+      "n": "3760847874002268978",
+      "status": "complete",
+      "factors": [
+        "2",
+        "3",
+        "17",
+        "43",
+        "439",
+        "3823",
+        "510914609"
+      ],
+      "payload_bytes": 21,
+      "steps": 139
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 704245372,
+      "width": 8,
+      "n": "3546074765996798262",
+      "status": "censored",
+      "steps": 32768
+    },
+    {
+      "path": "/mediawiki/page/revision/id",
+      "kind": "leaf-body",
+      "offset": 59850863,
+      "width": 8,
+      "n": "3545803160871515444",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "73",
+        "12143161509833957"
+      ],
+      "payload_bytes": 14,
+      "steps": 6
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 777594905,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 671516161,
+      "width": 6,
+      "n": "135769557859709",
+      "status": "complete",
+      "factors": [
+        "32869",
+        "4130626361"
+      ],
+      "payload_bytes": 11,
+      "steps": 140
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 904026099,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 775850064,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 793385078,
+      "width": 6,
+      "n": "135770096827773",
+      "status": "complete",
+      "factors": [
+        "3",
+        "3",
+        "743",
+        "20303588579"
+      ],
+      "payload_bytes": 12,
+      "steps": 9
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 397260144,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 775842389,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 773083385,
+      "width": 6,
+      "n": "135769557859709",
+      "status": "complete",
+      "factors": [
+        "32869",
+        "4130626361"
+      ],
+      "payload_bytes": 11,
+      "steps": 140
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 822682165,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 990161493,
+      "width": 6,
+      "n": "135769557859709",
+      "status": "complete",
+      "factors": [
+        "32869",
+        "4130626361"
+      ],
+      "payload_bytes": 11,
+      "steps": 140
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 994486205,
+      "width": 6,
+      "n": "135770096827773",
+      "status": "complete",
+      "factors": [
+        "3",
+        "3",
+        "743",
+        "20303588579"
+      ],
+      "payload_bytes": 12,
+      "steps": 9
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 690205675,
+      "width": 6,
+      "n": "135769557859709",
+      "status": "complete",
+      "factors": [
+        "32869",
+        "4130626361"
+      ],
+      "payload_bytes": 11,
+      "steps": 140
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 775875040,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 450313695,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 775859397,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 775832055,
+      "width": 8,
+      "n": "8897783855919693181",
+      "status": "complete",
+      "factors": [
+        "137",
+        "168457",
+        "385542467309"
+      ],
+      "payload_bytes": 15,
+      "steps": 557
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 766078125,
+      "width": 7,
+      "n": "13827755426259018",
+      "status": "complete",
+      "factors": [
+        "2",
+        "3",
+        "11483",
+        "14303",
+        "14031947"
+      ],
+      "payload_bytes": 16,
+      "steps": 268
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 390223786,
+      "width": 8,
+      "n": "4928461234412024417",
+      "status": "complete",
+      "factors": [
+        "4928461234412024417"
+      ],
+      "payload_bytes": 11,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 711834615,
+      "width": 8,
+      "n": "5793996834957717362",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2896998417478858681"
+      ],
+      "payload_bytes": 13,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 79788674,
+      "width": 2,
+      "n": "18228",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "3",
+        "7",
+        "7",
+        "31"
+      ],
+      "payload_bytes": 9,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 696713742,
+      "width": 5,
+      "n": "358183887477",
+      "status": "complete",
+      "factors": [
+        "3",
+        "13",
+        "23",
+        "241",
+        "1656901"
+      ],
+      "payload_bytes": 14,
+      "steps": 13
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 842760633,
+      "width": 8,
+      "n": "6082233812592586606",
+      "status": "complete",
+      "factors": [
+        "2",
+        "23",
+        "3011",
+        "3037",
+        "14459382023"
+      ],
+      "payload_bytes": 17,
+      "steps": 149
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 866797313,
+      "width": 5,
+      "n": "280840465505",
+      "status": "complete",
+      "factors": [
+        "5",
+        "31",
+        "1811873971"
+      ],
+      "payload_bytes": 11,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 1403291,
+      "width": 7,
+      "n": "18405216633125229",
+      "status": "complete",
+      "factors": [
+        "3",
+        "83449",
+        "73518822407"
+      ],
+      "payload_bytes": 14,
+      "steps": 200
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 90427900,
+      "width": 8,
+      "n": "5219510774249190766",
+      "status": "complete",
+      "factors": [
+        "2",
+        "23",
+        "197",
+        "575977794554093"
+      ],
+      "payload_bytes": 17,
+      "steps": 8
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 425111710,
+      "width": 8,
+      "n": "5579800982334173028",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "3",
+        "7",
+        "23",
+        "23",
+        "23",
+        "389",
+        "14034802759"
+      ],
+      "payload_bytes": 18,
+      "steps": 13
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 242702520,
+      "width": 5,
+      "n": "375531924580",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "5",
+        "97",
+        "1013",
+        "191089"
+      ],
+      "payload_bytes": 14,
+      "steps": 20
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 699739701,
+      "width": 7,
+      "n": "24318390067425134",
+      "status": "complete",
+      "factors": [
+        "2",
+        "19",
+        "36931",
+        "17328467503"
+      ],
+      "payload_bytes": 15,
+      "steps": 284
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 823485177,
+      "width": 6,
+      "n": "81842354152809",
+      "status": "complete",
+      "factors": [
+        "3",
+        "27280784717603"
+      ],
+      "payload_bytes": 11,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 229419317,
+      "width": 3,
+      "n": "3422519",
+      "status": "complete",
+      "factors": [
+        "3422519"
+      ],
+      "payload_bytes": 6,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 29972802,
+      "width": 8,
+      "n": "4857254735220135009",
+      "status": "complete",
+      "factors": [
+        "3",
+        "3",
+        "3",
+        "3",
+        "59966107842223889"
+      ],
+      "payload_bytes": 12,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 230512059,
+      "width": 3,
+      "n": "3488055",
+      "status": "complete",
+      "factors": [
+        "3",
+        "5",
+        "127",
+        "1831"
+      ],
+      "payload_bytes": 10,
+      "steps": 8
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 474,
+      "width": 5,
+      "n": "332413561185",
+      "status": "complete",
+      "factors": [
+        "3",
+        "5",
+        "19763",
+        "1121333"
+      ],
+      "payload_bytes": 13,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 518,
+      "width": 7,
+      "n": "23486003828842860",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "3",
+        "3",
+        "5",
+        "19",
+        "6867252581533"
+      ],
+      "payload_bytes": 17,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 591,
+      "width": 4,
+      "n": "1415670891",
+      "status": "complete",
+      "factors": [
+        "3",
+        "471890297"
+      ],
+      "payload_bytes": 9,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 633,
+      "width": 4,
+      "n": "1433625970",
+      "status": "complete",
+      "factors": [
+        "2",
+        "5",
+        "7",
+        "20480371"
+      ],
+      "payload_bytes": 12,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 821,
+      "width": 5,
+      "n": "315367712613",
+      "status": "complete",
+      "factors": [
+        "3",
+        "3",
+        "1181",
+        "29670497"
+      ],
+      "payload_bytes": 11,
+      "steps": 33
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 1012,
+      "width": 8,
+      "n": "6081387201455813733",
+      "status": "complete",
+      "factors": [
+        "3",
+        "419",
+        "4838016866711069"
+      ],
+      "payload_bytes": 15,
+      "steps": 12
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 1111,
+      "width": 4,
+      "n": "1214606448",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "3",
+        "3",
+        "3",
+        "11",
+        "23",
+        "11113"
+      ],
+      "payload_bytes": 12,
+      "steps": 0
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 1202,
+      "width": 8,
+      "n": "4855289852157981305",
+      "status": "complete",
+      "factors": [
+        "5",
+        "109",
+        "8908788719555929"
+      ],
+      "payload_bytes": 14,
+      "steps": 16
+    },
+    {
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 1302,
+      "width": 6,
+      "n": "88439591821676",
+      "status": "complete",
+      "factors": [
+        "2",
+        "2",
+        "367",
+        "569",
+        "105878653"
+      ],
+      "payload_bytes": 14,
+      "steps": 39
+    }
+  ],
+  "peak_rss_kib": 979640,
+  "limitations": [
+    "same-scanner lexical replay is not an independent boundary check",
+    "overlapping hierarchical spans must not be summed",
+    "factor payload costs exclude shared outer framing",
+    "no archive claim"
+  ]
+}

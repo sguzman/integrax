@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: inspect E0095 XML lexical span census and bounded factor probe. E0094 independent mode8 verified; C19 full-corpus integration deferred. Known N=32Q unchanged; no frontier claim.
+Next: inspect E0096 independent XML census and 9–32-byte integer factors. E0095 full lexical replay passed; 142/144 fully factored, zero payload wins. C19 deferred. No frontier change.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -52,3 +52,5 @@ E0092 passed, five small affine gains over masks, max 327 B/1 MiB. C18 closed; C
 E0093 verified all six sample roundtrips and rejection checks; mode7 historical hashes reproduced. E0094 independent cross-codec authored; hosted CI pending. No license or full-target frontier change.
 
 E0094 passed 30 independent cross-codec comparisons; mode8 retained. Owner approved C20 XML-guided bottom-up arithmetic synthesis. E0095 full corpus lexical profile, exact replay and <=8-byte factor probe authored; hosted CI pending. No license or frontier change.
+
+E0095 passed full byte comparison and census; [record](experiments/records/E0095.json). E0096 independent XML census and bounded larger factors authored; hosted verification pending. No archive or license change.
