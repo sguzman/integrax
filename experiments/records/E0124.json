@@ -1,0 +1,236 @@
+{
+  "experiment": "E0124",
+  "revision": "cefd45a83752d37952d5af22405cbcee99cd8619",
+  "run_id": 45893189364,
+  "job_id": 140160612889,
+  "wall_seconds": 67.38,
+  "peak_rss_kib": 1395816,
+  "corpus_cache_restored": true,
+  "refinement_path": "inventory/refinements/E0124.json",
+  "summary": {
+    "event": "COFACTOR_SUMMARY",
+    "loaded": 62823,
+    "partial": 9826,
+    "known_factors": 16081,
+    "improved": 29,
+    "completed": 1,
+    "parent_improved": 29,
+    "bits_removed": 515,
+    "by_kind": {
+      "lexical": {
+        "objects": 199,
+        "improved": 0,
+        "before_bits": 29583,
+        "after_bits": 29583,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "title": {
+        "objects": 25,
+        "improved": 0,
+        "before_bits": 5360,
+        "after_bits": 5360,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "id": {
+        "objects": 48,
+        "improved": 0,
+        "before_bits": 5024,
+        "after_bits": 5024,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "timestamp": {
+        "objects": 27,
+        "improved": 2,
+        "before_bits": 8840,
+        "after_bits": 8814,
+        "bits_removed": 26,
+        "unique_improved_values": 2
+      },
+      "username": {
+        "objects": 19,
+        "improved": 0,
+        "before_bits": 4166,
+        "after_bits": 4166,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "contributor": {
+        "objects": 27,
+        "improved": 0,
+        "before_bits": 18923,
+        "after_bits": 18923,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "comment": {
+        "objects": 24,
+        "improved": 0,
+        "before_bits": 14216,
+        "after_bits": 14216,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "phrase": {
+        "objects": 5157,
+        "improved": 3,
+        "before_bits": 693095,
+        "after_bits": 692950,
+        "bits_removed": 145,
+        "unique_improved_values": 3
+      },
+      "sentence": {
+        "objects": 1761,
+        "improved": 9,
+        "before_bits": 1157949,
+        "after_bits": 1157816,
+        "bits_removed": 133,
+        "unique_improved_values": 9
+      },
+      "paragraph": {
+        "objects": 1393,
+        "improved": 10,
+        "before_bits": 1171629,
+        "after_bits": 1171492,
+        "bits_removed": 137,
+        "unique_improved_values": 10
+      },
+      "article": {
+        "objects": 27,
+        "improved": 0,
+        "before_bits": 1230029,
+        "after_bits": 1230029,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "text": {
+        "objects": 27,
+        "improved": 0,
+        "before_bits": 1237233,
+        "after_bits": 1237233,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "revision": {
+        "objects": 27,
+        "improved": 1,
+        "before_bits": 1298874,
+        "after_bits": 1298858,
+        "bits_removed": 16,
+        "unique_improved_values": 1
+      },
+      "page": {
+        "objects": 27,
+        "improved": 2,
+        "before_bits": 1315088,
+        "after_bits": 1315059,
+        "bits_removed": 29,
+        "unique_improved_values": 2
+      },
+      "page-root": {
+        "objects": 27,
+        "improved": 2,
+        "before_bits": 1315088,
+        "after_bits": 1315059,
+        "bits_removed": 29,
+        "unique_improved_values": 2
+      },
+      "word": {
+        "objects": 1001,
+        "improved": 0,
+        "before_bits": 69404,
+        "after_bits": 69404,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "ip": {
+        "objects": 6,
+        "improved": 0,
+        "before_bits": 881,
+        "after_bits": 881,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "fragment": {
+        "objects": 4,
+        "improved": 0,
+        "before_bits": 840,
+        "after_bits": 840,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      }
+    },
+    "by_width": {
+      "9-32": {
+        "objects": 6902,
+        "improved": 1,
+        "before_bits": 881626,
+        "after_bits": 881510,
+        "bits_removed": 116,
+        "unique_improved_values": 1
+      },
+      "33-128": {
+        "objects": 1864,
+        "improved": 17,
+        "before_bits": 983530,
+        "after_bits": 983292,
+        "bits_removed": 238,
+        "unique_improved_values": 12
+      },
+      "129-512": {
+        "objects": 559,
+        "improved": 5,
+        "before_bits": 974537,
+        "after_bits": 974464,
+        "bits_removed": 73,
+        "unique_improved_values": 4
+      },
+      "513-2048": {
+        "objects": 87,
+        "improved": 1,
+        "before_bits": 658209,
+        "after_bits": 658195,
+        "bits_removed": 14,
+        "unique_improved_values": 1
+      },
+      "1-8": {
+        "objects": 311,
+        "improved": 0,
+        "before_bits": 17143,
+        "after_bits": 17143,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "2049+": {
+        "objects": 103,
+        "improved": 5,
+        "before_bits": 6061177,
+        "after_bits": 6061103,
+        "bits_removed": 74,
+        "unique_improved_values": 3
+      }
+    },
+    "by_cohort": {
+      "historical": {
+        "objects": 7518,
+        "improved": 25,
+        "before_bits": 7180481,
+        "after_bits": 7180123,
+        "bits_removed": 358,
+        "unique_improved_values": 18
+      },
+      "E0123": {
+        "objects": 2308,
+        "improved": 4,
+        "before_bits": 2395741,
+        "after_bits": 2395584,
+        "bits_removed": 157,
+        "unique_improved_values": 3
+      }
+    },
+    "unique_improved_values": 21
+  },
+  "product_recheck": "The hosted script passed exact factor/cofactor identities, prior overlay replay, exact parent synthesis, inventory count checks, and frozen screening assertions. The 29 emitted refinements retain factor witnesses and exact unresolved cofactors."
+}
