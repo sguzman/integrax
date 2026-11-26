@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: E0108 fixed-object controlled inventory-growth comparison. E0107 passed, 9095 indexed objects and 5144 distinct factors. E0106 36 improved objects, 35 parents, two completed; 5649 objects, 4146 factors; supplemental exact refinements persisted. Factorization primary; no frontier change.
+Next: E0109 strict-descendant residual GCD and cumulative refinement. E0108 passed, 14966 objects and 6504 factors.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -82,3 +82,5 @@ E0107 authored and queued by push; full historical inventory and E0106 overlays 
 E0107 passed, 3446 new nodes (9095 total), 5144 distinct factors (+998), 207 previously unseen parent values with full-inventory hits. 15.42 s. Scale-normalized evidence shows strong word/phrase reductions but nearly unchanged article/page cofactors. Next E0108 controlled fixed-object inventory growth comparison; no compression claim.
 
 E0108 authored: frozen historical inventory controls on identical fresh 4097–6144-byte page objects, then ordinary adaptive cumulative factorization. Hosted CI pending.
+
+E0108 passed: 5871 new nodes (14966 total), 6504 factors (+1360), 335 unseen parent full-inventory hits. Frozen 3286/4145/4146/5144-factor screens on identical objects: 915278/912006/912006/908682 residual bits; 274 objects improved including 57 parents, no article improvements and one page improvement. 42.26 s. Next E0109: strict descendant residual GCD after screening latest inventory, compare exact composite splits beyond known primes. No compression claim.

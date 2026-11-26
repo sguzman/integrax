@@ -1,0 +1,2074 @@
+{
+  "id": "E0108",
+  "campaign": "C20",
+  "status": "factor-inventory-verified",
+  "revision": "746f6375ded96184d80be6efeac78ccdbb38e3cd",
+  "run": 45765078111,
+  "job": 139723950356,
+  "corpus_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+  "resume": {
+    "event": "FACTOR_RESUME",
+    "imported": 9095,
+    "distinct_factors": 5144
+  },
+  "summary": {
+    "event": "FACTOR_INVENTORY_SUMMARY",
+    "pages": [
+      {
+        "offset": 100366369,
+        "width": 5647,
+        "root_id": "enwik9:100366369:0"
+      },
+      {
+        "offset": 400009127,
+        "width": 4698,
+        "root_id": "enwik9:400009127:0"
+      },
+      {
+        "offset": 800035609,
+        "width": 4277,
+        "root_id": "enwik9:800035609:0"
+      }
+    ],
+    "distinct_factors": 6504,
+    "nodes": 5871,
+    "seeded_sources": [
+      "E0095",
+      "E0096",
+      "E0099",
+      "E0103",
+      "E0104",
+      "E0105",
+      "E0106",
+      "E0107"
+    ]
+  },
+  "aggregate": {
+    "nodes": 5871,
+    "leaves": 4471,
+    "parents": 1400,
+    "new_values": 1565,
+    "parent_new_values": 894,
+    "full_hit_new_value": 598,
+    "full_hit_seen_value": 1300,
+    "parent_full_hit_new_value": 335,
+    "parent_full_hit_seen_value": 105,
+    "parent_full_hit_distinct_witness": 381,
+    "full_inventory_hits": 1898,
+    "parent_full_inventory_hits": 440,
+    "full_bits_removed": 47599,
+    "parent_full_bits_removed": 10069,
+    "complete": 4913,
+    "partial": 958,
+    "trivial": 0,
+    "child_hits": 308,
+    "global_hits": 1181,
+    "parent_child_hits": 308,
+    "parent_global_hits": 110,
+    "parent_better_than_cold": 294,
+    "parent_worse_than_cold": 66,
+    "parent_equal_cold": 1040,
+    "child_bits_removed": 11548,
+    "global_bits_removed": 13334
+  },
+  "pages": [
+    {
+      "event": "FACTOR_PAGE",
+      "offset": 100366369,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0",
+      "stats": {
+        "nodes": 1919,
+        "leaves": 1559,
+        "parents": 360,
+        "new_values": 636,
+        "parent_new_values": 316,
+        "full_hit_new_value": 228,
+        "full_hit_seen_value": 400,
+        "parent_full_hit_new_value": 100,
+        "parent_full_hit_seen_value": 3,
+        "parent_full_hit_distinct_witness": 101,
+        "full_inventory_hits": 628,
+        "parent_full_inventory_hits": 103,
+        "full_bits_removed": 14829,
+        "parent_full_bits_removed": 1350,
+        "complete": 1610,
+        "partial": 309,
+        "trivial": 0,
+        "child_hits": 27,
+        "global_hits": 333,
+        "parent_child_hits": 27,
+        "parent_global_hits": 38,
+        "parent_better_than_cold": 24,
+        "parent_worse_than_cold": 19,
+        "parent_equal_cold": 317,
+        "child_bits_removed": 1229,
+        "global_bits_removed": 4481
+      },
+      "levels": {
+        "lexical": {
+          "nodes": 44,
+          "complete": 36,
+          "partial": 8,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 17,
+          "bits": 3751,
+          "base_bits": 3458,
+          "reuse_bits": 3018,
+          "remaining_bits": 1740,
+          "cold_bits": 3415,
+          "full_bits": 1999,
+          "full_hits": 23
+        },
+        "title": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 214,
+          "base_bits": 212,
+          "reuse_bits": 212,
+          "remaining_bits": 212,
+          "cold_bits": 212,
+          "full_bits": 212,
+          "full_hits": 0
+        },
+        "id": {
+          "nodes": 3,
+          "complete": 1,
+          "partial": 2,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 354,
+          "base_bits": 339,
+          "reuse_bits": 339,
+          "remaining_bits": 197,
+          "cold_bits": 339,
+          "full_bits": 307,
+          "full_hits": 2
+        },
+        "timestamp": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 342,
+          "base_bits": 338,
+          "reuse_bits": 338,
+          "remaining_bits": 338,
+          "cold_bits": 338,
+          "full_bits": 338,
+          "full_hits": 0
+        },
+        "username": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 214,
+          "base_bits": 213,
+          "reuse_bits": 213,
+          "remaining_bits": 213,
+          "cold_bits": 213,
+          "full_bits": 213,
+          "full_hits": 0
+        },
+        "contributor": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 742,
+          "base_bits": 734,
+          "reuse_bits": 734,
+          "remaining_bits": 724,
+          "cold_bits": 734,
+          "full_bits": 724,
+          "full_hits": 1
+        },
+        "comment": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 1174,
+          "base_bits": 1166,
+          "reuse_bits": 1166,
+          "remaining_bits": 1166,
+          "cold_bits": 1166,
+          "full_bits": 1166,
+          "full_hits": 0
+        },
+        "word": {
+          "nodes": 1515,
+          "complete": 1464,
+          "partial": 51,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 278,
+          "bits": 39068,
+          "base_bits": 30371,
+          "reuse_bits": 26650,
+          "remaining_bits": 5019,
+          "cold_bits": 29315,
+          "full_bits": 14190,
+          "full_hits": 502
+        },
+        "phrase": {
+          "nodes": 270,
+          "complete": 102,
+          "partial": 168,
+          "trivial": 0,
+          "child_hits": 4,
+          "global_hits": 35,
+          "bits": 40940,
+          "base_bits": 38868,
+          "reuse_bits": 38525,
+          "remaining_bits": 24710,
+          "cold_bits": 38443,
+          "full_bits": 37392,
+          "full_hits": 85
+        },
+        "sentence": {
+          "nodes": 47,
+          "complete": 4,
+          "partial": 43,
+          "trivial": 0,
+          "child_hits": 11,
+          "global_hits": 3,
+          "bits": 41239,
+          "base_bits": 40892,
+          "reuse_bits": 40276,
+          "remaining_bits": 40095,
+          "cold_bits": 40832,
+          "full_bits": 40148,
+          "full_hits": 10
+        },
+        "paragraph": {
+          "nodes": 30,
+          "complete": 3,
+          "partial": 27,
+          "trivial": 0,
+          "child_hits": 12,
+          "global_hits": 0,
+          "bits": 41257,
+          "base_bits": 41082,
+          "reuse_bits": 40492,
+          "remaining_bits": 40464,
+          "cold_bits": 41052,
+          "full_bits": 40464,
+          "full_hits": 3
+        },
+        "article": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 41310,
+          "base_bits": 41307,
+          "reuse_bits": 41307,
+          "remaining_bits": 41299,
+          "cold_bits": 41299,
+          "full_bits": 41299,
+          "full_hits": 1
+        },
+        "text": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 41582,
+          "base_bits": 41575,
+          "reuse_bits": 41575,
+          "remaining_bits": 41564,
+          "cold_bits": 41575,
+          "full_bits": 41564,
+          "full_hits": 1
+        },
+        "revision": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 44598,
+          "base_bits": 44588,
+          "reuse_bits": 44588,
+          "remaining_bits": 44588,
+          "cold_bits": 44588,
+          "full_bits": 44588,
+          "full_hits": 0
+        },
+        "page": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 45174,
+          "base_bits": 45166,
+          "reuse_bits": 45166,
+          "remaining_bits": 45166,
+          "cold_bits": 45166,
+          "full_bits": 45166,
+          "full_hits": 0
+        },
+        "page-root": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 45174,
+          "base_bits": 45166,
+          "reuse_bits": 45166,
+          "remaining_bits": 45166,
+          "cold_bits": 45166,
+          "full_bits": 45166,
+          "full_hits": 0
+        }
+      }
+    },
+    {
+      "event": "FACTOR_PAGE",
+      "offset": 400009127,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0",
+      "stats": {
+        "nodes": 2190,
+        "leaves": 1593,
+        "parents": 597,
+        "new_values": 469,
+        "parent_new_values": 284,
+        "full_hit_new_value": 189,
+        "full_hit_seen_value": 461,
+        "parent_full_hit_new_value": 111,
+        "parent_full_hit_seen_value": 81,
+        "parent_full_hit_distinct_witness": 145,
+        "full_inventory_hits": 650,
+        "parent_full_inventory_hits": 192,
+        "full_bits_removed": 17010,
+        "parent_full_bits_removed": 5716,
+        "complete": 1828,
+        "partial": 362,
+        "trivial": 0,
+        "child_hits": 181,
+        "global_hits": 539,
+        "parent_child_hits": 181,
+        "parent_global_hits": 38,
+        "parent_better_than_cold": 175,
+        "parent_worse_than_cold": 23,
+        "parent_equal_cold": 399,
+        "child_bits_removed": 6221,
+        "global_bits_removed": 5755
+      },
+      "levels": {
+        "lexical": {
+          "nodes": 38,
+          "complete": 32,
+          "partial": 6,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 17,
+          "bits": 2517,
+          "base_bits": 2288,
+          "reuse_bits": 1887,
+          "remaining_bits": 729,
+          "cold_bits": 2239,
+          "full_bits": 1030,
+          "full_hits": 19
+        },
+        "title": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 174,
+          "base_bits": 170,
+          "reuse_bits": 170,
+          "remaining_bits": 170,
+          "cold_bits": 170,
+          "full_bits": 170,
+          "full_hits": 0
+        },
+        "id": {
+          "nodes": 2,
+          "complete": 0,
+          "partial": 2,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 244,
+          "base_bits": 236,
+          "reuse_bits": 236,
+          "remaining_bits": 236,
+          "cold_bits": 236,
+          "full_bits": 236,
+          "full_hits": 0
+        },
+        "timestamp": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 342,
+          "base_bits": 335,
+          "reuse_bits": 335,
+          "remaining_bits": 335,
+          "cold_bits": 335,
+          "full_bits": 335,
+          "full_hits": 0
+        },
+        "ip": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 182,
+          "base_bits": 172,
+          "reuse_bits": 172,
+          "remaining_bits": 146,
+          "cold_bits": 172,
+          "full_bits": 161,
+          "full_hits": 1
+        },
+        "contributor": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 526,
+          "base_bits": 525,
+          "reuse_bits": 525,
+          "remaining_bits": 525,
+          "cold_bits": 525,
+          "full_bits": 525,
+          "full_hits": 0
+        },
+        "comment": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 310,
+          "base_bits": 299,
+          "reuse_bits": 299,
+          "remaining_bits": 288,
+          "cold_bits": 299,
+          "full_bits": 288,
+          "full_hits": 1
+        },
+        "word": {
+          "nodes": 1555,
+          "complete": 1519,
+          "partial": 36,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 484,
+          "bits": 32597,
+          "base_bits": 24597,
+          "reuse_bits": 19526,
+          "remaining_bits": 3945,
+          "cold_bits": 23182,
+          "full_bits": 9089,
+          "full_hits": 439
+        },
+        "phrase": {
+          "nodes": 334,
+          "complete": 195,
+          "partial": 139,
+          "trivial": 0,
+          "child_hits": 61,
+          "global_hits": 25,
+          "bits": 34420,
+          "base_bits": 32355,
+          "reuse_bits": 31460,
+          "remaining_bits": 17250,
+          "cold_bits": 32043,
+          "full_bits": 27327,
+          "full_hits": 137
+        },
+        "sentence": {
+          "nodes": 128,
+          "complete": 41,
+          "partial": 87,
+          "trivial": 0,
+          "child_hits": 28,
+          "global_hits": 11,
+          "bits": 34767,
+          "base_bits": 33988,
+          "reuse_bits": 32692,
+          "remaining_bits": 29652,
+          "cold_bits": 33852,
+          "full_bits": 31184,
+          "full_hits": 50
+        },
+        "paragraph": {
+          "nodes": 123,
+          "complete": 41,
+          "partial": 82,
+          "trivial": 0,
+          "child_hits": 91,
+          "global_hits": 1,
+          "bits": 34772,
+          "base_bits": 34055,
+          "reuse_bits": 29783,
+          "remaining_bits": 29760,
+          "cold_bits": 33983,
+          "full_bits": 29760,
+          "full_hits": 1
+        },
+        "article": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 34966,
+          "base_bits": 34966,
+          "reuse_bits": 34966,
+          "remaining_bits": 34966,
+          "cold_bits": 34966,
+          "full_bits": 34966,
+          "full_hits": 0
+        },
+        "text": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 35238,
+          "base_bits": 35227,
+          "reuse_bits": 35227,
+          "remaining_bits": 35227,
+          "cold_bits": 35227,
+          "full_bits": 35227,
+          "full_hits": 0
+        },
+        "revision": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 37046,
+          "base_bits": 37038,
+          "reuse_bits": 37038,
+          "remaining_bits": 37021,
+          "cold_bits": 37038,
+          "full_bits": 37021,
+          "full_hits": 1
+        },
+        "page": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 1,
+          "bits": 37582,
+          "base_bits": 37581,
+          "reuse_bits": 37567,
+          "remaining_bits": 37554,
+          "cold_bits": 37567,
+          "full_bits": 37554,
+          "full_hits": 1
+        },
+        "page-root": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 1,
+          "global_hits": 0,
+          "bits": 37582,
+          "base_bits": 37581,
+          "reuse_bits": 37554,
+          "remaining_bits": 37554,
+          "cold_bits": 37567,
+          "full_bits": 37554,
+          "full_hits": 0
+        }
+      }
+    },
+    {
+      "event": "FACTOR_PAGE",
+      "offset": 800035609,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0",
+      "stats": {
+        "nodes": 1762,
+        "leaves": 1319,
+        "parents": 443,
+        "new_values": 460,
+        "parent_new_values": 294,
+        "full_hit_new_value": 181,
+        "full_hit_seen_value": 439,
+        "parent_full_hit_new_value": 124,
+        "parent_full_hit_seen_value": 21,
+        "parent_full_hit_distinct_witness": 135,
+        "full_inventory_hits": 620,
+        "parent_full_inventory_hits": 145,
+        "full_bits_removed": 15760,
+        "parent_full_bits_removed": 3003,
+        "complete": 1475,
+        "partial": 287,
+        "trivial": 0,
+        "child_hits": 100,
+        "global_hits": 309,
+        "parent_child_hits": 100,
+        "parent_global_hits": 34,
+        "parent_better_than_cold": 95,
+        "parent_worse_than_cold": 24,
+        "parent_equal_cold": 324,
+        "child_bits_removed": 4098,
+        "global_bits_removed": 3098
+      },
+      "levels": {
+        "lexical": {
+          "nodes": 42,
+          "complete": 32,
+          "partial": 10,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 18,
+          "bits": 3965,
+          "base_bits": 3686,
+          "reuse_bits": 3290,
+          "remaining_bits": 2168,
+          "cold_bits": 3630,
+          "full_bits": 2262,
+          "full_hits": 23
+        },
+        "title": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 334,
+          "base_bits": 333,
+          "reuse_bits": 333,
+          "remaining_bits": 311,
+          "cold_bits": 333,
+          "full_bits": 311,
+          "full_hits": 1
+        },
+        "id": {
+          "nodes": 3,
+          "complete": 2,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 370,
+          "base_bits": 349,
+          "reuse_bits": 349,
+          "remaining_bits": 103,
+          "cold_bits": 349,
+          "full_bits": 280,
+          "full_hits": 3
+        },
+        "timestamp": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 342,
+          "base_bits": 341,
+          "reuse_bits": 341,
+          "remaining_bits": 341,
+          "cold_bits": 341,
+          "full_bits": 341,
+          "full_hits": 0
+        },
+        "username": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 366,
+          "base_bits": 351,
+          "reuse_bits": 351,
+          "remaining_bits": 351,
+          "cold_bits": 351,
+          "full_bits": 351,
+          "full_hits": 0
+        },
+        "contributor": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 902,
+          "base_bits": 901,
+          "reuse_bits": 901,
+          "remaining_bits": 892,
+          "cold_bits": 901,
+          "full_bits": 892,
+          "full_hits": 1
+        },
+        "comment": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 1222,
+          "base_bits": 1220,
+          "reuse_bits": 1220,
+          "remaining_bits": 1207,
+          "cold_bits": 1220,
+          "full_bits": 1207,
+          "full_hits": 1
+        },
+        "word": {
+          "nodes": 1277,
+          "complete": 1255,
+          "partial": 22,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 257,
+          "bits": 28109,
+          "base_bits": 20762,
+          "reuse_bits": 18325,
+          "remaining_bits": 2732,
+          "cold_bits": 19806,
+          "full_bits": 6596,
+          "full_hits": 452
+        },
+        "phrase": {
+          "nodes": 260,
+          "complete": 145,
+          "partial": 115,
+          "trivial": 0,
+          "child_hits": 23,
+          "global_hits": 28,
+          "bits": 29697,
+          "base_bits": 27768,
+          "reuse_bits": 27246,
+          "remaining_bits": 14738,
+          "cold_bits": 27457,
+          "full_bits": 24838,
+          "full_hits": 103
+        },
+        "sentence": {
+          "nodes": 90,
+          "complete": 22,
+          "partial": 68,
+          "trivial": 0,
+          "child_hits": 19,
+          "global_hits": 6,
+          "bits": 29977,
+          "base_bits": 29330,
+          "reuse_bits": 28211,
+          "remaining_bits": 26198,
+          "cold_bits": 29186,
+          "full_bits": 27773,
+          "full_hits": 33
+        },
+        "paragraph": {
+          "nodes": 80,
+          "complete": 19,
+          "partial": 61,
+          "trivial": 0,
+          "child_hits": 58,
+          "global_hits": 0,
+          "bits": 29988,
+          "base_bits": 29458,
+          "reuse_bits": 26736,
+          "remaining_bits": 26656,
+          "cold_bits": 29344,
+          "full_bits": 26692,
+          "full_hits": 3
+        },
+        "article": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 30142,
+          "base_bits": 30133,
+          "reuse_bits": 30133,
+          "remaining_bits": 30133,
+          "cold_bits": 30133,
+          "full_bits": 30133,
+          "full_hits": 0
+        },
+        "text": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 30414,
+          "base_bits": 30408,
+          "reuse_bits": 30408,
+          "remaining_bits": 30408,
+          "cold_bits": 30408,
+          "full_bits": 30408,
+          "full_hits": 0
+        },
+        "revision": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 33510,
+          "base_bits": 33498,
+          "reuse_bits": 33498,
+          "remaining_bits": 33498,
+          "cold_bits": 33498,
+          "full_bits": 33498,
+          "full_hits": 0
+        },
+        "page": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 34214,
+          "base_bits": 34211,
+          "reuse_bits": 34211,
+          "remaining_bits": 34211,
+          "cold_bits": 34211,
+          "full_bits": 34211,
+          "full_hits": 0
+        },
+        "page-root": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 34214,
+          "base_bits": 34211,
+          "reuse_bits": 34211,
+          "remaining_bits": 34211,
+          "cold_bits": 34211,
+          "full_bits": 34211,
+          "full_hits": 0
+        }
+      }
+    }
+  ],
+  "shards": [
+    {
+      "path": "inventory/batches/E0108/100366369-000.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-001.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-002.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-003.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-004.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-005.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-006.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-007.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-008.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-009.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-010.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-011.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-012.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-013.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-014.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-015.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-016.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-017.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-018.json",
+      "offset": 100366369,
+      "rows": 100,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/100366369-019.json",
+      "offset": 100366369,
+      "rows": 19,
+      "width": 5647,
+      "sha256": "30326d39c6932bdc3ca762ea5d28e3246bcad782555cb443ff13e574310628de",
+      "root_id": "enwik9:100366369:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-000.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-001.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-002.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-003.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-004.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-005.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-006.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-007.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-008.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-009.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-010.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-011.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-012.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-013.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-014.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-015.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-016.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-017.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-018.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-019.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-020.json",
+      "offset": 400009127,
+      "rows": 100,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/400009127-021.json",
+      "offset": 400009127,
+      "rows": 90,
+      "width": 4698,
+      "sha256": "e89d1e61087ee0f058ee0b30b17b3483dc0d2e8ab02d3391faa3f3be250db9f3",
+      "root_id": "enwik9:400009127:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-000.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-001.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-002.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-003.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-004.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-005.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-006.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-007.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-008.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-009.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-010.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-011.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-012.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-013.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-014.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-015.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-016.json",
+      "offset": 800035609,
+      "rows": 100,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    },
+    {
+      "path": "inventory/batches/E0108/800035609-017.json",
+      "offset": 800035609,
+      "rows": 62,
+      "width": 4277,
+      "sha256": "c3dd116ee7be631a0d957ff67218838785ef62c5959dabc6223e97a44acca398",
+      "root_id": "enwik9:800035609:0"
+    }
+  ],
+  "index_delta_shards": [
+    {
+      "path": "inventory/index/E0108/000.json",
+      "count": 1
+    },
+    {
+      "path": "inventory/index/E0108/001.json",
+      "count": 1
+    },
+    {
+      "path": "inventory/index/E0108/002.json",
+      "count": 1
+    },
+    {
+      "path": "inventory/index/E0108/003.json",
+      "count": 1
+    },
+    {
+      "path": "inventory/index/E0108/004.json",
+      "count": 1
+    },
+    {
+      "path": "inventory/index/E0108/005.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0108/006.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0108/007.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0108/008.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0108/009.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0108/010.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0108/011.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0108/012.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0108/013.json",
+      "count": 76
+    }
+  ],
+  "snapshots": "inventory/batches/E0108/snapshots.json",
+  "wall_seconds": 42.26,
+  "peak_rss_kib": 1156372,
+  "levels": {
+    "lexical": {
+      "nodes": 124,
+      "complete": 100,
+      "partial": 24,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 52,
+      "bits": 10233,
+      "base_bits": 9432,
+      "reuse_bits": 8195,
+      "remaining_bits": 4637,
+      "cold_bits": 9284,
+      "full_bits": 5291,
+      "full_hits": 65
+    },
+    "title": {
+      "nodes": 3,
+      "complete": 0,
+      "partial": 3,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 0,
+      "bits": 722,
+      "base_bits": 715,
+      "reuse_bits": 715,
+      "remaining_bits": 693,
+      "cold_bits": 715,
+      "full_bits": 693,
+      "full_hits": 1
+    },
+    "id": {
+      "nodes": 8,
+      "complete": 3,
+      "partial": 5,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 0,
+      "bits": 968,
+      "base_bits": 924,
+      "reuse_bits": 924,
+      "remaining_bits": 536,
+      "cold_bits": 924,
+      "full_bits": 823,
+      "full_hits": 5
+    },
+    "timestamp": {
+      "nodes": 3,
+      "complete": 0,
+      "partial": 3,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 0,
+      "bits": 1026,
+      "base_bits": 1014,
+      "reuse_bits": 1014,
+      "remaining_bits": 1014,
+      "cold_bits": 1014,
+      "full_bits": 1014,
+      "full_hits": 0
+    },
+    "username": {
+      "nodes": 2,
+      "complete": 0,
+      "partial": 2,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 0,
+      "bits": 580,
+      "base_bits": 564,
+      "reuse_bits": 564,
+      "remaining_bits": 564,
+      "cold_bits": 564,
+      "full_bits": 564,
+      "full_hits": 0
+    },
+    "contributor": {
+      "nodes": 3,
+      "complete": 0,
+      "partial": 3,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 0,
+      "bits": 2170,
+      "base_bits": 2160,
+      "reuse_bits": 2160,
+      "remaining_bits": 2141,
+      "cold_bits": 2160,
+      "full_bits": 2141,
+      "full_hits": 2
+    },
+    "comment": {
+      "nodes": 3,
+      "complete": 0,
+      "partial": 3,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 0,
+      "bits": 2706,
+      "base_bits": 2685,
+      "reuse_bits": 2685,
+      "remaining_bits": 2661,
+      "cold_bits": 2685,
+      "full_bits": 2661,
+      "full_hits": 2
+    },
+    "word": {
+      "nodes": 4347,
+      "complete": 4238,
+      "partial": 109,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 1019,
+      "bits": 99774,
+      "base_bits": 75730,
+      "reuse_bits": 64501,
+      "remaining_bits": 11696,
+      "cold_bits": 72303,
+      "full_bits": 29875,
+      "full_hits": 1393
+    },
+    "phrase": {
+      "nodes": 864,
+      "complete": 442,
+      "partial": 422,
+      "trivial": 0,
+      "child_hits": 88,
+      "global_hits": 88,
+      "bits": 105057,
+      "base_bits": 98991,
+      "reuse_bits": 97231,
+      "remaining_bits": 56698,
+      "cold_bits": 97943,
+      "full_bits": 89557,
+      "full_hits": 325
+    },
+    "sentence": {
+      "nodes": 265,
+      "complete": 67,
+      "partial": 198,
+      "trivial": 0,
+      "child_hits": 58,
+      "global_hits": 20,
+      "bits": 105983,
+      "base_bits": 104210,
+      "reuse_bits": 101179,
+      "remaining_bits": 95945,
+      "cold_bits": 103870,
+      "full_bits": 99105,
+      "full_hits": 93
+    },
+    "paragraph": {
+      "nodes": 233,
+      "complete": 63,
+      "partial": 170,
+      "trivial": 0,
+      "child_hits": 161,
+      "global_hits": 1,
+      "bits": 106017,
+      "base_bits": 104595,
+      "reuse_bits": 97011,
+      "remaining_bits": 96880,
+      "cold_bits": 104379,
+      "full_bits": 96916,
+      "full_hits": 7
+    },
+    "article": {
+      "nodes": 3,
+      "complete": 0,
+      "partial": 3,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 0,
+      "bits": 106418,
+      "base_bits": 106406,
+      "reuse_bits": 106406,
+      "remaining_bits": 106398,
+      "cold_bits": 106398,
+      "full_bits": 106398,
+      "full_hits": 1
+    },
+    "text": {
+      "nodes": 3,
+      "complete": 0,
+      "partial": 3,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 0,
+      "bits": 107234,
+      "base_bits": 107210,
+      "reuse_bits": 107210,
+      "remaining_bits": 107199,
+      "cold_bits": 107210,
+      "full_bits": 107199,
+      "full_hits": 1
+    },
+    "revision": {
+      "nodes": 3,
+      "complete": 0,
+      "partial": 3,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 0,
+      "bits": 115154,
+      "base_bits": 115124,
+      "reuse_bits": 115124,
+      "remaining_bits": 115107,
+      "cold_bits": 115124,
+      "full_bits": 115107,
+      "full_hits": 1
+    },
+    "page": {
+      "nodes": 3,
+      "complete": 0,
+      "partial": 3,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 1,
+      "bits": 116970,
+      "base_bits": 116958,
+      "reuse_bits": 116944,
+      "remaining_bits": 116931,
+      "cold_bits": 116944,
+      "full_bits": 116931,
+      "full_hits": 1
+    },
+    "page-root": {
+      "nodes": 3,
+      "complete": 0,
+      "partial": 3,
+      "trivial": 0,
+      "child_hits": 1,
+      "global_hits": 0,
+      "bits": 116970,
+      "base_bits": 116958,
+      "reuse_bits": 116931,
+      "remaining_bits": 116931,
+      "cold_bits": 116944,
+      "full_bits": 116931,
+      "full_hits": 0
+    },
+    "ip": {
+      "nodes": 1,
+      "complete": 0,
+      "partial": 1,
+      "trivial": 0,
+      "child_hits": 0,
+      "global_hits": 0,
+      "bits": 182,
+      "base_bits": 172,
+      "reuse_bits": 172,
+      "remaining_bits": 146,
+      "cold_bits": 172,
+      "full_bits": 161,
+      "full_hits": 1
+    }
+  },
+  "frozen": {
+    "all": {
+      "n": 5871,
+      "orig": 998164,
+      "bits": [
+        915278,
+        912006,
+        912006,
+        908682
+      ],
+      "ms": [
+        2542.353674000341,
+        2571.797329000012,
+        2581.063658000241,
+        2654.573237999964
+      ],
+      "improved": 274
+    },
+    "leaf": {
+      "n": 4471,
+      "orig": 110007,
+      "bits": [
+        50627,
+        47786,
+        47786,
+        44833
+      ],
+      "ms": [
+        116.1065410002202,
+        138.89057699995237,
+        137.78700600023876,
+        169.79377399995792
+      ],
+      "improved": 217
+    },
+    "lexical": {
+      "n": 124,
+      "orig": 10233,
+      "bits": [
+        5291,
+        5291,
+        5291,
+        5291
+      ],
+      "ms": [
+        10.835693999996693,
+        12.686111999998502,
+        12.591725000011138,
+        15.138268999981847
+      ],
+      "improved": 0
+    },
+    "unseen": {
+      "n": 1565,
+      "orig": 725114,
+      "bits": [
+        706648,
+        706027,
+        706027,
+        705538
+      ],
+      "ms": [
+        1915.16479300014,
+        1918.3510310000697,
+        1924.6753550000276,
+        1959.9983029999526
+      ],
+      "improved": 82
+    },
+    "parent": {
+      "n": 1400,
+      "orig": 888157,
+      "bits": [
+        864651,
+        864220,
+        864220,
+        863849
+      ],
+      "ms": [
+        2426.247133000121,
+        2432.9067520000594,
+        2443.2766520000023,
+        2484.779464000006
+      ],
+      "improved": 57
+    },
+    "title": {
+      "n": 3,
+      "orig": 722,
+      "bits": [
+        693,
+        693,
+        693,
+        693
+      ],
+      "ms": [
+        0.29988000000048487,
+        0.3619620000017676,
+        0.35591199999726086,
+        0.4102039999997942
+      ],
+      "improved": 0
+    },
+    "id": {
+      "n": 8,
+      "orig": 968,
+      "bits": [
+        873,
+        863,
+        863,
+        838
+      ],
+      "ms": [
+        0.6483350000030441,
+        0.7543630000013763,
+        0.7697809999995116,
+        1.005898999997953
+      ],
+      "improved": 2
+    },
+    "timestamp": {
+      "n": 3,
+      "orig": 1026,
+      "bits": [
+        1014,
+        1014,
+        1014,
+        1014
+      ],
+      "ms": [
+        0.29644199999984266,
+        0.36878599999818107,
+        0.34958099999812475,
+        0.4203630000015437
+      ],
+      "improved": 0
+    },
+    "username": {
+      "n": 2,
+      "orig": 580,
+      "bits": [
+        564,
+        564,
+        564,
+        564
+      ],
+      "ms": [
+        0.20176500000025044,
+        0.21295499999769163,
+        0.2146589999997559,
+        0.25897200000190423
+      ],
+      "improved": 0
+    },
+    "contributor": {
+      "n": 3,
+      "orig": 2170,
+      "bits": [
+        2141,
+        2141,
+        2141,
+        2141
+      ],
+      "ms": [
+        0.57597200000464,
+        0.6350420000017039,
+        0.6395809999967241,
+        0.7053029999992759
+      ],
+      "improved": 0
+    },
+    "comment": {
+      "n": 3,
+      "orig": 2706,
+      "bits": [
+        2661,
+        2661,
+        2661,
+        2661
+      ],
+      "ms": [
+        0.6217859999997017,
+        0.7268619999990733,
+        0.7123760000035873,
+        0.8475660000017342
+      ],
+      "improved": 0
+    },
+    "word": {
+      "n": 4347,
+      "orig": 99774,
+      "bits": [
+        45336,
+        42495,
+        42495,
+        39542
+      ],
+      "ms": [
+        105.27084700022351,
+        126.20446499995387,
+        125.19528100022762,
+        154.65550499997607
+      ],
+      "improved": 217
+    },
+    "phrase": {
+      "n": 864,
+      "orig": 105057,
+      "bits": [
+        92290,
+        92011,
+        92011,
+        91725
+      ],
+      "ms": [
+        63.867471000102796,
+        76.34789900002716,
+        75.27026500004877,
+        92.4607620000229
+      ],
+      "improved": 40
+    },
+    "sentence": {
+      "n": 265,
+      "orig": 105983,
+      "bits": [
+        100470,
+        100419,
+        100419,
+        100402
+      ],
+      "ms": [
+        35.82238500004087,
+        41.83109600001853,
+        41.62907999997333,
+        49.33740299998408
+      ],
+      "improved": 5
+    },
+    "paragraph": {
+      "n": 233,
+      "orig": 106017,
+      "bits": [
+        101175,
+        101101,
+        101101,
+        101084
+      ],
+      "ms": [
+        44.40419099997189,
+        49.76009800001975,
+        49.72354899998345,
+        56.91912099998535
+      ],
+      "improved": 7
+    },
+    "article": {
+      "n": 3,
+      "orig": 106418,
+      "bits": [
+        106398,
+        106398,
+        106398,
+        106398
+      ],
+      "ms": [
+        409.1003780000028,
+        397.42922700000236,
+        404.9887179999987,
+        400.94761099999596
+      ],
+      "improved": 0
+    },
+    "text": {
+      "n": 3,
+      "orig": 107234,
+      "bits": [
+        107199,
+        107199,
+        107199,
+        107199
+      ],
+      "ms": [
+        405.1712960000041,
+        404.5793140000005,
+        408.9168090000021,
+        403.7725970000047
+      ],
+      "improved": 0
+    },
+    "revision": {
+      "n": 3,
+      "orig": 115154,
+      "bits": [
+        115124,
+        115107,
+        115107,
+        115107
+      ],
+      "ms": [
+        487.51719399999274,
+        480.4294279999958,
+        476.14374600000156,
+        477.0479510000059
+      ],
+      "improved": 1
+    },
+    "page": {
+      "n": 3,
+      "orig": 116970,
+      "bits": [
+        116944,
+        116944,
+        116944,
+        116931
+      ],
+      "ms": [
+        488.24653699999726,
+        490.0934509999988,
+        490.11162400000467,
+        505.7339260000008
+      ],
+      "improved": 1
+    },
+    "page-root": {
+      "n": 3,
+      "orig": 116970,
+      "bits": [
+        116944,
+        116944,
+        116944,
+        116931
+      ],
+      "ms": [
+        489.37543800000276,
+        489.26078399999824,
+        493.3375799999958,
+        494.7740490000033
+      ],
+      "improved": 1
+    },
+    "ip": {
+      "n": 1,
+      "orig": 182,
+      "bits": [
+        161,
+        161,
+        161,
+        161
+      ],
+      "ms": [
+        0.09806299999763723,
+        0.11548499999844353,
+        0.11339099999895552,
+        0.13773700000092504
+      ],
+      "improved": 0
+    }
+  },
+  "limitations": [
+    "three width-selected pages",
+    "nested levels overlap",
+    "bit length not archive size",
+    "probable primes above 64 bits",
+    "historical nested sets not randomized",
+    "fixed timing excludes tree construction"
+  ]
+}
