@@ -1,0 +1,35 @@
+name: E0095 XML span and integer factor reconnaissance
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/xml/xml_probe.rs'
+      - '.github/workflows/xml-span-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and test lexical spans and exact factor descriptions
+        run: |
+          set -euo pipefail
+          rustc --version
+          rustc --edition=2021 --test experiments/xml/xml_probe.rs -o /tmp/xml-tests
+          /tmp/xml-tests
+          rustc --edition=2021 -C opt-level=3 experiments/xml/xml_probe.rs -o /tmp/xml-probe
+      - run: sh datasets/acquire.sh enwik9
+      - name: Full-corpus span census and bounded integer factors
+        run: |
+          set -euo pipefail
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
+          ulimit -v 6291456
+          /usr/bin/time -v timeout --kill-after=10s 480s /tmp/xml-probe data/enwik9 /tmp/rebuilt-enwik9
+          cmp data/enwik9 /tmp/rebuilt-enwik9
+          sha256sum data/enwik9 /tmp/rebuilt-enwik9
+          test "$(sha256sum /tmp/rebuilt-enwik9 | cut -d' ' -f1)" = "$expected"
+          echo E0095_COMPLETE
