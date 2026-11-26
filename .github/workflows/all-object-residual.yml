@@ -1,4 +1,4 @@
-name: E0118 enlarged inventory residual GCD
+name: E0121 enlarged inventory residual GCD
 on:
   push:
     branches: [main]
@@ -51,4 +51,4 @@ jobs:
         run: |
           set -euo pipefail
           /usr/bin/time -v timeout --kill-after=10s 900s node --max-old-space-size=3072 experiments/xml/all-object-residual.mjs data/enwik9
-          echo E0118_COMPLETE
+          echo E0121_COMPLETE
