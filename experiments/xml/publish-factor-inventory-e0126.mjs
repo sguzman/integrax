@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {mkdirSync,readFileSync,readdirSync,writeFileSync} from 'node:fs';
+import {mkdirSync,readFileSync,statSync,writeFileSync} from 'node:fs';
 
 const ID='E0126',ROOT='inventory/batches/E0126',RECORD='experiments/records/E0126.json';
 const stages=['E0104','E0105','E0106','E0107','E0108','E0110','E0112','E0114','E0116','E0119','E0121','E0123'];
@@ -94,9 +94,16 @@ const wallSeconds=sec?sec.split(':').reduce((a,x)=>a*60+Number(x),0):null;
 const peakRss=Number(/Maximum resident set size \(kbytes\): (\d+)/.exec(time)?.[1]??0)||null;
 const runId=Number(process.env.E0126_RUN_ID??0)||null;
 const revision=process.env.E0126_HEAD_SHA??null;
-const record={id:ID,campaign:'C20',status:'verified',revision,run_id:runId,corpus_sha256:sha,shards:batchShards,index_delta_shards:indexFiles,snapshots:snapshotPath,pages:pageRecords,aggregate:totals,levels:Object.fromEntries([...byKind].sort(([a],[b])=>a.localeCompare(b))),frozen,summary:{...summary},wall_seconds:wallSeconds,peak_rss_kib:peakRss,product_recheck:'Publication re-read all hosted rows, matched each byte span and SHA-256 against enwik9, checked each exact factor/cofactor product, verified every ordered child partition by radix-256 concatenation, checked all twelve nested frozen inventory controls and all page snapshots, then reconstructed the cumulative factor index.'};
-writeFileSync(RECORD,JSON.stringify(record,null,2)+'\n');
 manifest.batches.push({id:ID,record:RECORD,shards:batchShards,snapshots:snapshotPath});
 manifest.indexed_nodes+=totals.nodes;manifest.index.batch=ID;manifest.index.distinct_factors=prior.size;manifest.index.shards.push(...indexFiles);
+const unique=(xs)=>[...new Set(xs)];
+const objectPaths=unique(manifest.batches.flatMap(b=>b.shards.map(s=>s.path)));
+const snapshotPaths=unique(manifest.batches.map(b=>b.snapshots).filter(Boolean));
+const indexPaths=unique(manifest.index.shards.map(s=>s.path));
+const refinementPaths=unique((manifest.refinements??[]).map(x=>x.path));
+const byteSum=paths=>paths.reduce((n,p)=>n+statSync(p).size,0);
+const storage={corpus_bytes:corpus.length,new_object_json_bytes:byteSum(batchShards.map(s=>s.path)),new_index_json_bytes:byteSum(indexFiles.map(s=>s.path)),cumulative_object_json_bytes:byteSum(objectPaths),cumulative_factor_index_json_bytes:byteSum(indexPaths),cumulative_snapshot_json_bytes:byteSum(snapshotPaths),cumulative_refinement_json_bytes:byteSum(refinementPaths),cumulative_inventory_json_bytes:byteSum(unique([...objectPaths,...indexPaths,...snapshotPaths,...refinementPaths])),accounting:'Repository JSON research side information only; this is not an encoded archive or a corpus partition. Seed records and experiment reports are excluded.'};
+const record={id:ID,campaign:'C20',status:'verified',revision,run_id:runId,corpus_sha256:sha,shards:batchShards,index_delta_shards:indexFiles,snapshots:snapshotPath,pages:pageRecords,aggregate:totals,levels:Object.fromEntries([...byKind].sort(([a],[b])=>a.localeCompare(b))),frozen,summary:{...summary},storage,wall_seconds:wallSeconds,peak_rss_kib:peakRss,product_recheck:'Publication re-read all hosted rows, matched each byte span and SHA-256 against enwik9, checked each exact factor/cofactor product, verified every ordered child partition by radix-256 concatenation, checked all twelve nested frozen inventory controls and all page snapshots, then reconstructed the cumulative factor index.'};
+writeFileSync(RECORD,JSON.stringify(record,null,2)+'\n');
 writeFileSync('inventory/manifest.json',JSON.stringify(manifest,null,2)+'\n');
 console.log(JSON.stringify({event:'E0126_PUBLICATION',nodes:totals.nodes,parents:totals.parents,new_factors:newIndex.size,distinct_factors:prior.size,object_shards:batchShards.length,index_shards:indexFiles.length,pages:pageRecords,outputs:[RECORD,snapshotPath,'inventory/manifest.json']},null,2));
