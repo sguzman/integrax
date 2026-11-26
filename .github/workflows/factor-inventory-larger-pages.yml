@@ -1,4 +1,4 @@
-name: E0116 cumulative inventory larger pages
+name: E0119 larger held-out page inventory expansion
 on:
   push:
     branches: [main]
@@ -11,14 +11,44 @@ permissions:
 jobs:
   measure:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
-      - run: sh datasets/acquire.sh enwik9
-      - name: Compare frozen inventories on identical fresh objects
+      - name: Restore verified corpus cache
+        uses: actions/cache@v4
+        with:
+          path: data/enwik9
+          key: enwik9-sha256-159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+      - name: Acquire and verify authentic corpus (hosted)
         run: |
           set -euo pipefail
-          node --version
+          mkdir -p data
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          if [ ! -f data/enwik9 ]; then
+            # Fresh ephemeral runner only: keep each endpoint's partial separate.
+            for host in mattmahoney.net www.mattmahoney.net; do
+              zip="data/enwik9.${host}.zip.tmp"
+              raw="data/enwik9.${host}.raw.tmp"
+              echo "Trying HTTPS endpoint $host"
+              if curl --proto '=https' --proto-redir '=https' --location --fail --http1.1 \
+                  --connect-timeout 30 --max-time 180 --output "$zip" "https://$host/dc/enwik9.zip" &&
+                 [ "$(wc -c < "$zip")" -eq 322592222 ] &&
+                 unzip -tq "$zip" &&
+                 unzip -p "$zip" enwik9 > "$raw" &&
+                 [ "$(wc -c < "$raw")" -eq 1000000000 ] &&
+                 printf '%s  %s\n' "$expected" "$raw" | sha256sum -c -; then
+                mv "$raw" data/enwik9
+                rm -f "$zip"
+                break
+              fi
+              echo "Endpoint $host did not return the verified corpus; trying next endpoint."
+            done
+          fi
+          test -f data/enwik9
+          printf '%s  %s\n' "$expected" data/enwik9 | sha256sum -c -
+          sh datasets/acquire.sh enwik9
+      - name: Measure larger held-out pages with nine frozen inventories
+        run: |
+          set -euo pipefail
           /usr/bin/time -v timeout --kill-after=10s 900s node --max-old-space-size=3072 experiments/xml/factor-inventory-larger-pages.mjs data/enwik9
-          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
-          echo E0116_COMPLETE
+          echo E0119_COMPLETE
