@@ -1,0 +1,215 @@
+{
+  "id": "E0098",
+  "campaign": "C20",
+  "status": "roundtrip-verified",
+  "revision": "fa872501a487bc68c961d69478f52cf9d90c3a38",
+  "run": 45761521438,
+  "job": 139712384595,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "fixtures": {
+    "event": "XML_TREE_FIXTURES",
+    "decimal": {
+      "archive_bytes": 57,
+      "archive_sha256": "97aab27110ae74aec01a36f2935234acb7acd7409efc1ea0f534ccf4f47e6f4b",
+      "counts": [
+        5,
+        0,
+        3,
+        0,
+        1,
+        0
+      ],
+      "verified": true
+    },
+    "factor": {
+      "archive_bytes": 27,
+      "archive_sha256": "43f4c4e4fae786327cd465d7e393e54d4b5d71074e256cd5f8be5d3b19066c52",
+      "counts": [
+        2,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "verified": true
+    }
+  },
+  "rows": [
+    {
+      "event": "XML_TREE_REGION",
+      "offset": 100000000,
+      "start": 100028432,
+      "end": 101086065,
+      "input_sha256": "984a94984b3febbc0008c38fbbc55b2c9fe66e83a70bfae7b735f259a86f9b80",
+      "raw": 1057633,
+      "gzip": 392252,
+      "deflate": 392680,
+      "structural": {
+        "archive_bytes": 1035558,
+        "archive_sha256": "40218e511dd447935124bbe7c36e027dacd4cf82973548393d057d21c2676e52",
+        "counts": [
+          1056,
+          5023,
+          1480,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "hybrid": {
+        "archive_bytes": 447714,
+        "archive_sha256": "fd880da6618067018f53f4c13dd0cdc11bd6c9b2cfae4881de2893154e0055d8",
+        "counts": [
+          611,
+          3178,
+          917,
+          90,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "arithmetic": {
+        "archive_bytes": 447040,
+        "archive_sha256": "6b70d577fae034a8205839feded87c7859cf3abaca262106845dc7f8d011eb6d",
+        "counts": [
+          451,
+          3882,
+          1133,
+          89,
+          297,
+          0
+        ],
+        "verified": true
+      },
+      "seconds": 0.438859379
+    },
+    {
+      "event": "XML_TREE_REGION",
+      "offset": 400000000,
+      "start": 400007843,
+      "end": 401063808,
+      "input_sha256": "fd0a38b42a87439497eb0e8929566f87776189ac06072259e494a3bee0588b1e",
+      "raw": 1055965,
+      "gzip": 371069,
+      "deflate": 371784,
+      "structural": {
+        "archive_bytes": 1003077,
+        "archive_sha256": "c523d77cb93130dcd5800b99d2227f54396a5ca9446f33d9c408d5742f54ce15",
+        "counts": [
+          2364,
+          11269,
+          3322,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "hybrid": {
+        "archive_bytes": 464014,
+        "archive_sha256": "d83a9c62400a831d253b658f7ab5101b183cbcc2ecebd99cddb90f0f10a8c6ca",
+        "counts": [
+          1469,
+          7826,
+          2261,
+          230,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "arithmetic": {
+        "archive_bytes": 462676,
+        "archive_sha256": "28271ba97a19dcfe119a7687062f1d381240e663a964b927eaed5157c73038ee",
+        "counts": [
+          1006,
+          8952,
+          2609,
+          222,
+          687,
+          0
+        ],
+        "verified": true
+      },
+      "seconds": 0.4712033430000001
+    },
+    {
+      "event": "XML_TREE_REGION",
+      "offset": 800000000,
+      "start": 800004795,
+      "end": 801054036,
+      "input_sha256": "8084a5567b3b69783671ee820190014bd7cce09b8f10596ea00ec5f87e730091",
+      "raw": 1049241,
+      "gzip": 287954,
+      "deflate": 290766,
+      "structural": {
+        "archive_bytes": 1012038,
+        "archive_sha256": "0256b8346d68a64de6582f974ee37973dbb21d8d1f612b4e86b04f5ea7158943",
+        "counts": [
+          1714,
+          8157,
+          2405,
+          0,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "hybrid": {
+        "archive_bytes": 346814,
+        "archive_sha256": "e940d5704a9735df97d40523b4ea202266d6a4baf0210110bc6037381f49c073",
+        "counts": [
+          1023,
+          5387,
+          1555,
+          157,
+          0,
+          0
+        ],
+        "verified": true
+      },
+      "arithmetic": {
+        "archive_bytes": 345679,
+        "archive_sha256": "7cc870378979891feb192faad69bd01ca595707c14d65c4e186ba3853a45c9fe",
+        "counts": [
+          716,
+          6367,
+          1857,
+          152,
+          502,
+          0
+        ],
+        "verified": true
+      },
+      "seconds": 0.3697355950000001
+    }
+  ],
+  "summary": {
+    "event": "XML_TREE_SUMMARY",
+    "training_start": 1406,
+    "training_end": 1052770,
+    "dictionary_entries": 128,
+    "raw": 3162839,
+    "gzip": 1051275,
+    "deflate": 1055230,
+    "structural": 3050673,
+    "hybrid": 1258542,
+    "arithmetic": 1255395,
+    "arithmeticNodes": 1486
+  },
+  "wall_seconds": 3.62,
+  "peak_rss_kib": 1166096,
+  "limitations": [
+    "same-code roundtrip, not independent decoder",
+    "page-aligned sample only",
+    "all authentic arithmetic nodes decimal conversions; no prime-power selections",
+    "article bodies not subdivided in this experiment"
+  ]
+}
