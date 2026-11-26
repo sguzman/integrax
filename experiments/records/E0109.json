@@ -1,0 +1,29 @@
+{
+  "batch": "E0109",
+  "run_id": 45838810411,
+  "job_id": 139974685276,
+  "commit": "16b4f3d603f025ae1087b57a73807bea5665a37e",
+  "elapsed_seconds": 10.9,
+  "summary": {
+    "event": "COFACTOR_SUMMARY",
+    "loaded": 14966,
+    "partial": 2487,
+    "known_factors": 6504,
+    "unique_residuals": 1866,
+    "inventory_hits": 20,
+    "proper_gcd_hits": 0,
+    "improved": 20,
+    "completed": 0,
+    "parent_improved": 20,
+    "bits_removed": 248,
+    "gcd_calls": 0,
+    "rho_steps": 0,
+    "new_prime_values": 0,
+    "parents_screened": 2113,
+    "descendant_checks": 14849,
+    "immediate_hits": 0,
+    "deeper_hits": 0,
+    "proper_composite_splits": 0,
+    "full_child_residual_hits": 0
+  }
+}

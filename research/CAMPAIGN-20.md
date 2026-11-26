@@ -44,3 +44,7 @@ E0106 passed: 36 improved objects (35 parents), 2 completed, 648 residual bits r
 E0107 passed, 3446 new nodes (9095 total), 5144 distinct factors (+998), 207 previously unseen parent values with full-inventory hits. 15.42 s. Scale-normalized evidence shows strong word/phrase reductions but nearly unchanged article/page cofactors. Next E0108 controlled fixed-object inventory growth comparison; no compression claim.
 
 E0108 passed: 5871 new nodes (14966 total), 6504 factors (+1360), 335 unseen parent full-inventory hits. Frozen 3286/4145/4146/5144-factor screens on identical objects: 915278/912006/912006/908682 residual bits; 274 objects improved including 57 parents, no article improvements and one page improvement. 42.26 s. Next E0109: strict descendant residual GCD after screening latest inventory, compare exact composite splits beyond known primes. No compression claim.
+
+E0109 passed: 14,966 indexed objects, 2,487 partial, 1,866 distinct post-screen residuals; 20 parent improvements solely from the existing 6,504-factor inventory, 248 residual bits removed (overlapping objects), no completions or new primes. 2,113 parents screened and 14,849 strict descendant checks yielded zero proper shared divisors. 10.90 s. All 20 exact overlays persisted. No compression claim.
+
+E0110: global strictly smaller residual GCD control after replaying E0109 overlays, compare descendant and unrelated smaller-value matches using the same residual snapshot. Preserve proper splits and factor provenance; hosted CI pending.

@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: E0109 strict-descendant residual GCD and cumulative refinement. E0108 passed, 14966 objects and 6504 factors.
+Next: E0110 global strictly smaller residual GCD control. E0109 verified and overlays persisted.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -86,3 +86,7 @@ E0108 authored: frozen historical inventory controls on identical fresh 4097–6
 E0108 passed: 5871 new nodes (14966 total), 6504 factors (+1360), 335 unseen parent full-inventory hits. Frozen 3286/4145/4146/5144-factor screens on identical objects: 915278/912006/912006/908682 residual bits; 274 objects improved including 57 parents, no article improvements and one page improvement. 42.26 s. Next E0109: strict descendant residual GCD after screening latest inventory, compare exact composite splits beyond known primes. No compression claim.
 
 E0109 authored: authenticated overlay replay, full inventory screen and strict-descendant cofactor GCD, retaining exact proper splits beyond known prime reuse. Hosted CI pending.
+
+E0109 passed: 14,966 indexed objects, 2,487 partial, 1,866 distinct post-screen residuals; 20 parent improvements solely from the existing 6,504-factor inventory, 248 residual bits removed (overlapping objects), no completions or new primes. 2,113 parents screened and 14,849 strict descendant checks yielded zero proper shared divisors. 10.90 s. All 20 exact overlays persisted. No compression claim.
+
+E0110: global strictly smaller residual GCD control after replaying E0109 overlays, compare descendant and unrelated smaller-value matches using the same residual snapshot. Preserve proper splits and factor provenance; hosted CI pending.
