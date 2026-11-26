@@ -1,0 +1,6652 @@
+{
+  "id": "E0096",
+  "campaign": "C20",
+  "status": "independently-reproduced",
+  "revision": "b83d3522652358f76ee411fb42bcf55ae058769a",
+  "run": 45760506575,
+  "job": 139709106088,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "census": {
+    "event": "XML_CENSUS_INDEPENDENT",
+    "profile": {
+      "bytes": 1000000000,
+      "tokens": 10548002,
+      "markup_bytes": 47797368,
+      "text_bytes": 952202632,
+      "opaque_bytes": 0,
+      "partial_markup_bytes": 0,
+      "max_depth": 5,
+      "roots": 1,
+      "complete_elements": 2686411,
+      "open_tail": [
+        "/mediawiki",
+        "/mediawiki/page",
+        "/mediawiki/page/revision",
+        "/mediawiki/page/revision/text"
+      ]
+    },
+    "span_classes": 37,
+    "prior_factors_checked": 144,
+    "seconds": 9.295971939
+  },
+  "summary": {
+    "event": "XML_LARGE_SUMMARY",
+    "tested": 201,
+    "unresolved": 114,
+    "complete_probable": 87,
+    "nontrivial": 195,
+    "wins": 0,
+    "saved": 0
+  },
+  "rows": [
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/id",
+      "kind": "element",
+      "offset": 650836465,
+      "width": 15,
+      "n": "313675406584288417658538668679849022",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "18223",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "43100537",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "199686137967864612668761",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 3984,
+      "payload_bytes": 26,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/id",
+      "kind": "element",
+      "offset": 385362322,
+      "width": 14,
+      "n": "1225294556998192383348183866631230",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "113",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "317",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "180031789203068529831543077",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/id",
+      "kind": "element",
+      "offset": 964316386,
+      "width": 15,
+      "n": "313675406586678027332879149752214590",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "769",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "61523438715276941382979432997",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 34,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/id",
+      "kind": "element",
+      "offset": 464644120,
+      "width": 15,
+      "n": "313675406584260138582863061963072574",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "43",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3647388448654187657940268162361309",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/id",
+      "kind": "element",
+      "offset": 82149281,
+      "width": 14,
+      "n": "1225294556969821146560657965540414",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "612647278484910573280328982770207",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 20,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/id",
+      "kind": "element",
+      "offset": 710684733,
+      "width": 15,
+      "n": "313675406584297898850963638859686974",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "41",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "43",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "61",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "76756422665767939788824651011",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/id",
+      "kind": "element",
+      "offset": 753324440,
+      "width": 15,
+      "n": "313675406585468991048967362875843646",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2963",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "14939537",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "107366240029388604764501",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 1496,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/id",
+      "kind": "element",
+      "offset": 946785824,
+      "width": 15,
+      "n": "313675406585511639343966099683763262",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "353",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "9931",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "369740833865808132895908677",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 80278178,
+      "width": 11,
+      "n": "132299281028444986949596221",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "173",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13416416289265286172761",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 943664517,
+      "width": 11,
+      "n": "132299281028444986949596221",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "173",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13416416289265286172761",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 112764143,
+      "width": 11,
+      "n": "132299281028444986949596221",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "173",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13416416289265286172761",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 83209365,
+      "width": 11,
+      "n": "132299281028444986949596221",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "173",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13416416289265286172761",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 92772864,
+      "width": 10,
+      "n": "516794066517608379936624",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "37",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "35215319",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "8263098513071",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 5618,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 62712951,
+      "width": 11,
+      "n": "132299281028444986949596221",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "173",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13416416289265286172761",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 372180553,
+      "width": 11,
+      "n": "132299281028444986949596221",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "173",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13416416289265286172761",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 370526513,
+      "width": 11,
+      "n": "132299281028444986949596221",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "173",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13416416289265286172761",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 416712467,
+      "width": 21,
+      "n": "159940016751814886203625695947707544767082259509104",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "768942388229879260594354307440901657534049324563",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 608829104,
+      "width": 21,
+      "n": "159940016751814886203625695947707544767082259509104",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "768942388229879260594354307440901657534049324563",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 385339058,
+      "width": 21,
+      "n": "148184916151685308701532512476325229507490121740144",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19979",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "167611",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "212747467836523127390525167120800831547",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 34,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 801063363,
+      "width": 29,
+      "n": "2733529223833806042507839804288878935018379207849020520613275071901552",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "61",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "6257",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "447618212492795944363270482025521405373257231875548651184980211",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 79,
+      "payload_bytes": 40,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 82879939,
+      "width": 21,
+      "n": "148184916151685308701532512476325229507490121740144",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19979",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "167611",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "212747467836523127390525167120800831547",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 34,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 371896129,
+      "width": 21,
+      "n": "159940016751814886203625695947707544767082259509104",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "768942388229879260594354307440901657534049324563",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 230694719,
+      "width": 21,
+      "n": "148184916151685308701532512476325229507490121740144",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19979",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "167611",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "212747467836523127390525167120800831547",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 34,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/restrictions",
+      "kind": "leaf-body",
+      "offset": 254479663,
+      "width": 21,
+      "n": "159940016751814886203625695947707544767082259509104",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "768942388229879260594354307440901657534049324563",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "element",
+      "offset": 691632596,
+      "width": 22,
+      "n": "22593989949784970802809307803524228189838130644153406",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "337",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "66118817123432101331534504484762957145477061917",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 36,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "element",
+      "offset": 979348432,
+      "width": 27,
+      "n": "24842354667642657748577489728285414181208871280605489635341005886",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "43",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "133733",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1270319",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "3214306255974278478008138941141308895997290914247",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 43,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "element",
+      "offset": 761604206,
+      "width": 31,
+      "n": "106697100853158164444656842647369558009284664768294400896260406799670080574",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "229",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "232963102299471974769993106216964100456953416524660263965634075981812403",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 39,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "element",
+      "offset": 775252991,
+      "width": 25,
+      "n": "379064249689371608712409145632765808885295964654119066432574",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1289",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "147038110818220174054464369911856403756903011890659063783",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 34,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "element",
+      "offset": 390865679,
+      "width": 26,
+      "n": "97040447920479131830378782925787940583898066178494799415243838",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "53",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "821",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1115074206794281385222563175669201624616758970635152706263",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 37,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "element",
+      "offset": 212081739,
+      "width": 26,
+      "n": "97040447920479131830375033120168634550505282255691267468850238",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2109574954793024605008152893916709446750114831645462336279353",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 35,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "element",
+      "offset": 926644538,
+      "width": 31,
+      "n": "106697100853158164444664708357570297506650661510356007539287825333011510334",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "538874246733122042649821759381668169225508391466444482521655683500058133",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 42,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "element",
+      "offset": 941059745,
+      "width": 29,
+      "n": "1628068555498629218210705949887509433716689031261293119062793891247166",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "35392794684752809091537085867119770298188891983941154762234649809721",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 38,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 680784460,
+      "width": 16,
+      "n": "129456381550982833278241865697220914547",
+      "terms": [
+        {
+          "n": "129456381550982833278241865697220914547",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 19,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 587584334,
+      "width": 16,
+      "n": "62692447919012391007788977163075594799",
+      "terms": [
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1621",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "2447",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "2575384753788456284105398021",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 449201539,
+      "width": 12,
+      "n": "14596722871301903096403140705",
+      "terms": [
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "149",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "29983",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "93352502636133649889",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 25,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 497033956,
+      "width": 15,
+      "n": "244892370951754021190350041316862511",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "149",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "211801",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "9747679",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "36588733",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "7252556763059",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 6041,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 530307512,
+      "width": 10,
+      "n": "521516269502742391977314",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "260758134751371195988657",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 16,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 880708382,
+      "width": 15,
+      "n": "244892370951754021190350041316862511",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "149",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "211801",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "9747679",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "36588733",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "7252556763059",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 6041,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 155149073,
+      "width": 15,
+      "n": "339535490960411507404178472152163183",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "41",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "59",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "83",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "311",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3847",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "471158885838906438895229",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 252862802,
+      "width": 11,
+      "n": "149280024156703090054233469",
+      "terms": [
+        {
+          "n": "149280024156703090054233469",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 14,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 940830983,
+      "width": 17,
+      "n": "34848995497572389314038946643447854493550",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "113",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "307",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1709",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "206083",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1000793220612535971880939",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 41,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 726513204,
+      "width": 22,
+      "n": "13215293247947076624835163590434024417849283196443997",
+      "terms": [
+        {
+          "n": "643",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1051",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "12487949",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1565928755423309106760238342491921129921",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 1318,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 523053471,
+      "width": 20,
+      "n": "269262013855965266023476316289945927479732480559",
+      "terms": [
+        {
+          "n": "269262013855965266023476316289945927479732480559",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 787886815,
+      "width": 17,
+      "n": "34848995579516185995159526540270791451762",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "103",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "950531",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "9251413",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "8059280503163549470907",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 1384,
+      "payload_bytes": 38,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 971482161,
+      "width": 21,
+      "n": "51805643376830871569213269984837857007281530035549",
+      "terms": [
+        {
+          "n": "6823",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1149773",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "6603734348561240374703421102818949481031",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 759220626,
+      "width": 26,
+      "n": "116335914511053290083030491480400006090778642720934518884295020",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "101",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "426871",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "134916723990760779241409346729393131162493293323566181",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 40,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 901513221,
+      "width": 29,
+      "n": "3329067737544305447705311165524076571617624524022877983023303903378813",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "389",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2852671583157074076868304340637597747744322642693125949462985349939",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 38,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/comment",
+      "kind": "leaf-body",
+      "offset": 697813616,
+      "width": 25,
+      "n": "296056713647669787656331494841225504259951418026585376582008",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "113",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "327496364654501977495941919072152106482247143834718336927",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "element",
+      "offset": 749957278,
+      "width": 13,
+      "n": "4786306863273974236474509976638",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2234503670996253144946083089",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 27,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "element",
+      "offset": 434859214,
+      "width": 15,
+      "n": "313675406584269527975312906124878910",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "929",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11254948208979889773064689850193",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "element",
+      "offset": 743118690,
+      "width": 15,
+      "n": "313675406584288399282730687147893822",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "239",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "811",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3833",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1082777",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "4735037",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "2167089757733",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 3081,
+      "payload_bytes": 36,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "element",
+      "offset": 527750730,
+      "width": 14,
+      "n": "1225294556993433124222691244074046",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "46271",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "401224720566986824073554561",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 92,
+      "payload_bytes": 28,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "element",
+      "offset": 110604089,
+      "width": 14,
+      "n": "1225294556988821510259658870842430",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "61",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "83",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2200087186879538739625552351",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "element",
+      "offset": 806219323,
+      "width": 15,
+      "n": "313675406585483139483250614709347390",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "367",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2609",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "10919910314832195111773387471",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 32,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "element",
+      "offset": 851465682,
+      "width": 15,
+      "n": "313675406586677934667091393418716222",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "127",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "81373",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "15176318258105787699468665941",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 306,
+      "payload_bytes": 26,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/id",
+      "kind": "element",
+      "offset": 782184345,
+      "width": 15,
+      "n": "313675406587896397957509415673881662",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "29",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1019",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "8546468413048311684238281461",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 812619381,
+      "width": 15,
+      "n": "313676357346644760108512147172585534",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "52279392891107460018085357862097589",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 815436528,
+      "width": 15,
+      "n": "313676357346644760108512147172585534",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "52279392891107460018085357862097589",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 816086358,
+      "width": 16,
+      "n": "80301147479511590547964672775446687806",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "56737",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "235887068049396309721359585383573",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 19,
+      "payload_bytes": 27,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 822106739,
+      "width": 15,
+      "n": "313676357346644760108512147172585534",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "52279392891107460018085357862097589",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 675992557,
+      "width": 24,
+      "n": "1481294716287137323674837525889166567410693449831949103166",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "61",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "17761",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "227873054624677652804532667954741903564525924491641",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 37,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 350936110,
+      "width": 22,
+      "n": "22602763615307304372105501133166064149553651988918334",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "137",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1187",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "29251",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "103297951109404547104036216028337131085641",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 38,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 760247165,
+      "width": 21,
+      "n": "88292045373659248974379127632869978699736216596542",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1040989",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "42407770578584043142808967065391650968327339",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 775643718,
+      "width": 21,
+      "n": "88292045374337155272826291939327976007151154458686",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "865608287983697600713983254307137019677952494693",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 32,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 309987957,
+      "width": 23,
+      "n": "5786307485518669919233087763973753886779524164144951358",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "109",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "26542694887700320730427008091622724251282220936444731",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 126363322,
+      "width": 24,
+      "n": "1481294716292779760660512665684720230096342070464659157054",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1879",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "394171026155609302996411033976774941483858986286497913",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 957966180,
+      "width": 23,
+      "n": "5786307485608568100911343360937972026199288241839501374",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "15643",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "17027",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "18451",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "57637",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "261895145140845490907806500187605319",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 43,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "element",
+      "offset": 986835608,
+      "width": 21,
+      "n": "88292045374337155252544799924724672032689919455294",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "83089",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "531310073381176541133873316111186029635029423",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 445,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 492590948,
+      "width": 13,
+      "n": "4296017264350240267109877560888",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "61",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1217",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "7233618789064483120125203",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 434822986,
+      "width": 12,
+      "n": "15533720104424197535742964537",
+      "terms": [
+        {
+          "n": "757711",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "20500850725968340878967",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 18,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 324662063,
+      "width": 14,
+      "n": "1140266010680763887031502115057977",
+      "terms": [
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23270734911852324225132696225673",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 20,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 356698331,
+      "width": 13,
+      "n": "3976634764566292008327139178034",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "59",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2437",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "4609532842972038892320533",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 27,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 383763760,
+      "width": 11,
+      "n": "65533132354979818053187121",
+      "terms": [
+        {
+          "n": "7687",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "8525189586962380389383",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 17,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 667690628,
+      "width": 14,
+      "n": "1017940200021430685653616577884471",
+      "terms": [
+        {
+          "n": "1017940200021430685653616577884471",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 17,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 101287504,
+      "width": 13,
+      "n": "4295707783970839922631995634999",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "107",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "198943",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "67266841456017794270633",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 196,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 171032138,
+      "width": 15,
+      "n": "260612735929417013524046383166927927",
+      "terms": [
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "71",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7951",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "26357",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "2502197101874992584635813",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 28,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 16773045,
+      "width": 17,
+      "n": "22947036445251240005308261542038002561140",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181721",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "4336799",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "161763184570962089563481287",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 4044,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 65702551,
+      "width": 17,
+      "n": "22947036445251240005308261542038002561140",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181721",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "4336799",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "161763184570962089563481287",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 4044,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 104148888,
+      "width": 17,
+      "n": "22947036445251240005308261542038002561140",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181721",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "4336799",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "161763184570962089563481287",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 4044,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 53160258,
+      "width": 17,
+      "n": "22947036445251240005308261542038002561140",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181721",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "4336799",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "161763184570962089563481287",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 4044,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 179645654,
+      "width": 17,
+      "n": "22947036445251240005308261542038002561140",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181721",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "4336799",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "161763184570962089563481287",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 4044,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 125031550,
+      "width": 17,
+      "n": "22947036445251240005308261542038002561140",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181721",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "4336799",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "161763184570962089563481287",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 4044,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 30288668,
+      "width": 17,
+      "n": "22947036445251240005308261542038002561140",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181721",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "4336799",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "161763184570962089563481287",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 4044,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/ip",
+      "kind": "leaf-body",
+      "offset": 203011149,
+      "width": 17,
+      "n": "22947036445251240005308261542038002561140",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181721",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "4336799",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "161763184570962089563481287",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 4044,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "element",
+      "offset": 703580830,
+      "width": 29,
+      "n": "1629965809429321155025338252736980466464458105758554943738656613819710",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "249187",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "72679277875175455248260153251127353552172023676933161919836937",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 269,
+      "payload_bytes": 43,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "element",
+      "offset": 996269468,
+      "width": 29,
+      "n": "1629965809429321155025338162488310572365157132020352936657859363300670",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "162996580942932115502533816248831057236515713202035293665785936330067",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 38,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "element",
+      "offset": 746096349,
+      "width": 31,
+      "n": "106821439286759991215740573526330804565575541469690192806419670970422617406",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1978174801606666503995195806043163047510658175364633200118882795748566989",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 40,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "element",
+      "offset": 756055485,
+      "width": 32,
+      "n": "27346288457410557751229588313427107049523021975825600747812793768033173464382",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "523",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "4957",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "763559",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1515727",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "50077519349235555321277394962393074419767601060280098587",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 54,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "element",
+      "offset": 664315188,
+      "width": 28,
+      "n": "6367053943083285761817727976766718236658292904283559004507290297662",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "101",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31520069025164780999097663251320387310189568833086925764887575731",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 36,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "element",
+      "offset": 938160572,
+      "width": 27,
+      "n": "24871304465169085007100495847317795895440738629630081691334567230",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "59",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "14051584443598353111356212343117398810983468152333379486629699",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 41,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "element",
+      "offset": 977752267,
+      "width": 30,
+      "n": "417271247213906215686486552449043497877586049029286158541580816991741246",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "877",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "237896948240539461622854362855783066064758294771542849795656110029499",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 39,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "element",
+      "offset": 734534393,
+      "width": 29,
+      "n": "1629965809429321155025338341158690158596189598524352551133150482097470",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "97",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "833033",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "65070307717856799462505203050451354411243464230615233895237",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 45,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 307052942,
+      "width": 13,
+      "n": "6130713600537322661053650398053",
+      "terms": [
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3229",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "111684797707127004555292121",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 21,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 780383361,
+      "width": 13,
+      "n": "6687474733948619483168822490228",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "50662687378398632448248655229",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 578071893,
+      "width": 10,
+      "n": "407920883420466895744612",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "101980220855116723936153",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 16,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 978200772,
+      "width": 9,
+      "n": "1465538987508440919924",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "122128248959036743327",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 18,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 236279382,
+      "width": 14,
+      "n": "1386922846075579837415829193450347",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1117",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1117",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "2693",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "137590467968960178069437",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 123,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 382698213,
+      "width": 10,
+      "n": "393754068257195029589876",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "29",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1523",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "236429",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "856986007253",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 678,
+      "payload_bytes": 26,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 48561016,
+      "width": 9,
+      "n": "1373086849202131397995",
+      "terms": [
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "37",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "109",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "12022979",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "5663536357",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 3128,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 878323273,
+      "width": 10,
+      "n": "394103549856266126191718",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "83744910721688509603",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 21,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 982402991,
+      "width": 19,
+      "n": "1502637041673329913318864890050471099158259058",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "155081",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "603919",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "8022076677663107340912177673149311",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 236046383,
+      "width": 17,
+      "n": "28731872724961319141927138411600543246704",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3947",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "17713",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "65011",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "395091654185592799568932439",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 416,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 703429250,
+      "width": 17,
+      "n": "22937752355880672594444472491781770732914",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "443",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1151",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "137791",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1371746942093239895643435581",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 37,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 188267705,
+      "width": 17,
+      "n": "22937752355880672594444472491781770732914",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "443",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1151",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "137791",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1371746942093239895643435581",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 37,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 969708549,
+      "width": 19,
+      "n": "1503856628209714875255503463537671150829203316",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "227371",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "566227",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "29497526642884724789800756706863",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 36,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 970421015,
+      "width": 19,
+      "n": "1622698195697326077241177749228504100972881266",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "37",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1154123894521569044979500532879448151474311",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 993418777,
+      "width": 17,
+      "n": "25337009070041944135871093407791251808622",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "599",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2467",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "7733501",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1108544759744541541659496967",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 1191,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/contributor/username",
+      "kind": "leaf-body",
+      "offset": 529897845,
+      "width": 19,
+      "n": "1526414618974962069816833815872918618801333614",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2114147671710473780909742127247809721331487",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 27,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/id",
+      "kind": "element",
+      "offset": 994589129,
+      "width": 17,
+      "n": "20557031446064527567731897153604505134142",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "977",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1283",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "13590799",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "603342884003393671400407819",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 3390,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/id",
+      "kind": "element",
+      "offset": 779969321,
+      "width": 17,
+      "n": "20557031445907923335948627575129282012222",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "10278515722953961667974313787564641006111",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/id",
+      "kind": "element",
+      "offset": 557032987,
+      "width": 17,
+      "n": "20557031445907923302818202605899517355070",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "228411460510088036697980028954439081723",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 28,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/id",
+      "kind": "element",
+      "offset": 564904490,
+      "width": 17,
+      "n": "20557031445907923302855385450322995012670",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "29",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "109",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2250763",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "12562564400561351368255156903",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 35,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/id",
+      "kind": "element",
+      "offset": 948611370,
+      "width": 17,
+      "n": "20557031445907924535337983501633023730750",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "59",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "21438913",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "65007822326635602914300560369",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 4917,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/id",
+      "kind": "element",
+      "offset": 733069190,
+      "width": 17,
+      "n": "20557031446144371078173816930292875224126",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3041",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "14851",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "227592678151412781610205570558293",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 268,
+      "payload_bytes": 28,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/id",
+      "kind": "element",
+      "offset": 764157627,
+      "width": 17,
+      "n": "20557031445907923331299974043934134985790",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "47",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "43738364778527496449574412859434329757",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 28,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/id",
+      "kind": "element",
+      "offset": 951902838,
+      "width": 17,
+      "n": "20557031446143753298153779107799071548478",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "67",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "9527039",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "56863151",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "283182712185943954506853",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/minor",
+      "kind": "element",
+      "offset": 248701714,
+      "width": 9,
+      "n": "1114688598470196997950",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "79905992721877921",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/minor",
+      "kind": "element",
+      "offset": 731975928,
+      "width": 9,
+      "n": "1114688598470196997950",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "79905992721877921",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/minor",
+      "kind": "element",
+      "offset": 536590213,
+      "width": 9,
+      "n": "1114688598470196997950",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "79905992721877921",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/minor",
+      "kind": "element",
+      "offset": 892074631,
+      "width": 9,
+      "n": "1114688598470196997950",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "79905992721877921",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/minor",
+      "kind": "element",
+      "offset": 185120934,
+      "width": 9,
+      "n": "1114688598470196997950",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "79905992721877921",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/minor",
+      "kind": "element",
+      "offset": 320921965,
+      "width": 9,
+      "n": "1114688598470196997950",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "79905992721877921",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/minor",
+      "kind": "element",
+      "offset": 983917621,
+      "width": 9,
+      "n": "1114688598470196997950",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "79905992721877921",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/minor",
+      "kind": "element",
+      "offset": 812450239,
+      "width": 9,
+      "n": "1114688598470196997950",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "79905992721877921",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "element",
+      "offset": 29951253,
+      "width": 29,
+      "n": "1629854768414168666546629233060036690597363454086461348277060513050430",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "811",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2029985139202342371366724249972021934010092857161580475877219187",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 46,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "element",
+      "offset": 71845444,
+      "width": 29,
+      "n": "1629854768414168666546629233060036690597363454086461348277060513050430",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "811",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2029985139202342371366724249972021934010092857161580475877219187",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 46,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "element",
+      "offset": 741862321,
+      "width": 29,
+      "n": "1629854768414168666546629233060036690597363454086461348277060513050430",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "811",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2029985139202342371366724249972021934010092857161580475877219187",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 46,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "element",
+      "offset": 766579615,
+      "width": 29,
+      "n": "1629854768414168666546629233060036690597363454086461348277060513050430",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "811",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2029985139202342371366724249972021934010092857161580475877219187",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 46,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "element",
+      "offset": 820266122,
+      "width": 29,
+      "n": "1629854768414168666546629233060036690597363454086461348277060513050430",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "811",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2029985139202342371366724249972021934010092857161580475877219187",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 46,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "element",
+      "offset": 868339537,
+      "width": 29,
+      "n": "1629854768414168666546629233060036690597363454086461348277060513050430",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "811",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2029985139202342371366724249972021934010092857161580475877219187",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 46,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "element",
+      "offset": 919945459,
+      "width": 29,
+      "n": "1629854768414168666546629233060036690597363454086461348277060513050430",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "811",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2029985139202342371366724249972021934010092857161580475877219187",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 46,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 639306552,
+      "width": 9,
+      "n": "2277844205291827330429",
+      "terms": [
+        {
+          "n": "47",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1213",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "39954468528737039",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 69,
+      "payload_bytes": 17,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 950323838,
+      "width": 16,
+      "n": "47116958173165468514719823346783116637",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "107",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "113",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "99919537891429031796737610188513",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 757158842,
+      "width": 16,
+      "n": "46950153091341479071854662629366979933",
+      "terms": [
+        {
+          "n": "31",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "79",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "78487",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "244258956931612855528376951291",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 392,
+      "payload_bytes": 27,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 650198878,
+      "width": 13,
+      "n": "9783210960804639874836014988669",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "98862209",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "10995338371302268094549",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 692485899,
+      "width": 16,
+      "n": "46950153091341479071871269619305962845",
+      "terms": [
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "131",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "94727",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1204409",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "628272335724686348237693",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 466917288,
+      "width": 16,
+      "n": "46950153091341479071854662629617851741",
+      "terms": [
+        {
+          "n": "3923",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "11967920747219342103455177830644367",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 362138060,
+      "width": 16,
+      "n": "46950153091341479071854662629534293341",
+      "terms": [
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "557",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "66528112593456431060882111193739",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 27,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 444977774,
+      "width": 16,
+      "n": "47116958173165468514719823346816671069",
+      "terms": [
+        {
+          "n": "47116958173165468514719823346816671069",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 19,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 737067236,
+      "width": 26,
+      "n": "56759252306982313242473089011745465235832682983281993808567645",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "420438905977646764759059918605521964709871725802088843026427",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 34,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 946085282,
+      "width": 22,
+      "n": "13215293247947076624835163590448504895766981058583901",
+      "terms": [
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "37",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "181",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "20443",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "182471988564122257860024321170414039164639",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 34,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 788623391,
+      "width": 30,
+      "n": "243779132403901587826849635465541670155556417533296311463306920643353949",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "61420794256462985091168968371262703490943919761475513092291993107421",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 38,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 795994711,
+      "width": 31,
+      "n": "62407457895398806483673506678889023623407079204912028689472860958721793373",
+      "terms": [
+        {
+          "n": "62407457895398806483673506678889023623407079204912028689472860958721793373",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 34,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 364110597,
+      "width": 21,
+      "n": "51622239249793268065762357774430539414670128930141",
+      "terms": [
+        {
+          "n": "8101",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "6372329249449854100205204021038210025264798041",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 27,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 975911404,
+      "width": 25,
+      "n": "221715829324149661103410503952527157012656672561078129220957",
+      "terms": [
+        {
+          "n": "857",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "9371",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "318683",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "2726183",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "31777230089754498282813488601522053586379",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 38,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 979692743,
+      "width": 18,
+      "n": "3076925232994155172453067170113477788392797",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "71",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "347",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2089",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "5821",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "6401183",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "25467850271241879463181",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 39,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/text",
+      "kind": "leaf-body",
+      "offset": 926925894,
+      "width": 24,
+      "n": "866077458297459613685197281061755750660800807076487322973",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "288692486099153204561732427020585250220266935692162440991",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/timestamp",
+      "kind": "leaf-body",
+      "offset": 994589164,
+      "width": 20,
+      "n": "286524173795482317481087595410555699012853444698",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "143262086897741158740543797705277849506426722349",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 26,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/timestamp",
+      "kind": "leaf-body",
+      "offset": 779969356,
+      "width": 20,
+      "n": "286524173114912431907783057424459979977655529818",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "37",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "149",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "25986230102930567015035648233671320513119493",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/timestamp",
+      "kind": "leaf-body",
+      "offset": 557033022,
+      "width": 20,
+      "n": "286524173795477165749041014312975644342445356890",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1489",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1241963",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "5164599616981466098434391940821193209",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 37,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/timestamp",
+      "kind": "leaf-body",
+      "offset": 564904525,
+      "width": 20,
+      "n": "286524173455199950560763266282136183554543268698",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "79",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3433",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "58693210855177031763102490037772743401523",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/timestamp",
+      "kind": "leaf-body",
+      "offset": 948611405,
+      "width": 20,
+      "n": "286524173114912513037121658446323988532277883226",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "29",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1747",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "403963688793614546875744285695004227560093",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 128,
+      "payload_bytes": 34,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/timestamp",
+      "kind": "leaf-body",
+      "offset": 733069225,
+      "width": 20,
+      "n": "286524174135759512387573500902498955286629463386",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "691",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "207325741053371571915755065776048448108993823",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/timestamp",
+      "kind": "leaf-body",
+      "offset": 764157662,
+      "width": 20,
+      "n": "286524173114912431907171340959518804841730158938",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "37",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "47",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "32571997",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "2529224057444748645189056858493930643",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 34,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/revision/timestamp",
+      "kind": "leaf-body",
+      "offset": 951902873,
+      "width": 20,
+      "n": "286524174135759492105479426889387663804284876378",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2521",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "45131",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "74068670630559367924782803208847461967",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 402,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 221135651,
+      "width": 16,
+      "n": "80358125059707004460500954913023223102",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "40179062529853502230250477456511611551",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 228188636,
+      "width": 16,
+      "n": "80358125059707003796418168259479364926",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "24851",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "17767017812913758041093746920543",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 264,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 94764833,
+      "width": 16,
+      "n": "80358125059707004165353049733670397246",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "257",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "521",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "300074404429176920189970834797159",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 28,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 228193549,
+      "width": 16,
+      "n": "80358125059707003833311656406898468158",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "197",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11383",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "43597",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "21630503605417251909676003",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 300,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 150545607,
+      "width": 16,
+      "n": "80358125059707004294480258249637258558",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "101",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "406247",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "3568993",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "274373752275321956300149",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 2144,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 162272969,
+      "width": 16,
+      "n": "80358125059707004312927002323346810174",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "47",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "283",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "91841",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1566244674758354713658195767",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 36,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 830494733,
+      "width": 16,
+      "n": "80358125059707003648844215669802951998",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "6661",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "968141",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "5522861",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "22120119261665930009",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 35,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 84775101,
+      "width": 16,
+      "n": "80358125059707004146906305659960845630",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7561",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "15466229",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "22905768442863427475364709",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 15701,
+      "payload_bytes": 32,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 795329325,
+      "width": 32,
+      "n": "27344452996645878864649870355249423064570879564850165438223507561993592399166",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "66347",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "8959630885524091998737163292088637756489392582492889963316550979990443",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 44,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 730709153,
+      "width": 25,
+      "n": "379480516408207664673313929391214307391494989709455938839870",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3363629",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "3760625962893129857398204235080764529337163221721301",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 749,
+      "payload_bytes": 39,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 842767009,
+      "width": 19,
+      "n": "1348185621481717309631805295782572742708847934",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "53401",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "12623224485325343248551574837386685106167",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 27,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 855354861,
+      "width": 26,
+      "n": "97147012200501161999029240099333868735888765262779271374202174",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1021",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "5286049200157860594135882038270424895847685562236329925683",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 37,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 758876770,
+      "width": 30,
+      "n": "417243240305265486567152967411929580438436415778144265436918895096915262",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "208621620152632743283576483705964790219218207889072132718459447548457631",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 36,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 916849406,
+      "width": 31,
+      "n": "106814269518147964240331633076500645909082146576458284693939432947385656638",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "44843",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "95401",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1134903689027279614628470773004036366799046727333120740541838303",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 45,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 939896802,
+      "width": 24,
+      "n": "1482345767219561187765487632761901727168564088562495808830",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "167429",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "529741",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "185700356631478913707722754455614514591781883",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 41,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "element",
+      "offset": 829279523,
+      "width": 19,
+      "n": "1348185621481717308430213588017001232662816062",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "107",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "84443",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "3552654459312497871613197034159622411",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 36,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 289747158,
+      "width": 14,
+      "n": "1327023890252630511222883462901614",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "41",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "283",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "20135597",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "405710178100709287511",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 14487,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 778961371,
+      "width": 14,
+      "n": "1326948054364504493120260841631605",
+      "terms": [
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "293",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "582551",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "646537",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "184988874116456287",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 2986,
+      "payload_bytes": 31,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 607040875,
+      "width": 12,
+      "n": "20247549826216316170193299821",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "6749183275405438723397766607",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 18,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 959895451,
+      "width": 16,
+      "n": "104258308067163331286634403075319952749",
+      "terms": [
+        {
+          "n": "7433",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "16979",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "35899",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "143249",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "160642510157195532757",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 680,
+      "payload_bytes": 29,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 210433547,
+      "width": 15,
+      "n": "443035258915619886878801306372237153",
+      "terms": [
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "67",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "103",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13548631",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "206016978132620731966381",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 675,
+      "payload_bytes": 27,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 372364630,
+      "width": 14,
+      "n": "1408080491413809196479742735049843",
+      "terms": [
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "89",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "72169",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "11538070447953737313424417",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 372,
+      "payload_bytes": 25,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 42180699,
+      "width": 13,
+      "n": "5340918754583496725224602429806",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2670459377291748362612301214903",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 19,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 867524473,
+      "width": 15,
+      "n": "433239985027033495479515148510917235",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "28882665668468899698634343234061149",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 996377917,
+      "width": 18,
+      "n": "6396417122988190127402905540984600665944167",
+      "terms": [
+        {
+          "n": "349793",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "18286292530119785494286350901775051719",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 904879782,
+      "width": 27,
+      "n": "33093943861510048466762850704691980252328017626224970892314766948",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "619",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "140663",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "8982871",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "961634778752337537290694149682391549297886615441",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 43,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 729779330,
+      "width": 18,
+      "n": "5782570366289325787451217747523010205740133",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1927523455429775262483739249174336735246711",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 0,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 756350153,
+      "width": 22,
+      "n": "31228484332177836616578761383974267158459235316167801",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "131",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "347",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "25444057698955086261072744680951446306569933259",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 33,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 945407355,
+      "width": 22,
+      "n": "29729056350173291201997327480101020045450662557021285",
+      "terms": [
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "258513533479767749582585456348704522134353587452359",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 30,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 535479510,
+      "width": 19,
+      "n": "1459164965752732355646959926122260985713747321",
+      "terms": [
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "47",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1451",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "488311",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "2577470447256346015189486054722739",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 32,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 610145342,
+      "width": 23,
+      "n": "7993363766863446201658174947316570466394625789933087593",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1093",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "51645701",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "47201302644315915100874774618781060140258267",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 35,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/page/title",
+      "kind": "leaf-body",
+      "offset": 514419390,
+      "width": 26,
+      "n": "124396031898356443158741506798057407716100116147099036067787873",
+      "terms": [
+        {
+          "n": "11",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "1901",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "9467",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "628375650614238572348939152126891395731346010127561629",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 37,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/case",
+      "kind": "element",
+      "offset": 403,
+      "width": 25,
+      "n": "379062910988725022914730896502494918880464680345867289584958",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "439",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5059",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "12191413400903668727072316804965157283992419561310197",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 39,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/case",
+      "kind": "leaf-body",
+      "offset": 409,
+      "width": 12,
+      "n": "31694948692362815154777515378",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "4213837",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "163513829259892520939",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 2300,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/generator",
+      "kind": "leaf-body",
+      "offset": 368,
+      "width": 18,
+      "n": "6742148005769621621814521762286245969422433",
+      "terms": [
+        {
+          "n": "158227",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "12145151",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "3508445781308138474324380428229",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 26,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "element",
+      "offset": 544,
+      "width": 21,
+      "n": "88320259926690185263245172093998875344278332124990",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "327112073802556241715722859607403242015845674537",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 32,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 675,
+      "width": 9,
+      "n": "1576288424036038437995",
+      "terms": [
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "204751",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "1539712552354849",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 63,
+      "payload_bytes": 18,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 722,
+      "width": 9,
+      "n": "1612463015540679797089",
+      "terms": [
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "53",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "4346261497414231259",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 17,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 1249,
+      "width": 13,
+      "n": "5338447648670516411110118222955",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "37",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "9618824592199128668666879681",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 24,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 864,
+      "width": 10,
+      "n": "346750467043252787833963",
+      "terms": [
+        {
+          "n": "61",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "16982981",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "334713551522843",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 3118,
+      "payload_bytes": 19,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 912,
+      "width": 9,
+      "n": "1427705374037936532329",
+      "terms": [
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "17",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "19",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "14983",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "6020619936469",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 60,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 959,
+      "width": 14,
+      "n": "1569778659792994526637375029865579",
+      "terms": [
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "3",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "4472303874054115460505341965429",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 22,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 1059,
+      "width": 13,
+      "n": "6686555941008814994648876543083",
+      "terms": [
+        {
+          "n": "109",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "193",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "23251",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "13670268328202066114509",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 23,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/namespaces/namespace",
+      "kind": "leaf-body",
+      "offset": 1154,
+      "width": 9,
+      "n": "1335473912887096994923",
+      "terms": [
+        {
+          "n": "47",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "97",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "133201",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "2199167614997",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 480,
+      "payload_bytes": 20,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/sitename",
+      "kind": "element",
+      "offset": 266,
+      "width": 30,
+      "n": "417216280347407124214186109550252535113904751526811495820922027479229758",
+      "terms": [
+        {
+          "n": "2",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "13",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "5107",
+          "kind": "probable-prime"
+        },
+        {
+          "n": "3142114747084748868176304842149180876277693900730607279758717502969",
+          "kind": "probable-prime"
+        }
+      ],
+      "steps": 66,
+      "payload_bytes": 41,
+      "verified": true
+    },
+    {
+      "event": "XML_LARGE_FACTOR",
+      "path": "/mediawiki/siteinfo/sitename",
+      "kind": "leaf-body",
+      "offset": 276,
+      "width": 9,
+      "n": "1612463015540679797089",
+      "terms": [
+        {
+          "n": "7",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "53",
+          "kind": "proven-small-prime"
+        },
+        {
+          "n": "4346261497414231259",
+          "kind": "unfactored"
+        }
+      ],
+      "steps": 16384,
+      "payload_bytes": 17,
+      "verified": true
+    }
+  ],
+  "peak_rss_kib": 1047380,
+  "wall_seconds": 23.56,
+  "limitations": [
+    "sample not representative",
+    "probable primes above 64 bits not certified",
+    "exact products verified but no compressed archive",
+    "local factor payload savings zero"
+  ]
+}
