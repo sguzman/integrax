@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "corpus": "enwik9",
+  "corpus_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+  "seed_records": [
+    "experiments/records/E0095.json",
+    "experiments/records/E0096.json",
+    "experiments/records/E0099.json"
+  ],
+  "batches": [
+    {
+      "id": "E0103",
+      "record": "experiments/records/E0103.json",
+      "shards": [
+        {
+          "path": "inventory/batches/E0103/100439232.json",
+          "offset": 100439232,
+          "rows": 229,
+          "width": 807,
+          "sha256": "9a0de5370faee1f3d684338b97a9440c4e17c29285ff491f10e02b08bcc236d0",
+          "root_id": "enwik9:100439232:0"
+        },
+        {
+          "path": "inventory/batches/E0103/400027307.json",
+          "offset": 400027307,
+          "rows": 218,
+          "width": 815,
+          "sha256": "410f2a208607e80829d505fa88a6fd6f6f172a56be0a04cb947ff8e0e2bb2aaa",
+          "root_id": "enwik9:400027307:0"
+        },
+        {
+          "path": "inventory/batches/E0103/800034374.json",
+          "offset": 800034374,
+          "rows": 347,
+          "width": 1232,
+          "sha256": "5a05e1efbd92595db37e0b5adb532d9edebab286d45aa63143489d7795f0243e",
+          "root_id": "enwik9:800034374:0"
+        }
+      ]
+    }
+  ],
+  "index": {
+    "batch": "E0103",
+    "distinct_factors": 2774,
+    "shards": [
+      {
+        "path": "inventory/index/E0103/000.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0103/001.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0103/002.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0103/003.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0103/004.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0103/005.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0103/006.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0103/007.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0103/008.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0103/009.json",
+        "count": 256
+      },
+      {
+        "path": "inventory/index/E0103/010.json",
+        "count": 214
+      }
+    ]
+  },
+  "indexed_nodes": 794
+}

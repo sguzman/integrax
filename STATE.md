@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: inspect E0103 cumulative factor inventory and parent propagation; owner clarified factorization primary, atomic storage cost not rejection criterion. E0102 verified as secondary. Persist batch records and factor index before scaling. C19 deferred.
+Next: inspect E0104 resumed inventory and full product-tree GCD. E0103 794 objects, 2774 known factors, 8 parent child hits, 19 global hits; verified shards and inverted index committed. Factorization primary; no frontier change.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -68,3 +68,5 @@ E0100 passed nine authentic archives; E0101 exact-repeat and prefix-residual esc
 E0101 passed nine authentic archives; prefix saves 120037 B vs context. E0102 alphabet ranks and suffix reuse authored; hosted CI pending. No license/frontier change.
 
 E0102 passed; owner clarified cumulative factor inventory and reuse in parent factorization. E0103 seeded historical evidence, bounded all-level page inventory, postorder synthesis, inherited/global divisor tests, cold control authored. Hosted CI pending. No license/frontier change.
+
+E0103 passed and evidence persisted; E0104 resumes verified inventory with full-candidate GCD and new pages. Hosted CI pending. No license/frontier change.

@@ -1,0 +1,843 @@
+{
+  "id": "E0103",
+  "campaign": "C20",
+  "status": "factor-inventory-verified",
+  "revision": "d5b444a531e98098d73280f88181cb9037f79e98",
+  "run": 45763183946,
+  "job": 139717758632,
+  "corpus_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+  "seed": {
+    "event": "FACTOR_SEED",
+    "cases": 2519,
+    "distinct_factors": 2423
+  },
+  "summary": {
+    "event": "FACTOR_INVENTORY_SUMMARY",
+    "pages": [
+      {
+        "offset": 100439232,
+        "width": 807,
+        "root_id": "enwik9:100439232:0"
+      },
+      {
+        "offset": 400027307,
+        "width": 815,
+        "root_id": "enwik9:400027307:0"
+      },
+      {
+        "offset": 800034374,
+        "width": 1232,
+        "root_id": "enwik9:800034374:0"
+      }
+    ],
+    "distinct_factors": 2774,
+    "nodes": 794,
+    "seeded_sources": [
+      "E0095",
+      "E0096",
+      "E0099"
+    ]
+  },
+  "aggregate": {
+    "nodes": 794,
+    "leaves": 632,
+    "parents": 162,
+    "complete": 642,
+    "partial": 152,
+    "trivial": 0,
+    "child_hits": 8,
+    "global_hits": 144,
+    "parent_child_hits": 8,
+    "parent_global_hits": 19,
+    "parent_better_than_cold": 10,
+    "parent_worse_than_cold": 6,
+    "parent_equal_cold": 146,
+    "child_bits_removed": 135,
+    "global_bits_removed": 1569
+  },
+  "pages": [
+    {
+      "event": "FACTOR_PAGE",
+      "offset": 100439232,
+      "width": 807,
+      "sha256": "9a0de5370faee1f3d684338b97a9440c4e17c29285ff491f10e02b08bcc236d0",
+      "root_id": "enwik9:100439232:0",
+      "stats": {
+        "nodes": 229,
+        "leaves": 181,
+        "parents": 48,
+        "complete": 184,
+        "partial": 45,
+        "trivial": 0,
+        "child_hits": 3,
+        "global_hits": 46,
+        "parent_child_hits": 3,
+        "parent_global_hits": 5,
+        "parent_better_than_cold": 3,
+        "parent_worse_than_cold": 1,
+        "parent_equal_cold": 44,
+        "child_bits_removed": 53,
+        "global_bits_removed": 377
+      },
+      "levels": {
+        "lexical": {
+          "nodes": 44,
+          "complete": 37,
+          "partial": 7,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 7,
+          "bits": 2823,
+          "base_bits": 2546,
+          "reuse_bits": 2497,
+          "remaining_bits": 683,
+          "cold_bits": 2504
+        },
+        "title": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 206,
+          "base_bits": 205,
+          "reuse_bits": 205,
+          "remaining_bits": 190,
+          "cold_bits": 205
+        },
+        "id": {
+          "nodes": 3,
+          "complete": 0,
+          "partial": 3,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 1,
+          "bits": 354,
+          "base_bits": 330,
+          "reuse_bits": 323,
+          "remaining_bits": 281,
+          "cold_bits": 323
+        },
+        "timestamp": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 342,
+          "base_bits": 337,
+          "reuse_bits": 337,
+          "remaining_bits": 337,
+          "cold_bits": 337
+        },
+        "username": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 230,
+          "base_bits": 223,
+          "reuse_bits": 223,
+          "remaining_bits": 215,
+          "cold_bits": 223
+        },
+        "contributor": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 758,
+          "base_bits": 757,
+          "reuse_bits": 757,
+          "remaining_bits": 757,
+          "cold_bits": 757
+        },
+        "comment": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 238,
+          "base_bits": 235,
+          "reuse_bits": 235,
+          "remaining_bits": 206,
+          "cold_bits": 235
+        },
+        "word": {
+          "nodes": 137,
+          "complete": 137,
+          "partial": 0,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 34,
+          "bits": 3327,
+          "base_bits": 2661,
+          "reuse_bits": 2369,
+          "remaining_bits": 137,
+          "cold_bits": 2482
+        },
+        "phrase": {
+          "nodes": 26,
+          "complete": 10,
+          "partial": 16,
+          "trivial": 0,
+          "child_hits": 2,
+          "global_hits": 3,
+          "bits": 3489,
+          "base_bits": 3300,
+          "reuse_bits": 3244,
+          "remaining_bits": 2144,
+          "cold_bits": 3261
+        },
+        "sentence": {
+          "nodes": 6,
+          "complete": 0,
+          "partial": 6,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 1,
+          "bits": 3513,
+          "base_bits": 3462,
+          "reuse_bits": 3455,
+          "remaining_bits": 3436,
+          "cold_bits": 3455
+        },
+        "paragraph": {
+          "nodes": 3,
+          "complete": 0,
+          "partial": 3,
+          "trivial": 0,
+          "child_hits": 1,
+          "global_hits": 0,
+          "bits": 3516,
+          "base_bits": 3504,
+          "reuse_bits": 3485,
+          "remaining_bits": 3485,
+          "cold_bits": 3504
+        },
+        "article": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 3518,
+          "base_bits": 3518,
+          "reuse_bits": 3518,
+          "remaining_bits": 3518,
+          "cold_bits": 3518
+        },
+        "text": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 3790,
+          "base_bits": 3789,
+          "reuse_bits": 3789,
+          "remaining_bits": 3789,
+          "cold_bits": 3789
+        },
+        "revision": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 5886,
+          "base_bits": 5885,
+          "reuse_bits": 5885,
+          "remaining_bits": 5885,
+          "cold_bits": 5885
+        },
+        "page": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 6454,
+          "base_bits": 6447,
+          "reuse_bits": 6447,
+          "remaining_bits": 6447,
+          "cold_bits": 6447
+        },
+        "page-root": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 6454,
+          "base_bits": 6447,
+          "reuse_bits": 6447,
+          "remaining_bits": 6447,
+          "cold_bits": 6447
+        }
+      }
+    },
+    {
+      "event": "FACTOR_PAGE",
+      "offset": 400027307,
+      "width": 815,
+      "sha256": "410f2a208607e80829d505fa88a6fd6f6f172a56be0a04cb947ff8e0e2bb2aaa",
+      "root_id": "enwik9:400027307:0",
+      "stats": {
+        "nodes": 218,
+        "leaves": 168,
+        "parents": 50,
+        "complete": 170,
+        "partial": 48,
+        "trivial": 0,
+        "child_hits": 3,
+        "global_hits": 39,
+        "parent_child_hits": 3,
+        "parent_global_hits": 5,
+        "parent_better_than_cold": 3,
+        "parent_worse_than_cold": 2,
+        "parent_equal_cold": 45,
+        "child_bits_removed": 39,
+        "global_bits_removed": 376
+      },
+      "levels": {
+        "lexical": {
+          "nodes": 42,
+          "complete": 34,
+          "partial": 8,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 8,
+          "bits": 2836,
+          "base_bits": 2577,
+          "reuse_bits": 2443,
+          "remaining_bits": 989,
+          "cold_bits": 2542
+        },
+        "title": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 166,
+          "base_bits": 165,
+          "reuse_bits": 165,
+          "remaining_bits": 165,
+          "cold_bits": 165
+        },
+        "id": {
+          "nodes": 3,
+          "complete": 1,
+          "partial": 2,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 362,
+          "base_bits": 353,
+          "reuse_bits": 353,
+          "remaining_bits": 221,
+          "cold_bits": 353
+        },
+        "timestamp": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 342,
+          "base_bits": 341,
+          "reuse_bits": 341,
+          "remaining_bits": 341,
+          "cold_bits": 341
+        },
+        "username": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 262,
+          "base_bits": 261,
+          "reuse_bits": 261,
+          "remaining_bits": 261,
+          "cold_bits": 261
+        },
+        "contributor": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 798,
+          "base_bits": 796,
+          "reuse_bits": 796,
+          "remaining_bits": 796,
+          "cold_bits": 796
+        },
+        "comment": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 374,
+          "base_bits": 373,
+          "reuse_bits": 373,
+          "remaining_bits": 373,
+          "cold_bits": 373
+        },
+        "word": {
+          "nodes": 126,
+          "complete": 124,
+          "partial": 2,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 26,
+          "bits": 3391,
+          "base_bits": 2633,
+          "reuse_bits": 2435,
+          "remaining_bits": 273,
+          "cold_bits": 2535
+        },
+        "phrase": {
+          "nodes": 25,
+          "complete": 11,
+          "partial": 14,
+          "trivial": 0,
+          "child_hits": 2,
+          "global_hits": 4,
+          "bits": 3546,
+          "base_bits": 3370,
+          "reuse_bits": 3311,
+          "remaining_bits": 2071,
+          "cold_bits": 3319
+        },
+        "sentence": {
+          "nodes": 7,
+          "complete": 0,
+          "partial": 7,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 1,
+          "bits": 3567,
+          "base_bits": 3534,
+          "reuse_bits": 3526,
+          "remaining_bits": 3510,
+          "cold_bits": 3526
+        },
+        "paragraph": {
+          "nodes": 5,
+          "complete": 0,
+          "partial": 5,
+          "trivial": 0,
+          "child_hits": 1,
+          "global_hits": 0,
+          "bits": 3569,
+          "base_bits": 3534,
+          "reuse_bits": 3518,
+          "remaining_bits": 3518,
+          "cold_bits": 3534
+        },
+        "article": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 3574,
+          "base_bits": 3568,
+          "reuse_bits": 3568,
+          "remaining_bits": 3568,
+          "cold_bits": 3568
+        },
+        "text": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 3846,
+          "base_bits": 3828,
+          "reuse_bits": 3828,
+          "remaining_bits": 3828,
+          "cold_bits": 3828
+        },
+        "revision": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 5990,
+          "base_bits": 5988,
+          "reuse_bits": 5988,
+          "remaining_bits": 5988,
+          "cold_bits": 5988
+        },
+        "page": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 6518,
+          "base_bits": 6510,
+          "reuse_bits": 6510,
+          "remaining_bits": 6510,
+          "cold_bits": 6510
+        },
+        "page-root": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 6518,
+          "base_bits": 6510,
+          "reuse_bits": 6510,
+          "remaining_bits": 6510,
+          "cold_bits": 6510
+        }
+      }
+    },
+    {
+      "event": "FACTOR_PAGE",
+      "offset": 800034374,
+      "width": 1232,
+      "sha256": "5a05e1efbd92595db37e0b5adb532d9edebab286d45aa63143489d7795f0243e",
+      "root_id": "enwik9:800034374:0",
+      "stats": {
+        "nodes": 347,
+        "leaves": 283,
+        "parents": 64,
+        "complete": 288,
+        "partial": 59,
+        "trivial": 0,
+        "child_hits": 2,
+        "global_hits": 59,
+        "parent_child_hits": 2,
+        "parent_global_hits": 9,
+        "parent_better_than_cold": 4,
+        "parent_worse_than_cold": 3,
+        "parent_equal_cold": 57,
+        "child_bits_removed": 43,
+        "global_bits_removed": 816
+      },
+      "levels": {
+        "lexical": {
+          "nodes": 44,
+          "complete": 35,
+          "partial": 9,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 16,
+          "bits": 3127,
+          "base_bits": 2855,
+          "reuse_bits": 2469,
+          "remaining_bits": 1217,
+          "cold_bits": 2798
+        },
+        "title": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 230,
+          "base_bits": 224,
+          "reuse_bits": 224,
+          "remaining_bits": 190,
+          "cold_bits": 224
+        },
+        "id": {
+          "nodes": 3,
+          "complete": 2,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 370,
+          "base_bits": 358,
+          "reuse_bits": 358,
+          "remaining_bits": 119,
+          "cold_bits": 358
+        },
+        "timestamp": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 342,
+          "base_bits": 339,
+          "reuse_bits": 339,
+          "remaining_bits": 339,
+          "cold_bits": 339
+        },
+        "username": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 222,
+          "base_bits": 221,
+          "reuse_bits": 221,
+          "remaining_bits": 221,
+          "cold_bits": 221
+        },
+        "contributor": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 758,
+          "base_bits": 744,
+          "reuse_bits": 744,
+          "remaining_bits": 744,
+          "cold_bits": 744
+        },
+        "comment": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 510,
+          "base_bits": 506,
+          "reuse_bits": 506,
+          "remaining_bits": 506,
+          "cold_bits": 506
+        },
+        "word": {
+          "nodes": 239,
+          "complete": 233,
+          "partial": 6,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 34,
+          "bits": 6266,
+          "base_bits": 4876,
+          "reuse_bits": 4522,
+          "remaining_bits": 646,
+          "cold_bits": 4664
+        },
+        "phrase": {
+          "nodes": 43,
+          "complete": 18,
+          "partial": 25,
+          "trivial": 0,
+          "child_hits": 2,
+          "global_hits": 7,
+          "bits": 6563,
+          "base_bits": 6259,
+          "reuse_bits": 6155,
+          "remaining_bits": 3711,
+          "cold_bits": 6187
+        },
+        "sentence": {
+          "nodes": 5,
+          "complete": 0,
+          "partial": 5,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 1,
+          "bits": 6609,
+          "base_bits": 6573,
+          "reuse_bits": 6565,
+          "remaining_bits": 6565,
+          "cold_bits": 6565
+        },
+        "paragraph": {
+          "nodes": 3,
+          "complete": 0,
+          "partial": 3,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 6611,
+          "base_bits": 6602,
+          "reuse_bits": 6602,
+          "remaining_bits": 6602,
+          "cold_bits": 6602
+        },
+        "article": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 6614,
+          "base_bits": 6612,
+          "reuse_bits": 6612,
+          "remaining_bits": 6612,
+          "cold_bits": 6612
+        },
+        "text": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 6886,
+          "base_bits": 6884,
+          "reuse_bits": 6884,
+          "remaining_bits": 6884,
+          "cold_bits": 6884
+        },
+        "revision": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 1,
+          "bits": 9254,
+          "base_bits": 9250,
+          "reuse_bits": 9243,
+          "remaining_bits": 9243,
+          "cold_bits": 9243
+        },
+        "page": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 9854,
+          "base_bits": 9845,
+          "reuse_bits": 9845,
+          "remaining_bits": 9845,
+          "cold_bits": 9845
+        },
+        "page-root": {
+          "nodes": 1,
+          "complete": 0,
+          "partial": 1,
+          "trivial": 0,
+          "child_hits": 0,
+          "global_hits": 0,
+          "bits": 9854,
+          "base_bits": 9845,
+          "reuse_bits": 9845,
+          "remaining_bits": 9845,
+          "cold_bits": 9845
+        }
+      }
+    }
+  ],
+  "shards": [
+    {
+      "path": "inventory/batches/E0103/100439232.json",
+      "offset": 100439232,
+      "rows": 229,
+      "width": 807,
+      "sha256": "9a0de5370faee1f3d684338b97a9440c4e17c29285ff491f10e02b08bcc236d0",
+      "root_id": "enwik9:100439232:0"
+    },
+    {
+      "path": "inventory/batches/E0103/400027307.json",
+      "offset": 400027307,
+      "rows": 218,
+      "width": 815,
+      "sha256": "410f2a208607e80829d505fa88a6fd6f6f172a56be0a04cb947ff8e0e2bb2aaa",
+      "root_id": "enwik9:400027307:0"
+    },
+    {
+      "path": "inventory/batches/E0103/800034374.json",
+      "offset": 800034374,
+      "rows": 347,
+      "width": 1232,
+      "sha256": "5a05e1efbd92595db37e0b5adb532d9edebab286d45aa63143489d7795f0243e",
+      "root_id": "enwik9:800034374:0"
+    }
+  ],
+  "index_shards": [
+    {
+      "path": "inventory/index/E0103/000.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0103/001.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0103/002.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0103/003.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0103/004.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0103/005.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0103/006.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0103/007.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0103/008.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0103/009.json",
+      "count": 256
+    },
+    {
+      "path": "inventory/index/E0103/010.json",
+      "count": 214
+    }
+  ],
+  "wall_seconds": 5.52,
+  "peak_rss_kib": 1058660,
+  "limitations": [
+    "three small pages selected by width",
+    "probable primes above 64 bits",
+    "cold control candidate-count only, not runtime matched",
+    "no compression claim",
+    "hierarchical sizes overlap"
+  ]
+}
