@@ -1,19 +1,22 @@
-name: E0122 enlarged inventory scale closure
+name: E0124 cumulative inventory scale closure
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'experiments/xml/inventory-scale-closure.mjs'
-      - '.github/workflows/inventory-scale-closure.yml'
   workflow_dispatch:
+  workflow_run:
+    workflows: [E0123 inventory publication]
+    types: [completed]
+    branches: [main]
 permissions:
   contents: read
 jobs:
   measure:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Verify E0123 inventory publication
+        run: nix develop --no-update-lock-file --command node experiments/xml/publish-factor-inventory-e0123.mjs --check
       - name: Restore verified corpus cache
         uses: actions/cache@v4
         with:
@@ -50,5 +53,5 @@ jobs:
       - name: Measure incremental factor reuse by size and kind
         run: |
           set -euo pipefail
-          /usr/bin/time -v timeout --kill-after=10s 900s node --max-old-space-size=3072 experiments/xml/inventory-scale-closure.mjs data/enwik9
-          echo E0122_COMPLETE
+          /usr/bin/time -v timeout --kill-after=10s 900s nix develop --no-update-lock-file --command node --max-old-space-size=3072 experiments/xml/inventory-scale-closure.mjs data/enwik9
+          echo E0124_COMPLETE

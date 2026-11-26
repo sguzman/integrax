@@ -1,0 +1,30 @@
+name: E0123 inventory publication
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Materialize and verify the staged E0123 evidence
+        run: nix develop --no-update-lock-file --command node experiments/xml/publish-factor-inventory-e0123.mjs
+      - name: Publish the verified record, factor index, snapshots, and manifest
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/records/E0123.json inventory/manifest.json inventory/batches/E0123/snapshots.json inventory/index/E0123
+          if git diff --cached --quiet; then
+            echo 'E0123 publication already matches the staged evidence.'
+          else
+            git commit -m 'Publish verified E0123 factor inventory'
+            git push origin HEAD:main
+          fi
+          git fetch origin main
+          git show origin/main:experiments/records/E0123.json | jq -e '.status == "verified" and .summary.nodes == 16276 and .summary.distinct_factors == 16081'
+          git show origin/main:inventory/manifest.json | jq -e '.indexed_nodes == 62823 and .index.distinct_factors == 16081 and .batches[-1].id == "E0123"'

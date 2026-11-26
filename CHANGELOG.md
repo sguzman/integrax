@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-26 — E0123 larger held-out inventory scale
+Hosted enwik9 run added 16,276 nested objects across three larger pages and 2,448 new factors. Persisted object shards; authored deterministic Nix publication and E0124 continuation workflow. No compression result claimed.
+
 ## 2026-11-26 UTC — F0013 accepted; C14/C15 closed
 Hosted E0085 full isolated reconstruction: 232,493,451 B. Independent E0087 confirmed N=32Q with no prime <=997 dividing Q. C16 nontrivial factorization feasibility selected.
 
