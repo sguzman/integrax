@@ -7,7 +7,7 @@
 - Owner authorized returning to public development, competition-restricted licensing and hosted Actions. Competition-restricted license restored; public visibility verified through GitHub API and hosted Actions confirmed working. Advance priority notice sent with owner approval; committee acknowledgment pending. Earlier MIT grants remain valid. No contest submission authorized.
 - Nix build verified previously; live dashboard deployment unverified.
 
-Next: inspect E0105 distinct-value factor provenance and larger pages. E0104 2973 cumulative nodes, 3286 factors, 161 additional parent hits; verified shards/index/snapshots committed. Factorization primary; no frontier change.
+Next: inspect E0106 cumulative cofactor refinement. E0105 5649 objects, 4145 factors, 157 previously unseen parent hits; evidence persisted via base-plus-delta index. Factorization primary; no frontier change.
 
 Post-license reference and IX02 CI passed (45723260474/45723260614). E0083 authored; unit tests and six authentic strict roundtrips pending CI.
 
@@ -72,3 +72,5 @@ E0102 passed; owner clarified cumulative factor inventory and reuse in parent fa
 E0103 passed and evidence persisted; E0104 resumes verified inventory with full-candidate GCD and new pages. Hosted CI pending. No license/frontier change.
 
 E0104 passed and persisted. E0105 larger-page distinct-value factor provenance authored; hosted CI pending. No license/frontier change.
+
+E0105 passed and persisted. E0106 revisits unresolved cofactors using current inventory and distinct-residual GCDs; hosted CI pending.
