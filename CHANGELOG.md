@@ -4,7 +4,10 @@
 Hosted closure propagated E0126 factors across 80,082 objects: 42 parent refinements / 30 distinct values, all witnessed in the new pages, removing 639 overlapping residual bits. Historical objects gained 526 bits of reduction, E0126 objects 113; no article gain, one 19-bit page/root value. Persisted 42 exact rows and provenance after independent product and witness checks. No archive compression claim.
 
 ## 2026-11-26 — E0128 and E0129 hosted chain
-Staged the next three-page scale at 16,385–18,432 bytes, thirteen frozen inventories, and automatic propagation of its discovered factors through the accumulated unresolved objects.
+Three fresh 16,385–18,432-byte pages added 19,173 nodes and 3,346 factors (99,255 objects / 22,124 factors total). On the pages, child/global/full-inventory stages removed 27,518 / 43,051 / 213,702 residual bits incrementally; article savings were 34 bits and page savings zero. Automatic E0129 closure refined 45 parent rows / 35 values across historical and new objects, completed one cofactor, and removed 770 residual bits. Runtime 730.44 s for E0128 and 133.15 s for E0129; peak RSS 1,297,884 / 1,513,748 KiB. Cumulative research inventory JSON is 205,728,852 B (20.57% of corpus), not an archive.
+
+## 2026-11-26 — E0130 algorithm comparison queued
+Added an automatic post-publication workflow to compare direct flat factor scans with the balanced product-tree GCD index over a deterministic, stratified residual sample, with exact output equivalence required before persistence.
 
 ## 2026-11-26 — E0125 inventory saturation control
 Hosted replay and rescreen of all 62,823 indexed objects using 16,081 factors found zero further refinements or residual bits removed after E0124 overlays; one cofactor had completed. Persisted the stratified summary. No compression result claimed.
