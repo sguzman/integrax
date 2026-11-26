@@ -17,6 +17,7 @@
 | [C13](CAMPAIGN-13.md) | Radix context permutations and rank descriptions | [Closed](CAMPAIGN-13-CLOSURE.md) |
 | [C14](CAMPAIGN-14.md) | Root-conditioned arithmetic descriptions | [Closed](CAMPAIGN-14-CLOSURE.md) |
 | [C15](CAMPAIGN-15.md) | Whole-integer multiplicative reconnaissance | [Closed](CAMPAIGN-15-CLOSURE.md) |
-| [C16](CAMPAIGN-16.md) | Nontrivial multiplicative methods: feasibility | Active (pure number-theory track) |
+| [C16](CAMPAIGN-16.md) | Nontrivial multiplicative methods: feasibility | [Closed](CAMPAIGN-16-CLOSURE.md) |
+| [C17](CAMPAIGN-17.md) | Lucas sequence multiplicative reconnaissance | Active (pure number-theory track) |
 
 Candidates are not commitments or results. Instantiate when justified; pivot freely within mission. Stable IDs, explicit milestones and closure records. See [template](CAMPAIGN-TEMPLATE.md).

@@ -1,0 +1,37 @@
+name: E0091 Lucas p-plus-one auxiliary GCD
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/factorization/lucas_scan.rs'
+      - 'experiments/oracle/lucas-gcd-cross.mjs'
+      - '.github/workflows/lucas-gcd.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and test
+        run: |
+          set -euo pipefail
+          rustc --version
+          pkg-config --modversion gmp
+          node --version
+          rustc --edition=2021 --test experiments/factorization/lucas_scan.rs -o /tmp/lucas-tests
+          /tmp/lucas-tests
+          rustc --edition=2021 -C opt-level=3 experiments/factorization/lucas_scan.rs -o /tmp/lucas-scan
+      - run: sh datasets/acquire.sh enwik9
+      - name: Verify full corpus and independent Lucas GCD
+        run: |
+          set -euo pipefail
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          test "$(wc -c < data/enwik9)" = 1000000000
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
+          /usr/bin/time -v timeout --kill-after=10s 420s /tmp/lucas-scan data/enwik9 /tmp/lucas-witness
+          /usr/bin/time -v timeout --kill-after=10s 600s node --max-old-space-size=4096 experiments/oracle/lucas-gcd-cross.mjs data/enwik9 /tmp/lucas-witness
+          test "$(sha256sum data/enwik9 | cut -d' ' -f1)" = "$expected"
+          echo E0091_COMPLETE

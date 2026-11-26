@@ -1,0 +1,37 @@
+{
+  "id": "E0090",
+  "campaign": "C16",
+  "status": "independently-reproduced",
+  "revision": "50feb2dcb222511d3288ba479457ab5e40241e11",
+  "run": 45756720986,
+  "job": 139696951719,
+  "tests_passed": 3,
+  "corpus": {
+    "id": "enwik9",
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "exponent": 232792560,
+  "gcd_hex": "1",
+  "gcd_bits": 1,
+  "scan_seconds": 4.444541,
+  "gcdext_seconds": 123.260929,
+  "peak_rss_kib": 478472,
+  "independent_verification": {
+    "event": "MERSENNE_GCD_VERIFIED",
+    "exponent": 232792560,
+    "bytes": 1000000000,
+    "gcd_hex": "1",
+    "gcd_bits": 1,
+    "residue_sha256": "bcaa51c21934d6727c7648862e685d107c6b5edcec5f6b06bab2c41e52887788",
+    "witness_sha256": "0018cb54a2fa523f5cf05db2e405928cfc2f3e254ad5a55c929151d6d6dcfb69",
+    "seconds": 19.858565558000002,
+    "peak_rss_kib": 1118152
+  },
+  "limitations": [
+    "fixed base and exponent only",
+    "no additional factors",
+    "no compression gain",
+    "certificate hashes retained; witness transient"
+  ]
+}
