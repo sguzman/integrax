@@ -16,7 +16,7 @@ Every candidate must account for all encoded information and reconstruct the ori
 ## Development
 The dependency-free Rust reference codec establishes the initial experimental interface. Run `cargo test --locked`. See [IX01 format](schemas/IX01.md).
 
-This is exploratory research, not a claim of a new compression record. [MIT license](LICENSE). Development repository is private; do not redistribute before owner approval.
+This is exploratory research, not a claim of a new compression record. [Competition-restricted development license](LICENSE). Earlier MIT grants remain valid.
 
-## Local research CI
-See [local CI instructions](docs/LOCAL-CI.md). Current job: `nix develop --command fish scripts/run-local-ci.fish` from a clean, up-to-date main checkout.
+## Research CI
+[GitHub Actions](https://github.com/sguzman/integrax/actions) is the primary CI service. See [hosted CI instructions](docs/HOSTED-CI.md).

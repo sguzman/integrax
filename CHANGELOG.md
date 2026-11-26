@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-25 — Return to public development and hosted CI
+Owner authorized restoring the prior competition-restricted license and public GitHub Actions; prior MIT rights preserved. Prepared hosted E0085 workflow; repository settings and execution pending verification. Local tooling/cache retained as optional fallback.
+
 ## 2026-11-25 — Private development and local CI
 Owner made repository private, restored MIT, and authorized local wrkflw/Nix CI using existing GitHub App. E0083 passed; E0084 independent replay selected for first local job.
 

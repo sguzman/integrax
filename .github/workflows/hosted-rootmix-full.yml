@@ -1,0 +1,24 @@
+name: E0085 hosted full enwik9
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Full isolated compression measurement
+        shell: bash
+        env:
+          INTEGRAX_DOWNLOAD_ATTEMPTS: '5'
+        run: |
+          set -euo pipefail
+          transfer="$GITHUB_WORKSPACE/results-local/hosted-$GITHUB_SHA"
+          mkdir -p "$transfer"
+          nix develop --no-update-lock-file --command bash experiments/ixg2/full-rootmix-local.sh "$GITHUB_WORKSPACE" "$transfer"
+          test -s "$transfer/evidence.log"
+          cat "$transfer/evidence.log"
+          printf 'E0085_HOSTED_VERIFIED revision=%s\n' "$GITHUB_SHA"

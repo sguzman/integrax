@@ -1,4 +1,6 @@
-# Private local CI
+# Historical local CI (optional)
+
+Superseded as the primary workflow by [GitHub-hosted CI](HOSTED-CI.md). Do not require the owner to run these jobs or download enwik9 locally. Existing cache and scripts are preserved. Instructions below describe the former private workflow.
 
 Run one lead-selected job at a time. Reuse the existing GitHub App (Checks: write, installed on all personal repositories) and ~/.config/local-ci credentials from local-ci-testing. No credentials in Git or the Nix store. Existing workflow definitions are preserved; local-only jobs use workflow_dispatch. To stop existing hosted push workflows, disable Actions in repository Settings → Actions → General; native App Check Runs are separate.
 
