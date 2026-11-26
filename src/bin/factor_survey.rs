@@ -54,14 +54,24 @@ fn valuation(p: u64, mut residue: u64, cap: u32) -> (u32, bool) {
     while residue % p == 0 { residue /= p; n += 1; }
     (n, true)
 }
-fn survey(path: &Path) -> io::Result<()> {
-    let mods = groups(&PRIMES);
+fn primes_through(limit: u64) -> Vec<u64> {
+    let mut primes = Vec::new();
+    for n in 2..=limit {
+        if primes.iter().take_while(|&&p| p <= n / p).all(|&p| n % p != 0) {
+            primes.push(n);
+        }
+    }
+    primes
+}
+fn survey(path: &Path, limit: u64) -> io::Result<()> {
+    let primes = primes_through(limit);
+    let mods = groups(&primes);
     let (len, nonzero, rs) = residues(File::open(path)?, &mods)?;
     if !nonzero { return Err(io::Error::new(io::ErrorKind::InvalidData, "zero has no finite prime factorization")); }
-    let factors: Vec<u64> = PRIMES.into_iter().filter(|p| {
+    let factors: Vec<u64> = primes.iter().copied().filter(|p| {
         mods.iter().zip(&rs).any(|(&m,&r)| m % p == 0 && r % p == 0)
     }).collect();
-    println!("SURVEY bytes={len} primes_tested={} max_prime=97 group_count={}", PRIMES.len(), mods.len());
+    println!("SURVEY bytes={len} primes_tested={} max_prime={} group_count={}", primes.len(), primes.last().unwrap(), mods.len());
     for (&m,&r) in mods.iter().zip(&rs) { println!("GROUP modulus={m} residue={r}"); }
     let powers: Vec<_> = factors.iter().map(|&p| power_cap(p)).collect();
     let power_mods: Vec<_> = powers.iter().map(|&(m,_)| m).collect();
@@ -79,7 +89,9 @@ fn survey(path: &Path) -> io::Result<()> {
 }
 fn main() -> io::Result<()> {
     let path = std::env::args_os().nth(1).ok_or_else(|| io::Error::new(io::ErrorKind::InvalidInput,"usage: factor_survey FILE"))?;
-    survey(Path::new(&path))
+    let limit = std::env::args().nth(2).map(|s| s.parse::<u64>()).transpose().map_err(|_| io::Error::new(io::ErrorKind::InvalidInput,"invalid prime bound"))?.unwrap_or(97);
+    if !(2..=10000).contains(&limit) { return Err(io::Error::new(io::ErrorKind::InvalidInput,"prime bound must be 2..=10000")); }
+    survey(Path::new(&path), limit)
 }
 #[cfg(test)]
 mod tests {
@@ -98,6 +110,12 @@ mod tests {
                 for (&m,&r) in mods.iter().zip(&rs) { assert_eq!(r, (actual % m as u128) as u64); }
             }
         }
+    }
+    #[test]
+    fn generated_prime_bounds() {
+        assert_eq!(primes_through(97), PRIMES);
+        assert_eq!(primes_through(997).len(), 168);
+        assert_eq!(primes_through(997).last(), Some(&997));
     }
     #[test]
     fn prime_groups_cover_once() {

@@ -1,0 +1,39 @@
+{
+  "id": "E0086",
+  "revision": "c829992c533d367ab22a55cfcbcd51302a47df7a",
+  "run_id": 45754251881,
+  "job_id": 139689015680,
+  "corpus": {
+    "bytes": 1000000000,
+    "sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+  },
+  "tests_passed": 4,
+  "groups": [
+    {
+      "modulus": "614889782588491410",
+      "residue": "528017007621775558"
+    },
+    {
+      "modulus": "38655288426304091",
+      "residue": "37966219630138036"
+    },
+    {
+      "modulus": "97",
+      "residue": "44"
+    }
+  ],
+  "factors": [
+    {
+      "prime": 2,
+      "exponent": 5,
+      "exact": true,
+      "modulus": "1152921504606846976",
+      "residue": "389111003460432672"
+    }
+  ],
+  "primes_tested": 25,
+  "max_prime": 97,
+  "elapsed_seconds": 2.02,
+  "peak_rss_kib": 2212,
+  "scope": "bounded partial factorization; independent full-corpus replay pending"
+}

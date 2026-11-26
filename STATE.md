@@ -32,3 +32,5 @@ E0085 second attempt (local Check 139610201792, owner terminal log): live logs w
 Owner ended mandatory local CI after repeated corpus download failures. Existing scripts and partial local cache are preserved. Hosted E0085 workflow now queued; result unverified. Priority notice to committee is separate from formal submission.
 
 C15/E0086: bounded exact divisibility survey of the full enwik9 integer, all primes <=97, prime-power valuations with explicit censoring, independent native integer test controls. Hosted push workflow authored; no full factorization or compression claim. C14 E0085 still running at last check. Next inspect both hosted jobs and retain distinct evidence.
+
+E0086 passed [CI 45754251881](https://github.com/sguzman/integrax/actions/runs/45754251881/job/139689015680), N=2^5 Q with Q odd and no odd prime <=97 dividing N; four tests passed, corpus SHA-256 verified, 2.02 s and 2212 KiB RSS. Evidence experiments/records/E0086.json. E0087 authored to independently reproduce group/valuation evidence and extend trial division to 997. E0085 still in progress at last check. No compression frontier change.
