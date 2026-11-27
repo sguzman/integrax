@@ -1,0 +1,158 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,booktabs,geometry,hyperref}
+\geometry{margin=26mm}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black,pdftitle={Exponential Approximation as a Lossless Integer Codec}}
+\newcommand{\bits}{\operatorname{bitlen}}
+\newcommand{\gam}{\operatorname{g}}
+\newcommand{\B}{\mathrm{B}}
+\title{Exponential Approximation as a Lossless Integer Codec\\\large A bounded negative result on enwik9}
+\author{IntegraX research project}
+\date{27 November 2026\\\small Technical report --- AI-assisted draft, pending author review}
+\begin{document}
+\maketitle
+\begin{abstract}
+We investigate whether a large byte string, interpreted as one unsigned integer, can be encoded by a short arithmetic expression and an exact residual. The investigated families include single powers, recursive positive and signed sums, products with cofactors, and bounded nested expression trees. An exact cost model, integer-root search and certified outward-rounded prefix intervals permit rejection of candidates without constructing enormous powers. Constructed arithmetic witnesses compress strongly; a million-bit near-power control requires only 15 bytes in an experimental frame. In contrast, all 18 tested enwik9 samples select the raw mode of the standalone IEX1 codec. Their overlapping aggregate is 31,488 input bytes and 31,620 archive bytes, versus 12,976 bytes for Zstandard. A 32-byte prefix of the verified one-billion-byte corpus suffices to reject 2,030 candidates in a bounded single-power search. Factor-assisted and hierarchical pilots likewise find no improvement. These results delimit the investigated models, not the compressibility of enwik9 by arbitrary arithmetic expressions.
+\end{abstract}
+
+\section{Question and representation}
+The hypothesis motivating IntegraX's exponential campaign was that an economical numerical approximation could be turned into a lossless description of a large integer. Given bytes $x_0,\ldots,x_{w-1}$, define
+\[
+ N=\sum_{i=0}^{w-1}x_i256^{w-1-i},\qquad 0\le N<256^w.
+\]
+The original byte width $w$ must be retained: the same integer can represent byte strings with different leading zeroes. In the simplest family we seek
+\begin{equation}
+ N=b^e+r,\qquad b\ge2,\quad e\ge1,\quad r\in\mathbb Z.
+ \label{eq:power}
+\end{equation}
+Both the expression and residual must be transmitted. Numerical proximity alone is not compression, and exact decoding must not require the source corpus, external factor inventory, or a network service.
+
+Let $\bits(0)=0$ and $\bits(n)=\lfloor\log_2 n\rfloor+1$ for positive integers. The Elias gamma length for $n\ge1$ is $\gam(n)=2\lfloor\log_2n\rfloor+1$. In the EA08 single-power format, with $d=\bits(|r|)$, the raw and power costs in bits are
+\begin{align}
+ C_{\rm raw}&=\gam(w)+1+8w,\\
+ C_{\rm pow}&=\gam(w)+1+\gam(b)+\gam(e)+1+\gam(d+1)+d.
+ \label{eq:cost}
+\end{align}
+The two one-bit terms in the second expression encode mode and residual sign. The byte cost is $\lceil C/8\rceil$. A strict win over the framed raw alternative therefore requires $C_{\rm pow}\le 8(\lceil C_{\rm raw}/8\rceil-1)$. A win over the original unframed file is a stronger requirement when raw framing adds bytes.
+
+For $N>0$ and nonzero residual, setting $\epsilon=|r|/N$ gives $\log_2|r|=\log_2 N+\log_2\epsilon$. Thus a small relative error saves approximately $-\log_2\epsilon$ magnitude bits before rounding and metadata, but the base, exponent, sign, length and framing can consume the saving. The exact zero-residual case has $d=0$. Equation~\eqref{eq:cost} is specific to the screening experiment; IEX1 uses its own magic, mode and expression framing, and measured archive lengths below include those bytes.
+
+\section{Search and certified screening}
+\subsection{Exact cost-aware root search (EA01--EA02)}
+For a fixed base, the closest powers bracket $N$. However, minimizing distance alone need not minimize total cost: the gamma length changes at powers of two. The bounded search therefore partitions exponents into intervals of constant gamma length, and clips the bracketing exponents to each interval. Within such an interval, $b^e$ is monotone and the residual-length contribution in Eq.~\eqref{eq:cost} is nondecreasing in $|r|$. One of the clipped floor/ceiling candidates consequently minimizes the cost in that interval. The analogous argument for fixed $e$ partitions bases by gamma length and uses the integer $e$th root. The exponent and base domains are bounded by the experiment, not an unrestricted expression grammar.
+
+EA02's 256-target experiment used 1,018,066 exhaustive candidates and 95,959 scored bucket candidates (excluding root probes), agreeing with the bounded oracle in the tested domain. The wider base-65,536 run was not exhaustively checked. The hosted Rust reference passed six tests; 4,096 seeded uniform inputs yielded no net single-power wins, whereas constructed near-power inputs benefited. \cite{ea02,hosted}
+
+\subsection{Outward-rounded prefix intervals (EA03 and EA08)}
+Full enwik9 is one billion bytes; evaluating every candidate power at that width is unnecessary. If $P$ is the integer encoded by the first $k$ bytes, the unknown tail gives
+\begin{equation}
+ P2^{8(w-k)}\le N\le(P+1)2^{8(w-k)}-1.
+\end{equation}
+An interval $(l,h,s)$ represents $[l2^s,h2^s]$. Multiplying nonnegative intervals gives endpoint products; to keep a bounded mantissa, truncate the lower endpoint downward and round the upper endpoint upward when shifting out low bits. Repeated squaring then encloses $b^e$ without storing the full power. With aligned shifts and intervals $[L_N,U_N]$ and $[L_A,U_A]$, a residual lower bound is
+\[
+ D=\max(0,L_N-U_A,L_A-U_N)\le |N-A|.
+\]
+Substitution of $\bits(D)$ into Eq.~\eqref{eq:cost} is a lower bound on encoded cost. Reject only when that bound exceeds the strict-win cutoff. Overlap or an uncertain bracket must not be treated as rejection; ambiguous candidates require exact evaluation or an unresolved result. A logarithmic estimate seeds the search, but certified comparisons establish the bracket. Cached powers and repeated squares avoid redundant interval multiplications. This argument explains the pruning principle; it is not an independent formal verification of the implementation.
+
+EA03's constructed 1,048,576-bit near-power input encoded in 15 bytes. EA08 validated 32 small-target comparisons against an exact oracle, then screened a virtual billion-byte target. The virtual experiment was not a corpus test. EA10 later applied the method to the actual corpus using 80-bit intervals. \cite{ea03,ea08,ea10}
+
+\section{Expression families beyond one power}
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}p{19mm}p{54mm}p{75mm}@{}}
+\toprule
+Campaign & Representation / search & Bounded experimental finding\\\midrule
+EA04 & $N=\sum_j b_j^{e_j}+r$; at most 16 positive terms & Separated powers improve; clustered powers seldom do; uniform controls show no net wins.\\
+EA05 & $N=\sum_j s_j b_j^{e_j}+r$; at most 8 signed terms & Alternating-sign witnesses benefit; beam width 8 adds no wins over the greedy portfolio.\\
+EA06 & $N=q\prod_j p_j^{e_j}+r$; small-prime valuations and signed offsets & Constructed product witnesses benefit; uniform controls do not. Cofactors and residuals are charged.\\
+EA07 & Trees with literals, powers, addition, subtraction and multiplication; outer exponents 2--12 & Nested-power witnesses benefit; no uniform-control gains. Search is not globally optimal over trees.\\\bottomrule
+\end{tabular}
+\caption{The principal extensions of the single-power model. All use exact integer reconstruction and explicit framing. Source: EA04--EA07 experiment records.}
+\label{tab:families}
+\end{table}
+Greedy residual reduction is a heuristic, not a proof that all useful decompositions will be found. The successive portfolios retained raw fallback and earlier alternatives; they tested whether greater expressiveness justified additional operand and opcode costs. For products, the factor extraction candidates were drawn from small-prime valuations of $N-r$, with explicit cofactor $q$. Nested trees were constructed from exact integer-root candidates and flat expressions rather than from an exhaustive enumeration of all trees. The positive controls deliberately contain the arithmetic patterns being sought. Their role is to demonstrate sensitivity, not forecast real-corpus performance. \cite{families}
+
+\section{Standalone codec and synthetic controls}
+IEX1 provides a byte-level encoder and decoder with explicit input width and raw fallback. Its experimental encoder is capped at 8,192 bytes, the decoder at one MiB. It is not a security-audited general archive format. The hosted fixture suite passed 20 round trips and rejected 36 malformed frames. Table~\ref{tab:controls} reports measured byte lengths from the hosted codec verification. The uniform fixture is a seeded control, not a claim about cryptographic randomness. Its small apparent advantage over standalone conventional frames is not a win over raw input.
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}lrrrrr@{}}\toprule
+Fixture & Raw & IEX1 & gzip & xz & zstd\\\midrule
+Uniform & 1024 & 1031 & 1047 & 1092 & 1037\\
+Repetitive & 1024 & 1031 & 55 & 112 & 47\\
+Near power & 1024 & 13 & 1047 & 1076 & 998\\
+Positive sum & 1024 & 17 & 1047 & 1076 & 998\\
+Signed sum & 1024 & 17 & 1047 & 1076 & 998\\
+Product & 1024 & 16 & 870 & 900 & 824\\
+Nested & 1024 & 22 & 1047 & 1076 & 998\\
+Zeroes & 1024 & 9 & 29 & 84 & 21\\\bottomrule
+\end{tabular}
+\caption{Synthetic controls; measured archive bytes, including each format's framing but excluding the decoder executable. Source: hosted EA09 verification.}
+\label{tab:controls}
+\end{table}
+
+\section{Actual enwik9 experiment (EA10)}
+The input was required to have exactly 1,000,000,000 bytes and SHA-256
+\begin{center}\small\ttfamily
+159b85351e5f76e60cbe32e04c677847\\a9ecba3adc79addab6f4c6c7aa3744bc
+\end{center}
+Three nested widths (128, 1,024 and 4,096 bytes) were read at each of six fixed offsets. For each sample, IEX1 was encoded and decoded, with byte equality checked. Conventional codecs were run on stdin with \texttt{gzip -n -9 -c}, \texttt{xz -9 -c}, and \texttt{zstd -19 -q -c}; decompressed bytes were checked against the input. The successful workflow also decoded each IEX1 archive in a separate Bubblewrap environment with no corpus or network, comparing the output hash to the recorded input hash. The runtime was Node.js 24.22.3 in pinned Nix on Ubuntu 22.04.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}rrrrrr@{}}\toprule
+Byte offset & Raw & IEX1 & gzip & xz & zstd\\\midrule
+0 & 128 & 135 & 117 & 172 & 112\\
+0 & 1024 & 1031 & 346 & 420 & 354\\
+0 & 4096 & 4104 & 1000 & 1032 & 990\\\addlinespace
+30,000,000 & 128 & 135 & 60 & 112 & 60\\
+30,000,000 & 1024 & 1031 & 525 & 616 & 529\\
+30,000,000 & 4096 & 4104 & 1779 & 1864 & 1744\\\addlinespace
+33,000,000 & 128 & 135 & 108 & 164 & 105\\
+33,000,000 & 1024 & 1031 & 294 & 348 & 277\\
+33,000,000 & 4096 & 4104 & 1254 & 1292 & 1254\\\addlinespace
+90,000,000 & 128 & 135 & 118 & 184 & 109\\
+90,000,000 & 1024 & 1031 & 600 & 700 & 601\\
+90,000,000 & 4096 & 4104 & 1966 & 2040 & 1926\\\addlinespace
+500,000,000 & 128 & 135 & 113 & 168 & 110\\
+500,000,000 & 1024 & 1031 & 595 & 664 & 601\\
+500,000,000 & 4096 & 4104 & 1692 & 1708 & 1664\\\addlinespace
+999,995,904 & 128 & 135 & 123 & 184 & 114\\
+999,995,904 & 1024 & 1031 & 553 & 648 & 558\\
+999,995,904 & 4096 & 4104 & 1887 & 1972 & 1868\\\midrule
+Sum & 31,488 & 31,620 & 13,130 & 14,288 & 12,976\\\bottomrule
+\end{tabular}
+\caption{All EA10 sample measurements in bytes. The three widths at each offset overlap; these sums are not disjoint corpus coverage. Source: EA10-E002.}
+\label{tab:corpus}
+\end{table}
+
+The IEX1 archives are uniformly larger than the original samples, with 7--8 bytes of framing overhead. The aggregate overhead is 132 bytes (0.42\%); zstd reduces the summed size by 58.79\%. These percentages describe only the selected overlapping frames. In a separate whole-integer test, the first 32 bytes and declared corpus width sufficed for a certified raw result under the EA08 single-power model, bases 2--64: 2,030 candidates, 2,030 pruned, zero survivors, 33,701 interval multiplications, 189 cache hits and 189 bracket probes. Screening took 11.56 ms; the complete sample benchmark took 11.97 s with peak RSS 155,104 KiB. The screening timer excludes the corpus hash and is not a full-corpus compression time.
+
+\subsection{Failed run and successful repeat}
+The original acquisition attempt failed on an incomplete ZIP and rejected HTTP resume. A fallback was added with mandatory size and digest validation. The next run produced all 18 measurements but failed the independent isolation step (Bubblewrap loopback permission error). Switching to the Ubuntu 22.04 runner used by a prior verified workflow resolved that problem. The final run succeeded; all 18 input hashes, archive hashes and conventional codec sizes matched the earlier measurement, and all 18 isolated output hashes passed. The failed run is preserved as evidence rather than treated as a successful isolation test. \cite{ea10}
+
+\section{Factor-assisted and hierarchical pilots (EA11)}
+A read-only snapshot of the independent C20 factor inventory provided a second source of corpus spans. Each object was reconstructed as a cofactor times prime powers, converted to its recorded byte width and authenticated against its stored SHA-256. Factor and expression costs were charged explicitly; the inventory was not available to the decoder. EA11-E001 authenticated 92 overlapping objects and performed 270 decode checks, with no hybrid wins (15,760 input bytes versus 16,311 framed bytes). EA11-E002 extended the base range to 65--65,536 for 12 selected real spans (nine unique) and rejected 101,868 candidates; no gains were found. Both samples are selected, not representative.
+
+EA11-E003 verified 794 nested span hashes in three disjoint page roots. A shortest-path problem on byte boundaries compared raw coalescing against arithmetic payloads, charging the shared header, record tags and lengths in IEXH. The optimum is exact only over the enumerated edges. None of 777 unique arithmetic intervals was competitive. A constructed two-power-segment control improved from 229 raw bytes to 152 flat bytes and 63 hierarchical bytes. On the real pages, 2,854 original bytes became 2,875 IEX1 or 2,881 IEXH bytes. EA11-E004 separately records conventional totals of 1,672 gzip, 1,904 xz and 1,695 zstd bytes. Those local comparison results are recorded evidence, not a new hosted rerun for this report. \cite{ea11}
+
+\section{Interpretation, limitations and conclusion}
+The basic hypothesis is valid for special integers: a short arithmetic expression can replace a long bit string. But the tested expression families did not capture the byte-level regularity of the enwik9 samples economically. A residual may be small relative to an enormous integer while remaining nearly as long as the original in bits. More terms or flexible bases add search cost and metadata, and do not inherently exploit the repeated strings and local statistical structure that conventional compressors capture. The repetitive synthetic control illustrates that distinction especially clearly.
+
+These experiments are bounded and exploratory. The six fixed offsets are not a randomized or held-out corpus sample; their nested widths overlap. The whole-integer certificate is restricted to the EA08 single-power frame and bases 2--64. Products, sums and nested trees were not exhaustively searched at full corpus width. The wide-base pilot covers only selected spans. The positive controls are deliberately biased, some early experiments lack hosted runtime or memory measurements, and the codecs are experimental. Executable-inclusive contest costs and general arithmetic-expression lower bounds were not established. No novelty or contest eligibility is claimed.
+
+We conclude that the investigated top-down exponential-approximation campaign did not demonstrate an enwik9 compression advantage. It nevertheless delivered useful exact cost accounting, certified pruning and reproducible positive and negative controls. Further undirected expansion of the tested search is not justified by the observed results. A new attempt would require a distinct hypothesis for discovering inexpensive arithmetic structure or a principled connection to byte-level redundancy. This conclusion does not invalidate the separate bottom-up C20 factor-subsumption research.
+
+\section*{Reproducibility and research status}
+The source, seeds, hashes, experiment records and workflows are preserved on the \href{https://github.com/sguzman/integrax/tree/research/exponential-approximation/research/exponential}{exponential research branch}. The successful corpus run uses revision \href{https://github.com/sguzman/integrax/commit/3db6b3483166c37557c03f645f3adef25de2708b}{\texttt{3db6b348}}; the consolidated findings and evidence are pinned at \href{https://github.com/sguzman/integrax/tree/8dd4a4196ae21664e843513c5437c248f3d8362b/research/exponential}{\texttt{8dd4a419}}. The benchmark entry point is \texttt{ea10-corpus.mjs}; the exact workflow includes acquisition and isolated verification. See the records for command lines, individual hashes and source revisions. This report was prepared with AI assistance from project records; it is an internal technical report pending human author review, not peer-reviewed or submitted externally.
+
+\begin{thebibliography}{9}\small
+\bibitem{ea02} IntegraX, EA02-E001: exact bounded base/exponent search, experiment record. \href{https://github.com/sguzman/integrax/blob/8dd4a4196ae21664e843513c5437c248f3d8362b/research/exponential/records/EA02-E001.json}{Record}.
+\bibitem{hosted} IntegraX, hosted verification of Rust reference and standalone codec. \href{https://github.com/sguzman/integrax/actions/runs/46068385328}{Rust run}; \href{https://github.com/sguzman/integrax/actions/runs/46069329127}{codec run}; \href{https://github.com/sguzman/integrax/blob/8dd4a4196ae21664e843513c5437c248f3d8362b/research/exponential/records/HOSTED-VERIFICATION.json}{record}.
+\bibitem{ea03} IntegraX, EA03-E001 and EA03-E002: certified prefix intervals and synthetic scaling. \href{https://github.com/sguzman/integrax/tree/8dd4a4196ae21664e843513c5437c248f3d8362b/research/exponential/records}{Records}.
+\bibitem{ea08} IntegraX, EA08-E001: bounded prefix-only screening and cached powers. \href{https://github.com/sguzman/integrax/blob/8dd4a4196ae21664e843513c5437c248f3d8362b/research/exponential/records/EA08-E001.json}{Record}.
+\bibitem{families} IntegraX, EA04-E001 through EA07-E001: positive sums, signed sums, products and nested expressions. \href{https://github.com/sguzman/integrax/tree/8dd4a4196ae21664e843513c5437c248f3d8362b/research/exponential/records}{Records}.
+\bibitem{ea10} IntegraX, EA10-E001 and EA10-E002: verified corpus measurements. \href{https://github.com/sguzman/integrax/actions/runs/46075399271}{First measurement}; \href{https://github.com/sguzman/integrax/actions/runs/46080789914}{successful isolated run}; \href{https://github.com/sguzman/integrax/blob/8dd4a4196ae21664e843513c5437c248f3d8362b/research/exponential/records/EA10-E002.json}{complete results}.
+\bibitem{ea11} IntegraX, EA11-E001 through EA11-E004: factor inventory and hierarchy pilots. \href{https://github.com/sguzman/integrax/tree/8dd4a4196ae21664e843513c5437c248f3d8362b/research/exponential/records}{Records}.
+\end{thebibliography}
+\end{document}
