@@ -1,0 +1,108 @@
+{
+  "id": "EA01-E002-js",
+  "status": "executed independent JS reproduction; Rust not verified",
+  "seed": "0xea010001",
+  "input": "1024 uniform integers per width plus near-power controls; duplicated zero-offset controls retained",
+  "scope": "2..64 bases, powers <= u128::MAX; per-object frames, no executable size",
+  "command": "node research/exponential/ea01-independent.mjs",
+  "execution": "JS code-mode runtime, same function source; runtime version and memory unavailable",
+  "source_commit": "96cd6f9f81650884a5723fb8af8370289fa667f4",
+  "rows": [
+    {
+      "group": "uniform",
+      "width_bytes": 2,
+      "count": 1024,
+      "input_bytes": 2048,
+      "raw_framed_bytes": 3072,
+      "packed_archive_bytes": 3071,
+      "oracle_net_wins": 0,
+      "adjacent_net_wins": 0,
+      "adjacent_cost_misses": 339,
+      "max_saved_bytes": 0
+    },
+    {
+      "group": "near_power",
+      "width_bytes": 2,
+      "count": 504,
+      "input_bytes": 1008,
+      "raw_framed_bytes": 1512,
+      "packed_archive_bytes": 1482,
+      "oracle_net_wins": 0,
+      "adjacent_net_wins": 0,
+      "adjacent_cost_misses": 40,
+      "max_saved_bytes": 0
+    },
+    {
+      "group": "uniform",
+      "width_bytes": 4,
+      "count": 1024,
+      "input_bytes": 4096,
+      "raw_framed_bytes": 5120,
+      "packed_archive_bytes": 5120,
+      "oracle_net_wins": 0,
+      "adjacent_net_wins": 0,
+      "adjacent_cost_misses": 844,
+      "max_saved_bytes": 0
+    },
+    {
+      "group": "near_power",
+      "width_bytes": 4,
+      "count": 504,
+      "input_bytes": 2016,
+      "raw_framed_bytes": 2520,
+      "packed_archive_bytes": 1986,
+      "oracle_net_wins": 156,
+      "adjacent_net_wins": 156,
+      "adjacent_cost_misses": 0,
+      "max_saved_bytes": 1
+    },
+    {
+      "group": "uniform",
+      "width_bytes": 8,
+      "count": 1024,
+      "input_bytes": 8192,
+      "raw_framed_bytes": 9216,
+      "packed_archive_bytes": 9216,
+      "oracle_net_wins": 0,
+      "adjacent_net_wins": 0,
+      "adjacent_cost_misses": 965,
+      "max_saved_bytes": 0
+    },
+    {
+      "group": "near_power",
+      "width_bytes": 8,
+      "count": 504,
+      "input_bytes": 4032,
+      "raw_framed_bytes": 4536,
+      "packed_archive_bytes": 2266,
+      "oracle_net_wins": 504,
+      "adjacent_net_wins": 504,
+      "adjacent_cost_misses": 0,
+      "max_saved_bytes": 5
+    },
+    {
+      "group": "uniform",
+      "width_bytes": 16,
+      "count": 1024,
+      "input_bytes": 16384,
+      "raw_framed_bytes": 18432,
+      "packed_archive_bytes": 18432,
+      "oracle_net_wins": 0,
+      "adjacent_net_wins": 0,
+      "adjacent_cost_misses": 1010,
+      "max_saved_bytes": 0
+    },
+    {
+      "group": "near_power",
+      "width_bytes": 16,
+      "count": 504,
+      "input_bytes": 8064,
+      "raw_framed_bytes": 9072,
+      "packed_archive_bytes": 2490,
+      "oracle_net_wins": 504,
+      "adjacent_net_wins": 504,
+      "adjacent_cost_misses": 0,
+      "max_saved_bytes": 12
+    }
+  ]
+}
