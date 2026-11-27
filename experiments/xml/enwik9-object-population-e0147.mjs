@@ -108,7 +108,6 @@ function countPage(start,end){
  const b=corpus.subarray(start,end),root=objectTree(b);let nodes=0;
  (function walk(n){
   nodes++;const kind=n.kind??n.name??(n===root?'page-root':'lexical');byKind[kind]=(byKind[kind]??0)+1;
-  if(n.name){pageXmlElements++;pageElementCounts[n.name]=(pageElementCounts[n.name]??0)+1}
   if(n.children)for(const c of n.children)walk(c);
  })(root);
  candidateObjects+=nodes;pages++;pageBytes+=end-start;
@@ -119,17 +118,21 @@ while(position<corpus.length){
  const token=scanTag(corpus,lt);position=token.end;
  if(token.kind==='open'){
   allXmlElements++;allElementCounts[token.name]=(allElementCounts[token.name]??0)+1;
+  if(pageStart>=0||token.name==='page'){pageXmlElements++;pageElementCounts[token.name]=(pageElementCounts[token.name]??0)+1}
   if(token.name==='page'){assert.equal(pageStart,-1,'nested page element');pageStart=lt}
   stack.push(token.name);
  }else if(token.kind==='empty'){
   allXmlElements++;allElementCounts[token.name]=(allElementCounts[token.name]??0)+1;
+  if(pageStart>=0||token.name==='page'){pageXmlElements++;pageElementCounts[token.name]=(pageElementCounts[token.name]??0)+1}
   if(token.name==='page')countPage(lt,token.end);
  }else if(token.kind==='close'){
   assert.equal(stack.at(-1),token.name,`mismatched XML close tag ${token.name} at ${lt}`);
   stack.pop();if(token.name==='page'){assert(pageStart>=0,'page close without open');countPage(pageStart,token.end);pageStart=-1}
  }
 }
-assert.equal(pageStart,-1,'unclosed page at EOF');assert.equal(stack.length,0,'unclosed XML elements at EOF');assert(pages>0);
+const truncatedFinalPage=pageStart>=0,finalPageStart=pageStart;
+if(truncatedFinalPage){assert(stack.includes('page'),'open page missing from XML stack at EOF');countPage(pageStart,corpus.length);pageStart=-1}
+assert(!stack.length||truncatedFinalPage,'unclosed XML elements without a truncated final page');assert(pages>0);
 assert.equal(pages,pageElementCounts.page,'page count differs from parsed page element count');
 const inventoryCoverage=candidateObjects?100*manifest.indexed_nodes/candidateObjects:0;
-console.log(JSON.stringify({event:'E0147_XML_OBJECT_POPULATION',experiment:'E0147',corpus_sha256:corpusHash,corpus_bytes:corpus.length,enumeration:'all <page> elements; exact per-page IntegraX objectTree/textTree hierarchy; no factorization',parser_validation:{pages:validationPages,objects:validationNodes,manifest_indexed_nodes:manifest.indexed_nodes,all_sampled_page_object_counts_matched:true},total_xml_pages:pages,total_xml_element_objects:allXmlElements,total_page_xml_element_objects:pageXmlElements,total_integrax_candidate_objects:candidateObjects,indexed_pages:validationPages,indexed_page_coverage_percent:100*validationPages/pages,indexed_objects:manifest.indexed_nodes,indexed_object_coverage_percent:inventoryCoverage,page_payload_bytes:pageBytes,page_payload_coverage_percent:100*pageBytes/corpus.length,objects_by_kind:byKind,all_xml_elements_by_name:allElementCounts,page_xml_elements_by_name:pageElementCounts,wall_seconds:(performance.now()-startTime)/1000,peak_rss_kib:process.resourceUsage().maxRSS,interpretation:'Coverage denominator is the full XML population under the persisted IntegraX per-page object-tree definition. All document XML elements and page-local XML elements are counted separately. Indexed numerator is the exact current inventory manifest; every sampled page object count is checked against its batch rows before full enumeration.'}));
+console.log(JSON.stringify({event:'E0147_XML_OBJECT_POPULATION',experiment:'E0147',corpus_sha256:corpusHash,corpus_bytes:corpus.length,enumeration:'all XML element starts in the exact enwik9 byte prefix; exact per-page IntegraX objectTree/textTree hierarchy; no factorization',parser_validation:{pages:validationPages,objects:validationNodes,manifest_indexed_nodes:manifest.indexed_nodes,all_sampled_page_object_counts_matched:true},total_xml_pages:pages,complete_xml_pages:pages-(truncatedFinalPage?1:0),truncated_final_page:truncatedFinalPage,truncated_final_page_start:truncatedFinalPage?finalPageStart:null,unclosed_xml_elements_at_eof:stack,well_formed_xml_document:!stack.length,total_xml_element_objects:allXmlElements,total_page_xml_element_objects:pageXmlElements,total_integrax_candidate_objects:candidateObjects,indexed_pages:validationPages,indexed_page_coverage_percent:100*validationPages/pages,indexed_objects:manifest.indexed_nodes,indexed_object_coverage_percent:inventoryCoverage,page_payload_bytes:pageBytes,page_payload_coverage_percent:100*pageBytes/corpus.length,objects_by_kind:byKind,all_xml_elements_by_name:allElementCounts,page_xml_elements_by_name:pageElementCounts,wall_seconds:(performance.now()-startTime)/1000,peak_rss_kib:process.resourceUsage().maxRSS,interpretation:'Counts all XML element starts and exact page-local candidate nodes represented by this byte prefix. A final page cut by EOF is included as a truncated object tree; XML element starts and candidate tree nodes are separate populations. Indexed numerator is the exact current inventory manifest; every sampled page object count is checked against its batch rows before full enumeration.'}));
