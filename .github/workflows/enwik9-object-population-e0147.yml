@@ -58,4 +58,4 @@ jobs:
           git commit -m 'Publish verified full XML object population count'
           git push origin HEAD:main
           git fetch origin main
-          git show origin/main:experiments/records/E0147.json | jq -e '.status == "verified" and .parser_validation.all_sampled_page_object_counts_matched == true and .indexed_objects <= .total_integrax_candidate_objects and .total_xml_pages == .xml_elements_by_name.page'
+          git show origin/main:experiments/records/E0147.json | jq -e '.status == "verified" and .parser_validation.all_sampled_page_object_counts_matched == true and .indexed_objects <= .total_integrax_candidate_objects and .total_xml_pages == .all_xml_elements_by_name.page'
