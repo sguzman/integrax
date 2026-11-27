@@ -1,0 +1,3305 @@
+{
+  "factors": [
+    {
+      "p": "93c95dbb",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:769",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "9712c58f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:4185",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "98558c0b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:1005",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "9875158d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:6096",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "99906f5b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3863",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "9cd68731",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:6045",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "9db3bdd1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:5553",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "a52875b5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:4227",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "a5bbb7b7",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:7768",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:7944",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:7946",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "a5c89a43",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:1909",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "a8a82f5f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9081",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "a8b83a0b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:6107",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "a9f3e82f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:1813",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "abe6c37b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:6667",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "afe5d499",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:8862",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "c13e1a71",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:4151",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "c75b409d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:10343",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "cd8a0a83",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:369",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "d17fb5cd",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2598",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "d2fc2093",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:8000",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:8124",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:8158",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:8322",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:8350",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:8389",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "d719f38f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2146",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "d9273243",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:4496",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "d9a1d0eb",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:9803",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "db1fed97",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:3591",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:3600",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "e3b97f17",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:5080",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "e9a5726b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:6580",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "f06dcf2d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:2931",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "f21f3335",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:4427",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "f6111883",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:8285",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "f9e505e9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:7390",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "fa07ec3d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:4445",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "102e262f1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:7717",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "107f1285d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:7969",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "10927d081",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:11459",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "119d4ec41",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:9195",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:9868",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "131ac5e33",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:3834",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "132b7e987",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:10471",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:10480",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1338a17b5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:1843",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "133a3cc45",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:3952",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "134ef6c3d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9795",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "13ca7ae55",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:1055",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "13fbf5a6d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:4338",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:6164",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:7503",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:8291",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:8910",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "148873745",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:6826",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "14a4191b5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:5665",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "14c40b8b5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:4625",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:4644",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "154476857",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:1220",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:4892",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:10589",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "157790f35",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:245",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "15af0c1b7",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2162",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "15cd2be8b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:7468",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "162848b2b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:8878",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1650c47b3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:7065",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "16e82b5b3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:6266",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:6388",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "174194777",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:10510",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "17678e1f9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2925",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1771404e9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:2909",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:3519",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "177aed997",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:1186",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "17b376413",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:8894",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "17c75dcbf",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:6218",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "17f8b1bd1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:7648",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "18327eb67",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:4806",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "189acec01",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:7312",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "18dd98865",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3238",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "18ec58e9b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:4856",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:5448",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:5692",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1b303af63",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:6337",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1b5fb7d13",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:3289",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1b8376e75",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:415",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11852",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1bff19d53",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:8455",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:8454",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1cc5532f7",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:7286",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1d9ecd07d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:9653",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1e53ae015",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:5420",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1ed54a88d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:4439",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1f36edaa7",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2709",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1f723e647",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:3634",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "215720b7b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:9417",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "22b2fb14b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:3336",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "23974ccc1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:3187",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2409c63cb",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2526",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2449f938d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:4316",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "24c5eb793",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:2767",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "25be54849",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:9529",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "25f2fce6f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:7424",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "266be71d7",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:3615",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "26c64b93b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:10132",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "270d95caf",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:10469",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2722890a9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:1849",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2731b8c0f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:5171",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "27c27ea37",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:8026",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "27cc48fa3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:4141",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "285140d0b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:637",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "28667eab9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:9551",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2bcabdd01",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:11235",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2bd7a9451",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:1299",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2c7782767",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2835",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2dcc9299f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:1229",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2eae9d101",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:4249",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2f4fc20b1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:12176",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "31aaae959",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:2164",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "31d54df49",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:8466",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "323934343",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:8783",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3239f711b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:3732",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:3739",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "33a931c7d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3048",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:6534",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:7294",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:7534",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:8886",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:9342",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:9469",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:9716",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:10129",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:10899",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "35c7b858f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:3669",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "37e883a1d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:5544",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3813e4079",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:8730",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3ad53be7d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3486",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3b4588a69",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:2824",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:3840",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3f879ea01",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:9758",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "41294255b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:8523",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4257a6ac3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:7029",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "43bea2db5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9136",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "43c5dee47",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:164",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:221",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:433",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:610",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:846",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:969",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:1004",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:1113",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:1130",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:10641",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "45a5cc215",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:1570",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "45b03a85d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:3786",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:3785",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "45d923a39",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:4975",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4669ee315",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:8117",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4695a83c1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:9667",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4a2f75abf",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:8782",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4b068d5b3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3526",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:3554",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:5782",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4c19cd3e5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:6487",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4c20cafd3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:1764",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4d978a979",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:2460",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:2465",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:3247",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:5013",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:9042",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4e899d9bf",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9581",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4f2376c49",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:5411",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "511262e91",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9077",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "51300929f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:5243",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "522c98c95",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:5518",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "53f5988ab",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:9955",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "5753c4643",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:19",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "57fcc5087",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:10669",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "5d2123845",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:5793",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:8509",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "5eb216de5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:1619",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "5f36ab9bd",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:1265",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "613a701a9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:10337",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "632258827",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:1774",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "64e9a92cd",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:6395",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "66d0a7ec9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:2694",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "67a814049",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:19",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "67e6f6043",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:11259",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "6815c43a9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:4080",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "6afa886fb",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:860",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "6b838e887",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:6923",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "6bdf4cd87",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9187",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "7595bf2c5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:10786",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:10865",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "77467c03d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:5684",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "7abc020d9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:6725",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "7d1ecff0b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:6810",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "7fb5da247",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3024",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "7ff6193e9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9672",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "81d6dd049",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:10779",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "82dfb2ef9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:10418",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "83b2b182f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:8394",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "84847065b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:203",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "85ede08b3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:8834",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "86a92567f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:6939",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "89213de11",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:6835",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "9042416b1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:936",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "9079998f5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:11277",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "95f8b9923",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:945",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "9a1b4805b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9159",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "9bea3b901",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:5170",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "9e1552337",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:692",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "9efc2ab5b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:280",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "a0b70d73d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:8809",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "a213ac425",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:8248",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "a222f1287",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:6061",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "a2440f921",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:4097",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "ab3d5d42d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:9722",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "ac0b5b297",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:9398",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "b3994cbcf",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:985",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:1009",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11649",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "b47f63f2b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9175",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "b51a24187",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:3869",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "be9597e59",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:5532",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "c1b961529",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9832",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:9849",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "c8488cf9d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3743",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "cef335345",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:7030",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "d696af177",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:1301",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "d7f0e4021",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:6343",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "d99cc5cbf",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:11058",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "dc2c08b87",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:7942",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "e384050a9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:1477",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "e57a0c535",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:4534",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "edd2262a9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:268",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:331",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:2572",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:2644",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:2763",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "f3487a9ab",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:5682",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:5702",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "f364d854f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:10281",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "f48e08543",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3456",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "fb1dbb1df",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:1948",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1008880f93",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:1514",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "102be1b1a7",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:437",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "106629c791",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:1973",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "10b8acd709",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:7116",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "110ebe0101",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:8048",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:100406696:8398",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "115343e265",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:1734",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:1736",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "12673d2697",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:4685",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "126bde9d31",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:4894",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "134f02ecc1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:5061",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1351ad486d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:5291",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "13e1ad15af",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:5791",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "13e8e62ee3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:9452",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "140e38f6c5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:2896",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:3807",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "146763f077",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3085",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:6318",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:10332",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "146c10a027",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:6624",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "15c7f027d5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3926",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:3928",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:5236",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:5238",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:5604",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:5606",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1866ee3547",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:2356",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:12090",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "18ef39d57d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:1878",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "197a787b77",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:135",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:156",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:4171",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:11682",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "199d9d6493",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:8746",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "19a4d18efd",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:601",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "19d3534bc7",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:5464",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "19df2fd91d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:6678",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1a033e27db",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:8948",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1a2b11e879",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:8382",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1af0a38975",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:5630",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1b06761b63",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:8241",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1d262326d1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:941",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1d8ae6b0eb",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:442",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1d9d5045e3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:10432",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:10479",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:10557",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:10603",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:10684",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:10731",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:10806",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:10853",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:10934",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:10981",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11061",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11108",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11183",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11230",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11311",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11358",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11431",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11478",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11558",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11605",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1e7c44014f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:6769",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1f0d68e9b5",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:3910",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "1f29eff9c9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:6",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "205b5bc385",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:11396",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:800129504:11523",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "20d0cdcf79",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:5269",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2116bf9e21",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:3003",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:475",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "21b2b9b0b9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:9577",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:9602",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "21f28cf6e1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:4939",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "22bafe0eb3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:3200",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "23b0b137b7",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:4045",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2403e11d35",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:286",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "24939f60eb",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:5644",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "26199ee183",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:9957",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2632e944d1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:9505",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "267975d177",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:5798",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "27d4825a2f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:7517",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "28a795d1e7",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:7151",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "28f8b6ca11",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:2842",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2adb4c1fcb",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:10450",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2ca69370f3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:1675",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2d3cb9b061",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:7463",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "2e58850f65",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:5483",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "30d57c5f71",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:478",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "321095ca31",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:4491",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "32840c551d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:7548",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "32947d64a1",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:910",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3476009c7d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:1691",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "34e422d3d9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2779",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "36715be71d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:3704",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "36b0b737b9",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:240",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "36d716ac15",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2053",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "38119a5601",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2002",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "38c0e02257",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:6491",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3d205d2833",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:8974",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3da671936d",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:4528",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3eab5223e3",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:800129504:2674",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3f279af021",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:730",
+          "e": 1,
+          "source": "E0140"
+        },
+        {
+          "id": "enwik9:403840740:11121",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "3fb5e36e1b",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:100406696:6960",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "4240910eeb",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:7361",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    },
+    {
+      "p": "435e01040f",
+      "quality": "prime64",
+      "occurrences": [
+        {
+          "id": "enwik9:403840740:10318",
+          "e": 1,
+          "source": "E0140"
+        }
+      ]
+    }
+  ]
+}
