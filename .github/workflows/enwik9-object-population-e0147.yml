@@ -1,0 +1,56 @@
+name: E0147 enumerate full enwik9 XML object population
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: c20-factor-inventory
+  cancel-in-progress: false
+jobs:
+  enumerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Record Nix version
+        run: echo "NIX_VERSION=$(nix --version)" >> "$GITHUB_ENV"
+      - name: Restore verified corpus cache
+        uses: actions/cache@v4
+        with:
+          path: data/enwik9
+          key: enwik9-sha256-159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+      - name: Acquire and verify authentic enwik9
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          sh datasets/acquire.sh enwik9
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          printf '%s  %s\n' "$expected" data/enwik9 | sha256sum -c -
+      - name: Enumerate all pages and exact IntegraX object trees
+        run: |
+          set -euo pipefail
+          /usr/bin/time -v -o data/E0147.time timeout --kill-after=10s 5400s nix develop --no-update-lock-file --command node --max-old-space-size=4096 experiments/xml/enwik9-object-population-e0147.mjs data/enwik9 > data/E0147.json
+      - name: Verify and materialize E0147 record
+        env:
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: nix develop --no-update-lock-file --command node experiments/xml/publish-enwik9-object-population-e0147.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: E0147-full-XML-object-population
+          path: |
+            data/E0147.json
+            data/E0147.time
+            experiments/records/E0147.json
+          retention-days: 90
+      - name: Commit results and verify remote readback
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/records/E0147.json
+          git commit -m 'Publish verified full XML object population count'
+          git push origin HEAD:main
+          git fetch origin main
+          git show origin/main:experiments/records/E0147.json | jq -e '.status == "verified" and .parser_validation.all_sampled_page_object_counts_matched == true and .indexed_objects <= .total_integrax_candidate_objects and .total_xml_pages == .xml_elements_by_name.page'
