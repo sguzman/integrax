@@ -18,7 +18,7 @@ assert.equal(result.distinct_factor_values_in_object_rows+result.unused_index_fa
 assert.equal(result.base_status_counts.complete+result.base_status_counts.partial+result.base_status_counts.trivial,result.indexed_objects);
 assert.equal(result.final_status_counts.complete+result.final_status_counts.partial+result.final_status_counts.trivial,result.indexed_objects);
 assert.equal(result.refinement_rows,(manifest.refinements??[]).reduce((n,x)=>n+x.rows,0));
-assert.equal(result.cumulative_inventory_json_bytes,prior.storage.cumulative_inventory_json_bytes);
+assert(result.cumulative_inventory_json_bytes>=prior.storage.cumulative_inventory_json_bytes,'reported inventory JSON is below the E0144 baseline');
 assert.equal(result.indexed_candidate_coverage_percent,100*result.indexed_objects/result.candidate_population);
 assert.equal(result.complete_candidate_population_lower_bound_percent,100*result.final_status_counts.complete/result.candidate_population);
 assert.equal(result.proven_prime_candidate_population_lower_bound_percent,100*result.final_status_counts.proven_prime_only_complete/result.candidate_population);

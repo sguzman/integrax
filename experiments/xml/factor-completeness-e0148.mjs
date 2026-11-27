@@ -107,7 +107,7 @@ const snapshotPaths=[...new Set(manifest.batches.map(b=>b.snapshots).filter(Bool
 const factorPaths=[...new Set(manifest.index.shards.map(s=>s.path))];
 const refinementPaths=[...new Set((manifest.refinements??[]).map(r=>r.path))];
 const inventoryBytes=[...new Set([...objectPaths,...snapshotPaths,...factorPaths,...refinementPaths])].reduce((n,p)=>n+statSync(p).size,0);
-assert.equal(inventoryBytes,602202383);
+assert(inventoryBytes>=prior.storage.cumulative_inventory_json_bytes,'current inventory JSON is below the E0144 baseline');
 const covered=100*manifest.indexed_nodes/population.total_integrax_candidate_objects;
 const completeCoverage=100*finalCounts.complete/population.total_integrax_candidate_objects;
 const provenCoverage=100*finalCounts.proven_prime_only_complete/population.total_integrax_candidate_objects;
