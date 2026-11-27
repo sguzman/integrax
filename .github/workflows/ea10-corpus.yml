@@ -14,11 +14,11 @@ concurrency:
 jobs:
   corpus:
     if: github.ref == 'refs/heads/research/exponential-approximation'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
-      - uses: cachix/install-nix-action@v31
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31; match verified E0085 runner
       - name: Acquire, hash, and measure corpus
         run: |
           mkdir -p "$RUNNER_TEMP/ea10-evidence" "$RUNNER_TEMP/ea10-corpus"
@@ -36,6 +36,7 @@ jobs:
             sha256sum research/exponential/ea0{9,8}*.mjs research/exponential/ea10-*.mjs
             /usr/bin/time -v node research/exponential/ea10-corpus.mjs "$INTEGRAX_DATA_DIR/enwik9" "$RUNNER_TEMP/ea10-evidence"
             jq -e ".rows | length == 18" "$RUNNER_TEMP/ea10-evidence/results.json"
+            cat "$RUNNER_TEMP/ea10-evidence/results.json"
             # Decoder receives only archive, source and pinned runtime; no corpus or network.
             mkdir -p "$RUNNER_TEMP/ea10-visible"
             cp research/exponential/ea09-codec.mjs "$RUNNER_TEMP/ea10-visible/"
@@ -45,6 +46,7 @@ jobs:
             utilbin=$(dirname "$(realpath "$(command -v readlink)")")
             test "$(id -u)" -ne 0
             hostnet=$(readlink /proc/self/ns/net)
+            case "$nodebin:$bashbin:$utilbin" in /nix/store/*:/nix/store/*:/nix/store/*) ;; *) echo "Pinned Nix runtime required" >&2; exit 1;; esac
             for archive in "$RUNNER_TEMP/ea10-visible/"*.iex; do
               name=$(basename "$archive")
               actual=$(bwrap --unshare-user --uid "$(id -u)" --gid "$(id -g)" --unshare-net --unshare-pid --unshare-ipc --unshare-uts --die-with-parent --new-session --cap-drop ALL --clearenv --ro-bind /nix/store /nix/store --ro-bind "$RUNNER_TEMP/ea10-visible" /work --proc /proc --dev /dev --tmpfs /tmp --chdir /work --setenv PATH "$utilbin" -- "$bashbin" -eu -c '"'"'
