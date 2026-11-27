@@ -16,7 +16,7 @@ C20 is active: find rigorous arithmetic descriptions for large integers, especia
 - [Exact records E0125–E0133](experiments/records/) preserve products, hashes, witnesses, commands and storage. Inventory JSON is research metadata, not encoded corpus bytes.
 
 ## Resume here
-E0134–E0136 pipeline is prepared but not yet dispatched. E0134 scans fresh 21,505–24,576-byte pages and pairs flat scans with product-tree queries on each identical pre-inventory residual, asserting factor/cofactor equality; E0135 propagates factors; E0136 compares up to 400 residuals per width band. Preserve held-out scale, complete storage accounting, exact products/hashes, runtime and RSS. Continue afterward; C20 is not complete and no compression claim is established.
+E0134 measurement [run 45918760381](https://github.com/sguzman/integrax/actions/runs/45918760381) is in progress from revision e8acbf5. It scans fresh 21,505–24,576-byte pages and pairs flat scans with product-tree queries on each identical pre-inventory residual, asserting factor/cofactor equality. E0135 propagates factors and E0136 compares up to 400 residuals per width band automatically after successful publication. Preserve held-out scale, storage accounting, exact products/hashes, runtime and RSS; C20 remains active and no compression claim is established.
 
 ## On-demand context
 Prior checkpoint through E0133: [archive](docs/history/STATE-through-E0133.md). Earlier compact checkpoint: [through E0128](docs/history/STATE-through-E0128.md). Full history through E0117: [archive](docs/history/STATE-through-E0117.md). Dashboard deployment unverified; no human action currently required.
