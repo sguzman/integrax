@@ -64,4 +64,4 @@ for(let w of [1,2,8])for(let n of [0n,1n,2n,(1n<<BigInt(w*8))-1n]){let a=writeIn
 let bad=(w,payload)=>{let s=gg(w)+payload;s=s.padEnd(Math.ceil(s.length/8)*8,"0");return Uint8Array.from([...MAGIC,...s.match(/.{8}/g).map(x=>parseInt(x,2))])};
 rejects(bad(1,"111"));rejects(bad(1,"001"+gg(2)+gg(1000000000)+"0"+mag(0n)));rejects(bad(1,"101"+"001"+"001"+"000"+mag(2n)+gg(64)+gg(64)));rejects(bad(1,"001"+gg(2)+gg(1)+"1"+mag(0n)));return{roundtrips,rejected,rows}}
 
-export {encode,decode,fixtures,selftest};
+export {encode,decode,fixtures,selftest,frame,flat,treeFrom,treeCost,lit,pow,op,header,writeInteger};
