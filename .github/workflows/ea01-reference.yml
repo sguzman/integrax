@@ -29,10 +29,13 @@ jobs:
             rustc --edition=2021 -O research/exponential/ea01.rs -o /tmp/ea01
             mkdir -p /tmp/ea01-evidence
             /usr/bin/time -v /tmp/ea01 > /tmp/ea01-evidence/results.jsonl
+            /usr/bin/time -v /tmp/ea01 --ea02 > /tmp/ea01-evidence/ea02.jsonl
+            cat /tmp/ea01-evidence/ea02.jsonl
+            jq -s -e "length == 4 and all(.[]; .count == 64 and .base65536_bytes <= .base256_bytes and .base256_bytes <= .base64_bytes)" /tmp/ea01-evidence/ea02.jsonl
             cat /tmp/ea01-evidence/results.jsonl
             jq -s -e "length == 8 and all(.[]; .count > 0 and .adjacent_net_wins <= .oracle_net_wins)" /tmp/ea01-evidence/results.jsonl
           '
       - uses: actions/upload-artifact@v4
         with:
           name: ea01-reference-results
-          path: /tmp/ea01-evidence/results.jsonl
+          path: /tmp/ea01-evidence/*.jsonl
