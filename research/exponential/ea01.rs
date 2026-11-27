@@ -1,4 +1,4 @@
-//! EA01-E001: bounded exact oracle, modeled bit cost (not yet a packed archive).
+//! EA01-E001: bounded exact oracle and packed single-object archive.
 //! Compile: rustc --edition=2021 -O research/exponential/ea01.rs -o /tmp/ea01
 fn bits(x: u128) -> u32 { 128 - x.leading_zeros() }
 fn gamma(x: u128) -> u32 { assert!(x > 0); 2 * bits(x) - 1 }
@@ -58,15 +58,18 @@ fn report(name: &str, inputs: &[u128], bytes: u32) {
         assert!(o.cost <= a.cost);
         let raw = raw_cost(bytes).div_ceil(8);
         let ob = o.cost.div_ceil(8);
+        let packed = encode(n,bytes,o);
+        assert_eq!(decode(&packed),Some(n.to_be_bytes()[16-bytes as usize..].to_vec()));
+        assert_eq!(packed.len() as u32,raw.min(ob));
         let ab = a.cost.div_ceil(8);
         oracle_wins += usize::from(ob < bytes);
         adjacent_wins += usize::from(ab < bytes);
         adjacent_misses += usize::from(a.cost > o.cost);
-        encoded_bytes += u64::from(raw.min(ob));
+        encoded_bytes += packed.len() as u64;
         raw_framed_bytes += u64::from(raw);
         best_saved = best_saved.max(bytes.saturating_sub(ob));
     }
-    println!("{{\"group\":\"{name}\",\"count\":{},\"input_bytes\":{},\"raw_framed_bytes\":{raw_framed_bytes},\"modeled_archive_bytes\":{encoded_bytes},\"oracle_net_wins\":{oracle_wins},\"adjacent_net_wins\":{adjacent_wins},\"adjacent_cost_misses\":{adjacent_misses},\"max_saved_bytes\":{best_saved}}}", inputs.len(), inputs.len() * bytes as usize);
+    println!("{{\"group\":\"{name}\",\"count\":{},\"input_bytes\":{},\"raw_framed_bytes\":{raw_framed_bytes},\"packed_archive_bytes\":{encoded_bytes},\"oracle_net_wins\":{oracle_wins},\"adjacent_net_wins\":{adjacent_wins},\"adjacent_cost_misses\":{adjacent_misses},\"max_saved_bytes\":{best_saved}}}", inputs.len(), inputs.len() * bytes as usize);
 }
 fn main() {
     let mut s = 0xea010001_u64;
@@ -111,5 +114,96 @@ mod tests {
             }
             assert_eq!(best(n,2,16,false), *candidates.iter().min_by_key(|c| rank(**c)).unwrap());
         }
+    }
+}
+
+// EA01-E002: single-object self-delimiting packed codec. MSB-first, zero padding.
+struct Writer { data: Vec<u8>, pos: usize }
+impl Writer {
+    fn new() -> Self { Self { data: Vec::new(), pos: 0 } }
+    fn put(&mut self, value: u128, width: u32) {
+        assert!(width <= 128 && bits(value) <= width);
+        for i in (0..width).rev() {
+            if self.pos % 8 == 0 { self.data.push(0); }
+            let last = self.data.len()-1;
+            self.data[last] |= (((value >> i) & 1) as u8) << (7-self.pos%8);
+            self.pos += 1;
+        }
+    }
+    fn gamma(&mut self, x: u128) {
+        assert!(x > 0);
+        self.put(0, bits(x)-1); self.put(x,bits(x));
+    }
+}
+struct Reader<'a> { data: &'a [u8], pos: usize }
+impl Reader<'_> {
+    fn get(&mut self, width: u32) -> Option<u128> {
+        if width > 128 || self.pos.checked_add(width as usize)? > self.data.len().checked_mul(8)? { return None; }
+        let mut x = 0;
+        for _ in 0..width {
+            x = (x << 1) | u128::from((self.data[self.pos/8] >> (7-self.pos%8)) & 1);
+            self.pos += 1;
+        }
+        Some(x)
+    }
+    fn gamma(&mut self) -> Option<u128> {
+        let mut zeros = 0;
+        while self.get(1)? == 0 { zeros += 1; if zeros >= 128 { return None; } }
+        Some((1u128 << zeros) | self.get(zeros)?)
+    }
+}
+fn encode(n: u128, bytes: u32, c: Candidate) -> Vec<u8> {
+    let mut w = Writer::new();
+    w.gamma(bytes as u128);
+    let arithmetic = c.cost.div_ceil(8) < raw_cost(bytes).div_ceil(8);
+    w.put(arithmetic as u128, 1);
+    if arithmetic {
+        w.gamma(c.b); w.gamma(c.e as u128); w.put(c.negative as u128,1);
+        w.gamma((bits(c.residual)+1) as u128); w.put(c.residual,bits(c.residual));
+        assert_eq!(w.pos,c.cost as usize);
+    } else {
+        w.put(n,bytes*8); assert_eq!(w.pos,raw_cost(bytes) as usize);
+    }
+    w.data
+}
+fn decode(data: &[u8]) -> Option<Vec<u8>> {
+    let mut r = Reader { data, pos: 0 };
+    let bytes = u32::try_from(r.gamma()?).ok()?;
+    if !(1..=16).contains(&bytes) { return None; }
+    let n = if r.get(1)? == 0 { r.get(bytes*8)? } else {
+        let b = r.gamma()?; let e = u32::try_from(r.gamma()?).ok()?;
+        if !(2..=64).contains(&b) || !(1..=127).contains(&e) { return None; }
+        let negative = r.get(1)? != 0;
+        let width = u32::try_from(r.gamma()?.checked_sub(1)?).ok()?;
+        let residual = r.get(width)?;
+        if bits(residual) != width || (negative && residual == 0) { return None; }
+        let p = b.checked_pow(e)?;
+        if negative { p.checked_sub(residual)? } else { p.checked_add(residual)? }
+    };
+    if bits(n) > bytes*8 || r.pos.div_ceil(8) != data.len() { return None; }
+    let pad = (8-r.pos%8)%8;
+    if r.get(pad as u32)? != 0 { return None; }
+    Some(n.to_be_bytes()[16-bytes as usize..].to_vec())
+}
+#[cfg(test)]
+mod packed_tests {
+    use super::*;
+    #[test] fn roundtrips_and_rejects_corruption() {
+        for bytes in [1,2,4,8,16] {
+            let mask = u128::MAX >> (128 - bytes*8);
+            for n in [0,1,2,3,mask,mask/2,mask/3] {
+                let packed = encode(n,bytes,best(n,bytes,64,false));
+                assert_eq!(decode(&packed),Some(n.to_be_bytes()[16-bytes as usize..].to_vec()));
+                let mut trailing = packed.clone(); trailing.push(0);
+                assert!(decode(&trailing).is_none());
+                assert!(decode(&packed[..packed.len()-1]).is_none());
+            }
+        }
+        let n = 3u128.pow(60);
+        let c = best(n,16,64,false);
+        let packed = encode(n,16,c);
+        assert!(packed.len()<16);
+        assert_eq!(decode(&packed),Some(n.to_be_bytes().to_vec()));
+        assert!(decode(&[]).is_none());
     }
 }
