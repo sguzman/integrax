@@ -1,0 +1,22 @@
+# Continuation state — IntegraX
+
+Updated 2026-11-27 UTC. Read [AGENTS.md](AGENTS.md) and this file first; no chat export is needed.
+
+## Mission and constraints
+C20 is active: find rigorous arithmetic descriptions for large integers, especially enwik9; prioritize whole integers while allowing hierarchical controls. Research direction and campaign selection are delegated. No spending, external submission, access or mission changes without approval. Compute on free standard GitHub Actions runners; use Nix. Preserve competition-restricted development license and historical MIT grants. See [C20](research/CAMPAIGN-20.md), [registry](research/README.md), [frontier](benchmarks/FRONTIER.md), [hosted CI](docs/HOSTED-CI.md).
+
+## Accepted evidence
+- E0119–E0125 saturated 62,823 objects / 16,081 factors. E0124: 29 refinements / 515 bits, one complete; E0125: no remaining gains. Details in C20.
+- E0126 added 17,259 nodes / 2,697 factors; 6,902 hits saved 186,263 bits (article 20; page 0). E0127 propagated those factors to 42 parents / 30 values, saving 639 bits (article 0; one page/root 19 bits).
+- E0128 [measure](https://github.com/sguzman/integrax/actions/runs/45906421142), [publication](https://github.com/sguzman/integrax/actions/runs/45907710069): 19,173 nodes / 3,346 factors at 16,385–18,432 bytes; child/global/full stages saved 27,518 / 43,051 / 213,702 bits. E0129 [measure](https://github.com/sguzman/integrax/actions/runs/45907827003), [publication](https://github.com/sguzman/integrax/actions/runs/45908116084): 45 parent rows / 35 values saved 770 bits, completing one cofactor. Combined inventory JSON: 205,728,852 B (20.57% corpus), not an archive.
+- E0130 [run 45912716043](https://github.com/sguzman/integrax/actions/runs/45912716043): flat scan and product-tree GCD matched exactly on 200 stratified residuals; neither found a factor. Flat took 11.59 s vs. tree 40.53 s (3.50× faster). Initial dispatch exposed duplicated old index entries; unique-value dedup fixed the method.
+- E0131 [measurement 45914266095](https://github.com/sguzman/integrax/actions/runs/45914266095), [publication 45915701629](https://github.com/sguzman/integrax/actions/runs/45915701629), [record revision 1032c55](https://github.com/sguzman/integrax/commit/1032c55a35352cf6ac8ef278e2733ce4a052d437): three 19,295–20,635-byte pages, 19,547 nodes / 2,684 factors; child/global/full stages saved 14,360 / 59,992 / 204,273 bits. Runtime 841.18 s, peak RSS 1,326,552 KiB; cumulative inventory JSON 251,516,811 B.
+- E0132 [measurement 45915820417](https://github.com/sguzman/integrax/actions/runs/45915820417), [publication 45916168191](https://github.com/sguzman/integrax/actions/runs/45916168191), [record revision adeb1fd](https://github.com/sguzman/integrax/commit/adeb1fd7704161b449928768037c33aac9176233): 50 refinements / 36 values, one complete, 895 bits (681 historical, 214 E0131). Article 16 bits; page/root 0. Cumulative inventory JSON 251,907,951 B.
+- E0133 [run 45916431363](https://github.com/sguzman/integrax/actions/runs/45916431363), [record revision 9c81ea1](https://github.com/sguzman/integrax/commit/9c81ea174cc783feb0aa839e8c3219139dc78735): 913 stratified residuals; exact agreement, zero hits. Flat scan 42.57 s vs. tree 121.06 s (2.84× faster), with 22,185,329 divisibility tests. One hosted sample/run is not population-level evidence.
+- [Exact records E0125–E0133](experiments/records/) preserve products, hashes, witnesses, commands and storage. Inventory JSON is research metadata, not encoded corpus bytes.
+
+## Resume here
+E0134 measurement [run 45918760381](https://github.com/sguzman/integrax/actions/runs/45918760381) is in progress from revision e8acbf5. It scans fresh 21,505–24,576-byte pages and pairs flat scans with product-tree queries on each identical pre-inventory residual, asserting factor/cofactor equality. E0135 propagates factors and E0136 compares up to 400 residuals per width band automatically after successful publication. Preserve held-out scale, storage accounting, exact products/hashes, runtime and RSS; C20 remains active and no compression claim is established.
+
+## On-demand context
+Prior checkpoint through E0133: [archive](docs/history/STATE-through-E0133.md). Earlier compact checkpoint: [through E0128](docs/history/STATE-through-E0128.md). Full history through E0117: [archive](docs/history/STATE-through-E0117.md). Dashboard deployment unverified; no human action currently required.
