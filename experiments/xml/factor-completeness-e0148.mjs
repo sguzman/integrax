@@ -21,7 +21,7 @@ assert.equal(prior.status,'verified');
 assert.equal(manifest.index.distinct_factors,prior.summary.distinct_factors);
 
 const rows=new Map(),factorQuality=new Map();
-const qualityCounts=Object.create(null),baseStatusCounts=Object.create(null);
+const qualityCounts=Object.create(null),baseStatusCounts={complete:0,partial:0,trivial:0};
 const baseBits={residual:0},finalBits={residual:0};
 const byKind=Object.create(null);let batchRowCount=0,baseComplete=0,basePartial=0,baseTrivial=0;
 let factorEntries=0,factorExponents=0;
