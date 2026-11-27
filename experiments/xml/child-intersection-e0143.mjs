@@ -44,7 +44,7 @@ const sample=[];for(const [band,rows] of bands){rows.sort((a,b)=>sha(Buffer.from
 assert(sample.length>0);
 function extract(q,candidates,out,stats){for(const p of candidates){if(p>q)continue;stats.tests++;let e=0;while(q%p===0n){q/=p;e++;stats.successful_divisions++}if(e)out.set(p,(out.get(p)??0)+e)}return q}
 function product(fs,q){return [...fs].reduce((n,[p,e])=>n*p**BigInt(e),q)}
-const agg={sample_size:sample.length,baseline_parent_mod_tests:0,certified_parent_mod_tests:0,avoided_parent_mod_tests:0,guaranteed_prime_values:0,guaranteed_exponent_sum:0,baseline_hits:0,certified_hits:0,baseline_removed_bits:0,certified_removed_bits:0,baseline_ms:0,certified_ms:0,verified_byte_objects:0,by_band:{}};
+const agg={sample_size:sample.length,baseline_parent_mod_tests:0,certified_parent_mod_tests:0,avoided_parent_mod_tests:0,theorem_verification_mod_tests:0,guaranteed_prime_values:0,guaranteed_exponent_sum:0,baseline_hits:0,certified_hits:0,baseline_removed_bits:0,certified_removed_bits:0,baseline_ms:0,certified_ms:0,verified_byte_objects:0,by_band:{}};
 const perBand=agg.by_band;for(const [band] of bands)perBand[band]={sampled:0,parents_with_common:0,common_prime_values:0,baseline_mod_tests:0,certified_mod_tests:0,avoided_mod_tests:0,baseline_removed_bits:0,certified_removed_bits:0};
 const sampleIds=new Set();
 for(const {o,band} of sample){
@@ -67,13 +67,14 @@ for(const {o,band} of sample){
  const bfound=new Map(),cFound=new Map();let bq=extract(n,primeList,bfound,bstats),cq=extract(n,primeList,cFound,cstats);
  const chosen=candidates.slice(0,64).map(x=>x.p);
  const t0=performance.now();bq=extract(bq,chosen,bfound,bstats);const bms=performance.now()-t0;
- const commonSet=new Set();let commonAdds=0;
+ const commonSet=new Set(),theoremPowers=[];let commonAdds=0;
  for(const [p,minE] of common){
   const baseE=cfoundExponent(cFound,p),e=Math.max(0,minE-baseE);
-  if(e){assert.equal(cq%(p**BigInt(e)),0n);cq/=p**BigInt(e);cFound.set(p,(cFound.get(p)??0)+e);commonSet.add(p);commonAdds+=e}
+  if(e){const pe=p**BigInt(e);cq/=pe;cFound.set(p,(cFound.get(p)??0)+e);commonSet.add(p);commonAdds+=e;theoremPowers.push([p,pe])}
  }
  const remaining=candidates.filter(x=>!commonSet.has(x.p)).slice(0,64).map(x=>x.p);
  cq=extract(cq,remaining,cFound,cstats);const cms=performance.now()-tc;
+ for(const [p,pe] of theoremPowers){assert.equal(n%pe,0n);agg.theorem_verification_mod_tests++}
  assert.equal(product(bfound,bq),n);assert.equal(product(cFound,cq),n);
  assert.equal([...bfound.keys()].every(p=>p>1n),true);assert.equal([...cFound.keys()].every(p=>p>1n),true);
  const bp=perBand[band];bp.sampled++;if(common.length)bp.parents_with_common++;bp.common_prime_values+=common.length;
@@ -87,4 +88,4 @@ for(const {o,band} of sample){
 }
 agg.verified_byte_objects=sampleIds.size;
 function cfoundExponent(m,p){return m.get(p)??0}
-console.log(JSON.stringify({event:'E0143_CHILD_INTERSECTION',experiment:'E0143',manifest_revision:process.env.GITHUB_SHA??null,corpus_sha256:manifest.corpus_sha256,nix_version:process.env.NIX_VERSION??null,node_version:process.version,objects:objects.size,parents:parentCount,known_factors:manifest.index.distinct_factors,index_json_bytes:manifest.index.shards.reduce((n,s)=>n+statSync(s.path).size,0),sampling:'first 500 parent objects per byte-width band after SHA256(id) sorting',baseline:'base primes then top 64 immediate-child factors ordered by child occurrence count; exact divisibility checks',certified:'base primes, theorem-guaranteed minimum prime valuations shared by every immediate child, then top 64 remaining child candidates',...agg,wall_seconds:(performance.now()-started)/1000,peak_rss_kib:process.resourceUsage().maxRSS,verification:'Verified corpus SHA-256, sampled object byte hashes, exact child-span concatenation, persisted factor and overlay products, and exact baseline/certified products against each parent integer. The theorem path uses common prime valuations as certified exponents; it still performs quotient divisions to construct residuals. Timings exclude inventory loading and byte-hash checks.'}));
+console.log(JSON.stringify({event:'E0143_CHILD_INTERSECTION',experiment:'E0143',run_id:process.env.GITHUB_RUN_ID??null,manifest_revision:process.env.GITHUB_SHA??null,corpus_sha256:manifest.corpus_sha256,nix_version:process.env.NIX_VERSION??null,node_version:process.version,objects:objects.size,parents:parentCount,known_factors:manifest.index.distinct_factors,index_json_bytes:manifest.index.shards.reduce((n,s)=>n+statSync(s.path).size,0),sampling:'first 500 parent objects per byte-width band after SHA256(id) sorting',baseline:'base primes then top 64 immediate-child factors ordered by child occurrence count; exact divisibility checks',certified:'base primes, theorem-guaranteed minimum prime valuations shared by every immediate child, then top 64 remaining child candidates',measurement_correction:'Retimed after removing the parent divisibility assertion from the certified algorithm interval; theorem divisibility and exact-product checks run outside both timed intervals.',...agg,wall_seconds:(performance.now()-started)/1000,peak_rss_kib:process.resourceUsage().maxRSS,verification:'Verified corpus SHA-256, sampled object byte hashes, exact child-span concatenation, persisted factor and overlay products, theorem divisibility checks outside timing, and exact baseline/certified products against each parent integer. The theorem path uses common prime valuations as certified exponents; it still performs quotient divisions to construct residuals. Timings exclude inventory loading, byte-hash checks and proof assertions.'}));
