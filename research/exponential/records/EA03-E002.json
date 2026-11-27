@@ -4,7 +4,7 @@
   "seed": "0xea030002",
   "source_commit": "3889c7845a607c48cc1a2c1d45f731f36b9e5114",
   "command": "nix develop --command node research/exponential/ea03-scale.mjs",
-  "scope": "two synthetic targets per width, four precisions; fixed bases 2..64; exact decoded frames, no executable size; no million-bit exhaustive oracle, precision agreement and constructed witness instead",
+  "scope": "two synthetic targets per width, four precisions; fixed bases 2..64; exact decoded frames, no executable size; 8192-bit exhaustive oracle size verified; no million-bit exhaustive oracle, precision agreement and constructed witness instead",
   "actual_execution": "JS code-mode; runtime and memory not measured",
   "certificate_checks": 1260,
   "rows": [
@@ -200,5 +200,22 @@
       "floor_probes": 126,
       "floor_exact": 1
     }
-  ]
+  ],
+  "smaller_exhaustive_oracle": {
+    "method": "Independently regenerate same 8192-bit seeded targets, enumerate powers of bases 2..64 from exponent 1 through first power >= target, minimize complete gamma cost, compare padded raw fallback",
+    "rows": [
+      {
+        "group": "uniform",
+        "width_bits": 8192,
+        "exhaustive_powers": 123870,
+        "packed_bytes": 1027
+      },
+      {
+        "group": "near_power",
+        "width_bits": 8192,
+        "exhaustive_powers": 123844,
+        "packed_bytes": 12
+      }
+    ]
+  }
 }
