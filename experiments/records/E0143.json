@@ -1,7 +1,8 @@
 {
   "event": "E0143_CHILD_INTERSECTION",
   "experiment": "E0143",
-  "manifest_revision": "0fa9f5b48ce4c9a57a714939d5c2b5adf3713f36",
+  "run_id": "46056265910",
+  "manifest_revision": "3c0a49b1474ddbb840f730c260f437695ce0bd03",
   "corpus_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
   "nix_version": null,
   "node_version": "v24.22.3",
@@ -12,18 +13,20 @@
   "sampling": "first 500 parent objects per byte-width band after SHA256(id) sorting",
   "baseline": "base primes then top 64 immediate-child factors ordered by child occurrence count; exact divisibility checks",
   "certified": "base primes, theorem-guaranteed minimum prime valuations shared by every immediate child, then top 64 remaining child candidates",
+  "measurement_correction": "Retimed after removing the parent divisibility assertion from the certified algorithm interval; theorem divisibility and exact-product checks run outside both timed intervals.",
   "sample_size": 1954,
   "baseline_parent_mod_tests": 63364,
   "certified_parent_mod_tests": 62965,
   "avoided_parent_mod_tests": 399,
+  "theorem_verification_mod_tests": 399,
   "guaranteed_prime_values": 399,
   "guaranteed_exponent_sum": 399,
   "baseline_hits": 4752,
   "certified_hits": 4752,
   "baseline_removed_bits": 19263,
   "certified_removed_bits": 19263,
-  "baseline_ms": 43.634807000004,
-  "certified_ms": 300.47825399998055,
+  "baseline_ms": 43.86902699999064,
+  "certified_ms": 307.5201140000245,
   "verified_byte_objects": 16528,
   "by_band": {
     "1-32": {
@@ -77,8 +80,8 @@
       "certified_removed_bits": 1362
     }
   },
-  "wall_seconds": 6.406429778,
-  "peak_rss_kib": 2069112,
-  "verification": "Verified corpus SHA-256, sampled object byte hashes, exact child-span concatenation, persisted factor and overlay products, and exact baseline/certified products against each parent integer. The theorem path uses common prime valuations as certified exponents; it still performs quotient divisions to construct residuals. Timings exclude inventory loading and byte-hash checks.",
+  "wall_seconds": 6.593604926,
+  "peak_rss_kib": 2068144,
+  "verification": "Verified corpus SHA-256, sampled object byte hashes, exact child-span concatenation, persisted factor and overlay products, theorem divisibility checks outside timing, and exact baseline/certified products against each parent integer. The theorem path uses common prime valuations as certified exponents; it still performs quotient divisions to construct residuals. Timings exclude inventory loading, byte-hash checks and proof assertions.",
   "command": "nix develop --no-update-lock-file --command node --max-old-space-size=3072 experiments/xml/child-intersection-e0143.mjs data/enwik9"
 }
