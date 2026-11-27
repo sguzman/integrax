@@ -1,0 +1,897 @@
+{
+  "id": "EA11-E001",
+  "status": "executed JS code-mode on read-only verified C20 inventory snapshot",
+  "snapshot": "acfd9058498527c0cf17e60c184ff4d9212d6fba",
+  "shards": [
+    {
+      "path": "inventory/batches/E0103/100439232.json",
+      "blob_sha": "974047c4ed57b33c2aea758c61839add3206b134"
+    },
+    {
+      "path": "inventory/batches/E0103/400027307.json",
+      "blob_sha": "c1fdd4c45abc50015f397fdf9de9d6c40be148f5"
+    },
+    {
+      "path": "inventory/batches/E0103/800034374.json",
+      "blob_sha": "6ea48eee204a7d7402dac06ee33ccccfefe31f9b"
+    }
+  ],
+  "source_commit": "0461fb30bc9598c79c251198561314f5e7f6f6af",
+  "codec_commit": "3148cb6f2acedb4b95dbf378c13535c7b14ea39e",
+  "scope": "At most 8 evenly spaced objects per width stratum per shard, overlapping hierarchy spans, selected from E0103 only; exact big-endian bytes recovered from factors and cofactors then independently checked against stored SHA-256. All factors, exponents, cofactor expressions, tree opcodes and IEX1 framing charged. Baseline full IEX1 encoder; factor and hybrid portfolios cumulative; no external decoder inventory. Not a corpus partition, whole enwik9 or held-out inventory generalization.",
+  "verified": 92,
+  "checks": 270,
+  "hybridFallbacks": 0,
+  "stats": {
+    "1-8": {
+      "count": 24,
+      "input_bytes": 94,
+      "baseline_bytes": 216,
+      "factor_portfolio_bytes": 216,
+      "hybrid_portfolio_bytes": 216,
+      "factor_wins": 0,
+      "hybrid_extra_wins": 0,
+      "net_wins": 0
+    },
+    "9-32": {
+      "count": 24,
+      "input_bytes": 435,
+      "baseline_bytes": 579,
+      "factor_portfolio_bytes": 579,
+      "hybrid_portfolio_bytes": 579,
+      "factor_wins": 0,
+      "hybrid_extra_wins": 0,
+      "net_wins": 0
+    },
+    "33-128": {
+      "count": 24,
+      "input_bytes": 1608,
+      "baseline_bytes": 1753,
+      "factor_portfolio_bytes": 1753,
+      "hybrid_portfolio_bytes": 1753,
+      "factor_wins": 0,
+      "hybrid_extra_wins": 0,
+      "net_wins": 0
+    },
+    "129-8192": {
+      "count": 20,
+      "input_bytes": 13623,
+      "baseline_bytes": 13763,
+      "factor_portfolio_bytes": 13763,
+      "hybrid_portfolio_bytes": 13763,
+      "factor_wins": 0,
+      "hybrid_extra_wins": 0,
+      "net_wins": 0
+    }
+  },
+  "records": [
+    {
+      "id": "enwik9:100439232:2",
+      "offset": 100439232,
+      "width": 6,
+      "sha256": "43ae2115db6aa2d3ae00effcff5e136fc8d0e3aad3b362e6e22a396c198d84f4",
+      "baseline_bytes": 11,
+      "factor_portfolio_bytes": 11,
+      "hybrid_portfolio_bytes": 11
+    },
+    {
+      "id": "enwik9:100439232:41",
+      "offset": 100439479,
+      "width": 7,
+      "sha256": "70c0d3c4b0f72214dc2f4878c26f4a45cba3195983739f84ee928c2554958ad1",
+      "baseline_bytes": 12,
+      "factor_portfolio_bytes": 12,
+      "hybrid_portfolio_bytes": 12
+    },
+    {
+      "id": "enwik9:100439232:76",
+      "offset": 100439627,
+      "width": 3,
+      "sha256": "3b3956539fe49054b46c01c97e8b4ab9e7764dce2515667f0dd659cab76db8c6",
+      "baseline_bytes": 8,
+      "factor_portfolio_bytes": 8,
+      "hybrid_portfolio_bytes": 8
+    },
+    {
+      "id": "enwik9:100439232:102",
+      "offset": 100439698,
+      "width": 8,
+      "sha256": "1a47d5f99b6c94ce8553382f2f48f8de329af5d809d52cafbf719f3c08d817a8",
+      "baseline_bytes": 14,
+      "factor_portfolio_bytes": 14,
+      "hybrid_portfolio_bytes": 14
+    },
+    {
+      "id": "enwik9:100439232:126",
+      "offset": 100439761,
+      "width": 3,
+      "sha256": "18fdd549b2ed367ac0c74cbec1214644728515b30edbcb78e7d322757a7c8359",
+      "baseline_bytes": 8,
+      "factor_portfolio_bytes": 8,
+      "hybrid_portfolio_bytes": 8
+    },
+    {
+      "id": "enwik9:100439232:152",
+      "offset": 100439830,
+      "width": 7,
+      "sha256": "eedbe6d96c36d76741be4fcacf11bc2a1a6239536c089d623ab1007494ba997b",
+      "baseline_bytes": 12,
+      "factor_portfolio_bytes": 12,
+      "hybrid_portfolio_bytes": 12
+    },
+    {
+      "id": "enwik9:100439232:175",
+      "offset": 100439882,
+      "width": 1,
+      "sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068",
+      "baseline_bytes": 6,
+      "factor_portfolio_bytes": 6,
+      "hybrid_portfolio_bytes": 6
+    },
+    {
+      "id": "enwik9:100439232:203",
+      "offset": 100439948,
+      "width": 4,
+      "sha256": "725c546b990dd1b41f3d5791b37c3c0edcb1f08cf150bdae32a73dfd166e02d7",
+      "baseline_bytes": 9,
+      "factor_portfolio_bytes": 9,
+      "hybrid_portfolio_bytes": 9
+    },
+    {
+      "id": "enwik9:100439232:4",
+      "offset": 100439243,
+      "width": 26,
+      "sha256": "c233598e253c2ea9e1f8ab6b0d640b464aabb7091bdc51d962b28f0a468959d4",
+      "baseline_bytes": 32,
+      "factor_portfolio_bytes": 32,
+      "hybrid_portfolio_bytes": 32
+    },
+    {
+      "id": "enwik9:100439232:24",
+      "offset": 100439345,
+      "width": 20,
+      "sha256": "54e12bf617e33e3990d41ebd98270293c39c51d6c3e2966965810450d1bc7b48",
+      "baseline_bytes": 26,
+      "factor_portfolio_bytes": 26,
+      "hybrid_portfolio_bytes": 26
+    },
+    {
+      "id": "enwik9:100439232:34",
+      "offset": 100439435,
+      "width": 9,
+      "sha256": "ac1e06ffe7bf6c03d4eeb288ffd1c2d65059d1711afe71c31fa857173e06221e",
+      "baseline_bytes": 15,
+      "factor_portfolio_bytes": 15,
+      "hybrid_portfolio_bytes": 15
+    },
+    {
+      "id": "enwik9:100439232:47",
+      "offset": 100439522,
+      "width": 10,
+      "sha256": "f616e90d143b7500256ae6b4b6ed7ed0e719fa041e72f9abd4e0b2aa438a2958",
+      "baseline_bytes": 16,
+      "factor_portfolio_bytes": 16,
+      "hybrid_portfolio_bytes": 16
+    },
+    {
+      "id": "enwik9:100439232:82",
+      "offset": 100439651,
+      "width": 16,
+      "sha256": "b1b6d5be483a413b283ee4007ba43d816d28baf47a35d8dfceb4d8f2fa4572c3",
+      "baseline_bytes": 22,
+      "factor_portfolio_bytes": 22,
+      "hybrid_portfolio_bytes": 22
+    },
+    {
+      "id": "enwik9:100439232:123",
+      "offset": 100439755,
+      "width": 21,
+      "sha256": "7212aec5aec1421a86e7f90c2c20bc4e321dc58d3a69040f61abc4c1517c2452",
+      "baseline_bytes": 27,
+      "factor_portfolio_bytes": 27,
+      "hybrid_portfolio_bytes": 27
+    },
+    {
+      "id": "enwik9:100439232:158",
+      "offset": 100439850,
+      "width": 15,
+      "sha256": "ac75e0a1fc28962705cdcebdb075e34174cccaa4f76071cfd1d7eeb89138b884",
+      "baseline_bytes": 21,
+      "factor_portfolio_bytes": 21,
+      "hybrid_portfolio_bytes": 21
+    },
+    {
+      "id": "enwik9:100439232:195",
+      "offset": 100439928,
+      "width": 28,
+      "sha256": "672ed46850f9c147988f7526d7877ead1ce1da8ffb3bd72059fc54d67f6f329c",
+      "baseline_bytes": 34,
+      "factor_portfolio_bytes": 34,
+      "hybrid_portfolio_bytes": 34
+    },
+    {
+      "id": "enwik9:100439232:22",
+      "offset": 100439334,
+      "width": 43,
+      "sha256": "e29cdb61b00cc5e56578508cedd4acaa75a0c6eb4e987eca6d20ad92aedbba4e",
+      "baseline_bytes": 49,
+      "factor_portfolio_bytes": 49,
+      "hybrid_portfolio_bytes": 49
+    },
+    {
+      "id": "enwik9:100439232:27",
+      "offset": 100439384,
+      "width": 95,
+      "sha256": "753dfe8d2537b767dfc1c0cb7cadbd4efd050613ffdde052750e9d22362d534a",
+      "baseline_bytes": 101,
+      "factor_portfolio_bytes": 101,
+      "hybrid_portfolio_bytes": 101
+    },
+    {
+      "id": "enwik9:100439232:53",
+      "offset": 100439566,
+      "width": 101,
+      "sha256": "4f7021e7bea9175fb863c63cc8974805de5134b4f74d3218e5357fe332a77af3",
+      "baseline_bytes": 107,
+      "factor_portfolio_bytes": 107,
+      "hybrid_portfolio_bytes": 107
+    },
+    {
+      "id": "enwik9:100439232:86",
+      "offset": 100439667,
+      "width": 76,
+      "sha256": "5dcd596670af7577a6793ea7030752a76f0afa9f2725a0d4a6208bb4038adf2b",
+      "baseline_bytes": 82,
+      "factor_portfolio_bytes": 82,
+      "hybrid_portfolio_bytes": 82
+    },
+    {
+      "id": "enwik9:100439232:115",
+      "offset": 100439743,
+      "width": 128,
+      "sha256": "51c18f1d0a1b2b9d7c5f8af109da226ad1863fd2b37073539aa496d3e1749ea4",
+      "baseline_bytes": 135,
+      "factor_portfolio_bytes": 135,
+      "hybrid_portfolio_bytes": 135
+    },
+    {
+      "id": "enwik9:100439232:168",
+      "offset": 100439871,
+      "width": 57,
+      "sha256": "fe5e4c8275fc546f2307b7f7a3bf0137d387645c3d55aca8640bd15d610ded0f",
+      "baseline_bytes": 63,
+      "factor_portfolio_bytes": 63,
+      "hybrid_portfolio_bytes": 63
+    },
+    {
+      "id": "enwik9:100439232:206",
+      "offset": 100439956,
+      "width": 50,
+      "sha256": "8cd913ecd146e8d035322345293c7c6f12223f2645e0187eba52a257dee65c66",
+      "baseline_bytes": 56,
+      "factor_portfolio_bytes": 56,
+      "hybrid_portfolio_bytes": 56
+    },
+    {
+      "id": "enwik9:100439232:207",
+      "offset": 100439956,
+      "width": 50,
+      "sha256": "8cd913ecd146e8d035322345293c7c6f12223f2645e0187eba52a257dee65c66",
+      "baseline_bytes": 56,
+      "factor_portfolio_bytes": 56,
+      "hybrid_portfolio_bytes": 56
+    },
+    {
+      "id": "enwik9:100439232:0",
+      "offset": 100439232,
+      "width": 807,
+      "sha256": "9a0de5370faee1f3d684338b97a9440c4e17c29285ff491f10e02b08bcc236d0",
+      "baseline_bytes": 814,
+      "factor_portfolio_bytes": 814,
+      "hybrid_portfolio_bytes": 814
+    },
+    {
+      "id": "enwik9:100439232:1",
+      "offset": 100439232,
+      "width": 807,
+      "sha256": "9a0de5370faee1f3d684338b97a9440c4e17c29285ff491f10e02b08bcc236d0",
+      "baseline_bytes": 814,
+      "factor_portfolio_bytes": 814,
+      "hybrid_portfolio_bytes": 814
+    },
+    {
+      "id": "enwik9:100439232:14",
+      "offset": 100439293,
+      "width": 736,
+      "sha256": "0cc538926df2e35afd5d3902b3d59943de8f9d98a314be3dc54f9313423f9307",
+      "baseline_bytes": 743,
+      "factor_portfolio_bytes": 743,
+      "hybrid_portfolio_bytes": 743
+    },
+    {
+      "id": "enwik9:100439232:49",
+      "offset": 100439539,
+      "width": 474,
+      "sha256": "2e5b3866fbae461f0a27a406e3ab1be11d87a60758646ebbea0bc5f8c61046a6",
+      "baseline_bytes": 481,
+      "factor_portfolio_bytes": 481,
+      "hybrid_portfolio_bytes": 481
+    },
+    {
+      "id": "enwik9:100439232:52",
+      "offset": 100439566,
+      "width": 362,
+      "sha256": "62dded819b44e049b9044f41377360480a97ec8b9803beff4c7f7b7676be6ab0",
+      "baseline_bytes": 369,
+      "factor_portfolio_bytes": 369,
+      "hybrid_portfolio_bytes": 369
+    },
+    {
+      "id": "enwik9:100439232:51",
+      "offset": 100439566,
+      "width": 440,
+      "sha256": "7ea669a5901f7d8c26009577cd3ee276114594d316881bedd882c74b6090d858",
+      "baseline_bytes": 447,
+      "factor_portfolio_bytes": 447,
+      "hybrid_portfolio_bytes": 447
+    },
+    {
+      "id": "enwik9:400027307:2",
+      "offset": 400027307,
+      "width": 6,
+      "sha256": "43ae2115db6aa2d3ae00effcff5e136fc8d0e3aad3b362e6e22a396c198d84f4",
+      "baseline_bytes": 11,
+      "factor_portfolio_bytes": 11,
+      "hybrid_portfolio_bytes": 11
+    },
+    {
+      "id": "enwik9:400027307:38",
+      "offset": 400027528,
+      "width": 5,
+      "sha256": "549f3cfed4cc9851d3125637dc333817e34a6482268406df06c91e78f8e10f39",
+      "baseline_bytes": 10,
+      "factor_portfolio_bytes": 10,
+      "hybrid_portfolio_bytes": 10
+    },
+    {
+      "id": "enwik9:400027307:71",
+      "offset": 400027690,
+      "width": 1,
+      "sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068",
+      "baseline_bytes": 6,
+      "factor_portfolio_bytes": 6,
+      "hybrid_portfolio_bytes": 6
+    },
+    {
+      "id": "enwik9:400027307:97",
+      "offset": 400027758,
+      "width": 4,
+      "sha256": "8d9652f2baaf314ac56aaf2b50c737ca0d17e32a3f43719a6c29345843526d60",
+      "baseline_bytes": 9,
+      "factor_portfolio_bytes": 9,
+      "hybrid_portfolio_bytes": 9
+    },
+    {
+      "id": "enwik9:400027307:120",
+      "offset": 400027842,
+      "width": 1,
+      "sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068",
+      "baseline_bytes": 6,
+      "factor_portfolio_bytes": 6,
+      "hybrid_portfolio_bytes": 6
+    },
+    {
+      "id": "enwik9:400027307:144",
+      "offset": 400027898,
+      "width": 3,
+      "sha256": "ba78973ddcf98d4e5369f5e722d681d94f5106895e5d6cf6fa3ca8240fabdc14",
+      "baseline_bytes": 8,
+      "factor_portfolio_bytes": 8,
+      "hybrid_portfolio_bytes": 8
+    },
+    {
+      "id": "enwik9:400027307:166",
+      "offset": 400027950,
+      "width": 1,
+      "sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068",
+      "baseline_bytes": 6,
+      "factor_portfolio_bytes": 6,
+      "hybrid_portfolio_bytes": 6
+    },
+    {
+      "id": "enwik9:400027307:195",
+      "offset": 400028037,
+      "width": 8,
+      "sha256": "292c06f0045a45d044be282b132b7055ae224e18e02b523a451d8ea96fadfd24",
+      "baseline_bytes": 14,
+      "factor_portfolio_bytes": 14,
+      "hybrid_portfolio_bytes": 14
+    },
+    {
+      "id": "enwik9:400027307:4",
+      "offset": 400027318,
+      "width": 21,
+      "sha256": "77acfb627063f9a6785ae71a7d63cfeb9edd99599b7244a91a20ac76ac79365e",
+      "baseline_bytes": 27,
+      "factor_portfolio_bytes": 27,
+      "hybrid_portfolio_bytes": 27
+    },
+    {
+      "id": "enwik9:400027307:25",
+      "offset": 400027435,
+      "width": 12,
+      "sha256": "aa13d76b92a466276328e1f1b4876fc15ebd9aaae69fa456e7eb64b5908f7a79",
+      "baseline_bytes": 18,
+      "factor_portfolio_bytes": 18,
+      "hybrid_portfolio_bytes": 18
+    },
+    {
+      "id": "enwik9:400027307:34",
+      "offset": 400027509,
+      "width": 9,
+      "sha256": "ac1e06ffe7bf6c03d4eeb288ffd1c2d65059d1711afe71c31fa857173e06221e",
+      "baseline_bytes": 15,
+      "factor_portfolio_bytes": 15,
+      "hybrid_portfolio_bytes": 15
+    },
+    {
+      "id": "enwik9:400027307:48",
+      "offset": 400027615,
+      "width": 27,
+      "sha256": "2f7e19720b34b4b7b55d187aa7fc2947c96816481caaf6ddddc236ebe2f70a5b",
+      "baseline_bytes": 33,
+      "factor_portfolio_bytes": 33,
+      "hybrid_portfolio_bytes": 33
+    },
+    {
+      "id": "enwik9:400027307:91",
+      "offset": 400027736,
+      "width": 14,
+      "sha256": "a8bb2bd5ab242374658e0f786a3c081c01da4ed1ef5ed3f0cadc2db009d42534",
+      "baseline_bytes": 20,
+      "factor_portfolio_bytes": 20,
+      "hybrid_portfolio_bytes": 20
+    },
+    {
+      "id": "enwik9:400027307:116",
+      "offset": 400027829,
+      "width": 19,
+      "sha256": "cc9e1753ff698f5747e9e4eaa9eb7007fd4d0bea55153050f8f4844f9948852d",
+      "baseline_bytes": 25,
+      "factor_portfolio_bytes": 25,
+      "hybrid_portfolio_bytes": 25
+    },
+    {
+      "id": "enwik9:400027307:155",
+      "offset": 400027920,
+      "width": 18,
+      "sha256": "ed1b66f5496ad274bf500a47e8aba69493897b455e119bfb2289a5bccacce356",
+      "baseline_bytes": 24,
+      "factor_portfolio_bytes": 24,
+      "hybrid_portfolio_bytes": 24
+    },
+    {
+      "id": "enwik9:400027307:193",
+      "offset": 400028035,
+      "width": 28,
+      "sha256": "ba305fdea026fa45edda3ce3a0cbe9017cb0a87ee3d75660332c2724a70995f4",
+      "baseline_bytes": 34,
+      "factor_portfolio_bytes": 34,
+      "hybrid_portfolio_bytes": 34
+    },
+    {
+      "id": "enwik9:400027307:22",
+      "offset": 400027404,
+      "width": 43,
+      "sha256": "9e8d63166deca788d27600577c2f39274a78f72e04f754456e046fe7f2bccfdc",
+      "baseline_bytes": 49,
+      "factor_portfolio_bytes": 49,
+      "hybrid_portfolio_bytes": 49
+    },
+    {
+      "id": "enwik9:400027307:27",
+      "offset": 400027454,
+      "width": 100,
+      "sha256": "6071c1340cc69c2a2467fd2de55062c5e654afd20386c70f102e846d2d6277dc",
+      "baseline_bytes": 106,
+      "factor_portfolio_bytes": 106,
+      "hybrid_portfolio_bytes": 106
+    },
+    {
+      "id": "enwik9:400027307:42",
+      "offset": 400027561,
+      "width": 47,
+      "sha256": "f780630aa45ee290db641647a8e078b964a835c4839d5116defc8f7b53d4ae9c",
+      "baseline_bytes": 53,
+      "factor_portfolio_bytes": 53,
+      "hybrid_portfolio_bytes": 53
+    },
+    {
+      "id": "enwik9:400027307:51",
+      "offset": 400027642,
+      "width": 45,
+      "sha256": "1c786c34da1b8a96d4143c47a4b55b1edbd11323c3ab772f63099153f4a3f9b1",
+      "baseline_bytes": 51,
+      "factor_portfolio_bytes": 51,
+      "hybrid_portfolio_bytes": 51
+    },
+    {
+      "id": "enwik9:400027307:68",
+      "offset": 400027687,
+      "width": 69,
+      "sha256": "3eb9c9cafd1cb782a9da38599ff90bebf08bad53fae07f7c835878a7b55fd445",
+      "baseline_bytes": 75,
+      "factor_portfolio_bytes": 75,
+      "hybrid_portfolio_bytes": 75
+    },
+    {
+      "id": "enwik9:400027307:94",
+      "offset": 400027756,
+      "width": 120,
+      "sha256": "9be6ccc24f42693fdc1b11c6e88a4879e2ed6c84f2e2bbf1518915f40f6d7405",
+      "baseline_bytes": 126,
+      "factor_portfolio_bytes": 126,
+      "hybrid_portfolio_bytes": 126
+    },
+    {
+      "id": "enwik9:400027307:176",
+      "offset": 400027976,
+      "width": 59,
+      "sha256": "2e76b2209ce9f9e4d1e7eaf7149520af8559353f4ac7d27bf497865df82113f6",
+      "baseline_bytes": 65,
+      "factor_portfolio_bytes": 65,
+      "hybrid_portfolio_bytes": 65
+    },
+    {
+      "id": "enwik9:400027307:177",
+      "offset": 400027976,
+      "width": 59,
+      "sha256": "2e76b2209ce9f9e4d1e7eaf7149520af8559353f4ac7d27bf497865df82113f6",
+      "baseline_bytes": 65,
+      "factor_portfolio_bytes": 65,
+      "hybrid_portfolio_bytes": 65
+    },
+    {
+      "id": "enwik9:400027307:0",
+      "offset": 400027307,
+      "width": 815,
+      "sha256": "410f2a208607e80829d505fa88a6fd6f6f172a56be0a04cb947ff8e0e2bb2aaa",
+      "baseline_bytes": 822,
+      "factor_portfolio_bytes": 822,
+      "hybrid_portfolio_bytes": 822
+    },
+    {
+      "id": "enwik9:400027307:1",
+      "offset": 400027307,
+      "width": 815,
+      "sha256": "410f2a208607e80829d505fa88a6fd6f6f172a56be0a04cb947ff8e0e2bb2aaa",
+      "baseline_bytes": 822,
+      "factor_portfolio_bytes": 822,
+      "hybrid_portfolio_bytes": 822
+    },
+    {
+      "id": "enwik9:400027307:14",
+      "offset": 400027363,
+      "width": 749,
+      "sha256": "5dade802a4f793fecc113d9be993ec91104443811097baa7acf6f6f20de7be23",
+      "baseline_bytes": 756,
+      "factor_portfolio_bytes": 756,
+      "hybrid_portfolio_bytes": 756
+    },
+    {
+      "id": "enwik9:400027307:47",
+      "offset": 400027615,
+      "width": 481,
+      "sha256": "af2edac4e6286d24c1136bc920f5dc6905bdcde78eda9486675c7d6fc6e0b78b",
+      "baseline_bytes": 488,
+      "factor_portfolio_bytes": 488,
+      "hybrid_portfolio_bytes": 488
+    },
+    {
+      "id": "enwik9:400027307:49",
+      "offset": 400027642,
+      "width": 447,
+      "sha256": "520f7689db7fd7f75ee32c95ff0232e9f7caa6acde0360a0dbeb24209c6f285e",
+      "baseline_bytes": 454,
+      "factor_portfolio_bytes": 454,
+      "hybrid_portfolio_bytes": 454
+    },
+    {
+      "id": "enwik9:400027307:93",
+      "offset": 400027756,
+      "width": 220,
+      "sha256": "d5f294a8a17ba15fbb07e1f5c7196eab7eb7cdc682de4f9341cc1b39ed7cd3d0",
+      "baseline_bytes": 227,
+      "factor_portfolio_bytes": 227,
+      "hybrid_portfolio_bytes": 227
+    },
+    {
+      "id": "enwik9:800034374:2",
+      "offset": 800034374,
+      "width": 6,
+      "sha256": "43ae2115db6aa2d3ae00effcff5e136fc8d0e3aad3b362e6e22a396c198d84f4",
+      "baseline_bytes": 11,
+      "factor_portfolio_bytes": 11,
+      "hybrid_portfolio_bytes": 11
+    },
+    {
+      "id": "enwik9:800034374:64",
+      "offset": 800034777,
+      "width": 3,
+      "sha256": "ee353a361ec65ae4b3dd5ee0252c67260ea0d3006e4757b25dae855f8b088893",
+      "baseline_bytes": 8,
+      "factor_portfolio_bytes": 8,
+      "hybrid_portfolio_bytes": 8
+    },
+    {
+      "id": "enwik9:800034374:103",
+      "offset": 800034901,
+      "width": 3,
+      "sha256": "3b3956539fe49054b46c01c97e8b4ab9e7764dce2515667f0dd659cab76db8c6",
+      "baseline_bytes": 8,
+      "factor_portfolio_bytes": 8,
+      "hybrid_portfolio_bytes": 8
+    },
+    {
+      "id": "enwik9:800034374:143",
+      "offset": 800035011,
+      "width": 2,
+      "sha256": "28391d3bc64ec15cbb090426b04aa6b7649c3cc85f11230bb0105e02d15e3624",
+      "baseline_bytes": 7,
+      "factor_portfolio_bytes": 7,
+      "hybrid_portfolio_bytes": 7
+    },
+    {
+      "id": "enwik9:800034374:183",
+      "offset": 800035114,
+      "width": 7,
+      "sha256": "2a164d5415787b6e0e8d8d937c708a6f4c856e293022d24bde016e8549fb86b5",
+      "baseline_bytes": 12,
+      "factor_portfolio_bytes": 12,
+      "hybrid_portfolio_bytes": 12
+    },
+    {
+      "id": "enwik9:800034374:226",
+      "offset": 800035270,
+      "width": 1,
+      "sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068",
+      "baseline_bytes": 6,
+      "factor_portfolio_bytes": 6,
+      "hybrid_portfolio_bytes": 6
+    },
+    {
+      "id": "enwik9:800034374:265",
+      "offset": 800035370,
+      "width": 1,
+      "sha256": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89",
+      "baseline_bytes": 6,
+      "factor_portfolio_bytes": 6,
+      "hybrid_portfolio_bytes": 6
+    },
+    {
+      "id": "enwik9:800034374:306",
+      "offset": 800035471,
+      "width": 3,
+      "sha256": "b9776d7ddf459c9ad5b0e1d6ac61e27befb5e99fd62446677600d7cacef544d0",
+      "baseline_bytes": 8,
+      "factor_portfolio_bytes": 8,
+      "hybrid_portfolio_bytes": 8
+    },
+    {
+      "id": "enwik9:800034374:4",
+      "offset": 800034385,
+      "width": 29,
+      "sha256": "7eaaf40226b8e8e75284102080d41fd4b2d2c3c671756e90c41729b3fc4f6ba6",
+      "baseline_bytes": 35,
+      "factor_portfolio_bytes": 35,
+      "hybrid_portfolio_bytes": 35
+    },
+    {
+      "id": "enwik9:800034374:31",
+      "offset": 800034552,
+      "width": 10,
+      "sha256": "2414b340167d18f7f395d0abe85eba52db9d10870c84e4d7056ed2309246e334",
+      "baseline_bytes": 16,
+      "factor_portfolio_bytes": 16,
+      "hybrid_portfolio_bytes": 16
+    },
+    {
+      "id": "enwik9:800034374:54",
+      "offset": 800034746,
+      "width": 26,
+      "sha256": "28bcbf8ae9d40d4ccb095c7fc5d87558b7cbdec1ab137624a5249941e4130ecc",
+      "baseline_bytes": 32,
+      "factor_portfolio_bytes": 32,
+      "hybrid_portfolio_bytes": 32
+    },
+    {
+      "id": "enwik9:800034374:114",
+      "offset": 800034930,
+      "width": 13,
+      "sha256": "13e938f8621fad26ed272743b4b54d3f2f63fe12851daf9e34e8c63a92737419",
+      "baseline_bytes": 19,
+      "factor_portfolio_bytes": 19,
+      "hybrid_portfolio_bytes": 19
+    },
+    {
+      "id": "enwik9:800034374:159",
+      "offset": 800035047,
+      "width": 21,
+      "sha256": "0464c78a9221724be054659b929d894d2ece7b6972b23ddbd8d06611b01e4f44",
+      "baseline_bytes": 27,
+      "factor_portfolio_bytes": 27,
+      "hybrid_portfolio_bytes": 27
+    },
+    {
+      "id": "enwik9:800034374:197",
+      "offset": 800035180,
+      "width": 12,
+      "sha256": "133bed8dab1f7e897a8459244f3c2d0fa2fcf946d8e091f03dccec084630637b",
+      "baseline_bytes": 18,
+      "factor_portfolio_bytes": 18,
+      "hybrid_portfolio_bytes": 18
+    },
+    {
+      "id": "enwik9:800034374:243",
+      "offset": 800035316,
+      "width": 21,
+      "sha256": "fa6058a86cd3a318c0d3265735f30944d0ec38627f5caf4378f5dc05ba0ad14d",
+      "baseline_bytes": 27,
+      "factor_portfolio_bytes": 27,
+      "hybrid_portfolio_bytes": 27
+    },
+    {
+      "id": "enwik9:800034374:299",
+      "offset": 800035446,
+      "width": 10,
+      "sha256": "117621ca9b86ec98e0cf23b565d3dc74e11eb3defb1721ae0d41308f135ee10a",
+      "baseline_bytes": 16,
+      "factor_portfolio_bytes": 16,
+      "hybrid_portfolio_bytes": 16
+    },
+    {
+      "id": "enwik9:800034374:22",
+      "offset": 800034480,
+      "width": 43,
+      "sha256": "b043e34c6b81b41eb0102490de4bfb320216d59f0ff8143bb13f21a15269f854",
+      "baseline_bytes": 49,
+      "factor_portfolio_bytes": 49,
+      "hybrid_portfolio_bytes": 49
+    },
+    {
+      "id": "enwik9:800034374:27",
+      "offset": 800034530,
+      "width": 95,
+      "sha256": "e6550a1bc9017e0dc6fc1684aceb18272b0c6a4c9225fd08599461ee79919b07",
+      "baseline_bytes": 101,
+      "factor_portfolio_bytes": 101,
+      "hybrid_portfolio_bytes": 101
+    },
+    {
+      "id": "enwik9:800034374:44",
+      "offset": 800034648,
+      "width": 64,
+      "sha256": "867c2482a3ebf92ea4845d1e3bef7b48a00e70d40c79b243536e2eb8a8b49210",
+      "baseline_bytes": 70,
+      "factor_portfolio_bytes": 70,
+      "hybrid_portfolio_bytes": 70
+    },
+    {
+      "id": "enwik9:800034374:46",
+      "offset": 800034657,
+      "width": 45,
+      "sha256": "004308102c2b460a35e2cded02125d96c1b9691516f1f1e5e803bd3649cac392",
+      "baseline_bytes": 51,
+      "factor_portfolio_bytes": 51,
+      "hybrid_portfolio_bytes": 51
+    },
+    {
+      "id": "enwik9:800034374:99",
+      "offset": 800034890,
+      "width": 101,
+      "sha256": "dcb863eb274ad6604f17ff69eaed5b194a0107b01f6c82bb76b3932566559b85",
+      "baseline_bytes": 107,
+      "factor_portfolio_bytes": 107,
+      "hybrid_portfolio_bytes": 107
+    },
+    {
+      "id": "enwik9:800034374:187",
+      "offset": 800035133,
+      "width": 36,
+      "sha256": "e312b84457587360ffff872d4c6e38798e027f12fa2211c366a38b0ce84c661e",
+      "baseline_bytes": 42,
+      "factor_portfolio_bytes": 42,
+      "hybrid_portfolio_bytes": 42
+    },
+    {
+      "id": "enwik9:800034374:194",
+      "offset": 800035169,
+      "width": 34,
+      "sha256": "e765dced449ce85c420918c5ed2adefcc6b5c5d02c00ef0ecb3dd3ee1707eb2f",
+      "baseline_bytes": 40,
+      "factor_portfolio_bytes": 40,
+      "hybrid_portfolio_bytes": 40
+    },
+    {
+      "id": "enwik9:800034374:327",
+      "offset": 800035525,
+      "width": 48,
+      "sha256": "5f95cfa87b5675bb4f0f9d9394a8143f380df6b58a9acdf4c8e5a27e26c037cd",
+      "baseline_bytes": 54,
+      "factor_portfolio_bytes": 54,
+      "hybrid_portfolio_bytes": 54
+    },
+    {
+      "id": "enwik9:800034374:0",
+      "offset": 800034374,
+      "width": 1232,
+      "sha256": "5a05e1efbd92595db37e0b5adb532d9edebab286d45aa63143489d7795f0243e",
+      "baseline_bytes": 1239,
+      "factor_portfolio_bytes": 1239,
+      "hybrid_portfolio_bytes": 1239
+    },
+    {
+      "id": "enwik9:800034374:1",
+      "offset": 800034374,
+      "width": 1232,
+      "sha256": "5a05e1efbd92595db37e0b5adb532d9edebab286d45aa63143489d7795f0243e",
+      "baseline_bytes": 1239,
+      "factor_portfolio_bytes": 1239,
+      "hybrid_portfolio_bytes": 1239
+    },
+    {
+      "id": "enwik9:800034374:14",
+      "offset": 800034439,
+      "width": 1157,
+      "sha256": "24996b653ca281bda7da87524d8fa27b87f55a29b961128c8d4178c5fc21c5f6",
+      "baseline_bytes": 1164,
+      "factor_portfolio_bytes": 1164,
+      "hybrid_portfolio_bytes": 1164
+    },
+    {
+      "id": "enwik9:800034374:49",
+      "offset": 800034719,
+      "width": 861,
+      "sha256": "7383d9737a706bfd7c65635a3c907b525330094ad2187b57f4f5d83839c0d34e",
+      "baseline_bytes": 868,
+      "factor_portfolio_bytes": 868,
+      "hybrid_portfolio_bytes": 868
+    },
+    {
+      "id": "enwik9:800034374:53",
+      "offset": 800034746,
+      "width": 144,
+      "sha256": "2a72de7196b7e5ca0847cd6426dee80f0227e68e0b28b5804bbb3ff51842d445",
+      "baseline_bytes": 151,
+      "factor_portfolio_bytes": 151,
+      "hybrid_portfolio_bytes": 151
+    },
+    {
+      "id": "enwik9:800034374:51",
+      "offset": 800034746,
+      "width": 827,
+      "sha256": "b8c5090149ae2db932e79a690fdbf6703337f12e35c83ecf6c581d84c4f81e8d",
+      "baseline_bytes": 834,
+      "factor_portfolio_bytes": 834,
+      "hybrid_portfolio_bytes": 834
+    },
+    {
+      "id": "enwik9:800034374:98",
+      "offset": 800034890,
+      "width": 635,
+      "sha256": "c057d8a548a935bd2adb2f458194c3e74039d83136bda3e85cf2c936a58306b2",
+      "baseline_bytes": 642,
+      "factor_portfolio_bytes": 642,
+      "hybrid_portfolio_bytes": 642
+    },
+    {
+      "id": "enwik9:800034374:137",
+      "offset": 800034991,
+      "width": 382,
+      "sha256": "d1c1fb6b6806b1027ecda0ff06382ada25d92a8fabddaf9255da1009b47fa476",
+      "baseline_bytes": 389,
+      "factor_portfolio_bytes": 389,
+      "hybrid_portfolio_bytes": 389
+    }
+  ]
+}
