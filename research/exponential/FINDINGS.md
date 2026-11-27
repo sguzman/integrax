@@ -25,3 +25,7 @@ The successful synthetic witnesses test implementation sensitivity, not expected
 Decision: close the approved bounded exponential research campaign EA01–EA11. These experiments do not demonstrate enwik9 compression advantage. No further blind sweep is scientifically justified. The broader IntegraX mission and C20 main remain independent and ongoing; no merge or main modification. Any new arithmetic family should have a distinct hypothesis and measurable acceptance criteria.
 
 Operational note: GitHub fetch of the public API repository endpoint `https://api.github.com/repos/sguzman/integrax/actions/runs?head_sha=COMMIT_SHA` returns push runs. Filter by workflow path, then fetch jobs, logs and artifacts by ID. The PR-only workflow wrapper is unsuitable for push runs. Persist run IDs and actual evidence; do not ask the owner to supply routine run URLs.
+
+## Technical report
+
+[Exponential Approximation as a Lossless Integer Codec: A bounded negative result on enwik9](paper/integrax-exponential.tex) — six-page LaTeX report, AI-assisted draft pending author review. See [build notes](paper/README.md).
