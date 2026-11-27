@@ -14,7 +14,7 @@ C20 is active: find rigorous arithmetic descriptions for large integers, especia
 - E0139 [run](https://github.com/sguzman/integrax/actions/runs/46043317930), [record](experiments/records/E0139.json): exact flat/tree agreement, zero hits, on 1,618 / 27,100 partials across all width bands. Flat 94.18 s vs. tree 287.25 s (3.05×); build 42 ms; 53,150,244 divisibility tests / 1,618 GCD calls. Sample-specific single-run timing.
 
 ## Resume here
-Resume with E0140: expand to three fresh 27,649–30,720-byte pages, reuse the 33,701-factor inventory, and pair flat scans with product-tree controls; then close and compare indexing again. E0139’s corrected main-revision run passed after canceling two stale-base duplicates. Continue hierarchical scales and whole-integer storage accounting. Reuse is reproducible at lexical/mid-level scales, but inventory storage is adverse and no archive compression has been demonstrated. C20 remains active.
+E0140 [run 46046140033](https://github.com/sguzman/integrax/actions/runs/46046140033) is measuring three fresh 27,649–30,720-byte pages against seventeen frozen inventories and paired tree controls. On publication it dispatches E0141 closure; E0142 compares the post-closure index. Continue higher scales and whole-integer storage accounting. Reuse is reproducible at lexical/mid-level scales, but inventory storage is adverse and no archive compression has been demonstrated. C20 remains active.
 
 ## On-demand context
 Prior checkpoint through E0133: [archive](docs/history/STATE-through-E0133.md). Earlier compact checkpoint: [through E0128](docs/history/STATE-through-E0128.md). Full history through E0117: [archive](docs/history/STATE-through-E0117.md). Dashboard deployment unverified; no human action currently required.
