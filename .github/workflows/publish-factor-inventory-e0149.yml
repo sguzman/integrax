@@ -1,7 +1,7 @@
 name: E0149 verified inventory publication
 on:
   workflow_run:
-    workflows: [E0149 flat-scan held-out page inventory expansion]
+    workflows: [E0149 flat-scan held-out page inventory expansion, E0149 extended timeout retry after failed measurement]
     types: [completed]
     branches: [main]
 permissions:
