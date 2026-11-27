@@ -1,0 +1,57 @@
+{
+  "id": "EA11-E004",
+  "status": "executed locally; byte equality verified",
+  "source_commit": "4f8baba683123c0c1703415cf1cb163ccd1649ca",
+  "snapshot": "acfd9058498527c0cf17e60c184ff4d9212d6fba",
+  "arithmetic_source": "EA11-E003.json (15d6e5e2)",
+  "scope": "Three disjoint reconstructed E0103 page roots; source factor products reconstructed in JS, transferred as hex to temporary Linux sandbox, SHA256 independently matched all original page hashes before final comparison. Standard codecs invoked on stdin, no names or timestamps. Actual local execution used shell tools, not new Node wrapper; wrapper reproduces same recipe, not yet executed. No runtime/memory or executable-inclusive claims.",
+  "versions": {
+    "gzip": "1.13",
+    "xz": "5.8.1",
+    "zstd": "1.5.7"
+  },
+  "commands": [
+    "gzip -n -9 -c",
+    "xz -9 -c",
+    "zstd -19 -q -c"
+  ],
+  "roundtrips": 9,
+  "ea09_recheck": {
+    "fixture_sha256_matches": 8,
+    "standard_size_matches": 24,
+    "exact_cmp": 24,
+    "notes": "stdin required to match zstd output sizes; file input adds one byte to each fixture in this environment."
+  },
+  "rows": [
+    {
+      "id": "enwik9:100439232:0",
+      "width": 807,
+      "input_sha256": "9a0de5370faee1f3d684338b97a9440c4e17c29285ff491f10e02b08bcc236d0",
+      "flat_bytes": 814,
+      "hierarchical_bytes": 816,
+      "gzip_bytes": 483,
+      "xz_bytes": 552,
+      "zstd_bytes": 495
+    },
+    {
+      "id": "enwik9:400027307:0",
+      "width": 815,
+      "input_sha256": "410f2a208607e80829d505fa88a6fd6f172a56be0a04cb947ff8e0e2bb2aaa",
+      "flat_bytes": 822,
+      "hierarchical_bytes": 824,
+      "gzip_bytes": 478,
+      "xz_bytes": 552,
+      "zstd_bytes": 484
+    },
+    {
+      "id": "enwik9:800034374:0",
+      "width": 1232,
+      "input_sha256": "5a05e1efbd92595db37e0b5adb532d9edebab286d45aa63143489d7795f0243e",
+      "flat_bytes": 1239,
+      "hierarchical_bytes": 1241,
+      "gzip_bytes": 711,
+      "xz_bytes": 800,
+      "zstd_bytes": 716
+    }
+  ]
+}
