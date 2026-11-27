@@ -1,0 +1,100 @@
+{
+  "id": "EA08-E001",
+  "status": "executed JS code-mode",
+  "seed": "0xea080001",
+  "source_commit": "7d29932db97bed620c179cdb75e2f1d8236a51bb",
+  "command": "nix develop --command node research/exponential/ea08-stream-prefix.mjs",
+  "scope": "single power only; bases 2..64; unknown tail represented by outward interval; all potentially optimal exponent candidates covered by certified bracket and gamma buckets; compare exact finalists with exhaustive oracle at smaller sizes; virtual targets are prefix and declared length, not actual corpus files. Timings Date.now coarse, one run, not production benchmark; memory not measured.",
+  "checks": 32,
+  "rows": [
+    {
+      "bytes": 8,
+      "targets": 8,
+      "raw_certificates": 4,
+      "unresolved": 0,
+      "exact_survivors": 4,
+      "uncached_multiplies": 20232,
+      "cached_multiplies": 7831,
+      "cache_hits": 1512,
+      "elapsed_uncached_ms": 7,
+      "elapsed_cached_ms": 3
+    },
+    {
+      "bytes": 32,
+      "targets": 8,
+      "raw_certificates": 4,
+      "unresolved": 0,
+      "exact_survivors": 6,
+      "uncached_multiplies": 36748,
+      "cached_multiplies": 14748,
+      "cache_hits": 1518,
+      "elapsed_uncached_ms": 17,
+      "elapsed_cached_ms": 11
+    },
+    {
+      "bytes": 128,
+      "targets": 8,
+      "raw_certificates": 4,
+      "unresolved": 0,
+      "exact_survivors": 4,
+      "uncached_multiplies": 56920,
+      "cached_multiplies": 23577,
+      "cache_hits": 1516,
+      "elapsed_uncached_ms": 25,
+      "elapsed_cached_ms": 15
+    },
+    {
+      "bytes": 1024,
+      "targets": 8,
+      "raw_certificates": 4,
+      "unresolved": 0,
+      "exact_survivors": 4,
+      "uncached_multiplies": 94858,
+      "cached_multiplies": 40624,
+      "cache_hits": 1516,
+      "elapsed_uncached_ms": 34,
+      "elapsed_cached_ms": 24
+    }
+  ],
+  "virtual": [
+    {
+      "declared_bytes": 131072,
+      "prefix_bytes": 16,
+      "prefix_hex": "ea3d9d994a37f74c1cc9656b80dbf6d2",
+      "status": "raw-certified",
+      "survivors": 0,
+      "elapsed_ms": 6,
+      "candidates": 1213,
+      "pruned": 1213,
+      "interval_multiplies": 12208,
+      "cache_hits": 189,
+      "bracket_probes": 189
+    },
+    {
+      "declared_bytes": 1000000,
+      "prefix_bytes": 16,
+      "prefix_hex": "ae3455ac7566fcfaacdf110a04ae60ae",
+      "status": "raw-certified",
+      "survivors": 0,
+      "elapsed_ms": 7,
+      "candidates": 1401,
+      "pruned": 1401,
+      "interval_multiplies": 16208,
+      "cache_hits": 189,
+      "bracket_probes": 189
+    },
+    {
+      "declared_bytes": 1000000000,
+      "prefix_bytes": 16,
+      "prefix_hex": "e526a565e250abfddabe4891402f969b",
+      "status": "raw-certified",
+      "survivors": 0,
+      "elapsed_ms": 19,
+      "candidates": 2030,
+      "pruned": 2030,
+      "interval_multiplies": 33686,
+      "cache_hits": 189,
+      "bracket_probes": 189
+    }
+  ]
+}
