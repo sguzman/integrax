@@ -6,8 +6,11 @@ Hosted closure propagated E0126 factors across 80,082 objects: 42 parent refinem
 ## 2026-11-26 — E0128 and E0129 hosted chain
 Three fresh 16,385–18,432-byte pages added 19,173 nodes and 3,346 factors (99,255 objects / 22,124 factors total). On the pages, child/global/full-inventory stages removed 27,518 / 43,051 / 213,702 residual bits incrementally; article savings were 34 bits and page savings zero. Automatic E0129 closure refined 45 parent rows / 35 values across historical and new objects, completed one cofactor, and removed 770 residual bits. Runtime 730.44 s for E0128 and 133.15 s for E0129; peak RSS 1,297,884 / 1,513,748 KiB. Cumulative research inventory JSON is 205,728,852 B (20.57% of corpus), not an archive.
 
-## 2026-11-26 — E0130 algorithm comparison queued
-Added an automatic post-publication workflow to compare direct flat factor scans with the balanced product-tree GCD index over a deterministic, stratified residual sample, with exact output equivalence required before persistence.
+## 2026-11-26 — E0130 factor-index comparison
+First dispatch failed before measurement: 26,282 historical shard entries represented 22,124 unique factors. Deduplicated by factor value, then reran on 200 SHA-256-sorted residuals stratified across five object-width bands. Product-tree GCD and flat scans matched exactly; neither found a factor. On this sample flat scans took 11.59 s vs. 40.53 s for tree queries, despite 4,341,574 exact divisibility checks. The index JSON was 8,795,397 B. The result is a small one-run algorithm benchmark, not a full-population claim. [Record](experiments/records/E0130.json), [run](https://github.com/sguzman/integrax/actions/runs/45912716043).
+
+## 2026-11-26 — E0131–E0133 scale and closure chain staged
+Added hosted measurement/publication for fresh 18,433–21,504-byte pages with frozen inventory controls through E0128, automatic propagation of new factors over residuals, then a larger stratified comparison of direct scans and product-tree GCD. Runs are pending; no result is assumed.
 
 ## 2026-11-26 — E0125 inventory saturation control
 Hosted replay and rescreen of all 62,823 indexed objects using 16,081 factors found zero further refinements or residual bits removed after E0124 overlays; one cofactor had completed. Persisted the stratified summary. No compression result claimed.
