@@ -1,5 +1,9 @@
 name: E0147 enumerate full enwik9 XML object population
 on:
+  workflow_run:
+    workflows: [E0146 wider factor-index algorithm comparison]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: write
@@ -8,6 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   enumerate:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 100
     steps:
