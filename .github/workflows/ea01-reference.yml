@@ -1,0 +1,38 @@
+name: EA01 bounded exponential reference
+on:
+  push:
+    branches: [research/exponential-approximation]
+    paths:
+      - research/exponential/ea01.rs
+      - .github/workflows/ea01-reference.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ea01-reference-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-reference:
+    if: github.ref == 'refs/heads/research/exponential-approximation'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+      - name: Compile, test, and record bounded search
+        run: |
+          nix develop --no-update-lock-file --command bash -euo pipefail -c '
+            rustc --version
+            sha256sum research/exponential/ea01.rs
+            rustc --edition=2021 --test -O research/exponential/ea01.rs -o /tmp/ea01-tests
+            /tmp/ea01-tests
+            rustc --edition=2021 -O research/exponential/ea01.rs -o /tmp/ea01
+            mkdir -p /tmp/ea01-evidence
+            /usr/bin/time -v /tmp/ea01 > /tmp/ea01-evidence/results.jsonl
+            cat /tmp/ea01-evidence/results.jsonl
+            jq -s -e "length == 8 and all(.[]; .count > 0 and .adjacent_net_wins <= .oracle_net_wins)" /tmp/ea01-evidence/results.jsonl
+          '
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ea01-reference-results
+          path: /tmp/ea01-evidence/results.jsonl
