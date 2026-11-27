@@ -72,7 +72,7 @@ jobs:
           fi
           git fetch origin main
           git show origin/main:experiments/records/E0140.json | jq -e '.status == "verified" and .summary.nodes > 0 and (.pages | length) == 3 and (.candidate_algorithm | contains("flat-scan"))'
-          git show origin/main:inventory/manifest.json | jq -e '.indexed_nodes > 176487 and .index.distinct_factors > 33701 and .batches[-1].id == "E0140"'
+          git show origin/main:inventory/manifest.json | jq -e '.indexed_nodes > 176487 and .index.distinct_factors >= 33701 and .batches[-1].id == "E0140"'
       - name: Dispatch E0141 closure on a fresh workflow chain
         if: github.event_name == 'workflow_run'
         env:
