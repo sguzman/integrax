@@ -94,7 +94,7 @@ for(const batch of manifest.batches){
   assert(shards.every(s=>s.width===page.width&&s.sha256===page.sha256),`manifest page metadata mismatch for ${batch.id}`);
   const bytes=corpus.subarray(page.offset,page.offset+page.width);assert.equal(bytes.length,page.width);assert.equal(sha(bytes),page.sha256);
   let nodes=0;const root=objectTree(bytes);(function walk(n){nodes++;if(n.children)for(const c of n.children)walk(c)})(root);
-  assert.equal(nodes,expectedNodes,`parser population differs for ${batch.id} page offset ${page.offset}`);
+  assert.equal(nodes,expectedNodes,`parser population differs for ${batch.id} page offset ${page.offset}: actual=${nodes}, indexed_rows=${expectedNodes}, width=${page.width}, sha256=${page.sha256}`);
   validationPages++;validationNodes+=nodes;
  }
 }
