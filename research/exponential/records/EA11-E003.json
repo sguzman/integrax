@@ -1,0 +1,89 @@
+{
+  "id": "EA11-E003",
+  "status": "executed JS code-mode",
+  "snapshot": "acfd9058498527c0cf17e60c184ff4d9212d6fba",
+  "shards": [
+    {
+      "path": "inventory/batches/E0103/100439232.json",
+      "blob_sha": "974047c4ed57b33c2aea758c61839add3206b134"
+    },
+    {
+      "path": "inventory/batches/E0103/400027307.json",
+      "blob_sha": "c1fdd4c45abc50015f397fdf9de9d6c40be148f5"
+    },
+    {
+      "path": "inventory/batches/E0103/800034374.json",
+      "blob_sha": "6ea48eee204a7d7402dac06ee33ccccfefe31f9b"
+    }
+  ],
+  "source_commit": "821194c5bdaed5f5572c16c94843068d48efeee7",
+  "scope": "Three disjoint full E0103 pages, verify all nested span hashes and exact child partition, shortest path over all boundaries with raw coalescing or IEX1 payload of an inventory span. IEXH magic, output width, per-record tag/varint payload length, no external decoder side information. Exact optimum only within enumerated edges; no standard-compressor execution, no executable accounting; synthetic positive control. Date.now coarse.",
+  "checks": 16,
+  "rejected": 12,
+  "rows": [
+    {
+      "id": "enwik9:100439232:0",
+      "group": "enwik9",
+      "width": 807,
+      "sha256": "9a0de5370faee1f3d684338b97a9440c4e17c29285ff491f10e02b08bcc236d0",
+      "flat_bytes": 814,
+      "shared_raw_bytes": 816,
+      "partition_raw_bytes": 816,
+      "hierarchical_bytes": 816,
+      "arithmetic_records": 0,
+      "raw_records": 1,
+      "unique_intervals_tested": 224,
+      "competitive_intervals": 0,
+      "boundaries": 182,
+      "elapsed_ms": 3582
+    },
+    {
+      "id": "enwik9:400027307:0",
+      "group": "enwik9",
+      "width": 815,
+      "sha256": "410f2a208607e80829d505fa88a6fd6f6f172a56be0a04cb947ff8e0e2bb2aaa",
+      "flat_bytes": 822,
+      "shared_raw_bytes": 824,
+      "partition_raw_bytes": 824,
+      "hierarchical_bytes": 824,
+      "arithmetic_records": 0,
+      "raw_records": 1,
+      "unique_intervals_tested": 211,
+      "competitive_intervals": 0,
+      "boundaries": 169,
+      "elapsed_ms": 3971
+    },
+    {
+      "id": "enwik9:800034374:0",
+      "group": "enwik9",
+      "width": 1232,
+      "sha256": "5a05e1efbd92595db37e0b5adb532d9edebab286d45aa63143489d7795f0243e",
+      "flat_bytes": 1239,
+      "shared_raw_bytes": 1241,
+      "partition_raw_bytes": 1241,
+      "hierarchical_bytes": 1241,
+      "arithmetic_records": 0,
+      "raw_records": 1,
+      "unique_intervals_tested": 342,
+      "competitive_intervals": 0,
+      "boundaries": 284,
+      "elapsed_ms": 5342
+    },
+    {
+      "id": "two-power-segments",
+      "group": "synthetic",
+      "width": 229,
+      "sha256": "a15cc2f289b7880fa40ae5cd7fb5155517c695d91b35ef0d1b33e1669475af8f",
+      "flat_bytes": 152,
+      "shared_raw_bytes": 238,
+      "partition_raw_bytes": 238,
+      "hierarchical_bytes": 63,
+      "arithmetic_records": 2,
+      "raw_records": 1,
+      "unique_intervals_tested": 4,
+      "competitive_intervals": 3,
+      "boundaries": 4,
+      "elapsed_ms": 180
+    }
+  ]
+}
