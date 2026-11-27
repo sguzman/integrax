@@ -1,0 +1,56 @@
+name: E0148 audit indexed factor completeness
+on:
+  workflow_run:
+    workflows: [E0147 enumerate full enwik9 XML object population]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: c20-factor-inventory
+  cancel-in-progress: false
+jobs:
+  audit:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Record Nix version
+        run: echo "NIX_VERSION=$(nix --version)" >> "$GITHUB_ENV"
+      - name: Audit current factorization residuals and storage
+        env:
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          /usr/bin/time -v -o data/E0148.time nix develop --no-update-lock-file --command node experiments/xml/factor-completeness-e0148.mjs > data/E0148.json
+          nix develop --no-update-lock-file --command node experiments/xml/publish-factor-completeness-e0148.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: E0148-factor-completeness-audit
+          path: |
+            data/E0148.json
+            data/E0148.time
+            experiments/records/E0148.json
+          retention-days: 90
+      - name: Commit results and verify remote readback
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/records/E0148.json
+          git commit -m 'Publish E0148 factor completeness audit'
+          git push origin HEAD:main
+          git fetch origin main
+          git show origin/main:experiments/records/E0148.json | jq -e '
+            .status == "verified" and
+            .indexed_objects == 249538 and
+            .distinct_indexed_factors == 43328 and
+            .candidate_population == 379135343 and
+            (.final_status_counts.complete + .final_status_counts.partial + .final_status_counts.trivial) == .indexed_objects and
+            .cumulative_inventory_json_bytes == 601644712
+          '

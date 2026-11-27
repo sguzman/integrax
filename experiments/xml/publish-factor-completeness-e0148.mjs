@@ -1,0 +1,29 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+
+const result=JSON.parse(readFileSync('data/E0148.json','utf8'));
+const manifest=JSON.parse(readFileSync('inventory/manifest.json','utf8'));
+const population=JSON.parse(readFileSync('experiments/records/E0147.json','utf8'));
+const prior=JSON.parse(readFileSync('experiments/records/E0144.json','utf8'));
+assert.equal(result.event,'E0148_FACTOR_COMPLETENESS_AUDIT');
+assert.equal(result.e0147_record_run_id,population.run_id);
+assert.equal(result.e0147_record_revision,population.revision);
+assert.equal(result.e0147_corpus_sha256,manifest.corpus_sha256);
+assert.equal(result.indexed_objects,manifest.indexed_nodes);
+assert.equal(result.candidate_population,population.total_integrax_candidate_objects);
+assert.equal(result.distinct_indexed_factors,manifest.index.distinct_factors);
+assert.equal(result.distinct_indexed_factors,prior.summary.distinct_factors);
+assert.equal(result.factor_index_entries,result.distinct_indexed_factors);
+assert.equal(result.base_status_counts.complete+result.base_status_counts.partial+result.base_status_counts.trivial,result.indexed_objects);
+assert.equal(result.final_status_counts.complete+result.final_status_counts.partial+result.final_status_counts.trivial,result.indexed_objects);
+assert.equal(result.refinement_rows,(manifest.refinements??[]).reduce((n,x)=>n+x.rows,0));
+assert.equal(result.cumulative_inventory_json_bytes,prior.storage.cumulative_inventory_json_bytes);
+assert.equal(result.indexed_candidate_coverage_percent,100*result.indexed_objects/result.candidate_population);
+assert.equal(result.complete_candidate_population_lower_bound_percent,100*result.final_status_counts.complete/result.candidate_population);
+assert.equal(result.proven_prime_candidate_population_lower_bound_percent,100*result.final_status_counts.proven_prime_only_complete/result.candidate_population);
+assert.equal(result.final_status_counts.complete>=result.base_complete_objects,true);
+
+const record={...result,status:'verified',manifest_revision:process.env.GITHUB_SHA,nix_version:process.env.NIX_VERSION??null,node_version:process.version,command:'nix develop --no-update-lock-file --command node experiments/xml/factor-completeness-e0148.mjs',verification:'Read all manifest-declared object shards, applied every refinement in manifest order with exact old-cofactor and factor-product checks, reconciled every distinct factor against the cumulative factor index and its quality label, matched row and overlay counts to the manifest, and reproduced E0144 cumulative inventory-byte totals. E0147 supplies the independently verified full candidate-population denominator.'};
+mkdirSync('experiments/records',{recursive:true});
+writeFileSync('experiments/records/E0148.json',JSON.stringify(record,null,2)+'\n');
+console.log(JSON.stringify({event:'E0148_RECORD_READY',run_id:Number(process.env.GITHUB_RUN_ID),indexed_objects:record.indexed_objects,complete:record.final_status_counts.complete,partial:record.final_status_counts.partial,trivial:record.final_status_counts.trivial,proven_prime_only_complete:record.final_status_counts.proven_prime_only_complete}));
