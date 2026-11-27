@@ -25,7 +25,14 @@ jobs:
           nix develop --no-update-lock-file --command bash -euo pipefail -c '
             export INTEGRAX_DATA_DIR="$RUNNER_TEMP/ea10-corpus"
             export INTEGRAX_DOWNLOAD_ATTEMPTS=3
-            sh datasets/acquire.sh enwik9
+            if ! sh datasets/acquire.sh enwik9; then
+              echo "Primary acquisition failed; trying independent raw mirror"
+              mirror="$INTEGRAX_DATA_DIR/enwik9.mirror.tmp"
+              curl --proto "=https" --proto-redir "=https" --fail --location --retry 2 --retry-delay 5 --connect-timeout 30 --speed-limit 1024 --speed-time 120 --max-time 900 --output "$mirror" "https://huggingface.co/datasets/ashvardanian/StringWars/resolve/main/enwik9.txt"
+              test "$(wc -c < "$mirror")" -eq 1000000000
+              test "$(sha256sum "$mirror" | cut -d" " -f1)" = "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc"
+              mv "$mirror" "$INTEGRAX_DATA_DIR/enwik9"
+            fi
             sha256sum research/exponential/ea0{9,8}*.mjs research/exponential/ea10-*.mjs
             /usr/bin/time -v node research/exponential/ea10-corpus.mjs "$INTEGRAX_DATA_DIR/enwik9" "$RUNNER_TEMP/ea10-evidence"
             jq -e ".rows | length == 18" "$RUNNER_TEMP/ea10-evidence/results.json"
