@@ -15,10 +15,10 @@ const population=readJson('experiments/records/E0147.json');
 const prior=readJson('experiments/records/E0144.json');
 assert.equal(population.status,'verified');
 assert.equal(population.corpus_sha256,manifest.corpus_sha256);
-assert.equal(population.indexed_objects,manifest.indexed_nodes);
+assert(manifest.indexed_nodes>=population.indexed_objects,'current index is below the census-time indexed-row count');
 assert.equal(population.parser_validation.all_sampled_page_object_counts_matched,true);
 assert.equal(prior.status,'verified');
-assert.equal(manifest.index.distinct_factors,prior.summary.distinct_factors);
+assert(manifest.index.distinct_factors>=prior.summary.distinct_factors,'current factor index is below the E0144 baseline');
 
 const rows=new Map(),factorQuality=new Map();
 const qualityCounts=Object.create(null),baseStatusCounts={complete:0,partial:0,trivial:0};

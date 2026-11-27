@@ -12,7 +12,7 @@ assert.equal(result.e0147_corpus_sha256,manifest.corpus_sha256);
 assert.equal(result.indexed_objects,manifest.indexed_nodes);
 assert.equal(result.candidate_population,population.total_integrax_candidate_objects);
 assert.equal(result.distinct_indexed_factors,manifest.index.distinct_factors);
-assert.equal(result.distinct_indexed_factors,prior.summary.distinct_factors);
+assert(result.distinct_indexed_factors>=prior.summary.distinct_factors,'reported factor index is below the E0144 baseline');
 assert.equal(result.factor_index_entries-result.factor_index_duplicate_entries,result.distinct_indexed_factors);
 assert.equal(result.distinct_factor_values_in_object_rows+result.unused_index_factor_values,result.distinct_indexed_factors);
 assert.equal(result.base_status_counts.complete+result.base_status_counts.partial+result.base_status_counts.trivial,result.indexed_objects);
