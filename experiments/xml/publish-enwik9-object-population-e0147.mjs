@@ -13,6 +13,8 @@ assert(result.indexed_objects<=result.total_integrax_candidate_objects);
 assert.equal(result.indexed_object_coverage_percent,100*result.indexed_objects/result.total_integrax_candidate_objects);
 assert.equal(result.total_xml_pages,result.all_xml_elements_by_name.page);
 assert.equal(result.total_xml_pages,result.page_xml_elements_by_name.page);
+assert.equal(result.indexed_pages,result.parser_validation.pages);
+assert.equal(result.indexed_page_coverage_percent,100*result.indexed_pages/result.total_xml_pages);
 
 const record={...result,status:'verified',run_id:Number(process.env.GITHUB_RUN_ID),revision:process.env.GITHUB_SHA,nix_version:process.env.NIX_VERSION??null,node_version:process.version,command:'nix develop --no-update-lock-file --command node --max-old-space-size=4096 experiments/xml/enwik9-object-population-e0147.mjs data/enwik9',verification:'Full corpus SHA-256 and byte length checked; lexical scan validated every XML element nesting; all manifest-indexed sample pages were reparsed with the IntegraX objectTree/textTree definition and exact per-page candidate-node counts matched persisted batch row totals before full-dump counts were emitted.'};
 mkdirSync('experiments/records',{recursive:true});
