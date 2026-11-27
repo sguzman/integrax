@@ -111,7 +111,7 @@ function countPage(start,end){
   if(n.children)for(const c of n.children)walk(c);
  })(root);
  candidateObjects+=nodes;pages++;pageBytes+=end-start;
- if(pages%10000===0)console.log(JSON.stringify({event:'E0147_PROGRESS',pages,page_bytes:pageBytes,candidate_objects:candidateObjects,page_xml_elements:pageXmlElements,source_offset:end}));
+ if(pages%10000===0)console.error(JSON.stringify({event:'E0147_PROGRESS',pages,page_bytes:pageBytes,candidate_objects:candidateObjects,page_xml_elements:pageXmlElements,source_offset:end}));
 }
 while(position<corpus.length){
  const lt=corpus.indexOf(60,position);if(lt<0)break;
