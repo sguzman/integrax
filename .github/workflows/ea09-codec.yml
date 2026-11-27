@@ -1,0 +1,32 @@
+name: EA09 standalone codec verification
+on:
+  push:
+    branches: [research/exponential-approximation]
+    paths:
+      - research/exponential/ea09-*.mjs
+      - .github/workflows/ea09-codec.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  standalone:
+    if: github.ref == 'refs/heads/research/exponential-approximation'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+      - name: Test codec and compare compressors
+        run: |
+          mkdir -p /tmp/ea09-evidence
+          nix develop --no-update-lock-file --command bash -euo pipefail -c '
+            node research/exponential/ea09-cli.mjs test | tee /tmp/ea09-evidence/test.json
+            /usr/bin/time -v node research/exponential/ea09-cli.mjs compare | tee /tmp/ea09-evidence/compare.json
+            sha256sum research/exponential/ea09-*.mjs
+            jq -e ".roundtrips == 20 and .rejected == 36" /tmp/ea09-evidence/test.json
+            jq -e ".rows | length == 8" /tmp/ea09-evidence/compare.json
+          '
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ea09-codec-evidence
+          path: /tmp/ea09-evidence/*.json
