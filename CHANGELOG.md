@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-27 — E0134–E0135 next-scale reuse
+E0134 added 26,721 nested nodes / 3,913 net factors across three 22,379–24,323-byte pages; child/global/full stages removed 13,725 / 52,503 / 308,457 residual bits. Paired same-residual flat scans and product-tree GCDs agreed exactly; flat took 29.41 s vs. 81.12 s (2.76×). The 251,462,279 flat divisibility checks took less query time than 419,922 tree GCD calls. New object/index JSON was 66,697,701 B; cumulative research inventory JSON reached 320,460,512 B. E0135 then improved 75 parent rows / 51 values by 1,191 bits, completing none; cumulative JSON is 320,574,848 B. E0136 sampled 1,557/22,970 partials across five width bands: exact equivalence, no hits, and flat query time 82.12 s vs. 248.21 s (3.02×). All reductions are overlapping residual counts and research metadata, not archive compression. The E0135 publication now dispatches E0136 with a scoped token to cross GitHub's three-level workflow_run cap. [E0134 record](experiments/records/E0134.json), [E0135 record](experiments/records/E0135.json), [E0136 record](experiments/records/E0136.json).
+
 ## 2026-11-26 — E0127 factor propagation closure
 Hosted closure propagated E0126 factors across 80,082 objects: 42 parent refinements / 30 distinct values, all witnessed in the new pages, removing 639 overlapping residual bits. Historical objects gained 526 bits of reduction, E0126 objects 113; no article gain, one 19-bit page/root value. Persisted 42 exact rows and provenance after independent product and witness checks. No archive compression claim.
 
