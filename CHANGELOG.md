@@ -9,8 +9,8 @@ Three fresh 16,385–18,432-byte pages added 19,173 nodes and 3,346 factors (99,
 ## 2026-11-26 — E0130 factor-index comparison
 First dispatch failed before measurement: 26,282 historical shard entries represented 22,124 unique factors. Deduplicated by factor value, then reran on 200 SHA-256-sorted residuals stratified across five object-width bands. Product-tree GCD and flat scans matched exactly; neither found a factor. On this sample flat scans took 11.59 s vs. 40.53 s for tree queries, despite 4,341,574 exact divisibility checks. The index JSON was 8,795,397 B. The result is a small one-run algorithm benchmark, not a full-population claim. [Record](experiments/records/E0130.json), [run](https://github.com/sguzman/integrax/actions/runs/45912716043).
 
-## 2026-11-26 — E0131–E0133 scale and closure chain staged
-Added hosted measurement/publication for fresh 18,433–21,504-byte pages with frozen inventory controls through E0128, automatic propagation of new factors over residuals, then a larger stratified comparison of direct scans and product-tree GCD. Runs are pending; no result is assumed.
+## 2026-11-27 — E0131–E0133 scale and algorithm chain
+E0131 added 19,547 nodes / 2,684 net factors at the 19,295–20,635-byte scale; child/global/full-index stages removed 14,360 / 59,992 / 204,273 bits. E0132 propagated factors across the 118,802-object inventory: 50 rows / 36 values, one cofactor completed, 895 bits removed. E0133 compared exact outputs on 913 stratified residuals: flat scan was 2.84× faster than product-tree GCD in one hosted run; neither found factors in the sample. Cumulative inventory JSON is 251,907,951 B (25.19% of corpus), not an archive. E0134–E0136 test direct scans and product trees on paired residuals at the next held-out scale, close newly found factors and repeat the comparison.
 
 ## 2026-11-26 — E0125 inventory saturation control
 Hosted replay and rescreen of all 62,823 indexed objects using 16,081 factors found zero further refinements or residual bits removed after E0124 overlays; one cofactor had completed. Persisted the stratified summary. No compression result claimed.
