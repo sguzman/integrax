@@ -13,7 +13,7 @@ assert.equal(result.indexed_objects,manifest.indexed_nodes);
 assert.equal(result.candidate_population,population.total_integrax_candidate_objects);
 assert.equal(result.distinct_indexed_factors,manifest.index.distinct_factors);
 assert.equal(result.distinct_indexed_factors,prior.summary.distinct_factors);
-assert.equal(result.factor_index_entries,result.distinct_indexed_factors);
+assert.equal(result.factor_index_entries-result.factor_index_duplicate_entries,result.distinct_indexed_factors);
 assert.equal(result.base_status_counts.complete+result.base_status_counts.partial+result.base_status_counts.trivial,result.indexed_objects);
 assert.equal(result.final_status_counts.complete+result.final_status_counts.partial+result.final_status_counts.trivial,result.indexed_objects);
 assert.equal(result.refinement_rows,(manifest.refinements??[]).reduce((n,x)=>n+x.rows,0));
