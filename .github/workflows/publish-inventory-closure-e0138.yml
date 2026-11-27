@@ -80,6 +80,7 @@ jobs:
           git show origin/main:experiments/records/E0138.json | jq -e '.experiment == "E0138" and .summary.improved == .refinement_rows'
           git show origin/main:inventory/manifest.json | jq -e '.refinements[-1].id == "E0138"'
       - name: Dispatch E0139 beyond the workflow_run chain limit
+        if: github.event_name == 'workflow_run'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/workflows/index-algorithm-e0139.yml/dispatches" -f ref=main
