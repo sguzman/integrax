@@ -1,0 +1,59 @@
+{
+  "id": "EA09-E001",
+  "status": "executed JS code-mode",
+  "source_commit": "c86062788c43879b13bc1771e199147861be08be",
+  "seed": "0xea090001",
+  "scope": "IEX1 magic included in sizes; exact decoded bytes; max encoder 8192 bytes, decoder 1 MiB; intermediate bit/node/depth caps; malformed test vectors not exhaustive security audit; synthetic inputs; standard compressor comparisons pending",
+  "roundtrips": 20,
+  "rejected": 36,
+  "rows": [
+    {
+      "name": "uniform",
+      "input_bytes": 1024,
+      "archive_bytes": 1031,
+      "archive_hex": null
+    },
+    {
+      "name": "repetitive",
+      "input_bytes": 1024,
+      "archive_bytes": 1031,
+      "archive_hex": null
+    },
+    {
+      "name": "near_power",
+      "input_bytes": 1024,
+      "archive_bytes": 13,
+      "archive_hex": "4945583100200104a005dc08f6"
+    },
+    {
+      "name": "positive_sum",
+      "input_bytes": 1024,
+      "archive_bytes": 17,
+      "archive_hex": "49455831002002409400bb8130064023d8"
+    },
+    {
+      "name": "signed_sum",
+      "input_bytes": 1024,
+      "archive_bytes": 17,
+      "archive_hex": "49455831002003404a005dc84c0190047b"
+    },
+    {
+      "name": "product",
+      "input_bytes": 1024,
+      "archive_bytes": 13,
+      "archive_hex": "494558310020011e006a408f60"
+    },
+    {
+      "name": "nested",
+      "input_bytes": 1024,
+      "archive_bytes": 22,
+      "archive_hex": "4945583100200565220f2807d0834c07d011ed811ec0"
+    },
+    {
+      "name": "zeros",
+      "input_bytes": 1024,
+      "archive_bytes": 9,
+      "archive_hex": "494558310020015b80"
+    }
+  ]
+}
