@@ -1,0 +1,250 @@
+{
+  "experiment": "E0145",
+  "revision": "acfd9058498527c0cf17e60c184ff4d9212d6fba",
+  "run_id": 46064405056,
+  "corpus_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+  "indexed_objects": 249538,
+  "known_factors": 43328,
+  "command": "timeout --kill-after=10s 1500s nix develop --no-update-lock-file --command node --max-old-space-size=3072 experiments/xml/inventory-scale-closure.mjs data/enwik9",
+  "nix_version": "nix (Nix) 2.35.6",
+  "node_version": "v24.22.3",
+  "wall_seconds": 466.06,
+  "peak_rss_kib": 2056528,
+  "summary": {
+    "event": "COFACTOR_SUMMARY",
+    "loaded": 249538,
+    "partial": 37861,
+    "known_factors": 43328,
+    "improved": 120,
+    "completed": 2,
+    "parent_improved": 119,
+    "bits_removed": 2066,
+    "by_kind": {
+      "lexical": {
+        "objects": 351,
+        "improved": 0,
+        "before_bits": 50938,
+        "after_bits": 50938,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "title": {
+        "objects": 43,
+        "improved": 0,
+        "before_bits": 9383,
+        "after_bits": 9383,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "id": {
+        "objects": 81,
+        "improved": 0,
+        "before_bits": 8480,
+        "after_bits": 8480,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "timestamp": {
+        "objects": 48,
+        "improved": 1,
+        "before_bits": 15607,
+        "after_bits": 15590,
+        "bits_removed": 17,
+        "unique_improved_values": 1
+      },
+      "username": {
+        "objects": 30,
+        "improved": 0,
+        "before_bits": 6405,
+        "after_bits": 6405,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "contributor": {
+        "objects": 48,
+        "improved": 1,
+        "before_bits": 32679,
+        "after_bits": 32662,
+        "bits_removed": 17,
+        "unique_improved_values": 1
+      },
+      "comment": {
+        "objects": 43,
+        "improved": 1,
+        "before_bits": 23904,
+        "after_bits": 23889,
+        "bits_removed": 15,
+        "unique_improved_values": 1
+      },
+      "phrase": {
+        "objects": 20913,
+        "improved": 5,
+        "before_bits": 2886360,
+        "after_bits": 2886272,
+        "bits_removed": 88,
+        "unique_improved_values": 5
+      },
+      "sentence": {
+        "objects": 6775,
+        "improved": 61,
+        "before_bits": 4830845,
+        "after_bits": 4829787,
+        "bits_removed": 1058,
+        "unique_improved_values": 59
+      },
+      "paragraph": {
+        "objects": 4930,
+        "improved": 44,
+        "before_bits": 4892126,
+        "after_bits": 4891413,
+        "bits_removed": 713,
+        "unique_improved_values": 42
+      },
+      "article": {
+        "objects": 48,
+        "improved": 1,
+        "before_bits": 5080115,
+        "after_bits": 5080097,
+        "bits_removed": 18,
+        "unique_improved_values": 1
+      },
+      "text": {
+        "objects": 48,
+        "improved": 2,
+        "before_bits": 5092892,
+        "after_bits": 5092860,
+        "bits_removed": 32,
+        "unique_improved_values": 2
+      },
+      "revision": {
+        "objects": 48,
+        "improved": 1,
+        "before_bits": 5199479,
+        "after_bits": 5199464,
+        "bits_removed": 15,
+        "unique_improved_values": 1
+      },
+      "page": {
+        "objects": 48,
+        "improved": 0,
+        "before_bits": 5228428,
+        "after_bits": 5228428,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "page-root": {
+        "objects": 48,
+        "improved": 0,
+        "before_bits": 5228428,
+        "after_bits": 5228428,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "word": {
+        "objects": 3990,
+        "improved": 3,
+        "before_bits": 370624,
+        "after_bits": 370531,
+        "bits_removed": 93,
+        "unique_improved_values": 3
+      },
+      "ip": {
+        "objects": 12,
+        "improved": 0,
+        "before_bits": 1906,
+        "after_bits": 1906,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "fragment": {
+        "objects": 357,
+        "improved": 0,
+        "before_bits": 79340,
+        "after_bits": 79340,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      }
+    },
+    "by_width": {
+      "9-32": {
+        "objects": 26487,
+        "improved": 5,
+        "before_bits": 3408146,
+        "after_bits": 3407922,
+        "bits_removed": 224,
+        "unique_improved_values": 5
+      },
+      "33-128": {
+        "objects": 7161,
+        "improved": 82,
+        "before_bits": 3629673,
+        "after_bits": 3628364,
+        "bits_removed": 1309,
+        "unique_improved_values": 51
+      },
+      "129-512": {
+        "objects": 2541,
+        "improved": 25,
+        "before_bits": 4423606,
+        "after_bits": 4423204,
+        "bits_removed": 402,
+        "unique_improved_values": 22
+      },
+      "513-2048": {
+        "objects": 309,
+        "improved": 4,
+        "before_bits": 2019389,
+        "after_bits": 2019323,
+        "bits_removed": 66,
+        "unique_improved_values": 4
+      },
+      "1-8": {
+        "objects": 1155,
+        "improved": 0,
+        "before_bits": 62865,
+        "after_bits": 62865,
+        "bits_removed": 0,
+        "unique_improved_values": 0
+      },
+      "2049+": {
+        "objects": 208,
+        "improved": 4,
+        "before_bits": 25494260,
+        "after_bits": 25494195,
+        "bits_removed": 65,
+        "unique_improved_values": 4
+      }
+    },
+    "by_cohort": {
+      "historical": {
+        "objects": 32430,
+        "improved": 114,
+        "before_bits": 33043479,
+        "after_bits": 33041597,
+        "bits_removed": 1882,
+        "unique_improved_values": 80
+      },
+      "E0144": {
+        "objects": 5431,
+        "improved": 6,
+        "before_bits": 5994460,
+        "after_bits": 5994276,
+        "bits_removed": 184,
+        "unique_improved_values": 6
+      }
+    },
+    "unique_improved_values": 86
+  },
+  "refinement_rows": 120,
+  "parent_refinements": 119,
+  "unique_improved_values": 86,
+  "completed": 2,
+  "bits_removed": 2066,
+  "storage": {
+    "new_refinement_json_bytes": 557671,
+    "cumulative_inventory_json_bytes": 602202383,
+    "corpus_bytes": 1000000000,
+    "accounting": "Research JSON side information, not an archive. Includes object shards, factor-index shards, snapshots, and refinement overlays; excludes experiment reports and seed records."
+  },
+  "verification": "Hosted replay checked all persisted object hashes, parent synthesis and prior overlays. Independent publication verified the authentic corpus digest, each changed object byte hash, exact original and refined factor/cofactor products, indexed factor qualities and occurrence witnesses, bit lengths, unresolved partitions, parent child spans and radix-256 reconstruction."
+}
