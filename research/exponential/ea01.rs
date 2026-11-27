@@ -72,6 +72,7 @@ fn report(name: &str, inputs: &[u128], bytes: u32) {
     println!("{{\"group\":\"{name}\",\"count\":{},\"input_bytes\":{},\"raw_framed_bytes\":{raw_framed_bytes},\"packed_archive_bytes\":{encoded_bytes},\"oracle_net_wins\":{oracle_wins},\"adjacent_net_wins\":{adjacent_wins},\"adjacent_cost_misses\":{adjacent_misses},\"max_saved_bytes\":{best_saved}}}", inputs.len(), inputs.len() * bytes as usize);
 }
 fn main() {
+    if std::env::args().nth(1).as_deref()==Some("--ea02") { ea02_main(); return; }
     let mut s = 0xea010001_u64;
     for bytes in [2u32, 4, 8, 16] {
         let mask = u128::MAX >> (128 - bytes * 8);
@@ -172,7 +173,7 @@ fn decode(data: &[u8]) -> Option<Vec<u8>> {
     if !(1..=16).contains(&bytes) { return None; }
     let n = if r.get(1)? == 0 { r.get(bytes*8)? } else {
         let b = r.gamma()?; let e = u32::try_from(r.gamma()?).ok()?;
-        if !(2..=64).contains(&b) || !(1..=127).contains(&e) { return None; }
+        if !(2..=65536).contains(&b) || !(1..=127).contains(&e) { return None; }
         let negative = r.get(1)? != 0;
         let width = u32::try_from(r.gamma()?.checked_sub(1)?).ok()?;
         let residual = r.get(width)?;
@@ -205,5 +206,117 @@ mod packed_tests {
         assert!(packed.len()<16);
         assert_eq!(decode(&packed),Some(n.to_be_bytes().to_vec()));
         assert!(decode(&[]).is_none());
+    }
+}
+
+// EA02: exact optimization for bounded base space, grouped by gamma code length.
+// Binary search uses checked_pow; overflow means above target, never wrap.
+fn floor_root(n: u128, e: u32, limit: u128) -> (u128,u64) {
+    let mut lo = 0u128;
+    let mut hi = limit + 1; // caller caps limit at 65536
+    let mut probes = 0;
+    while hi-lo > 1 {
+        let m = lo+(hi-lo)/2;
+        probes += 1;
+        if m.checked_pow(e).is_some_and(|p| p <= n) { lo=m; } else { hi=m; }
+    }
+    (lo,probes)
+}
+#[derive(Default)]
+struct SearchCounts { scored: u64, root_probes: u64 }
+fn bucket_best(n: u128, bytes: u32, max_base: u128) -> (Candidate, SearchCounts) {
+    assert!((2..=65536).contains(&max_base));
+    assert!((1..=16).contains(&bytes) && bits(n)<=bytes*8);
+    let mut winner = None::<Candidate>;
+    let mut counts = SearchCounts::default();
+    for e in 1..=127 {
+        let (lim,probes) = floor_root(u128::MAX,e,max_base);
+        counts.root_probes += probes;
+        if lim < 2 { break; }
+        let (f,probes) = floor_root(n,e,lim);
+        counts.root_probes += probes;
+        let mut lo = 2;
+        while lo <= lim {
+            let hi = (lo*2-1).min(lim);
+            let a = f.clamp(lo,hi);
+            let b = (f+1).clamp(lo,hi);
+            for (i,base) in [a,b].into_iter().enumerate() {
+                if i==1 && a==b { continue; }
+                let p = base.checked_pow(e).expect("root cap ensures representability");
+                let c = candidate(n,base,e,p,bytes);
+                counts.scored += 1;
+                if winner.map_or(true,|w| rank(c)<rank(w)) { winner=Some(c); }
+            }
+            lo *= 2;
+        }
+    }
+    (winner.unwrap(),counts)
+}
+fn ea02_report(name: &str, inputs: &[u128], bytes: u32) {
+    let mut sizes = [0usize;3];
+    let mut wins = [0usize;3];
+    let mut scored=0u64;
+    let mut root_probes=0u64;
+    let mut oracle_ms=0u128;
+    let mut bucket_ms=0u128;
+    for &n in inputs {
+        let t=std::time::Instant::now();
+        let oracle=best(n,bytes,256,false);
+        oracle_ms+=t.elapsed().as_nanos();
+        let t=std::time::Instant::now();
+        let (mid,cnt)=bucket_best(n,bytes,256);
+        bucket_ms+=t.elapsed().as_nanos();
+        assert_eq!(oracle,mid);
+        scored+=cnt.scored; root_probes+=cnt.root_probes;
+        let (wide,_)=bucket_best(n,bytes,65536);
+        let old=best(n,bytes,64,false);
+        assert!(wide.cost<=mid.cost && mid.cost<=old.cost);
+        for (i,c) in [old,mid,wide].into_iter().enumerate() {
+            let packed=encode(n,bytes,c);
+            assert_eq!(decode(&packed),Some(n.to_be_bytes()[16-bytes as usize..].to_vec()));
+            sizes[i]+=packed.len(); wins[i]+=usize::from(packed.len()<bytes as usize);
+        }
+    }
+    println!("{{\"group\":\"{name}\",\"width_bytes\":{bytes},\"count\":{},\"original_bytes\":{},\"base64_bytes\":{},\"base256_bytes\":{},\"base65536_bytes\":{},\"base64_wins\":{},\"base256_wins\":{},\"base65536_wins\":{},\"bucket_candidates\":{scored},\"root_probes\":{root_probes},\"oracle_ns\":{oracle_ms},\"bucket_ns\":{bucket_ms}}}",inputs.len(),inputs.len()*bytes as usize,sizes[0],sizes[1],sizes[2],wins[0],wins[1],wins[2]);
+}
+fn ea02_main() {
+    let mut seed=0xea020001u64;
+    for bytes in [8u32,16] {
+        let mask=u128::MAX>>(128-8*bytes);
+        let mut random=Vec::new(); let mut near=Vec::new();
+        for _ in 0..64 {
+            random.push((((rng(&mut seed) as u128)<<64)|rng(&mut seed) as u128)&mask);
+            let b=65+(rng(&mut seed)%192) as u128;
+            let mut p=b;
+            while let Some(q)=p.checked_mul(b).filter(|q| *q<=mask) { p=q; }
+            let d=(rng(&mut seed)%256) as u128;
+            near.push(p.checked_add(d).filter(|q| *q<=mask).unwrap_or(p-d));
+        }
+        ea02_report("uniform",&random,bytes);
+        ea02_report("new_base_near_power",&near,bytes);
+    }
+}
+#[cfg(test)]
+mod bucket_tests {
+    use super::*;
+    #[test] fn exact_roots_at_overflow() {
+        assert_eq!(floor_root(0,2,65536).0,0);
+        assert_eq!(floor_root(15,2,65536).0,3);
+        assert_eq!(floor_root(16,2,65536).0,4);
+        assert_eq!(floor_root(u128::MAX,127,65536).0,2);
+        assert_eq!(floor_root(u128::MAX,16,65536).0,255);
+    }
+    #[test] fn equivalence_and_wide_roundtrip() {
+        for n in [0,1,2,3,255,256,257,65535,65536,65537,u128::MAX,65521u128.pow(7)] {
+            for cap in [2,3,4,7,8,63,64,65,255,256] {
+                assert_eq!(bucket_best(n,16,cap).0,best(n,16,cap,false));
+            }
+            let c=bucket_best(n,16,65536).0;
+            assert_eq!(decode(&encode(n,16,c)),Some(n.to_be_bytes().to_vec()));
+        }
+        let n=65521u128.pow(7);
+        let c=bucket_best(n,16,65536).0;
+        assert_eq!(c.residual,0);
+        assert!(c.b>64);
     }
 }
