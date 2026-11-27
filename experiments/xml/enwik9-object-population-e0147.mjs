@@ -19,7 +19,7 @@ function textTree(b,start,end){
   for(const m of x.matchAll(/[A-Za-z]+|[0-9]+|[^A-Za-z0-9]+/g)){
    const a=s+m.index,z=a+m[0].length;
    if(z-a<=32)tokens.push(part(a,z,'word'));
-   else{const chunks=[];for(let p=a;p<z;p+=32)chunks.push(part(p,Math.min(e,p+32),'fragment'));tokens.push(part(a,z,'word',chunks))}
+   else{const chunks=[];for(let p=a;p<z;p+=32)chunks.push(part(p,Math.min(z,p+32),'fragment'));tokens.push(part(a,z,'word',chunks))}
   }
   const phrases=[];
   for(let i=0;i<tokens.length;i+=6){const c=tokens.slice(i,i+6);phrases.push(part(c[0].start,c.at(-1).end,'phrase',c))}
