@@ -1,5 +1,15 @@
 name: E0138 verified residual refinement publication
 on:
+  workflow_dispatch:
+    inputs:
+      measurement_run_id:
+        description: Successful E0138 measurement run to publish
+        required: true
+        type: string
+      measurement_head_sha:
+        description: Source revision used by that E0138 measurement
+        required: true
+        type: string
   workflow_run:
     workflows: [E0138 propagate E0137 factors across unresolved objects]
     types: [completed]
@@ -12,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   publish:
-    if: github.event.workflow_run.conclusion == 'success'
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -52,12 +62,12 @@ jobs:
           name: E0138-closure-jsonl
           path: data
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          run-id: ${{ github.event.workflow_run.id }}
+          run-id: ${{ github.event.workflow_run.id || inputs.measurement_run_id }}
       - name: Validate and persist exact E0138 refinements
         env:
-          E0138_RUN_ID: ${{ github.event.workflow_run.id }}
-          E0138_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
-        run: nix develop --no-update-lock-file --command node experiments/xml/publish-inventory-closure-e0135.mjs
+          E0138_RUN_ID: ${{ github.event.workflow_run.id || inputs.measurement_run_id }}
+          E0138_HEAD_SHA: ${{ github.event.workflow_run.head_sha || inputs.measurement_head_sha }}
+        run: nix develop --no-update-lock-file --command node experiments/xml/publish-inventory-closure-e0138.mjs
       - name: Commit results and verify remote readback
         run: |
           set -euo pipefail
