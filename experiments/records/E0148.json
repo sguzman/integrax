@@ -1,0 +1,239 @@
+{
+  "event": "E0148_FACTOR_COMPLETENESS_AUDIT",
+  "experiment": "E0148",
+  "manifest_sha256": "0c2125d3e3615c6fbd5a081080719e0dc779f0f901fc789d88d23c3d55a9df8d",
+  "e0147_record_run_id": 46071781670,
+  "e0147_record_revision": "5a23ec76caa2dc9026576e7e02b98afb27848b50",
+  "e0147_corpus_sha256": "159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc",
+  "indexed_objects": 249538,
+  "candidate_population": 379135343,
+  "indexed_candidate_coverage_percent": 0.06581765709982886,
+  "base_status_counts": {
+    "complete": 211658,
+    "partial": 37880,
+    "trivial": 0
+  },
+  "base_complete_objects": 211658,
+  "final_status_counts": {
+    "complete": 211677,
+    "partial": 37861,
+    "trivial": 0,
+    "proven_prime_only_complete": 198196,
+    "complete_with_probable_prime": 13481,
+    "complete_with_other_factor_quality": 0
+  },
+  "refinement_rows": 613,
+  "refined_objects": 585,
+  "distinct_indexed_factors": 43328,
+  "distinct_factor_values_in_object_rows": 42451,
+  "unused_index_factor_values": 877,
+  "factor_index_entries": 47486,
+  "factor_index_duplicate_entries": 4158,
+  "factor_entries_across_objects": 675226,
+  "factor_exponent_total": 1115163,
+  "factor_quality_entry_counts": {
+    "prime64": 661745,
+    "probable-prime": 13481
+  },
+  "by_kind": {
+    "lexical": {
+      "objects": 1976,
+      "base_complete": 1625,
+      "final_complete": 1625,
+      "final_partial": 351,
+      "trivial": 0,
+      "base_residual_bits": 52617,
+      "final_residual_bits": 52563,
+      "base_partial": 351
+    },
+    "title": {
+      "objects": 48,
+      "base_complete": 5,
+      "final_complete": 5,
+      "final_partial": 43,
+      "trivial": 0,
+      "base_residual_bits": 9400,
+      "final_residual_bits": 9388,
+      "base_partial": 43
+    },
+    "id": {
+      "objects": 130,
+      "base_complete": 49,
+      "final_complete": 49,
+      "final_partial": 81,
+      "trivial": 0,
+      "base_residual_bits": 8529,
+      "final_residual_bits": 8529,
+      "base_partial": 81
+    },
+    "timestamp": {
+      "objects": 48,
+      "base_complete": 0,
+      "final_complete": 0,
+      "final_partial": 48,
+      "trivial": 0,
+      "base_residual_bits": 15751,
+      "final_residual_bits": 15607,
+      "base_partial": 48
+    },
+    "username": {
+      "objects": 34,
+      "base_complete": 4,
+      "final_complete": 4,
+      "final_partial": 30,
+      "trivial": 0,
+      "base_residual_bits": 6435,
+      "final_residual_bits": 6409,
+      "base_partial": 30
+    },
+    "contributor": {
+      "objects": 48,
+      "base_complete": 0,
+      "final_complete": 0,
+      "final_partial": 48,
+      "trivial": 0,
+      "base_residual_bits": 32761,
+      "final_residual_bits": 32679,
+      "base_partial": 48
+    },
+    "comment": {
+      "objects": 43,
+      "base_complete": 0,
+      "final_complete": 0,
+      "final_partial": 43,
+      "trivial": 0,
+      "base_residual_bits": 23945,
+      "final_residual_bits": 23904,
+      "base_partial": 43
+    },
+    "word": {
+      "objects": 195691,
+      "base_complete": 191694,
+      "final_complete": 191701,
+      "final_partial": 3990,
+      "trivial": 0,
+      "base_residual_bits": 562775,
+      "final_residual_bits": 562325,
+      "base_partial": 3997
+    },
+    "phrase": {
+      "objects": 36505,
+      "base_complete": 15584,
+      "final_complete": 15592,
+      "final_partial": 20913,
+      "trivial": 0,
+      "base_residual_bits": 2903270,
+      "final_residual_bits": 2901952,
+      "base_partial": 20921
+    },
+    "sentence": {
+      "objects": 8186,
+      "base_complete": 1407,
+      "final_complete": 1411,
+      "final_partial": 6775,
+      "trivial": 0,
+      "base_residual_bits": 4837289,
+      "final_residual_bits": 4832256,
+      "base_partial": 6779
+    },
+    "paragraph": {
+      "objects": 6091,
+      "base_complete": 1161,
+      "final_complete": 1161,
+      "final_partial": 4930,
+      "trivial": 0,
+      "base_residual_bits": 4896400,
+      "final_residual_bits": 4893287,
+      "base_partial": 4930
+    },
+    "article": {
+      "objects": 48,
+      "base_complete": 0,
+      "final_complete": 0,
+      "final_partial": 48,
+      "trivial": 0,
+      "base_residual_bits": 5080170,
+      "final_residual_bits": 5080115,
+      "base_partial": 48
+    },
+    "text": {
+      "objects": 48,
+      "base_complete": 0,
+      "final_complete": 0,
+      "final_partial": 48,
+      "trivial": 0,
+      "base_residual_bits": 5093034,
+      "final_residual_bits": 5092892,
+      "base_partial": 48
+    },
+    "revision": {
+      "objects": 48,
+      "base_complete": 0,
+      "final_complete": 0,
+      "final_partial": 48,
+      "trivial": 0,
+      "base_residual_bits": 5199606,
+      "final_residual_bits": 5199479,
+      "base_partial": 48
+    },
+    "page": {
+      "objects": 48,
+      "base_complete": 0,
+      "final_complete": 0,
+      "final_partial": 48,
+      "trivial": 0,
+      "base_residual_bits": 5228523,
+      "final_residual_bits": 5228428,
+      "base_partial": 48
+    },
+    "page-root": {
+      "objects": 48,
+      "base_complete": 0,
+      "final_complete": 0,
+      "final_partial": 48,
+      "trivial": 0,
+      "base_residual_bits": 5228523,
+      "final_residual_bits": 5228428,
+      "base_partial": 48
+    },
+    "ip": {
+      "objects": 14,
+      "base_complete": 2,
+      "final_complete": 2,
+      "final_partial": 12,
+      "trivial": 0,
+      "base_residual_bits": 1908,
+      "final_residual_bits": 1908,
+      "base_partial": 12
+    },
+    "fragment": {
+      "objects": 484,
+      "base_complete": 127,
+      "final_complete": 127,
+      "final_partial": 357,
+      "trivial": 0,
+      "base_residual_bits": 79467,
+      "final_residual_bits": 79467,
+      "base_partial": 357
+    }
+  },
+  "base_residual_bits_sum_overlapping": 39260403,
+  "final_residual_bits_sum_overlapping": 39249616,
+  "complete_indexed_object_percent": 84.82756133334402,
+  "proven_prime_only_indexed_object_percent": 79.42517772844216,
+  "complete_candidate_population_lower_bound_percent": 0.05583151344452738,
+  "proven_prime_candidate_population_lower_bound_percent": 0.0522757911282357,
+  "cumulative_inventory_json_bytes": 601644712,
+  "archive_bytes": null,
+  "interpretation": "Complete means the exact cofactor is 1 after applying every ordered verified refinement overlay. Proven-prime-only requires every stored factor quality to be prime64; probable-prime and other qualities are reported separately. Index shard entries may repeat a factor; repeated entries are counted as storage overhead and reconciled by exact factor value and quality. Distinct index factors absent from all current object factor rows are reported as unused inventory entries. Candidate-population percentages are lower bounds because unindexed candidates have no factorization record. Residual-bit sums overlap in the object hierarchy and are not archive savings; inventory JSON is side information, not a decoder or archive.",
+  "nix_version": "nix (Nix) 2.35.6",
+  "node_version": "v24.22.3",
+  "revision": "b40b221dd67f61c47873c8c2972b16d3cf277f9f",
+  "run_id": 46073894268,
+  "wall_seconds": 3.390488592,
+  "peak_rss_kib": 316084,
+  "status": "verified",
+  "manifest_revision": "b40b221dd67f61c47873c8c2972b16d3cf277f9f",
+  "command": "nix develop --no-update-lock-file --command node experiments/xml/factor-completeness-e0148.mjs",
+  "verification": "Read all manifest-declared object shards, applied every refinement in manifest order with exact old-cofactor and factor-product checks, reconciled every distinct factor against the cumulative factor index and its quality label, matched row and overlay counts to the manifest, and reproduced E0144 cumulative inventory-byte totals. E0147 supplies the independently verified full candidate-population denominator."
+}
