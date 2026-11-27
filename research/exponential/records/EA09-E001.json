@@ -1,9 +1,9 @@
 {
   "id": "EA09-E001",
-  "status": "executed JS code-mode",
-  "source_commit": "c86062788c43879b13bc1771e199147861be08be",
+  "status": "executed codec selftest in JS code-mode; standard codecs executed in assistant Linux container on independently regenerated identical fixture recipe",
+  "source_commit": "3527d43ef92f1f99e43cb23efa7b01c012fbd55a",
   "seed": "0xea090001",
-  "scope": "IEX1 magic included in sizes; exact decoded bytes; max encoder 8192 bytes, decoder 1 MiB; intermediate bit/node/depth caps; malformed test vectors not exhaustive security audit; synthetic inputs; standard compressor comparisons pending",
+  "scope": "IEX1 magic included, max encode 8192 bytes, decode 1 MiB, intermediate/node/depth caps, not security audited; synthetic only; no runtime comparison or executable-inclusive claims",
   "roundtrips": 20,
   "rejected": 36,
   "rows": [
@@ -11,49 +11,100 @@
       "name": "uniform",
       "input_bytes": 1024,
       "archive_bytes": 1031,
-      "archive_hex": null
+      "archive_hex": null,
+      "input_sha256_local": "eb4fbe83b097d57572ebaa32b5198ea3ba3ad07e1dc0d4abce83a197b1b2117c",
+      "gzip_bytes": 1047,
+      "xz_bytes": 1092,
+      "zstd_bytes": 1037
     },
     {
       "name": "repetitive",
       "input_bytes": 1024,
       "archive_bytes": 1031,
-      "archive_hex": null
+      "archive_hex": null,
+      "input_sha256_local": "8b159d41775c6927c7b99061ab02b68cbeb700143b6920779e7c7535db7d2f03",
+      "gzip_bytes": 55,
+      "xz_bytes": 112,
+      "zstd_bytes": 47
     },
     {
       "name": "near_power",
       "input_bytes": 1024,
       "archive_bytes": 13,
-      "archive_hex": "4945583100200104a005dc08f6"
+      "archive_hex": "4945583100200104a005dc08f6",
+      "input_sha256_local": "ae76c16199572cf922ca403e9a7e27dd98bc7f7f5436b992cd25e2bd1ea7d8dd",
+      "gzip_bytes": 1047,
+      "xz_bytes": 1076,
+      "zstd_bytes": 998
     },
     {
       "name": "positive_sum",
       "input_bytes": 1024,
       "archive_bytes": 17,
-      "archive_hex": "49455831002002409400bb8130064023d8"
+      "archive_hex": "49455831002002409400bb8130064023d8",
+      "input_sha256_local": "e1a7551d861f96b27c1f134cffea4500d50ea083079b2b4ff217bb9c209ca98f",
+      "gzip_bytes": 1047,
+      "xz_bytes": 1076,
+      "zstd_bytes": 998
     },
     {
       "name": "signed_sum",
       "input_bytes": 1024,
       "archive_bytes": 17,
-      "archive_hex": "49455831002003404a005dc84c0190047b"
+      "archive_hex": "49455831002003404a005dc84c0190047b",
+      "input_sha256_local": "10e664572ae62bf2f117c53c439152d607e525a7d1f4b8e8f32c4e90f70cd801",
+      "gzip_bytes": 1047,
+      "xz_bytes": 1076,
+      "zstd_bytes": 998
     },
     {
       "name": "product",
       "input_bytes": 1024,
-      "archive_bytes": 13,
-      "archive_hex": "494558310020011e006a408f60"
+      "archive_bytes": 16,
+      "archive_hex": "494558310020044c00d485003202847b",
+      "input_sha256_local": "d51e52f61f98b23d1aed3b885e0e819f6b860b96d54c6f3777b5b683a1ec5af5",
+      "gzip_bytes": 870,
+      "xz_bytes": 900,
+      "zstd_bytes": 824
     },
     {
       "name": "nested",
       "input_bytes": 1024,
       "archive_bytes": 22,
-      "archive_hex": "4945583100200565220f2807d0834c07d011ed811ec0"
+      "archive_hex": "4945583100200565220f2807d0834c07d011ed811ec0",
+      "input_sha256_local": "5a3fdddb572e38a6037118c8332a56589d0a256c2483d65212e9f3097b2831f4",
+      "gzip_bytes": 1047,
+      "xz_bytes": 1076,
+      "zstd_bytes": 998
     },
     {
       "name": "zeros",
       "input_bytes": 1024,
       "archive_bytes": 9,
-      "archive_hex": "494558310020015b80"
+      "archive_hex": "494558310020015b80",
+      "input_sha256_local": "5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+      "gzip_bytes": 29,
+      "xz_bytes": 84,
+      "zstd_bytes": 21
     }
-  ]
+  ],
+  "standard_environment": {
+    "node": "22.16.0",
+    "gzip": "1.13",
+    "xz": "5.8.1",
+    "zstd": "1.5.7",
+    "commands": [
+      "gzip -n -9 -c",
+      "xz -9 -c",
+      "zstd -19 -q -c"
+    ],
+    "input": "stdin; independent Node fixture generation; sha256 recorded from local fixture files",
+    "roundtrips": 24,
+    "verification": "cmp original to decompressed output for all 8 fixtures and 3 tools"
+  },
+  "hosted": {
+    "workflow_commit": "2ec395450fbfe3b648fa1ac7c9a63c0ef32e7c2a",
+    "status": "not verified",
+    "command": "nix develop --command node research/exponential/ea09-cli.mjs compare"
+  }
 }
