@@ -14,6 +14,7 @@ assert.equal(result.candidate_population,population.total_integrax_candidate_obj
 assert.equal(result.distinct_indexed_factors,manifest.index.distinct_factors);
 assert.equal(result.distinct_indexed_factors,prior.summary.distinct_factors);
 assert.equal(result.factor_index_entries-result.factor_index_duplicate_entries,result.distinct_indexed_factors);
+assert.equal(result.distinct_factor_values_in_object_rows+result.unused_index_factor_values,result.distinct_indexed_factors);
 assert.equal(result.base_status_counts.complete+result.base_status_counts.partial+result.base_status_counts.trivial,result.indexed_objects);
 assert.equal(result.final_status_counts.complete+result.final_status_counts.partial+result.final_status_counts.trivial,result.indexed_objects);
 assert.equal(result.refinement_rows,(manifest.refinements??[]).reduce((n,x)=>n+x.rows,0));

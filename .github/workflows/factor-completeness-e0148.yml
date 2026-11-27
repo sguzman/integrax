@@ -50,6 +50,7 @@ jobs:
             .status == "verified" and
             .indexed_objects == 249538 and
             .distinct_indexed_factors == 43328 and
+            (.distinct_factor_values_in_object_rows + .unused_index_factor_values) == .distinct_indexed_factors and
             .candidate_population == 379135343 and
             (.final_status_counts.complete + .final_status_counts.partial + .final_status_counts.trivial) == .indexed_objects and
             .cumulative_inventory_json_bytes == 601644712
