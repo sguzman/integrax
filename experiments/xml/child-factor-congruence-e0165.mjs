@@ -12,6 +12,7 @@ const manifestBytes=readFileSync('inventory/manifest.json');
 const manifest=JSON.parse(manifestBytes);
 const expectedHash='159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc';
 assert.equal(manifest.corpus_sha256,expectedHash);
+assert.equal(manifest.batches.at(-1).id,'E0160','E0165 requires the verified E0160 inventory produced by the E0163 chain');
 const corpus=readFileSync(corpusPath);
 assert.equal(corpus.length,1_000_000_000);
 assert.equal(sha(corpus),expectedHash);
