@@ -1,0 +1,66 @@
+name: E0159 exact factorized XML root archive cost and round trip
+on:
+  workflow_run:
+    workflows: [E0158 wider factor-index algorithm comparison after E0157]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: c20-factor-inventory
+  cancel-in-progress: false
+jobs:
+  archive:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Record pinned runtime versions
+        run: |
+          mkdir -p data
+          nix --version | tee data/E0159.nix-version
+          echo "NIX_VERSION=$(nix --version)" >> "$GITHUB_ENV"
+      - uses: actions/cache@v4
+        with:
+          path: data/enwik9
+          key: enwik9-sha256-159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+      - name: Acquire and verify authentic enwik9 corpus
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          if [ ! -f data/enwik9 ]; then
+            for host in mattmahoney.net www.mattmahoney.net; do
+              zip="data/enwik9.${host}.zip.tmp"
+              raw="data/enwik9.${host}.raw.tmp"
+              if curl --proto '=https' --proto-redir '=https' --location --fail --http1.1 --connect-timeout 30 --max-time 180 --output "$zip" "https://$host/dc/enwik9.zip" &&
+                 [ "$(wc -c < "$zip")" -eq 322592222 ] && unzip -tq "$zip" &&
+                 unzip -p "$zip" enwik9 > "$raw" && [ "$(wc -c < "$raw")" -eq 1000000000 ] &&
+                 printf '%s  %s\n' "$expected" "$raw" | sha256sum -c -; then mv "$raw" data/enwik9; rm -f "$zip"; break; fi
+            done
+          fi
+          test -f data/enwik9
+          printf '%s  %s\n' "$expected" data/enwik9 | sha256sum -c -
+      - name: Measure exhaustive subset costs and standalone exact decode
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          nix develop --no-update-lock-file --command node --max-old-space-size=4096 experiments/xml/factorized-root-archive-e0159.mjs data/enwik9 /tmp/E0159.ix /tmp/E0159.restored
+          cmp data/enwik9 /tmp/E0159.restored
+          test "$(sha256sum /tmp/E0159.restored | cut -d' ' -f1)" = 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          test "$(wc -c < /tmp/E0159.ix)" = "$(jq -r .archive_bytes experiments/records/E0159.json)"
+      - name: Commit result and verify GitHub readback
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/xml/decode-e0159.mjs experiments/xml/factorized-root-archive-e0159.mjs experiments/records/E0159.json .github/workflows/factorized-root-archive-e0159.yml
+          git commit -m 'Publish verified E0159 factorized root archive result'
+          git push origin HEAD:main
+          git fetch origin main
+          git show origin/main:experiments/records/E0159.json | jq -e '.status == "verified" and .round_trip | contains("byte-for-byte")'

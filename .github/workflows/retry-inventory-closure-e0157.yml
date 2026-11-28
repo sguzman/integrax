@@ -1,0 +1,69 @@
+name: E0157 extended timeout retry after failed residual closure
+on:
+  workflow_run:
+    workflows: [E0157 replay larger-page factors across accumulated residuals]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: c20-factor-inventory
+  cancel-in-progress: false
+jobs:
+  measure:
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Restore verified corpus cache
+        uses: actions/cache@v4
+        with:
+          path: data/enwik9
+          key: enwik9-sha256-159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+      - name: Acquire and verify authentic corpus
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          if [ ! -f data/enwik9 ]; then
+            for host in mattmahoney.net www.mattmahoney.net; do
+              zip="data/enwik9.${host}.zip.tmp"
+              raw="data/enwik9.${host}.raw.tmp"
+              if curl --proto '=https' --proto-redir '=https' --location --fail --http1.1 --connect-timeout 30 --max-time 180 --output "$zip" "https://$host/dc/enwik9.zip" &&
+                 [ "$(wc -c < "$zip")" -eq 322592222 ] &&
+                 unzip -tq "$zip" &&
+                 unzip -p "$zip" enwik9 > "$raw" &&
+                 [ "$(wc -c < "$raw")" -eq 1000000000 ] &&
+                 printf '%s  %s\n' "$expected" "$raw" | sha256sum -c -; then
+                mv "$raw" data/enwik9
+                rm -f "$zip"
+                break
+              fi
+            done
+          fi
+          test -f data/enwik9
+          printf '%s  %s\n' "$expected" data/enwik9 | sha256sum -c -
+          sh datasets/acquire.sh enwik9
+      - name: Record Nix and Node versions
+        run: |
+          nix --version | tee data/E0157.nix-version
+          nix develop --no-update-lock-file --command node --version | tee data/E0157.node-version
+      - name: Retry replay with extended hosted budget
+        run: |
+          set -euo pipefail
+          /usr/bin/time -v -o data/E0157.time timeout --kill-after=10s 9000s nix develop --no-update-lock-file --command node --max-old-space-size=5120 experiments/xml/inventory-scale-closure.mjs data/enwik9 > data/E0157.jsonl
+          echo E0157_COMPLETE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: E0157-closure-jsonl
+          path: |
+            data/E0157.jsonl
+            data/E0157.time
+            data/E0157.nix-version
+            data/E0157.node-version
+          retention-days: 90

@@ -1,0 +1,40 @@
+name: E0158 wider factor-index algorithm comparison after E0157
+on:
+  workflow_run:
+    workflows: [E0157 verified residual refinement publication]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: c20-factor-inventory
+  cancel-in-progress: false
+jobs:
+  compare:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Record Nix version
+        run: echo "NIX_VERSION=$(nix --version)" >> "$GITHUB_ENV"
+      - name: Compare product-tree and flat scans on up to 2,000 stratified residuals
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          nix develop --no-update-lock-file --command node --max-old-space-size=3072 experiments/xml/index-algorithm-e0158.mjs > data/E0158.jsonl
+          node --input-type=module -e 'import{readFileSync,writeFileSync,mkdirSync}from"node:fs";const r=JSON.parse(readFileSync("data/E0158.jsonl","utf8"));if(r.event!=="E0158_INDEX_ALGORITHM_COMPARISON"||r.equivalent_factorizations!==r.sample_size)throw Error("comparison incomplete");mkdirSync("experiments/records",{recursive:true});writeFileSync("experiments/records/E0158.json",JSON.stringify({...r,experiment:"E0158",command:"nix develop --no-update-lock-file --command node --max-old-space-size=3072 experiments/xml/index-algorithm-e0158.mjs",verification:"All deterministic stratified sample residuals produced identical exact factors and remaining cofactors using balanced product-tree GCD and direct flat factor scans."},null,2)+"\n")'
+      - name: Commit results and verify remote readback
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/records/E0158.json
+          git commit -m 'Publish verified E0158 factor index comparison'
+          git push origin HEAD:main
+          git fetch origin main
+          git show origin/main:experiments/records/E0158.json | jq -e '.experiment == "E0158" and .equivalent_factorizations == .sample_size'
