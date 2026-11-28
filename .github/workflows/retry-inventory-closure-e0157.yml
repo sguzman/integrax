@@ -59,6 +59,7 @@ jobs:
           /usr/bin/time -v -o data/E0157.time timeout --kill-after=10s 9000s nix develop --no-update-lock-file --command node --max-old-space-size=5120 experiments/xml/inventory-scale-closure.mjs data/enwik9 > data/E0157.jsonl
           echo E0157_COMPLETE
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: E0157-closure-jsonl
           path: |

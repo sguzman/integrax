@@ -62,6 +62,7 @@ jobs:
           /usr/bin/time -v -o data/E0156.time timeout --kill-after=10s 14400s nix develop --no-update-lock-file --command node --max-old-space-size=4096 experiments/xml/factor-inventory-e0152.mjs data/enwik9 > data/E0156.jsonl
           echo E0156_COMPLETE
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: E0156-measurement-jsonl
           path: |
