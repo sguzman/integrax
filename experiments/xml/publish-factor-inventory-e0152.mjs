@@ -20,6 +20,7 @@ const rows=events.filter(x=>x.event==='FACTOR_OBJECT'),summary=events.findLast(x
 const pageEvents=events.filter(x=>x.event==='FACTOR_PAGE');
 assert(summary&&rows.length===summary.nodes);
 assert.equal(pageEvents.length,3);
+assert.deepEqual(summary.target_page_width_bytes,[65536,81920]);
 const pages=new Map();
 for(const row of rows){const offset=Number(row.id.split(':')[1]);const list=pages.get(offset)??[];list.push(row);pages.set(offset,list)}
 assert.equal(pages.size,3);
@@ -81,6 +82,12 @@ for(const [offset,pageRows] of [...pages].sort((a,b)=>a[0]-b[0])){
   shardFiles.push(path);batchShards.push({path,offset,rows:part.length,width,sha256:hash(bytes),root_id:rootId});
  }
  pageRecords.push({offset,width,sha256:hash(bytes),root_id:rootId,nodes:pageRows.length,parents,full_inventory_hits:fullHits,child_hits:childHits,global_hits:globalHits,full_bits_removed:bitsRemoved,shards:shardFiles.length});
+}
+const oldSpans=manifest.batches.flatMap(b=>b.shards);
+for(let i=0;i<pageRecords.length;i++){
+ const p=pageRecords[i];assert(p.width>=65536&&p.width<=81920,`out-of-band page width ${p.width}`);
+ assert(!oldSpans.some(s=>p.offset<s.offset+s.width&&s.offset<p.offset+p.width),`page overlaps prior inventory at ${p.offset}`);
+ for(let j=0;j<i;j++){const q=pageRecords[j];assert(p.offset>=q.offset+q.width||q.offset>=p.offset+p.width,`selected pages overlap at ${p.offset}/${q.offset}`)}
 }
 assert.equal(totals.nodes,summary.nodes);
 assert.equal(totals.flat_snapshot_bits,totals.tree_snapshot_bits);
