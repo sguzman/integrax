@@ -4,9 +4,11 @@ import {createHash} from 'node:crypto';
 import {deflateRawSync,inflateRawSync,gzipSync} from 'node:zlib';
 const MAX=8*1024*1024,DEPTH=32;
 const EXPERIMENT=process.env.IX_C20_EXPERIMENT??'E0152';
+const FROZEN_MODE=process.env.IX_C20_FROZEN_MODE??'nested';
 const PAGE_MIN=Number(process.env.IX_C20_PAGE_MIN??65536),PAGE_MAX=Number(process.env.IX_C20_PAGE_MAX??81920);
 const PAGE_STARTS=JSON.parse(process.env.IX_C20_PAGE_STARTS??'[200000000,600000000,900000000]');
 assert(['E0152','E0156','E0160'].includes(EXPERIMENT));assert(Number.isSafeInteger(PAGE_MIN)&&Number.isSafeInteger(PAGE_MAX)&&PAGE_MIN>0&&PAGE_MAX>=PAGE_MIN);assert(Array.isArray(PAGE_STARTS)&&PAGE_STARTS.length===3);
+assert(['nested','fused'].includes(FROZEN_MODE));
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const B=(...parts)=>Buffer.concat(parts);
 function u(n){assert(Number.isSafeInteger(n)&&n>=0&&n<=MAX);const a=[];do{let v=n%128;n=Math.floor(n/128);a.push(v+(n?128:0))}while(n);return Buffer.from(a)}
@@ -237,6 +239,7 @@ function analyze(n,childRows,id){
 }
 // Frozen nested inventories; no discoveries from the held-out pages enter these screens.
 const fixedTrees=[];
+const frozenFirstStage=new Map(),fusedControlMetrics={calls:0,fallback_calls:0,query_ms:0,projection_ms:0,gcd_calls:0};
 function frozenScreen(n){
  if(n<=1n)return fixedTrees.map(t=>({stage:t.stage,bits:BIT(n),hits:0,ms:0}));
  const out=[];let last=BIT(n);
@@ -248,6 +251,21 @@ function frozenScreen(n){
   const b=BIT(q);assert(b<=last);last=b;
   assert.equal(used.reduce((x,f)=>x*f.p**BigInt(f.e),q),n);
   out.push({stage:t.stage,bits:b,hits:used.filter(f=>f.source==='frozen').length,ms:performance.now()-start});
+ }
+ return out;
+}
+function frozenScreenFused(n){
+ if(n<=1n){fusedControlMetrics.fallback_calls++;return frozenScreen(n)}
+ const baseFound=[],base=extract(n,basePrimes,'base',baseFound,[]),matched=[],stats={gcd_calls:0};
+ const queryStart=performance.now();hits(base,fixedTrees.at(-1).tree,matched,stats);const queryMs=performance.now()-queryStart;
+ fusedControlMetrics.calls++;fusedControlMetrics.query_ms+=queryMs;fusedControlMetrics.gcd_calls+=stats.gcd_calls;
+ const out=[];let last=BIT(n);
+ for(const t of fixedTrees){
+  const start=performance.now(),eligible=matched.filter(p=>frozenFirstStage.get(p)<=t.stage),used=baseFound.slice();
+  const q=extract(base,eligible,'frozen',used,[]),b=BIT(q);assert(b<=last);last=b;
+  assert.equal(used.reduce((x,f)=>x*f.p**BigInt(f.e),q),n);
+  const ms=performance.now()-start;fusedControlMetrics.projection_ms+=ms;
+  out.push({stage:t.stage,bits:b,hits:used.filter(f=>f.source==='frozen').length,ms,query_ms:queryMs});
  }
  return out;
 }
@@ -281,7 +299,7 @@ function inventoryPage(b,offset){
   stats.child_bits_removed+=f.base_bits-f.child_bits;stats.global_bits_removed+=f.child_bits-f.reuse_bits;stats.inventory_flat_tests+=f.inventory_flat_tests??0;
   const level=levels[kind]??={nodes:0,complete:0,partial:0,trivial:0,child_hits:0,global_hits:0,bits:0,base_bits:0,reuse_bits:0,remaining_bits:0,cold_bits:0,full_bits:0,full_hits:0};
   level.nodes++;level[status]++;level.child_hits+=Number(childHit);level.global_hits+=Number(globalHit);level.bits+=BIT(value);level.base_bits+=f.base_bits;level.reuse_bits+=f.reuse_bits;level.remaining_bits+=BIT(f.q);level.cold_bits+=f.cold_bits;level.full_bits+=f.full_bits;level.full_hits+=Number(fullHit);
-  const fixed=frozenScreen(value);
+  const fixed=FROZEN_MODE==='fused'?frozenScreenFused(value):frozenScreen(value);
   const out={event:'FACTOR_OBJECT',fixed_inventory:fixed,id:row.id,parent:row.parent,children:row.children.map(c=>c.id),depth:row.depth,kind,offset:offset+n.start,width:w,byte_sha256:sha(bytes),status,n_bits:BIT(value),value_seen:f.value_seen,factors:f.factors.map(x=>({p:hex(x.p),e:x.e,quality:x.quality,sources:x.sources,prior_witness:x.prior_witness??null,prior_distinct_witness:x.prior_distinct_witness??null})),cofactor:hex(f.q),cofactor_bits:BIT(f.q),base_bits:f.base_bits,child_bits:f.child_bits,reuse_bits:f.reuse_bits,full_bits:f.full_bits,snapshot_bits:f.snapshot_bits,flat_snapshot_bits:f.flat_snapshot_bits,tree_snapshot_bits:f.tree_snapshot_bits,flat_snapshot_ms:f.flat_snapshot_ms,tree_snapshot_ms:f.tree_snapshot_ms,tree_gcd_calls:f.tree_gcd_calls,snapshot:f.snapshot,delta_count:f.delta_count,cold_bits:f.cold_bits,child_candidates:f.child_candidates,global_candidates:f.global_candidates,inventory_flat_tests:f.inventory_flat_tests??0,tested:f.attempted,rho_steps:f.rho_steps,milliseconds:performance.now()-start};
   // Snapshot + postorder delta fully determine extra candidates; capped lists stay explicit.
   console.log(JSON.stringify(out));
@@ -321,7 +339,7 @@ console.log(JSON.stringify({event:'FACTOR_RESUME',imported,distinct_factors:inv.
 const frozen=new Set();
 for(const [stage,count] of [['E0104',3286],['E0105',4145],['E0106',4146],['E0107',5144],['E0108',6504],['E0110',6507],['E0112',8376],['E0114',8378],['E0116',10788],['E0119',13631],['E0121',13633],['E0123',16081],['E0126',18778],['E0128',22124],['E0131',24808],['E0134',28721],['E0137',33701],['E0140',38074],['E0144',43328],['E0149',47547]]){
  for(const s of manifest.index.shards.filter(s=>s.path.startsWith('inventory/index/'+stage+'/'))){
-  const data=JSON.parse(readFileSync(s.path,'utf8'));for(const f of data.factors)frozen.add(fromHex(f.p));
+  const data=JSON.parse(readFileSync(s.path,'utf8'));for(const f of data.factors){const p=fromHex(f.p);if(!frozen.has(p))frozenFirstStage.set(p,stage);frozen.add(p)}
  }
  assert.equal(frozen.size,count);
  const xs=[...frozen].filter(p=>!baseSet.has(p)).sort((a,b)=>a<b?-1:a>b?1:0);
@@ -339,4 +357,4 @@ for(const start of PAGE_STARTS){
  }
   assert(chosen,'bounded page selection');console.error(JSON.stringify({event:`${EXPERIMENT}_PAGE_START`,page_offset:chosen.at,page_width:chosen.end-chosen.at}));rebuildSnapshot();const result=inventoryPage(full.subarray(chosen.at,chosen.end),chosen.at);pages.push(result);console.error(JSON.stringify({event:`${EXPERIMENT}_PAGE_DONE`,page_offset:result.offset,page_width:result.width,nodes:result.stats.nodes,full_inventory_hits:result.stats.full_inventory_hits}));console.log(JSON.stringify({event:'FACTOR_PAGE',...result}));
 }
-console.log(JSON.stringify({event:`${EXPERIMENT}_FACTOR_INVENTORY_SUMMARY`,pages:pages.map(p=>({offset:p.offset,width:p.width,root_id:p.root_id})),distinct_factors:inv.size,nodes:pages.reduce((n,p)=>n+p.stats.nodes,0),candidate_algorithm:'flat-scan',target_page_width_bytes:[PAGE_MIN,PAGE_MAX],seeded_sources:['E0095','E0096','E0099','E0103','E0104','E0105','E0106','E0107','E0108','E0109','E0110','E0111','E0112','E0113','E0114','E0115','E0116','E0117','E0119','E0120','E0121','E0122','E0123','E0126','E0128','E0129','E0131','E0132','E0133','E0134','E0135','E0137','E0140','E0144','E0145','E0149',...(EXPERIMENT==='E0156'?['E0152']:[]),...(EXPERIMENT==='E0160'?['E0152','E0156']:[])]}));
+console.log(JSON.stringify({event:`${EXPERIMENT}_FACTOR_INVENTORY_SUMMARY`,pages:pages.map(p=>({offset:p.offset,width:p.width,root_id:p.root_id})),distinct_factors:inv.size,nodes:pages.reduce((n,p)=>n+p.stats.nodes,0),candidate_algorithm:'flat-scan',frozen_control_mode:FROZEN_MODE,fused_control_metrics:FROZEN_MODE==='fused'?fusedControlMetrics:null,target_page_width_bytes:[PAGE_MIN,PAGE_MAX],seeded_sources:['E0095','E0096','E0099','E0103','E0104','E0105','E0106','E0107','E0108','E0109','E0110','E0111','E0112','E0113','E0114','E0115','E0116','E0117','E0119','E0120','E0121','E0122','E0123','E0126','E0128','E0129','E0131','E0132','E0133','E0134','E0135','E0137','E0140','E0144','E0145','E0149',...(EXPERIMENT==='E0156'?['E0152']:[]),...(EXPERIMENT==='E0160'?['E0152','E0156']:[])]}));

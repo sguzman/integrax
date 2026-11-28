@@ -55,6 +55,7 @@ jobs:
       - name: Retry 192–224 KiB page inventory measurement with extended command budget
         env:
           IX_C20_EXPERIMENT: E0160
+          IX_C20_FROZEN_MODE: fused
           IX_C20_PAGE_MIN: 196608
           IX_C20_PAGE_MAX: 229376
         run: |
