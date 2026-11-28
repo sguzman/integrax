@@ -1,0 +1,62 @@
+name: E0165 child-factor congruence audit
+on:
+  workflow_dispatch:
+permissions:
+  actions: write
+  contents: write
+concurrency:
+  group: c20-factor-inventory
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+      - name: Record pinned runtime versions
+        run: |
+          mkdir -p data
+          nix --version | tee data/E0165.nix-version
+          echo "NIX_VERSION=$(nix --version)" >> "$GITHUB_ENV"
+      - name: Restore verified corpus cache
+        uses: actions/cache@v4
+        with:
+          path: data/enwik9
+          key: enwik9-sha256-159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+      - name: Acquire and verify authentic enwik9 corpus
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          expected=159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+          if [ ! -f data/enwik9 ]; then
+            for host in mattmahoney.net www.mattmahoney.net; do
+              zip="data/enwik9.${host}.zip.tmp"
+              raw="data/enwik9.${host}.raw.tmp"
+              if curl --proto '=https' --proto-redir '=https' --location --fail --http1.1 --connect-timeout 30 --max-time 180 --output "$zip" "https://$host/dc/enwik9.zip" &&
+                 [ "$(wc -c < "$zip")" -eq 322592222 ] && unzip -tq "$zip" &&
+                 unzip -p "$zip" enwik9 > "$raw" && [ "$(wc -c < "$raw")" -eq 1000000000 ] &&
+                 printf '%s  %s\n' "$expected" "$raw" | sha256sum -c -; then mv "$raw" data/enwik9; rm -f "$zip"; break; fi
+            done
+          fi
+          test -f data/enwik9
+          printf '%s  %s\n' "$expected" data/enwik9 | sha256sum -c -
+      - name: Verify sampled child-factor congruences against corpus bytes
+        run: |
+          set -euo pipefail
+          nix develop --no-update-lock-file --command node --max-old-space-size=4096 experiments/xml/child-factor-congruence-e0165.mjs data/enwik9 > data/E0165.json
+          node --input-type=module -e 'import{readFileSync,writeFileSync,mkdirSync}from"node:fs";const r=JSON.parse(readFileSync("data/E0165.json","utf8"));if(r.event!=="E0165_CHILD_FACTOR_CONGRUENCE"||r.status!=="verified"||r.exact_congruence_checks!==r.candidate_factor_comparisons||r.predicted_hits!==r.observed_hits||r.sampled_edges<=0)throw Error("E0165 verification incomplete");r.run_id=Number(process.env.GITHUB_RUN_ID);r.revision=process.env.GITHUB_SHA;mkdirSync("experiments/records",{recursive:true});writeFileSync("experiments/records/E0165.json",JSON.stringify(r,null,2)+"\n")'
+      - name: Commit result and verify GitHub readback
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/xml/child-factor-congruence-e0165.mjs .github/workflows/child-factor-congruence-e0165.yml experiments/records/E0165.json
+          git commit -m 'Publish verified E0165 child-factor congruence audit'
+          git push origin HEAD:main
+          git fetch origin main
+          git show origin/main:experiments/records/E0165.json | jq -e '.status == "verified" and .exact_congruence_checks == .candidate_factor_comparisons and .predicted_hits == .observed_hits'
