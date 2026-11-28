@@ -1,9 +1,5 @@
 name: E0157 replay larger-page factors across accumulated residuals
 on:
-  workflow_run:
-    workflows: [E0156 verified inventory publication]
-    types: [completed]
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read

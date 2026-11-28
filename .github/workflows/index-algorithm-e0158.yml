@@ -1,11 +1,8 @@
 name: E0158 wider factor-index algorithm comparison after E0157
 on:
-  workflow_run:
-    workflows: [E0157 verified residual refinement publication]
-    types: [completed]
-    branches: [main]
   workflow_dispatch:
 permissions:
+  actions: write
   contents: write
 concurrency:
   group: c20-factor-inventory
@@ -29,6 +26,8 @@ jobs:
           nix develop --no-update-lock-file --command node --max-old-space-size=3072 experiments/xml/index-algorithm-e0158.mjs > data/E0158.jsonl
           node --input-type=module -e 'import{readFileSync,writeFileSync,mkdirSync}from"node:fs";const r=JSON.parse(readFileSync("data/E0158.jsonl","utf8"));if(r.event!=="E0158_INDEX_ALGORITHM_COMPARISON"||r.equivalent_factorizations!==r.sample_size)throw Error("comparison incomplete");mkdirSync("experiments/records",{recursive:true});writeFileSync("experiments/records/E0158.json",JSON.stringify({...r,experiment:"E0158",command:"nix develop --no-update-lock-file --command node --max-old-space-size=3072 experiments/xml/index-algorithm-e0158.mjs",verification:"All deterministic stratified sample residuals produced identical exact factors and remaining cofactors using balanced product-tree GCD and direct flat factor scans."},null,2)+"\n")'
       - name: Commit results and verify remote readback
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
@@ -38,3 +37,4 @@ jobs:
           git push origin HEAD:main
           git fetch origin main
           git show origin/main:experiments/records/E0158.json | jq -e '.experiment == "E0158" and .equivalent_factorizations == .sample_size'
+          gh workflow run factorized-root-archive-e0159.yml --ref main

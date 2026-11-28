@@ -1,9 +1,5 @@
 name: E0159 exact factorized XML root archive cost and round trip
 on:
-  workflow_run:
-    workflows: [E0158 wider factor-index algorithm comparison after E0157]
-    types: [completed]
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: write

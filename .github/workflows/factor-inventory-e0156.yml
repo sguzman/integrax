@@ -1,9 +1,5 @@
 name: E0156 128–160 KiB held-out page inventory expansion
 on:
-  workflow_run:
-    workflows: [E0155 exact factorized XML root archive cost and round trip]
-    types: [completed]
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read

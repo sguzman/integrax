@@ -75,6 +75,8 @@ jobs:
           E0156_TIMEOUT_SECONDS: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.name == 'E0156 extended timeout retry after failed measurement' && '14400' || '10800' }}
         run: nix develop --no-update-lock-file --command node experiments/xml/publish-factor-inventory-e0156.mjs
       - name: Commit results and verify remote readback
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
@@ -89,3 +91,4 @@ jobs:
           git fetch origin main
           git show origin/main:experiments/records/E0156.json | jq -e '.status == "verified" and .summary.nodes > 0 and (.pages | length) == 3 and .target_page_width_bytes == [131072,163840] and (.candidate_algorithm | contains("flat-scan"))'
           git show origin/main:inventory/manifest.json | jq -e '.indexed_nodes > 290180 and .index.distinct_factors >= 47547 and .batches[-1].id == "E0156"'
+          gh workflow run inventory-closure-e0157.yml --ref main

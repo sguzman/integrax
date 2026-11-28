@@ -71,6 +71,8 @@ jobs:
           E0152_HEAD_SHA: ${{ github.event.workflow_run.head_sha || inputs.measurement_head_sha }}
         run: nix develop --no-update-lock-file --command node experiments/xml/publish-factor-inventory-e0152.mjs
       - name: Commit results and verify remote readback
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
@@ -85,3 +87,4 @@ jobs:
           git fetch origin main
           git show origin/main:experiments/records/E0152.json | jq -e '.status == "verified" and .summary.nodes > 0 and (.pages | length) == 3 and .target_page_width_bytes == [65536,81920] and (.candidate_algorithm | contains("flat-scan"))'
           git show origin/main:inventory/manifest.json | jq -e '.indexed_nodes > 290180 and .index.distinct_factors >= 47547 and .batches[-1].id == "E0152"'
+          gh workflow run inventory-closure-e0153.yml --ref main

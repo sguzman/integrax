@@ -15,7 +15,7 @@ on:
     types: [completed]
     branches: [main]
 permissions:
-  actions: read
+  actions: write
   contents: write
 concurrency:
   group: c20-factor-inventory
@@ -71,6 +71,8 @@ jobs:
           E0157_HEAD_SHA: ${{ github.event.workflow_run.head_sha || inputs.measurement_head_sha }}
         run: nix develop --no-update-lock-file --command node experiments/xml/publish-inventory-closure-e0157.mjs
       - name: Commit results and verify remote readback
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
@@ -81,3 +83,4 @@ jobs:
           git fetch origin main
           git show origin/main:experiments/records/E0157.json | jq -e '.experiment == "E0157" and .summary.improved == .refinement_rows'
           git show origin/main:inventory/manifest.json | jq -e '.refinements[-1].id == "E0157"'
+          gh workflow run index-algorithm-e0158.yml --ref main

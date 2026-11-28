@@ -1,11 +1,8 @@
 name: E0155 exact factorized XML root archive cost and round trip
 on:
-  workflow_run:
-    workflows: [E0154 wider factor-index algorithm comparison after E0153]
-    types: [completed]
-    branches: [main]
   workflow_dispatch:
 permissions:
+  actions: write
   contents: write
 concurrency:
   group: c20-factor-inventory
@@ -55,6 +52,8 @@ jobs:
           test "$(sha256sum /tmp/E0155.restored | cut -d' ' -f1)" = 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
           test "$(wc -c < /tmp/E0155.ix)" = "$(jq -r .archive_bytes experiments/records/E0155.json)"
       - name: Commit result and verify GitHub readback
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
@@ -64,3 +63,4 @@ jobs:
           git push origin HEAD:main
           git fetch origin main
           git show origin/main:experiments/records/E0155.json | jq -e '.status == "verified" and .round_trip | contains("byte-for-byte")'
+          gh workflow run factor-inventory-e0156.yml --ref main
