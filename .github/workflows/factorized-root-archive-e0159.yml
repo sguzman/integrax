@@ -63,4 +63,4 @@ jobs:
           git push origin HEAD:main
           git fetch origin main
           git show origin/main:experiments/records/E0159.json | jq -e '.status == "verified" and .round_trip | contains("byte-for-byte")'
-          gh workflow run factor-inventory-e0160.yml --ref main
+          gh workflow run frozen-index-fusion-e0164.yml --ref main
