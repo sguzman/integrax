@@ -40,6 +40,19 @@ const events=readFileSync('data/E0153.jsonl','utf8').split('\n').filter(Boolean)
 const refinements=events.filter(x=>x.event==='COFACTOR_REFINEMENT'),summary=events.findLast(x=>x.event==='COFACTOR_SUMMARY');
 assert(summary);assert.equal(summary.loaded,manifest.indexed_nodes);assert.equal(summary.known_factors,manifest.index.distinct_factors);
 assert.equal(summary.improved,refinements.length);
+const recentIds=new Set();for(const batch of manifest.batches.slice(-1))for(const shard of batch.shards)for(const row of JSON.parse(readFileSync(shard.path,'utf8')).rows)recentIds.add(row.id);
+const audit={by_width:{},by_cohort:{}},uniqueValues={by_width:new Map(),by_cohort:new Map()};
+const groupsFor=(id,row)=>{
+ const w=row.width,band=w<=8?'1-8':w<=32?'9-32':w<=128?'33-128':w<=512?'129-512':w<=2048?'513-2048':'2049+';
+ return {by_width:band,by_cohort:recentIds.has(id)?manifest.batches.at(-1).id:'historical'}
+};
+for(const [id,row] of objects){
+ const q=residual.get(id);if(q===undefined||q<=1n)continue;
+ for(const dimension of ['by_width','by_cohort']){
+  const key=groupsFor(id,row)[dimension],g=audit[dimension][key]??={objects:0,improved:0,before_bits:0,after_bits:0,bits_removed:0,unique_improved_values:0};
+  g.objects++;g.before_bits+=bitlen(q);g.after_bits+=bitlen(q)
+ }
+}
 let bitsRemoved=0,parents=0,completed=0;const unique=new Set();
 for(const ref of refinements){
  const row=objects.get(ref.id);assert(row);
@@ -57,6 +70,12 @@ for(const ref of refinements){
  assert.equal(ref.factors.reduce((v,f)=>v*N(f.p)**BigInt(f.e),next),current);
  assert.equal(ref.unresolved_parts.reduce((v,x)=>v*N(x),1n),next);
  assert.equal(ref.old_bits,bitlen(current));assert.equal(ref.remaining_bits,bitlen(next));
+ const rowGroups=groupsFor(ref.id,row),bytesForValue=corpus.subarray(row.offset,row.offset+row.width),valueKey=(bytesForValue.length?N(bytesForValue.toString('hex')):0n).toString(16);
+ for(const dimension of ['by_width','by_cohort']){
+  const key=rowGroups[dimension],g=audit[dimension][key];assert(g);
+  g.improved++;g.after_bits+=ref.remaining_bits-ref.old_bits;g.bits_removed+=ref.old_bits-ref.remaining_bits;
+  const values=uniqueValues[dimension].get(key)??new Set();values.add(valueKey);uniqueValues[dimension].set(key,values);g.unique_improved_values=values.size
+ }
  if(row.children.length){
   let at=row.offset,value=0n;
   for(const childId of row.children){
@@ -71,6 +90,8 @@ for(const ref of refinements){
 }
 assert.equal(bitsRemoved,summary.bits_removed);assert.equal(parents,summary.parent_improved);
 assert.equal(completed,summary.completed);assert.equal(unique.size,summary.unique_improved_values);
+assert.deepEqual(audit.by_width,summary.by_width,'independent width-group audit');
+assert.deepEqual(audit.by_cohort,summary.by_cohort,'independent cohort-group audit');
 writeFileSync(REF_PATH,JSON.stringify({batch:ID,rows:refinements},null,2)+'\n');
 manifest.refinements.push({id:ID,path:REF_PATH,rows:refinements.length,record:RECORD});
 writeFileSync('inventory/manifest.json',JSON.stringify(manifest,null,2)+'\n');
@@ -87,7 +108,7 @@ const record={
  wall_seconds:wallSeconds,peak_rss_kib:peakRssKiB,summary,refinement_rows:refinements.length,
  parent_refinements:parents,unique_improved_values:unique.size,completed,bits_removed:bitsRemoved,
  storage:{new_refinement_json_bytes:statSync(REF_PATH).size,cumulative_inventory_json_bytes:researchBytes,corpus_bytes:corpus.length,accounting:'Research JSON side information, not an archive. Includes object shards, factor-index shards, snapshots, and refinement overlays; excludes experiment reports and seed records.'},
- verification:'Hosted replay checked all persisted object hashes, parent synthesis and prior overlays. Independent publication verified the authentic corpus digest, each changed object byte hash, exact original and refined factor/cofactor products, indexed factor qualities and occurrence witnesses, bit lengths, unresolved partitions, parent child spans and radix-256 reconstruction.'
+ verification:'Hosted replay checked all persisted object hashes, parent synthesis and prior overlays. Independent publication verified the authentic corpus digest, each changed object byte hash, exact original and refined factor/cofactor products, indexed factor qualities and occurrence witnesses, bit lengths, unresolved partitions, parent child spans and radix-256 reconstruction, and independently recomputed width and cohort summary counts.'
 };
 writeFileSync(RECORD,JSON.stringify(record,null,2)+'\n');
 console.log(JSON.stringify({event:'E0153_PUBLICATION',refinement_rows:refinements.length,parent_refinements:parents,unique_values:unique.size,completed,bits_removed:bitsRemoved,new_refinement_json_bytes:statSync(REF_PATH).size,cumulative_inventory_json_bytes:researchBytes,outputs:[RECORD,REF_PATH,'inventory/manifest.json']},null,2));
