@@ -271,6 +271,7 @@ function inventoryPage(b,offset){
   }
   stats.full_bits_removed+=f.reuse_bits-f.full_bits;if(isParent)stats.parent_full_bits_removed+=f.reuse_bits-f.full_bits;
   stats.nodes++;stats[isParent?'parents':'leaves']++;stats[status]++;
+  if(stats.nodes%5000===0)console.error(JSON.stringify({event:'E0152_PROGRESS',page_offset:offset,page_width:b.length,nodes:stats.nodes,parents:stats.parents,full_inventory_hits:stats.full_inventory_hits}));
   if(childHit)stats.child_hits++;if(globalHit)stats.global_hits++;
   if(isParent){if(childHit)stats.parent_child_hits++;if(globalHit)stats.parent_global_hits++;stats[f.reuse_bits<f.cold_bits?'parent_better_than_cold':f.reuse_bits>f.cold_bits?'parent_worse_than_cold':'parent_equal_cold']++}
   stats.child_bits_removed+=f.base_bits-f.child_bits;stats.global_bits_removed+=f.child_bits-f.reuse_bits;stats.inventory_flat_tests+=f.inventory_flat_tests??0;
@@ -330,6 +331,6 @@ for(const start of [200000000,600000000,900000000]){
   if(w>=65536&&w<=81920&&!oldOffsets.has(at)){chosen={at,end};break}
   at=full.indexOf('<page>',end);
  }
- assert(chosen,'bounded page selection');rebuildSnapshot();const result=inventoryPage(full.subarray(chosen.at,chosen.end),chosen.at);pages.push(result);console.log(JSON.stringify({event:'FACTOR_PAGE',...result}));
+  assert(chosen,'bounded page selection');console.error(JSON.stringify({event:'E0152_PAGE_START',page_offset:chosen.at,page_width:chosen.end-chosen.at}));rebuildSnapshot();const result=inventoryPage(full.subarray(chosen.at,chosen.end),chosen.at);pages.push(result);console.error(JSON.stringify({event:'E0152_PAGE_DONE',page_offset:result.offset,page_width:result.width,nodes:result.stats.nodes,full_inventory_hits:result.stats.full_inventory_hits}));console.log(JSON.stringify({event:'FACTOR_PAGE',...result}));
 }
 console.log(JSON.stringify({event:'E0152_FACTOR_INVENTORY_SUMMARY',pages:pages.map(p=>({offset:p.offset,width:p.width,root_id:p.root_id})),distinct_factors:inv.size,nodes:pages.reduce((n,p)=>n+p.stats.nodes,0),candidate_algorithm:'flat-scan',target_page_width_bytes:[65536,81920],seeded_sources:['E0095','E0096','E0099','E0103','E0104','E0105','E0106','E0107','E0108','E0109','E0110','E0111','E0112','E0113','E0114','E0115','E0116','E0117','E0119','E0120','E0121','E0122','E0123','E0126','E0128','E0129','E0131','E0132','E0133','E0134','E0135','E0137','E0140','E0144','E0145','E0149']}));
