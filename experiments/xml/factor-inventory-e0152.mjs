@@ -6,7 +6,7 @@ const MAX=8*1024*1024,DEPTH=32;
 const EXPERIMENT=process.env.IX_C20_EXPERIMENT??'E0152';
 const PAGE_MIN=Number(process.env.IX_C20_PAGE_MIN??65536),PAGE_MAX=Number(process.env.IX_C20_PAGE_MAX??81920);
 const PAGE_STARTS=JSON.parse(process.env.IX_C20_PAGE_STARTS??'[200000000,600000000,900000000]');
-assert(['E0152','E0156'].includes(EXPERIMENT));assert(Number.isSafeInteger(PAGE_MIN)&&Number.isSafeInteger(PAGE_MAX)&&PAGE_MIN>0&&PAGE_MAX>=PAGE_MIN);assert(Array.isArray(PAGE_STARTS)&&PAGE_STARTS.length===3);
+assert(['E0152','E0156','E0160'].includes(EXPERIMENT));assert(Number.isSafeInteger(PAGE_MIN)&&Number.isSafeInteger(PAGE_MAX)&&PAGE_MIN>0&&PAGE_MAX>=PAGE_MIN);assert(Array.isArray(PAGE_STARTS)&&PAGE_STARTS.length===3);
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const B=(...parts)=>Buffer.concat(parts);
 function u(n){assert(Number.isSafeInteger(n)&&n>=0&&n<=MAX);const a=[];do{let v=n%128;n=Math.floor(n/128);a.push(v+(n?128:0))}while(n);return Buffer.from(a)}
@@ -298,7 +298,9 @@ inv.clear();cache.clear();delta.clear();seenValues.clear();witnesses.clear();
 const full=readFileSync(process.argv[2]);assert.equal(full.length,1000000000);assert.equal(sha(full),'159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc');
 seed();
 const manifest=JSON.parse(readFileSync('inventory/manifest.json','utf8'));
-assert.equal(manifest.corpus_sha256,sha(full));assert.equal(manifest.indexed_nodes,290180);assert.equal(manifest.index.distinct_factors,47547);assert.equal(manifest.batches.at(-1).id,'E0149');
+assert.equal(manifest.corpus_sha256,sha(full));
+const expectedParent=EXPERIMENT==='E0152'?'E0149':EXPERIMENT==='E0156'?'E0152':'E0156';
+assert.equal(manifest.batches.at(-1).id,expectedParent,`expected verified parent inventory ${expectedParent}`);
 const overlays=new Map();for(const r of manifest.refinements??[]){const data=JSON.parse(readFileSync(r.path,'utf8'));assert.equal(data.rows.length,r.rows);for(const x of data.rows){const list=overlays.get(x.id)??[];list.push({...x,origin:r.id});overlays.set(x.id,list)}}
 const consumed=new Set(),oldOffsets=new Set(manifest.batches.flatMap(b=>b.shards.map(s=>s.offset)));
 let imported=0;
@@ -337,4 +339,4 @@ for(const start of PAGE_STARTS){
  }
   assert(chosen,'bounded page selection');console.error(JSON.stringify({event:`${EXPERIMENT}_PAGE_START`,page_offset:chosen.at,page_width:chosen.end-chosen.at}));rebuildSnapshot();const result=inventoryPage(full.subarray(chosen.at,chosen.end),chosen.at);pages.push(result);console.error(JSON.stringify({event:`${EXPERIMENT}_PAGE_DONE`,page_offset:result.offset,page_width:result.width,nodes:result.stats.nodes,full_inventory_hits:result.stats.full_inventory_hits}));console.log(JSON.stringify({event:'FACTOR_PAGE',...result}));
 }
-console.log(JSON.stringify({event:`${EXPERIMENT}_FACTOR_INVENTORY_SUMMARY`,pages:pages.map(p=>({offset:p.offset,width:p.width,root_id:p.root_id})),distinct_factors:inv.size,nodes:pages.reduce((n,p)=>n+p.stats.nodes,0),candidate_algorithm:'flat-scan',target_page_width_bytes:[PAGE_MIN,PAGE_MAX],seeded_sources:['E0095','E0096','E0099','E0103','E0104','E0105','E0106','E0107','E0108','E0109','E0110','E0111','E0112','E0113','E0114','E0115','E0116','E0117','E0119','E0120','E0121','E0122','E0123','E0126','E0128','E0129','E0131','E0132','E0133','E0134','E0135','E0137','E0140','E0144','E0145','E0149',...(EXPERIMENT==='E0156'?['E0152']:[])]}));
+console.log(JSON.stringify({event:`${EXPERIMENT}_FACTOR_INVENTORY_SUMMARY`,pages:pages.map(p=>({offset:p.offset,width:p.width,root_id:p.root_id})),distinct_factors:inv.size,nodes:pages.reduce((n,p)=>n+p.stats.nodes,0),candidate_algorithm:'flat-scan',target_page_width_bytes:[PAGE_MIN,PAGE_MAX],seeded_sources:['E0095','E0096','E0099','E0103','E0104','E0105','E0106','E0107','E0108','E0109','E0110','E0111','E0112','E0113','E0114','E0115','E0116','E0117','E0119','E0120','E0121','E0122','E0123','E0126','E0128','E0129','E0131','E0132','E0133','E0134','E0135','E0137','E0140','E0144','E0145','E0149',...(EXPERIMENT==='E0156'?['E0152']:[]),...(EXPERIMENT==='E0160'?['E0152','E0156']:[])]}));

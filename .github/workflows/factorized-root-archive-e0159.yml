@@ -2,6 +2,7 @@ name: E0159 exact factorized XML root archive cost and round trip
 on:
   workflow_dispatch:
 permissions:
+  actions: write
   contents: write
 concurrency:
   group: c20-factor-inventory
@@ -51,6 +52,8 @@ jobs:
           test "$(sha256sum /tmp/E0159.restored | cut -d' ' -f1)" = 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
           test "$(wc -c < /tmp/E0159.ix)" = "$(jq -r .archive_bytes experiments/records/E0159.json)"
       - name: Commit result and verify GitHub readback
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
@@ -60,3 +63,4 @@ jobs:
           git push origin HEAD:main
           git fetch origin main
           git show origin/main:experiments/records/E0159.json | jq -e '.status == "verified" and .round_trip | contains("byte-for-byte")'
+          gh workflow run factor-inventory-e0160.yml --ref main
